@@ -1,3 +1,7 @@
+// Environmental variables for access tokens
+const accessToken = process.env.CONTENTFUL_TOKEN;
+const spaceID = process.env.CONTENTFUL_SPACE;
+
 module.exports = {
   siteMetadata: {
     title: "RAI Website",
@@ -6,8 +10,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "XjsnhKbjzXdtDUDpWc3pRvpQlwF2uOIpa61EFGrDbWE",
-        spaceId: "uber3z3ga3w2",
+        accessToken: accessToken,
+        spaceId: spaceID,
       },
     },
     "gatsby-plugin-styled-components",
