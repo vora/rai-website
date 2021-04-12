@@ -3,11 +3,14 @@
 const accessToken = process.env.CONTENTFUL_TOKEN;
 const spaceID = process.env.CONTENTFUL_SPACE;
 
-// Configuration file 
+// Configuration file
 // Proxy for manifest.json in regular React app
 module.exports = {
   siteMetadata: {
     title: "RAI Website",
+    description: "Responsible AI Institute website",
+    author: "Colin Phillips",
+    siteUrl: "https://rai-website.herokuapp.com/",
   },
   plugins: [
     {
