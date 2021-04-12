@@ -6,7 +6,7 @@ Here's some general tips and information about using Gatsby:
 - Styled components plugin has already been added - do NOT add new CSS files and limit inline styling within JSX
 - Use __npm install__ for adding new packages (please do not use yarn as dependencies are already in package-lock.json)
 
-#### Getting Started
+# Getting Started
 
 The first step is ensuring you have a version of npm and Node (which we should all have at this point). You'll then need to install the Gatsby CLI:
 
