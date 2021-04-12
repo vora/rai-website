@@ -1,7 +1,10 @@
 // Environmental variables for access tokens
+// SET LOCALLY, DO NOT INSTALL dot-env
 const accessToken = process.env.CONTENTFUL_TOKEN;
 const spaceID = process.env.CONTENTFUL_SPACE;
 
+// Configuration file 
+// Proxy for manifest.json in regular React app
 module.exports = {
   siteMetadata: {
     title: "RAI Website",
@@ -25,6 +28,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
+    "gatsby-plugin-offline",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
