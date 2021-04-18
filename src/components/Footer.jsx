@@ -9,6 +9,10 @@ const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @media screen and (max-width: 585px) {
+    padding: 32px 32px 32px 32px;
+  }
 `;
 
 const LinksContainer = styled.div`
@@ -17,11 +21,23 @@ const LinksContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 41px;
 
-  @media screen and (max-width: 1030px){
-      img{
-          width: 214.11px;
-          height: 48px;
-      }
+  @media screen and (max-width: 1030px) {
+    img {
+      width: 214.11px;
+      height: 48px;
+    }
+  }
+
+  @media screen and (max-width: 585px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 400px) {
+    img {
+      margin-bottom: 20px;
+      width: 100%;
+      height: auto;
+    }
   }
 `;
 
@@ -35,31 +51,57 @@ const Links = styled.div`
     min-width: 60%;
   }
 
-  @media screen and (max-width: 1030px){
-      a {
-          font-size: 16px;
-          line-height: 28px;
-      }
+  @media screen and (max-width: 1030px) {
+    a {
+      font-size: 16px;
+      line-height: 28px;
+    }
   }
 
-  @media screen and (max-width: 900px){
-      flex-direction: column;
-      align-items: flex-end;
-      min-width: 40%;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 40%;
+
+    a {
+      margin-bottom: 10px;
+    }
+
+    a:nth-of-type(5) {
+      text-decoration: none;
+    }
+
+    img {
+      margin-bottom: 10px;
+      width: 100%;
+    }
   }
 `;
 
 const Link = styled.a`
   color: #ffffff;
   text-decoration: ${(props) => (props.member ? "underline" : "none")};
+  font-weight: ${(props) => (props.member ? "bold" : "normal")};
   cursor: pointer;
-  margin-left: ${(props) => (props.icon ? "26px" : "0")}
+  margin-left: ${(props) => (props.icon ? "26px" : "0")};
+  min-width: 32px;
 `;
 
 const Icons = styled.div`
   min-width: 50%;
   display: flex;
   justify-content: flex-end;
+  min-height: 30px;
+
+  @media screen and (max-width: 585px) {
+    width: 100%;
+    justify-content: space-between;
+
+    a {
+      margin-left: 0;
+      overflow: auto;
+    }
+  }
 `;
 
 function Footer() {
