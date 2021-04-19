@@ -65,7 +65,7 @@ const Dropdown = styled.div`
   background-color: #ffffff;
   min-width: 140px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 10;
   margin-top: 40px;
   text-align: start;
 
@@ -128,7 +128,7 @@ const Menu = styled.div`
   top: 0;
   background-color: #f6f6f6;
   position: absolute; 
-  z-index=1;
+  z-index:10;
   right:0;
   display: flex;
   flex-direction: column;

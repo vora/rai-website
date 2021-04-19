@@ -43,7 +43,7 @@ const IndexPage = () => {
           style={{
             position: "absolute",
             zIndex: "4",
-            left: "160px",
+            right: "0",
             top: "134px",
           }}
           width={1479}
@@ -54,7 +54,7 @@ const IndexPage = () => {
           style={{
             position: "absolute",
             zIndex: "3",
-            left: "700px",
+            right: "0",
             top: "162px",
           }}
           width={1177}
@@ -65,7 +65,7 @@ const IndexPage = () => {
           style={{
             position: "absolute",
             zIndex: "2",
-            left: "40px",
+            right: "0",
             top: "125px",
           }}
           width={1530}
