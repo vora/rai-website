@@ -123,29 +123,32 @@ const SlideAnimation = keyframes`
 
 const Menu = styled.div`
   min-width: 20%;
-  height: 100vh;
   padding: 50px 80px 105.4px 80px;
+  height: 100%;
   top: 0;
+  bottom: 0;
   background-color: #f6f6f6;
-  position: absolute; 
-  z-index:10;
-  right:0;
+  position: absolute;
+  z-index: 10;
+  right: 0;
   display: flex;
   flex-direction: column;
   animation: ${SlideAnimation} ease 0.3s;
 
-  @media screen and (min-width: 1000px){
-      display: none;
+  @media screen and (min-width: 1000px) {
+    display: none;
   }
 
-  @media screen and (max-width: 585px){
+  @media screen and (max-width: 585px) {
     padding: 50px 35px 105.4px 35px;
   }
 `;
 
 const Break = styled.hr`
   width: 100%;
-`
+  height: 2px;
+  color: #2f2d34;
+`;
 
 function Collapse() {
   const [show, setShow] = useState(false);
@@ -160,7 +163,7 @@ function Collapse() {
               setShow(true);
             }}
           >
-            <StaticImage src="../images/icons/hamburger.png" />
+            <StaticImage src="../images/icons/hamburger.png" alt="hamburger" quality={100}/>
           </a>
         )}
       </CollapseContainer>
@@ -257,6 +260,7 @@ function Navbar() {
             src="../images/rai-icons/rai-logo-text.png"
             alt="rai-logo"
             className="logo"
+            quality={100}
           />
         </a>
         <Navigation>

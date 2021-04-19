@@ -1,28 +1,81 @@
 import React from "react";
+import styled from "styled-components";
 import Layout from "../components/Layout";
+import { navigate } from "gatsby";
 import { Headline1, MediumBody } from "../components/Text";
 import { PrimaryBtn } from "../components/Buttons";
 import { StaticImage } from "gatsby-plugin-image";
 
-// markup
-const IndexPage = () => {
+const JumboContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  @media screen and (max-width: 1190px) {
+    flex-direction: column;
+
+    img {
+      margin-top: 500px;
+      right: 0;
+      width: 100vw;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    img {
+      margin-top: 430px;
+    }
+  }
+
+  @media screen and (max-width: 450px){
+    img {
+      margin-top: 500px;
+    }
+  }
+
+  @media screen and (max-width: 400px){
+    img {
+      margin-top: 550px;
+      height: 40vh;
+      width: auto;
+    }
+  }
+
+  @media screen and (max-width: 350px){
+    img {
+      margin-top: 620px;
+    }
+  }
+`;
+const JumboText = styled.div`
+  min-width: 50%;
+  z-index: 5;
+
+  @media screen and (max-width: 1190px) {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      align-self: center;
+    }
+  }
+
+  @media screen and (max-width: 710px) {
+    br {
+      display: none;
+    }
+    button {
+      margin-top: 10px;
+    }
+  }
+`;
+
+function IndexPage() {
   return (
     <Layout title="Home">
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            width: "50%",
-            zIndex: "5",
-            margin: "0px 0px 0px 100px",
-          }}
-        >
+      <JumboContainer>
+        <JumboText>
           <Headline1>
             Working Together <br /> for AI We Can Trust
           </Headline1>
@@ -36,8 +89,10 @@ const IndexPage = () => {
             rights, privacy, security, explainability, and fairness.
           </MediumBody>
           <br />
-          <PrimaryBtn dark>Learn About RAIL Certification</PrimaryBtn>
-        </div>
+          <PrimaryBtn dark onClick={() => navigate("/rail")}>
+            Learn About RAIL Certification
+          </PrimaryBtn>
+        </JumboText>
         <StaticImage
           src="../images/pictures/patient-1.png"
           style={{
@@ -48,6 +103,7 @@ const IndexPage = () => {
           }}
           width={1479}
           height={709}
+          alt="patient-1"
         />
         <StaticImage
           src="../images/pictures/patient-2.png"
@@ -59,6 +115,7 @@ const IndexPage = () => {
           }}
           width={1177}
           height={618}
+          alt="patient-2"
         />
         <StaticImage
           src="../images/pictures/patient-3.png"
@@ -70,10 +127,11 @@ const IndexPage = () => {
           }}
           width={1530}
           height={734}
+          alt="patient-3"
         />
-      </div>
+      </JumboContainer>
     </Layout>
   );
-};
+}
 
 export default IndexPage;

@@ -134,7 +134,7 @@ function Footer() {
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/twitter.png" />
+          <StaticImage src="../images/icons/twitter.png" alt="twitter" />
         </Link>
         <Link
           href="https://www.linkedin.com/company/ai-global?trk=public_profile_experience-item_result-card_image-click"
@@ -142,7 +142,7 @@ function Footer() {
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/linkedin.png" />
+          <StaticImage src="../images/icons/linkedin.png" alt="linkedin" />
         </Link>
         <Link
           href="https://facebook.com"
@@ -150,7 +150,7 @@ function Footer() {
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/facebook.png" />
+          <StaticImage src="../images/icons/facebook.png" alt="facebook" />
         </Link>
         <Link
           href="https://www.instagram.com/responsibleaiglobal/"
@@ -158,7 +158,7 @@ function Footer() {
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/instagram.png" />
+          <StaticImage src="../images/icons/instagram.png" alt="instagram" />
         </Link>
       </Icons>
     </FooterContainer>
