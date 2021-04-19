@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import "../styles.css";
 
 const Content = styled.div`
-  margin-top: 117px;
+  margin-top: 200px;
   max-width: 100%;
   display: flex;
   flex-direction: column;

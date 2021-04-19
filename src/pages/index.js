@@ -69,7 +69,7 @@ const IndexPage = () => {
             top: "125px",
           }}
           width={1530}
-          height={695}
+          height={734}
         />
       </div>
     </Layout>
