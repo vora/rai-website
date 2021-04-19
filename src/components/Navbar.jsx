@@ -109,6 +109,18 @@ const CollapseContainer = styled.div`
   }
 `;
 
+const SlideAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+`;
+
 const Menu = styled.div`
   min-width: 20%;
   height: 100vh;
@@ -120,6 +132,7 @@ const Menu = styled.div`
   right:0;
   display: flex;
   flex-direction: column;
+  animation: ${SlideAnimation} ease 0.3s;
 
   @media screen and (min-width: 1000px){
       display: none;
@@ -129,8 +142,6 @@ const Menu = styled.div`
     padding: 50px 35px 105.4px 35px;
   }
 `;
-
-
 
 const Break = styled.hr`
   width: 100%;
