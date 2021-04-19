@@ -5,7 +5,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { Headline1, Headline2, Headline3, MediumBody, LargeBody, SmallBody, Heading1 } from "../components/Text";
 import { PrimaryBtn } from "../components/Buttons";
-import "../styles.css";
 
 function Content({ children }) {
   return <div style={{ minHeight: "80vh" }}>{children}</div>;
@@ -97,7 +96,7 @@ function Certification() {
         </Column>
         <Column>
           <StaticImage
-            src="../images/Badge.png"
+            src="../images/rai-icons/Badge.png"
             alt="RAI logo"
             objectFit="contain"
           />
