@@ -232,7 +232,7 @@ function Collapse() {
             RAIL Rating System
           </Link>
           <Break />
-          <Link href="/rai" highlight>
+          <Link href="/about" highlight>
             About RAI
           </Link>
           <Link href="/rail" small>
@@ -296,7 +296,7 @@ function Navbar() {
             </Dropdown>
           </Option>
           <Option animate>
-            <Link href="/rail">About RAI</Link>
+            <Link href="/about">About RAI</Link>
             <Line />
             <Dropdown>
               <a href="/">Why RAIL</a>

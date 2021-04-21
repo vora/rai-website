@@ -5,71 +5,7 @@ import { navigate } from "gatsby";
 import { Headline1, MediumBody } from "../components/Text";
 import { PrimaryBtn } from "../components/Buttons";
 import { StaticImage } from "gatsby-plugin-image";
-
-const JumboContainer = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
-
-  @media screen and (max-width: 1190px) {
-    flex-direction: column;
-
-    img {
-      margin-top: 500px;
-      right: 0;
-      width: 100vw;
-      height: auto;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    img {
-      margin-top: 430px;
-    }
-  }
-
-  @media screen and (max-width: 450px){
-    img {
-      margin-top: 500px;
-    }
-  }
-
-  @media screen and (max-width: 400px){
-    img {
-      margin-top: 550px;
-      height: 40vh;
-      width: auto;
-    }
-  }
-
-  @media screen and (max-width: 350px){
-    img {
-      margin-top: 620px;
-    }
-  }
-`;
-const JumboText = styled.div`
-  min-width: 50%;
-  z-index: 5;
-
-  @media screen and (max-width: 1190px) {
-    display: flex;
-    flex-direction: column;
-
-    button {
-      align-self: center;
-    }
-  }
-
-  @media screen and (max-width: 710px) {
-    br {
-      display: none;
-    }
-    button {
-      margin-top: 10px;
-    }
-  }
-`;
+import { JumboContainer, JumboText } from "../components/Jumbotron";
 
 function IndexPage() {
   return (

@@ -1,12 +1,13 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider} from "styled-components";
+import { lightTheme } from "styles/Themes"
 import { Helmet } from "react-helmet";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "../styles.css";
 
 const Content = styled.div`
-  margin: 117px 100px 0px 100px;
+  margin: ${props => `117px ${props.theme.pageMargin} 0px ${props.theme.pageMargin}`};
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,7 +25,7 @@ const Content = styled.div`
 function Layout({ children, title }) {
   console.log(title);
   return (
-    <>
+    <ThemeProvider theme={lightTheme}> 
       <Helmet>
         <title>{"RAI: " + title}</title>
         <meta
@@ -35,7 +36,7 @@ function Layout({ children, title }) {
       <Navbar />
       <Content>{children}</Content>
       <Footer/>
-    </>
+    </ThemeProvider>
   );
 }
 
