@@ -412,7 +412,20 @@ function IndexPage() {
           </GridRow>
         </Grid>
       </Row>
-      <News title={<span>Responsible AI <br/>Insitute in the News</span>}/>
+      <Row gray>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "100%",
+            marginBottom: "40px",
+          }}
+        >
+          <Headline2>Responsible AI <br/> Institute in the News</Headline2>
+          <StyledLink text="More News" link="/" />
+        </div>
+        <News />
+      </Row>
     </Layout>
   );
 }

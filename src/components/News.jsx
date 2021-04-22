@@ -1,8 +1,7 @@
 import React from "react";
 import styled, {css} from "styled-components";
-import { Row } from "./Blocks";
-import { Headline2, Headline5 } from "./Text";
-import { StyledLink } from "./StyledLink";
+import { Headline5 } from "./Text";
+import arrow from "../images/icons/arrow.png";
 
 const carbon = "#2f2d34";
 const gray = "#797b80";
@@ -35,20 +34,37 @@ const Caption = styled.p`
     color: ${gray};
 `
 
-function News({title}) {
+const LinkContainer = styled.div`
+  display: flex;
+  margin: 10px 0px 10px 0px;
+  justify-content: space-between;
+  cursor: pointer;
+  max-width: 150px;
+  align-items: center;
+`;
+
+const CustomLink = styled.a`
+  color: #2f2d34;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  line-height: 28px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration-line: underline;
+`;
+
+function StyledLink({ text, link }) {
   return (
-    <Row gray>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "100%",
-          marginBottom: "40px",
-        }}
-      >
-        <Headline2>{title}</Headline2>
-        <StyledLink text="More News" link="/"/>
-      </div>
+    <LinkContainer>
+      <CustomLink href={link}>{text}</CustomLink>
+      <img src={arrow} alt="arrow" style={{ marginLeft: "5px" }} />
+    </LinkContainer>
+  );
+}
+
+function News() {
+  return (
+    <>
       <NewsRow>
         <NewsItem top>
           <a href="/news" style={{ textDecoration: "none", color: carbon }}>
@@ -89,7 +105,7 @@ function News({title}) {
           <Caption>MAR 31</Caption>
         </NewsItem>
       </NewsRow>
-    </Row>
+    </>
   );
 }
 
