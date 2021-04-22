@@ -15,7 +15,7 @@ export const Headline1 = styled.h1`
   margin: 0px 0px 20px 0px;
   color: ${(props) => (props.dark ? blanco : carbon)};
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 600px) {
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -0.02em;
@@ -30,8 +30,6 @@ export const Headline2 = styled.h1`
   letter-spacing: -0.03em;
   margin: 0px 0px 20px 0px;
   color: ${(props) => (props.dark ? blanco : carbon)};
-
-  
 `;
 export const Headline3 = styled.h1`
   font-family: Libre Caslon Text;
@@ -78,10 +76,13 @@ export const MediumBody = styled.p`
   font-weight: 300;
   font-size: 18px;
   line-height: 28px;
-  margin: 0px 0px 12px 0px;
   color: ${(props) => (props.dark ? blanco : carbon)};
+  border-left: ${(props) => (props.bordered ? "3px solid " + carbon : "none")};
+  padding-left: ${(props) => (props.bordered ? "20px" : "0")};
+  margin: ${(props) =>
+    props.bordered ? "0px 0px 20px 0px" : "0px 0px 12px 0px"};
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 600px) {
     font-size: 16px;
     line-height: 24px;
   }
@@ -101,7 +102,7 @@ export const Heading1 = styled.h1`
   font-weight: bold;
   font-size: 36px;
   line-height: 44px;
-  margin: 0px 0px 12px 0px;
+  margin: 0px 0px 20px 0px;
   color: ${(props) => (props.dark ? blanco : carbon)};
 `;
 export const Heading2 = styled.h1`
@@ -109,7 +110,7 @@ export const Heading2 = styled.h1`
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-  margin: 0px 0px 12px 0px;
+  margin: 0px 0px 20px 0px;
   color: ${(props) => (props.dark ? blanco : carbon)};
 `;
 export const Caption = styled.h1`

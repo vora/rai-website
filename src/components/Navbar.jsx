@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import styled, { css, keyframes } from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
+
+// Import images
+import hamburger from "../images/icons/hamburger.png";
+import close from "../images/icons/exit.png";
+import logo from "../images/rai-icons/rai-logo-text.png";
 
 const Container = styled.div`
   margin: 0;
@@ -122,17 +126,19 @@ const SlideAnimation = keyframes`
 `;
 
 const Menu = styled.div`
-  min-width: 20%;
-  padding: 50px 80px 105.4px 80px;
-  height: 100%;
+  max-width: 100vw;
+  padding: 50px 100px 100px 100px;
   top: 0;
   bottom: 0;
+  height: 500vh;
+  left: 0;
+  right: 0;
   background-color: #f6f6f6;
   position: absolute;
-  z-index: 10;
-  right: 0;
+  z-index: 100;
   display: flex;
   flex-direction: column;
+  align-items: center;
   animation: ${SlideAnimation} ease 0.3s;
 
   @media screen and (min-width: 1000px) {
@@ -144,10 +150,11 @@ const Menu = styled.div`
   }
 `;
 
-const Break = styled.hr`
-  width: 100%;
-  height: 2px;
-  color: #2f2d34;
+const Break = styled.div`
+  width: 80%;
+  margin: 10px 0px 10px 0px;
+  min-height: 2px;
+  border-bottom: 2px solid #797b80;
 `;
 
 function Collapse() {
@@ -163,7 +170,7 @@ function Collapse() {
               setShow(true);
             }}
           >
-            <StaticImage src="../images/icons/hamburger.png" alt="hamburger" quality={100}/>
+            <img src={hamburger} alt="hamburger" />
           </a>
         )}
       </CollapseContainer>
@@ -177,69 +184,25 @@ function Collapse() {
             }}
             style={{ alignSelf: "flex-end", marginBottom: "20px" }}
           >
-            <StaticImage
-              src="../images/icons/exit.png"
-              alt="exit"
-              width={22.77}
-              height={22.76}
-            />
+            <img src={close} alt="close" />
           </a>
-          <Link href="/rail" highlight>
+          <Link href="/certification" highlight>
             RAIL Certification
-          </Link>
-          <Link href="/rail" small>
-            Why RAIL?
-          </Link>
-          <Link href="/rail" small>
-            RAIL Rating System
-          </Link>
-          <Link href="/rail" small>
-            RAIL Certification
-          </Link>
-          <Link href="/rail" small>
-            RAIL Case Study
-          </Link>
-          <Link href="/rail" small>
-            FAQ
           </Link>
           <Break />
           <Link href="/tools" highlight>
             Tools
           </Link>
-          <Link href="/rail" small>
-            Why RAIL?
-          </Link>
-          <Link href="/rail" small>
-            RAIL Rating System
-          </Link>
-          <Link href="/rail" small>
-            RAIL Certification
-          </Link>
-          <Link href="/rail" small>
-            RAIL Case Study
-          </Link>
-          <Link href="/rail" small>
-            FAQ
-          </Link>
           <Break />
           <Link href="/news" highlight>
             News
           </Link>
-          <Link href="/rail" small>
-            Why RAIL?
-          </Link>
-          <Link href="/rail" small>
-            RAIL Rating System
+          <Link href="/blog" small>
+            Blog
           </Link>
           <Break />
           <Link href="/about" highlight>
             About RAI
-          </Link>
-          <Link href="/rail" small>
-            Why RAIL?
-          </Link>
-          <Link href="/rail" small>
-            RAIL Rating System
           </Link>
           <Break />
           <Link href="/membership" highlight>
@@ -256,58 +219,30 @@ function Navbar() {
     <Container>
       <NavContainer>
         <a href="/">
-          <StaticImage
-            src="../images/rai-icons/rai-logo-text.png"
-            alt="rai-logo"
-            className="logo"
-            quality={100}
-          />
+          <img src={logo} alt="rai-logo" className="logo" />
         </a>
         <Navigation>
           <Option animate>
-            <Link href="/certification">RAIL Certification</Link>
+            <Link href="/certification">RAI Certification</Link>
             <Line />
-            <Dropdown>
-              <a href="/">Why RAIL</a>
-              <a href="/">RAIL Rating System</a>
-              <a href="/">RAIL Certification</a>
-              <a href="/">RAIL Case Study</a>
-              <a href="/">FAQ</a>
-            </Dropdown>
           </Option>
           <Option animate>
             <Link href="/tools">Tools</Link>
             <Line />
-            <Dropdown>
-              <a href="/">Why RAIL</a>
-              <a href="/">RAIL Rating System</a>
-              <a href="/">RAIL Certification</a>
-              <a href="/">RAIL Case Study</a>
-              <a href="/">FAQ</a>
-            </Dropdown>
           </Option>
           <Option animate>
-            <Link href="/rail">News</Link>
+            <Link href="/news">News</Link>
             <Line />
             <Dropdown>
-              <a href="/">Why RAIL</a>
-              <a href="/">RAIL Rating System</a>
-              <a href="/">RAIL Certification</a>
+              <a href="/blog">Blog</a>
             </Dropdown>
           </Option>
           <Option animate>
             <Link href="/about">About RAI</Link>
             <Line />
-            <Dropdown>
-              <a href="/">Why RAIL</a>
-              <a href="/">RAIL Rating System</a>
-              <a href="/">RAIL Certification</a>
-              <a href="/">RAIL Case Study</a>
-              <a href="/">FAQ</a>
-            </Dropdown>
           </Option>
           <Option>
-            <Link href="/rail" highlight>
+            <Link href="/membership" highlight>
               Become a Member
             </Link>
           </Option>
