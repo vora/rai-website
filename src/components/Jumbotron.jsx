@@ -4,6 +4,7 @@ export const JumboContainer = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
+  margin: 100px 0;
 
   @media screen and (max-width: 1190px) {
     flex-direction: column;
