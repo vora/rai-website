@@ -221,7 +221,6 @@ function About(props) {
                 position: "absolute",
                 zIndex: "4",
                 right: "0",
-                top: "100px",
               }}
               width={1479}
               height={709}
@@ -233,7 +232,6 @@ function About(props) {
                 position: "absolute",
                 zIndex: "3",
                 right: "0",
-                top: "130px",
               }}
               width={1177}
               height={618}
