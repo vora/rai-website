@@ -24,7 +24,6 @@ const AboutPeopleGrid = styled.div`
   flex: 1;
   display: grid; 
   padding: 2vw 0;
-  border-top: 1px solid black;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: min-content;
   /* justify-content: flex-start; */
@@ -98,7 +97,6 @@ const PartnerGrid = styled.div`
 const PartnerImgContainer = styled.div`
   height: 100%;
   width: 100%;
-  border: 1px solid black;
   display: grid;
   place-items: center;
 `
@@ -217,13 +215,13 @@ function About(props) {
             AI Global is a non-profit organization building tangible governance tools for trustworthy, safe, and fair Artificial Intelligence (AI). Through a first-of-its-kind certification system that qualifies AI systems, we support practitioners as they navigate the complex landscape of creating Responsible AI. <br/> Feedback generated from these systems will in turn inform AI policymakers, enabling technologies that improve the social and economic well-being of society. AI Global brings extensive experience in responsible AI policy and is uniquely positioned to partner with organizations across public and private sectors to guide and inform responsible AI governance around the world.
             </MediumBody>
           </JumboText>
-            {/* <StaticImage
+            <StaticImage
               src="../images/pictures/about/jumboforeground.png"
               style={{
                 position: "absolute",
                 zIndex: "4",
                 right: "0",
-                top: "134px",
+                top: "100px",
               }}
               width={1479}
               height={709}
@@ -235,12 +233,12 @@ function About(props) {
                 position: "absolute",
                 zIndex: "3",
                 right: "0",
-                top: "162px",
+                top: "130px",
               }}
               width={1177}
               height={618}
               alt="jumbo background"
-            /> */}
+            />
       </JumboContainer>
       <FullWidthContainer>
         <AboutPeopleContainer>
@@ -266,10 +264,10 @@ function About(props) {
                     />
                     {/* <PersonImage src="../images/pictures/about/jumboforeground.png"/> */}
                     <PersonName>
-                      {advisorList.name}
+                      {board.name}
                     </PersonName>
                     <PersonPosition>
-                      Board Member
+                      {board.position}
                     </PersonPosition>
                   </PersonContainer>
               );
@@ -283,7 +281,7 @@ function About(props) {
           </Headline2>
           <AboutPeopleGrid>
           {
-              advisorList.map((advisorList) => {
+              advisorList.map((advisor) => {
                 return (
                   <PersonContainer>
                     <StaticImage
@@ -300,10 +298,10 @@ function About(props) {
                     />
                     {/* <PersonImage src="../images/pictures/about/jumboforeground.png"/> */}
                     <PersonName>
-                      {advisorList.name}
+                      {advisor.name}
                     </PersonName>
                     <PersonPosition>
-                      {advisorList.position}
+                      {advisor.position}
                     </PersonPosition>
                   </PersonContainer>
               );
