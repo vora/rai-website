@@ -50,12 +50,10 @@ const TextHeadline = styled.div`
 `;
 
 const BodyCopy = styled.p`
-font-family: Roboto
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 28px;
-margin-bottom: 150px
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 150px;
 `;
 
 function VerticalLineText(props) {
