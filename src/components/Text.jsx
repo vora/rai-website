@@ -73,7 +73,7 @@ export const LargeBody = styled.p`
 `;
 export const MediumBody = styled.p`
   font-style: normal;
-  font-weight: 300;
+  font-weight: ${(props) => (props.bold ? "bold" : "300")};
   font-size: 18px;
   line-height: 28px;
   color: ${(props) => (props.dark ? blanco : carbon)};
@@ -110,6 +110,14 @@ export const Heading2 = styled.h1`
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
+  margin: 0px 0px 20px 0px;
+  color: ${(props) => (props.dark ? blanco : carbon)};
+`;
+export const Heading3 = styled.h1`
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
   margin: 0px 0px 20px 0px;
   color: ${(props) => (props.dark ? blanco : carbon)};
 `;

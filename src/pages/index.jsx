@@ -20,15 +20,17 @@ import {
   Grid,
   GridRow,
   GridContainer,
+  TitleLink
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
+import Slideshow from "../components/Slideshow";
 import { StaticImage } from "gatsby-plugin-image";
 
-function IndexPage() {
+function Index() {
   return (
     <Layout title="Home">
-      <Jumbotron>
+      <Jumbotron top>
         <JumboText>
           <Headline1>
             Working Together <br /> for AI We Can Trust
@@ -59,6 +61,7 @@ function IndexPage() {
             width={1479}
             height={709}
             alt="patient-1"
+            placeholder="tracedSVG"
           />
           <StaticImage
             src="../images/pictures/patient-2.png"
@@ -71,6 +74,7 @@ function IndexPage() {
             width={1177}
             height={618}
             alt="patient-2"
+            placeholder="tracedSVG"
           />
           <StaticImage
             src="../images/pictures/patient-3.png"
@@ -83,6 +87,7 @@ function IndexPage() {
             width={1530}
             height={734}
             alt="patient-3"
+            placeholder="tracedSVG"
           />
         </JumboImage>
       </Jumbotron>
@@ -99,6 +104,7 @@ function IndexPage() {
             width={1487}
             height={714}
             alt="woman-1"
+            placeholder="tracedSVG"
           />
           <StaticImage
             src="../images/pictures/woman-2.png"
@@ -112,6 +118,7 @@ function IndexPage() {
             width={1312}
             height={737}
             alt="woman-2"
+            placeholder="tracedSVG"
           />
           <StaticImage
             src="../images/pictures/woman-4.png"
@@ -125,6 +132,7 @@ function IndexPage() {
             width={1433}
             height={687}
             alt="woman-3"
+            placeholder="tracedSVG"
           />
           <StaticImage
             src="../images/pictures/woman-3.png"
@@ -138,6 +146,7 @@ function IndexPage() {
             width={1538}
             height={738}
             alt="woman-4"
+            placeholder="tracedSVG"
           />
         </JumboImage>
         <JumboText right>
@@ -164,7 +173,7 @@ function IndexPage() {
           </PrimaryBtn>
         </JumboText>
       </Jumbotron>
-      <Jumbotron>
+      <Jumbotron text>
         <JumboText>
           <Headline1>
             AI's Power <br /> Needs Guardrails.
@@ -227,12 +236,14 @@ function IndexPage() {
           </MediumBody>
         </GrayPanel>
       </Jumbotron>
-      <Jumbotron dark style={{ justifyContent: "center" }}>
+      <Jumbotron dark style={{ justifyContent: "center" }} text>
         <StaticImage
+          className="jumbo-image"
           src="../images/rai-icons/rail-badge-white.png"
-          style={{ alignSelf: "flex-start", marginleft: "10%" }}
+          style={{ alignSelf: "flex-start", marginleft: "10%", order: "3" }}
+          placeholder="tracedSVG"
         />
-        <JumboText>
+        <JumboText style={{ order: "4" }} className="jumbo-text">
           <Heading1 dark>
             The World's First Independent, <br />
             Accredited Certification Program <br />
@@ -274,6 +285,7 @@ function IndexPage() {
         <LargeBody>
           Working together, we can create AI systems the world can trust.
         </LargeBody>
+        <Slideshow />
         <MediumBody>
           Join visionary private, public, and academic leaders as we promote
           open, ethical AI.
@@ -284,150 +296,286 @@ function IndexPage() {
         </PrimaryBtn>
       </Row>
       <Row>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-        >
-          <Headline2>Members</Headline2>
-          <StyledLink text="All Members" link="/about" />
-        </div>
+        <TitleLink>
+          <Headline2>Members &amp; Partners</Headline2>
+          <StyledLink text="Members" link="/about" />
+        </TitleLink>
         <Divider />
         <Grid>
-          <GridRow>
+          <GridRow first>
             <GridContainer>
               <StaticImage
-                src="../images/new-partner-logos/ut-austin.png"
-                alt="UT Austin"
+                src="../images/members-logos/altaml.png"
+                alt="Alta ML"
                 quality={100}
-                width={179}
-                height={50}
+                placeholder="blurred"
               />
             </GridContainer>
             <GridContainer>
               <StaticImage
-                src="../images/new-partner-logos/cognitive-scale.png"
+                src="../images/members-logos/anthem.png"
+                alt="Anthem"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/members-logos/cognitive-scale.png"
                 alt="Cognitive Scale"
                 quality={100}
-                width={209}
-                height={35}
+                placeholder="blurred"
               />
             </GridContainer>
             <GridContainer>
               <StaticImage
-                src="../images/new-partner-logos/pwc.png"
-                alt="PWC"
-                quality={100}
-                width={173}
-                height={146}
-              />
-            </GridContainer>
-            <GridContainer>
-              <StaticImage
-                src="../images/new-partner-logos/microsoft.png"
-                alt="Microsoft"
-                quality={100}
-                width={204}
-                height={69}
-              />
-            </GridContainer>
-          </GridRow>
-          <GridRow>
-            <GridContainer>
-              <StaticImage
-                src="../images/new-partner-logos/mila.png"
-                alt="Mila"
-                quality={100}
-                width={168}
-                height={68}
-              />
-            </GridContainer>
-            <GridContainer>
-              <StaticImage
-                src="../images/new-partner-logos/data-world.png"
-                alt="data.world"
-                quality={100}
-                width={240}
-                height={52.51}
-              />
-            </GridContainer>
-            <GridContainer>
-              <StaticImage
-                src="../images/new-partner-logos/argo-design.png"
-                alt="Argo Design"
-                quality={100}
-                width={240}
-                height={160}
-              />
-            </GridContainer>
-            <GridContainer>
-              <StaticImage
-                src="../images/new-partner-logos/jackson.png"
+                src="../images/members-logos/jackson.png"
                 alt="Jackson"
                 quality={100}
-                width={240}
-                height={160}
+                placeholder="blurred"
               />
             </GridContainer>
           </GridRow>
           <GridRow>
             <GridContainer>
               <StaticImage
-                src="../images/new-partner-logos/oproma.png"
-                alt="Oproma"
+                src="../images/partner-logos/alberta.png"
+                alt="University of Alberta"
                 quality={100}
-                width={215}
-                height={86}
+                placeholder="blurred"
               />
             </GridContainer>
             <GridContainer>
               <StaticImage
-                src="../images/new-partner-logos/prudence-ai.png"
-                alt="Prudence AI"
+                src="../images/partner-logos/algora.png"
+                alt="Algora"
                 quality={100}
-                width={240}
-                height={32.6}
+                placeholder="blurred"
               />
             </GridContainer>
             <GridContainer>
               <StaticImage
-                src="../images/new-partner-logos/oceanis.png"
-                alt="Oceanis"
+                src="../images/partner-logos/amex.png"
+                alt="American Express"
                 quality={100}
-                width={218}
-                height={45}
+                placeholder="blurred"
               />
             </GridContainer>
             <GridContainer>
               <StaticImage
-                src="../images/new-partner-logos/hypergiant.png"
+                src="../images/partner-logos/argo-design.png"
+                alt="Argo Design"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+          </GridRow>
+          <GridRow>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/beacon.png"
+                alt="Beacon"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/cio.png"
+                alt="CIO"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/cips.png"
+                alt="CIPS"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/data-world.png"
+                alt="data.world"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+          </GridRow>
+          <GridRow>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/deloitte.png"
+                alt="Deloitte"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/ey.png"
+                alt="EY"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/hypergiant.png"
                 alt="Hypergiant"
                 quality={100}
-                width={144}
-                height={64}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/microsoft.png"
+                alt="Microsoft"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+          </GridRow>
+          <GridRow>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/mila.png"
+                alt="Mila"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/montreal.png"
+                alt="Montreal"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/oceanis.png"
+                alt="Oceanis"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/oproma.png"
+                alt="Oproma"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+          </GridRow>
+          <GridRow>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/oxford-brooks.png"
+                alt="Oxford Brooks"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/prudence-ai.png"
+                alt="Prudence AI"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/pwc.png"
+                alt="PWC"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/queens.png"
+                alt="Queens"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+          </GridRow>
+          <GridRow>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/rai.png"
+                alt="R/AI"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/saxena-foundatoin.png"
+                alt="Saxena Foundation"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/seek.png"
+                alt="SEEK"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/sri.png"
+                alt="SRI"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+          </GridRow>
+          <GridRow>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/strauss-center.png"
+                alt="Strauss Center"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/ut-austin.png"
+                alt="UT Austin"
+                quality={100}
+                placeholder="blurred"
               />
             </GridContainer>
           </GridRow>
         </Grid>
+        <LargeBody>Learn more about our work and partnerships.</LargeBody>
+        <br />
+        <PrimaryBtn dark onClick={() => navigate("/faq")}>
+          Read the FAQ
+        </PrimaryBtn>
       </Row>
       <Row gray>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-            marginBottom: "40px",
-          }}
-        >
-          <Headline2>Responsible AI <br/> Institute in the News</Headline2>
-          <StyledLink text="More News" link="/" />
-        </div>
+        <TitleLink>
+          <Headline2>
+            Responsible AI <br /> Institute in the News
+          </Headline2>
+          <StyledLink text="More News" link="/news" />
+        </TitleLink>
         <News />
       </Row>
     </Layout>
   );
 }
 
-export default IndexPage;
+export default Index;

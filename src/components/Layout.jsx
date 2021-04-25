@@ -4,13 +4,13 @@ import { lightTheme } from "styles/Themes";
 import { Helmet } from "react-helmet";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Banner from "./Banner";
 import "../styles.css";
 
 const Content = styled.div`
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 400vh;
 `;
 
 const Wrapper = ({ children, ...delegated }) => {
@@ -35,6 +35,7 @@ function Layout({ children, title }) {
             content="The Responsbile Artificial Intelligence Institute (RAI) is the premier organization seeking to bring repsonsibility to the exploding field of AI."
           />
         </Helmet>
+        <Banner text="Looking for AI Global? You're here! AI Global is now the Responsible AI Institute"/>
         <Navbar />
         <Content>{children}</Content>
         <Footer />

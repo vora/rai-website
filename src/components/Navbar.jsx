@@ -34,8 +34,8 @@ const Navigation = styled.div`
   min-width: 50%;
   justify-content: space-between;
 
-  @media screen and (max-width: 1150px) {
-    min-width: 60%;
+  @media screen and (max-width: 1290px) {
+    min-width: 65%;
   }
 
   @media screen and (max-width: 1000px) {
@@ -88,8 +88,8 @@ const Dropdown = styled.div`
 `;
 
 const Link = styled.a`
-  text-decoration: ${(props) => (props.highlight ? "underline" : "none")};
   font-style: normal;
+  text-decoration: none;
   font-weight: ${(props) => (props.highlight ? "bold" : "normal")};
   font-size: ${(props) => (props.small ? "14px" : "16px")};
   line-height: ${(props) => (props.small ? "18px" : "28px")};
@@ -187,11 +187,11 @@ function Collapse() {
             <img src={close} alt="close" />
           </a>
           <Link href="/certification" highlight>
-            RAIL Certification
+            RAI Certification
           </Link>
           <Break />
           <Link href="/tools" highlight>
-            Tools
+            Programs and Tools
           </Link>
           <Break />
           <Link href="/news" highlight>
@@ -199,6 +199,9 @@ function Collapse() {
           </Link>
           <Link href="/blog" small>
             Blog
+          </Link>
+          <Link href="/calendar" small>
+            Events Calendar
           </Link>
           <Break />
           <Link href="/about" highlight>
@@ -227,7 +230,7 @@ function Navbar() {
             <Line />
           </Option>
           <Option animate>
-            <Link href="/tools">Tools</Link>
+            <Link href="/tools">Programs and Tools</Link>
             <Line />
           </Option>
           <Option animate>
@@ -235,6 +238,7 @@ function Navbar() {
             <Line />
             <Dropdown>
               <a href="/blog">Blog</a>
+              <a href="/calendar">Events Calendar</a>
             </Dropdown>
           </Option>
           <Option animate>

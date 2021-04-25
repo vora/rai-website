@@ -43,7 +43,7 @@ const LinksContainer = styled.div`
 
 const Links = styled.div`
   display: flex;
-  min-width: 50%;
+  min-width: 65%;
   justify-content: space-between;
   align-items: center;
 
@@ -118,7 +118,8 @@ function Footer() {
           />
         </a>
         <Links>
-          <Link href="/certification">RAIL Certification</Link>
+          <Link href="/faq">FAQ</Link>
+          <Link href="/certification">RAI Certification</Link>
           <Link href="/tools">Tools</Link>
           <Link href="/news">News</Link>
           <Link href="/about">About RAI</Link>
@@ -137,7 +138,7 @@ function Footer() {
           <StaticImage src="../images/icons/twitter.png" alt="twitter" />
         </Link>
         <Link
-          href="https://www.linkedin.com/company/ai-global?trk=public_profile_experience-item_result-card_image-click"
+          href="https://www.linkedin.com/company/responsible-ai-institute/"
           target="_blank"
           rel="noopener noreferrer"
           icon
@@ -145,7 +146,7 @@ function Footer() {
           <StaticImage src="../images/icons/linkedin.png" alt="linkedin" />
         </Link>
         <Link
-          href="https://facebook.com"
+          href="https://www.facebook.com/RAI-Institute-101416012057802"
           target="_blank"
           rel="noopener noreferrer"
           icon
@@ -153,7 +154,7 @@ function Footer() {
           <StaticImage src="../images/icons/facebook.png" alt="facebook" />
         </Link>
         <Link
-          href="https://www.instagram.com/responsibleaiglobal/"
+          href="https://www.instagram.com/responsible.ai/"
           target="_blank"
           rel="noopener noreferrer"
           icon

@@ -5,7 +5,6 @@ import arrow from "../images/icons/arrow.png"
 const LinkContainer = styled.div`
   display: flex;
   margin: 10px 0px 10px 0px;
-  justify-content: space-between;
   cursor: pointer;
   max-width: 150px;
   align-items: center;

@@ -1,7 +1,6 @@
 import React from "react";
 import styled, {css} from "styled-components";
 import { Headline5 } from "./Text";
-import arrow from "../images/icons/arrow.png";
 
 const carbon = "#2f2d34";
 const gray = "#797b80";
@@ -10,6 +9,15 @@ const NewsRow = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+
+  @media screen and (max-width: 800px){
+    flex-direction: column;
+    justify-content: start;
+
+    div{
+      width: 100%;
+    }
+  }
 `;
 
 const NewsItem = styled.div`
@@ -33,34 +41,6 @@ const Caption = styled.p`
     letter-spacing: 1.5px;
     color: ${gray};
 `
-
-const LinkContainer = styled.div`
-  display: flex;
-  margin: 10px 0px 10px 0px;
-  justify-content: space-between;
-  cursor: pointer;
-  max-width: 150px;
-  align-items: center;
-`;
-
-const CustomLink = styled.a`
-  color: #2f2d34;
-  font-size: 18px;
-  letter-spacing: 0.01em;
-  line-height: 28px;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration-line: underline;
-`;
-
-function StyledLink({ text, link }) {
-  return (
-    <LinkContainer>
-      <CustomLink href={link}>{text}</CustomLink>
-      <img src={arrow} alt="arrow" style={{ marginLeft: "5px" }} />
-    </LinkContainer>
-  );
-}
 
 function News() {
   return (
