@@ -79,25 +79,25 @@ function Tools() {
           <br />
         </JumboText>
         <JumboImage className="hero-image">
-          <StaticImage
+         <StaticImage
             src="../images/pictures/bike-1.png"
             style={{
               position: "absolute",
               zIndex: "2",
               left: "394px",
-              top: "58px",
+              top: "180px",
             }}
             width={1197}
-            height={670}
+            height={650}
             alt="bike-1"
           />
-          <StaticImage
+           <StaticImage
             src="../images/pictures/bike-2.png"
             style={{
               position: "absolute",
               zIndex: "1",
               right: "0px",
-              top: "138px",
+              top: "230px",
             }}
             width={1053}
             height={590}
