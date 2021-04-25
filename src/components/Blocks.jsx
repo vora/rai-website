@@ -175,6 +175,7 @@ export const GrayPanel = styled.div`
 
   @media screen and (max-width: 1190px) {
     min-width: 100%;
+    max-width: 100%;
     margin-top: 40px;
   }
 `;
@@ -183,7 +184,7 @@ export const Row = styled.div`
   max-width: 100%:
   display: flex;
   flex-direction: column;
-  padding: 100px 100px;
+  padding: 75px 100px;
 
   ${(props) =>
     props.gray &&
@@ -224,7 +225,7 @@ export const GridRow = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  height: 150px;
+  height: ${(props) => (props.auto ? "auto" : "150px")};
   img {
     height: auto;
   }
