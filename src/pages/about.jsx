@@ -7,10 +7,6 @@ import { PrimaryBtn } from "../components/Buttons";
 import { Jumbotron, JumboText, Row } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 
-<<<<<<< HEAD
-const JumboPicture = styled.div`
-  position: relative;
-=======
 // configures the modal
 Modal.setAppElement(`#___gatsby`);
 // Because ReactModal is from a third party library, a function is needed to adapt the modal for styled components
@@ -98,7 +94,6 @@ const ModalPersonPosition = styled(SmallBody)`
 
 const ModalClose = styled.button`
   grid-area: close;
->>>>>>> started article page
   flex: 1;
 `
 
