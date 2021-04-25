@@ -7,8 +7,98 @@ import { PrimaryBtn } from "../components/Buttons";
 import { Jumbotron, JumboText, Row } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 
+<<<<<<< HEAD
 const JumboPicture = styled.div`
   position: relative;
+=======
+// configures the modal
+Modal.setAppElement(`#___gatsby`);
+// Because ReactModal is from a third party library, a function is needed to adapt the modal for styled components
+// https://github.com/reactjs/react-modal/issues/603#issuecomment-378847885
+function ReactModalAdapter({ className, ...props }) {
+  const contentClassName = `${className}__content`;
+  const overlayClassName = `${className}__overlay`;
+  return (
+      <Modal
+          portalClassName={className}
+          className={contentClassName}
+          overlayClassName={overlayClassName}
+          {...props}
+      />
+  )
+}
+
+const StyledBiographyModal = styled(ReactModalAdapter)`
+  &__overlay {
+      z-index: 100;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  &__content {
+    width: '100%';
+    height: '100%';
+    position: absolute;
+    top: 10vw;
+    left: 10vw;
+    right: 10vw;
+    bottom: 10vw;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid black;
+    background: rgb(246, 246, 246);
+    display: flex;
+    flex-direction: column;
+  }
+`
+
+const ModalHeader = styled.div`
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "personImage personName close"
+    "personImage personPosition .";
+  height: 20%;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px solid #2F2D34;
+  padding: 20px;
+  box-sizing: border-box;
+`
+
+const ModalPersonImg = styled.img`
+  max-width: 90px;
+  width: 90px;
+  grid-area: personImage;
+  border-radius: 50%;
+  border: 1px solid black;
+  align-self: center;
+  margin-right: 20px;
+`
+
+const ModalPersonName = styled(Headline3)`
+  grid-area: personName;
+  align-self: flex-end;
+  margin: 0;
+`
+
+const ModalPersonPosition = styled(SmallBody)`
+  grid-area: personPosition;
+  align-self: flex-start;
+`
+
+const ModalClose = styled.button`
+  grid-area: close;
+>>>>>>> started article page
   flex: 1;
 `
 
