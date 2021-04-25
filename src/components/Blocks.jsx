@@ -39,11 +39,10 @@ export const Jumbotron = styled.div`
       order: 1 !important;
       margin-bottom: 40px;
     }
-    .jumbo-image{
+    .jumbo-image {
       align-self: center !important;
       margin-bottom: 80px;
     }
-
   }
 
   @media screen and (max-width: 800px) {
@@ -175,6 +174,7 @@ export const GrayPanel = styled.div`
 
   @media screen and (max-width: 1190px) {
     min-width: 100%;
+    max-width: 100%;
     margin-top: 40px;
   }
 `;
@@ -183,7 +183,7 @@ export const Row = styled.div`
   max-width: 100%:
   display: flex;
   flex-direction: column;
-  padding: 100px 100px;
+  padding: 75px 100px;
 
   ${(props) =>
     props.gray &&
@@ -195,6 +195,10 @@ export const Row = styled.div`
     css`
       background-color: ${carbon};
     `}
+
+    @media screen and (max-width: 585px) {
+      padding: 45px 35px;
+    }
 `;
 
 export const Divider = styled.div`
@@ -224,7 +228,7 @@ export const GridRow = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  height: 150px;
+  height: ${(props) => (props.auto ? "auto" : "150px")};
   img {
     height: auto;
   }
@@ -247,7 +251,7 @@ export const GridContainer = styled.div`
     width: 48%;
   }
 
-  @media screen and (max-width: 585px){
+  @media screen and (max-width: 585px) {
     width: 40%;
   }
 `;

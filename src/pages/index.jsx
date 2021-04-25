@@ -7,7 +7,7 @@ import {
   MediumBody,
   Heading1,
   LargeBody,
-  Headline2
+  Headline2,
 } from "../components/Text";
 import { PrimaryBtn } from "../components/Buttons";
 import {
@@ -20,7 +20,7 @@ import {
   Grid,
   GridRow,
   GridContainer,
-  TitleLink
+  TitleLink,
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
@@ -397,8 +397,8 @@ function Index() {
             </GridContainer>
             <GridContainer>
               <StaticImage
-                src="../images/partner-logos/data-world.png"
-                alt="data.world"
+                src="../images/partner-logos/ut-austin.png"
+                alt="UT Austin"
                 quality={100}
                 placeholder="blurred"
               />
@@ -545,14 +545,6 @@ function Index() {
               <StaticImage
                 src="../images/partner-logos/strauss-center.png"
                 alt="Strauss Center"
-                quality={100}
-                placeholder="blurred"
-              />
-            </GridContainer>
-            <GridContainer>
-              <StaticImage
-                src="../images/partner-logos/ut-austin.png"
-                alt="UT Austin"
                 quality={100}
                 placeholder="blurred"
               />

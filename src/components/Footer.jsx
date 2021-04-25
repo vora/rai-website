@@ -115,6 +115,7 @@ function Footer() {
             alt="rai-logo"
             width={276}
             height={63}
+            placeholder="blurred"
           />
         </a>
         <Links>
@@ -135,7 +136,11 @@ function Footer() {
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/twitter.png" alt="twitter" />
+          <StaticImage
+            src="../images/icons/twitter.png"
+            alt="twitter"
+            placeholder="blurred"
+          />
         </Link>
         <Link
           href="https://www.linkedin.com/company/responsible-ai-institute/"
@@ -143,7 +148,11 @@ function Footer() {
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/linkedin.png" alt="linkedin" />
+          <StaticImage
+            src="../images/icons/linkedin.png"
+            alt="linkedin"
+            placeholder="blurred"
+          />
         </Link>
         <Link
           href="https://www.facebook.com/RAI-Institute-101416012057802"
@@ -151,7 +160,11 @@ function Footer() {
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/facebook.png" alt="facebook" />
+          <StaticImage
+            src="../images/icons/facebook.png"
+            alt="facebook"
+            placeholder="blurred"
+          />
         </Link>
         <Link
           href="https://www.instagram.com/responsible.ai/"
@@ -159,7 +172,11 @@ function Footer() {
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/instagram.png" alt="instagram" />
+          <StaticImage
+            src="../images/icons/instagram.png"
+            alt="instagram"
+            placeholder="blurred"
+          />
         </Link>
       </Icons>
     </FooterContainer>
