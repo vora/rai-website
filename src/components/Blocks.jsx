@@ -39,11 +39,10 @@ export const Jumbotron = styled.div`
       order: 1 !important;
       margin-bottom: 40px;
     }
-    .jumbo-image{
+    .jumbo-image {
       align-self: center !important;
       margin-bottom: 80px;
     }
-
   }
 
   @media screen and (max-width: 800px) {
@@ -196,6 +195,10 @@ export const Row = styled.div`
     css`
       background-color: ${carbon};
     `}
+
+    @media screen and (max-width: 585px) {
+      padding: 45px 35px;
+    }
 `;
 
 export const Divider = styled.div`
@@ -248,7 +251,7 @@ export const GridContainer = styled.div`
     width: 48%;
   }
 
-  @media screen and (max-width: 585px){
+  @media screen and (max-width: 585px) {
     width: 40%;
   }
 `;
