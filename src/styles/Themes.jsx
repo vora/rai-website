@@ -9,5 +9,7 @@ export const lightTheme = {
     ...baseTheme,
     color: {
         ...colors,
+        text: colors.dark,
+        contrastText: colors.light
     },
 }
