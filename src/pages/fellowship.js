@@ -1,18 +1,18 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { Row, Jumbotron, JumboText, GrayPanel } from "../components/Blocks";
+import { Row, Jumbotron, JumboText} from "../components/Blocks";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
+import StyledLink from "../components/StyledLink";
+import News from "../components/News";
+
 
 import {
   Headline1,
   Headline2,
-  Headline4,
-  Headline5,
   MediumBody,
   LargeBody,  
   Heading1,
-  SmallBody,
 } from "../components/Text";
 
 const Column = styled.div`
@@ -41,7 +41,7 @@ function Fellowship() {
   return (
     <Layout title="Fellowship">
       <Jumbotron>
-        <JumboText>
+        <JumboText >
           <Headline1>
             Responsible AI
             <br /> Fellowship Program
@@ -319,7 +319,20 @@ function Fellowship() {
           </LargeBody>
         </JumboText>
       </Jumbotron>
-
+      <Row gray>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "100%",
+            marginBottom: "40px",
+          }}
+        >
+          <Headline2>News</Headline2>
+          <StyledLink text="More News" link="/" />
+        </div>
+        <News />
+      </Row>
     </Layout>
   );
 }

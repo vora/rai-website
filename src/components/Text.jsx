@@ -70,6 +70,8 @@ export const LargeBody = styled.p`
   line-height: 32px;
   margin: 0px 0px 12px 0px;
   color: ${(props) => (props.dark ? blanco : carbon)};
+  border-left: ${(props) => (props.bordered ? "3px solid " + carbon : "none")};
+  padding-left: ${(props) => (props.bordered ? "20px" : "0")};
 `;
 export const MediumBody = styled.p`
   font-style: normal;

@@ -95,6 +95,11 @@ export const Row = styled.div`
     css`
       background-color: ${ghost};
     `}
+  ${(props) =>
+    props.dark &&
+    css`
+      background-color: ${carbon};
+    `}
 `;
 
 export const Divider = styled.div`

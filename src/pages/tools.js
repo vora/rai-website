@@ -116,17 +116,22 @@ function Tools() {
         <Line />
         <Container>
           <ItemIcon>
-            <StaticImage
-              src="../images/rai-icons/Fellowship.png"
-              width={208}
-              height={208}
-              alt="calendar"
-            />
+            <a href="/calendar">
+              <StaticImage
+                src="../images/rai-icons/calendar.png"
+                width={208}
+                height={208}
+                alt="calendar"
+              />
+            </a>
           </ItemIcon>
           <ItemDescription>
             <Headline4>
-             <u>RAI Events Calendar</u> connects members to the latest events in
-              responsible AI.
+              <a href="/calendar" style={{color:"black"}}>
+                {" "}
+                <u>RAI Events Calendar</u>
+              </a>{" "}
+              connects members to the latest events in responsible AI.
             </Headline4>
             <MediumBody>
               We understand the importance in always staying on top of industry
@@ -143,17 +148,21 @@ function Tools() {
         <Line />
         <Container>
           <ItemIcon>
-            <StaticImage
-              src="../images/rai-icons/Fellowship.png"
-              width={208}
-              height={208}
-              alt="calendar"
-            />
+            <a href="/webinar">
+              <StaticImage
+                src="../images/rai-icons/webinar.png"
+                width={208}
+                height={208}
+                alt="webinar"
+              />
+            </a>
           </ItemIcon>
           <ItemDescription>
             <Headline4>
-             <u>Responsible AI Monthly Webinar Series</u> fosters connection with key
-              AI subject matter experts.
+              <a href="/webiner" style={{color:"black"}}>
+                <u>Responsible AI Monthly Webinar Series</u>
+              </a>
+               {" "}fosters connection with key AI subject matter experts.
             </Headline4>
             <MediumBody>
               This program will enrich members with a reoccuring monthly webinar
@@ -173,41 +182,50 @@ function Tools() {
         <Line style={{ marginBottom: "5px" }} />
         <Container>
           <Item>
-            <StaticImage
-              src="../images/rai-icons/Portal.png"
-              alt="Portal icon"
-              width={356}
-              height={160}
-            />
+            <a href="https://portal.ai-global.org/">
+              <StaticImage
+                src="../images/rai-icons/Portal.png"
+                alt="Portal icon"
+                width={356}
+                height={160}
+              />
+            </a>
             <div style={{ textAlign: "left" }}>
               <Headline5>
-                {" "}
-                <u>Responsible AI Community Portal</u><br/> provides access to a curated
-                library of trusted resources.
+                <a href="https://portal.ai-global.org/" style={{color:"black"}}>
+                  <u>Responsible AI Community Portal</u>
+                </a>
+                <br /> provides access to a curated library of trusted
+                resources.
               </Headline5>
               <SmallBody>
                 The Community Portal is an open resource hub providing access to
                 responsible AI standards, models, government policies, open
-                datasets, and open-source software to help members better 
+                datasets, and open-source software to help members better
                 navigate the AI landscape and directly connect with the experts
                 who are guiding...
+                <br /><br/>
                 <br />
-                <br />
-                <a href="https://portal.ai-global.org/">Get Started</a>
+                <StyledLink text="Get Started" link="https://portal.ai-global.org/" />
               </SmallBody>
             </div>
           </Item>
           <Item>
-            <StaticImage
-              src="../images/rai-icons/Portal.png"
-              alt="Portal icon"
-              width={356}
-              height={160}
-            />
+            <a href="https://map.ai-global.org/">
+              <StaticImage
+                src="../images/rai-icons/map.png"
+                alt="map icon"
+                width={356}
+                height={160}
+              />
+            </a>
             <div style={{ textAlign: "left" }}>
               <Headline5>
-                <u>Responsible AI Industry Heat Map</u><br/> provides realtime examples to
-                where AI is currently in use.
+                <a href="https://map.ai-global.org/" style={{color:"black"}}>
+                  <u>Responsible AI Industry Heat Map</u>
+                </a>
+                <br /> provides realtime examples to where AI is currently in
+                use.
               </Headline5>
               <SmallBody>
                 Everyone is talking about AI, but how and where is it actually
@@ -217,21 +235,23 @@ function Tools() {
                 Charlie Pownall/CPC & Associates.
                 <br />
                 <br />
-                <a href="https://map.ai-global.org/">Get Started</a>
+                <StyledLink text="Get Started" link="https://map.ai-global.org/" />
               </SmallBody>
             </div>
           </Item>
           <Item>
-            <StaticImage
-              src="../images/rai-icons/Portal.png"
-              alt="E-learning icon"
-              width={356}
-              height={160}
-            />
+            <a href="https://aiglobal.beta.trajectoryiq.com/">
+              <StaticImage
+                src="../images/rai-icons/e-course.png"
+                alt="E-learning icon"
+                width={356}
+                height={160}
+              />
+            </a>
             <div style={{ textAlign: "left" }}>
               <Headline5>
-                <u>Responsible AI E-Learning Courses</u><br/> developed in partnership with
-                TIQ Software
+                <a href="https://aiglobal.beta.trajectoryiq.com/" style={{color:"black"}}><u>Responsible AI E-Learning Courses</u></a>
+                <br /> developed in partnership with TIQ Software
               </Headline5>
               <SmallBody>
                 TIQ Software is a leader in work-integrated digital learning
@@ -241,7 +261,7 @@ function Tools() {
                 helpful, or harmful, if not developed responsibly.
                 <br />
                 <br />
-                <a href="https://map.ai-global.org/">Get Started</a>
+                <StyledLink text="Get Started" link="https://aiglobal.beta.trajectoryiq.com/" />
               </SmallBody>
             </div>
           </Item>{" "}
@@ -257,17 +277,22 @@ function Tools() {
         <Line />
         <Container style={{ padding: "10px 0" }}>
           <ItemIcon>
-            <StaticImage
-              src="../images/rai-icons/Fellowship.png"
-              width={208}
-              height={208}
-              alt="calendar"
-            />
+            <a href="https://oproma.github.io/rai-trustindex/">
+              <StaticImage
+                src="../images/rai-icons/design-assistant.png"
+                width={208}
+                height={199}
+                alt="design assisstant"
+              />
+            </a>
           </ItemIcon>
           <ItemDescription>
             <Headline4>
-              <u>Responsible AI Design Assisstant</u> assesses work in development, to
-              anticipate problems and future-proof AI systems.
+              <a href="https://oproma.github.io/rai-trustindex/" style={{color:"black"}}>
+                <u>Responsible AI Design Assisstant</u>
+              </a>{" "}
+              assesses work in development, to anticipate problems and
+              future-proof AI systems.
             </Headline4>
             <MediumBody>
               The Responsible AI Design Assistant is a virtual assessment to
@@ -295,17 +320,22 @@ function Tools() {
         <Line />
         <Container style={{ padding: "10px 0" }}>
           <ItemIcon>
-            <StaticImage
-              src="../images/rai-icons/Badge.png"
-              width={208}
-              height={208}
-              alt="RAI certification badge"
-            />
+            <a href="/certification">
+              <StaticImage
+                src="../images/rai-icons/Badge.png"
+                width={208}
+                height={208}
+                alt="RAI certification badge"
+              />
+            </a>
           </ItemIcon>
           <ItemDescription>
             <Headline4>
-              <u>RAI Certification Beta</u> is the world’s first independent,
-              accredited certification program of its kind.
+              <a href="/certification" style={{color:"black"}}>
+                <u>RAI Certification Beta</u>
+              </a>{" "}
+              is the world’s first independent, accredited certification program
+              of its kind.
             </Headline4>
             <MediumBody>
               Developed under the Global AI Action Alliance for the World
@@ -320,10 +350,7 @@ function Tools() {
               around the world.
               <br />
               <br />
-              <StyledLink
-                text="Get Started"
-                link="https://oproma.github.io/rai-trustindex/"
-              />
+              <StyledLink text="Get Started" link="/certification" />
             </MediumBody>
           </ItemDescription>
         </Container>
