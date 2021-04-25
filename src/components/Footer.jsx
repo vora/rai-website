@@ -43,19 +43,19 @@ const LinksContainer = styled.div`
 
 const Links = styled.div`
   display: flex;
-  min-width: 50%;
+  min-width: 70%;
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 1150px) {
-    min-width: 60%;
-  }
-
-  @media screen and (max-width: 1030px) {
+  @media screen and (max-width: 1190px) {
     a {
       font-size: 16px;
       line-height: 28px;
     }
+  }
+
+  @media screen and (max-width: 1150px) {
+    min-width: 65%;
   }
 
   @media screen and (max-width: 1000px) {
@@ -67,7 +67,7 @@ const Links = styled.div`
       margin-bottom: 10px;
     }
 
-    a:nth-of-type(5) {
+    a:nth-of-type(6) {
       text-decoration: none;
       font-weight: bold;
     }
@@ -115,11 +115,13 @@ function Footer() {
             alt="rai-logo"
             width={276}
             height={63}
+            placeholder="blurred"
           />
         </a>
         <Links>
-          <Link href="/certification">RAIL Certification</Link>
-          <Link href="/tools">Tools</Link>
+          <Link href="/faq">FAQ</Link>
+          <Link href="/certification">RAI Certification</Link>
+          <Link href="/tools">Programs and Tools</Link>
           <Link href="/news">News</Link>
           <Link href="/about">About RAI</Link>
           <Link href="/membership" member>
@@ -134,31 +136,47 @@ function Footer() {
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/twitter.png" alt="twitter" />
+          <StaticImage
+            src="../images/icons/twitter.png"
+            alt="twitter"
+            placeholder="blurred"
+          />
         </Link>
         <Link
-          href="https://www.linkedin.com/company/ai-global?trk=public_profile_experience-item_result-card_image-click"
+          href="https://www.linkedin.com/company/responsible-ai-institute/"
           target="_blank"
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/linkedin.png" alt="linkedin" />
+          <StaticImage
+            src="../images/icons/linkedin.png"
+            alt="linkedin"
+            placeholder="blurred"
+          />
         </Link>
         <Link
-          href="https://facebook.com"
+          href="https://www.facebook.com/RAI-Institute-101416012057802"
           target="_blank"
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/facebook.png" alt="facebook" />
+          <StaticImage
+            src="../images/icons/facebook.png"
+            alt="facebook"
+            placeholder="blurred"
+          />
         </Link>
         <Link
-          href="https://www.instagram.com/responsibleaiglobal/"
+          href="https://www.instagram.com/responsible.ai/"
           target="_blank"
           rel="noopener noreferrer"
           icon
         >
-          <StaticImage src="../images/icons/instagram.png" alt="instagram" />
+          <StaticImage
+            src="../images/icons/instagram.png"
+            alt="instagram"
+            placeholder="blurred"
+          />
         </Link>
       </Icons>
     </FooterContainer>

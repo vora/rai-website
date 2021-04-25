@@ -5,19 +5,21 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+  zoom: 1;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  scroll-behavior: smooth;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -26,9 +28,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-}
-ol, ul {
-	list-style: none;
 }
 blockquote, q {
 	quotes: none;
@@ -44,6 +43,9 @@ table {
 }
 button {
   font: 500 28px Roboto;
+}
+ol, li{
+  margin-bottom: 5px;
 }
 
 /* Google Font Import*/
@@ -75,4 +77,31 @@ textarea {
 .gatsby-image-wrapper img{
   right: 0 !important;
   left: auto;
+}
+
+.kindful-donate-btn {
+  background: #2f2d34 !important;
+  color: #ffffff !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  line-height: 28px !important;
+  text-align: center !important;
+  width: fit-content !important;
+  padding: 14px 30px 14px 30px !important;
+  cursor: pointer !important;
+  border: none !important;
+  margin-bottom: 12px !important;
+  align-self: center;
+}
+
+.kindful-donate-btn:hover{
+  background: #4d5052 !important;
+}
+
+@media screen and (max-width: 800px){
+  .kindful-donate-btn{
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
 }
