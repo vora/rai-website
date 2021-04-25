@@ -281,16 +281,16 @@ function About(props) {
 
   const [partnerSelected, setPartnerSelected] = useState("members")
   
-  function getPartnerList(){
+  function getPartnerList(type){
     switch (partnerSelected){
       case "members":
-        return membersList
+        return membersList.filter((member) => member.type == type)
         break;
       case "contributers":
-        return contributersList;
+        return contributersList.filter((member) => member.type == type);
         break;
       case "affliates":
-        return affiliatesList;
+        return affiliatesList.filter((member) => member.type == type);
       default:
         return membersList;
     }
@@ -326,7 +326,7 @@ function About(props) {
     {name: "Manoj Saxena the Leader", position: "Board Chair", img: "../images/pictures/bike-1.png", introduction: "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.", biography: "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India."},
     {name: "1Manoj Saxena", position: "Board Chair", img: "../images/pictures/bike-1.png", introduction: "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.", biography: "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India."},
   ];  
-  const membersList = [{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"}]
+  const membersList = [{src: "algora.png", type: "gc"}, {src: "argo-design.png", type: "tsp"},{src: "algora.png", type: "gngo"}, {src: "argo-design.png", type: "ua"},{src: "algora.png", type: "gc"}, {src: "argo-design.png", type:"gs"},{src: "algora.png", type: "gc"}, {src: "argo-design.png", type: "n"},{src: "algora.png"}, {src: "argo-design.png"}]
   const contributersList = [{src: "argo-design.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"}]
   const affiliatesList = [{src: "algora.png"}, {src: "algora.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"}]
 
@@ -349,32 +349,32 @@ function About(props) {
             governance around the world.
           </MediumBody>
         </JumboText>
-        <JumboImage className="hero-image">
+        {/* <JumboImage className="hero-image">
           <StaticImage
-              src="../images/pictures/about/jumboforeground.png"
-              style={{
-                position: "absolute",
-                zIndex: "4",
-                right: "0",
-                top: "180px",
-              }}
-              width={1479}
-              height={709}
-              alt="jumbo foreground"
-            />
-            <StaticImage
-              src="../images/pictures/about/jumbobackground.png"
-              style={{
-                position: "absolute",
-                zIndex: "3",
-                right: "0",
-                top: "180px",
-              }}
-              width={1177}
-              height={618}
-              alt="jumbo background"
-            />
-          </JumboImage>
+            src="../images/pictures/about/jumboforeground.png"
+            style={{
+              position: "absolute",
+              zIndex: "4",
+              right: "0",
+              top: "180px",
+            }}
+            width={1479}
+            height={709}
+            alt="jumbo foreground"
+          />
+          <StaticImage
+            src="../images/pictures/about/jumbobackground.png"
+            style={{
+              position: "absolute",
+              zIndex: "3",
+              right: "0",
+              top: "180px",
+            }}
+            width={1177}
+            height={618}
+            alt="jumbo background"
+          />
+        </JumboImage> */}
       </Jumbotron>
       <Row style={{backgroundColor: "#f6f6f6", paddingBottom: 0}}>
           <Headline2>
@@ -525,9 +525,8 @@ function About(props) {
             handler={modalHandler}
             person={modalPerson}
           >
-            </BiographyModal>
+          </BiographyModal>
         </Row>
-
       <Row>
         <PartnerHeader>
           <PartnerHeadline>
@@ -545,9 +544,52 @@ function About(props) {
             </PartnerLink>
           </PartnerLinkContainer>
         </PartnerHeader>
+        <Headline4>Global Corporations</Headline4>
         <PartnerGrid>
           {
-            getPartnerList().map((partner) => {
+            getPartnerList("gc").map((partner) => {
+                return (
+                  <PartnerImgContainer>
+                    <PartnerImg 
+                      src={"../../partner-logos/" + partner.src}
+                    >
+                    </PartnerImg>
+                  </PartnerImgContainer>
+                );
+          })}
+        </PartnerGrid>
+        <Headline4>Tech and Service Providers</Headline4>
+        <PartnerGrid>
+          {
+            getPartnerList("tsp").map((partner) => {
+                return (
+                  <PartnerImgContainer>
+                    <PartnerImg 
+                      src={"../../partner-logos/" + partner.src}
+                    >
+                    </PartnerImg>
+                  </PartnerImgContainer>
+                );
+          })}
+        </PartnerGrid>
+        <Headline4>Government and NGOs</Headline4>
+        <PartnerGrid>
+          {
+            getPartnerList("gngo").map((partner) => {
+                return (
+                  <PartnerImgContainer>
+                    <PartnerImg 
+                      src={"../../partner-logos/" + partner.src}
+                    >
+                    </PartnerImg>
+                  </PartnerImgContainer>
+                );
+          })}
+        </PartnerGrid>
+        <Headline4>Universities and Academia</Headline4>
+        <PartnerGrid>
+          {
+            getPartnerList("ua").map((partner) => {
                 return (
                   <PartnerImgContainer>
                     <PartnerImg 
@@ -593,7 +635,7 @@ function About(props) {
           Become a Member{" "}
         </PrimaryBtn>
       </Row>
-      <Row>
+      <Row gray>
         <TitleLink>
           <Headline2>
             News
