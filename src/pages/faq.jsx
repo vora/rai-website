@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
-import { navigate } from "gatsby";
 import {
   Headline1,
   MediumBody,
@@ -9,11 +8,7 @@ import {
   LargeBody,
   Headline2,
 } from "../components/Text";
-import {
-  Row,
-  GridRow,
-  TitleLink,
-} from "../components/Blocks";
+import { Row, GridRow, TitleLink } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
 
@@ -27,6 +22,15 @@ const Link = styled.a`
 
   &:hover {
     color: ${stone};
+  }
+
+  @media screen and (max-width: 700px) {
+    width: ${(props) => (props.highlight ? "fit-content" : "45%")};
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
 `;
 
@@ -119,9 +123,7 @@ function Faq() {
               value.current.scrollIntoView();
             }}
           >
-            <LargeBody >
-              What value does a RAI Certification provide?
-            </LargeBody>
+            <LargeBody>What value does a RAI Certification provide?</LargeBody>
           </Link>
           <Link
             href="/"
@@ -130,7 +132,7 @@ function Faq() {
               journey.current.scrollIntoView();
             }}
           >
-            <LargeBody >
+            <LargeBody>
               How can I start the journey to a RAI Certification?
             </LargeBody>
           </Link>
