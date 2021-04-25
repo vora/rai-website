@@ -225,19 +225,18 @@ function Slideshow() {
                 <Heading3 style={{ marginBottom: "0" }}>
                   Kay Firth-Butterfield
                 </Heading3>
-                <MediumBody>
-                  Head of AI and Machine Learning, WEF
-                </MediumBody>
+                <MediumBody>Head of AI and Machine Learning, WEF</MediumBody>
               </div>
             </div>
           </View>
           <View>
             <MediumBody>
-              “USAA seeks to stay at the leading edge of emerging technologies
-              to better serve the needs of our members. As a founding member of
-              Responsible AI Institute, we’re delighted to see the innovative
-              offerings from RAI Institute enable the industry to innovate with
-              ethical AI at a faster pace.”
+              “The close working relationship between CIPS and Responsible AI
+              Institute is imperative to allow both organizations to enrich
+              their members with the right toolset to further responsible AI. As
+              the risks of data security increases in tandem with the growth of
+              AI systems, we must use these tangible tools to ethically succeed
+              in this rapidly changing landscape.”
             </MediumBody>
             <div
               style={{
@@ -248,13 +247,15 @@ function Slideshow() {
               }}
             >
               <StaticImage
-                src="../images/testimonials/usaa.png"
+                src="../images/testimonials/cips.png"
                 placeholder="blurred"
-                alt="USAA"
+                alt="CIPS"
               />
               <div style={{ marginLeft: "20px" }}>
-                <Heading3 style={{ marginBottom: "0" }}>Jon Cholak</Heading3>
-                <MediumBody>Investment Director, USAA</MediumBody>
+                <Heading3 style={{ marginBottom: "0" }}>Greg Lane</Heading3>
+                <MediumBody>
+                  CEO, Canadian Information Procesing Society
+                </MediumBody>
               </div>
             </div>
           </View>
@@ -319,66 +320,6 @@ function Slideshow() {
         <Views>
           <View>
             <MediumBody>
-              “We are excited to continue to collaborate with RAI Institute on
-              new ideas like The Human Standard Workshop along with continued
-              growth for The IEEE Global Initiative. I wish all the greatest
-              success and applaud your efforts toward a responsible,
-              human-centered innovation for technology in the thriving and
-              unique technological hub of Austin, Texas.”
-            </MediumBody>
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-                marginTop: "20px",
-              }}
-            >
-              <StaticImage
-                src="../images/testimonials/ieee.png"
-                placeholder="blurred"
-                alt="IEEE"
-              />
-              <div style={{ marginLeft: "20px" }}>
-                <Heading3 style={{ marginBottom: "0" }}>
-                  Konstantinos Karachalios
-                </Heading3>
-                <MediumBody>Managing Director, IEEE Standards</MediumBody>
-              </div>
-            </div>
-          </View>
-          <View>
-            <MediumBody>
-              “AI presents a new breed of significant financial and reputation
-              risk for companies. CIOs, C-suite executives, and boards must ask
-              tough questions about responsible use of data and machine learning
-              technology and help their organizations implement new responsible
-              AI guardrails and independent AI certifications like the one being
-              provided by Responsible AI Institute”.
-            </MediumBody>
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-                marginTop: "20px",
-              }}
-            >
-              <StaticImage
-                src="../images/testimonials/amex.png"
-                placeholder="blurred"
-                alt="American Express"
-              />
-              <div style={{ marginLeft: "20px" }}>
-                <Heading3 style={{ marginBottom: "0" }}>Suraj Madnani</Heading3>
-                <MediumBody>Chief Product Officer, American Express</MediumBody>
-              </div>
-            </div>
-          </View>
-        </Views>
-        <Views>
-          <View>
-            <MediumBody>
               "We don’t think Banking can work in an environment without trust.
               Independent certification programs like the one from RAI Institute
               help technical and business leaders develop the appropriate
@@ -408,12 +349,12 @@ function Slideshow() {
           </View>
           <View>
             <MediumBody>
-              “The close working relationship between CIPS and Responsible AI
-              Institute is imperative to allow both organizations to enrich
-              their members with the right toolset to further responsible AI. As
-              the risks of data security increases in tandem with the growth of
-              AI systems, we must use these tangible tools to ethically succeed
-              in this rapidly changing landscape.”
+              “AI presents a new breed of significant financial and reputation
+              risk for companies. CIOs, C-suite executives, and boards must ask
+              tough questions about responsible use of data and machine learning
+              technology and help their organizations implement new responsible
+              AI guardrails and independent AI certifications like the one being
+              provided by Responsible AI Institute”.
             </MediumBody>
             <div
               style={{
@@ -424,15 +365,13 @@ function Slideshow() {
               }}
             >
               <StaticImage
-                src="../images/testimonials/cips.png"
+                src="../images/testimonials/amex.png"
                 placeholder="blurred"
-                alt="CIPS"
+                alt="American Express"
               />
               <div style={{ marginLeft: "20px" }}>
-                <Heading3 style={{ marginBottom: "0" }}>Greg Lane</Heading3>
-                <MediumBody>
-                  CEO, Canadian Information Procesing Society
-                </MediumBody>
+                <Heading3 style={{ marginBottom: "0" }}>Suraj Madnani</Heading3>
+                <MediumBody>Chief Product Officer, American Express</MediumBody>
               </div>
             </div>
           </View>

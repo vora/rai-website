@@ -1,19 +1,17 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled, {css} from "styled-components";
 import Layout from "../components/Layout";
-import { navigate } from "gatsby";
 import {
   Headline1,
   Headline2,
   Headline4,
   Headline5,
 } from "../components/Text";
-import { Row, GridRow, TitleLink } from "../components/Blocks";
+import { Row, TitleLink } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
 
 const carbon = "#2f2d34";
-const stone = "#4d5052";
 const gray = "#797b80";
 
 const BoxRow = styled.div`

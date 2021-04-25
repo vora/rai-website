@@ -12,6 +12,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+  zoom: 1;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -76,4 +77,31 @@ textarea {
 .gatsby-image-wrapper img{
   right: 0 !important;
   left: auto;
+}
+
+.kindful-donate-btn {
+  background: #2f2d34 !important;
+  color: #ffffff !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  line-height: 28px !important;
+  text-align: center !important;
+  width: fit-content !important;
+  padding: 14px 30px 14px 30px !important;
+  cursor: pointer !important;
+  border: none !important;
+  margin-bottom: 12px !important;
+  align-self: center;
+}
+
+.kindful-donate-btn:hover{
+  background: #4d5052 !important;
+}
+
+@media screen and (max-width: 800px){
+  .kindful-donate-btn{
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
 }

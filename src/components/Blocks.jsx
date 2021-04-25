@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 
 const ghost = "#f6f6f6";
-const blanco = "#ffffff";
 const carbon = "#2f2d34";
 
 export const Jumbotron = styled.div`
@@ -42,6 +41,10 @@ export const Jumbotron = styled.div`
     .jumbo-image {
       align-self: center !important;
       margin-bottom: 80px;
+    }
+
+    .member-image {
+      margin-left: 0 !important;
     }
   }
 
@@ -174,8 +177,13 @@ export const GrayPanel = styled.div`
 
   @media screen and (max-width: 1190px) {
     min-width: 100%;
+    margin: 40px 0px;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 600px){
     max-width: 100%;
-    margin-top: 40px;
+    padding: 35px;
   }
 `;
 
@@ -258,11 +266,17 @@ export const GridContainer = styled.div`
 
 export const Card = styled.div`
   width: 26%;
-  height: 500px;
+  min-height: 500px;
   border: 1px solid ${carbon};
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 32px;
+
+  @media screen and (max-width: 1190px) {
+    width: 100%;
+    margin-top: 30px;
+  }
 `;
 
 export const TitleLink = styled.div`
