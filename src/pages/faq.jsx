@@ -11,7 +11,6 @@ import {
 import { Row, GridRow, TitleLink } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
-import { PrimaryBtn } from "../components/Buttons";
 
 const carbon = "#2f2d34";
 const stone = "#4d5052";
@@ -50,12 +49,103 @@ function Faq() {
     <Layout title="FAQ">
       <Row>
         <Headline1>Frequently Asked Questions</Headline1>
-        <MediumBody>
-          Learn more about Responsible Artificial Intelligence, RAI, and how you
-          can get involved.
-        </MediumBody>
-        <br/>
-        <PrimaryBtn dark>Read our White Paper</PrimaryBtn>
+        <GridRow
+          style={{
+            alignItems: "flex-start",
+            marginBottom: "40px",
+            overflow: "hidden",
+          }}
+          first
+          auto
+        >
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              what.current.scrollIntoView();
+            }}
+          >
+            <LargeBody>What is Repsonsible Artificial Intelligence?</LargeBody>
+          </Link>
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              how.current.scrollIntoView();
+            }}
+          >
+            <LargeBody>
+              How is it related to Ethical AI or Trustworthy AI?
+            </LargeBody>
+          </Link>
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              who.current.scrollIntoView();
+            }}
+          >
+            <LargeBody>Who is Responsible AI Institute?</LargeBody>
+          </Link>
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              ecosystem.current.scrollIntoView();
+            }}
+          >
+            <LargeBody>
+              Where does RAI sit in the ecosytem of responsible AI?
+            </LargeBody>
+          </Link>
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              beta.current.scrollIntoView();
+            }}
+          >
+            <LargeBody>What is RAI Certification Beta?</LargeBody>
+          </Link>
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              assessment.current.scrollIntoView();
+            }}
+          >
+            <LargeBody>What is RAI Assessment?</LargeBody>
+          </Link>
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              value.current.scrollIntoView();
+            }}
+          >
+            <LargeBody>What value does a RAI Certification provide?</LargeBody>
+          </Link>
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              journey.current.scrollIntoView();
+            }}
+          >
+            <LargeBody>
+              How can I start the journey to a RAI Certification?
+            </LargeBody>
+          </Link>
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              involved.current.scrollIntoView();
+            }}
+          >
+            <LargeBody>How can I get involved?</LargeBody>
+          </Link>
+        </GridRow>
       </Row>
       <Row ref={what}>
         <Heading1>What is Responsible Artificial Intelligence (RAI)?</Heading1>

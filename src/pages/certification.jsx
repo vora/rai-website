@@ -185,6 +185,7 @@ function Certification() {
           marginLeft: "115px",
           marginRight: "115px",
           textAlign: "center",
+          alignItems: "center"
         }}
       >
         <Headline2 style={{ color: "white" }}>Get Involved</Headline2>

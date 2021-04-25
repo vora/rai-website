@@ -30,6 +30,10 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+<<<<<<< HEAD
+=======
+    "react-modal": "^3.13.1",
+>>>>>>> edited about page
     "react-slideshow-image": "^3.4.6",
     "styled-components": "^5.2.3"
   }

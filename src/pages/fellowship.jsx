@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { Row, Jumbotron, JumboText } from "../components/Blocks";
+import { Row, Jumbotron, JumboText} from "../components/Blocks";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import StyledLink from "../components/StyledLink";
@@ -10,7 +10,7 @@ import {
   Headline1,
   Headline2,
   MediumBody,
-  LargeBody,
+  LargeBody,  
   Heading1,
 } from "../components/Text";
 
@@ -40,7 +40,7 @@ function Fellowship() {
   return (
     <Layout title="Fellowship">
       <Jumbotron>
-        <JumboText>
+        <JumboText >
           <Headline1>
             Responsible AI
             <br /> Fellowship Program
@@ -79,13 +79,15 @@ function Fellowship() {
       </Jumbotron>
       <Jumbotron gray>
         <JumboText>
-          <Headline2>RAI Research Fellow</Headline2>
+          <Headline2>
+            RAI University
+            <br /> Technical Fellow
+          </Headline2>
           <MediumBody>
-            The RAI Research Fellowship is an intensive, eight-week
-            <br /> development program for graduates, grad students and
-            <br /> researchers that helps bridge the gap to a full-time career
-            in
-            <br /> data & AI-related fields.
+            The RAI University Technical Fellowship is an intensive,
+            <br /> eight-week development program for graduates, PhD grads
+            <br /> and postdoctoral researchers that helps bridge the gap to a
+            <br /> full-time career in data & AI-related fields.
           </MediumBody>
         </JumboText>
         <Column>
@@ -113,10 +115,9 @@ function Fellowship() {
             }}
           >
             Technical Fellows come from a mix of data driven STEM fields,
-            including physics, math, engineering, statistics,
-            <br /> computer science, machine & deep learning, computer vision,
-            <br /> NLP, quantitative finance, genomics, biology, neuroscience,
-            <br /> and others.
+            including physics, math, engineering, statistics, computer science,
+            machine & deep learning, computer vision, NLP, quantitative finance,
+            genomics, biology, neuroscience, and others.
           </MediumBody>
           <MediumBody
             style={{
@@ -221,12 +222,11 @@ function Fellowship() {
               marginBottom: "40px",
             }}
           >
-            Professional/Government Fellows come from all areas of
-            <br /> professional leadership, including attorneys, doctors, CPAs,
-            <br /> design specialists, government leaders, etc. that are seeking
-            <br /> to further their knowledge and gain new capabilities
-            <br /> regarding AI as it applies to their practices and
-            <br /> constituencies.
+            Community Fellows come from many areas of community
+            <br /> leadership, including non-profits, community working groups,
+            <br /> NGOs, social platforms, etc. where the Fellow is seeking to
+            <br /> further their skillsets in understanding and applying AI to
+            address community needs.
           </MediumBody>
           <MediumBody
             style={{
@@ -239,11 +239,11 @@ function Fellowship() {
           >
             Fellows work collaboratively with RAI’s leadership and its
             <br /> ecosystem of Member and Partner organizations to focus on
-            <br /> specific professional-related challenges pertinent to both
-            the
-            <br /> Fellow’s and RAI’s foci in designing, implementing, scaling,
-            <br /> and sustaining processes that enable RAI to Certify AI
-            <br /> applications as Trustworthy across all industries globally.
+            <br /> social-related opportunities and challenges pertinent to both
+            <br /> the Fellow’s and RAI’s foci in designing, implementing,
+            <br /> scaling, and sustaining processes that enable RAI to Certify
+            <br /> AI applications as Trustworthy across communities
+            <br /> worldwide.
           </MediumBody>
         </Column>
       </Jumbotron>
@@ -271,54 +271,8 @@ function Fellowship() {
               marginBottom: "40px",
             }}
           >
-            Community Fellows come from many areas of community
-            <br /> leadership, including non-profits, community working groups,
-            <br /> NGOs, social platforms, etc. where the Fellow is seeking to
-            <br /> further their skillsets in understanding and applying AI to
-            <br /> address community needs.
-          </MediumBody>
-          <MediumBody
-            style={{
-              borderLeftColor: "#2F2D34",
-              borderLeftWidth: "3px",
-              borderLeftStyle: "solid",
-              paddingLeft: "10px",
-              marginBottom: "40px",
-            }}
-          >
-            Fellows work collaboratively with RAI’s leadership and its
-            <br /> ecosystem of Member and Partner organizations to focus on
-            <br /> social-related opportunities and challenges pertinent to both
-            <br /> the Fellow’s and RAI’s foci in designing, implementing,
-            <br /> scaling, and sustaining processes that enable RAI to Certify
-            <br /> AI applications as Trustworthy across communities
-            <br /> worldwide.
-          </MediumBody>
-        </Column>
-      </Jumbotron>
-      <Jumbotron gray>
-        <JumboText>
-          <Headline2>RAI Youth Fellow</Headline2>
-          <MediumBody>
-            The RAI Youth Fellowship is a community-based learning
-            <br /> experience for high school and undergraduate Fellows that
-            <br /> helps deliver a world class AI environment for Fellows to
-            <br /> harness their boundless creativity and energy in envisioning,
-            <br /> understanding, designing and applying trustworthy AI
-            <br /> applications in new areas of focus.
-          </MediumBody>
-        </JumboText>
-        <Column>
-          <MediumBody
-            style={{
-              borderLeftColor: "#2F2D34",
-              borderLeftWidth: "3px",
-              borderLeftStyle: "solid",
-              paddingLeft: "10px",
-              marginBottom: "40px",
-            }}
-          >
             Youth Fellows are juniors or seniors in high school and/or
+            <br />
             undergraduates in accredited colleges or universities, where
             <br /> the Fellow is seeking to further their knowledge and skillset
             <br /> in AI technologies across new or innovative applications and
@@ -358,14 +312,12 @@ function Fellowship() {
             <br /> practitioners of all backgrounds. With a wealth of
             <br />
             experience in both the development of AI policy and
-            <br /> systems, RAI is uniquely positioned to partner with
-            <br />
+            <br /> systems, RAI is uniquely positioned to partner with<br/> 
             organizations across public, private, and academic sectors
             <br /> to guide and inform responsible AI governance.
           </LargeBody>
         </JumboText>
       </Jumbotron>
-
       <Row gray>
         <div
           style={{
