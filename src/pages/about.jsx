@@ -5,6 +5,7 @@ import Layout from "components/Layout";
 import { Headline1, MediumBody, Headline2, Headline4, LargeBody, SmallBody } from "../components/Text";
 import { PrimaryBtn } from "../components/Buttons";
 import { Jumbotron, JumboText, Row } from "../components/Blocks";
+import StyledLink from "../components/StyledLink";
 
 const JumboPicture = styled.div`
   position: relative;
@@ -185,6 +186,24 @@ const MoreNewsArticleDate = styled.p`
   color: #797B80;
 `
 
+const FellowshipContainer = styled.div`
+display: flex;
+flex-direction: row;
+padding: 5% 4%;
+margin-bottom: 80px;
+text-align: center;
+background-color: #f6f6f6;
+@media screen and (max-width: 800px) {
+  flex-direction: column;
+}
+`;
+
+const FellowshipDescription =styled.div`
+padding: 10px;
+flex: 1;
+text-align: left;
+margin: 3px;
+`;
 function About(props) {
 
   const boardList = [{name: "Manoj Saxena", position: "Board Chair"},{name: "Manoj Saxena1", position: "Board Chair"},{name: "Manoj Saxena", position: "Board Chair"},{name: "Manoj Saxena", position: "Board Chair"},{name: "Manoj Saxena", position: "Board Chair"},{name: "Manoj Saxena", position: "Board Chair"}]
@@ -350,6 +369,15 @@ function About(props) {
           }
         </PartnerGrid>
       </PartnersContainer>
+      <FellowshipContainer>
+        <FellowshipDescription>
+          <Headline4>Responsible AI Fellowship Program invites multidisciplinary teams of students and professionals to tackle real-world challenges.</Headline4>
+          <MediumBody>This program will support multidisciplinary teams of students and professionals selected from various universities and businesses to work on real-world responsible AI challenges and opportunities. Projects are sourced from AI Global Members and external clients who play an important role in structuring project deliverables. Fellows work with domain experts in AI, data science, human-centric design, law, and regulatory policy. Fellows receive training in research skills and data collection, analysis, and presentation to deliver a work product that meets client needs.
+            <br/><br/>
+            <StyledLink text="Get Started" link="/fellowship" />
+          </MediumBody>
+        </FellowshipDescription>
+      </FellowshipContainer>
       <CertificationContainer>
         <TextHeadline style={{ color: "#FFFFFF"}}>
           Get Involved
