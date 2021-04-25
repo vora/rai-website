@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import {
   Headline1,
   Headline2,
+  Headline4,
   MediumBody,
   LargeBody,
   Heading1,
@@ -17,9 +18,6 @@ import {
   GrayPanel,
   Row,
 } from "../components/Blocks";
-
-
-
 
 function Certification() {
   return (
@@ -81,18 +79,20 @@ function Certification() {
           />
         </JumboImage>
       </Jumbotron>
-      {/* <Row> */}
-      <StaticImage
-        src="../images/rai-content/Certification.png"
-        style={{
-          // position: "absolute",
-          zIndex: "1",
-          right: "0px",
-        }}
-        // width="100%"
-        height={792}
-        alt="patient-2"
-      />
+      <Row>
+        <StaticImage
+          src="../images/rai-content/Certification.png"
+          style={{
+            // position: "absolute",
+            zIndex: "1",
+            left: "auto",
+          }}
+          width={1116}
+          height={634}
+          alt="patient-2"
+          style={{ objectFit: "scale-down" }}
+        />
+      </Row>
       <Jumbotron>
         <JumboText>
           <Headline2>Why RAI Certification?</Headline2>
@@ -109,8 +109,10 @@ function Certification() {
             <br /> already-existing work from the industry. We are not trying to
             <br /> re-inventing the wheel.
             <br />
-            <br /> <strong>Assessments specific to system type</strong><br/>Assessment criteria
-            will be customized based on the type of AI system
+            <br /> <strong>Assessments specific to system type</strong>
+            <br />
+            Assessment criteria will be customized based on the type of AI
+            system
             <br /> being assessed (e.g., Intelligent process automation, Image &
             Object
             <br /> recognition, Text & Speech Analysis, Advanced data analytics,
@@ -127,30 +129,80 @@ function Certification() {
         </JumboText>
         <GrayPanel>
           <Heading1>
-          Areas of RAI Certification Beta Working<br/> Group<br/>
+            Areas of RAI Certification Beta Working
+            <br /> Group
+            <br />
           </Heading1>
-          <LargeBody bordered style={{marginBottom:"40px"}}>Fair Lending</LargeBody>
-          <LargeBody bordered style={{marginBottom:"40px"}}>Fraud Detection</LargeBody>
-
-          <LargeBody bordered style={{marginBottom:"40px"}}>Automated Diagnosis and Treatment</LargeBody>
-          <LargeBody bordered style={{marginBottom:"40px"}}>Automated Hiring</LargeBody>
-        </GrayPanel>
-      </Jumbotron>
-      <Row dark style={{marginBottom:"206px", marginLeft:"115px", marginRight:"115px", textAlign:"center"}}>
-      <Headline2 style={{ color: "white" }}>Get Involved</Headline2>
-          <LargeBody
-            style={{
-              color: "white",
-              marginBottom: "50px",
-            }}
-          >
-            For more information, please email us at
-            certification@ai-global.org, or <strong>sign up</strong> to<br/> become a member of AI
-            Global. You can also join our mailing list to stay informed on the
-            progress.
+          <LargeBody bordered style={{ marginBottom: "40px" }}>
+            Fair Lending
+          </LargeBody>
+          <LargeBody bordered style={{ marginBottom: "40px" }}>
+            Fraud Detection
           </LargeBody>
 
-          <PrimaryBtn onClick={() => navigate("/membership")}>Become a Member </PrimaryBtn>
+          <LargeBody bordered style={{ marginBottom: "40px" }}>
+            Automated Diagnosis and Treatment
+          </LargeBody>
+          <LargeBody bordered style={{ marginBottom: "40px" }}>
+            Automated Hiring
+          </LargeBody>
+        </GrayPanel>
+      </Jumbotron>
+      <Row
+        style={{
+          padding: "3%",
+          borderColor: "black",
+          borderStyle: "solid",
+          borderWidth: "1px",
+          marginLeft: "4%",
+          marginRight: "4%",
+          marginBottom: "80px",
+        }}
+      >
+        <Headline4>Certification Working Groups</Headline4>
+        <MediumBody>
+          Recognizing that a project of this magnitude needs to be built by the
+          community for the benefit of the community, we launched the RAI
+          Certification Working Group December 2020 with WEF and SRI. Following
+          the kick-off we had an outpouring of support and interest in this work
+          which led to numerous discussions with technical, data, governance,
+          ethics, and industry experts. As such, we’ve decided to create not
+          one, but five working groups based on our areas of focus. We can use
+          any and all expertise to improve work done to date. Join us by signing
+          up for one of the following working groups: Fair Lending, Fraud
+          Detection, Automated Diagnosis and Treatment, Automated Hiring. To
+          join a working group, please contact us.{" "}
+        </MediumBody>
+        <div style={{width:"100%", textAlign:"center"}}>
+          <PrimaryBtn dark>Join a working group</PrimaryBtn>{" "}
+        </div>
+      </Row>
+
+      <Row
+        dark
+        style={{
+          marginBottom: "206px",
+          marginLeft: "115px",
+          marginRight: "115px",
+          textAlign: "center",
+        }}
+      >
+        <Headline2 style={{ color: "white" }}>Get Involved</Headline2>
+        <LargeBody
+          style={{
+            color: "white",
+            marginBottom: "50px",
+          }}
+        >
+          For more information, please email us at certification@ai-global.org,
+          or <strong>sign up</strong> to
+          <br /> become a member of AI Global. You can also join our mailing
+          list to stay informed on the progress.
+        </LargeBody>
+
+        <PrimaryBtn onClick={() => navigate("/membership")}>
+          Become a Member{" "}
+        </PrimaryBtn>
       </Row>
     </Layout>
   );

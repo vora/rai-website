@@ -6,8 +6,8 @@ import {
   Headline1,
   Headline2,
   MediumBody,
+  SmallBody,
   Heading1,
-  Heading2,
   Heading3,
 } from "../components/Text";
 import { PrimaryBtn } from "../components/Buttons";
@@ -16,17 +16,44 @@ import {
   JumboText,
   GrayPanel,
   Row,
-  Grid,
+  GridRow,
   Card,
+  TitleLink,
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
 import { StaticImage } from "gatsby-plugin-image";
 
+/* Images */
+import checkbox from "../images/icons/checkbox.png";
+import corporate from "../images/icons/corporate.png";
+import institution from "../images/icons/institution.png";
+import community from "../images/icons/community.png";
+
+const CheckRow = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  min-height: 44px;
+
+  @media screen and (max-width: 350px) {
+    img {
+      display: none;
+    }
+  }
+`;
+
+const CheckContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%:
+`;
+
 function Membership() {
   return (
     <Layout title="Membership">
-      <Jumbotron>
+      <Jumbotron style={{ marginBottom: "0px" }}>
         <JumboText>
           <Headline1>
             Join Visionary Leaders <br />
@@ -50,10 +77,12 @@ function Membership() {
         <StaticImage
           src="../images/rai-icons/rai-circle.png"
           alt="RAI"
+          placeholder="tracedSVG"
+          className="member-image"
           style={{ marginLeft: "150px" }}
         />
       </Jumbotron>
-      <Jumbotron>
+      <Jumbotron style={{ marginBottom: "0px" }}>
         <GrayPanel>
           <Headline2>
             RAI is at the Forefront of
@@ -105,54 +134,225 @@ function Membership() {
           with practical
           <br /> tools and expert guidance. Here’s how to join our efforts.
         </MediumBody>
-        <Grid cards>
+        <br />
+        <GridRow auto first>
           <Card>
             <div style={{ display: "flex", alignItems: "center" }}>
-              <StaticImage src="../images/icons/corporate-icon.png" />
-              <div style={{ marginLeft: "20px" }}>
-                <Heading3 style={{ marginBottom: "0" }}>Enterprise</Heading3>
-                <MediumBody style={{ marginBottom: "0" }}>
-                  $50,000 /yr
-                </MediumBody>
-              </div>
-            </div>
-          </Card>
-          <Card>
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <StaticImage src="../images/icons/corporate-icon.png" />
+              <img src={corporate} alt="Corporate" />
               <div style={{ marginLeft: "20px" }}>
                 <Heading3 style={{ marginBottom: "0" }}>Corporate</Heading3>
                 <MediumBody style={{ marginBottom: "0" }}>
-                  $25,000 /yr
+                  Public and private corporations
                 </MediumBody>
               </div>
             </div>
+            <CheckContainer>
+              <CheckRow>
+                <img src={checkbox} alt="Checkbox" />
+                <SmallBody
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Participation in monthly webinars from key AI subject matter
+                  experts
+                </SmallBody>
+              </CheckRow>
+              <CheckRow>
+                <img src={checkbox} alt="Checkbox" />
+                <SmallBody
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Access to AI Global resources and tools
+                </SmallBody>
+              </CheckRow>
+              <CheckRow>
+                <img src={checkbox} alt="Checkbox" />
+                <SmallBody
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Direct connection with subject matter experts and service
+                  providers
+                </SmallBody>
+              </CheckRow>
+              <CheckRow>
+                <img src={checkbox} alt="Checkbox" />
+                <SmallBody
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Industry-specific regulatory guidance and support
+                </SmallBody>
+              </CheckRow>
+            </CheckContainer>
+
+            <PrimaryBtn
+              dark
+              onClick={() => navigate("/certification")}
+              style={{ alignSelf: "center" }}
+            >
+              Become a Corporate Member
+            </PrimaryBtn>
           </Card>
           <Card>
             <div style={{ display: "flex", alignItems: "center" }}>
-              <StaticImage src="../images/icons/startup-icon.png" />
+              <img src={institution} alt="Institution" />
               <div style={{ marginLeft: "20px" }}>
-                <Heading3 style={{ marginBottom: "0" }}>Startup/Nonprofit</Heading3>
+                <Heading3 style={{ marginBottom: "0" }}>Institution</Heading3>
                 <MediumBody style={{ marginBottom: "0" }}>
-                  $10,000 /yr
+                  Nonprofits, academic institutions, and government
                 </MediumBody>
               </div>
             </div>
+            <CheckContainer>
+              <CheckRow>
+                <img src={checkbox} alt="Checkbox" />
+                <SmallBody
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Participation in monthly webinars from key AI subject matter
+                  experts
+                </SmallBody>
+              </CheckRow>
+              <CheckRow>
+                <img src={checkbox} alt="Checkbox" />
+                <SmallBody
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Access to AI Global resources and tools
+                </SmallBody>
+              </CheckRow>
+              <CheckRow>
+                <img src={checkbox} alt="Checkbox" />
+                <SmallBody
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Direct connection with subject matter experts and service
+                  providers
+                </SmallBody>
+              </CheckRow>
+              <CheckRow>
+                <img src={checkbox} alt="Checkbox" />
+                <SmallBody
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Industry-specific regulatory guidance and support
+                </SmallBody>
+              </CheckRow>
+            </CheckContainer>
+
+            <PrimaryBtn
+              dark
+              onClick={() => navigate("/certification")}
+              style={{ alignSelf: "center" }}
+            >
+              Become an Institution Member
+            </PrimaryBtn>
           </Card>
-        </Grid>
+          <Card>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <img src={community} alt="Community" />
+              <div style={{ marginLeft: "20px" }}>
+                <Heading3 style={{ marginBottom: "0" }}>Community</Heading3>
+                <MediumBody style={{ marginBottom: "0" }}>
+                  Individual members
+                </MediumBody>
+              </div>
+            </div>
+            <CheckContainer>
+              <CheckRow>
+                <img src={checkbox} alt="Checkbox" />
+                <SmallBody
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Participation in monthly webinars from key AI subject matter
+                  experts
+                </SmallBody>
+              </CheckRow>
+              <CheckRow>
+                <img src={checkbox} alt="Checkbox" />
+                <SmallBody
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Access to AI Global resources and tools
+                </SmallBody>
+              </CheckRow>
+              <CheckRow>
+                <img src={checkbox} alt="Checkbox" />
+                <SmallBody
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Direct connection with subject matter experts and service
+                  providers
+                </SmallBody>
+              </CheckRow>
+            </CheckContainer>
+            <a
+              className="kindful-donate-btn"
+              id="kindful-donate-btn-d1727a32-6c93-4808-a281-897960739db5"
+            >
+              Become a Community Member
+            </a>{" "}
+          </Card>
+        </GridRow>
       </Row>
       <Row gray>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-            marginBottom: "40px",
-          }}
-        >
+        <TitleLink>
           <Headline2>News</Headline2>
-          <StyledLink text="More News" link="/" />
-        </div>
+          <StyledLink text="More News" link="/news" />
+        </TitleLink>
         <News />
       </Row>
     </Layout>
