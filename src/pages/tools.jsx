@@ -2,9 +2,17 @@ import React from "react";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { Jumbotron, JumboText, JumboImage, Row } from "../components/Blocks";
+import {
+  Jumbotron,
+  JumboText,
+  JumboImage,
+  Row,
+  Divider,
+} from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
-
+import portal from "../images/rai-icons/Portal.png";
+import map from "../images/rai-icons/map.png";
+import course from "../images/rai-icons/e-course.png";
 import {
   Headline1,
   Headline2,
@@ -17,38 +25,47 @@ import {
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 20px 0;
+  padding-top: 40px;
+  max-width: 100%;
   text-align: center;
   @media screen and (max-width: 800px) {
     flex-direction: column;
   }
 `;
 
+// padding: 10px;
 const ItemIcon = styled.div`
-  padding: 10px;
   flex: 4;
+  margin-right: 22;
 `;
+//   padding: 0px 10px 0px 10px;
 
 const ItemDescription = styled.div`
-  padding: 10px;
   flex: 25;
+  margin-left:22px;
   text-align: left;
-  margin: 3px;
 `;
+
+//  height: 100%;
+//   border: 1px solid black;
+
+const RectangleContainer = styled.div`
+  width: 100%;
+  display: flex;
+  place-items: center;
+  margin-bottom: 20px;
+`;
+
+const RectangleImg = styled.img`
+  width: 100%;
+  object-fit: contain;
+`;
+// margin: 38px;
 const Item = styled.div`
-  padding: 10px;
-  margin: 1.5%;
+  padding: 20px;
   flex: 1;
   text-align: center;
   border: 1px solid black;
-`;
-
-const Line = styled.div`
-  width: 100%;
-  height: 0;
-  border: 1px solid #000000;
-  margin: 3px;
-  display: inline-block;
 `;
 
 function Tools() {
@@ -57,7 +74,7 @@ function Tools() {
       <Jumbotron>
         <JumboText>
           <Headline1>
-            The Journy to
+            The Journey to
             <br /> Responsible AI Begins
             <br /> Here.
           </Headline1>
@@ -69,29 +86,25 @@ function Tools() {
             <br /> security, explainability, and fairness in AI systems. No
             matter where
             <br /> you are on your AI journey, our programs and services can
-            help. Our
-            <br /> goal is to allow members to network through community,
-            educate
-            <br /> yourselves and other practitioners and students, assess your
-            systems,
-            <br /> and certify responsible and trustworthy AI.
+            help. From
+            <br /> network, educate, assess, and certify, we have you covered.
           </MediumBody>
           <br />
         </JumboText>
         <JumboImage className="hero-image">
-         <StaticImage
+          <StaticImage
             src="../images/pictures/bike-1.png"
             style={{
               position: "absolute",
               zIndex: "2",
-              right:"0px",
+              right: "0px",
               top: "180px",
             }}
             width={1197}
             height={650}
             alt="bike-1"
           />
-           <StaticImage
+          <StaticImage
             src="../images/pictures/bike-2.png"
             style={{
               position: "absolute",
@@ -109,11 +122,11 @@ function Tools() {
       <Row
         style={{
           backgroundColor: "#f6f6f6",
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
-        <Headline2 style={{ marginBottom: "20px" }}>Network</Headline2>
-        <Line />
+        <Headline2>Network</Headline2>
+        <Divider />
         <Container>
           <ItemIcon>
             <a href="/calendar">
@@ -127,7 +140,7 @@ function Tools() {
           </ItemIcon>
           <ItemDescription>
             <Headline4>
-              <a href="/calendar" style={{color:"black"}}>
+              <a href="/calendar" style={{ color: "black" }}>
                 {" "}
                 <u>RAI Events Calendar</u>
               </a>{" "}
@@ -140,12 +153,11 @@ function Tools() {
               and more to help. This calendar is updated weekly with upcoming,
               can’t miss advance. We’ll see you there!
               <br />
-              <br />
               <StyledLink text="Check it out" link="/calendar" />
             </MediumBody>
           </ItemDescription>
         </Container>
-        <Line />
+        <Divider />
         <Container>
           <ItemIcon>
             <a href="/webinar">
@@ -159,10 +171,10 @@ function Tools() {
           </ItemIcon>
           <ItemDescription>
             <Headline4>
-              <a href="/webiner" style={{color:"black"}}>
+              <a href="/webiner" style={{ color: "black" }}>
                 <u>Responsible AI Monthly Webinar Series</u>
-              </a>
-               {" "}fosters connection with key AI subject matter experts.
+              </a>{" "}<br/> 
+              fosters connection with key AI subject matter experts.
             </Headline4>
             <MediumBody>
               This program will enrich members with a reoccuring monthly webinar
@@ -178,21 +190,21 @@ function Tools() {
         </Container>
       </Row>
       <Row>
-        <Headline2 style={{ marginBottom: "20px" }}>Educate</Headline2>
-        <Line style={{ marginBottom: "5px" }} />
+        <Headline2>Educate</Headline2>
+        <Divider />
         <Container>
-          <Item>
+          <Item style={{marginRight:"38px"}}>
             <a href="https://portal.ai-global.org/">
-              <StaticImage
-                src="../images/rai-icons/Portal.png"
-                alt="Portal icon"
-                width={356}
-                height={160}
-              />
+              <RectangleContainer href="https://portal.ai-global.org/">
+                <RectangleImg src={portal} />
+              </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
               <Headline5>
-                <a href="https://portal.ai-global.org/" style={{color:"black"}}>
+                <a
+                  href="https://portal.ai-global.org/"
+                  style={{ color: "black" }}
+                >
                   <u>Responsible AI Community Portal</u>
                 </a>
                 <br /> provides access to a curated library of trusted
@@ -204,24 +216,24 @@ function Tools() {
                 datasets, and open-source software to help members better
                 navigate the AI landscape and directly connect with the experts
                 who are guiding...
-                <br /><br/>
                 <br />
-                <StyledLink text="Get Started" link="https://portal.ai-global.org/" />
+                <br/>
+                <StyledLink
+                  text="Get Started"
+                  link="https://portal.ai-global.org/"
+                />
               </SmallBody>
             </div>
           </Item>
-          <Item>
+          <Item style={{marginRight:"38px"}}>
             <a href="https://map.ai-global.org/">
-              <StaticImage
-                src="../images/rai-icons/map.png"
-                alt="map icon"
-                width={356}
-                height={160}
-              />
+            <RectangleContainer href="https://portal.ai-global.org/">
+                <RectangleImg src={map} />
+              </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
               <Headline5>
-                <a href="https://map.ai-global.org/" style={{color:"black"}}>
+                <a href="https://map.ai-global.org/" style={{ color: "black" }}>
                   <u>Responsible AI Industry Heat Map</u>
                 </a>
                 <br /> provides realtime examples to where AI is currently in
@@ -234,23 +246,27 @@ function Tools() {
                 from various sources such as Awful AI, Upturn, Equal AI, and
                 Charlie Pownall/CPC & Associates.
                 <br />
-                <br />
-                <StyledLink text="Get Started" link="https://map.ai-global.org/" />
+                <StyledLink
+                  text="Get Started"
+                  link="https://map.ai-global.org/"
+                />
               </SmallBody>
             </div>
           </Item>
           <Item>
             <a href="https://aiglobal.beta.trajectoryiq.com/">
-              <StaticImage
-                src="../images/rai-icons/e-course.png"
-                alt="E-learning icon"
-                width={356}
-                height={160}
-              />
+            <RectangleContainer href="https://portal.ai-global.org/">
+                <RectangleImg src={course} />
+              </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
               <Headline5>
-                <a href="https://aiglobal.beta.trajectoryiq.com/" style={{color:"black"}}><u>Responsible AI E-Learning Courses</u></a>
+                <a
+                  href="https://aiglobal.beta.trajectoryiq.com/"
+                  style={{ color: "black" }}
+                >
+                  <u>Responsible AI E-Learning Courses</u>
+                </a>
                 <br /> developed in partnership with TIQ Software
               </Headline5>
               <SmallBody>
@@ -260,8 +276,10 @@ function Tools() {
                 intelligence (AI)?” and to help everyone recognize how AI can be
                 helpful, or harmful, if not developed responsibly.
                 <br />
-                <br />
-                <StyledLink text="Get Started" link="https://aiglobal.beta.trajectoryiq.com/" />
+                <StyledLink
+                  text="Get Started"
+                  link="https://aiglobal.beta.trajectoryiq.com/"
+                />
               </SmallBody>
             </div>
           </Item>{" "}
@@ -273,9 +291,9 @@ function Tools() {
           alignItems: "center",
         }}
       >
-        <Headline2 style={{ marginBottom: "20px" }}>Assess</Headline2>
-        <Line />
-        <Container style={{ padding: "10px 0" }}>
+        <Headline2>Assess</Headline2>
+        <Divider/>
+        <Container>
           <ItemIcon>
             <a href="https://oproma.github.io/rai-trustindex/">
               <StaticImage
@@ -288,7 +306,10 @@ function Tools() {
           </ItemIcon>
           <ItemDescription>
             <Headline4>
-              <a href="https://oproma.github.io/rai-trustindex/" style={{color:"black"}}>
+              <a
+                href="https://oproma.github.io/rai-trustindex/"
+                style={{ color: "black" }}
+              >
                 <u>Responsible AI Design Assisstant</u>
               </a>{" "}
               assesses work in development, to anticipate problems and
@@ -301,7 +322,6 @@ function Tools() {
               help designers, developers, and product owners keep in mind key AI
               challenges including data rights and use, privacy, security,
               explainability, fairness, bias, and robustness.
-              <br />
               <br />
               <StyledLink
                 text="Get Started"
@@ -316,9 +336,9 @@ function Tools() {
           alignItems: "center",
         }}
       >
-        <Headline2 style={{ marginBottom: "20px" }}>Certify</Headline2>
-        <Line />
-        <Container style={{ padding: "10px 0" }}>
+        <Headline2 >Certify</Headline2>
+        <Divider/>
+        <Container >
           <ItemIcon>
             <a href="/certification">
               <StaticImage
@@ -331,7 +351,7 @@ function Tools() {
           </ItemIcon>
           <ItemDescription>
             <Headline4>
-              <a href="/certification" style={{color:"black"}}>
+              <a href="/certification" style={{ color: "black" }}>
                 <u>RAI Certification Beta</u>
               </a>{" "}
               is the world’s first independent, accredited certification program
@@ -348,7 +368,6 @@ function Tools() {
               The result is a measurable, independent, authoritative
               certification program working across sectors and across regions
               around the world.
-              <br />
               <br />
               <StyledLink text="Get Started" link="/certification" />
             </MediumBody>
