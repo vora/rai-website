@@ -175,12 +175,13 @@ export const GrayPanel = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 50%;
-  
+
   @media screen and (max-width: 1190px) {
     min-width: 100%;
     margin: 40px 0px;
     align-items: center;
   }
+
   @media screen and (max-width: 600px){
     max-width: 100%;
     padding: 35px;
@@ -191,7 +192,7 @@ export const Row = styled.div`
   max-width: 100%:
   display: flex;
   flex-direction: column;
-  padding: ${(props) => (props.small ? "75px 100px 25px 100px" : "75px 100px")} ;
+  padding: 75px 100px;
 
   ${(props) =>
     props.gray &&
@@ -235,7 +236,7 @@ export const GridRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: ${props => props.offset ? "start" : "center"};
+  align-items: center;
   height: ${(props) => (props.auto ? "auto" : "150px")};
   img {
     height: auto;
@@ -265,13 +266,13 @@ export const GridContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  width: 30%;
+  width: 26%;
   min-height: 500px;
-  border: 2px solid ${carbon};
+  border: 1px solid ${carbon};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 32px 32px 20px 32px;
+  padding: 32px;
 
   @media screen and (max-width: 1190px) {
     width: 100%;

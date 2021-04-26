@@ -47,7 +47,7 @@ function News() {
     <>
       <NewsRow>
         <NewsItem top>
-          <a href="/page" style={{ textDecoration: "none", color: carbon }}>
+          <a href="/news" style={{ textDecoration: "none", color: carbon }}>
             <Headline5>
               2020 AI Global Awards Recognize Standout Global Leaders in
               Responsible and Ethical AI
@@ -56,7 +56,7 @@ function News() {
           <Caption>MAR 31</Caption>
         </NewsItem>
         <NewsItem top>
-          <a href="/page" style={{ textDecoration: "none", color: carbon }}>
+          <a href="/news" style={{ textDecoration: "none", color: carbon }}>
             <Headline5>
               2020 AI Global Awards Recognize Standout Global Leaders in
               Responsible and Ethical AI
@@ -67,7 +67,7 @@ function News() {
       </NewsRow>
       <NewsRow>
         <NewsItem>
-          <a href="/page" style={{ textDecoration: "none", color: carbon }}>
+          <a href="/news" style={{ textDecoration: "none", color: carbon }}>
             <Headline5>
               2020 AI Global Awards Recognize Standout Global Leaders in
               Responsible and Ethical AI
@@ -76,7 +76,7 @@ function News() {
           <Caption>MAR 31</Caption>
         </NewsItem>
         <NewsItem>
-          <a href="/page" style={{ textDecoration: "none", color: carbon }}>
+          <a href="/news" style={{ textDecoration: "none", color: carbon }}>
             <Headline5>
               2020 AI Global Awards Recognize Standout Global Leaders in
               Responsible and Ethical AI

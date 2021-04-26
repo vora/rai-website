@@ -21,7 +21,7 @@ import { StaticImage } from "gatsby-plugin-image";
 function NewsPage() {
   return (
     <Layout title="News">
-      <Row small>
+      <Row>
         <Headline1>In the News</Headline1>
       </Row>
       <Jumbotron style={{ marginBottom: "0px" }} gray>
@@ -41,7 +41,7 @@ function NewsPage() {
             <br /> in partnership with the World Economic Forum and Schwartz.
           </MediumBody>
           <br />
-          <StyledLink text="Read Article" link="/page" />
+          <StyledLink text="Read Article" link="/news" />
         </JumboText>
         <StaticImage
           src="../images/pictures/news.png"
@@ -51,7 +51,7 @@ function NewsPage() {
         />
       </Jumbotron>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/page">
+        <BlankLink href="/">
           <Headline4>
             Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
           </Headline4>
@@ -63,7 +63,7 @@ function NewsPage() {
         <Divider />
       </Row>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/page">
+        <BlankLink href="/">
           <Headline4>
             Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
           </Headline4>
@@ -75,7 +75,7 @@ function NewsPage() {
         <Divider />
       </Row>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/page">
+        <BlankLink href="/">
           <Headline4>
             Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
           </Headline4>
@@ -87,7 +87,7 @@ function NewsPage() {
         <Divider />
       </Row>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/page">
+        <BlankLink href="/">
           <Headline4>
             Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
           </Headline4>
@@ -98,7 +98,7 @@ function NewsPage() {
         <UpperCaption>MAR 31</UpperCaption>
         <Divider />
       </Row>
-      <Row style={{ textAlign: "center" }}>
+      <Row style={{textAlign: "center"}}>
         <PrimaryBtn dark>Load more Stories</PrimaryBtn>
       </Row>
     </Layout>
