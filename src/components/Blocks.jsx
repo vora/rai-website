@@ -45,6 +45,7 @@ export const Jumbotron = styled.div`
 
     .member-image {
       margin-left: 0 !important;
+      margin-top: 20px;
     }
   }
 

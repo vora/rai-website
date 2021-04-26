@@ -3,6 +3,7 @@ import styled from "styled-components";
 /* Font colors*/
 const carbon = "#2f2d34";
 const blanco = "#ffffff";
+const gravy = "#797b80";
 
 /* HEADLINES */
 export const Headline1 = styled.h1`
@@ -153,3 +154,16 @@ export const Caption = styled.h1`
   margin: 0px 0px 12px 0px;
   color: ${(props) => (props.dark ? blanco : carbon)};
 `;
+export const UpperCaption = styled.h1`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+  margin: 0px 0px 12px 0px;
+  color: ${gravy};
+`;
+export const BlankLink = styled.a`
+  text-decoration: none;
+  color: ${carbon};
+`

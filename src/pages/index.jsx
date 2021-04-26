@@ -195,7 +195,7 @@ function Index() {
           </MediumBody>
           <br />
           <PrimaryBtn dark onClick={() => navigate("/tools")}>
-            Tools
+            Programs and Tools
           </PrimaryBtn>
         </JumboText>
         <GrayPanel>
