@@ -30,7 +30,7 @@ import { StaticImage } from "gatsby-plugin-image";
 function Blog() {
   return (
     <Layout title="Blog">
-      <Row>
+      <Row small>
         <Headline1>Blog</Headline1>
       </Row>
       <Jumbotron style={{ marginBottom: "0px" }} gray>
