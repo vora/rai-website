@@ -84,7 +84,7 @@ function Tools() {
             style={{
               position: "absolute",
               zIndex: "2",
-              left: "394px",
+              right:"0px",
               top: "180px",
             }}
             width={1197}
@@ -109,7 +109,7 @@ function Tools() {
       <Row
         style={{
           backgroundColor: "#f6f6f6",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <Headline2 style={{ marginBottom: "20px" }}>Network</Headline2>
