@@ -103,6 +103,7 @@ function Tools() {
             width={1197}
             height={650}
             alt="bike-1"
+            placeholder="tracedSVG"
           />
           <StaticImage
             src="../images/pictures/bike-2.png"
@@ -115,6 +116,7 @@ function Tools() {
             width={1053}
             height={590}
             alt="patient-3"
+            placeholder="tracedSVG"
           />
         </JumboImage>
       </Jumbotron>
@@ -135,6 +137,7 @@ function Tools() {
                 width={208}
                 height={208}
                 alt="calendar"
+                placeholder="tracedSVG"
               />
             </a>
           </ItemIcon>
@@ -166,6 +169,7 @@ function Tools() {
                 width={208}
                 height={208}
                 alt="webinar"
+                placeholder="tracedSVG"
               />
             </a>
           </ItemIcon>
@@ -301,6 +305,7 @@ function Tools() {
                 width={208}
                 height={199}
                 alt="design assisstant"
+                placeholder="tracedSVG"
               />
             </a>
           </ItemIcon>
@@ -346,6 +351,7 @@ function Tools() {
                 width={208}
                 height={208}
                 alt="RAI certification badge"
+                placeholder="tracedSVG"
               />
             </a>
           </ItemIcon>

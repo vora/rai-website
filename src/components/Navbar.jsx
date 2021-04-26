@@ -9,6 +9,7 @@ import logo from "../images/rai-icons/rai-logo-text.png";
 const Container = styled.div`
   margin: 0;
   padding: 40px 100px 40px 100px;
+  z-index: 10;
 
   @media screen and (max-width: 585px) {
     padding: 35px 35px 45px 35px;
@@ -49,6 +50,7 @@ const Option = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 10;
 
   &:hover div {
     display: block;
@@ -69,7 +71,7 @@ const Dropdown = styled.div`
   background-color: #ffffff;
   min-width: 140px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 10;
+  z-index: 100;
   margin-top: 40px;
   text-align: start;
 
@@ -135,7 +137,7 @@ const Menu = styled.div`
   right: 0;
   background-color: #f6f6f6;
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;

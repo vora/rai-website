@@ -45,6 +45,7 @@ export const Jumbotron = styled.div`
 
     .member-image {
       margin-left: 0 !important;
+      margin-top: 20px;
     }
   }
 
@@ -204,6 +205,11 @@ export const Row = styled.div`
       background-color: ${carbon};
     `}
 
+  ${(props) =>
+    props.small &&
+    css`
+      padding-bottom: 25px;
+    `}
     @media screen and (max-width: 585px) {
       padding: 45px 35px;
     }

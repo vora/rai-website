@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import Layout from "../components/Layout";
 import { navigate } from "gatsby";
+import Layout from "../components/Layout";
 import {
   Headline1,
   Headline2,
+  LargeBody,
   MediumBody,
   SmallBody,
   Heading1,
   Heading3,
 } from "../components/Text";
-import { PrimaryBtn } from "../components/Buttons";
 import {
   Jumbotron,
   JumboText,
@@ -21,6 +21,8 @@ import {
   TitleLink,
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
+import { PrimaryBtn } from "../components/Buttons";
+import Slideshow from "../components/Slideshow";
 import News from "../components/News";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -202,14 +204,15 @@ function Membership() {
                 </SmallBody>
               </CheckRow>
             </CheckContainer>
-
-            <PrimaryBtn
-              dark
-              onClick={() => navigate("/certification")}
-              style={{ alignSelf: "center" }}
+            <a
+              className="kindful-donate-btn"
+              style={{ textDecoration: "none", color: "#ffffff" }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfg5ArO8v1DH1iPz8R7NNyfMIxm0Z5kMZW1juDoRDqv7QTHBA/viewform?usp=sf_link"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Become a Corporate Member
-            </PrimaryBtn>
+            </a>
           </Card>
           <Card>
             <div style={{ display: "flex", alignItems: "center" }}>
@@ -277,14 +280,15 @@ function Membership() {
                 </SmallBody>
               </CheckRow>
             </CheckContainer>
-
-            <PrimaryBtn
-              dark
-              onClick={() => navigate("/certification")}
-              style={{ alignSelf: "center" }}
+            <a
+              className="kindful-donate-btn"
+              style={{ textDecoration: "none", color: "#ffffff" }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdw7l9oSLiRarRZuzZU4urE5AMI74ZLhwhTNFCmMefO8J5ANg/viewform?usp=sf_link"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Become an Institution Member
-            </PrimaryBtn>
+              Become a Institution Member
+            </a>
           </Card>
           <Card>
             <div style={{ display: "flex", alignItems: "center" }}>
@@ -347,6 +351,23 @@ function Membership() {
             </a>{" "}
           </Card>
         </GridRow>
+      </Row>
+      <Row>
+        <Headline2>
+          Help Advance Trusted AI
+        </Headline2>
+        <LargeBody>
+          Working together, we can create AI systems the world can trust.
+        </LargeBody>
+        <Slideshow />
+        <MediumBody>
+          Join visionary private, public, and academic leaders as we promote
+          open, ethical AI.
+        </MediumBody>
+        <br />
+        <PrimaryBtn dark onClick={() => navigate("/membership")}>
+          Get Involved
+        </PrimaryBtn>
       </Row>
       <Row gray>
         <TitleLink>
