@@ -42,6 +42,7 @@ const ButtonContainer = styled.div`
   align-self: flex-end;
   justify-content: space-between;
   margin-top: 10px;
+  margin-right: 20px;
 `;
 const Views = styled.div`
   display: flex;
@@ -51,8 +52,6 @@ const Views = styled.div`
   @media screen and (max-width: 1190px) {
     min-height: 500px;
   }
-
-
 `;
 const View = styled.div`
   display: flex;
@@ -60,7 +59,7 @@ const View = styled.div`
   justify-content: space-between;
   width: 42%;
   padding: 40px;
-  border: 1px solid ${carbon};
+  border: 2px solid ${carbon};
 `;
 
 function Slideshow() {
@@ -371,7 +370,7 @@ function Slideshow() {
               />
               <div style={{ marginLeft: "20px" }}>
                 <Heading3 style={{ marginBottom: "0" }}>Suraj Madnani</Heading3>
-                <MediumBody>Chief Product Officer, American Express</MediumBody>
+                <MediumBody>Chief Product Owner, American Express</MediumBody>
               </div>
             </div>
           </View>

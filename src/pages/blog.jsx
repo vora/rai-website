@@ -30,7 +30,7 @@ import { StaticImage } from "gatsby-plugin-image";
 function Blog() {
   return (
     <Layout title="Blog">
-      <Row>
+      <Row small>
         <Headline1>Blog</Headline1>
       </Row>
       <Jumbotron style={{ marginBottom: "0px" }} gray>
@@ -50,7 +50,7 @@ function Blog() {
             <br /> in partnership with the World Economic Forum and Schwartz.
           </MediumBody>
           <br />
-          <StyledLink text="Read Blog" link="/news" />
+          <StyledLink text="Read Blog" link="/page" />
         </JumboText>
         <StaticImage
           src="../images/pictures/news.png"
@@ -60,7 +60,7 @@ function Blog() {
         />
       </Jumbotron>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
+        <BlankLink href="/page">
           <Headline4>
             Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
           </Headline4>
@@ -72,7 +72,7 @@ function Blog() {
         <Divider />
       </Row>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
+        <BlankLink href="/page">
           <Headline4>
             Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
           </Headline4>
@@ -84,7 +84,7 @@ function Blog() {
         <Divider />
       </Row>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
+        <BlankLink href="/page">
           <Headline4>
             Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
           </Headline4>
@@ -96,7 +96,7 @@ function Blog() {
         <Divider />
       </Row>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
+        <BlankLink href="/page">
           <Headline4>
             Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
           </Headline4>

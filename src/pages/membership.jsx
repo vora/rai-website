@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import { navigate } from "gatsby";
 import {
   Headline1,
   Headline2,
+  LargeBody,
   MediumBody,
   SmallBody,
   Heading1,
   Heading3,
 } from "../components/Text";
+import { PrimaryBtn } from "../components/Buttons";
 import {
   Jumbotron,
   JumboText,
@@ -20,6 +23,7 @@ import {
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
+import Slideshow from "../components/Slideshow";
 import { StaticImage } from "gatsby-plugin-image";
 
 /* Images */
@@ -34,7 +38,6 @@ const CheckRow = styled.div`
   align-items: center;
   margin: 10px 0px;
   min-height: 44px;
-
   @media screen and (max-width: 350px) {
     img {
       display: none;
@@ -133,7 +136,7 @@ function Membership() {
           <br /> tools and expert guidance. Here’s how to join our efforts.
         </MediumBody>
         <br />
-        <GridRow auto first>
+        <GridRow auto first offset>
           <Card>
             <div style={{ display: "flex", alignItems: "center" }}>
               <img src={corporate} alt="Corporate" />
@@ -200,15 +203,14 @@ function Membership() {
                 </SmallBody>
               </CheckRow>
             </CheckContainer>
-            <a
-              className="kindful-donate-btn"
-              style={{ textDecoration: "none", color: "#ffffff" }}
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfg5ArO8v1DH1iPz8R7NNyfMIxm0Z5kMZW1juDoRDqv7QTHBA/viewform?usp=sf_link"
-              target="_blank"
-              rel="noopener noreferrer"
+
+            <PrimaryBtn
+              dark
+              onClick={() => navigate("/certification")}
+              style={{ alignSelf: "center" }}
             >
               Become a Corporate Member
-            </a>
+            </PrimaryBtn>
           </Card>
           <Card>
             <div style={{ display: "flex", alignItems: "center" }}>
@@ -276,15 +278,14 @@ function Membership() {
                 </SmallBody>
               </CheckRow>
             </CheckContainer>
-            <a
-              className="kindful-donate-btn"
-              style={{ textDecoration: "none", color: "#ffffff" }}
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdw7l9oSLiRarRZuzZU4urE5AMI74ZLhwhTNFCmMefO8J5ANg/viewform?usp=sf_link"
-              target="_blank"
-              rel="noopener noreferrer"
+
+            <PrimaryBtn
+              dark
+              onClick={() => navigate("/certification")}
+              style={{ alignSelf: "center" }}
             >
-              Become a Institution Member
-            </a>
+              Become an Institution Member
+            </PrimaryBtn>
           </Card>
           <Card>
             <div style={{ display: "flex", alignItems: "center" }}>
@@ -347,6 +348,21 @@ function Membership() {
             </a>{" "}
           </Card>
         </GridRow>
+      </Row>
+      <Row>
+        <Headline2>Help Advance Trusted AI</Headline2>
+        <LargeBody>
+          Working together, we can create AI systems the world can trust.
+        </LargeBody>
+        <Slideshow />
+        <MediumBody>
+          Join visionary private, public, and academic leaders as we promote
+          open, ethical AI.
+        </MediumBody>
+        <br />
+        <PrimaryBtn dark onClick={() => navigate("/membership")}>
+          Get Involved
+        </PrimaryBtn>
       </Row>
       <Row gray>
         <TitleLink>

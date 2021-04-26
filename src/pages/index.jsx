@@ -16,6 +16,7 @@ import {
   GrayPanel,
   Row,
   Divider,
+  
   Grid,
   GridRow,
   GridContainer,
@@ -167,8 +168,8 @@ function Index() {
             <br /> through focused, practical lenses.
           </MediumBody>
           <br />
-          <PrimaryBtn dark onClick={() => navigate("/membership")}>
-            Become a Member
+          <PrimaryBtn dark onClick={() => navigate("/tools")}>
+            Learn More
           </PrimaryBtn>
         </JumboText>
       </Jumbotron>
@@ -238,7 +239,7 @@ function Index() {
       <Jumbotron dark style={{ justifyContent: "center" }} text>
         <StaticImage
           className="jumbo-image"
-          src="../images/rai-icons/rail-badge-white.png"
+          src="../images/rai-icons/rai-badge.png"
           style={{ alignSelf: "flex-start", marginleft: "10%", order: "3" }}
           placeholder="tracedSVG"
         />
@@ -249,26 +250,16 @@ function Index() {
             for Responsible AI
           </Heading1>
           <LargeBody dark>
-            Based on the highest ethical principles, RAI <br /> certification,
-            currently in development, marks the <br />
-            accreditation of AI systems the world can trust.
+            RAI Certification is a symbol of trust that an AI system<br/> has been
+            designed, built, and deployed in line with the <br/>five OECD Principles
+            on Artificial Intelligence to promote<br/> use of AI that is innovative
+            and trustworthy and that <br/>respects human rights and societal values.
           </LargeBody>
           <LargeBody dark>
-            Developed under the Global AI Action Alliance for the <br />
-            World Economic Forum (WEF), along with a diverse <br /> community of
-            leading experts, RAIL certification is <br />
-            based on objective assessments of fairness, bias,
-            <br />
-            explainability, and other concrete metrics of responsibly <br />{" "}
-            built AI systems. The Schwartz Reisman Institute for <br />
-            Technology and Society (SRI) at University of Toronto is
-            <br /> serving as a business partner on the development
-            <br /> phase of the initiative.
-          </LargeBody>
-          <LargeBody dark>
-            The result will be a measurable, independent,
-            <br /> authoritative certification program working across
-            <br /> sectors and across regions around the world.
+            We use our five categories of responsible AI <br/> (explainability,
+            fairness, accountability, robustness, and <br/> data quality) as
+            parameters for the different credit <br/>elements within the RAI
+            Certification rating system.
           </LargeBody>
           <br />
           <PrimaryBtn onClick={() => navigate("/certification")}>
@@ -278,8 +269,7 @@ function Index() {
       </Jumbotron>
       <Row>
         <Headline2>
-          Help Fulfill the <br />
-          Promise of Responsible AI
+          Help Advance Trusted AI
         </Headline2>
         <LargeBody>
           Working together, we can create AI systems the world can trust.
@@ -524,8 +514,8 @@ function Index() {
             </GridContainer>
             <GridContainer>
               <StaticImage
-                src="../images/partner-logos/seek.png"
-                alt="SEEK"
+                src="../images/partner-logos/toronto.png"
+                alt="Toronto"
                 quality={100}
                 placeholder="blurred"
               />
@@ -552,14 +542,14 @@ function Index() {
         </Grid>
         <LargeBody>Learn more about our work and partnerships.</LargeBody>
         <br />
-        <PrimaryBtn dark onClick={() => navigate("/faq")}>
-          Read the FAQ
+        <PrimaryBtn dark onClick={() => navigate("/membership")}>
+          Become a Member
         </PrimaryBtn>
       </Row>
       <Row gray>
         <TitleLink>
           <Headline2>
-            Responsible AI <br /> Institute in the News
+            Responsible AI News
           </Headline2>
           <StyledLink text="More News" link="/news" />
         </TitleLink>

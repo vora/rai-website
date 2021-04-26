@@ -137,8 +137,10 @@ const Menu = styled.div`
   right: 0;
   background-color: #f6f6f6;
   position: absolute;
-  z-index: 10;
+  z-index: 110;
   display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
   flex-direction: column;
   align-items: center;
   animation: ${SlideAnimation} ease 0.3s;
