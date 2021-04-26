@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
-import { navigate } from "gatsby";
 import {
   Headline1,
   Headline2,
@@ -10,7 +9,6 @@ import {
   Heading1,
   Heading3,
 } from "../components/Text";
-import { PrimaryBtn } from "../components/Buttons";
 import {
   Jumbotron,
   JumboText,
@@ -202,14 +200,15 @@ function Membership() {
                 </SmallBody>
               </CheckRow>
             </CheckContainer>
-
-            <PrimaryBtn
-              dark
-              onClick={() => navigate("/certification")}
-              style={{ alignSelf: "center" }}
+            <a
+              className="kindful-donate-btn"
+              style={{ textDecoration: "none", color: "#ffffff" }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfg5ArO8v1DH1iPz8R7NNyfMIxm0Z5kMZW1juDoRDqv7QTHBA/viewform?usp=sf_link"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Become a Corporate Member
-            </PrimaryBtn>
+            </a>
           </Card>
           <Card>
             <div style={{ display: "flex", alignItems: "center" }}>
@@ -277,14 +276,15 @@ function Membership() {
                 </SmallBody>
               </CheckRow>
             </CheckContainer>
-
-            <PrimaryBtn
-              dark
-              onClick={() => navigate("/certification")}
-              style={{ alignSelf: "center" }}
+            <a
+              className="kindful-donate-btn"
+              style={{ textDecoration: "none", color: "#ffffff" }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdw7l9oSLiRarRZuzZU4urE5AMI74ZLhwhTNFCmMefO8J5ANg/viewform?usp=sf_link"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Become an Institution Member
-            </PrimaryBtn>
+              Become a Institution Member
+            </a>
           </Card>
           <Card>
             <div style={{ display: "flex", alignItems: "center" }}>
