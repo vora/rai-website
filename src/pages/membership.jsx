@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { navigate } from "gatsby";
 import Layout from "../components/Layout";
 import {
   Headline1,
   Headline2,
+  LargeBody,
   MediumBody,
   SmallBody,
   Heading1,
@@ -19,6 +21,8 @@ import {
   TitleLink,
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
+import { PrimaryBtn } from "../components/Buttons";
+import Slideshow from "../components/Slideshow";
 import News from "../components/News";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -347,6 +351,23 @@ function Membership() {
             </a>{" "}
           </Card>
         </GridRow>
+      </Row>
+      <Row>
+        <Headline2>
+          Help Advance Trusted AI
+        </Headline2>
+        <LargeBody>
+          Working together, we can create AI systems the world can trust.
+        </LargeBody>
+        <Slideshow />
+        <MediumBody>
+          Join visionary private, public, and academic leaders as we promote
+          open, ethical AI.
+        </MediumBody>
+        <br />
+        <PrimaryBtn dark onClick={() => navigate("/membership")}>
+          Get Involved
+        </PrimaryBtn>
       </Row>
       <Row gray>
         <TitleLink>

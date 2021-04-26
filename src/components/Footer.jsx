@@ -43,19 +43,19 @@ const LinksContainer = styled.div`
 
 const Links = styled.div`
   display: flex;
-  min-width: 65%;
+  min-width: 70%;
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 1150px) {
-    min-width: 60%;
-  }
-
-  @media screen and (max-width: 1030px) {
+  @media screen and (max-width: 1190px) {
     a {
       font-size: 16px;
       line-height: 28px;
     }
+  }
+
+  @media screen and (max-width: 1150px) {
+    min-width: 65%;
   }
 
   @media screen and (max-width: 1000px) {
@@ -67,7 +67,7 @@ const Links = styled.div`
       margin-bottom: 10px;
     }
 
-    a:nth-of-type(5) {
+    a:nth-of-type(6) {
       text-decoration: none;
       font-weight: bold;
     }
@@ -121,7 +121,7 @@ function Footer() {
         <Links>
           <Link href="/faq">FAQ</Link>
           <Link href="/certification">RAI Certification</Link>
-          <Link href="/tools">Tools</Link>
+          <Link href="/tools">Programs and Tools</Link>
           <Link href="/news">News</Link>
           <Link href="/about">About RAI</Link>
           <Link href="/membership" member>

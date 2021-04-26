@@ -21,7 +21,7 @@ import { StaticImage } from "gatsby-plugin-image";
 function NewsPage() {
   return (
     <Layout title="News">
-      <Row>
+      <Row small>
         <Headline1>In the News</Headline1>
       </Row>
       <Jumbotron style={{ marginBottom: "0px" }} gray>
