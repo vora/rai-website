@@ -7,6 +7,7 @@ import {
   Heading1,
   LargeBody,
   Headline2,
+  BlankLink,
 } from "../components/Text";
 import { PrimaryBtn } from "../components/Buttons";
 import {
@@ -50,7 +51,7 @@ function Index() {
         </JumboText>
         <JumboImage className="hero-image">
           <StaticImage
-            src="../images/pictures/patient-1.png"
+            src="../images/pictures/index/patient-1.png"
             style={{
               position: "absolute",
               zIndex: "3",
@@ -63,7 +64,7 @@ function Index() {
             placeholder="tracedSVG"
           />
           <StaticImage
-            src="../images/pictures/patient-2.png"
+            src="../images/pictures/index/patient-2.png"
             style={{
               position: "absolute",
               zIndex: "2",
@@ -76,7 +77,7 @@ function Index() {
             placeholder="tracedSVG"
           />
           <StaticImage
-            src="../images/pictures/patient-3.png"
+            src="../images/pictures/index/patient-3.png"
             style={{
               position: "absolute",
               zIndex: "1",
@@ -93,7 +94,7 @@ function Index() {
       <Jumbotron gray>
         <JumboImage className="hero-image" first>
           <StaticImage
-            src="../images/pictures/woman-1.png"
+            src="../images/pictures/index/woman-1.png"
             style={{
               position: "absolute",
               zIndex: "4",
@@ -106,7 +107,7 @@ function Index() {
             placeholder="tracedSVG"
           />
           <StaticImage
-            src="../images/pictures/woman-2.png"
+            src="../images/pictures/index/woman-2.png"
             style={{
               position: "absolute",
               zIndex: "3",
@@ -120,7 +121,7 @@ function Index() {
             placeholder="tracedSVG"
           />
           <StaticImage
-            src="../images/pictures/woman-4.png"
+            src="../images/pictures/index/woman-4.png"
             style={{
               position: "absolute",
               zIndex: "2",
@@ -134,7 +135,7 @@ function Index() {
             placeholder="tracedSVG"
           />
           <StaticImage
-            src="../images/pictures/woman-3.png"
+            src="../images/pictures/index/woman-3.png"
             style={{
               position: "absolute",
               zIndex: "1",
@@ -206,25 +207,40 @@ function Index() {
           <MediumBody bordered>
             In 2017, a Palestinian man was arrested for posting ‘Good morning’
             on his Facebook page after the site’s{" "}
-            <strong>
+            <BlankLink
+              bold
+              href="https://www.theguardian.com/technology/2017/oct/24/facebook-palestine-israel-translates-good-morning-attack-them-arrest"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               AI-powered translation service mistakenly translated the phrase
-            </strong>{" "}
+            </BlankLink>{" "}
             into “hurt them” in English or “attack them” in Hebrew.
           </MediumBody>
           <MediumBody bordered>
             A Florida county sheriff’s office is{" "}
-            <strong>
+            <BlankLink
+              bold
+              href="https://projects.tampabay.com/projects/2020/investigations/police-pasco-sheriff-targeted/school-data/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               combining academic data with highly sensitive health department
               data
-            </strong>{" "}
+            </BlankLink>{" "}
             to label specific children as possible criminals.
           </MediumBody>
           <MediumBody bordered>
             A 25-year old Detroit man was arrested for felony theft{" "}
-            <strong>
+            <BlankLink
+              bold
+              href="https://www.aclu.org/news/privacy-technology/wrongfully-arrested-because-face-recognition-cant-tell-black-people-apart/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               after the city’s facial recognition software misidentified him, a
               common racial bias
-            </strong>{" "}
+            </BlankLink>{" "}
             mistake made when AI isn’t designed responsibly.
           </MediumBody>
           <MediumBody>
@@ -292,7 +308,7 @@ function Index() {
         </TitleLink>
         <Divider />
         <Grid>
-          <GridRow first>
+          <GridRow auto first>
             <GridContainer>
               <StaticImage
                 src="../images/members-logos/altaml.png"
@@ -325,8 +341,6 @@ function Index() {
                 placeholder="blurred"
               />
             </GridContainer>
-          </GridRow>
-          <GridRow>
             <GridContainer>
               <StaticImage
                 src="../images/partner-logos/alberta.png"
@@ -359,8 +373,6 @@ function Index() {
                 placeholder="blurred"
               />
             </GridContainer>
-          </GridRow>
-          <GridRow>
             <GridContainer>
               <StaticImage
                 src="../images/partner-logos/beacon.png"
@@ -393,8 +405,6 @@ function Index() {
                 placeholder="blurred"
               />
             </GridContainer>
-          </GridRow>
-          <GridRow>
             <GridContainer>
               <StaticImage
                 src="../images/partner-logos/deloitte.png"
@@ -427,8 +437,6 @@ function Index() {
                 placeholder="blurred"
               />
             </GridContainer>
-          </GridRow>
-          <GridRow>
             <GridContainer>
               <StaticImage
                 src="../images/partner-logos/mila.png"
@@ -461,8 +469,6 @@ function Index() {
                 placeholder="blurred"
               />
             </GridContainer>
-          </GridRow>
-          <GridRow>
             <GridContainer>
               <StaticImage
                 src="../images/partner-logos/oxford-brooks.png"
@@ -495,8 +501,6 @@ function Index() {
                 placeholder="blurred"
               />
             </GridContainer>
-          </GridRow>
-          <GridRow>
             <GridContainer>
               <StaticImage
                 src="../images/partner-logos/rai.png"
@@ -529,8 +533,6 @@ function Index() {
                 placeholder="blurred"
               />
             </GridContainer>
-          </GridRow>
-          <GridRow>
             <GridContainer>
               <StaticImage
                 src="../images/partner-logos/strauss-center.png"
