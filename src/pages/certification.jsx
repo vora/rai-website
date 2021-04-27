@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import { navigate } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 import {
   Headline1,
   Headline2,
@@ -18,7 +19,38 @@ import {
   GrayPanel,
   Row,
 } from "../components/Blocks";
+import certification from "../images/rai-content/Certification.png";
 
+const RectangleContainer = styled.div`
+  width: 75%;
+  justify-self: center;
+  display: flex;
+  place-items: center;
+  align-items: center;
+  text-align: center;
+`;
+
+const RectangleImg = styled.img`
+  width: 100%;
+  object-fit: fit;
+`;
+
+const MembersButton = styled.a`
+background:  #ffffff;
+color: #2F2D34;
+font-style: normal !important;
+font-weight: 500 !important;
+font-size: 18px !important;
+line-height: 28px !important;
+text-align: center !important;
+width: fit-content !important;
+padding: 14px 30px 14px 30px !important;
+cursor: pointer !important;
+border: none !important;
+margin-bottom: 12px !important;
+align-self: center;
+}
+`
 function Certification() {
   return (
     <Layout title="Certification">
@@ -59,7 +91,7 @@ function Certification() {
               position: "absolute",
               zIndex: "2",
               right: "170px",
-              top: "217px",
+              top: "281px",
             }}
             width={337}
             height={337}
@@ -71,7 +103,7 @@ function Certification() {
               position: "absolute",
               zIndex: "1",
               right: "0px",
-              top: "150px",
+              top: "200px",
             }}
             width={919}
             height={500}
@@ -80,7 +112,12 @@ function Certification() {
         </JumboImage>
       </Jumbotron>
       <Row>
-        <StaticImage
+        <RectangleContainer>
+          <RectangleImg src={certification} alt="certification" />
+        </RectangleContainer>
+      </Row>
+      {/* <Row> */}
+      {/* <StaticImage
           src="../images/rai-content/Certification.png"
           style={{
             // position: "absolute",
@@ -91,8 +128,8 @@ function Certification() {
           height={634}
           alt="patient-2"
           style={{ objectFit: "scale-down" }}
-        />
-      </Row>
+        /> */}
+      {/* </Row> */}
       <Jumbotron>
         <JumboText>
           <Headline2>Why RAI Certification?</Headline2>
@@ -144,13 +181,16 @@ function Certification() {
             Automated Diagnosis and Treatment
           </LargeBody>
           <LargeBody bordered style={{ marginBottom: "40px" }}>
+            Health recommendation systems{" "}
+          </LargeBody>
+          <LargeBody bordered style={{ marginBottom: "40px" }}>
             Automated Hiring
           </LargeBody>
         </GrayPanel>
       </Jumbotron>
       <Row
         style={{
-          padding: "3%",
+          padding: "20px",
           borderColor: "black",
           borderStyle: "solid",
           borderWidth: "1px",
@@ -173,7 +213,7 @@ function Certification() {
           Detection, Automated Diagnosis and Treatment, Automated Hiring. To
           join a working group, please contact us.{" "}
         </MediumBody>
-        <div style={{width:"100%", textAlign:"center"}}>
+        <div style={{ width: "100%", textAlign: "center" }}>
           <PrimaryBtn dark>Join a working group</PrimaryBtn>{" "}
         </div>
       </Row>
@@ -194,15 +234,22 @@ function Certification() {
             marginBottom: "50px",
           }}
         >
-          For more information, please email us at certification@ai-global.org,
-          or <strong>sign up</strong> to
-          <br /> become a member of AI Global. You can also join our mailing
-          list to stay informed on the progress.
+          For more information, please email us at admin@responsible.ai, or{" "}
+          <strong>sign up</strong> to become a member of RAI.
         </LargeBody>
-
-        <PrimaryBtn onClick={() => navigate("/membership")}>
-          Become a Member{" "}
-        </PrimaryBtn>
+        <MembersButton
+          // className="kindful-donate-btn"
+          style={{ textDecoration: "none", color: "#ffffff" }}
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfE9qxtg9k8GIei-GeDmpnxQwDsHD9kaATPqnZRlmVaL3ypPg/viewform?usp=sf_link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Become a Corporate Member
+          </MembersButton>
+        {/* </a> */}
+        {/* <PrimaryBtn onClick={() => navigate("/membership")}>
+          Join a working group
+        </PrimaryBtn> */}
       </Row>
     </Layout>
   );
