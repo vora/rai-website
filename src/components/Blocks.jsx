@@ -45,10 +45,7 @@ export const Jumbotron = styled.div`
 
     .member-image {
       margin-left: 0 !important;
-<<<<<<< HEAD
       margin-top: 20px;
-=======
->>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
     }
   }
 
@@ -101,11 +98,7 @@ export const Jumbotron = styled.div`
 export const JumboText = styled.div`
   min-width: ${(props) => (props.small ? "30%" : "50%")};
   margin: ${(props) => (props.right ? "0px 0px 0px 50%" : "0px 0px 0px 100px")};
-<<<<<<< HEAD
   z-index: 8;
-=======
-  z-index: 20;
->>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
 
   @media screen and (max-width: 1190px) {
     display: flex;
@@ -196,11 +189,7 @@ export const GrayPanel = styled.div`
 `;
 
 export const Row = styled.div`
-<<<<<<< HEAD
   max-width: 100%:
-=======
-  max-width: 100%;
->>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
   display: flex;
   flex-direction: column;
   padding: 75px 100px;
@@ -216,14 +205,11 @@ export const Row = styled.div`
       background-color: ${carbon};
     `}
 
-<<<<<<< HEAD
   ${(props) =>
     props.small &&
     css`
       padding-bottom: 25px;
     `}
-=======
->>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
     @media screen and (max-width: 585px) {
       padding: 45px 35px;
     }
@@ -274,10 +260,7 @@ export const GridContainer = styled.div`
   width: 25%;
   text-align: center;
   margin: 0;
-<<<<<<< HEAD
   margin-top: 20px;
-=======
->>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
 
   @media screen and (max-width: 1000px) {
     width: 48%;

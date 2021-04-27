@@ -7,11 +7,6 @@ import { PrimaryBtn } from "../components/Buttons";
 import { Jumbotron, JumboText, Row } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 
-const JumboPicture = styled.div`
-  position: relative;
-  flex: 1;
-`
-
 const AboutPeopleContainer = styled.div`
   display: flex;
   position: relative;

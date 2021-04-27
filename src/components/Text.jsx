@@ -154,7 +154,6 @@ export const Caption = styled.h1`
   margin: 0px 0px 12px 0px;
   color: ${(props) => (props.dark ? blanco : carbon)};
 `;
-<<<<<<< HEAD
 export const UpperCaption = styled.h1`
   font-style: normal;
   font-weight: 500;
@@ -173,5 +172,3 @@ export const BlankLink = styled.a`
     color: ${gravy};
   }
 `
-=======
->>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
