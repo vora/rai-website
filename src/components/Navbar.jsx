@@ -137,7 +137,11 @@ const Menu = styled.div`
   right: 0;
   background-color: #f6f6f6;
   position: absolute;
+<<<<<<< HEAD
   z-index: 10;
+=======
+  z-index: 100;
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
   display: flex;
   flex-direction: column;
   align-items: center;

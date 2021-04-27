@@ -52,10 +52,10 @@ function Faq() {
         <Headline1>Frequently Asked Questions</Headline1>
         <MediumBody>
           Learn more about Responsible Artificial Intelligence, RAI, and how you
-          can get involved.
+          can get involved. [MORE CONTENT HERE?]
         </MediumBody>
         <br/>
-        <PrimaryBtn dark>Read our White Paper</PrimaryBtn>
+        <PrimaryBtn dark onClick={() => navigate("/")}>Read our RAI Certification White Paper</PrimaryBtn>
       </Row>
       <Row ref={what}>
         <Heading1>What is Responsible Artificial Intelligence (RAI)?</Heading1>

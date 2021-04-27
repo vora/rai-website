@@ -52,12 +52,15 @@ const Views = styled.div`
     min-height: 500px;
   }
 
+<<<<<<< HEAD
   @media screen and (max-width: 950px) {
     .view:nth-of-type(2){
       display: none;
     }
     
   }
+=======
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
 
 `;
 const View = styled.div`
@@ -67,10 +70,13 @@ const View = styled.div`
   width: 42%;
   padding: 40px;
   border: 1px solid ${carbon};
+<<<<<<< HEAD
 
   @media screen and (max-width: 950px){
     width: 90%;
   }
+=======
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
 `;
 
 function Slideshow() {
@@ -95,7 +101,11 @@ function Slideshow() {
     <SlideContainer>
       <Slide ref={slideRef} {...properties}>
         <Views>
+<<<<<<< HEAD
           <View className="view">
+=======
+          <View>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
             <MediumBody>
               "We’re delighted to be working with RAI toward an independent and
               community-developed AI certification program. RAI will provide
@@ -122,7 +132,11 @@ function Slideshow() {
               </div>
             </div>
           </View>
+<<<<<<< HEAD
           <View className="view">
+=======
+          <View>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
             <MediumBody>
               "The continued emergence of Artificial Intelligence (AI)
               technologies presents an exciting opportunity for Anthem to
@@ -153,7 +167,11 @@ function Slideshow() {
           </View>
         </Views>
         <Views>
+<<<<<<< HEAD
           <View className="view">
+=======
+          <View>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
             <MediumBody>
               “Failing to operationalize AI in a responsible and ethical manner
               is a threat to the bottom line. At IBM we have a long-standing
@@ -174,13 +192,21 @@ function Slideshow() {
                 placeholder="blurred"
                 alt="IBM"
               />
+<<<<<<< HEAD
               <div style={{ marginLeft: "20px" }} className="info">
+=======
+              <div style={{ marginLeft: "20px" }}>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
                 <Heading3 style={{ marginBottom: "0" }}>Seth Dobrin</Heading3>
                 <MediumBody>Global Chief AI Officer, IBM</MediumBody>
               </div>
             </div>
           </View>
+<<<<<<< HEAD
           <View className="view">
+=======
+          <View>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
             <MediumBody>
               “Without trust, artificial intelligence cannot deliver on its
               potential value. Independent Certification such as the RAI
@@ -211,7 +237,11 @@ function Slideshow() {
           </View>
         </Views>
         <Views>
+<<<<<<< HEAD
           <View className="view">
+=======
+          <View>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
             <MediumBody>
               “We are delighted to collaborate with organizations such as RAI in
               creating best practices in the complex field of responsible AI,
@@ -239,7 +269,11 @@ function Slideshow() {
               </div>
             </div>
           </View>
+<<<<<<< HEAD
           <View className="view">
+=======
+          <View>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
             <MediumBody>
               “The close working relationship between CIPS and Responsible AI
               Institute is imperative to allow both organizations to enrich
@@ -271,7 +305,11 @@ function Slideshow() {
           </View>
         </Views>
         <Views>
+<<<<<<< HEAD
           <View className="view">
+=======
+          <View>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
             <MediumBody>
               “The need for a measurable, independent and authoritative
               certification program working across sectors and across regions is
@@ -299,7 +337,11 @@ function Slideshow() {
               </div>
             </div>
           </View>
+<<<<<<< HEAD
           <View className="view">
+=======
+          <View>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
             <MediumBody>
               “RAI Certification provides the guardrails for use of AI and data
               in an ethical and responsible manner. Partnering with RAI
@@ -328,7 +370,11 @@ function Slideshow() {
           </View>
         </Views>
         <Views>
+<<<<<<< HEAD
           <View className="view">
+=======
+          <View>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
             <MediumBody>
               "We don’t think Banking can work in an environment without trust.
               Independent certification programs like the one from RAI Institute
@@ -357,7 +403,11 @@ function Slideshow() {
               </div>
             </div>
           </View>
+<<<<<<< HEAD
           <View className="view">
+=======
+          <View>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
             <MediumBody>
               “AI presents a new breed of significant financial and reputation
               risk for companies. CIOs, C-suite executives, and boards must ask
@@ -381,7 +431,11 @@ function Slideshow() {
               />
               <div style={{ marginLeft: "20px" }}>
                 <Heading3 style={{ marginBottom: "0" }}>Suraj Madnani</Heading3>
+<<<<<<< HEAD
                 <MediumBody>Chief Product Owner, American Express</MediumBody>
+=======
+                <MediumBody>Chief Product Officer, American Express</MediumBody>
+>>>>>>> e1ef5cd74cc01ba2afef68d624eeedeb1584771b
               </div>
             </div>
           </View>
