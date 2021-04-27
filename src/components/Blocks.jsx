@@ -98,7 +98,7 @@ export const Jumbotron = styled.div`
 export const JumboText = styled.div`
   min-width: ${(props) => (props.small ? "30%" : "50%")};
   margin: ${(props) => (props.right ? "0px 0px 0px 50%" : "0px 0px 0px 100px")};
-  z-index: 20;
+  z-index: 8;
 
   @media screen and (max-width: 1190px) {
     display: flex;
@@ -260,6 +260,7 @@ export const GridContainer = styled.div`
   width: 25%;
   text-align: center;
   margin: 0;
+  margin-top: 20px;
 
   @media screen and (max-width: 1000px) {
     width: 48%;

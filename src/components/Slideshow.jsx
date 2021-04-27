@@ -52,6 +52,12 @@ const Views = styled.div`
     min-height: 500px;
   }
 
+  @media screen and (max-width: 950px) {
+    .view:nth-of-type(2){
+      display: none;
+    }
+    
+  }
 
 `;
 const View = styled.div`
@@ -61,6 +67,10 @@ const View = styled.div`
   width: 42%;
   padding: 40px;
   border: 1px solid ${carbon};
+
+  @media screen and (max-width: 950px){
+    width: 90%;
+  }
 `;
 
 function Slideshow() {
@@ -85,7 +95,7 @@ function Slideshow() {
     <SlideContainer>
       <Slide ref={slideRef} {...properties}>
         <Views>
-          <View>
+          <View className="view">
             <MediumBody>
               "We’re delighted to be working with RAI toward an independent and
               community-developed AI certification program. RAI will provide
@@ -112,7 +122,7 @@ function Slideshow() {
               </div>
             </div>
           </View>
-          <View>
+          <View className="view">
             <MediumBody>
               "The continued emergence of Artificial Intelligence (AI)
               technologies presents an exciting opportunity for Anthem to
@@ -143,7 +153,7 @@ function Slideshow() {
           </View>
         </Views>
         <Views>
-          <View>
+          <View className="view">
             <MediumBody>
               “Failing to operationalize AI in a responsible and ethical manner
               is a threat to the bottom line. At IBM we have a long-standing
@@ -164,13 +174,13 @@ function Slideshow() {
                 placeholder="blurred"
                 alt="IBM"
               />
-              <div style={{ marginLeft: "20px" }}>
+              <div style={{ marginLeft: "20px" }} className="info">
                 <Heading3 style={{ marginBottom: "0" }}>Seth Dobrin</Heading3>
                 <MediumBody>Global Chief AI Officer, IBM</MediumBody>
               </div>
             </div>
           </View>
-          <View>
+          <View className="view">
             <MediumBody>
               “Without trust, artificial intelligence cannot deliver on its
               potential value. Independent Certification such as the RAI
@@ -201,7 +211,7 @@ function Slideshow() {
           </View>
         </Views>
         <Views>
-          <View>
+          <View className="view">
             <MediumBody>
               “We are delighted to collaborate with organizations such as RAI in
               creating best practices in the complex field of responsible AI,
@@ -229,7 +239,7 @@ function Slideshow() {
               </div>
             </div>
           </View>
-          <View>
+          <View className="view">
             <MediumBody>
               “The close working relationship between CIPS and Responsible AI
               Institute is imperative to allow both organizations to enrich
@@ -261,7 +271,7 @@ function Slideshow() {
           </View>
         </Views>
         <Views>
-          <View>
+          <View className="view">
             <MediumBody>
               “The need for a measurable, independent and authoritative
               certification program working across sectors and across regions is
@@ -289,7 +299,7 @@ function Slideshow() {
               </div>
             </div>
           </View>
-          <View>
+          <View className="view">
             <MediumBody>
               “RAI Certification provides the guardrails for use of AI and data
               in an ethical and responsible manner. Partnering with RAI
@@ -318,7 +328,7 @@ function Slideshow() {
           </View>
         </Views>
         <Views>
-          <View>
+          <View className="view">
             <MediumBody>
               "We don’t think Banking can work in an environment without trust.
               Independent certification programs like the one from RAI Institute
@@ -347,7 +357,7 @@ function Slideshow() {
               </div>
             </div>
           </View>
-          <View>
+          <View className="view">
             <MediumBody>
               “AI presents a new breed of significant financial and reputation
               risk for companies. CIOs, C-suite executives, and boards must ask
@@ -371,7 +381,7 @@ function Slideshow() {
               />
               <div style={{ marginLeft: "20px" }}>
                 <Heading3 style={{ marginBottom: "0" }}>Suraj Madnani</Heading3>
-                <MediumBody>Chief Product Officer, American Express</MediumBody>
+                <MediumBody>Chief Product Owner, American Express</MediumBody>
               </div>
             </div>
           </View>

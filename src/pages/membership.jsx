@@ -77,11 +77,10 @@ function Membership() {
           </MediumBody>
         </JumboText>
         <StaticImage
-          src="../images/rai-icons/rai-circle.png"
-          alt="RAI"
+          src="../images/pictures/membership/members.png"
+          alt="RAI Members"
           placeholder="tracedSVG"
           className="member-image"
-          style={{ marginLeft: "150px" }}
         />
       </Jumbotron>
       <Jumbotron style={{ marginBottom: "0px" }}>
