@@ -348,14 +348,12 @@ function Membership() {
               id="kindful-donate-btn-d1727a32-6c93-4808-a281-897960739db5"
             >
               Become a Community Member
-            </a>{" "}
+            </a>
           </Card>
         </GridRow>
       </Row>
       <Row>
-        <Headline2>
-          Help Advance Trusted AI
-        </Headline2>
+        <Headline2>Help Advance Trusted AI</Headline2>
         <LargeBody>
           Working together, we can create AI systems the world can trust.
         </LargeBody>

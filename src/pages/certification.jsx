@@ -35,22 +35,6 @@ const RectangleImg = styled.img`
   object-fit: fit;
 `;
 
-const MembersButton = styled.a`
-background:  #ffffff;
-color: #2F2D34;
-font-style: normal !important;
-font-weight: 500 !important;
-font-size: 18px !important;
-line-height: 28px !important;
-text-align: center !important;
-width: fit-content !important;
-padding: 14px 30px 14px 30px !important;
-cursor: pointer !important;
-border: none !important;
-margin-bottom: 12px !important;
-align-self: center;
-}
-`
 function Certification() {
   return (
     <Layout title="Certification">
@@ -213,8 +197,23 @@ function Certification() {
           Detection, Automated Diagnosis and Treatment, Automated Hiring. To
           join a working group, please contact us.{" "}
         </MediumBody>
-        <div style={{ width: "100%", textAlign: "center" }}>
-          <PrimaryBtn dark>Join a working group</PrimaryBtn>{" "}
+        <div
+          style={{
+            width: "100%",
+            textAlign: "center",
+            paddingTop: "20px",
+            paddingBottom: "20px",
+          }}
+        >
+          <a
+            className="kindful-donate-btn"
+            style={{ textDecoration: "none", color: "#ffffff" }}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfE9qxtg9k8GIei-GeDmpnxQwDsHD9kaATPqnZRlmVaL3ypPg/viewform?usp=sf_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join a working group
+          </a>
         </div>
       </Row>
 
@@ -237,19 +236,13 @@ function Certification() {
           For more information, please email us at admin@responsible.ai, or{" "}
           <strong>sign up</strong> to become a member of RAI.
         </LargeBody>
-        <MembersButton
-          // className="kindful-donate-btn"
-          style={{ textDecoration: "none", color: "#ffffff" }}
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfE9qxtg9k8GIei-GeDmpnxQwDsHD9kaATPqnZRlmVaL3ypPg/viewform?usp=sf_link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Become a Corporate Member
-          </MembersButton>
-        {/* </a> */}
-        {/* <PrimaryBtn onClick={() => navigate("/membership")}>
-          Join a working group
-        </PrimaryBtn> */}
+          <PrimaryBtn onClick={() => navigate("/membership")}>Become a member</PrimaryBtn>
+            {/* <a
+              className="kindful-donate-btn"
+              id="kindful-donate-btn-d1727a32-6c93-4808-a281-897960739db5"
+            >
+              Become a member
+            </a> */}
       </Row>
     </Layout>
   );
