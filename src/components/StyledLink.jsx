@@ -8,6 +8,10 @@ const LinkContainer = styled.div`
   cursor: pointer;
   max-width: 150px;
   align-items: center;
+
+  :hover {
+    opacity: .6;
+  }
 `;
 
 const CustomLink = styled.a`

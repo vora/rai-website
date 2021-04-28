@@ -5,6 +5,7 @@
 //      (left, right); default is left
 // tabs **REQUIRED:
 //      object of tabnames and their respective image srcs
+//      the object must have the name of the tabs of the key and values be a list of the image srcs
 //      example: {tab1: ["algora.png", "argo-design.png", "argo-design.png", "algora.png"], tab2: ["argo-design.png", "algora.png", "argo-design.png", "algora.png", "argo-design.png"], tab3: ["algora.png", "argo-design.png", "argo-design.png", "algora.png", "argo-design.png", "algora.png", "argo-design.png", "algora.png", "argo-design.png", "argo-design.png", "algora.png", "argo-design.png", "algora.png", "argo-design.png"]}
 // default **OPTIONAL:
 //      a string that determines the initial tab that is selected

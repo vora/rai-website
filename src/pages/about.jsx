@@ -11,6 +11,7 @@ import { navigate } from "gatsby";
 import Modal from 'react-modal';
 import close from "../images/icons/exit.png";
 import TabbedGallery from "../components/TabbedGallery";
+import GetInvolved from "../components/GetInvolved"
 
 // configures the modal
 Modal.setAppElement(`#___gatsby`);
@@ -555,31 +556,7 @@ function About(props) {
           </MediumBody>
         </FellowshipDescription>
       </Row>
-      <Row
-        dark
-        style={{
-          margin: "120px 115px",
-          textAlign: "center",
-          alignItems: "center"
-        }}
-      >
-        <Headline2 style={{ color: "white" }}>Get Involved</Headline2>
-        <LargeBody
-          style={{
-            color: "white",
-            marginBottom: "50px",
-          }}
-        >
-          For more information, please email us at certification@ai-global.org,
-          or <strong>sign up</strong> to
-          <br /> become a member of AI Global. You can also join our mailing
-          list to stay informed on the progress.
-        </LargeBody>
-
-        <PrimaryBtn onClick={() => navigate("/membership")}>
-          Become a Member{" "}
-        </PrimaryBtn>
-      </Row>
+      <GetInvolved/>
       <Row gray>
         <TitleLink>
           <Headline2>
