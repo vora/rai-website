@@ -47,42 +47,60 @@ function News() {
     <>
       <NewsRow>
         <NewsItem top>
-          <a href="/news" style={{ textDecoration: "none", color: carbon }}>
+          <a
+            href="https://techcrunch.com/2021/04/22/to-ensure-inclusivity-the-biden-administration-must-double-down-on-ai-development-initiatives/?tpcc=ECTW2020"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: carbon }}
+          >
             <Headline5>
-              2020 AI Global Awards Recognize Standout Global Leaders in
-              Responsible and Ethical AI
+              To ensure inclusivity, the Biden administration must double down
+              on AI development initiatives
             </Headline5>
           </a>
-          <Caption>MAR 31</Caption>
+          <Caption>APRIL 22, 2021</Caption>
         </NewsItem>
         <NewsItem top>
-          <a href="/news" style={{ textDecoration: "none", color: carbon }}>
+          <a
+            href="https://www.nytimes.com/2021/04/16/business/artificial-intelligence-regulation.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: carbon }}
+          >
             <Headline5>
-              2020 AI Global Awards Recognize Standout Global Leaders in
-              Responsible and Ethical AI
+              Europe Proposes Strict Rules for Artificial Intelligence
             </Headline5>
           </a>
-          <Caption>MAR 31</Caption>
+          <br />
+          <Caption>APRIL 21, 2021</Caption>
         </NewsItem>
       </NewsRow>
       <NewsRow>
         <NewsItem>
-          <a href="/news" style={{ textDecoration: "none", color: carbon }}>
+          <a
+            href="https://www.ftc.gov/news-events/blogs/business-blog/2021/04/aiming-truth-fairness-equity-your-companys-use-ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: carbon }}
+          >
             <Headline5>
-              2020 AI Global Awards Recognize Standout Global Leaders in
-              Responsible and Ethical AI
+              Aiming for truth, fairness, and equity in your company’s use of AI
             </Headline5>
           </a>
-          <Caption>MAR 31</Caption>
+          <br />
+          <Caption>APRIL 19, 2021</Caption>
         </NewsItem>
         <NewsItem>
-          <a href="/news" style={{ textDecoration: "none", color: carbon }}>
+          <a
+            href="/blog/308ea1d8-a7fa-11eb"
+            style={{ textDecoration: "none", color: carbon }}
+          >
             <Headline5>
-              2020 AI Global Awards Recognize Standout Global Leaders in
-              Responsible and Ethical AI
+              What’s in a name? AI Global is now Responsible AI Institute
             </Headline5>
           </a>
-          <Caption>MAR 31</Caption>
+          <br />
+          <Caption>APRIL 28, 2021</Caption>
         </NewsItem>
       </NewsRow>
     </>

@@ -74,21 +74,6 @@ function Blog() {
         <UpperCaption>APRIL 26, 2021</UpperCaption>
         <Divider />
       </Row>
-      <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/blog/46513dc1-f1b3-410e">
-          <Headline4>
-            Independent Certification Working Group Launched for Advancing
-            Ethical and Responsible AI
-          </Headline4>
-        </BlankLink>
-        <MediumBody style={{ marginBottom: "20px" }}>
-          The World Economic Forum, AI Global, and the Schwartz Reisman
-          Institute join forces to create an independent and practical
-          certification program for algorithmic decisioning systems
-        </MediumBody>
-        <UpperCaption>DECEMBER 1, 2020</UpperCaption>
-        <Divider />
-      </Row>
       <br />
     </Layout>
   );

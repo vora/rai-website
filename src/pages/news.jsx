@@ -13,7 +13,9 @@ import {
   JumboText,
   Row,
   Divider,
+  TitleLink,
 } from "../components/Blocks";
+import News from "../components/News";
 import StyledLink from "../components/StyledLink";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -40,62 +42,60 @@ function NewsPage() {
             <br /> in partnership with the World Economic Forum and Schwartz.
           </MediumBody>
           <br />
-          <StyledLink text="Read Article" link="/news" />
+          <StyledLink text="Read Article" link="/news/81585ab8-5582-4fe7" />
         </JumboText>
         <StaticImage
-          src="../images/pictures/news.png"
+          src="../images/rai-icons/Badge.png"
           alt="News"
           placeholder="tracedSVG"
           className="member-image"
         />
       </Jumbotron>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
+        <BlankLink href="/news/0d66369d-f8e1-4e9e">
           <Headline4>
-            Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
+            2020 AI Global Awards Recognize Standout Global Leaders in
+            Responsible and Ethical AI
           </Headline4>
         </BlankLink>
         <MediumBody style={{ marginBottom: "20px" }}>
-          Implement AI in an ethical way with our Responsible AI certification.
+          Annual awards program honors standout organizations and individuals
+          promoting and applying responsible use of artificial intelligence{" "}
         </MediumBody>
-        <UpperCaption>MAR 31</UpperCaption>
+        <UpperCaption>DECEMBER 29, 2020</UpperCaption>
         <Divider />
       </Row>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
-          <Headline4>
-            Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
-          </Headline4>
+        <BlankLink href="/news/b131fff2-8806-485d">
+          <Headline4>Introducing: Where in the World is AI? Map</Headline4>
         </BlankLink>
         <MediumBody style={{ marginBottom: "20px" }}>
-          Implement AI in an ethical way with our Responsible AI certification.
+          Interactive web visualization raises awareness on helpful and harmful
+          applications of AI worldwide
         </MediumBody>
-        <UpperCaption>MAR 31</UpperCaption>
+        <UpperCaption>NOVEMBER 7, 2020</UpperCaption>
         <Divider />
       </Row>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
+        <BlankLink href="/news/16b4c33c-808e-4200">
           <Headline4>
-            Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
+            Independent Review Guidelines for Responsible AI
           </Headline4>
         </BlankLink>
         <MediumBody style={{ marginBottom: "20px" }}>
-          Implement AI in an ethical way with our Responsible AI certification.
+          Learn about the steps AI Practitioners and Regulators can do to
+          incorporate review guidelines
         </MediumBody>
-        <UpperCaption>MAR 31</UpperCaption>
+        <UpperCaption>OCTOBER 31, 2020</UpperCaption>
         <Divider />
+        <br />
+        <br />
       </Row>
-      <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
-          <Headline4>
-            Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
-          </Headline4>
-        </BlankLink>
-        <MediumBody style={{ marginBottom: "20px" }}>
-          Implement AI in an ethical way with our Responsible AI certification.
-        </MediumBody>
-        <UpperCaption>MAR 31</UpperCaption>
-        <Divider />
+      <Row gray>
+        <TitleLink>
+          <Headline2>More News</Headline2>
+        </TitleLink>
+        <News />
       </Row>
     </Layout>
   );
