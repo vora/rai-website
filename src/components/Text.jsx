@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 /* Font colors*/
 const carbon = "#2f2d34";
@@ -165,10 +165,14 @@ export const UpperCaption = styled.h1`
 `;
 export const BlankLink = styled.a`
   text-decoration: none;
-  color: ${carbon};
-  font-weight: ${props => props.bold ? "bold" : "normal"};
+  color: ${(props) => (props.white ? blanco : carbon)};
+  font-weight: ${(props) => (props.bold ? "bold" : "normal")};
 
-  &:hover{
-    color: ${gravy};
-  }
-`
+  ${(props) =>
+    !props.noHover &&
+    css`
+      &:hover {
+        color: ${gravy};
+      }
+    `}
+`;
