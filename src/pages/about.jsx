@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { getSrc, StaticImage } from "gatsby-plugin-image";
+import {  StaticImage } from "gatsby-plugin-image";
 import Layout from "components/Layout";
 import {
   Headline1,
   MediumBody,
   Headline2,
   Headline4,
-  SmallBody,
-  Headline3,
 } from "../components/Text";
 import {
   Jumbotron,
@@ -23,7 +21,6 @@ import {
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
-import { navigate } from "gatsby";
 import Modal from "react-modal";
 import close from "../images/icons/exit.png";
 import GetInvolved from "../components/GetInvolved";
@@ -102,7 +99,7 @@ const ModalPersonImg = styled.img`
 `;
 
 const ModalPersonName = styled.div`
-font-family: Libre Caslon Text;
+  font-family: Libre Caslon Text;
   font-style: normal;
   font-weight: bold;
   font-size: 32x;
@@ -167,6 +164,7 @@ const PersonContainer = styled.div`
   grid-template-areas:
     "personImage personName"
     "personImage personPosition";
+  align-items: center;
   cursor: pointer;
   :hover {
     opacity: 0.6;
@@ -175,12 +173,12 @@ const PersonContainer = styled.div`
 
 const PersonName = styled(Headline4)`
   grid-area: personName;
-  margin: 0;
+  margin: 0 0 0 10px;
 `;
 
 const PersonPosition = styled(MediumBody)`
   grid-area: personPosition;
-  margin: 0;
+  margin: 0 0 0 10px;
 `;
 
 const MembersHeader = styled.div`
@@ -194,29 +192,6 @@ const MembersHeader = styled.div`
 const MembersHeadline = styled(Headline2)`
   width: min-content;
   margin-right: auto;
-`;
-
-const MembersGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: min-content;
-  gap: 20px;
-`;
-
-const MemberImgContainer = styled.div`
-  height: 100%;
-  width: 100%;
-  display: grid;
-  place-items: center;
-`;
-
-const MemberImg = styled.img`
-  flex: 1;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  padding: 10px;
-  box-sizing: border-box;
 `;
 
 const FellowshipDescription = styled.div`
@@ -234,7 +209,7 @@ function BiographyModal(props) {
     >
       <ModalHeader>
         {/* <ModalPersonImg src={props.person.img}></ModalPersonImg> */}
-        <ModalPersonName>{props.person.name}</ModalPersonName>
+        <ModalPersonName style={{fontSize: "32px"}}>{props.person.name}</ModalPersonName>
         <ModalPersonPosition>{props.person.position}</ModalPersonPosition>
         <ModalClose onClick={() => props.handler(false)}>
           <img src={close} alt="close"></img>
@@ -339,7 +314,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/manoj.png"
+              alt="Manoj Saxena"
+              quality={100}
+              height={84}
+              width={84}
+            />
             <PersonName>Manoj Saxena</PersonName>
             <PersonPosition>Board Chair</PersonPosition>
           </PersonContainer>
@@ -355,7 +336,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/matt.png"
+              alt="Matt Sanchez"
+              quality={100}
+              height={84}
+              width={84}
+            />
             <PersonName>Matt Sanchez</PersonName>
             <PersonPosition>Board Member</PersonPosition>
           </PersonContainer>
@@ -371,7 +358,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/miram.png"
+              alt="Miram Vogel"
+              quality={100}
+              height={84}
+              width={84}
+            />
             <PersonName>Miram Vogel</PersonName>
             <PersonPosition>Board Member</PersonPosition>
           </PersonContainer>
@@ -387,7 +380,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/michael.png"
+              alt="Michael E. Stewart"
+              quality={100}
+              height={84}
+              width={84}
+            />
             <PersonName>Michael E. Stewart</PersonName>
             <PersonPosition>Board Member</PersonPosition>
           </PersonContainer>
@@ -403,7 +402,11 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/joydeep.png"
+              alt="Dr. Joydeep Ghosh"
+              quality={100}
+            />
             <PersonName>Dr. Joydeep Ghosh</PersonName>
             <PersonPosition>Board Member</PersonPosition>
           </PersonContainer>
@@ -426,7 +429,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/rajeev.png"
+              alt="Rajeev Ronanki"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Rajeev Ronanki</PersonName>
             <PersonPosition>Advisor</PersonPosition>
           </PersonContainer>
@@ -443,7 +452,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/suraj.png"
+              alt="Suraj Madnani"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Suraj Madnani</PersonName>
             <PersonPosition>Advisor</PersonPosition>
           </PersonContainer>
@@ -460,7 +475,11 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/bhatt.png"
+              alt="Dr. Bhatt Vadlamani"
+              quality={100}
+            />{" "}
             <PersonName>Dr. Bhatt Vadlamani</PersonName>
             <PersonPosition>Advisor</PersonPosition>
           </PersonContainer>
@@ -477,7 +496,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/gavin.png"
+              alt="Gavin Munroe"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Gavin Munroe</PersonName>
             <PersonPosition>Advisor</PersonPosition>
           </PersonContainer>
@@ -493,7 +518,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/cameron.png"
+              alt="Cameron Davies"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Cameron Davies</PersonName>
             <PersonPosition>Advisor</PersonPosition>
           </PersonContainer>
@@ -510,7 +541,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/cathy.png"
+              alt="Cathy Cobey"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Cathy Cobey</PersonName>
             <PersonPosition>Advisor</PersonPosition>
           </PersonContainer>
@@ -526,7 +563,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/seth.png"
+              alt="Seth Dobrin"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Seth Dobrin</PersonName>
             <PersonPosition>Advisor</PersonPosition>
           </PersonContainer>
@@ -543,7 +586,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/alex.png"
+              alt="Alex Benay"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Alex Benay</PersonName>
             <PersonPosition>Advisor</PersonPosition>
           </PersonContainer>
@@ -560,7 +609,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/doreen.png"
+              alt="Doreen Lorenzo"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Doreen Lorenzo</PersonName>
             <PersonPosition>Advisor</PersonPosition>
           </PersonContainer>
@@ -576,7 +631,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/mark.png"
+              alt="Mark Rolston"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Mark Rolston</PersonName>
             <PersonPosition>Advisor</PersonPosition>
           </PersonContainer>
@@ -592,7 +653,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/ben.png"
+              alt="Ben Lamm"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Ben Lamm</PersonName>
             <PersonPosition>Advisor</PersonPosition>
           </PersonContainer>
@@ -614,7 +681,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/kasia.png"
+              alt="Kasia Chmielinski"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Kasia Chmielinski</PersonName>
             <PersonPosition>Data Advisor</PersonPosition>
           </PersonContainer>
@@ -630,7 +703,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/tim.png"
+              alt="Tim Vincent"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Tim Vincent</PersonName>
             <PersonPosition>Technical Advisor</PersonPosition>
           </PersonContainer>
@@ -647,7 +726,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/julia.png"
+              alt="Julia Stoyanovich"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Julia Stoyanovich</PersonName>
             <PersonPosition>Technical Advisor</PersonPosition>
           </PersonContainer>
@@ -670,7 +755,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/ashley.png"
+              alt="Ashley Casovan"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Ashley Casovan</PersonName>
             <PersonPosition>Executive Director</PersonPosition>
           </PersonContainer>
@@ -687,7 +778,13 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/phil.png"
+              alt="Phil Dawson"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Phil Dawson</PersonName>
             <PersonPosition>Senior Policy Counsel</PersonPosition>
           </PersonContainer>
@@ -703,19 +800,37 @@ function About(props) {
               })
             }
           >
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/kara.png"
+              alt="Kara Scully"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Kara Scully</PersonName>
             <PersonPosition>
               Communications and Engagement Manager
             </PersonPosition>
           </PersonContainer>
           <PersonContainer>
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/female.png"
+              alt="Engineer"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Hiring Soon</PersonName>
             <PersonPosition>Lead Developer</PersonPosition>
           </PersonContainer>
           <PersonContainer>
-            <StaticImage src="" />
+            <StaticImage
+              src="../images/people/male.png"
+              alt="Data Scientist"
+              quality={100}
+              height={84}
+              width={84}
+            />{" "}
             <PersonName>Hiring Soon</PersonName>
             <PersonPosition>Lead Data Scientist</PersonPosition>
           </PersonContainer>
@@ -723,7 +838,12 @@ function About(props) {
             <StaticImage src="" />
             <PersonName>Interested in joining RAI?</PersonName>
             <PersonPosition>
-              <a href="mailto:admin@responsible.ai" style={{textDecoration: "none", color: "black"}}>Inquire here.</a>
+              <a
+                href="mailto:admin@responsible.ai"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Inquire here.
+              </a>
             </PersonPosition>
           </PersonContainer>
         </AboutPeopleGrid>
@@ -966,12 +1086,12 @@ function About(props) {
             This program will support multidisciplinary teams of students and
             professionals selected from various universities and businesses to
             work on real-world responsible AI challenges and opportunities.
-            Projects are sourced from RAI Members and external clients who
-            play an important role in structuring project deliverables. Fellows
-            work with domain experts in AI, data science, human-centric design,
-            law, and regulatory policy. Fellows receive training in research
-            skills and data collection, analysis, and presentation to deliver a
-            work product that meets client needs.
+            Projects are sourced from RAI Members and external clients who play
+            an important role in structuring project deliverables. Fellows work
+            with domain experts in AI, data science, human-centric design, law,
+            and regulatory policy. Fellows receive training in research skills
+            and data collection, analysis, and presentation to deliver a work
+            product that meets client needs.
             <br />
             <br />
             <StyledLink text="Get Started" link="/fellowship" />

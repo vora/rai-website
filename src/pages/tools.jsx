@@ -8,9 +8,6 @@ import {
   JumboImage,
   Row,
   Divider,
-  Grid,
-  GridRow,
-  PrimaryBtn,
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import {

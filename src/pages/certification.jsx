@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { navigate } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import {
@@ -11,7 +10,6 @@ import {
   LargeBody,
   Heading1,
 } from "../components/Text";
-import { PrimaryBtn } from "../components/Buttons";
 import GetInvolved from "../components/GetInvolved";
 import {
   Jumbotron,
