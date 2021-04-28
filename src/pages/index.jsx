@@ -205,17 +205,16 @@ function Index() {
             Trust Is Imperative
           </Heading1>
           <MediumBody bordered>
-            In 2017, a Palestinian man was arrested for posting ‘Good morning’
-            on his Facebook page after the site’s{" "}
+            LGBTQ couples were 73 percent{" "}
             <BlankLink
               bold
-              href="https://www.theguardian.com/technology/2017/oct/24/facebook-palestine-israel-translates-good-morning-attack-them-arrest"
+              href="https://projects.tampabay.com/projects/2020/investigations/police-pasco-sheriff-targeted/school-data/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              AI-powered translation service mistakenly translated the phrase
-            </BlankLink>{" "}
-            into “hurt them” in English or “attack them” in Hebrew.
+              more likely to be denied a mortgage than heterosexual couples
+            </BlankLink>
+            with comparable financial credentials.
           </MediumBody>
           <MediumBody bordered>
             A Florida county sheriff’s office is{" "}
