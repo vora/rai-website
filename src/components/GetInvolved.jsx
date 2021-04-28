@@ -47,12 +47,12 @@ function GetInvolved(props) {
         >
             For more information, please email us at {' '}
             <Link
-                href="mailto:certification@ai-global.org"
+                href="mailto:admin@responsible.ai"
                 target="_blank"
                 rel="noopener noreferrer"
                 highlight
             >
-                certification@ai-global.org            
+                admin@responsible.ai            
             </Link>,
             or {' '}
             <Link
