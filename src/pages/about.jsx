@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { getSrc, StaticImage } from "gatsby-plugin-image";
 import Layout from "components/Layout";
-import { Headline1, MediumBody, Headline2, Headline4, LargeBody, SmallBody } from "../components/Text";
+import { Headline1, MediumBody, Headline2, Headline4, Headline3, LargeBody, SmallBody } from "../components/Text";
 import { PrimaryBtn } from "../components/Buttons";
 import { Jumbotron, JumboText, Row } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
-
+import Modal from 'react-modal';
 // configures the modal
 Modal.setAppElement(`#___gatsby`);
 // Because ReactModal is from a third party library, a function is needed to adapt the modal for styled components
