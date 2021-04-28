@@ -32,7 +32,7 @@ function Page() {
           <UpperCaption style={{ marginRight: "20px" }}>
             MARCH 31, 2021
           </UpperCaption>
-          <div className="share-buttons"></div>
+          <div className="s9-widget-wrapper"></div>
         </ShareContainer>
         <div style={{ width: "100%", textAlign: "center" }}>
           <StaticImage

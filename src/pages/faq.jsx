@@ -1,14 +1,15 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import {withPrefix} from "gatsby";
 import {
   Headline1,
   MediumBody,
   Heading1,
-  LargeBody,
   Headline2,
+  BlankLink,
 } from "../components/Text";
-import { Row, GridRow, TitleLink } from "../components/Blocks";
+import { Row, TitleLink } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
 import { PrimaryBtn } from "../components/Buttons";
@@ -54,8 +55,16 @@ function Faq() {
           Learn more about Responsible Artificial Intelligence, RAI, and how you
           can get involved.
         </MediumBody>
-        <br/>
-        <PrimaryBtn dark>Read our White Paper</PrimaryBtn>
+        <br />
+        <PrimaryBtn dark>
+          <BlankLink white noHover
+            href={withPrefix("./Whitepaper Responsible AI Trust Index and Certification Mark Program.pdf")}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read our RAI Whitepaper
+          </BlankLink>
+        </PrimaryBtn>
       </Row>
       <Row ref={what}>
         <Heading1>What is Responsible Artificial Intelligence (RAI)?</Heading1>

@@ -42,7 +42,7 @@ function Layout({ children, title }) {
             data-lookup-value="#kindful-donate-btn-d1727a32-6c93-4808-a281-897960739db5"
           />
         </Helmet>
-        <Banner text="Looking for AI Global? You're here! AI Global is now Responsible AI Institute" />
+        <Banner text="Looking for AI Global? You're here! AI Global is now Responsible AI Institute." />
         <Navbar />
         <Content>{children}</Content>
         <Footer />

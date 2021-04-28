@@ -10,6 +10,7 @@ import {
   Divider,
   Grid,
   GridRow,
+  PrimaryBtn,
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import {
@@ -21,16 +22,15 @@ import {
   SmallBody,
 } from "../components/Text";
 
-import portal from "../images/rai-icons/Portal.png";
+import portal from "../images/rai-icons/portal.png";
 import map from "../images/rai-icons/map.png";
-import course from "../images/rai-icons/game.png";
-import designassistant from "../images/rai-icons/design-assistant-banner.png";
-import fellowImg from "../images/rai-icons/Fellowship.png";
+import course from "../images/rai-icons/e-learning.png";
+import fellowImg from "../images/rai-icons/fellowship.png";
 import webindarImg from "../images/rai-icons/webinar.png";
 import calendar from "../images/rai-icons/calendar.png";
-import cert from "../images/rai-icons/certification-banner.png";
 import tools from "../images/rai-content/Tools.png";
-
+import badge from "../images/rai-icons/rai-badge.png";
+import designassistant from "../images/rai-icons/design-assistant.png";
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -74,6 +74,10 @@ const RectangleContainer = styled.div`
   display: flex;
   place-items: center;
   margin-bottom: 20px;
+  background-color: #f6f6f6;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
 `;
 
 const RectangleImg = styled.img`
@@ -140,10 +144,19 @@ function Tools() {
           />
         </JumboImage>
       </Jumbotron>
-      <Row dark style={{alignContent:'center', alignItems:"center"}}>
-        <RectangleContainer>
-          <RectangleImg src={tools} alt="diagram of tools that RAI provides" width="80%"/>
-        </RectangleContainer>
+      <Row
+        dark
+        style={{
+          alignContent: "center",
+          alignItems: "center",
+          padding: "100px 100px",
+        }}
+      >
+        <RectangleImg
+          src={tools}
+          alt="diagram of tools that RAI provides"
+          width="100%"
+        />
       </Row>
       <Row
         style={{
@@ -162,7 +175,7 @@ function Tools() {
           <ItemDescription>
             <Headline4>
               <a href="/fellowship" style={{ color: "black" }}>
-                <u> Responsible AI Fellowship Program (TBA)</u>
+                <u> Responsible AI Fellowship Program</u>
               </a>{" "}
               invites
               <br /> multidisciplinary teams of students and professionals to
@@ -179,22 +192,18 @@ function Tools() {
               training in research skills and data collection, analysis, and
               presentation to deliver a work product that meets client needs.
               <br />
-              <StyledLink text="Check it out" link="/calendar" />
+              <StyledLink text="Learn More" link="/fellowship" />
             </MediumBody>
           </ItemDescription>
         </Container>
         <Divider />
         <Container>
           <ItemIcon>
-            <a href="/webinar">
-              <img src={webindarImg} width={208} height={208} alt="webinar" />
-            </a>
+            <img src={webindarImg} width={208} height={208} alt="webinar" />
           </ItemIcon>
           <ItemDescription>
             <Headline4>
-              <a href="/webiner" style={{ color: "black" }}>
-                <u>Responsible AI Monthly Webinar Series</u>
-              </a>
+              <u>Responsible AI Monthly Webinar Series</u>
               <br />
               fosters connection with key AI subject matter experts.
             </Headline4>
@@ -205,7 +214,9 @@ function Tools() {
               world of AI and data science, and offer networking opportunities
               both with webinar attendees and presentors.
               <br />
-              <StyledLink text="Sign up to join" link="/calendar" />
+              <br />
+              <u>Coming Soon</u>
+              {/* <StyledLink text="Sign up to join" link="/calendar" /> */}
             </MediumBody>
           </ItemDescription>
         </Container>
@@ -218,7 +229,11 @@ function Tools() {
           <Item style={{ marginRight: "20px", marginBottom: "20px" }}>
             <a href="https://designassistant.responsible.ai/">
               <RectangleContainer href="https://designassistant.responsible.ai/">
-                <RectangleImg src={designassistant} alt="design assistant" />
+                <RectangleImg
+                  src={designassistant}
+                  alt="design assistant"
+                  height="126"
+                />
               </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
@@ -241,6 +256,7 @@ function Tools() {
                 <br />
                 <br />
                 <br />
+                <br />
                 <StyledLink
                   text="Get Started"
                   link="https://designassistant.responsible.ai/"
@@ -249,14 +265,14 @@ function Tools() {
             </div>
           </Item>
           <Item style={{ marginRight: "20px", marginBottom: "20px" }}>
-            <a href="https://map.ai-global.org">
-              <RectangleContainer href="https://map.ai-global.org/">
-                <RectangleImg src={map} alt="map" />
+            <a href="https://map.responsible.ai">
+              <RectangleContainer href="https://map.responsible.ai">
+                <RectangleImg src={map} alt="map" height="126" />
               </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
               <Headline5>
-                <a href="https://map.ai-global.org" style={{ color: "black" }}>
+                <a href="https://map.responsible.ai" style={{ color: "black" }}>
                   <u>Responsible AI Industry Heat Map</u>
                 </a>
                 <br />
@@ -272,7 +288,7 @@ function Tools() {
                 <br />
                 <StyledLink
                   text="Get Started"
-                  link="https://map.ai-global.org"
+                  link="https://map.responsible.ai"
                 />
               </SmallBody>
             </div>
@@ -280,7 +296,11 @@ function Tools() {
           <Item style={{ marginBottom: "20px" }}>
             <a href="https://www.tiqsoftware.com/responsible-ai/">
               <RectangleContainer href="https://www.tiqsoftware.com/responsible-ai/">
-                <RectangleImg src={course} alt="networks of people icon" />
+                <RectangleImg
+                  src={course}
+                  alt="networks of people icon"
+                  height="126"
+                />
               </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
@@ -314,7 +334,7 @@ function Tools() {
           <Item style={{ marginRight: "20px" }}>
             <a href="https://portal.ai-global.org/">
               <RectangleContainer href="https://portal.ai-global.org/">
-                <RectangleImg src={portal} />
+                <RectangleImg src={portal} alt="portal icon" height="126" />
               </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
@@ -351,7 +371,7 @@ function Tools() {
           <Item style={{ marginRight: "20px" }}>
             <a href="/calendar">
               <RectangleContainer href="/calenar">
-                <RectangleImg src={calendar} />
+                <RectangleImg src={calendar} alt="calendar icon" height="126" />
               </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
@@ -381,7 +401,11 @@ function Tools() {
           <Item>
             <a href="/certification">
               <RectangleContainer href="/certification">
-                <RectangleImg src={cert} alt="certification icon" />
+                <RectangleImg
+                  src={badge}
+                  alt="certification icon"
+                  height="126"
+                />
               </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
