@@ -45,6 +45,7 @@ export const Jumbotron = styled.div`
 
     .member-image {
       margin-left: 0 !important;
+      margin-top: 20px;
     }
   }
 
@@ -97,7 +98,7 @@ export const Jumbotron = styled.div`
 export const JumboText = styled.div`
   min-width: ${(props) => (props.small ? "30%" : "50%")};
   margin: ${(props) => (props.right ? "0px 0px 0px 50%" : "0px 0px 0px 100px")};
-  z-index: 20;
+  z-index: 8;
 
   @media screen and (max-width: 1190px) {
     display: flex;
@@ -188,7 +189,7 @@ export const GrayPanel = styled.div`
 `;
 
 export const Row = styled.div`
-  max-width: 100%;
+  max-width: 100%:
   display: flex;
   flex-direction: column;
   padding: 75px 100px;
@@ -204,6 +205,11 @@ export const Row = styled.div`
       background-color: ${carbon};
     `}
 
+  ${(props) =>
+    props.small &&
+    css`
+      padding-bottom: 25px;
+    `}
     @media screen and (max-width: 585px) {
       padding: 45px 35px;
     }
@@ -254,6 +260,7 @@ export const GridContainer = styled.div`
   width: 25%;
   text-align: center;
   margin: 0;
+  margin-top: 20px;
 
   @media screen and (max-width: 1000px) {
     width: 48%;

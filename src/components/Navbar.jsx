@@ -137,7 +137,7 @@ const Menu = styled.div`
   right: 0;
   background-color: #f6f6f6;
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;

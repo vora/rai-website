@@ -47,7 +47,7 @@ export const JumboContainer = styled.div`
 export const JumboText = styled.div`
   min-width: 50%;
   max-width: 600px;
-  z-index: 0;
+  z-index: 5;
 
   @media screen and (max-width: 1190px) {
     display: flex;

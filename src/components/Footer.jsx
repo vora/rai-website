@@ -43,7 +43,7 @@ const LinksContainer = styled.div`
 
 const Links = styled.div`
   display: flex;
-  min-width: 65%;
+  min-width: 70%;
   justify-content: space-between;
   align-items: center;
 
@@ -121,7 +121,7 @@ function Footer() {
         <Links>
           <Link href="/faq">FAQ</Link>
           <Link href="/certification">RAI Certification</Link>
-          <Link href="/tools">Tools</Link>
+          <Link href="/tools">Programs and Tools</Link>
           <Link href="/news">News</Link>
           <Link href="/about">About RAI</Link>
           <Link href="/membership" member>

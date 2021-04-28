@@ -2,9 +2,16 @@ import React from "react";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { Jumbotron, JumboText, JumboImage, Row } from "../components/Blocks";
+import {
+  Jumbotron,
+  JumboText,
+  JumboImage,
+  Row,
+  Divider,
+  Grid,
+  GridRow,
+} from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
-
 import {
   Headline1,
   Headline2,
@@ -14,41 +21,71 @@ import {
   SmallBody,
 } from "../components/Text";
 
+import portal from "../images/rai-icons/Portal.png";
+import map from "../images/rai-icons/map.png";
+import course from "../images/rai-icons/game.png";
+import designassistant from "../images/rai-icons/design-assistant-banner.png";
+import fellowImg from "../images/rai-icons/Fellowship.png";
+import webindarImg from "../images/rai-icons/webinar.png";
+import calendar from "../images/rai-icons/calendar.png";
+import cert from "../images/rai-icons/certification-banner.png";
+import tools from "../images/rai-content/Tools.png";
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 20px 0;
+  padding-top: 40px;
+  max-width: 100%;
   text-align: center;
   @media screen and (max-width: 800px) {
     flex-direction: column;
   }
 `;
+export const ItemContainer = styled.div`
+  width: 28%;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  @media screen and (max-width: 1000px) {
+    width: 48%;
+  }
 
-const ItemIcon = styled.div`
-  padding: 10px;
-  flex: 4;
+  @media screen and (max-width: 585px) {
+    width: 40%;
+  }
 `;
+
+// padding: 10px;
+const ItemIcon = styled.div`
+  flex: 4;
+  margin-right: 22;
+`;
+//   padding: 0px 10px 0px 10px;
 
 const ItemDescription = styled.div`
-  padding: 10px;
   flex: 25;
+  margin-left: 22px;
   text-align: left;
-  margin: 3px;
 `;
+
+const RectangleContainer = styled.div`
+  width: 100%;
+  display: flex;
+  place-items: center;
+  margin-bottom: 20px;
+`;
+
+const RectangleImg = styled.img`
+  width: 100%;
+  object-fit: contain;
+`;
+// margin: 38px;
 const Item = styled.div`
-  padding: 10px;
-  margin: 1.5%;
+  padding: 20px;
   flex: 1;
   text-align: center;
   border: 1px solid black;
-`;
-
-const Line = styled.div`
-  width: 100%;
-  height: 0;
-  border: 1px solid #000000;
-  margin: 3px;
-  display: inline-block;
 `;
 
 function Tools() {
@@ -57,7 +94,7 @@ function Tools() {
       <Jumbotron>
         <JumboText>
           <Headline1>
-            The Journy to
+            The Journey to
             <br /> Responsible AI Begins
             <br /> Here.
           </Headline1>
@@ -69,29 +106,26 @@ function Tools() {
             <br /> security, explainability, and fairness in AI systems. No
             matter where
             <br /> you are on your AI journey, our programs and services can
-            help. Our
-            <br /> goal is to allow members to network through community,
-            educate
-            <br /> yourselves and other practitioners and students, assess your
-            systems,
-            <br /> and certify responsible and trustworthy AI.
+            help. From
+            <br /> network, educate, assess, and certify, we have you covered.
           </MediumBody>
           <br />
         </JumboText>
         <JumboImage className="hero-image">
-         <StaticImage
+          <StaticImage
             src="../images/pictures/bike-1.png"
             style={{
               position: "absolute",
               zIndex: "2",
-              left: "394px",
+              right: "0px",
               top: "180px",
             }}
             width={1197}
             height={650}
             alt="bike-1"
+            placeholder="tracedSVG"
           />
-           <StaticImage
+          <StaticImage
             src="../images/pictures/bike-2.png"
             style={{
               position: "absolute",
@@ -102,67 +136,67 @@ function Tools() {
             width={1053}
             height={590}
             alt="patient-3"
+            placeholder="tracedSVG"
           />
         </JumboImage>
       </Jumbotron>
-
+      <Row dark style={{alignContent:'center', alignItems:"center"}}>
+        <RectangleContainer>
+          <RectangleImg src={tools} alt="diagram of tools that RAI provides" width="80%"/>
+        </RectangleContainer>
+      </Row>
       <Row
         style={{
           backgroundColor: "#f6f6f6",
           alignItems: "center",
         }}
       >
-        <Headline2 style={{ marginBottom: "20px" }}>Network</Headline2>
-        <Line />
+        <Headline2>Programs</Headline2>
+        <Divider />
         <Container>
           <ItemIcon>
-            <a href="/calendar">
-              <StaticImage
-                src="../images/rai-icons/calendar.png"
-                width={208}
-                height={208}
-                alt="calendar"
-              />
+            <a href="/fellowship">
+              <img src={fellowImg} width={208} height={208} alt="fellowship" />
             </a>
           </ItemIcon>
           <ItemDescription>
             <Headline4>
-              <a href="/calendar" style={{color:"black"}}>
-                {" "}
-                <u>RAI Events Calendar</u>
+              <a href="/fellowship" style={{ color: "black" }}>
+                <u> Responsible AI Fellowship Program (TBA)</u>
               </a>{" "}
-              connects members to the latest events in responsible AI.
+              invites
+              <br /> multidisciplinary teams of students and professionals to
+              <br /> tackle real-world challenges.
             </Headline4>
             <MediumBody>
-              We understand the importance in always staying on top of industry
-              events and happenings, so we’ve curated a calendar of can’t-miss
-              events including conferences, speaker series, awards presentations
-              and more to help. This calendar is updated weekly with upcoming,
-              can’t miss advance. We’ll see you there!
-              <br />
+              This program will support multidisciplinary teams of students and
+              professionals selected from various universities and businesses to
+              work on real-world responsible AI challenges and opportunities.
+              Projects are sourced from AI Global Members and external clients
+              who play an important role in structuring project deliverables.
+              Fellows work with domain experts in AI, data science,
+              human-centric design, law, and regulatory policy. Fellows receive
+              training in research skills and data collection, analysis, and
+              presentation to deliver a work product that meets client needs.
               <br />
               <StyledLink text="Check it out" link="/calendar" />
             </MediumBody>
           </ItemDescription>
         </Container>
-        <Line />
+        <Divider />
         <Container>
           <ItemIcon>
             <a href="/webinar">
-              <StaticImage
-                src="../images/rai-icons/webinar.png"
-                width={208}
-                height={208}
-                alt="webinar"
-              />
+              <img src={webindarImg} width={208} height={208} alt="webinar" />
             </a>
           </ItemIcon>
           <ItemDescription>
             <Headline4>
-              <a href="/webiner" style={{color:"black"}}>
+              <a href="/webiner" style={{ color: "black" }}>
                 <u>Responsible AI Monthly Webinar Series</u>
               </a>
-               {" "}fosters connection with key AI subject matter experts.
+              <br />
+              fosters connection with key AI subject matter experts.
             </Headline4>
             <MediumBody>
               This program will enrich members with a reoccuring monthly webinar
@@ -171,28 +205,124 @@ function Tools() {
               world of AI and data science, and offer networking opportunities
               both with webinar attendees and presentors.
               <br />
-              <br />
               <StyledLink text="Sign up to join" link="/calendar" />
             </MediumBody>
           </ItemDescription>
         </Container>
       </Row>
       <Row>
-        <Headline2 style={{ marginBottom: "20px" }}>Educate</Headline2>
-        <Line style={{ marginBottom: "5px" }} />
+        <Headline2>Tools</Headline2>
+        <Divider />
+
         <Container>
-          <Item>
-            <a href="https://portal.ai-global.org/">
-              <StaticImage
-                src="../images/rai-icons/Portal.png"
-                alt="Portal icon"
-                width={356}
-                height={160}
-              />
+          <Item style={{ marginRight: "20px", marginBottom: "20px" }}>
+            <a href="https://designassistant.responsible.ai/">
+              <RectangleContainer href="https://designassistant.responsible.ai/">
+                <RectangleImg src={designassistant} alt="design assistant" />
+              </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
               <Headline5>
-                <a href="https://portal.ai-global.org/" style={{color:"black"}}>
+                <a
+                  href="https://designassistant.responsible.ai/"
+                  style={{ color: "black" }}
+                >
+                  <u>Responsible AI Design Assistant</u>
+                </a>
+                <br />
+                assesses work in development, to anticipate problems and
+                future-proof AI systems.
+              </Headline5>
+              <SmallBody>
+                Access research and industry best practices to assess key
+                challenges, including data rights and use, privacy, security,
+                explainability, fairness, bias, and robustness.
+                <br />
+                <br />
+                <br />
+                <br />
+                <StyledLink
+                  text="Get Started"
+                  link="https://designassistant.responsible.ai/"
+                />
+              </SmallBody>
+            </div>
+          </Item>
+          <Item style={{ marginRight: "20px", marginBottom: "20px" }}>
+            <a href="https://map.ai-global.org">
+              <RectangleContainer href="https://map.ai-global.org/">
+                <RectangleImg src={map} alt="map" />
+              </RectangleContainer>
+            </a>
+            <div style={{ textAlign: "left" }}>
+              <Headline5>
+                <a href="https://map.ai-global.org" style={{ color: "black" }}>
+                  <u>Responsible AI Industry Heat Map</u>
+                </a>
+                <br />
+                provides realtime examples to where AI is currently in use.
+              </Headline5>
+              <SmallBody>
+                Everyone is talking about AI, but how and where is it actually
+                being used? We've mapped out examples where AI has been harmful
+                and where it's been helpful. Cases are updated weekly and found
+                from various sources such as Awful AI, Upturn, Equal AI, and
+                Charlie Pownall/CPC & Associates.
+                <br />
+                <br />
+                <StyledLink
+                  text="Get Started"
+                  link="https://map.ai-global.org"
+                />
+              </SmallBody>
+            </div>
+          </Item>
+          <Item style={{ marginBottom: "20px" }}>
+            <a href="https://www.tiqsoftware.com/responsible-ai/">
+              <RectangleContainer href="https://www.tiqsoftware.com/responsible-ai/">
+                <RectangleImg src={course} alt="networks of people icon" />
+              </RectangleContainer>
+            </a>
+            <div style={{ textAlign: "left" }}>
+              <Headline5>
+                <a
+                  href="https://www.tiqsoftware.com/responsible-ai/"
+                  style={{ color: "black" }}
+                >
+                  <u>Responsible AI E-Learning Courses</u>
+                </a>
+                <br />
+                developed in partnership with TIQ Software.
+              </Headline5>
+              <SmallBody>
+                TIQ Software is a leader in work-integrated digital learning
+                software, and together with RAI designed a course to support the
+                public in answering the question, “what is artificial
+                intelligence (AI)?” and to help everyone recognize how AI can be
+                helpful, or harmful, if not developed responsibly.
+                <br />
+                <br />
+                <StyledLink
+                  text="Get Started"
+                  link="https://www.tiqsoftware.com/responsible-ai/"
+                />
+              </SmallBody>
+            </div>
+          </Item>
+        </Container>
+        <Container style={{ paddingTop: 0 }}>
+          <Item style={{ marginRight: "20px" }}>
+            <a href="https://portal.ai-global.org/">
+              <RectangleContainer href="https://portal.ai-global.org/">
+                <RectangleImg src={portal} />
+              </RectangleContainer>
+            </a>
+            <div style={{ textAlign: "left" }}>
+              <Headline5>
+                <a
+                  href="https://portal.ai-global.org/"
+                  style={{ color: "black" }}
+                >
                   <u>Responsible AI Community Portal</u>
                 </a>
                 <br /> provides access to a curated library of trusted
@@ -204,155 +334,80 @@ function Tools() {
                 datasets, and open-source software to help members better
                 navigate the AI landscape and directly connect with the experts
                 who are guiding...
-                <br /><br/>
                 <br />
-                <StyledLink text="Get Started" link="https://portal.ai-global.org/" />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <StyledLink
+                  text="Get Started"
+                  link="https://portal.ai-global.org/"
+                />
               </SmallBody>
             </div>
           </Item>
-          <Item>
-            <a href="https://map.ai-global.org/">
-              <StaticImage
-                src="../images/rai-icons/map.png"
-                alt="map icon"
-                width={356}
-                height={160}
-              />
+          <Item style={{ marginRight: "20px" }}>
+            <a href="/calendar">
+              <RectangleContainer href="/calenar">
+                <RectangleImg src={calendar} />
+              </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
               <Headline5>
-                <a href="https://map.ai-global.org/" style={{color:"black"}}>
-                  <u>Responsible AI Industry Heat Map</u>
+                <a href="/calendar" style={{ color: "black" }}>
+                  <u>RAI Events Calendar</u>
                 </a>
-                <br /> provides realtime examples to where AI is currently in
-                use.
+                <br /> connects members to the latest events in responsible AI.
               </Headline5>
               <SmallBody>
-                Everyone is talking about AI, but how and where is it actually
-                being used? We've mapped out examples where AI has been harmful
-                and where it's been helpful. Cases are updated weekly and found
-                from various sources such as Awful AI, Upturn, Equal AI, and
-                Charlie Pownall/CPC & Associates.
+                We understand the importance in always staying on top of
+                industry events and happenings, so we’ve curated a calendar of
+                can’t-miss events including conferences, speaker series, awards
+                presentations and more to help. This calendar is updated weekly
+                with upcoming, can’t miss advance.
                 <br />
                 <br />
-                <StyledLink text="Get Started" link="https://map.ai-global.org/" />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <StyledLink text="Get Started" link="/calendar" />
               </SmallBody>
             </div>
           </Item>
           <Item>
-            <a href="https://aiglobal.beta.trajectoryiq.com/">
-              <StaticImage
-                src="../images/rai-icons/e-course.png"
-                alt="E-learning icon"
-                width={356}
-                height={160}
-              />
+            <a href="/certification">
+              <RectangleContainer href="/certification">
+                <RectangleImg src={cert} alt="certification icon" />
+              </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
               <Headline5>
-                <a href="https://aiglobal.beta.trajectoryiq.com/" style={{color:"black"}}><u>Responsible AI E-Learning Courses</u></a>
-                <br /> developed in partnership with TIQ Software
+                <a href="/certification" style={{ color: "black" }}>
+                  <u>RAI Certification Beta</u>
+                </a>{" "}
+                is the world’s first independent, accredited certification
+                program of its kind.
               </Headline5>
               <SmallBody>
-                TIQ Software is a leader in work-integrated digital learning
-                software, and together with RAI designed a course to support the
-                public in answering the question, “what is artificial
-                intelligence (AI)?” and to help everyone recognize how AI can be
-                helpful, or harmful, if not developed responsibly.
+                Developed under the Global AI Action Alliance for the World
+                Economic Forum (WEF), along with a diverse community of leading
+                experts, RAI Certification is based on objective assessments of
+                fairness, bias, explainability, and other concrete metrics of
+                responsibly built AI systems. The Schwartz Reisman Institute for
+                Technology and Society (SRI) at University of Toronto is serving
+                as a business partner on the development phase of the
+                initiative. The result is a measurable, independent,
+                authoritative certification program working across sectors and
+                across regions around the world.
                 <br />
-                <br />
-                <StyledLink text="Get Started" link="https://aiglobal.beta.trajectoryiq.com/" />
+                <StyledLink text="Get Started" link="/certification" />
               </SmallBody>
             </div>
-          </Item>{" "}
-        </Container>
-      </Row>
-      <Row
-        style={{
-          backgroundColor: "#f6f6f6",
-          alignItems: "center",
-        }}
-      >
-        <Headline2 style={{ marginBottom: "20px" }}>Assess</Headline2>
-        <Line />
-        <Container style={{ padding: "10px 0" }}>
-          <ItemIcon>
-            <a href="https://oproma.github.io/rai-trustindex/">
-              <StaticImage
-                src="../images/rai-icons/design-assistant.png"
-                width={208}
-                height={199}
-                alt="design assisstant"
-              />
-            </a>
-          </ItemIcon>
-          <ItemDescription>
-            <Headline4>
-              <a href="https://oproma.github.io/rai-trustindex/" style={{color:"black"}}>
-                <u>Responsible AI Design Assisstant</u>
-              </a>{" "}
-              assesses work in development, to anticipate problems and
-              future-proof AI systems.
-            </Headline4>
-            <MediumBody>
-              The Responsible AI Design Assistant is a virtual assessment to
-              help members anticipate problems and future-proof their AI system.
-              This tool brings together research and industry best practices to
-              help designers, developers, and product owners keep in mind key AI
-              challenges including data rights and use, privacy, security,
-              explainability, fairness, bias, and robustness.
-              <br />
-              <br />
-              <StyledLink
-                text="Get Started"
-                link="https://oproma.github.io/rai-trustindex/"
-              />
-            </MediumBody>
-          </ItemDescription>
-        </Container>
-      </Row>
-      <Row
-        style={{
-          alignItems: "center",
-        }}
-      >
-        <Headline2 style={{ marginBottom: "20px" }}>Certify</Headline2>
-        <Line />
-        <Container style={{ padding: "10px 0" }}>
-          <ItemIcon>
-            <a href="/certification">
-              <StaticImage
-                src="../images/rai-icons/Badge.png"
-                width={208}
-                height={208}
-                alt="RAI certification badge"
-              />
-            </a>
-          </ItemIcon>
-          <ItemDescription>
-            <Headline4>
-              <a href="/certification" style={{color:"black"}}>
-                <u>RAI Certification Beta</u>
-              </a>{" "}
-              is the world’s first independent, accredited certification program
-              of its kind.
-            </Headline4>
-            <MediumBody>
-              Developed under the Global AI Action Alliance for the World
-              Economic Forum (WEF), along with a diverse community of leading
-              experts, RAI Certification is based on objective assessments of
-              fairness, bias, explainability, and other concrete metrics of
-              responsibly built AI systems. The Schwartz Reisman Institute for
-              Technology and Society (SRI) at University of Toronto is serving
-              as a business partner on the development phase of the initiative.
-              The result is a measurable, independent, authoritative
-              certification program working across sectors and across regions
-              around the world.
-              <br />
-              <br />
-              <StyledLink text="Get Started" link="/certification" />
-            </MediumBody>
-          </ItemDescription>
+          </Item>
         </Container>
       </Row>
     </Layout>
