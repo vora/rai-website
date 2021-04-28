@@ -28,11 +28,15 @@ const RectangleContainer = styled.div`
   place-items: center;
   align-items: center;
   text-align: center;
+  border: 2px solid blue;
+  margin-left:auto;
+  margin-right:auto;
 `;
 
 const RectangleImg = styled.img`
   width: 100%;
   object-fit: fit;
+
 `;
 
 function Certification() {
@@ -95,25 +99,11 @@ function Certification() {
           />
         </JumboImage>
       </Jumbotron>
-      <Row>
+      <Row dark style={{alignContent:'center', alignItems:"center"}}>
         <RectangleContainer>
-          <RectangleImg src={certification} alt="certification" />
+          <RectangleImg src={certification} alt="certification" width="80%"/>
         </RectangleContainer>
       </Row>
-      {/* <Row> */}
-      {/* <StaticImage
-          src="../images/rai-content/Certification.png"
-          style={{
-            // position: "absolute",
-            zIndex: "1",
-            left: "auto",
-          }}
-          width={1116}
-          height={634}
-          alt="patient-2"
-          style={{ objectFit: "scale-down" }}
-        /> */}
-      {/* </Row> */}
       <Jumbotron>
         <JumboText>
           <Headline2>Why RAI Certification?</Headline2>

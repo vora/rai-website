@@ -27,6 +27,7 @@ import fellowImg from "../images/rai-icons/Fellowship.png";
 import webindarImg from "../images/rai-icons/webinar.png";
 import calendar from "../images/rai-icons/calendar.png";
 import cert from "../images/rai-icons/certification-banner.png";
+import tools from "../images/rai-content/Tools.png";
 
 const Container = styled.div`
   display: flex;
@@ -137,7 +138,11 @@ function Tools() {
           />
         </JumboImage>
       </Jumbotron>
-
+      <Row dark style={{alignContent:'center', alignItems:"center"}}>
+        <RectangleContainer>
+          <RectangleImg src={tools} alt="diagram of tools that RAI provides" width="80%"/>
+        </RectangleContainer>
+      </Row>
       <Row
         style={{
           backgroundColor: "#f6f6f6",
