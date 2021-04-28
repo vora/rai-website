@@ -63,7 +63,7 @@ function GetInvolved(props) {
                 sign up
             </Link>
             {' '}to
-            <br /> become a member of AI Global. You can also join our mailing
+            <br /> become a member of RAI. You can also join our mailing
             list to stay informed on the progress.
         </LargeBody>
         <PrimaryBtn onClick={() => navigate("/membership")}>

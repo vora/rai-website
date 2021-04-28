@@ -458,7 +458,7 @@ function About(props) {
         <JumboText>
           <Headline1>About RAI</Headline1>
           <MediumBody>
-            AI Global is a non-profit organization building tangible <br />{" "}
+            RAI is a non-profit organization building tangible <br />{" "}
             governance tools for trustworthy, safe, and fair Artificial <br />
             Intelligence (AI). Through a first-of-its-kind certification system
             <br />
@@ -469,7 +469,7 @@ function About(props) {
             Feedback generated from these systems will in turn inform AI
             <br />
             policymakers, enabling technologies that improve the social <br />
-            and economic well-being of society. AI Global brings extensive
+            and economic well-being of society. RAI brings extensive
             <br />
             experience in responsible AI policy and is uniquely positioned to
             <br />
@@ -861,7 +861,7 @@ function About(props) {
             This program will support multidisciplinary teams of students and
             professionals selected from various universities and businesses to
             work on real-world responsible AI challenges and opportunities.
-            Projects are sourced from AI Global Members and external clients who
+            Projects are sourced from RAI Members and external clients who
             play an important role in structuring project deliverables. Fellows
             work with domain experts in AI, data science, human-centric design,
             law, and regulatory policy. Fellows receive training in research
