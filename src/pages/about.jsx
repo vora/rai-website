@@ -162,7 +162,7 @@ const PersonPosition = styled(MediumBody)`
   margin: 0;
 `
 
-const PartnerHeader = styled.div`
+const MembersHeader = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -170,48 +170,26 @@ const PartnerHeader = styled.div`
     flex-direction: column;
   }
 `
-const PartnerLinkContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  @media screen and (max-width: 800px) {
-    justify-content: center;
-  }
-`
-const PartnerHeadline = styled(Headline2)`
+const MembersHeadline = styled(Headline2)`
   width:  min-content;
   margin-right: auto;
 `
 
-const PartnerLink = styled(LargeBody)`
-  justify-self: flex-end;
-  width: min-content;
-  height: min-content;
-  border-bottom: ${props => props.selected ? `1px solid black` : ""};
-  color: ${props => props.selected ? props.theme.color.dark : props.theme.color.mediumDark};
-  margin-left: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  :hover {
-    opacity: .6;
-  }
-` 
-
-const PartnerGrid = styled.div`
+const MembersGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: min-content;
   gap: 20px;
 `
 
-const PartnerImgContainer = styled.div`
+const MemberImgContainer = styled.div`
   height: 100%;
   width: 100%;
   display: grid;
   place-items: center;
 `
 
-const PartnerImg = styled.img`
+const MemberImg = styled.img`
   flex: 1;
   width: auto;
   max-width: 100%;
@@ -270,22 +248,9 @@ function About(props) {
     setModalPerson(person)
     modalHandler(true)
   }
-
-  const [partnerSelected, setPartnerSelected] = useState("members")
   
-  function getPartnerList(type){
-    switch (partnerSelected){
-      case "members":
-        return membersList.filter((member) => member.type == type)
-        break;
-      case "contributers":
-        return contributersList.filter((member) => member.type == type);
-        break;
-      case "affliates":
-        return affiliatesList.filter((member) => member.type == type);
-      default:
-        return membersList;
-    }
+  function filterTypes(type){
+    return membersList.filter((member) => member.type == type)
   }
 
   const boardList = [
@@ -319,8 +284,6 @@ function About(props) {
     {name: "1Manoj Saxena", position: "Board Chair", img: "../images/pictures/bike-1.png", introduction: "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.", biography: "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India."},
   ];  
   const membersList = [{src: "algora.png", type: "gc"}, {src: "argo-design.png", type: "tsp"},{src: "algora.png", type: "gngo"}, {src: "argo-design.png", type: "ua"},{src: "algora.png", type: "gc"}, {src: "argo-design.png", type:"gs"},{src: "algora.png", type: "gc"}, {src: "argo-design.png", type: "n"},{src: "algora.png"}, {src: "argo-design.png"}]
-  const contributersList = [{src: "argo-design.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"}]
-  const affiliatesList = [{src: "algora.png"}, {src: "algora.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"},{src: "algora.png"}, {src: "argo-design.png"}]
 
   return (
     <Layout title="About RAIL">
@@ -520,78 +483,67 @@ function About(props) {
           </BiographyModal>
         </Row>
       <Row>
-        <PartnerHeader>
-          <PartnerHeadline>
+        <MembersHeader>
+          <MembersHeadline>
             Members
-          </PartnerHeadline>
-          <PartnerLinkContainer>
-            <PartnerLink selected={partnerSelected == "members"} onClick={() => setPartnerSelected("members")}>
-              Members
-            </PartnerLink>
-            <PartnerLink selected={partnerSelected == "contributers"} onClick={() => setPartnerSelected("contributers")}>
-              Contributers
-            </PartnerLink>
-            <PartnerLink selected={partnerSelected == "affliates"} onClick={() => setPartnerSelected("affliates")}>
-              Affliates
-            </PartnerLink>
-          </PartnerLinkContainer>
-        </PartnerHeader>
+          </MembersHeadline>
+        </MembersHeader>
         <Headline4>Global Corporations</Headline4>
-        <PartnerGrid>
+        <MembersGrid>
           {
-            getPartnerList("gc").map((partner) => {
+            filterTypes("gc").map((partner) => {
                 return (
-                  <PartnerImgContainer>
-                    <PartnerImg 
+                  <MemberImgContainer>
+                    <MemberImg 
                       src={"../../partner-logos/" + partner.src}
                     >
-                    </PartnerImg>
-                  </PartnerImgContainer>
+                    </MemberImg>
+                  </MemberImgContainer>
                 );
           })}
-        </PartnerGrid>
+        </MembersGrid>
         <Headline4>Tech and Service Providers</Headline4>
-        <PartnerGrid>
+        <MembersGrid>
           {
-            getPartnerList("tsp").map((partner) => {
+            filterTypes("tsp").map((partner) => {
                 return (
-                  <PartnerImgContainer>
-                    <PartnerImg 
+                  <MemberImgContainer>
+                    <MemberImg 
                       src={"../../partner-logos/" + partner.src}
                     >
-                    </PartnerImg>
-                  </PartnerImgContainer>
+                    </MemberImg>
+                  </MemberImgContainer>
                 );
           })}
-        </PartnerGrid>
+        </MembersGrid>
         <Headline4>Government and NGOs</Headline4>
-        <PartnerGrid>
+        <MembersGrid>
           {
-            getPartnerList("gngo").map((partner) => {
+            filterTypes("gngo").map((partner) => {
                 return (
-                  <PartnerImgContainer>
-                    <PartnerImg 
+                  <MemberImgContainer>
+                    <MemberImg 
                       src={"../../partner-logos/" + partner.src}
                     >
-                    </PartnerImg>
-                  </PartnerImgContainer>
+                    </MemberImg>
+                  </MemberImgContainer>
                 );
           })}
-        </PartnerGrid>
+        </MembersGrid>
         <Headline4>Universities and Academia</Headline4>
-        <PartnerGrid>
+        <MembersGrid>
           {
-            getPartnerList("ua").map((partner) => {
+            filterTypes("ua").map((partner) => {
                 return (
-                  <PartnerImgContainer>
-                    <PartnerImg 
+                  <MemberImgContainer>
+                    <MemberImg 
                       src={"../../partner-logos/" + partner.src}
                     >
-                    </PartnerImg>
-                  </PartnerImgContainer>
+                    </MemberImg>
+                  </MemberImgContainer>
                 );
           })}
-        </PartnerGrid>
+        </MembersGrid>
       </Row>
       <Row style={{backgroundColor: "#f6f6f6"}}>
         <FellowshipDescription>
