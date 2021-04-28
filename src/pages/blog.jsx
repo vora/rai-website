@@ -1,9 +1,13 @@
 import React from "react";
+import styled from "styled-components";
 import Layout from "../components/Layout";
 import {
   Headline1,
   Headline2,
   MediumBody,
+  SmallBody,
+  Heading1,
+  Heading3,
   UpperCaption,
   Headline4,
   BlankLink,
@@ -11,11 +15,16 @@ import {
 import {
   Jumbotron,
   JumboText,
+  GrayPanel,
   Row,
+  GridRow,
+  Card,
+  TitleLink,
   Divider,
 } from "../components/Blocks";
 import { PrimaryBtn } from "../components/Buttons";
 import StyledLink from "../components/StyledLink";
+import News from "../components/News";
 import { StaticImage } from "gatsby-plugin-image";
 
 function Blog() {

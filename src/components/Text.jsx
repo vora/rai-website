@@ -159,7 +159,6 @@ export const UpperCaption = styled.h1`
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  text-transform: uppercase;
   letter-spacing: 1.5px;
   margin: 0px 0px 12px 0px;
   color: ${gravy};

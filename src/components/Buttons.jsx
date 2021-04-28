@@ -53,9 +53,3 @@ export const SecondaryBtn = styled.button`
     background: ${(props) => (props.dark ? stone : ghost)};
   }
 `;
-
-export const ShareContainer = styled.div`
-  margin: 40px 0px;
-  display: flex;
-  align-items: center;
-`;

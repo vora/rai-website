@@ -85,7 +85,7 @@ function Fellowship() {
             <br /> development program for graduates, grad students and
             <br /> researchers that helps bridge the gap to a full-time career
             in
-            <br /> data &amp; AI-related fields.
+            <br /> data & AI-related fields.
           </MediumBody>
         </JumboText>
         <Column>
@@ -114,7 +114,7 @@ function Fellowship() {
           >
             Technical Fellows come from a mix of data driven STEM fields,
             including physics, math, engineering, statistics,
-            <br /> computer science, machine &amp; deep learning, computer vision,
+            <br /> computer science, machine & deep learning, computer vision,
             <br /> NLP, quantitative finance, genomics, biology, neuroscience,
             <br /> and others.
           </MediumBody>
@@ -365,6 +365,7 @@ function Fellowship() {
           </LargeBody>
         </JumboText>
       </Jumbotron>
+
       <Row gray>
         <div
           style={{
