@@ -14,12 +14,20 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-source-contentful",
+      resolve: "gatsby-plugin-social9-socialshare",
       options: {
-        accessToken: accessToken,
-        spaceId: spaceID,
+        content: "a2e31cdba944465fa43b468a80af7af3",
+        async: true,
+        defer: true,
       },
     },
+    // {
+    //   resolve: "gatsby-source-contentful",
+    //   options: {
+    //     accessToken: accessToken,
+    //     spaceId: spaceID,
+    //   },
+    // },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",

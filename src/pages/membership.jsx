@@ -134,8 +134,8 @@ function Membership() {
           <br /> tools and expert guidance. Here’s how to join our efforts.
         </MediumBody>
         <br />
-        <GridRow auto first>
-          <Card>
+        <GridRow auto first stretch>
+          <Card width="32%">
             <div style={{ display: "flex", alignItems: "center" }}>
               <img src={corporate} alt="Corporate" />
               <div style={{ marginLeft: "20px" }}>
@@ -211,7 +211,7 @@ function Membership() {
               Become a Corporate Member
             </a>
           </Card>
-          <Card>
+          <Card width="32%">
             <div style={{ display: "flex", alignItems: "center" }}>
               <img src={institution} alt="Institution" />
               <div style={{ marginLeft: "20px" }}>
@@ -287,7 +287,7 @@ function Membership() {
               Become a Institution Member
             </a>
           </Card>
-          <Card>
+          <Card width="32%">
             <div style={{ display: "flex", alignItems: "center" }}>
               <img src={community} alt="Community" />
               <div style={{ marginLeft: "20px" }}>
