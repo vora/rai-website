@@ -64,7 +64,7 @@ function Fellowship() {
         </JumboText>
         <JumboImage className="hero-image">
           <StaticImage
-            src="../images/rai-icons/fellowship.png"
+            src="../images/rai-icons/Fellowship.png"
             style={{
               position: "absolute",
               zIndex: "1",
