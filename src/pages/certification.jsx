@@ -41,6 +41,11 @@ const RectangleImg = styled.img`
   object-fit: fill;
 `;
 
+const BorderTitle =styled.p`
+  border-left: 3px solid #2f2d34;
+  padding-left: 20px;
+`;
+
 function Certification() {
   return (
     <Layout title="Certification">
@@ -152,21 +157,17 @@ function Certification() {
             RAI Certification Beta areas
             <br /> of focus
           </Heading1>
-          <LargeBody bordered style={{ marginBottom: "40px" }}>
-            Fair Lending
-          </LargeBody>
-          <LargeBody bordered style={{ marginBottom: "40px" }}>
-            Fraud Detection
-          </LargeBody>
+          <LargeBody style={{ marginBottom: "40px" }}>
 
-          <LargeBody bordered style={{ marginBottom: "40px" }}>
-            Automated Diagnosis and Treatment
-          </LargeBody>
-          <LargeBody bordered style={{ marginBottom: "40px" }}>
-            Health recommendation systems{" "}
-          </LargeBody>
-          <LargeBody bordered style={{ marginBottom: "40px" }}>
-            Automated Hiring
+              <BorderTitle>Fair Lending</BorderTitle>
+              <br/>
+              <BorderTitle>Fraud Detection</BorderTitle>
+              <br/>
+              <BorderTitle>Automated Diagnosis and Treatment</BorderTitle>
+              <br/>
+              <BorderTitle>Health recommendation systems</BorderTitle>
+              <br/>
+              <BorderTitle>Automated Hiring</BorderTitle>
           </LargeBody>
         </GrayPanel>
       </Jumbotron>
