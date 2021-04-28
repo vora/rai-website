@@ -185,8 +185,8 @@ function Tools() {
               This program will support multidisciplinary teams of students and
               professionals selected from various universities and businesses to
               work on real-world responsible AI challenges and opportunities.
-              Projects are sourced from AI Global Members and external clients
-              who play an important role in structuring project deliverables.
+              Projects are sourced from RAI Members and external clients who
+              play an important role in structuring project deliverables.
               Fellows work with domain experts in AI, data science,
               human-centric design, law, and regulatory policy. Fellows receive
               training in research skills and data collection, analysis, and
