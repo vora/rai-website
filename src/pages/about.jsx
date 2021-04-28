@@ -86,13 +86,25 @@ const ModalPersonImg = styled.img`
   margin-right: 20px;
 `
 
-const ModalPersonName = styled(Headline3)`
+const ModalPersonName = styled.div`
+font-family: Libre Caslon Text;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32x;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  margin: 0px 0px 20px 0px;
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+  }
   grid-area: personName;
   align-self: flex-end;
   margin: 0;
 `
 
-const ModalPersonPosition = styled(SmallBody)`
+const ModalPersonPosition = styled(MediumBody)`
   grid-area: personPosition;
   align-self: flex-start;
 `

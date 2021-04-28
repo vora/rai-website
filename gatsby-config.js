@@ -21,13 +21,13 @@ module.exports = {
         defer: true,
       },
     },
-    // {
-    //   resolve: "gatsby-source-contentful",
-    //   options: {
-    //     accessToken: accessToken,
-    //     spaceId: spaceID,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        accessToken: accessToken,
+        spaceId: spaceID,
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
