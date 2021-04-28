@@ -10,6 +10,7 @@ import News from "../components/News";
 import { navigate } from "gatsby";
 import Modal from 'react-modal';
 import close from "../images/icons/exit.png";
+import TabbedGallery from "../components/TabbedGallery";
 
 // configures the modal
 Modal.setAppElement(`#___gatsby`);
