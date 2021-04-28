@@ -1,13 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import Layout from "../components/Layout";
 import {
   Headline1,
   Headline2,
   MediumBody,
-  SmallBody,
-  Heading1,
-  Heading3,
   UpperCaption,
   Headline4,
   BlankLink,
@@ -15,16 +11,10 @@ import {
 import {
   Jumbotron,
   JumboText,
-  GrayPanel,
   Row,
-  GridRow,
-  Card,
-  TitleLink,
   Divider,
 } from "../components/Blocks";
-import { PrimaryBtn } from "../components/Buttons";
 import StyledLink from "../components/StyledLink";
-import News from "../components/News";
 import { StaticImage } from "gatsby-plugin-image";
 
 function Blog() {
@@ -37,79 +27,69 @@ function Blog() {
         <JumboText>
           <UpperCaption>FEATURED ARTICLE</UpperCaption>
           <Headline2>
-            Independent Certification <br />
-            Working Group Launched <br />
-            for Advancing Ethical <br />
-            and Responsible AI
+            What’s in a name? <br />
+            AI Global is now <br />
+            Responsible AI Institute
           </Headline2>
           <MediumBody>
-            Implement AI in a responsible and ethical way with our Responsible
-            AI <br />
-            certification, the first independent, accredited program of its
-            kind, developed
-            <br /> in partnership with the World Economic Forum and Schwartz.
+            New name, new branding, newly restored conviction in our message.
+            <br />
+            Introducing Responsible AI Institute, or RAI.
           </MediumBody>
           <br />
-          <StyledLink text="Read Blog" link="/news" />
+          <StyledLink text="Read Blog" link="/blog/308ea1d8-a7fa-11eb" />
         </JumboText>
         <StaticImage
-          src="../images/pictures/news.png"
+          src="../images/rai-icons/rai-circle.png"
           alt="News"
           placeholder="tracedSVG"
           className="member-image"
         />
       </Jumbotron>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
+        <BlankLink href="/blog/347460a4-4a02-4337">
           <Headline4>
-            Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
+            A consensus is emerging: AI regulation must be a global effort
+            that’s values-driven, risk-based, and evidence-informed
           </Headline4>
         </BlankLink>
         <MediumBody style={{ marginBottom: "20px" }}>
-          Implement AI in an ethical way with our Responsible AI certification.
+          Learn about the future of AI regulation.
         </MediumBody>
-        <UpperCaption>MAR 31</UpperCaption>
+        <UpperCaption>NOVEMBER 31, 2020</UpperCaption>
         <Divider />
       </Row>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
+        <BlankLink href="/blog/e99bd457-2035-49f9">
           <Headline4>
-            Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
+            A Snapshot from our working groups: Q&amp;A with Allison Cohen on
+            the importance of Independent Review
           </Headline4>
         </BlankLink>
         <MediumBody style={{ marginBottom: "20px" }}>
-          Implement AI in an ethical way with our Responsible AI certification.
+          We had a short interview with Allison Cohen, a member of our RAI
+          Certification Beta working group, about the need for independent
+          review in AI development.
         </MediumBody>
-        <UpperCaption>MAR 31</UpperCaption>
+        <UpperCaption>APRIL 26, 2021</UpperCaption>
         <Divider />
       </Row>
       <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
+        <BlankLink href="/blog/46513dc1-f1b3-410e">
           <Headline4>
-            Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
+            Independent Certification Working Group Launched for Advancing
+            Ethical and Responsible AI
           </Headline4>
         </BlankLink>
         <MediumBody style={{ marginBottom: "20px" }}>
-          Implement AI in an ethical way with our Responsible AI certification.
+          The World Economic Forum, AI Global, and the Schwartz Reisman
+          Institute join forces to create an independent and practical
+          certification program for algorithmic decisioning systems
         </MediumBody>
-        <UpperCaption>MAR 31</UpperCaption>
+        <UpperCaption>DECEMBER 1, 2020</UpperCaption>
         <Divider />
       </Row>
-      <Row style={{ paddingBottom: "0" }}>
-        <BlankLink href="/">
-          <Headline4>
-            Headline Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
-          </Headline4>
-        </BlankLink>
-        <MediumBody style={{ marginBottom: "20px" }}>
-          Implement AI in an ethical way with our Responsible AI certification.
-        </MediumBody>
-        <UpperCaption>MAR 31</UpperCaption>
-        <Divider />
-      </Row>
-      <Row style={{ textAlign: "center" }}>
-        <PrimaryBtn dark>Load more Stories</PrimaryBtn>
-      </Row>
+      <br />
     </Layout>
   );
 }

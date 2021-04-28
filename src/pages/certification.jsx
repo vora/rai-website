@@ -29,14 +29,13 @@ const RectangleContainer = styled.div`
   align-items: center;
   text-align: center;
   border: 2px solid blue;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const RectangleImg = styled.img`
   width: 100%;
   object-fit: fit;
-
 `;
 
 function Certification() {
@@ -99,9 +98,9 @@ function Certification() {
           />
         </JumboImage>
       </Jumbotron>
-      <Row dark style={{alignContent:'center', alignItems:"center"}}>
+      <Row dark style={{ alignContent: "center", alignItems: "center" }}>
         <RectangleContainer>
-          <RectangleImg src={certification} alt="certification" width="80%"/>
+          <RectangleImg src={certification} alt="certification" width="80%" />
         </RectangleContainer>
       </Row>
       <Jumbotron>
@@ -124,15 +123,15 @@ function Certification() {
             <br />
             Assessment criteria will be customized based on the type of AI
             system
-            <br /> being assessed (e.g., Intelligent process automation, Image &
+            <br /> being assessed (e.g., Intelligent process automation, Image &amp;
             Object
-            <br /> recognition, Text & Speech Analysis, Advanced data analytics,
-            NLP &<br /> content creation)
+            <br /> recognition, Text &amp; Speech Analysis, Advanced data analytics,
+            NLP &amp;<br /> content creation)
             <br />
             <br /> <strong>Assessments specific to domain and region</strong>
             <br />
             In order to have meaningful substance, assessment criteria will also
-            <br /> cover specific application domains (e.g., credit &
+            <br /> cover specific application domains (e.g., credit &amp;
             collections,
             <br /> healthcare diagnostics, etc.), and regions.
           </MediumBody>
@@ -140,8 +139,8 @@ function Certification() {
         </JumboText>
         <GrayPanel>
           <Heading1>
-            Areas of RAI Certification Beta Working
-            <br /> Group
+            RAI Certification Beta
+            <br /> Areas of Focus
             <br />
           </Heading1>
           <LargeBody bordered style={{ marginBottom: "40px" }}>
@@ -226,8 +225,10 @@ function Certification() {
           For more information, please email us at admin@responsible.ai, or{" "}
           <strong>sign up</strong> to become a member of RAI.
         </LargeBody>
-          <PrimaryBtn onClick={() => navigate("/membership")}>Become a member</PrimaryBtn>
-            {/* <a
+        <PrimaryBtn onClick={() => navigate("/membership")}>
+          Become a member
+        </PrimaryBtn>
+        {/* <a
               className="kindful-donate-btn"
               id="kindful-donate-btn-d1727a32-6c93-4808-a281-897960739db5"
             >

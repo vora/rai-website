@@ -208,7 +208,7 @@ function Index() {
             LGBTQ couples were 73 percent{" "}
             <BlankLink
               bold
-              href="https://projects.tampabay.com/projects/2020/investigations/police-pasco-sheriff-targeted/school-data/"
+              href="https://www.nytimes.com/2020/09/18/business/digital-mortgages.html"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -14,7 +14,6 @@ import {
   Row,
   Divider,
 } from "../components/Blocks";
-import {PrimaryBtn} from "../components/Buttons";
 import StyledLink from "../components/StyledLink";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -97,9 +96,6 @@ function NewsPage() {
         </MediumBody>
         <UpperCaption>MAR 31</UpperCaption>
         <Divider />
-      </Row>
-      <Row style={{textAlign: "center"}}>
-        <PrimaryBtn dark>Load more Stories</PrimaryBtn>
       </Row>
     </Layout>
   );
