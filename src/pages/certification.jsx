@@ -21,23 +21,35 @@ import {
 } from "../components/Blocks";
 import certification from "../images/rai-content/Certification.png";
 
-const RectangleContainer = styled.div`
-  width: 75%;
-  justify-self: center;
-  display: flex;
-  place-items: center;
-  align-items: center;
-  text-align: center;
-  border: 2px solid blue;
-  margin-left: auto;
-  margin-right: auto;
-`;
+// width: 75%;
+
 
 const RectangleImg = styled.img`
   width: 100%;
-  object-fit: fit;
+  object-fit: fill;
 `;
 
+const BorderTitle =styled.p`
+  border-left: 3px solid #2f2d34;
+  padding-left: 20px;
+`;
+
+const PDFButton = styled.a`
+background: #2f2d34 !important;
+  color: #ffffff !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  line-height: 28px !important;
+  text-align: center !important;
+  width: fit-content !important;
+  padding: 14px 30px 14px 30px !important;
+  cursor: pointer !important;
+  border: none !important;
+  margin-bottom: 12px !important;
+  text-decoration: none;
+  align-self: center;
+  `;
 function Certification() {
   return (
     <Layout title="Certification">
@@ -83,6 +95,7 @@ function Certification() {
             width={337}
             height={337}
             alt="badge-1"
+            placeholder="tracedSVG"
           />
           <StaticImage
             src="../images/pictures/mask-1.png"
@@ -98,10 +111,15 @@ function Certification() {
           />
         </JumboImage>
       </Jumbotron>
-      <Row dark style={{ alignContent: "center", alignItems: "center" }}>
-        <RectangleContainer>
-          <RectangleImg src={certification} alt="certification" width="80%" />
-        </RectangleContainer>
+      <Row
+        dark
+        style={{
+          alignContent: "center",
+          alignItems: "center",
+          padding: "100px 100px",
+        }}
+      >
+        <RectangleImg src={certification} alt="certification" width="100%" />
       </Row>
       <Jumbotron>
         <JumboText>
@@ -135,29 +153,24 @@ function Certification() {
             collections,
             <br /> healthcare diagnostics, etc.), and regions.
           </MediumBody>
-          <br />
+          <br /><PDFButton href="/Whitepaper.pdf">Read the RAI Certification Whitepaper</PDFButton>
         </JumboText>
         <GrayPanel>
           <Heading1>
-            RAI Certification Beta
-            <br /> Areas of Focus
-            <br />
+            RAI Certification Beta areas
+            <br /> of focus
           </Heading1>
-          <LargeBody bordered style={{ marginBottom: "40px" }}>
-            Fair Lending
-          </LargeBody>
-          <LargeBody bordered style={{ marginBottom: "40px" }}>
-            Fraud Detection
-          </LargeBody>
+          <LargeBody style={{ marginBottom: "40px" }}>
 
-          <LargeBody bordered style={{ marginBottom: "40px" }}>
-            Automated Diagnosis and Treatment
-          </LargeBody>
-          <LargeBody bordered style={{ marginBottom: "40px" }}>
-            Health recommendation systems{" "}
-          </LargeBody>
-          <LargeBody bordered style={{ marginBottom: "40px" }}>
-            Automated Hiring
+              <BorderTitle>Fair Lending</BorderTitle>
+              <br/>
+              <BorderTitle>Fraud Detection</BorderTitle>
+              <br/>
+              <BorderTitle>Automated Diagnosis and Treatment</BorderTitle>
+              <br/>
+              <BorderTitle>Health recommendation systems</BorderTitle>
+              <br/>
+              <BorderTitle>Automated Hiring</BorderTitle>
           </LargeBody>
         </GrayPanel>
       </Jumbotron>
@@ -172,19 +185,17 @@ function Certification() {
           marginBottom: "80px",
         }}
       >
-        <Headline4>Certification Working Groups</Headline4>
+        <Headline4>Join a RAI Certification Working Group</Headline4>
         <MediumBody>
           Recognizing that a project of this magnitude needs to be built by the
           community for the benefit of the community, we launched the RAI
           Certification Working Group December 2020 with WEF and SRI. Following
-          the kick-off we had an outpouring of support and interest in this work
-          which led to numerous discussions with technical, data, governance,
-          ethics, and industry experts. As such, we’ve decided to create not
-          one, but five working groups based on our areas of focus. We can use
-          any and all expertise to improve work done to date. Join us by signing
-          up for one of the following working groups: Fair Lending, Fraud
-          Detection, Automated Diagnosis and Treatment, Automated Hiring. To
-          join a working group, please contact us.{" "}
+          the kick-off, we had an outpouring of support and interest in this
+          work which led to numerous discussions with technical, data,
+          governance, ethics, and industry experts. As such, we’ve created not
+          one, but five working groups based on our areas of focus: Fair
+          Lending, Fraud Detection, Automated Diagnosis and Treatment, and
+          Automated Hiring.
         </MediumBody>
         <div
           style={{
@@ -222,8 +233,8 @@ function Certification() {
             marginBottom: "50px",
           }}
         >
-          For more information, please email us at admin@responsible.ai, or{" "}
-          <strong>sign up</strong> to become a member of RAI.
+          For more information, please email us at admin@responsible.ai, or
+          <strong> sign up</strong> to<br/> become a member of RAI.
         </LargeBody>
         <PrimaryBtn onClick={() => navigate("/membership")}>
           Become a member
