@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { navigate } from "gatsby";
 import Layout from "../components/Layout";
 import {
   Headline1,
@@ -21,7 +20,6 @@ import {
   TitleLink,
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
-import { PrimaryBtn } from "../components/Buttons";
 import Slideshow from "../components/Slideshow";
 import News from "../components/News";
 import { StaticImage } from "gatsby-plugin-image";
@@ -362,9 +360,6 @@ function Membership() {
           open, ethical AI.
         </MediumBody>
         <br />
-        <PrimaryBtn dark onClick={() => navigate("/membership")}>
-          Get Involved
-        </PrimaryBtn>
       </Row>
       <Row gray>
         <TitleLink>
