@@ -25,10 +25,10 @@ import News from "../components/News";
 import { StaticImage } from "gatsby-plugin-image";
 
 /* Images */
-import checkbox from "../images/icons/checkbox.png";
-import corporate from "../images/icons/corporate.png";
-import institution from "../images/icons/institution.png";
-import community from "../images/icons/community.png";
+// import checkbox from "../images/icons/checkbox.png";
+// import corporate from "../images/icons/corporate.png";
+// import institution from "../images/icons/institution.png";
+// import community from "../images/icons/community.png";
 
 const CheckRow = styled.div`
   width: 100%;
@@ -134,7 +134,7 @@ function Membership() {
           <br /> tools and expert guidance. Here’s how to join our efforts.
         </MediumBody>
         <br />
-        <GridRow auto first>
+        {/* <GridRow auto first>
           <Card>
             <div style={{ display: "flex", alignItems: "center" }}>
               <img src={corporate} alt="Corporate" />
@@ -347,7 +347,7 @@ function Membership() {
               Become a Community Member
             </a>
           </Card>
-        </GridRow>
+        </GridRow> */}
       </Row>
       <Row>
         <Headline2>Help Advance Trusted AI</Headline2>

@@ -21,22 +21,24 @@ import {
 } from "../components/Blocks";
 import certification from "../images/rai-content/Certification.png";
 
+// width: 75%;
+
 const RectangleContainer = styled.div`
-  width: 75%;
   justify-self: center;
   display: flex;
   place-items: center;
   align-items: center;
   text-align: center;
   border: 2px solid blue;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
 `;
 
 const RectangleImg = styled.img`
   width: 100%;
-  object-fit: fit;
-
+  object-fit: fill;
 `;
 
 function Certification() {
@@ -84,6 +86,7 @@ function Certification() {
             width={337}
             height={337}
             alt="badge-1"
+            placeholder="tracedSVG"
           />
           <StaticImage
             src="../images/pictures/mask-1.png"
@@ -99,10 +102,15 @@ function Certification() {
           />
         </JumboImage>
       </Jumbotron>
-      <Row dark style={{alignContent:'center', alignItems:"center"}}>
-        <RectangleContainer>
-          <RectangleImg src={certification} alt="certification" width="80%"/>
-        </RectangleContainer>
+      <Row
+        dark
+        style={{
+          alignContent: "center",
+          alignItems: "center",
+          padding: "100px 100px",
+        }}
+      >
+        <RectangleImg src={certification} alt="certification" width="100%" />
       </Row>
       <Jumbotron>
         <JumboText>
@@ -137,12 +145,12 @@ function Certification() {
             <br /> healthcare diagnostics, etc.), and regions.
           </MediumBody>
           <br />
+         <PrimaryBtn dark>Read the RAI Certification Whitepaper</PrimaryBtn> 
         </JumboText>
         <GrayPanel>
           <Heading1>
-            Areas of RAI Certification Beta Working
-            <br /> Group
-            <br />
+            RAI Certification Beta areas
+            <br /> of focus
           </Heading1>
           <LargeBody bordered style={{ marginBottom: "40px" }}>
             Fair Lending
@@ -173,19 +181,17 @@ function Certification() {
           marginBottom: "80px",
         }}
       >
-        <Headline4>Certification Working Groups</Headline4>
+        <Headline4>Join a RAI Certification Working Group</Headline4>
         <MediumBody>
           Recognizing that a project of this magnitude needs to be built by the
           community for the benefit of the community, we launched the RAI
           Certification Working Group December 2020 with WEF and SRI. Following
-          the kick-off we had an outpouring of support and interest in this work
-          which led to numerous discussions with technical, data, governance,
-          ethics, and industry experts. As such, we’ve decided to create not
-          one, but five working groups based on our areas of focus. We can use
-          any and all expertise to improve work done to date. Join us by signing
-          up for one of the following working groups: Fair Lending, Fraud
-          Detection, Automated Diagnosis and Treatment, Automated Hiring. To
-          join a working group, please contact us.{" "}
+          the kick-off, we had an outpouring of support and interest in this
+          work which led to numerous discussions with technical, data,
+          governance, ethics, and industry experts. As such, we’ve created not
+          one, but five working groups based on our areas of focus: Fair
+          Lending, Fraud Detection, Automated Diagnosis and Treatment, and
+          Automated Hiring.
         </MediumBody>
         <div
           style={{
@@ -223,11 +229,13 @@ function Certification() {
             marginBottom: "50px",
           }}
         >
-          For more information, please email us at admin@responsible.ai, or{" "}
-          <strong>sign up</strong> to become a member of RAI.
+          For more information, please email us at admin@responsible.ai, or
+          <strong> sign up</strong> to<br/> become a member of RAI.
         </LargeBody>
-          <PrimaryBtn onClick={() => navigate("/membership")}>Become a member</PrimaryBtn>
-            {/* <a
+        <PrimaryBtn onClick={() => navigate("/membership")}>
+          Become a member
+        </PrimaryBtn>
+        {/* <a
               className="kindful-donate-btn"
               id="kindful-donate-btn-d1727a32-6c93-4808-a281-897960739db5"
             >
