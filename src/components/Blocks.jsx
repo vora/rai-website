@@ -25,7 +25,7 @@ export const Jumbotron = styled.div`
 
   @media screen and (max-width: 1190px) {
     flex-direction: column;
-    padding: 80px 100px;
+    padding: 80px 0;
     margin-bottom: 650px;
     ${(props) =>
       props.text &&
@@ -60,7 +60,7 @@ export const Jumbotron = styled.div`
   }
 
   @media screen and (max-width: 585px) {
-    padding: 45px 35px;
+    padding: 45px 0;
     ${(props) =>
       props.text &&
       css`
@@ -103,6 +103,7 @@ export const JumboText = styled.div`
   @media screen and (max-width: 1190px) {
     display: flex;
     margin: 0;
+    padding: 0 35px;
     max-width: 555px;
     flex-direction: column;
     button {
