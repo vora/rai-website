@@ -22,10 +22,10 @@ import {
   SmallBody,
 } from "../components/Text";
 
-import portal from "../images/rai-icons/portal.png";
+import portal from "../images/rai-icons/Portal.png";
 import map from "../images/rai-icons/map.png";
 import course from "../images/rai-icons/e-learning.png";
-import fellowImg from "../images/rai-icons/fellowship.png";
+import fellowImg from "../images/rai-icons/Fellowship.png";
 import webindarImg from "../images/rai-icons/webinar.png";
 import calendar from "../images/rai-icons/calendar.png";
 import tools from "../images/rai-content/Tools.png";
