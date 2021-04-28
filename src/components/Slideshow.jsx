@@ -273,63 +273,6 @@ function Slideshow() {
         <Views>
           <View className="view">
             <MediumBody>
-              “The need for a measurable, independent and authoritative
-              certification program working across sectors and across regions is
-              imperative, and this initiative aims to be the first comprehensive
-              third-party accredited certification for AI systems.
-            </MediumBody>
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-                marginTop: "20px",
-              }}
-            >
-              <StaticImage
-                src="../images/testimonials/sri.png"
-                placeholder="blurred"
-                alt="SRI"
-              />
-              <div style={{ marginLeft: "20px" }}>
-                <Heading3 style={{ marginBottom: "0" }}>
-                  Gillian K. Hadfield
-                </Heading3>
-                <MediumBody>Director, SRI</MediumBody>
-              </div>
-            </div>
-          </View>
-          <View className="view">
-            <MediumBody>
-              “RAI Certification provides the guardrails for use of AI and data
-              in an ethical and responsible manner. Partnering with RAI
-              Institute to build an independent and trusted Responsible AI
-              Certification system helps our customers accelerate adoption and
-              impact from AI systems.”
-            </MediumBody>
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-                marginTop: "20px",
-              }}
-            >
-              <StaticImage
-                src="../images/testimonials/cognitive-scale.png"
-                placeholder="blurred"
-                alt="Cognitive Scale"
-              />
-              <div style={{ marginLeft: "20px" }}>
-                <Heading3 style={{ marginBottom: "0" }}>Matt Sanchez</Heading3>
-                <MediumBody>Founder and CTO, Cognitive Scale</MediumBody>
-              </div>
-            </div>
-          </View>
-        </Views>
-        <Views>
-          <View className="view">
-            <MediumBody>
               "We don’t think Banking can work in an environment without trust.
               Independent certification programs like the one from RAI Institute
               help technical and business leaders develop the appropriate
@@ -382,6 +325,35 @@ function Slideshow() {
               <div style={{ marginLeft: "20px" }}>
                 <Heading3 style={{ marginBottom: "0" }}>Suraj Madnani</Heading3>
                 <MediumBody>Chief Product Owner, American Express</MediumBody>
+              </div>
+            </div>
+          </View>
+        </Views>
+        <Views>
+          <View className="view">
+            <MediumBody>
+              “RAI Certification provides the guardrails for use of AI and data
+              in an ethical and responsible manner. Partnering with RAI
+              Institute to build an independent and trusted Responsible AI
+              Certification system helps our customers accelerate adoption and
+              impact from AI systems.”
+            </MediumBody>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                marginTop: "20px",
+              }}
+            >
+              <StaticImage
+                src="../images/testimonials/cognitive-scale.png"
+                placeholder="blurred"
+                alt="Cognitive Scale"
+              />
+              <div style={{ marginLeft: "20px" }}>
+                <Heading3 style={{ marginBottom: "0" }}>Matt Sanchez</Heading3>
+                <MediumBody>Founder and CTO, Cognitive Scale</MediumBody>
               </div>
             </div>
           </View>

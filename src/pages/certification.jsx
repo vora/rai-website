@@ -138,15 +138,15 @@ function Certification() {
             <br />
             Assessment criteria will be customized based on the type of AI
             system
-            <br /> being assessed (e.g., Intelligent process automation, Image &
+            <br /> being assessed (e.g., Intelligent process automation, Image &amp;
             Object
-            <br /> recognition, Text & Speech Analysis, Advanced data analytics,
-            NLP &<br /> content creation)
+            <br /> recognition, Text &amp; Speech Analysis, Advanced data analytics,
+            NLP &amp;<br /> content creation)
             <br />
             <br /> <strong>Assessments specific to domain and region</strong>
             <br />
             In order to have meaningful substance, assessment criteria will also
-            <br /> cover specific application domains (e.g., credit &
+            <br /> cover specific application domains (e.g., credit &amp;
             collections,
             <br /> healthcare diagnostics, etc.), and regions.
           </MediumBody>

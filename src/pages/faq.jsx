@@ -58,7 +58,7 @@ function Faq() {
         <br />
         <PrimaryBtn dark>
           <BlankLink white noHover
-            href={withPrefix("./Whitepaper Responsible AI Trust Index and Certification Mark Program.pdf")}
+            href={withPrefix("../Whitepaper.pdf")}
             target="_blank"
             rel="noopener noreferrer"
           >
