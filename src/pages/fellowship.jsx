@@ -64,7 +64,7 @@ function Fellowship() {
         </JumboText>
         <JumboImage className="hero-image">
           <StaticImage
-            src="../images/rai-icons/Fellowship.png"
+            src="../images/rai-icons/fellowship.png"
             style={{
               position: "absolute",
               zIndex: "1",
@@ -81,11 +81,9 @@ function Fellowship() {
         <JumboText>
           <Headline2>RAI Research Fellow</Headline2>
           <MediumBody>
-            The RAI Research Fellowship is an intensive, eight-week
-            <br /> development program for graduates, grad students and
-            <br /> researchers that helps bridge the gap to a full-time career
-            in
-            <br /> data & AI-related fields.
+            The RAI Research Fellowship is an intensive, eight-week<br/> development
+            program for graduates, grad students and<br/> researchers that helps
+            bridge the gap to a full-time career in<br/> data & AI-related fields.
           </MediumBody>
         </JumboText>
         <Column>
@@ -112,7 +110,7 @@ function Fellowship() {
               marginBottom: "40px",
             }}
           >
-            Technical Fellows come from a mix of data driven STEM fields,
+            Technical Fellows come from a mix of data driven STEM<br/> fields,
             including physics, math, engineering, statistics,
             <br /> computer science, machine & deep learning, computer vision,
             <br /> NLP, quantitative finance, genomics, biology, neuroscience,
@@ -318,7 +316,7 @@ function Fellowship() {
               marginBottom: "40px",
             }}
           >
-            Youth Fellows are juniors or seniors in high school and/or
+            Youth Fellows are juniors or seniors in high school and/or<br/> 
             undergraduates in accredited colleges or universities, where
             <br /> the Fellow is seeking to further their knowledge and skillset
             <br /> in AI technologies across new or innovative applications and
