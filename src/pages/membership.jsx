@@ -170,7 +170,7 @@ function Membership() {
                     marginBottom: "0",
                   }}
                 >
-                  Access to AI Global resources and tools
+                  Access to RAI resources and tools
                 </SmallBody>
               </CheckRow>
               <CheckRow>
@@ -246,7 +246,7 @@ function Membership() {
                     marginBottom: "0",
                   }}
                 >
-                  Access to AI Global resources and tools
+                  Access to RAI resources and tools
                 </SmallBody>
               </CheckRow>
               <CheckRow>
@@ -322,7 +322,7 @@ function Membership() {
                     marginBottom: "0",
                   }}
                 >
-                  Access to AI Global resources and tools
+                  Access to RAI resources and tools
                 </SmallBody>
               </CheckRow>
               <CheckRow>
