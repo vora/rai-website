@@ -183,7 +183,7 @@ export const GrayPanel = styled.div`
     align-items: center;
   }
 
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 600px) {
     max-width: 100%;
     padding: 35px;
   }
@@ -241,8 +241,8 @@ export const GridRow = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: ${({ stretch }) => (stretch ? "stretch" : "center")};
   height: ${(props) => (props.auto ? "auto" : "150px")};
   img {
     height: auto;
@@ -273,7 +273,8 @@ export const GridContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  width: 26%;
+  width: 100%;
+  margin-top: 30px;
   min-height: 500px;
   border: 1px solid ${carbon};
   display: flex;
@@ -281,9 +282,10 @@ export const Card = styled.div`
   justify-content: space-between;
   padding: 32px;
 
-  @media screen and (max-width: 1190px) {
-    width: 100%;
-    margin-top: 30px;
+  @media screen and (min-width: 1190px) {
+    width: ${({ width }) => (width ? width : "26%")};
+    max-width: ${({ width }) => (width ? width : "26%")};
+    flex: ${({ width }) => (width ? `1 0 ${width}` : "1 0 26%")};
   }
 `;
 
