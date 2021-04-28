@@ -365,7 +365,7 @@ function About(props) {
           <PersonContainer
             onClick={() =>
               openModal({
-                name: "Miram Vogel",
+                name: "Miriam Vogel",
                 position: "Board Member",
                 img: "../images/pictures/bike-1.png",
                 introduction: "President and CEO of EqualAI",
@@ -374,8 +374,8 @@ function About(props) {
               })
             }
           >
-            <img src={miram} alt="Miram Vogel" />
-            <PersonName>Miram Vogel</PersonName>
+            <img src={miram} alt="Miriam Vogel" />
+            <PersonName>Miriam Vogel</PersonName>
             <PersonPosition>Board Member</PersonPosition>
           </PersonContainer>
           <PersonContainer
