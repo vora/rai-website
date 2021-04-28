@@ -166,4 +166,9 @@ export const UpperCaption = styled.h1`
 export const BlankLink = styled.a`
   text-decoration: none;
   color: ${carbon};
+  font-weight: ${props => props.bold ? "bold" : "normal"};
+
+  &:hover{
+    color: ${gravy};
+  }
 `

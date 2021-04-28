@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import { navigate } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 import {
   Headline1,
   Headline2,
@@ -18,6 +19,25 @@ import {
   GrayPanel,
   Row,
 } from "../components/Blocks";
+import certification from "../images/rai-content/Certification.png";
+
+const RectangleContainer = styled.div`
+  width: 75%;
+  justify-self: center;
+  display: flex;
+  place-items: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid blue;
+  margin-left:auto;
+  margin-right:auto;
+`;
+
+const RectangleImg = styled.img`
+  width: 100%;
+  object-fit: fit;
+
+`;
 
 function Certification() {
   return (
@@ -59,7 +79,7 @@ function Certification() {
               position: "absolute",
               zIndex: "2",
               right: "170px",
-              top: "217px",
+              top: "281px",
             }}
             width={337}
             height={337}
@@ -71,7 +91,7 @@ function Certification() {
               position: "absolute",
               zIndex: "1",
               right: "0px",
-              top: "150px",
+              top: "200px",
             }}
             width={919}
             height={500}
@@ -79,19 +99,10 @@ function Certification() {
           />
         </JumboImage>
       </Jumbotron>
-      <Row>
-        <StaticImage
-          src="../images/rai-content/Certification.png"
-          style={{
-            // position: "absolute",
-            zIndex: "1",
-            left: "auto",
-          }}
-          width={1116}
-          height={634}
-          alt="patient-2"
-          style={{ objectFit: "scale-down" }}
-        />
+      <Row dark style={{alignContent:'center', alignItems:"center"}}>
+        <RectangleContainer>
+          <RectangleImg src={certification} alt="certification" width="80%"/>
+        </RectangleContainer>
       </Row>
       <Jumbotron>
         <JumboText>
@@ -144,13 +155,16 @@ function Certification() {
             Automated Diagnosis and Treatment
           </LargeBody>
           <LargeBody bordered style={{ marginBottom: "40px" }}>
+            Health recommendation systems{" "}
+          </LargeBody>
+          <LargeBody bordered style={{ marginBottom: "40px" }}>
             Automated Hiring
           </LargeBody>
         </GrayPanel>
       </Jumbotron>
       <Row
         style={{
-          padding: "3%",
+          padding: "20px",
           borderColor: "black",
           borderStyle: "solid",
           borderWidth: "1px",
@@ -173,8 +187,23 @@ function Certification() {
           Detection, Automated Diagnosis and Treatment, Automated Hiring. To
           join a working group, please contact us.{" "}
         </MediumBody>
-        <div style={{width:"100%", textAlign:"center"}}>
-          <PrimaryBtn dark>Join a working group</PrimaryBtn>{" "}
+        <div
+          style={{
+            width: "100%",
+            textAlign: "center",
+            paddingTop: "20px",
+            paddingBottom: "20px",
+          }}
+        >
+          <a
+            className="kindful-donate-btn"
+            style={{ textDecoration: "none", color: "#ffffff" }}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfE9qxtg9k8GIei-GeDmpnxQwDsHD9kaATPqnZRlmVaL3ypPg/viewform?usp=sf_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join a working group
+          </a>
         </div>
       </Row>
 
@@ -194,15 +223,16 @@ function Certification() {
             marginBottom: "50px",
           }}
         >
-          For more information, please email us at certification@ai-global.org,
-          or <strong>sign up</strong> to
-          <br /> become a member of AI Global. You can also join our mailing
-          list to stay informed on the progress.
+          For more information, please email us at admin@responsible.ai, or{" "}
+          <strong>sign up</strong> to become a member of RAI.
         </LargeBody>
-
-        <PrimaryBtn onClick={() => navigate("/membership")}>
-          Become a Member{" "}
-        </PrimaryBtn>
+          <PrimaryBtn onClick={() => navigate("/membership")}>Become a member</PrimaryBtn>
+            {/* <a
+              className="kindful-donate-btn"
+              id="kindful-donate-btn-d1727a32-6c93-4808-a281-897960739db5"
+            >
+              Become a member
+            </a> */}
       </Row>
     </Layout>
   );
