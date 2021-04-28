@@ -12,11 +12,10 @@ import { ShareContainer } from "../../components/Buttons";
 import QuoteBlock from "../../components/QuoteBlock";
 import News from "../../components/News";
 import StyledLink from "../../components/StyledLink";
-import { StaticImage } from "gatsby-plugin-image";
 
 function Page() {
   return (
-    <Layout title="Example Article">
+    <Layout title="WEF, AI Global, SRI Joint Group">
       <Row>
         <Headline1>
           Independent Certification Working Group Launched for Advancing Ethical
@@ -26,18 +25,10 @@ function Page() {
         <Divider />
         <ShareContainer>
           <UpperCaption style={{ marginRight: "20px" }}>
-            MARCH 31, 2021
+            DECEMBER 1, 2020
           </UpperCaption>
           <div className="s9-widget-wrapper"></div>
         </ShareContainer>
-        <div style={{ width: "100%", textAlign: "center" }}>
-          <StaticImage
-            src="../../images/pictures/article/news.png"
-            alt="News"
-            placeholder="tracedSVG"
-          />
-        </div>
-        <br />
         <MediumBody bold>
           The World Economic Forum, AI Global, and the Schwartz Reisman
           Institute join forces to create an independent and practical
@@ -45,13 +36,13 @@ function Page() {
         </MediumBody>
         <br />
         <MediumBody>
-          <strong>Austin, Texas and Toronto, Ontario (1 December 2020)</strong>{" "}
-          – The World Economic Forum (WEF), AI Global, and the Schwartz Reisman
-          Institute for Technology and Society (SRI) at the University of
-          Toronto today announced the launch of a working group to lead the
-          development of a globally recognized certification program for the
-          responsible and trusted use of algorithmic decisioning and artificial
-          intelligence (AI) systems.
+          <strong>Austin, Texas and Toronto, Ontario</strong>: – The World
+          Economic Forum (WEF), AI Global, and the Schwartz Reisman Institute
+          for Technology and Society (SRI) at the University of Toronto today
+          announced the launch of a working group to lead the development of a
+          globally recognized certification program for the responsible and
+          trusted use of algorithmic decisioning and artificial intelligence
+          (AI) systems.
         </MediumBody>
         <MediumBody>
           This working group will bring together a diverse community of leading
@@ -96,13 +87,7 @@ function Page() {
           certifying AI systems,” says Kay Firth-Butterfield, Head of AI and
           Machine Learning, World Economic Forum.
         </MediumBody>
-        <div style={{ width: "100%", textAlign: "center", margin: "60px 0px" }}>
-          <StaticImage
-            src="../../images/pictures/article/news-2.png"
-            alt="News"
-            placeholder="tracedSVG"
-          />
-        </div>
+        <br />
         <MediumBody>
           <strong>Get Involved</strong>
           <br />
