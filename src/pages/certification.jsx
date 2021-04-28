@@ -12,6 +12,7 @@ import {
   Heading1,
 } from "../components/Text";
 import { PrimaryBtn } from "../components/Buttons";
+import GetInvolved from "../components/GetInvolved";
 import {
   Jumbotron,
   JumboText,
@@ -20,8 +21,6 @@ import {
   Row,
 } from "../components/Blocks";
 import certification from "../images/rai-content/Certification.png";
-
-// width: 75%;
 
 
 const RectangleImg = styled.img`
@@ -60,7 +59,6 @@ function Certification() {
             <br /> Beta
           </Headline1>
           <MediumBody>
-            <MediumBody>
               <strong>
                 The world’s first independent, accredited certification program
                 of its kind.
@@ -79,8 +77,7 @@ function Certification() {
               <br /> (SRI) at University of Toronto is serving as a business
               partner on the
               <br /> development phase of the initiative.
-            </MediumBody>
-          </MediumBody>
+=          </MediumBody>
           <br />
         </JumboText>
         <JumboImage className="hero-image">
@@ -216,8 +213,8 @@ function Certification() {
           </a>
         </div>
       </Row>
-
-      <Row
+      <GetInvolved></GetInvolved>
+      {/* <Row
         dark
         style={{
           marginBottom: "206px",
@@ -244,8 +241,8 @@ function Certification() {
               id="kindful-donate-btn-d1727a32-6c93-4808-a281-897960739db5"
             >
               Become a member
-            </a> */}
-      </Row>
+            </a>
+      </Row> */}
     </Layout>
   );
 }

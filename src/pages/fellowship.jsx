@@ -363,7 +363,6 @@ function Fellowship() {
           </LargeBody>
         </JumboText>
       </Jumbotron>
-
       <Row gray>
         <div
           style={{

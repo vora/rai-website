@@ -47,7 +47,7 @@ const CheckRow = styled.div`
 const CheckContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%:
+  width: 100%;
 `;
 
 function Membership() {

@@ -190,7 +190,7 @@ export const GrayPanel = styled.div`
 `;
 
 export const Row = styled.div`
-  max-width: 100%:
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   padding: 75px 100px;
@@ -210,10 +210,10 @@ export const Row = styled.div`
     props.small &&
     css`
       padding-bottom: 25px;
-    `}
+    
     @media screen and (max-width: 585px) {
       padding: 45px 35px;
-    }
+    }`}
 `;
 
 export const Divider = styled.div`
