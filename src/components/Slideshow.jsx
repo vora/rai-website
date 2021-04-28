@@ -71,6 +71,10 @@ const View = styled.div`
   @media screen and (max-width: 950px){
     width: 90%;
   }
+
+  @media screen and (max-width: 600px){
+    width: 100%;
+  }
 `;
 
 function Slideshow() {
