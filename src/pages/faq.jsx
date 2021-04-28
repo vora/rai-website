@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
-import { navigate } from "gatsby";
 import Layout from "../components/Layout";
 import {
   Headline1,
   MediumBody,
   Heading1,
+  LargeBody,
   Headline2,
 } from "../components/Text";
-import { Row, TitleLink } from "../components/Blocks";
+import { Row, GridRow, TitleLink } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
 import { PrimaryBtn } from "../components/Buttons";
@@ -52,12 +52,10 @@ function Faq() {
         <Headline1>Frequently Asked Questions</Headline1>
         <MediumBody>
           Learn more about Responsible Artificial Intelligence, RAI, and how you
-          can get involved. [MORE CONTENT HERE?]
+          can get involved.
         </MediumBody>
-        <br />
-        <PrimaryBtn dark onClick={() => navigate("/")}>
-          Read our RAI Certification White Paper
-        </PrimaryBtn>
+        <br/>
+        <PrimaryBtn dark>Read our White Paper</PrimaryBtn>
       </Row>
       <Row ref={what}>
         <Heading1>What is Responsible Artificial Intelligence (RAI)?</Heading1>

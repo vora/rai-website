@@ -52,13 +52,5 @@ module.exports = {
       },
       __key: "images",
     },
-    {
-      resolve: "gatsby-plugin-social9-socialshare",
-      options: {
-        content: "a2e31cdba944465fa43b468a80af7af3",
-        async: true,
-        defer: true,
-      },
-    },
   ],
 };
