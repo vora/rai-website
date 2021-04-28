@@ -7,24 +7,25 @@ import {
   MediumBody,
   Headline2,
   Headline4,
-  LargeBody,
   SmallBody,
   Headline3,
 } from "../components/Text";
-import { PrimaryBtn } from "../components/Buttons";
 import {
   Jumbotron,
   JumboText,
   Row,
   TitleLink,
   JumboImage,
+  Divider,
+  Grid,
+  GridRow,
+  GridContainer,
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
 import { navigate } from "gatsby";
 import Modal from "react-modal";
 import close from "../images/icons/exit.png";
-import TabbedGallery from "../components/TabbedGallery";
 import GetInvolved from "../components/GetInvolved";
 
 // configures the modal
@@ -253,201 +254,14 @@ function About(props) {
     modalHandler(true);
   }
 
-  function filterTypes(type) {
-    return membersList.filter((member) => member.type == type);
-  }
-
-  const boardList = [
-    {
-      name: "Manoj Hello",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Hello is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "MH Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "Bob",
-      position: "The Builder",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Bob the builder is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "BB Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "Manoj Saxena1",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "Manoj Saxena2",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "Manoj Saxena3",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-  ];
-  const advisorList = [
-    {
-      name: "Manoj Saxena ",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "1Manoj Saxena",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "2Manoj Saxena",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "3Manoj Saxena",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "4Manoj Saxena",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "5Manoj Saxena",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "6Manoj Saxena",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "7Manoj Saxena",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "8Manoj Saxena",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-  ];
-  const expertAdvisorList = [
-    {
-      name: "Manoj Saxena the Expert",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "1Manoj Saxena",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-  ];
-  const leadershipList = [
-    {
-      name: "Manoj Saxena the Leader",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-    {
-      name: "1Manoj Saxena",
-      position: "Board Chair",
-      img: "../images/pictures/bike-1.png",
-      introduction:
-        "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments.",
-      biography:
-        "Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001. Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
-    },
-  ];
-  const membersList = [
-    { src: "algora.png", type: "gc" },
-    { src: "argo-design.png", type: "tsp" },
-    { src: "algora.png", type: "gngo" },
-    { src: "argo-design.png", type: "ua" },
-    { src: "algora.png", type: "gc" },
-    { src: "argo-design.png", type: "gs" },
-    { src: "algora.png", type: "gc" },
-    { src: "argo-design.png", type: "n" },
-    { src: "algora.png" },
-    { src: "argo-design.png" },
-  ];
-
   return (
     <Layout title="About">
       <Jumbotron>
         <JumboText>
           <Headline1>About RAI</Headline1>
           <MediumBody>
-            AI Global is a non-profit organization building tangible <br />{" "}
-            governance tools for trustworthy, safe, and fair Artificial <br />
+            RAI is a non-profit organization building tangible <br /> governance
+            tools for trustworthy, safe, and fair Artificial <br />
             Intelligence (AI). Through a first-of-its-kind certification system
             <br />
             that qualifies AI systems, we support practitioners as they
@@ -457,7 +271,7 @@ function About(props) {
             Feedback generated from these systems will in turn inform AI
             <br />
             policymakers, enabling technologies that improve the social <br />
-            and economic well-being of society. AI Global brings extensive
+            and economic well-being of society. RAI brings extensive
             <br />
             experience in responsible AI policy and is uniquely positioned to
             <br />
@@ -498,6 +312,7 @@ function About(props) {
       </Jumbotron>
       <Row style={{ backgroundColor: "#f6f6f6", paddingBottom: 0 }}>
         <Headline2>Governance Board</Headline2>
+        <Divider />
         <AboutPeopleGrid>
           <PersonContainer
             onClick={() =>
@@ -554,7 +369,7 @@ function About(props) {
                 name: "Michael E. Stewart",
                 position: "Board Member",
                 img: "../images/pictures/bike-1.png",
-                introduction: "PLACEHOLDER",
+                introduction: "Founder, Chairmen, and CEO of Lucid.AI",
                 biography:
                   "Founding Visionary of AIAustin, Michael has been an Austin-based AI entrepreneur and technology innovator for almost 30 years. During that time, he witnessed the critical importance played by public/private structures like MCC, Sematech, and others in fostering the right climate and support infrastructures in Austin for the growth of leading-edge technologies here. Working with and alongside those organizations helped shape Michael’s Founding-vision behind creating “AI-Austin” to help make the incredible city of Austin, TX the epicenter of Artificial Intelligence globally.• As far back as the late 1980’s, Michael served as a principal systems design specialist for the U.S. and other national governments, pioneering systems integration strategies and scaled architectures of next-generation knowledge computing and autonomous software agent systems, starting with one of his earlier companies and its work with the MCC Research Consortium in Austin and other organizations globally. Over the ensuing years, Michael has been leading the creation of innovative integrations of web-based and AI-related technologies in Austin and around the world, and is now the Chairman/CEO and Founder of Austin-based Lucid Holdings, Inc. In addition to its successful deployments of AI solutions for global clients, Lucid was the first AI company in the world to create a public-facing Ethics Advisory Panel (EAP) comprised of renowned thought-leaders. Lucid’s deep ethical perspective and knowledge in the intersections of AI with such issues has led to collaborations and work with many national and uber-national governmental entities, academics, non-profits, and other global organizations in leading this incredibly important challenge.",
               })
@@ -584,6 +399,7 @@ function About(props) {
       </Row>
       <Row style={{ backgroundColor: "#f6f6f6", paddingBottom: 0 }}>
         <Headline2>Advisors</Headline2>
+        <Divider />
         <AboutPeopleGrid>
           <PersonContainer
             onClick={() =>
@@ -659,7 +475,7 @@ function About(props) {
                 name: "Cameron Davies",
                 position: "Advisor",
                 img: "../images/pictures/bike-1.png",
-                introduction: "SVP Corporate Decisions Sciences, NBCUniversal ",
+                introduction: "SVP Corporate Decisions Sciences, NBCUniversal",
                 biography:
                   "Cameron Davies is the SVP, Corporate Decisions Sciences for NBCUniversal responsible for the overall development and execution of the NBCU data and advanced analytics strategies designed to further NBCU priorities and support evolving business models. This includes areas such as defining and leading the overall NBCU Data Strategy, Forecasting, Content Efficacy, Pricing and Yield Management, Machine Learning, and advanced AI practices. Prior to joining NBCUniversal in 2013, Cameron spent over 18 years at Disney developing and leading advanced analytical teams for a variety of business areas including Disney Parks and Resorts, Media Networks, Walt Disney Studios, Disney Interactive, and Disney Consumer Products. His final role was Sr. Director and GM, Management Science and Integration, leading the internal COE for Advanced Analytics. In this role he worked closely with executives across the enterprise to deliver advanced analytics tools to drive business priorities. Prior to joining Disney he spent time as a Professor of Business/Finance for Pensacola Christian College. Cameron has an MBA and Master of Accountancy (MACC) from the University of West Florida and a BS Business Administration/Accounting from Pensacola Christian College.",
               })
@@ -692,7 +508,7 @@ function About(props) {
                 name: "Seth Dobrin",
                 position: "Advisor",
                 img: "../images/pictures/bike-1.png",
-                introduction: "VP and Chief Data Officer, IBM Analytics",
+                introduction: "Global Chief AI Officer, IBM",
                 biography:
                   "Seth Dobrin is the vice president and chief data officer for IBM Analytics, where he is responsible for the transformation of the analytics business operations using data and analytics, influencing IBM Analytics offerings to meet the needs of CDOs, and providing his perspective and experiences to clients. Seth has spent his career scaling and combining existing technologies to address previously intractable problems at scale. Previously, he led the data science transformation of a Fortune 500 company, as well as the company’s Agile transformation and their shift to the cloud, and oversaw efforts to leverage the data science transformation to drive new business models to create new revenue streams, along with the optimization of existing processes. He has served as a member of the advisory board for IBM’s Spark Technology Center, is a founding member of the International Society of Chief Data Officers, and has been a prolific panelist at the East and West Chief Data Officer Summits. Seth holds a PhD in genetics from Arizona State University, where he focused on the application of statistical and molecular genetics toward the elucidation of the causes of neuropsychiatric disorders. In these efforts, he was involved in some of the first applications of machine learning to large-scale genetic analysis.",
               })
@@ -708,7 +524,8 @@ function About(props) {
                 name: "Alex Benay",
                 position: "Advisor",
                 img: "../images/pictures/bike-1.png",
-                introduction: "PLACEHOLDER",
+                introduction:
+                  "Global Lead, Government Azure Strategy, Microsoft",
                 biography:
                   "Alex Benay is an avid user of technology and he often voices the importance of taking risks, failing fast and challenging the status quo when it comes to technological innovation, especially in the government. Benay believes in the strength of social media channels to communicate to Canadians and engage them on shaping the way forward. He also uses social media as an outlet to offer a running commentary on the big initiatives and projects he’s involved in. Benay is not your typical executive! At Microsoft, Benay is making digital government a reality by helping lead the company’s global government cloud strategy. In his previous role as Partner of Digital and Government Solutions at KPMG AI, Benay helped the firms’ public sector clients effectively implement key digital technologies and solutions such as Artificial Intelligence (including ethical AI), Blockchain, Cloud computing, Data Security and Privacy, Digital Identification, Digital Integrity and Assurance. In his previous role as Canada’s CIO, Benay was responsible for a broad portfolio with a budget of $6 billion, 17 thousand employees and countless vendors. With technology and change as constants, Benay balanced the needs of government information systems with the demands of an increasingly dynamic, digitally-savvy and on-demand population. His previous roles have included that of President and Chief Executive Officer of the Canada Science and Technology Museums Corporation, and Vice-President, Government Affairs and Business Development at OpenText, Canada’s largest software company. Benay’s authored a few books including:  “Canadian Failures: Stories of Building toward Success”. He brings together successful Canadians such as astronauts and gold medal athletes to explore how failure got them to where they are today, in an effort to remove the national stigma surrounding the term ‘to fail’. He’s also released “Government Digital: The Quest to Regain Public Trust” that will lay down a blueprint for digital change for other governments and organizations.",
               })
@@ -724,7 +541,8 @@ function About(props) {
                 name: "Doreen Lorenzo",
                 position: "Advisor",
                 img: "../images/pictures/bike-1.png",
-                introduction: "PLACEHOLDERS",
+                introduction:
+                  "Assistant Dean at University of Texas, School of Design and Creative Technology",
                 biography:
                   "Doreen Lorenzo is a successful leader of global creative firms; as the former president of frog design and Quirky she has advised companies on design and innovation issues for decades. In September of 2017 she was appointed Assistant Dean of the new School of Design and Creative Technologies at The University of Texas at Austin. It has since become the fastest growing school in the College of Fine Arts. She is a co-founder of mobile video insights firm Vidlet, as well as a board member and advisor to several other companies. Five years ago she became a columnist for Fast Company Co.Design writing a monthly column called Designing Women. Doreen was honored that Texas Monthly profiled her as one of 15 Innovators Reshaping Texas.",
               })
@@ -740,7 +558,7 @@ function About(props) {
                 name: "Mark Rolston",
                 position: "Advisor",
                 img: "../images/pictures/bike-1.png",
-                introduction: "PLACEHOLDER",
+                introduction: "Founder and Chief Creative of argodesign",
                 biography:
                   "Chances are good that at least one piece of technology in your life has a piece of Mark Rolston thinking behind it. Former Chief Creative Officer of frogdesign, and a renowned designer for over 30 years, Mark was one of the earliest design pioneers in software, helping forge the disciplines around user interface design and mobile platforms. During 20 years at frogdesign, he founded the firm’s software design business, transformed it as Global Chief Creative Officer, and in 2014 founded argodesign, where he continues to define new paradigms including AI interfaces, mixed reality, and interactive light. He has worked with the world’s leading companies– Disney, Magic Leap, Dreamworks, Salesforce, GE, Microsoft, and AT&T.",
               })
@@ -756,7 +574,7 @@ function About(props) {
                 name: "Ben Lamm",
                 position: "Advisor",
                 img: "../images/pictures/bike-1.png",
-                introduction: "PLACEHOLDER",
+                introduction: "Tech CEO / Entrepreneur / Investor",
                 biography:
                   "Ben Lamm is a serial technology entrepreneur that builds intelligent and transformative businesses. He is currently the CEO and founder of Hypergiant. Lamm was the CEO and founder of Conversable, the leading conversational intelligence platform that helps brands reach their customers through automated experiences on all major messaging platforms. Conversable was acquired by LivePerson in 2018. Lamm was also the founder and CEO of Chaotic Moon, a global creative technology powerhouse acquired by Accenture. During his time at Chaotic Moon and as a Managing Director at Accenture, Lamm spearheaded the creation of some of the Fortune 500’s most groundbreaking digital products and experiences in the emerging tech world of IoT, VR, Connected Car, Mobile, Tablet, and Wearables.",
               })
@@ -770,14 +588,132 @@ function About(props) {
       </Row>
       <Row style={{ backgroundColor: "#f6f6f6", paddingBottom: 0 }}>
         <Headline2>Expert Advisors</Headline2>
+        <Divider />
         <AboutPeopleGrid>
-          
+          <PersonContainer
+            onClick={() =>
+              openModal({
+                name: "Kasia Chmielinski",
+                position: "Data Advisor",
+                img: "../images/pictures/bike-1.png",
+                introduction: "Co-Founder, Data Nutrition Project",
+                biography:
+                  "Kasia Chmielinski is the Co-Founder and Lead of The Data Nutrition Project, an initiative that builds dataset quality standards and tools to mitigate bias in artificial intelligence, and a technologist in healthcare analytics at McKinsey & Company. They are also an Affiliate at The Berkman Klein Center at Harvard University and a Digital Lab Fellow at Consumer Reports. Previously, Kasia worked at The U.S. Digital Service (Executive Office of the President) and Scratch, a project of the MIT Media Lab. They received their bachelor's degree in physics from Harvard University.",
+              })
+            }
+          >
+            <StaticImage src="" />
+            <PersonName>Kasia Chmielinski</PersonName>
+            <PersonPosition>Data Advisor</PersonPosition>
+          </PersonContainer>
+          <PersonContainer
+            onClick={() =>
+              openModal({
+                name: "Tim Vincent",
+                position: "Technical Advisor",
+                img: "../images/pictures/bike-1.png",
+                introduction: "IBM Fellow, VP and CTO IBM Analytic Group",
+                biography:
+                  "Tim Vincent is an IBM Fellow and Vice President with over 35 years of experience in the  data space. He became a Fellow in 2009 and has served roles ranging from CTO for  Information Management, CTO for the Data and Analytics group, as well as P&L  responsibility for AI software offerings in Cognitive Systems. In his roles as CTO for the Information Management division and then CTO for the  Analytics group in IBM, he was responsible for driving the technical strategy for both  areas. During this time Tim spent time globally working with clients across industries  helping them with their data strategy and architecture. Tim was one of the original team that built the DB2 business on the Unix, Linux and  Windows platform and was the Chief architect of that product from 2002 through 2010. During his time in Cognitive Systems he owned the responsibility for building the AI  software business on that platform in conjunction with the accelerated compute (GPU)  differentiation of Power. In that role Tim had ownership of both Offering Management  and development organizations and was responsible for the definition, delivery, and  GTM for these offerings.",
+              })
+            }
+          >
+            <StaticImage src="" />
+            <PersonName>Tim Vincent</PersonName>
+            <PersonPosition>Technical Advisor</PersonPosition>
+          </PersonContainer>
+          <PersonContainer
+            onClick={() =>
+              openModal({
+                name: "Julia Stoyanovich",
+                position: "Technical Advisor",
+                img: "../images/pictures/bike-1.png",
+                introduction:
+                  "Director at the Center for Responsible AI at NYU ",
+                biography:
+                  "Julia Stoyanovich is an Assistant Professor in the Department of Computer Science and Engineering at the Tandon School of Engineering, and the Center for Data Science.  She is a recipient of an NSF CAREER award and of an NSF/CRA CI Fellowship.  Julia's research focuses on responsible data management and analysis practices: on operationalizing fairness, diversity, transparency, and data protection in all stages of the data  acquisition and processing lifecycle. She established the Data, Responsibly consortium, and serves on the New York City Automated Decision Systems Task Force (by appointment by Mayor de Blasio).  In addition to data ethics, Julia works on management and analysis of preference data, and on querying large evolving graphs.  She holds M.S. and Ph.D. degrees in Computer Science from Columbia University, and a B.S. in Computer Science and in Mathematics and Statistics from the University of Massachusetts at Amherst",
+              })
+            }
+          >
+            <StaticImage src="" />
+            <PersonName>Julia Stoyanovich</PersonName>
+            <PersonPosition>Technical Advisor</PersonPosition>
+          </PersonContainer>
         </AboutPeopleGrid>
       </Row>
       <Row style={{ backgroundColor: "#f6f6f6" }}>
         <Headline2>Leadership</Headline2>
+        <Divider />
         <AboutPeopleGrid>
-          
+          <PersonContainer
+            onClick={() =>
+              openModal({
+                name: "Ashley Casovan",
+                position: "Advisor",
+                img: "../images/pictures/bike-1.png",
+                introduction:
+                  "Chair, Responsible AI Certification Working Group, World Economic Forum",
+                biography:
+                  "Ashley is an engaged and innovative leader who has always had a deep interest in advancing the public good. Recently leaving her long-standing career in the public service where she was last Director of Data and Digital for the Government of Canada, she has now taken on the role of Executive Director of Responsible AI Institute, a non-profit dedicated to creating practical tools to ensure the responsible use of AI. Throughout her career she has worked at the intersection of innovative technology and data, and its impact on providing better information and services. As a recognized leader in the social tech community she has developed a strong reputation for developing workable governance for data, artificial intelligence, and open source tools. Her work and ability to bring experts together to solve important challenges has led to meaningful change in government and beyond. Her work helps to inform government, industry, and academic research.",
+              })
+            }
+          >
+            <StaticImage src="" />
+            <PersonName>Ashley Casovan</PersonName>
+            <PersonPosition>Executive Director</PersonPosition>
+          </PersonContainer>
+          <PersonContainer
+            onClick={() =>
+              openModal({
+                name: "Phil Dawson",
+                position: "Senior Policy Counsel",
+                img: "../images/pictures/bike-1.png",
+                introduction:
+                  "2020-2021 Technology and Human Rights Fellow, Harvard Kennedy School Carr Center for Human Rights Policy",
+                biography:
+                  "Philip Dawson is a lawyer and public policy expert specializing in the governance of digital technologies and artificial intelligence. After beginning his career in legal practice, Phil held senior policy roles at a United Nations specialized agency, in government and at a global AI software company.  Phil is a 2020-2021 Technology and Human Rights Fellow at the Harvard Kennedy School Carr Center for Human Rights Policy, a member of the UN Global Pulse Expert Group on the Governance of Data and AI, and Co-Chair of the Data Governance Standardization Collaborative, an initiative launched by the Canadian government. He has been an active participant in national and international policy and standard-making activities related to the governance of data and AI, including within the United Nations, the OECD and the World Economic Forum. Phil holds a B.A. and a joint B.C.L./LL.B. from McGill University, as well as an M.Sc. from the London School of Economics. He is the founder of a public policy firm that focuses on digital technologies and artificial intelligence.",
+              })
+            }
+          >
+            <StaticImage src="" />
+            <PersonName>Phil Dawson</PersonName>
+            <PersonPosition>Senior Policy Counsel</PersonPosition>
+          </PersonContainer>
+          <PersonContainer
+            onClick={() =>
+              openModal({
+                name: "Kara Scully",
+                position: "Communications and Engagement Manager",
+                img: "../images/pictures/bike-1.png",
+                introduction: "Marketing and Comms Extraordinaire",
+                biography:
+                  "Kara Scully is an accomplished marketing, public relations, and communications expert. She worked in CPG and product PR, social media, and marketing communications for the first five years of her career, and has since focused on marketing and communications for nonprofits and startups. Under her guidance, an array of name-brand CPG products in the food, health, and lifestyle space have substantially increased their reach to new customers and markets. Kara brings a fresh approach to complex messages by her use of great visuals, succinct messaging, and a consistent theme. Kara holds a BA degree in Public Relations from the University of Southern California, Annenberg School for Communication and Journalism.",
+              })
+            }
+          >
+            <StaticImage src="" />
+            <PersonName>Kara Scully</PersonName>
+            <PersonPosition>
+              Communications and Engagement Manager
+            </PersonPosition>
+          </PersonContainer>
+          <PersonContainer>
+            <StaticImage src="" />
+            <PersonName>Hiring Soon</PersonName>
+            <PersonPosition>Lead Developer</PersonPosition>
+          </PersonContainer>
+          <PersonContainer>
+            <StaticImage src="" />
+            <PersonName>Hiring Soon</PersonName>
+            <PersonPosition>Lead Data Scientist</PersonPosition>
+          </PersonContainer>
+          <PersonContainer>
+            <StaticImage src="" />
+            <PersonName>Interested in joining RAI?</PersonName>
+            <PersonPosition>
+              <a href="mailto:admin@responsible.ai" style={{textDecoration: "none", color: "black"}}>Inquire here.</a>
+            </PersonPosition>
+          </PersonContainer>
         </AboutPeopleGrid>
         <BiographyModal
           isOpen={modalOpen}
@@ -790,54 +726,223 @@ function About(props) {
         <MembersHeader>
           <MembersHeadline>Members</MembersHeadline>
         </MembersHeader>
+        <Divider />
+        <br />
         <Headline4>Global Corporations</Headline4>
-        <MembersGrid>
-          {filterTypes("gc").map((partner) => {
-            return (
-              <MemberImgContainer>
-                <MemberImg
-                  src={"../../partner-logos/" + partner.src}
-                ></MemberImg>
-              </MemberImgContainer>
-            );
-          })}
-        </MembersGrid>
-        <Headline4>Tech and Service Providers</Headline4>
-        <MembersGrid>
-          {filterTypes("tsp").map((partner) => {
-            return (
-              <MemberImgContainer>
-                <MemberImg
-                  src={"../../partner-logos/" + partner.src}
-                ></MemberImg>
-              </MemberImgContainer>
-            );
-          })}
-        </MembersGrid>
-        <Headline4>Government and NGOs</Headline4>
-        <MembersGrid>
-          {filterTypes("gngo").map((partner) => {
-            return (
-              <MemberImgContainer>
-                <MemberImg
-                  src={"../../partner-logos/" + partner.src}
-                ></MemberImg>
-              </MemberImgContainer>
-            );
-          })}
-        </MembersGrid>
-        <Headline4>Universities and Academia</Headline4>
-        <MembersGrid>
-          {filterTypes("ua").map((partner) => {
-            return (
-              <MemberImgContainer>
-                <MemberImg
-                  src={"../../partner-logos/" + partner.src}
-                ></MemberImg>
-              </MemberImgContainer>
-            );
-          })}
-        </MembersGrid>
+        <Grid style={{ marginTop: "0" }}>
+          <GridRow auto first>
+            <GridContainer>
+              <StaticImage
+                src="../images/members-logos/anthem.png"
+                alt="Anthem"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/amex.png"
+                alt="American Express"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/members-logos/jackson.png"
+                alt="Jackson"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/testimonials/hsbc.png"
+                alt="HSBC"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+          </GridRow>
+        </Grid>
+        <br />
+        <Headline4>Tech &amp; Service Providers</Headline4>
+        <Grid style={{ marginTop: "0" }}>
+          <GridRow auto first>
+            <GridContainer>
+              <StaticImage
+                src="../images/testimonials/ibm.png"
+                alt="IBM"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/microsoft.png"
+                alt="Microsoft"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/deloitte.png"
+                alt="Deloitte"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/ey.png"
+                alt="EY"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/pwc.png"
+                alt="PWC"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/members-logos/cognitive-scale.png"
+                alt="Cognitive Scale"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/members-logos/altaml.png"
+                alt="AltaML"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/oproma.png"
+                alt="Oproma"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+          </GridRow>
+        </Grid>
+        <br />
+        <Headline4>Government &amp; NGOs</Headline4>
+        <Grid style={{ marginTop: "0" }}>
+          <GridRow auto first>
+            <GridContainer>
+              <StaticImage
+                src="../images/testimonials/wef.png"
+                alt="WEF"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/testimonials/ieee.png"
+                alt="IEEE"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/oceanis.png"
+                alt="Oceanis"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/saxena-foundatoin.png"
+                alt="Saxena Foundation"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+          </GridRow>
+        </Grid>
+        <br />
+        <Headline4>Universities &amp; Academia</Headline4>
+        <Grid style={{ marginTop: "0" }}>
+          <GridRow auto first>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/ut-austin.png"
+                alt="UT"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/montreal.png"
+                alt="Montreal"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/toronto.png"
+                alt="Toronto"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/alberta.png"
+                alt="Alberta"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/sri.png"
+                alt="SRI"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/oxford-brooks.png"
+                alt="Oxford Brooks"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/mila.png"
+                alt="Mila"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/partner-logos/rai.png"
+                alt="R/AI"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
+          </GridRow>
+        </Grid>
       </Row>
       <Row style={{ backgroundColor: "#f6f6f6" }}>
         <FellowshipDescription>
