@@ -5,11 +5,9 @@ import {
   Headline2,
   MediumBody,
   UpperCaption,
-  BlankLink,
 } from "../../components/Text";
 import { Row, Divider, TitleLink } from "../../components/Blocks";
 import { ShareContainer } from "../../components/Buttons";
-import QuoteBlock from "../../components/QuoteBlock";
 import News from "../../components/News";
 import StyledLink from "../../components/StyledLink";
 
