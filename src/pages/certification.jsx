@@ -23,18 +23,6 @@ import certification from "../images/rai-content/Certification.png";
 
 // width: 75%;
 
-const RectangleContainer = styled.div`
-  justify-self: center;
-  display: flex;
-  place-items: center;
-  align-items: center;
-  text-align: center;
-  border: 2px solid blue;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-  width: 100%;
-`;
 
 const RectangleImg = styled.img`
   width: 100%;
@@ -46,6 +34,22 @@ const BorderTitle =styled.p`
   padding-left: 20px;
 `;
 
+const PDFButton = styled.a`
+background: #2f2d34 !important;
+  color: #ffffff !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  line-height: 28px !important;
+  text-align: center !important;
+  width: fit-content !important;
+  padding: 14px 30px 14px 30px !important;
+  cursor: pointer !important;
+  border: none !important;
+  margin-bottom: 12px !important;
+  text-decoration: none;
+  align-self: center;
+  `;
 function Certification() {
   return (
     <Layout title="Certification">
@@ -149,8 +153,7 @@ function Certification() {
             collections,
             <br /> healthcare diagnostics, etc.), and regions.
           </MediumBody>
-          <br />
-         <PrimaryBtn dark>Read the RAI Certification Whitepaper</PrimaryBtn> 
+          <br /><PDFButton href="/Whitepaper.pdf">Read the RAI Certification Whitepaper</PDFButton>
         </JumboText>
         <GrayPanel>
           <Heading1>
