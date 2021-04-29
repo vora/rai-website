@@ -213,7 +213,7 @@ function Index() {
               rel="noopener noreferrer"
             >
               more likely to be denied a mortgage than heterosexual couples
-            </BlankLink>
+            </BlankLink>{" "}
             with comparable financial credentials.
           </MediumBody>
           <MediumBody bordered>
