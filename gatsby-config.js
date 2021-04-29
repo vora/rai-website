@@ -2,6 +2,7 @@
 // SET LOCALLY, DO NOT INSTALL dot-env
 const accessToken = process.env.CONTENTFUL_TOKEN;
 const spaceID = process.env.CONTENTFUL_SPACE;
+const socialShare = process.env.SOCIAL_SHARE;
 
 // Configuration file
 // Proxy for manifest.json in regular React app
@@ -16,7 +17,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-social9-socialshare",
       options: {
-        content: "a2e31cdba944465fa43b468a80af7af3",
+        content: socialShare,
         async: true,
         defer: true,
       },
