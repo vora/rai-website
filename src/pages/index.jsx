@@ -358,14 +358,6 @@ function Index() {
             </GridContainer>
             <GridContainer>
               <StaticImage
-                src="../images/partner-logos/amex.png"
-                alt="American Express"
-                quality={100}
-                placeholder="blurred"
-              />
-            </GridContainer>
-            <GridContainer>
-              <StaticImage
                 src="../images/partner-logos/argo-design.png"
                 alt="Argo Design"
                 quality={100}
