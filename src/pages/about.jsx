@@ -760,14 +760,6 @@ function About(props) {
             </GridContainer>
             <GridContainer>
               <StaticImage
-                src="../images/partner-logos/amex.png"
-                alt="American Express"
-                quality={100}
-                placeholder="blurred"
-              />
-            </GridContainer>
-            <GridContainer>
-              <StaticImage
                 src="../images/members-logos/jackson.png"
                 alt="Jackson"
                 quality={100}
