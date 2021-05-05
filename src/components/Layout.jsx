@@ -6,7 +6,6 @@ import { withPrefix } from "gatsby";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Banner from "./Banner";
-import "../styles.css";
 
 const Content = styled.div`
   max-width: 100%;
