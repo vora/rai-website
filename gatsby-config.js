@@ -1,3 +1,9 @@
+/**
+ * Disabling no-var-requires here as this is a node file.
+ * There is probably a better way to do this that we should
+ * look into at some point.
+ */
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 require("dotenv").config();
 
 const plugins = [
@@ -63,7 +69,8 @@ if (process.env.CONTENTFUL_TOKEN && process.env.CONTENTFUL_SPACE) {
 module.exports = {
   siteMetadata: {
     title: "Responsible AI",
-    description: "Working together, we can create AI systems the world can trust.",
+    description:
+      "Working together, we can create AI systems the world can trust.",
     author: "Responsible AI",
     siteUrl: "https://www.responsible.ai/",
   },
