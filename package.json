@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "RAI Website",
+  "engines": { 
+    "node": "12.13.0"
+  },
+  "engineStrict" : true,
   "author": "cphillips17",
   "keywords": [
     "gatsby"
