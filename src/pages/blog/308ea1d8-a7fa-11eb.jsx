@@ -35,7 +35,6 @@ function Page() {
         </MediumBody>
         <br />
         <MediumBody>
-          <strong>Austin, Texas and Toronto, Ontario</strong>:{" "}
           Over the past five years, AI Global has become an independent
           nonprofit focused on building and distributing tangible governance
           tools that accelerate the design, development and use of Responsible
@@ -64,8 +63,8 @@ function Page() {
           <strong>Anatomy of a name.</strong>
           <br />
           We chose to highlight “Responsible AI”, and it creates a tighter
-          alignment with our mission, goals and objectives to develop an fair,
-          unbalanced and inclusive AI systems. The word “Institute” fully
+          alignment with our mission, goals and objectives to develop fair,
+          balanced, and inclusive AI systems. The word “Institute” fully
           addresses the needs of all collections of members across sectors– we
           serve our community members in the public, private, nonprofit and
           academic sectors alike, and can better communicate that as an
