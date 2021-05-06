@@ -1,0 +1,10 @@
+.banner {
+  background: var(--color--carbon);
+  padding: var(--space--xxsmall) var(--space--base);
+  color: var(--color--blanco);
+  text-align: center;
+}
+
+.banner p {
+  margin: 0;
+}

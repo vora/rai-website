@@ -7,4 +7,4 @@
 # below this comment once we are confident we can do a complete lint.
 **/*.jsx
 !**/NewText/**
-# !**/Banner.jsx
+!**/Banner.jsx
