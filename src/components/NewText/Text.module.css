@@ -1,0 +1,12 @@
+.text {
+  font-family: var(--font-family--base);
+  margin-bottom: var(--space--xsmall);
+}
+
+.base {
+  font-size: var(--font-size--base);
+}
+
+.small {
+  font-size: var(--font-size--small);
+}
