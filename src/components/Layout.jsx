@@ -5,8 +5,7 @@ import { Helmet } from "react-helmet";
 import { withPrefix } from "gatsby";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Banner from "./Banner";
-import "../styles.css";
+import { Banner } from "./Banner";
 
 const Content = styled.div`
   max-width: 100%;

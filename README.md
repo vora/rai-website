@@ -23,3 +23,13 @@ $ gatsby develop
 ```
 
 And that's it! The site will be hosted at __localhost:8000__.
+
+### Linting
+
+Responsible AI website project uses `eslint` to run a linter of javascript and typescript code.
+
+To run the linter, use:
+
+```
+npm run lint
+```

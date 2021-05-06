@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "RAI Website",
+  "engines": { 
+    "node": "12.13.0"
+  },
+  "engineStrict" : true,
   "author": "cphillips17",
   "keywords": [
     "gatsby"
@@ -12,10 +16,16 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "test": "jest --coverage"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
     "babel-plugin-styled-components": "^1.12.0",
+    "classnames": "^2.3.1",
+    "dotenv": "^8.4.0",
     "gatsby": "^3.2.1",
     "gatsby-plugin-image": "^1.2.1",
     "gatsby-plugin-manifest": "^3.2.0",
@@ -34,5 +44,27 @@
     "react-modal": "^3.13.1",
     "react-slideshow-image": "^3.4.6",
     "styled-components": "^5.2.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4"
   }
 }
