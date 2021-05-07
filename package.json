@@ -12,6 +12,7 @@
     "gatsby"
   ],
   "scripts": {
+    "postinstall": "husky install",
     "develop": "gatsby develop",
     "prestart": "npm run cssTypes",
     "start": "gatsby develop",

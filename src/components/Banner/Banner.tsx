@@ -1,6 +1,6 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { Text } from "../NewText";
+import { useStaticQuery, graphql } from "gatsby"
+import { Text } from "../NewText"
 
 import * as styles from "./Banner.module.css";
 
