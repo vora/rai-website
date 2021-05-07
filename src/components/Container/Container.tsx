@@ -13,17 +13,11 @@ export function Container({
   flex,
   justifyContent = "flexStart",
 }: PropsWithChildren<ContainerProps>) {
-  const conatinerClass = classnames(
-    styles.container,
-    styles[`justify${uppercaseFirstLetter(justifyContent)}`],
-    {
-      [styles.flex]: flex,
-    }
-  );
+  const conatinerClass = classnames(styles.container, {
+    [styles.flex]: flex,
+    [styles.justifyFlexStart]: justifyContent === "flexStart",
+    [styles.justifySpaceBetween]: justifyContent === "spaceBetween",
+  });
 
   return <div className={conatinerClass}>{children}</div>;
-
-  function uppercaseFirstLetter(string: string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
 }
