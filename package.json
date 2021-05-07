@@ -22,7 +22,7 @@
     "lint:js": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint": "npm run lint:js",
     "test": "jest --coverage",
-    "typecheck": "tsc",
+    "typecheck": "tsc --noEmit --project tsconfig.json",
     "cssTypes": "tcm src/components"
   },
   "dependencies": {

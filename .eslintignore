@@ -3,11 +3,11 @@
 **/public/**
 **/static/**
 
-**/*.css.d.ts
-
 # We should add to this list while work is being done, and then remove everything
 # below this comment once we are confident we can do a complete lint.
 **/*.jsx
 !**/NewText/**
 !**/Banner.jsx
 !**/Container.jsx
+
+**/*.css.d.ts
