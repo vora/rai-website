@@ -21,7 +21,10 @@ module.exports = {
         extensions: [".js", ".jsx", ".ts", ".tsx"],
       },
       alias: {
-        map: [["@/components", "./src/components"]],
+        map: [
+          ["@/components", "./src/components"],
+          ["@/hooks", "./src/hooks"],
+        ],
         extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
       },
     },

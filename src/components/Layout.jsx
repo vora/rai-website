@@ -5,7 +5,8 @@ import { Helmet } from "react-helmet";
 import { withPrefix } from "gatsby";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { Banner } from "./Banner";
+import { Banner } from "@/components/Banner";
+import { Navigation} from '@/components/Navigation';
 
 const Content = styled.div`
   max-width: 100%;
@@ -42,6 +43,7 @@ function Layout({ children, title }) {
           />
         </Helmet>
         <Banner text="Looking for AI Global? You're here! AI Global is now Responsible AI Institute." />
+        <Navigation />
         <Navbar />
         <Content>{children}</Content>
         <Footer />
