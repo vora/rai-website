@@ -1,0 +1,7 @@
+.logo {
+  fill: var(--color--carbon);
+}
+
+.inverted {
+  fill: var(--color--blanco);
+}

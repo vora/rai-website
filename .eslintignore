@@ -9,5 +9,6 @@
 !**/NewText/**
 !**/Banner.jsx
 !**/Container.jsx
+!**/Logo.jsx
 
 **/*.css.d.ts
