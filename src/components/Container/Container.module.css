@@ -5,6 +5,12 @@
   margin: 0 auto;
 }
 
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--space--large);
+  }
+} 
+
 .flex {
   display: flex;
   align-items: center;

@@ -1,4 +1,7 @@
 :root {
-  --color--carbon: #2f2d34;
+  --color--carbon--rgb: 47, 45, 52;
+  --color--carbon: rgb(var(--color--carbon--rgb));
+  --color--ghost--rgb: 246, 246, 246;
+  --color--ghost: rgb(var(--color--ghost--rgb));
   --color--blanco: #fff;
 }

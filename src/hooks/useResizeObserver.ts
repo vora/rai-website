@@ -1,15 +1,14 @@
 import { useState } from "react";
 import originalUseResizeObserver from "use-resize-observer";
 
-type PossibleWidths = "small" | "medium" | "large" | "xlarge";
+export const Breakpoints = {
+  xlarge: 1500,
+  large: 1024,
+  medium: 640,
+};
 
 export const useResizeObserver = () => {
-  const [width, setWidth] = useState<PossibleWidths>();
-  const breakpoints = {
-    xlarge: 1500,
-    large: 1024,
-    medium: 640,
-  };
+  const [width, setWidth] = useState<number>(0);
 
   const { ref } = originalUseResizeObserver({
     onResize: ({ width: resizedWidth }) => {
@@ -17,14 +16,14 @@ export const useResizeObserver = () => {
         return;
       }
 
-      if (resizedWidth >= breakpoints.xlarge) {
-        setWidth("xlarge");
-      } else if (resizedWidth >= breakpoints.large) {
-        setWidth("large");
-      } else if (resizedWidth >= breakpoints.medium) {
-        setWidth("medium");
+      if (resizedWidth >= Breakpoints.xlarge) {
+        setWidth(Breakpoints.xlarge);
+      } else if (resizedWidth >= Breakpoints.large) {
+        setWidth(Breakpoints.large);
+      } else if (resizedWidth >= Breakpoints.medium) {
+        setWidth(Breakpoints.medium);
       } else {
-        setWidth("small");
+        setWidth(0);
       }
     },
   });

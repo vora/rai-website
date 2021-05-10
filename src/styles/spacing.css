@@ -4,6 +4,7 @@
   --space--small: calc(var(--space--base) * 0.75);
   --space--base: 16px;
   --space--large: calc(var(--space--base) * 2);
+  --space--xxlarge: calc(var(--space--base) * 4);
 }
 
 @media (min-width: 640px) {

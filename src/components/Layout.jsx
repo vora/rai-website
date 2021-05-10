@@ -44,7 +44,6 @@ function Layout({ children, title }) {
         </Helmet>
         <Banner text="Looking for AI Global? You're here! AI Global is now Responsible AI Institute." />
         <Navigation />
-        <Navbar />
         <Content>{children}</Content>
         <Footer />
       </ThemeProvider>
