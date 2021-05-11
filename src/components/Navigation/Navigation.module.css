@@ -1,4 +1,6 @@
 .navigation {
+  position: relative;
+  z-index: 999;
   padding: var(--space--large) 0;
   max-width: 100%;
 }
