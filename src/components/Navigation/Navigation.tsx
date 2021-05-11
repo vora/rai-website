@@ -142,7 +142,7 @@ function Menu({ items }: MenuProps) {
                 {item.items.map((subItem) => {
                   return (
                     <li className={styles.subItem}>
-                      <Link to={item.url} className={styles.subLink}>
+                      <Link to={subItem.url} className={styles.subLink}>
                         {subItem.title}
                       </Link>
                     </li>
