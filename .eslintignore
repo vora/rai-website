@@ -8,3 +8,8 @@
 **/*.jsx
 !**/NewText/**
 !**/Banner.jsx
+!**/Container.jsx
+!**/Logo.jsx
+!**/Navigation.jsx
+
+**/*.css.d.ts

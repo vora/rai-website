@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  max-width: calc(var(--space--base) * 75);
+  padding: 0 var(--space--base);
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--space--large);
+  }
+} 
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.justifyFlexStart {
+  justify-content: flex-start;
+}
+
+.justifySpaceBetween {
+  justify-content: space-between;
+}
