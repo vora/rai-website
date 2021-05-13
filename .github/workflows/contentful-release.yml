@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Contentful Webhook Fired
-        if: github.event.action == 'contentful_action'
+        if: github.event.action == 'contentful_webhook'
         run: |
           echo "Contentful Webhook successfully fired"
 
