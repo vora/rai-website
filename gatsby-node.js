@@ -6,6 +6,28 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require("path");
 
+exports.createPages = ({ graphql, actions: { createPage } }) => {
+  return graphql(`
+    query {
+      allContentfulBlogPost {
+        nodes {
+          slug
+        }
+      }
+    }
+  `).then((result) => {
+    result.data.allContentfulBlogPost.nodes.forEach((node) => {
+      createPage({
+        path: `/blog/${node.slug.replace(/ /g, "-")}`,
+        component: path.resolve(`./src/templates/blog.tsx`),
+        context: {
+          slug: node.slug,
+        },
+      });
+    });
+  });
+};
+
 exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
   const config = getConfig();
 
