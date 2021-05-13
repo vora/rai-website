@@ -1,9 +1,10 @@
-# Whenever we push to a branch, we want to ensure that
-# our code is not going to break things.
 on:
   push:
     branches:
-      - '!master'
+      - 'master'
+    paths:
+      - 'src/**'
+      - 'static/**'
 
 jobs:
   lint_javascript:
@@ -33,3 +34,14 @@ jobs:
         run: |
           npm install
           npm run build
+
+  deploy_heroku:
+    needs: [build_gatsby]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_EMAIL_ADDRESS}}
