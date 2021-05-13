@@ -11,5 +11,6 @@
 !**/Container.jsx
 !**/Logo.jsx
 !**/Navigation.jsx
+!**/NewLayout/**
 
 **/*.css.d.ts
