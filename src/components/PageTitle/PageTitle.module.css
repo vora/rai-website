@@ -1,0 +1,7 @@
+.title {
+  padding: var(--space--xlarge) 0;
+}
+
+.title h1 {
+  margin: 0;
+}

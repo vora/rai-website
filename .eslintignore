@@ -12,6 +12,10 @@
 !**/Logo.jsx
 !**/Navigation.jsx
 !**/NewLayout/**
+!**/Heading/**
+!**/PageTitle/**
 !**/Footer.tsx
+
+!src/pages/blog.tsx
 
 **/*.css.d.ts
