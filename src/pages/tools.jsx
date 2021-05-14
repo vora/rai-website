@@ -349,8 +349,7 @@ function Tools() {
                 The Community Portal is an open resource hub providing access to
                 responsible AI standards, models, government policies, open
                 datasets, and open-source software to help members better
-                navigate the AI landscape and directly connect with the experts
-                who are guiding...
+                navigate the AI landscape and directly connect with experts.
                 <br />
                 <br />
                 <br />
