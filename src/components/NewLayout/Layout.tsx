@@ -4,8 +4,7 @@ import { withPrefix } from "gatsby";
 
 import { Banner } from "@/components/Banner";
 import { Navigation } from "@/components/Navigation";
-// @ts-expect-error TODO: Move to Typescript footer
-import Footer from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import * as styles from "./Layout.module.css";
 
 interface LayoutProps {

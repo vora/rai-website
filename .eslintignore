@@ -12,5 +12,6 @@
 !**/Logo.jsx
 !**/Navigation.jsx
 !**/NewLayout/**
+!**/Footer.tsx
 
 **/*.css.d.ts

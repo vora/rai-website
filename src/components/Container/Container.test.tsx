@@ -9,7 +9,7 @@ it("should render children correctly", () => {
   expect(container).toMatchInlineSnapshot(`
     <div>
       <div
-        class=""
+        class="undefined"
       >
         Foo
       </div>

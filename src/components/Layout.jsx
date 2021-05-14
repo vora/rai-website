@@ -4,7 +4,7 @@ import { lightTheme } from "styles/Themes";
 import { Helmet } from "react-helmet";
 import { withPrefix } from "gatsby";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+import { Footer } from "@/components/Footer";
 import { Banner } from "@/components/Banner";
 import { Navigation} from '@/components/Navigation';
 

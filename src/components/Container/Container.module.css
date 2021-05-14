@@ -13,13 +13,12 @@
 
 .flex {
   display: flex;
-  align-items: center;
-}
-
-.justifyFlexStart {
-  justify-content: flex-start;
 }
 
 .justifySpaceBetween {
   justify-content: space-between;
+}
+
+.alignItemsCenter {
+  align-items: center;
 }
