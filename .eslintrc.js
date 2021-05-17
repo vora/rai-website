@@ -62,7 +62,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["./src/pages/**/*.*", "./doczrc.js"],
+      files: ["./src/pages/**/*.*", "./src/templates/**/*.*", "./doczrc.js"],
       rules: {
         "import/no-default-export": "off",
       },

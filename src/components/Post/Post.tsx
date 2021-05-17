@@ -2,6 +2,7 @@ import React from "react";
 import { Heading } from "@/components/Heading";
 import { Text } from "@/components/NewText";
 import { Caption } from "@/components/Caption";
+import { Link } from "gatsby";
 
 import * as styles from "./Post.module.css";
 
@@ -22,14 +23,14 @@ interface PostComponentProps {
 
 export function Post({ post }: PostComponentProps) {
   return (
-    <div>
-      <div className={styles.heading}>
+    <article>
+      <Link to={post.slug} className={styles.heading}>
         <Heading as="h3">{post.title}</Heading>
-      </div>
+      </Link>
       {post?.excerpt && <Text>{post?.excerpt}</Text>}
       <div className={styles.date}>
         <Caption title={post.published} />
       </div>
-    </div>
+    </article>
   );
 }

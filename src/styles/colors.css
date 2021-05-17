@@ -3,5 +3,6 @@
   --color--carbon: rgb(var(--color--carbon--rgb));
   --color--ghost--rgb: 246, 246, 246;
   --color--ghost: rgb(var(--color--ghost--rgb));
+  --color--gravy: #797b80;
   --color--blanco: #fff;
 }

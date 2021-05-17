@@ -58,7 +58,7 @@ export function Footer() {
               });
 
               return (
-                <li className={styles.item}>
+                <li className={styles.item} key={item.title}>
                   <Link to={item.url} className={linkClass}>
                     {item.title}
                   </Link>

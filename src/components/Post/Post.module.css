@@ -1,5 +1,11 @@
 .heading {
   margin-bottom: var(--space--xsmall);
+  color: inherit;
+  text-decoration: none;
+}
+
+.heading:hover {
+  text-decoration: underline;
 }
 
 .date {
