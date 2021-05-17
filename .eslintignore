@@ -13,6 +13,7 @@
 !**/Navigation.jsx
 !**/NewLayout/**
 !**/Heading/**
+!**/Post/**
 !**/PageTitle/**
 !**/Caption/**
 !**/Footer.tsx
