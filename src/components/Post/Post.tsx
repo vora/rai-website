@@ -3,6 +3,7 @@ import { Heading } from "@/components/Heading";
 import { Text } from "@/components/NewText";
 import { Caption } from "@/components/Caption";
 import { Link } from "gatsby";
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
 import * as styles from "./Post.module.css";
 
@@ -12,6 +13,7 @@ export type PostProps = {
   readonly title: string;
   readonly published: string;
   readonly featured: boolean;
+  readonly featuredImage: IGatsbyImageData;
   readonly excerpt?: {
     excerpt: string;
   };

@@ -9,6 +9,7 @@ require("dotenv").config();
 const plugins = [
   `gatsby-plugin-styled-components`,
   `gatsby-plugin-image`,
+  `gatsby-transformer-sharp`,
   `gatsby-plugin-react-helmet`,
   `gatsby-plugin-sitemap`,
   `gatsby-plugin-sharp`,

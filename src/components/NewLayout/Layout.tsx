@@ -19,6 +19,7 @@ export function Layout({
   return (
     <>
       <Helmet>
+        <html lang="en" />
         <title>RAI | {title || "Responsible AI"}</title>
         <meta
           name="description"

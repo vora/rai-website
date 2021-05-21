@@ -18,7 +18,7 @@ export function Banner() {
   }
 
   return (
-    <div className={styles.banner}>
+    <div className={styles.banner} role="alert" aria-label="Important Message">
       <Text size="small">{data.contentfulMicroContent.value}</Text>
     </div>
   );
