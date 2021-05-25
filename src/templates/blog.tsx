@@ -121,8 +121,8 @@ function BlogPost({ data: { blog } }: BlogPostProps) {
                 <address>
                   <Caption title={`By: ${blog.author.name}`} />
                 </address>
-                {blog.author.biography.biography && (
-                  <div>{blog.author.biography.biography}</div>
+                {blog?.author?.biography?.biography && (
+                  <div>{blog?.author?.biography?.biography}</div>
                 )}
               </>
             )}
