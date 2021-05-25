@@ -13,7 +13,6 @@ const plugins = [
   `gatsby-plugin-react-helmet`,
   `gatsby-plugin-sitemap`,
   `gatsby-plugin-sharp`,
-  `gatsby-plugin-offline`,
   {
     resolve: `gatsby-plugin-social9-socialshare`,
     options: {
