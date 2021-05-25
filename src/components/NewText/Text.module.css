@@ -1,6 +1,10 @@
 .text {
   font-family: var(--font-family--base);
-  margin-bottom: var(--space--xsmall);
+  margin: var(--space--base) 0;
+}
+
+.text:only-child {
+  margin: 0;
 }
 
 .base {

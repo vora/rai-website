@@ -29,7 +29,7 @@ export function Post({ post }: PostComponentProps) {
       <Link to={post.slug} className={styles.heading}>
         <Heading as="h3">{post.title}</Heading>
       </Link>
-      {post?.excerpt && <Text>{post?.excerpt}</Text>}
+      {post?.excerpt?.excerpt && <Text>{post?.excerpt?.excerpt}</Text>}
       <div className={styles.date}>
         <Caption title={post.published} />
       </div>

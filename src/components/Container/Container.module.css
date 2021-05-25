@@ -11,6 +11,10 @@
   }
 } 
 
+.small {
+  max-width: calc(var(--space--base) * 45);
+}
+
 .flex {
   display: flex;
 }

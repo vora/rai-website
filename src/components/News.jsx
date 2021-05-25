@@ -1,6 +1,7 @@
 import React from "react";
 import styled, {css} from "styled-components";
 import { Headline5 } from "./Text";
+import { Caption } from '@/components/Caption';
 
 const carbon = "#2f2d34";
 const gray = "#797b80";
@@ -34,14 +35,6 @@ const NewsItem = styled.div`
     `}
 `;
 
-const Caption = styled.p`
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 1.5px;
-    color: ${gray};
-`
-
 function News() {
   return (
     <>
@@ -58,7 +51,7 @@ function News() {
               on AI development initiatives
             </Headline5>
           </a>
-          <Caption>APRIL 22, 2021</Caption>
+          <Caption title="APRIL 22, 2021" />
         </NewsItem>
         <NewsItem top>
           <a
@@ -72,7 +65,7 @@ function News() {
             </Headline5>
           </a>
           <br />
-          <Caption>APRIL 21, 2021</Caption>
+          <Caption title="APRIL 21, 2021" />
         </NewsItem>
       </NewsRow>
       <NewsRow>
@@ -88,7 +81,7 @@ function News() {
             </Headline5>
           </a>
           <br />
-          <Caption>APRIL 19, 2021</Caption>
+          <Caption title="APRIL 19, 2021" />
         </NewsItem>
         <NewsItem>
           <a
@@ -100,7 +93,7 @@ function News() {
             </Headline5>
           </a>
           <br />
-          <Caption>APRIL 28, 2021</Caption>
+          <Caption title="APRIL 28, 2021" />
         </NewsItem>
       </NewsRow>
     </>
