@@ -329,15 +329,15 @@ function Tools() {
         </Container>
         <Container style={{ paddingTop: 0 }}>
           <Item style={{ marginRight: "20px" }}>
-            <a href="https://portal.ai-global.org/">
-              <RectangleContainer href="https://portal.ai-global.org/">
+            <a href="https://portal.responsible.ai/">
+              <RectangleContainer href="https://portal.responsible.ai">
                 <RectangleImg src={portal} alt="portal icon" height="126" />
               </RectangleContainer>
             </a>
             <div style={{ textAlign: "left" }}>
               <Headline5>
                 <a
-                  href="https://portal.ai-global.org/"
+                  href="https://portal.responsible.ai/"
                   style={{ color: "black" }}
                 >
                   <u>Responsible AI Community Portal</u>
@@ -349,8 +349,7 @@ function Tools() {
                 The Community Portal is an open resource hub providing access to
                 responsible AI standards, models, government policies, open
                 datasets, and open-source software to help members better
-                navigate the AI landscape and directly connect with the experts
-                who are guiding...
+                navigate the AI landscape and directly connect with experts.
                 <br />
                 <br />
                 <br />
@@ -360,7 +359,11 @@ function Tools() {
                 <br />
                 <StyledLink
                   text="Get Started"
-                  link="https://portal.ai-global.org/"
+                  link="https://portal.responsible.ai/"
+                />
+                <StyledLink
+                  text="RAI's cheat sheets"
+                  link="https://portal.responsible.ai/resources?q=cheat%20sheet&organizations=601202603da15aa4ca047b3b"
                 />
               </SmallBody>
             </div>

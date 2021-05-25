@@ -1,0 +1,23 @@
+on: repository_dispatch
+
+jobs:
+  contentful_webhook_fired:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Contentful Webhook Fired
+        if: github.event.action == 'contentful_webhook'
+        run: |
+          echo "Contentful Webhook successfully fired"
+
+  deploy_heroku:
+    needs: [contentful_webhook_fired]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_EMAIL_ADDRESS}}
+

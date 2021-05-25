@@ -1,0 +1,35 @@
+# Whenever we push to a branch, we want to ensure that
+# our code is not going to break things.
+on:
+  push:
+    branches:
+      - '!master'
+
+jobs:
+  lint_javascript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "lint javascript"
+        run: |
+          npm install
+          npm run lint:js
+
+  jest_unit_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "jest unit test"
+        run: |
+          npm install
+          npm run test
+
+  build_gatsby:
+    needs: [lint_javascript, jest_unit_test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "builds gatsby"
+        run: |
+          npm install
+          npm run build
