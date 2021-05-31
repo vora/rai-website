@@ -33,6 +33,7 @@
     "dotenv": "^8.4.0",
     "framer-motion": "^4.1.13",
     "gatsby": "^3.2.1",
+    "gatsby-plugin-google-gtag": "^3.6.0",
     "gatsby-plugin-image": "^1.2.1",
     "gatsby-plugin-manifest": "^3.2.0",
     "gatsby-plugin-offline": "^4.2.0",

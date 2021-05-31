@@ -48,6 +48,15 @@ const plugins = [
     },
     __key: "images",
   },
+  {
+    resolve: `gatsby-plugin-google-gtag`,
+    options: {
+      trackingIds: ["G-P02Q4087WB"],
+      pluginConfig: {
+        head: true,
+      },
+    },
+  },
 ];
 
 /**

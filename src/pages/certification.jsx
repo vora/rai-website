@@ -163,9 +163,9 @@ function Certification() {
             <br />
             <BorderTitle>Automated Diagnosis and Treatment</BorderTitle>
             <br />
-            <BorderTitle>Health recommendation systems</BorderTitle>
+            <BorderTitle>Health Recommendation Systems</BorderTitle>
             <br />
-            <BorderTitle>Automated Hiring</BorderTitle>
+            <BorderTitle>Automated Human Resources</BorderTitle>
           </LargeBody>
         </GrayPanel>
       </Jumbotron>

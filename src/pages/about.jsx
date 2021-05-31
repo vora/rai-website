@@ -325,6 +325,92 @@ function About(props) {
           />
         </JumboImage>
       </Jumbotron>
+      <Row style={{ backgroundColor: "#f6f6f6" }}>
+        <Headline2>Leadership</Headline2>
+        <Divider />
+        <AboutPeopleGrid>
+          <PersonContainer
+            onClick={() =>
+              openModal({
+                name: "Ashley Casovan",
+                position: "Executive Director",
+                img: "../images/pictures/bike-1.png",
+                introduction:
+                  "Chair, Responsible AI Certification Working Group, World Economic Forum",
+                biography:
+                  "Ashley is an engaged and innovative leader who has always had a deep interest in advancing the public good. Recently leaving her long-standing career in the public service where she was last Director of Data and Digital for the Government of Canada, she has now taken on the role of Executive Director of Responsible AI Institute, a non-profit dedicated to creating practical tools to ensure the responsible use of AI. Throughout her career she has worked at the intersection of innovative technology and data, and its impact on providing better information and services. As a recognized leader in the social tech community she has developed a strong reputation for developing workable governance for data, artificial intelligence, and open source tools. Her work and ability to bring experts together to solve important challenges has led to meaningful change in government and beyond. Her work helps to inform government, industry, and academic research.",
+              })
+            }
+          >
+            <img src={ashley} alt="Ashley Casovan" />{" "}
+            <PersonName>Ashley Casovan</PersonName>
+            <PersonPosition>Executive Director</PersonPosition>
+          </PersonContainer>
+          <PersonContainer
+            onClick={() =>
+              openModal({
+                name: "Phil Dawson",
+                position: "Senior Policy Counsel",
+                img: "../images/pictures/bike-1.png",
+                introduction:
+                  "2020-2021 Technology and Human Rights Fellow, Harvard Kennedy School Carr Center for Human Rights Policy",
+                biography:
+                  "Philip Dawson is a lawyer and public policy expert specializing in the governance of digital technologies and artificial intelligence. After beginning his career in legal practice, Phil held senior policy roles at a United Nations specialized agency, in government and at a global AI software company.  Phil is a 2020-2021 Technology and Human Rights Fellow at the Harvard Kennedy School Carr Center for Human Rights Policy, a member of the UN Global Pulse Expert Group on the Governance of Data and AI, and Co-Chair of the Data Governance Standardization Collaborative, an initiative launched by the Canadian government. He has been an active participant in national and international policy and standard-making activities related to the governance of data and AI, including within the United Nations, the OECD and the World Economic Forum. Phil holds a B.A. and a joint B.C.L./LL.B. from McGill University, as well as an M.Sc. from the London School of Economics. He is the founder of a public policy firm that focuses on digital technologies and artificial intelligence.",
+              })
+            }
+          >
+            <img src={phil} alt="Phil Dawson" />{" "}
+            <PersonName>Phil Dawson</PersonName>
+            <PersonPosition>Senior Policy Counsel</PersonPosition>
+          </PersonContainer>
+          <PersonContainer
+            onClick={() =>
+              openModal({
+                name: "Kara Scully",
+                position: "Communications and Engagement Manager",
+                img: "../images/pictures/bike-1.png",
+                introduction: "Marketing and Comms Extraordinaire",
+                biography:
+                  "Kara Scully is an accomplished marketing, public relations, and communications expert. She worked in CPG and product PR, social media, and marketing communications for the first five years of her career, and has since focused on marketing and communications for nonprofits and startups. Under her guidance, an array of name-brand CPG products in the food, health, and lifestyle space have substantially increased their reach to new customers and markets. Kara brings a fresh approach to complex messages by her use of great visuals, succinct messaging, and a consistent theme. Kara holds a BA degree in Public Relations from the University of Southern California, Annenberg School for Communication and Journalism.",
+              })
+            }
+          >
+            <img src={kara} alt="Kara Scully" />{" "}
+            <PersonName>Kara Scully</PersonName>
+            <PersonPosition>
+              Communications and Engagement Manager
+            </PersonPosition>
+          </PersonContainer>
+          <PersonContainer>
+            <img src={female} alt="Engineer" />{" "}
+            <PersonName>Hiring Soon</PersonName>
+            <PersonPosition>Lead Developer</PersonPosition>
+          </PersonContainer>
+          <PersonContainer>
+            <img src={male} alt="Data Scientist" />{" "}
+            <PersonName>Hiring Soon</PersonName>
+            <PersonPosition>Lead Data Scientist</PersonPosition>
+          </PersonContainer>
+          <PersonContainer>
+            <StaticImage src="" />
+            <PersonName>Interested in joining RAI?</PersonName>
+            <PersonPosition>
+              <a
+                href="mailto:admin@responsible.ai"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Inquire here.
+              </a>
+            </PersonPosition>
+          </PersonContainer>
+        </AboutPeopleGrid>
+        <BiographyModal
+          isOpen={modalOpen}
+          onRequestClose={() => modalHandler(false)}
+          handler={modalHandler}
+          person={modalPerson}
+        ></BiographyModal>
+      </Row>
       <Row style={{ backgroundColor: "#f6f6f6", paddingBottom: 0 }}>
         <Headline2>Governance Board</Headline2>
         <Divider />
@@ -654,92 +740,6 @@ function About(props) {
             <PersonPosition>Technical Advisor</PersonPosition>
           </PersonContainer>
         </AboutPeopleGrid>
-      </Row>
-      <Row style={{ backgroundColor: "#f6f6f6" }}>
-        <Headline2>Leadership</Headline2>
-        <Divider />
-        <AboutPeopleGrid>
-          <PersonContainer
-            onClick={() =>
-              openModal({
-                name: "Ashley Casovan",
-                position: "Advisor",
-                img: "../images/pictures/bike-1.png",
-                introduction:
-                  "Chair, Responsible AI Certification Working Group, World Economic Forum",
-                biography:
-                  "Ashley is an engaged and innovative leader who has always had a deep interest in advancing the public good. Recently leaving her long-standing career in the public service where she was last Director of Data and Digital for the Government of Canada, she has now taken on the role of Executive Director of Responsible AI Institute, a non-profit dedicated to creating practical tools to ensure the responsible use of AI. Throughout her career she has worked at the intersection of innovative technology and data, and its impact on providing better information and services. As a recognized leader in the social tech community she has developed a strong reputation for developing workable governance for data, artificial intelligence, and open source tools. Her work and ability to bring experts together to solve important challenges has led to meaningful change in government and beyond. Her work helps to inform government, industry, and academic research.",
-              })
-            }
-          >
-            <img src={ashley} alt="Ashley Casovan" />{" "}
-            <PersonName>Ashley Casovan</PersonName>
-            <PersonPosition>Executive Director</PersonPosition>
-          </PersonContainer>
-          <PersonContainer
-            onClick={() =>
-              openModal({
-                name: "Phil Dawson",
-                position: "Senior Policy Counsel",
-                img: "../images/pictures/bike-1.png",
-                introduction:
-                  "2020-2021 Technology and Human Rights Fellow, Harvard Kennedy School Carr Center for Human Rights Policy",
-                biography:
-                  "Philip Dawson is a lawyer and public policy expert specializing in the governance of digital technologies and artificial intelligence. After beginning his career in legal practice, Phil held senior policy roles at a United Nations specialized agency, in government and at a global AI software company.  Phil is a 2020-2021 Technology and Human Rights Fellow at the Harvard Kennedy School Carr Center for Human Rights Policy, a member of the UN Global Pulse Expert Group on the Governance of Data and AI, and Co-Chair of the Data Governance Standardization Collaborative, an initiative launched by the Canadian government. He has been an active participant in national and international policy and standard-making activities related to the governance of data and AI, including within the United Nations, the OECD and the World Economic Forum. Phil holds a B.A. and a joint B.C.L./LL.B. from McGill University, as well as an M.Sc. from the London School of Economics. He is the founder of a public policy firm that focuses on digital technologies and artificial intelligence.",
-              })
-            }
-          >
-            <img src={phil} alt="Phil Dawson" />{" "}
-            <PersonName>Phil Dawson</PersonName>
-            <PersonPosition>Senior Policy Counsel</PersonPosition>
-          </PersonContainer>
-          <PersonContainer
-            onClick={() =>
-              openModal({
-                name: "Kara Scully",
-                position: "Communications and Engagement Manager",
-                img: "../images/pictures/bike-1.png",
-                introduction: "Marketing and Comms Extraordinaire",
-                biography:
-                  "Kara Scully is an accomplished marketing, public relations, and communications expert. She worked in CPG and product PR, social media, and marketing communications for the first five years of her career, and has since focused on marketing and communications for nonprofits and startups. Under her guidance, an array of name-brand CPG products in the food, health, and lifestyle space have substantially increased their reach to new customers and markets. Kara brings a fresh approach to complex messages by her use of great visuals, succinct messaging, and a consistent theme. Kara holds a BA degree in Public Relations from the University of Southern California, Annenberg School for Communication and Journalism.",
-              })
-            }
-          >
-            <img src={kara} alt="Kara Scully" />{" "}
-            <PersonName>Kara Scully</PersonName>
-            <PersonPosition>
-              Communications and Engagement Manager
-            </PersonPosition>
-          </PersonContainer>
-          <PersonContainer>
-            <img src={female} alt="Engineer" />{" "}
-            <PersonName>Hiring Soon</PersonName>
-            <PersonPosition>Lead Developer</PersonPosition>
-          </PersonContainer>
-          <PersonContainer>
-            <img src={male} alt="Data Scientist" />{" "}
-            <PersonName>Hiring Soon</PersonName>
-            <PersonPosition>Lead Data Scientist</PersonPosition>
-          </PersonContainer>
-          <PersonContainer>
-            <StaticImage src="" />
-            <PersonName>Interested in joining RAI?</PersonName>
-            <PersonPosition>
-              <a
-                href="mailto:admin@responsible.ai"
-                style={{ textDecoration: "none", color: "black" }}
-              >
-                Inquire here.
-              </a>
-            </PersonPosition>
-          </PersonContainer>
-        </AboutPeopleGrid>
-        <BiographyModal
-          isOpen={modalOpen}
-          onRequestClose={() => modalHandler(false)}
-          handler={modalHandler}
-          person={modalPerson}
-        ></BiographyModal>
       </Row>
       <Row>
         <MembersHeader>
