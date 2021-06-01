@@ -25,18 +25,18 @@ jobs:
           npm install
           npm run test
 
-  build_gatsby:
-    needs: [lint_javascript, jest_unit_test]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: "builds gatsby"
-        run: |
-          npm install
-          npm run build
+  # build_gatsby:
+  #   needs: [lint_javascript, jest_unit_test]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: "builds gatsby"
+  #       run: |
+  #         npm install
+  #         npm run build
 
   deploy_heroku:
-    needs: [build_gatsby]
+    needs: [lint_javascript, jest_unit_test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
