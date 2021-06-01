@@ -132,7 +132,7 @@ function Menu({ items }: MenuProps) {
         });
 
         return (
-          <li className={styles.item}>
+          <li className={styles.item} key={item.title}>
             <Link to={item.url} className={linkClass}>
               {item.title}
             </Link>
@@ -141,7 +141,7 @@ function Menu({ items }: MenuProps) {
               <ul className={styles.subList}>
                 {item.items.map((subItem) => {
                   return (
-                    <li className={styles.subItem}>
+                    <li className={styles.subItem} key={subItem.title}>
                       <Link to={subItem.url} className={styles.subLink}>
                         {subItem.title}
                       </Link>

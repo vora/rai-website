@@ -11,5 +11,13 @@
 !**/Container.jsx
 !**/Logo.jsx
 !**/Navigation.jsx
+!**/NewLayout/**
+!**/Heading/**
+!**/Post/**
+!**/PageTitle/**
+!**/Caption/**
+!**/Footer.tsx
+
+!src/pages/blog.tsx
 
 **/*.css.d.ts

@@ -17,11 +17,5 @@ export function Icon({ icon, size = "base" }: IconProps) {
     large: 32,
   };
 
-  return (
-    <Element
-      size={sizes[size]}
-      color="var(--color--carbon)"
-      data-testid={`icon-${icon}`}
-    />
-  );
+  return <Element size={sizes[size]} data-testid={`icon-${icon}`} />;
 }

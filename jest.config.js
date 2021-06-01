@@ -9,5 +9,7 @@ module.exports = {
   },
   moduleNameMapper: {
     "\\.css$": "identity-obj-proxy",
+    "^@/components(.*)$": "<rootDir>/src/components$1",
+    "^@/hooks(.*)$": "<rootDir>/src/hooks$1",
   },
 };

@@ -4,6 +4,7 @@
   --space--small: calc(var(--space--base) * 0.75);
   --space--base: 16px;
   --space--large: calc(var(--space--base) * 2);
+  --space--xlarge: calc(var(--space--base) * 3);
   --space--xxlarge: calc(var(--space--base) * 4);
 }
 

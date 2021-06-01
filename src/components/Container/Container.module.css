@@ -11,15 +11,18 @@
   }
 } 
 
-.flex {
-  display: flex;
-  align-items: center;
+.small {
+  max-width: calc(var(--space--base) * 45);
 }
 
-.justifyFlexStart {
-  justify-content: flex-start;
+.flex {
+  display: flex;
 }
 
 .justifySpaceBetween {
   justify-content: space-between;
+}
+
+.alignItemsCenter {
+  align-items: center;
 }

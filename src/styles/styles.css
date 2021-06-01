@@ -8,3 +8,7 @@
 */
 @import './reset.css';
 
+.gatsby-image-wrapper {
+  vertical-align: bottom;
+}
+
