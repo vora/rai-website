@@ -51,7 +51,7 @@ const plugins = [
   {
     resolve: `gatsby-plugin-google-gtag`,
     options: {
-      trackingIds: ["G-P02Q4087WB"],
+      trackingIds: [process.env.GA4_TAG],
       pluginConfig: {
         head: true,
       },
