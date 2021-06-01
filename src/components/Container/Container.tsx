@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import classnames from "classnames";
 
-import * as styles from "./Container.module.css";
+import styles from "./Container.module.css";
 
 interface ContainerProps {
   readonly className?: string;

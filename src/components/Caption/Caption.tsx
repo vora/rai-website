@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as styles from "./Caption.module.css";
+import styles from "./Caption.module.css";
 
 interface CaptionProps {
   readonly title: string;

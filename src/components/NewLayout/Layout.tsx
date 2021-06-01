@@ -5,7 +5,7 @@ import { withPrefix } from "gatsby";
 import { Banner } from "@/components/Banner";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import * as styles from "./Layout.module.css";
+import styles from "./Layout.module.css";
 
 interface LayoutProps {
   readonly title?: string;

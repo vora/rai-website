@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Text } from "../NewText";
 
-import * as styles from "./Banner.module.css";
+import styles from "./Banner.module.css";
 
 export function Banner() {
   const data = useStaticQuery(graphql`

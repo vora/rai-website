@@ -14,6 +14,17 @@ const plugins = [
   `gatsby-plugin-sitemap`,
   `gatsby-plugin-sharp`,
   {
+    resolve: `gatsby-plugin-postcss`,
+    options: {
+      cssLoaderOptions: {
+        esModule: false,
+        modules: {
+          namedExport: false,
+        },
+      },
+    },
+  },
+  {
     resolve: `gatsby-plugin-social9-socialshare`,
     options: {
       content: process.env.SOCIAL_SHARE,

@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import classnames from "classnames";
 
-import * as styles from "./Heading.module.css";
+import styles from "./Heading.module.css";
 
 interface HeadingProps {
   readonly as?: "h1" | "h2" | "h3";

@@ -9,7 +9,9 @@ it("renders a simple caption", () => {
 
   expect(container).toMatchInlineSnapshot(`
     <div>
-      <div>
+      <div
+        class="caption"
+      >
         Foo
       </div>
     </div>

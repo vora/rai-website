@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import classnames from "classnames";
 
-import * as styles from "./Text.module.css";
+import styles from "./Text.module.css";
 
 interface TextProps {
   readonly size?: "base" | "small";
