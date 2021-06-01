@@ -24,6 +24,16 @@ $ gatsby develop
 
 And that's it! The site will be hosted at __localhost:8000__.
 
+## Working on Components
+
+Ideally, components should be created in isolation. The reason for this is that Components should be as generic as possible to allow for as many use cases as possible. To do this, we use [Storybook](https://storybook.js.org/).
+
+```shell
+npm run storybook
+```
+
+Storybook will allow you to develop and test your components in isolation from the rest of the website.
+
 ### Linting
 
 Responsible AI website project uses `eslint` to run a linter of javascript and typescript code.

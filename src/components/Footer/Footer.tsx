@@ -6,7 +6,7 @@ import { Container } from "@/components/Container";
 import { Logo } from "@/components/Logo";
 import { Icon } from "@/components/Icon";
 
-import * as styles from "./Footer.module.css";
+import styles from "./Footer.module.css";
 
 const menuItems = [
   {

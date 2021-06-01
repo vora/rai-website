@@ -3,7 +3,7 @@
 exports[`renders a logo 1`] = `
 <div>
   <svg
-    class=""
+    class="logo"
     viewBox="0 0 250 56"
     width="275"
     xmlns="http://www.w3.org/2000/svg"

@@ -11,7 +11,7 @@ import { Caption } from "@/components/Caption";
 import { Heading } from "@/components/Heading";
 import { Text } from "@/components/NewText";
 import { Icon } from "@/components/Icon";
-import * as styles from "./blog.module.css";
+import styles from "./blog.module.css";
 
 // import { StaticImage } from "gatsby-plugin-image";
 

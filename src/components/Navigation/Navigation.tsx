@@ -7,7 +7,7 @@ import { Icon } from "@/components/Icon";
 import { Breakpoints, useResizeObserver } from "@/hooks/useResizeObserver";
 import { AnimatePresence, motion } from "framer-motion";
 
-import * as styles from "./Navigation.module.css";
+import styles from "./Navigation.module.css";
 
 const menuItems = [
   {

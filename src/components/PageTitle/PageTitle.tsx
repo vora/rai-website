@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading } from "@/components/Heading";
 
-import * as styles from "./PageTitle.module.css";
+import styles from "./PageTitle.module.css";
 
 interface PageTitleProps {
   readonly title: string;

@@ -18,7 +18,7 @@ import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 // @ts-expect-error TODO: will move this to typescript and contentful
 import News from "../components/News";
 
-import * as styles from "./blogTemplate.module.css";
+import styles from "./blogTemplate.module.css";
 
 export const query = graphql`
   query($slug: String!) {
