@@ -6,7 +6,7 @@ import {
   MediumBody,
   UpperCaption,
   BlankLink,
-} from "../components/Text";
+} from "../components/OldText";
 import {
   Row,
   Divider,

@@ -9,7 +9,7 @@ import {
   Heading1,
   Headline2,
   BlankLink,
-} from "../components/Text";
+} from "../components/OldText";
 import { Row, TitleLink } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";

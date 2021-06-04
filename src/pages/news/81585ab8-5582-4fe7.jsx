@@ -6,7 +6,7 @@ import {
   MediumBody,
   UpperCaption,
   BlankLink,
-} from "../../components/Text";
+} from "../../components/OldText";
 import { Row, Divider, TitleLink } from "../../components/Blocks";
 import { ShareContainer } from "../../components/Buttons";
 import QuoteBlock from "../../components/QuoteBlock";

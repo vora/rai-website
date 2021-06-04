@@ -17,7 +17,7 @@ import {
   Headline5,
   MediumBody,
   SmallBody,
-} from "../components/Text";
+} from "../components/OldText";
 
 import portal from "../images/rai-icons/Portal.png";
 import map from "../images/rai-icons/map.png";

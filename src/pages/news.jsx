@@ -7,7 +7,7 @@ import {
   UpperCaption,
   Headline4,
   BlankLink,
-} from "../components/Text";
+} from "../components/OldText";
 import {
   Jumbotron,
   JumboText,

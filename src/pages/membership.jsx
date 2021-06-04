@@ -9,7 +9,7 @@ import {
   SmallBody,
   Heading1,
   Heading3,
-} from "../components/Text";
+} from "../components/OldText";
 import {
   Jumbotron,
   JumboText,

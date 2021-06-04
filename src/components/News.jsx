@@ -1,6 +1,6 @@
 import React from "react";
 import styled, {css} from "styled-components";
-import { Headline5 } from "./Text";
+import { Headline5 } from "./OldText";
 import { Caption } from '@/components/Caption';
 
 const carbon = "#2f2d34";

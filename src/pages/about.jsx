@@ -7,7 +7,7 @@ import {
   MediumBody,
   Headline2,
   Headline4,
-} from "../components/Text";
+} from "../components/OldText";
 import {
   Jumbotron,
   JumboText,

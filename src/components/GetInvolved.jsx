@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { Row } from "./Blocks";
 import { PrimaryBtn } from "./Buttons"
-import { Headline2, LargeBody } from "./Text"
+import { Headline2, LargeBody } from "./OldText"
 import StyledLink from "../components/StyledLink";
 
 

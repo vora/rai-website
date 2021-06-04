@@ -12,7 +12,7 @@ import {
   MediumBody,
   LargeBody,
   Heading1,
-} from "../components/Text";
+} from "../components/OldText";
 
 const Column = styled.div`
   display: flex;

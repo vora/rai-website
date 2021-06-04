@@ -8,7 +8,7 @@ import {
   LargeBody,
   Headline2,
   BlankLink,
-} from "../components/Text";
+} from "../components/OldText";
 import { PrimaryBtn } from "../components/Buttons";
 import {
   Jumbotron,

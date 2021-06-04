@@ -5,7 +5,7 @@ import {
   Headline2,
   Headline4,
   Headline5,
-} from "../components/Text";
+} from "../components/OldText";
 import { Row, TitleLink } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";

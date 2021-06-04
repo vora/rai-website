@@ -9,7 +9,7 @@ import {
   MediumBody,
   LargeBody,
   Heading1,
-} from "../components/Text";
+} from "../components/OldText";
 import GetInvolved from "../components/GetInvolved";
 import {
   Jumbotron,
