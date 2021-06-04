@@ -2,8 +2,9 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import {withPrefix} from "gatsby";
+import { Heading } from '@/components/Heading';
+
 import {
-  Headline1,
   MediumBody,
   Heading1,
   Headline2,
@@ -50,7 +51,7 @@ function Faq() {
   return (
     <Layout title="FAQ">
       <Row>
-        <Headline1>Frequently Asked Questions</Headline1>
+        <Heading as="h1">Frequently Asked Questions</Heading>
         <MediumBody>
           Learn more about Responsible Artificial Intelligence, RAI, and how you
           can get involved.

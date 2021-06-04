@@ -2,8 +2,8 @@ import React from "react";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
+import { Heading } from '@/components/Heading';
 import {
-  Headline1,
   Headline2,
   Headline4,
   MediumBody,
@@ -51,10 +51,10 @@ function Certification() {
     <Layout title="Certification">
       <Jumbotron>
         <JumboText>
-          <Headline1>
+          <Heading as="h1">
             RAI Certification
             <br /> Beta
-          </Headline1>
+          </Heading>
           <MediumBody>
             <strong>
               The world’s first independent, accredited certification program of

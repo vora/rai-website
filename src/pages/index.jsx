@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { navigate } from "gatsby";
+import { Heading } from '@/components/Heading';
 import {
-  Headline1,
   MediumBody,
   Heading1,
   LargeBody,
@@ -32,9 +32,9 @@ function Index() {
     <Layout title="Home">
       <Jumbotron top>
         <JumboText>
-          <Headline1>
+          <Heading as="h1">
             Working Together <br /> for AI We Can Trust
-          </Headline1>
+          </Heading>
           <MediumBody>
             Artificial Intelligence holds great potential and great peril. As
             practitioners <br /> and stakeholders, our choice is to build a
@@ -150,9 +150,9 @@ function Index() {
           />
         </JumboImage>
         <JumboText right>
-          <Headline1>
+          <Heading as="h1">
             AI Offers <br /> Incredible Promise.
-          </Headline1>
+          </Heading>
           <MediumBody>
             AI is, without hyperbole, poised to reshape the world as we know it.
             It is <br />
@@ -175,9 +175,9 @@ function Index() {
       </Jumbotron>
       <Jumbotron text>
         <JumboText>
-          <Headline1>
+          <Heading as="h1">
             AI's Power <br /> Needs Guardrails.
-          </Headline1>
+          </Heading>
           <MediumBody>
             When not designed in a thoughtful and responsible manner, AI systems{" "}
             <br />

@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
+import { Heading } from '@/components/Heading'
 import styled from "styled-components";
 import {
   Jumbotron,
@@ -11,7 +12,6 @@ import {
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import {
-  Headline1,
   Headline2,
   Headline4,
   Headline5,
@@ -94,11 +94,11 @@ function Tools() {
     <Layout title="Tools">
       <Jumbotron>
         <JumboText>
-          <Headline1>
+          <Heading as="h1">
             The Journey to
             <br /> Responsible AI Begins
             <br /> Here.
-          </Headline1>
+          </Heading>
           <MediumBody>
             RAI is defining responsible AI with an independent, authoritative
             <br />

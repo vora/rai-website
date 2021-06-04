@@ -2,7 +2,6 @@ import React from "react";
 import styled, {css} from "styled-components";
 import Layout from "../components/Layout";
 import {
-  Headline1,
   Headline2,
   Headline4,
   Headline5,
@@ -10,6 +9,7 @@ import {
 import { Row, TitleLink } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
+import { Heading } from '@/components/Heading'
 
 const carbon = "#2f2d34";
 const gray = "#797b80";
@@ -55,7 +55,7 @@ function Calendar() {
   return (
     <Layout title="Calendar">
       <Row>
-        <Headline1>Events Calendar</Headline1>
+        <Heading as="h1">Events Calendar</Heading>
         <br />
         <Headline4>May 2021</Headline4>
         <BoxRow>
