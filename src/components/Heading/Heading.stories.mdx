@@ -1,0 +1,41 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Heading } from ".";
+
+<Meta title="components/Heading" component={Heading} />
+
+
+# Heading
+
+Headings are used as the titles of each major section of a page. Reserved for short, important text.
+
+## Usage
+
+```tsx
+import { Heading } from "@/components/Heading"
+```
+
+## Props
+
+<ArgsTable component={Heading} />
+
+## Accessibility Notes
+
+- There should only ever by 1 `<Heading as="h1" />` per page. 
+- `<Heading as="h1" />` should be reserved for the page title.
+- `Headings` should go in order as much as possible. Example:
+
+```tsx
+<Heading as="h1" />
+  <Heading as="h2" />
+    <Heading as="h3" />
+  <Heading as="h2" />
+    <Heading as="h3" />
+```
+
+## Example
+
+<Canvas>
+  <Story name="Default">
+    {(args) => <Heading {...args}>I Am C-3PO</Heading>}
+  </Story>
+</Canvas>
