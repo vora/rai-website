@@ -1,0 +1,53 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Button } from ".";
+
+<Meta title="components/Button" component={Button} />
+
+# Button
+
+`Buttons` are a user interface component that allow users to navigation pages, as well as initiate, complete, and reverse actions.
+
+## Usage
+
+```tsx
+import { Button } from "@/components/Button";
+```
+
+## Props
+
+<ArgsTable component={Button} />
+
+## Accessibility Notes
+
+- `Button` variations should be chosen to have high contrast with the background.
+
+## Example
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{ title: "Roger, roger", url: "https://responsible.ai/" }}
+  >
+    {(args) => <Button {...args} />}
+  </Story>
+</Canvas>
+
+## Variations
+
+Different variations of buttons should be used for different situations.
+
+### Primary
+
+Primary buttons should be used for highly important call to actions.
+
+<Canvas>
+  <Button title="Roger, roger" url="/responsible-ai" variation="primary" />
+</Canvas>
+
+### Inverted
+
+Inverted buttons should be used for highly important call to actions that are displayed on a dark background.
+
+<Canvas>
+  <Button title="Roger, roger" url="/responsible-ai" variation="inverted" />
+</Canvas>

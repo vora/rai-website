@@ -1,0 +1,44 @@
+.button {
+  appearance: none;
+  display: inline-block;
+  background: var(--color--carbon);
+  color: var(--color--blanco);
+  padding: var(--space--small) var(--space--large);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 300ms;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background: var(--color--stone);
+}
+
+.button:focus {
+  box-shadow: 0 0 var(--space--xsmall) rgba(var(--color--carbon--rgb), 0.25);
+}
+
+/* Primary Button */
+.primary {
+  background: var(--color--carbon);
+}
+
+.primary:hover {
+  background: var(--color--stone);
+}
+
+/* Inverted Button */
+.inverted {
+  background: var(--color--blanco);
+  color: var(--color--carbon);
+}
+
+.inverted:hover {
+  background: var(--color--ghost);
+}
+
+.inverted:focus {
+  box-shadow: 0 0 var(--space--xsmall) rgba(var(--color--ghost--rgb), 0.25);
+}
+
+
