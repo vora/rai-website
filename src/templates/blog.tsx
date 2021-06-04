@@ -12,7 +12,7 @@ import { Heading } from "@/components/Heading";
 import { Icon } from "@/components/Icon";
 import { PageTitle } from "@/components/PageTitle";
 import { Caption } from "@/components/Caption";
-import { Text } from "@/components/NewText";
+import { Text } from "@/components/Text";
 import { Divider } from "@/components/Divider";
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 // @ts-expect-error TODO: will move this to typescript and contentful

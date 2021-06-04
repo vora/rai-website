@@ -6,7 +6,7 @@
 # We should add to this list while work is being done, and then remove everything
 # below this comment once we are confident we can do a complete lint.
 **/*.jsx
-!**/NewText/**
+!**/Text/**
 !**/Banner.jsx
 !**/Container.jsx
 !**/Logo.jsx

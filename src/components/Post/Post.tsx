@@ -1,6 +1,6 @@
 import React from "react";
 import { Heading } from "@/components/Heading";
-import { Text } from "@/components/NewText";
+import { Text } from "@/components/Text";
 import { Caption } from "@/components/Caption";
 import { Link } from "gatsby";
 import { IGatsbyImageData } from "gatsby-plugin-image";
