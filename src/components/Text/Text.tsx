@@ -7,7 +7,7 @@ interface TextProps {
   /**
    * Represents the size to display the text at.
    */
-  readonly size?: "base" | "small";
+  readonly size?: "base" | "small" | "large";
 }
 
 export function Text({
