@@ -1,42 +1,72 @@
-# 🚀 Gatsby Notes
+# 🤖 Responsible AI Website
 
-Here's some general tips and information about using Gatsby:
+This is the repository for the [Responsible AI Website](https://www.responsible.ai/).
 
-- Individual components in **src/pages** is a route (i.e. view)
-- Styled components plugin has already been added - do NOT add new CSS files and limit inline styling within JSX
-- Use **npm install** for adding new packages (please do not use yarn as dependencies are already in package-lock.json)
+This is a [React](https://reactjs.org/) project built using [Gatsby](https://www.gatsbyjs.com/) as a framework, [Contentful](https://www.contentful.com/) as a CMS, and [Storybook](https://storybook.js.org/) as a component playground.
 
-# Getting Started
+## Getting Started
 
-The first step is ensuring you have a version of npm and Node (which we should all have at this point). You'll then need to install the Gatsby CLI:
+**Prerequisites**
 
-```
-$ npm install -g gatsby-cli
-```
+- `node@12.13.0`. You can use [nvm](https://github.com/nvm-sh/nvm) to manage your node versions.
+- Access to Contentful secrets
 
-To connect to the Contentful Space, you'll need to set the following environmental variables: **CONTENTFUL_TOKEN, CONTENTFUL_SPACE** (use set command in Windows).
+To get this project set up on your local machine:
 
-To begin development, just run the following:
-
-```
-$ gatsby develop
+```shell
+git clone git@github.com:AI-Global/rai-website.git
+cd rai-website
+npm install
 ```
 
-And that's it! The site will be hosted at **localhost:8000**.
+To start developing against the project
 
-## Working on Components
+```shell
+npm start
+```
+
+After running the `npm start` command, you should have 2 browser tabs open:
+
+```shell
+// Gatsby site
+http://localhost:8000
+// Storybook
+http://localhost:8100
+```
+
+## Working with Gatsby
+
+`http://localhost:8000/`[🔗](http://localhost:8000)
+
+> Gatsby is a React-based open-source framework for creating websites and apps. It's great whether you're building a portfolio site or blog, or a high-traffic e-commerce store or company homepage.
+
+For more reading about Gatsby, check out their [docs](https://www.gatsbyjs.com/docs/).
+
+## Working with Storybook
+
+`http://localhost:8100/`[🔗](http://localhost:8100)
 
 Ideally, components should be created in isolation. The reason for this is that Components should be as generic as possible to allow for as many use cases as possible. To do this, we use [Storybook](https://storybook.js.org/).
 
+Storybook will allow you to develop and test your components in isolation from the rest of the website.
+
+## Testing
+
+To run tests:
+
 ```shell
-npm run storybook
+npm run test
 ```
 
-Storybook will allow you to develop and test your components in isolation from the rest of the website.
+When working on a specific component, you can run the tests for that specific component:ß
+
+```shell
+npm run test ComponentName
+```
 
 ### Linting
 
-Responsible AI website project uses `eslint` to run a linter of javascript and typescript code.
+Responsible AI website project uses `eslint` to run a linter of javascript, typescript, and markdown code.
 
 To run the linter, use:
 

@@ -1,0 +1,43 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Link } from ".";
+
+<Meta title="components/Link" component={Link} />
+
+# Link
+
+A `Link` is used to navigate another page or website.
+
+## Usage
+
+```tsx
+import { Link } from "@/components/Link";
+```
+
+## Props
+
+<ArgsTable component={Link} />
+
+## Accessibility Notes
+
+- The color of `Link` should be inherited from its parent component.
+
+## Example
+
+<Canvas>
+  <Story name="Default" args={{ url: "https://responsible.ai" }}>
+    {(args) => <Link {...args}>Are Droids Allowed Here?</Link>}
+  </Story>
+</Canvas>
+
+## External Links
+
+External links can, and should be opened in a new tab using the `external` prop.
+
+<Canvas>
+  <Story
+    name="External Links"
+    args={{ url: "https://responsible.ai", external: true }}
+  >
+    {(args) => <Link {...args}>Are Droids Allowed Here?</Link>}
+  </Story>
+</Canvas>
