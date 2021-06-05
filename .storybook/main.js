@@ -14,6 +14,14 @@ module.exports = {
     config.module.rules[0].use[0].options.plugins.push(
       require.resolve("babel-plugin-remove-graphql-queries")
     );
+
+    config.module.rules.push({
+      enforce: "pre",
+      test: /\.module\.css$/,
+      exclude: [/node_modules/],
+      loader: require.resolve("typed-css-modules-loader"),
+    });
+
     return config;
   },
 };
