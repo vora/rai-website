@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "../components/Layout";
+import { Heading } from '@/components/Heading';
 import {
-  Headline1,
   Headline2,
   MediumBody,
   UpperCaption,
   BlankLink,
-} from "../components/Text";
+} from "../components/OldText";
 import {
   Row,
   Divider,
@@ -22,10 +22,10 @@ function Page() {
   return (
     <Layout title="Example Article">
       <Row>
-        <Headline1>
+        <Heading as="h1">
           Independent Certification Working Group Launched for Advancing Ethical
           and Responsible AI
-        </Headline1>
+        </Heading>
         <br />
         <Divider />
         <ShareContainer>

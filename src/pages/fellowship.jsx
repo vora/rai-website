@@ -5,14 +5,14 @@ import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
+import { Heading } from '@/components/Heading'
 
 import {
-  Headline1,
   Headline2,
   MediumBody,
   LargeBody,
   Heading1,
-} from "../components/Text";
+} from "../components/OldText";
 
 const Column = styled.div`
   display: flex;
@@ -41,11 +41,11 @@ function Fellowship() {
     <Layout title="Fellowship">
       <Jumbotron>
         <JumboText>
-          <Headline1>
+          <Heading as="h1">
             Responsible AI
             <br /> Fellowship Program
             <br /> 2021
-          </Headline1>
+          </Heading>
           <MediumBody>
             Responsible AI Institute (RAI) is establishing a 2021 cohort of
             Fellows from

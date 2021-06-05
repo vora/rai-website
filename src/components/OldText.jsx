@@ -6,22 +6,6 @@ const blanco = "#ffffff";
 const gravy = "#797b80";
 
 /* HEADLINES */
-export const Headline1 = styled.h1`
-  font-family: Libre Caslon Text;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 60px;
-  line-height: 76px;
-  letter-spacing: -0.03em;
-  margin: 0px 0px 20px 0px;
-  color: ${(props) => (props.dark ? blanco : carbon)};
-
-  @media screen and (max-width: 600px) {
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: -0.02em;
-  }
-`;
 export const Headline2 = styled.h1`
   font-family: Libre Caslon Text;
   font-style: normal;

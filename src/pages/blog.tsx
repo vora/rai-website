@@ -9,7 +9,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import { Caption } from "@/components/Caption";
 import { Heading } from "@/components/Heading";
-import { Text } from "@/components/NewText";
+import { Text } from "@/components/Text";
 import { Icon } from "@/components/Icon";
 import styles from "./blog.module.css";
 

@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "components/Layout";
+import { Heading } from '@/components/Heading';
 import {
-  Headline1,
   MediumBody,
   Headline2,
   Headline4,
-} from "../components/Text";
+} from "../components/OldText";
 import {
   Jumbotron,
   JumboText,
@@ -273,7 +273,7 @@ function About(props) {
     <Layout title="About">
       <Jumbotron>
         <JumboText>
-          <Headline1>About RAI</Headline1>
+          <Heading as="h1">About RAI</Heading>
           <MediumBody>
             RAI is a non-profit organization building tangible <br /> governance
             tools for trustworthy, safe, and fair Artificial <br />

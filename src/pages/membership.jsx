@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import { Heading } from '@/components/Heading'
 import {
-  Headline1,
   Headline2,
   LargeBody,
   MediumBody,
   SmallBody,
   Heading1,
   Heading3,
-} from "../components/Text";
+} from "../components/OldText";
 import {
   Jumbotron,
   JumboText,
@@ -55,11 +55,11 @@ function Membership() {
     <Layout title="Membership">
       <Jumbotron style={{ marginBottom: "0px" }}>
         <JumboText>
-          <Headline1>
+          <Heading as="h1">
             Join Visionary Leaders <br />
             Working Together for <br />
             AI We Can Trust
-          </Headline1>
+          </Heading>
           <MediumBody>
             RAI is defining responsible AI with an independent, authoritative
             certification <br />

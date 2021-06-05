@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "../../components/Layout";
+import { Heading } from '@/components/Heading'
 import {
-  Headline1,
   Headline2,
   MediumBody,
   UpperCaption,
-} from "../../components/Text";
+} from "../../components/OldText";
 import { Row, Divider, TitleLink } from "../../components/Blocks";
 import { ShareContainer } from "../../components/Buttons";
 import News from "../../components/News";
@@ -15,10 +15,10 @@ function Page() {
   return (
     <Layout title="2020 AI Global Awards">
       <Row>
-        <Headline1>
+        <Heading as="h1">
           2020 AI Global Awards Recognize Standout Global Leaders in Responsible
           and Ethical AI
-        </Headline1>
+        </Heading>
         <br />
         <Divider />
         <ShareContainer>

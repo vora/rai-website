@@ -1,0 +1,41 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Text } from ".";
+
+<Meta title="components/Text" component={Text} />
+
+# Text
+
+The `Text` component is used to present paragraphs of content.
+
+## Usage
+
+```tsx
+import { Text } from "@/components/Text";
+```
+
+## Props
+
+<ArgsTable component={Text} />
+
+## Accessibility Notes
+
+- The color of the `Text` component should be handled by its parent component.
+
+## Example
+
+<Canvas>
+  <Story name="Default">
+    {(args) => (
+      <>
+        <Text {...args}>
+          Why couldn’t that bounty hunter have taken Captain Solo to a more…
+          pleasant environment?
+        </Text>
+        <Text {...args}>
+          Sir, The Possibility Of Successfully Navigating An Asteroid Field Is
+          Approximately Three-Thousand, Seven-Hundred And Twenty To One!
+        </Text>
+      </>
+    )}
+  </Story>
+</Canvas>

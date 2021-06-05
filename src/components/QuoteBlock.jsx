@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Headline5, MediumBody } from "./Text";
+import { Headline5, MediumBody } from "./OldText";
 
 const carbon = "#2f2d34";
 

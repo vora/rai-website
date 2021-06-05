@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout";
+import { Heading } from '@/components/Heading'
 import {
-  Headline1,
   Headline2,
   MediumBody,
   UpperCaption,
   Headline4,
   BlankLink,
-} from "../components/Text";
+} from "../components/OldText";
 import {
   Jumbotron,
   JumboText,
@@ -23,7 +23,7 @@ function NewsPage() {
   return (
     <Layout title="News">
       <Row small>
-        <Headline1>In the News</Headline1>
+        <Heading as="h1">In the News</Heading>
       </Row>
       <Jumbotron style={{ marginBottom: "0px" }} gray>
         <JumboText>
