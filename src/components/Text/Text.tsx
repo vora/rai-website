@@ -4,6 +4,9 @@ import classnames from "classnames";
 import styles from "./Text.module.css";
 
 interface TextProps {
+  /**
+   * Represents the size to display the text at.
+   */
   readonly size?: "base" | "small";
 }
 
