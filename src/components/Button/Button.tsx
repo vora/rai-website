@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 import styles from "./Button.module.css";
 
-interface ButtonProps {
+export interface ButtonProps {
   /**
    * The content of the Button. We use a title prop over
    * children as we want to limit the content of a button
