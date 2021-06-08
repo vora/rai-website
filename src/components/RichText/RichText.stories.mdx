@@ -1,0 +1,43 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { RichText } from ".";
+import { mockContent } from "./__mocks__/mockContent";
+
+<Meta title="components/RichText" component={RichText} />
+
+# RichText
+
+`RichText` is a component that is used to render Rich Text from [Contentful](https://www.contentful.com/).
+
+This component uses the `gatsby-source-contentful/rich-text` and `@contentful/rich-text-types` packages to render your content. Content should be queried from graphql and passed directly into the component.
+
+> `RichText` depends heavily on Contentful data structure. If Contentful ever updates its data structure, or the content is moved to another CMS, this component will need to be worked on.
+
+## Usage
+
+```tsx
+import { RichText } from "@/components/RichText";
+```
+
+## Props
+
+<ArgsTable component={RichText} />
+
+## Example
+
+```tsx
+export const query = graphql`
+  query {
+    content {
+      raw
+    }
+  }
+`;
+
+function Component({ data }) {
+  return <RichText content={data.content} />;
+}
+```
+
+<Canvas>
+  <Story name="Default">{() => <RichText content={mockContent} />}</Story>
+</Canvas>
