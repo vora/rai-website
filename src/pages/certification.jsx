@@ -10,7 +10,6 @@ import {
   LargeBody,
   Heading1,
 } from "../components/OldText";
-import GetInvolved from "../components/GetInvolved";
 import {
   Jumbotron,
   JumboText,
@@ -19,6 +18,7 @@ import {
   Row,
 } from "../components/Blocks";
 import certification from "../images/rai-content/Certification.png";
+import { CallToAction } from '@/blocks/CallToAction';
 
 const RectangleImg = styled.img`
   width: 100%;
@@ -211,36 +211,81 @@ function Certification() {
           </a>
         </div>
       </Row>
-      <GetInvolved></GetInvolved>
-      {/* <Row
-        dark
-        style={{
-          marginBottom: "206px",
-          marginLeft: "115px",
-          marginRight: "115px",
-          textAlign: "center",
+      <div style={{margin: 'var(--space--xxlarge) 0'}}>
+      <CallToAction 
+        title="Get Involved" 
+        action={{
+          title: "Become a member",
+          url: "/membership"
+        }} 
+        content={{
+          raw: `{
+              "data":{},
+              "content":[
+                {
+                  "data":{},
+                  "content":[
+                    {
+                      "data":{},
+                      "content":[
+                        {
+                          "data":{},
+                          "marks":[],
+                          "value":"For more information, please email us at ",
+                          "nodeType":"text"
+                        },
+                        {
+                          "nodeType":"hyperlink",
+                          "content":[
+                            {
+                              "nodeType":"text",
+                              "value":"admin@responsible.ai",
+                              "marks":[],
+                              "data":{}
+                            }
+                          ],
+                          "data":{
+                            "uri":"mailto:admin@responsible.ai"
+                          }
+                        },
+                        {
+                          "data":{},
+                          "marks":[],
+                          "value":", or ",
+                          "nodeType":"text"
+                        },
+                        {
+                          "nodeType":"hyperlink",
+                          "content":[
+                            {
+                              "nodeType":"text",
+                              "value":"sign up",
+                              "marks":[],
+                              "data":{}
+                            }
+                          ],
+                          "data":{
+                            "uri":"/membership"
+                          }
+                        },
+                        {
+                          "data":{},
+                          "marks":[],
+                          "value":" to become a member of RAI. You can also join our mailing list to stay informed on the progress.",
+                          "nodeType":"text"
+                        }
+                      ],
+                      "nodeType":"paragraph"
+                    }
+                  ],
+                  "nodeType":"paragraph"
+                }
+              ],
+              "nodeType":"document"
+            }`
         }}
-      >
-        <Headline2 style={{ color: "white" }}>Get Involved</Headline2>
-        <LargeBody
-          style={{
-            color: "white",
-            marginBottom: "50px",
-          }}
-        >
-          For more information, please email us at admin@responsible.ai, or
-          <strong> sign up</strong> to<br/> become a member of RAI.
-        </LargeBody>
-        <PrimaryBtn onClick={() => navigate("/membership")}>
-          Become a member
-        </PrimaryBtn>
-        {/* <a
-              className="kindful-donate-btn"
-              id="kindful-donate-btn-d1727a32-6c93-4808-a281-897960739db5"
-            >
-              Become a member
-            </a>
-      </Row> */}
+      />
+      </div>
     </Layout>
   );
 }

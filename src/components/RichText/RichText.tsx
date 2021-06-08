@@ -32,12 +32,19 @@ export function RichText({ size = "base", content }: RichTextProps) {
         <Text size={size}>{children}</Text>
       ),
       [INLINES.HYPERLINK]: ({ data }: Block | Inline, children: ReactNode) => {
-        const isExternal = !data.uri.includes("responsible.ai");
         return (
-          <Link url={data.uri} external={isExternal}>
+          <Link url={data.uri} external={getIsExternal()}>
             {children}
           </Link>
         );
+
+        // TODO: Lets figure out a better way to figure this out
+        function getIsExternal() {
+          if (data.uri.includes("mailto:")) {
+            return true;
+          }
+          return false;
+        }
       },
     },
   };
