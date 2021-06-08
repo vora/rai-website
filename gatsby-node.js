@@ -35,6 +35,7 @@ exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
     ...config.resolve.alias,
     "@/components": path.resolve(__dirname, "src/components"),
     "@/hooks": path.resolve(__dirname, "src/hooks"),
+    "@/blocks": path.resolve(__dirname, "src/blocks"),
     components: path.resolve(__dirname, "src/components"),
     styles: path.resolve(__dirname, "src/styles"),
   };

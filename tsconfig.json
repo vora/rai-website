@@ -70,6 +70,7 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["src/components/*"],
+      "@/blocks/*": ["src/blocks/*"],
       "@/hooks/*": ["src/hooks/*"],
     }, 
   },
