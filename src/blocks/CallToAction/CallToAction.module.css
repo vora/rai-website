@@ -2,7 +2,7 @@
   background: var(--color--carbon);
   color: var(--color--blanco);
   text-align: center;
-  padding: var(--space--large) var(--space--base);
+  padding: var(--space--large);
 }
 
 @media (min-width: 1024px) {
@@ -18,21 +18,5 @@
 }
 
 .content {
-  margin: var(--space--small) 0 var(--space--base);
+  margin: var(--space--base) 0 var(--space--large);
 }
-
-@media (min-width: 1024px) {
-  .content {
-    margin: var(--space--base) 0 var(--space--large);
-  }
-}
-
-@media (min-width: 1024px) {
-  .content {
-    margin: var(--space--base) 0 var(--space--large);
-  }
-}
-
-
-
-
