@@ -59,7 +59,7 @@ const mockParagraph = `
   "nodeType":"paragraph"
 }`;
 
-const mockParagraphWithLink = `
+export const mockParagraphWithLink = `
 {
   "data":{},
   "content":[
