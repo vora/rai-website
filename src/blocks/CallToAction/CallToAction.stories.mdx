@@ -1,0 +1,43 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { CallToAction } from ".";
+import { mockParagraphWithLink } from "@/components/RichText/__mocks__/mockContent";
+
+<Meta title="blocks/CallToAction" component={CallToAction} />
+
+# CallToAction
+
+## Usage
+
+```tsx
+import { CallToAction } from "@/blocks/CallToAction";
+```
+
+## Props
+
+<ArgsTable component={CallToAction} />
+
+## Example
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      title: "Get Involved",
+      content: {
+        raw: `{
+              "data":{},
+              "content":[
+                ${mockParagraphWithLink}
+              ],
+              "nodeType":"document"
+            }`,
+      },
+      action: {
+        title: "Become a member",
+        url: "/membership",
+      },
+    }}
+  >
+    {(args) => <CallToAction {...args} />}
+  </Story>
+</Canvas>
