@@ -23,7 +23,7 @@ import StyledLink from "../components/StyledLink";
 import News from "../components/News";
 import Modal from "react-modal";
 import close from "../images/icons/exit.png";
-import GetInvolved from "../components/GetInvolved";
+import { CallToAction } from '@/blocks/CallToAction';
 
 import manoj from "../images/people/manoj.png";
 import matt from "../images/people/matt.png";
@@ -977,7 +977,81 @@ function About(props) {
           </MediumBody>
         </FellowshipDescription>
       </Row>
-      <GetInvolved />
+      <div style={{margin: 'var(--space--xxlarge) 0'}}>
+      <CallToAction 
+        title="Get Involved" 
+        action={{
+          title: "Become a member",
+          url: "/membership"
+        }} 
+        content={{
+          raw: `{
+              "data":{},
+              "content":[
+                {
+                  "data":{},
+                  "content":[
+                    {
+                      "data":{},
+                      "content":[
+                        {
+                          "data":{},
+                          "marks":[],
+                          "value":"For more information, please email us at ",
+                          "nodeType":"text"
+                        },
+                        {
+                          "nodeType":"hyperlink",
+                          "content":[
+                            {
+                              "nodeType":"text",
+                              "value":"admin@responsible.ai",
+                              "marks":[],
+                              "data":{}
+                            }
+                          ],
+                          "data":{
+                            "uri":"mailto:admin@responsible.ai"
+                          }
+                        },
+                        {
+                          "data":{},
+                          "marks":[],
+                          "value":", or ",
+                          "nodeType":"text"
+                        },
+                        {
+                          "nodeType":"hyperlink",
+                          "content":[
+                            {
+                              "nodeType":"text",
+                              "value":"sign up",
+                              "marks":[],
+                              "data":{}
+                            }
+                          ],
+                          "data":{
+                            "uri":"/membership"
+                          }
+                        },
+                        {
+                          "data":{},
+                          "marks":[],
+                          "value":" to become a member of RAI. You can also join our mailing list to stay informed on the progress.",
+                          "nodeType":"text"
+                        }
+                      ],
+                      "nodeType":"paragraph"
+                    }
+                  ],
+                  "nodeType":"paragraph"
+                }
+              ],
+              "nodeType":"document"
+            }`
+        }}
+      />
+      </div>
       <Row gray>
         <TitleLink>
           <Headline2>News</Headline2>

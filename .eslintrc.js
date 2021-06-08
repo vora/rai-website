@@ -24,6 +24,7 @@ module.exports = {
         map: [
           ["@/components", "./src/components"],
           ["@/hooks", "./src/hooks"],
+          ["@/blocks", "./src/blocks"],
         ],
         extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
       },

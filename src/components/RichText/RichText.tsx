@@ -9,11 +9,14 @@ import { Heading } from "@/components/Heading";
 import { Text } from "@/components/Text";
 import { Link } from "@/components/Link";
 
+export type RichTextContent = RenderRichTextData<ContentfulRichTextGatsbyReference>;
+
 interface RichTextProps {
-  readonly content: RenderRichTextData<ContentfulRichTextGatsbyReference>;
+  readonly size?: "base" | "large";
+  readonly content: RichTextContent;
 }
 
-export function RichText({ content }: RichTextProps) {
+export function RichText({ size = "base", content }: RichTextProps) {
   const options = {
     renderNode: {
       [BLOCKS.HEADING_1]: (node: Block | Inline, children: ReactNode) => (
@@ -26,15 +29,22 @@ export function RichText({ content }: RichTextProps) {
         <Heading as="h3">{children}</Heading>
       ),
       [BLOCKS.PARAGRAPH]: (node: Block | Inline, children: ReactNode) => (
-        <Text>{children}</Text>
+        <Text size={size}>{children}</Text>
       ),
       [INLINES.HYPERLINK]: ({ data }: Block | Inline, children: ReactNode) => {
-        const isExternal = !data.uri.includes("responsible.ai");
         return (
-          <Link url={data.uri} external={isExternal}>
+          <Link url={data.uri} external={getIsExternal()}>
             {children}
           </Link>
         );
+
+        // TODO: Lets figure out a better way to figure this out
+        function getIsExternal() {
+          if (data.uri.includes("mailto:")) {
+            return true;
+          }
+          return false;
+        }
       },
     },
   };
