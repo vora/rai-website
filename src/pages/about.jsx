@@ -922,14 +922,6 @@ function About(props) {
             </GridContainer>
             <GridContainer>
               <StaticImage
-                src="../images/partner-logos/sri.png"
-                alt="SRI"
-                quality={100}
-                placeholder="blurred"
-              />
-            </GridContainer>
-            <GridContainer>
-              <StaticImage
                 src="../images/partner-logos/oxford-brooks.png"
                 alt="Oxford Brooks"
                 quality={100}
@@ -952,6 +944,7 @@ function About(props) {
                 placeholder="blurred"
               />
             </GridContainer>
+            <GridContainer>&nbsp;</GridContainer>
           </GridRow>
         </Grid>
       </Row>

@@ -518,20 +518,13 @@ function Index() {
             </GridContainer>
             <GridContainer>
               <StaticImage
-                src="../images/partner-logos/sri.png"
-                alt="SRI"
-                quality={100}
-                placeholder="blurred"
-              />
-            </GridContainer>
-            <GridContainer>
-              <StaticImage
                 src="../images/partner-logos/strauss-center.png"
                 alt="Strauss Center"
                 quality={100}
                 placeholder="blurred"
               />
             </GridContainer>
+            <GridContainer>&nbsp;</GridContainer>
           </GridRow>
         </Grid>
         <LargeBody>Learn more about our work and partnerships.</LargeBody>
