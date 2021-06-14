@@ -68,11 +68,7 @@ function Certification() {
             bias,
             <br /> explainability, and other concrete metrics of responsibly
             built AI
-            <br /> systems. The Schwartz Reisman Institute for Technology and
-            Society
-            <br /> (SRI) at University of Toronto is serving as a business
-            partner on the
-            <br /> development phase of the initiative.
+            <br /> systems.
           </MediumBody>
           <br />
         </JumboText>
