@@ -14,8 +14,14 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
           slug
         }
       }
+      allContentfulPage {
+        nodes {
+          slug
+        }
+      }
     }
   `).then((result) => {
+    // Generate our blog pages
     result.data.allContentfulBlogPost.nodes.forEach((node) => {
       createPage({
         path: `/blog/${node.slug.replace(/ /g, "-")}`,
@@ -25,6 +31,19 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
         },
       });
     });
+
+    if (process.env.NODE_ENV === "development") {
+      // Generate our pages
+      result.data.allContentfulPage.nodes.forEach((node) => {
+        createPage({
+          path: `/${node.slug.replace(/ /g, "-")}`,
+          component: path.resolve(`./src/templates/page.tsx`),
+          context: {
+            slug: node.slug,
+          },
+        });
+      });
+    }
   });
 };
 
