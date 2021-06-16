@@ -1,33 +1,18 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
-import { useStaticQuery } from "gatsby";
+
 import { Banner } from ".";
 
-jest.mock("gatsby", () => {
-  return {
-    graphql: jest.fn(),
-    useStaticQuery: jest.fn(() => ({
-      contentfulMicroContent: {
-        value: "Foo",
-      },
-    })),
-  };
-});
-
-afterEach(() => {
-  cleanup();
-  jest.clearAllMocks();
-});
+afterEach(() => cleanup);
 
 it("renders the banner content", () => {
-  const { getByText } = render(<Banner />);
+  const { getByText } = render(<Banner title="Foo" />);
   expect(getByText("Foo")).toBeInstanceOf(HTMLParagraphElement);
 });
 
-it("returns nothing when the data returns empty", () => {
-  // @ts-expect-error TODO: Lets fix this typescript error
-  useStaticQuery.mockImplementation(() => jest.fn());
-
-  const { container } = render(<Banner />);
-  expect(container).toMatchInlineSnapshot(`<div />`);
+it("renders with an aria label", () => {
+  const { getByLabelText } = render(
+    <Banner title="Foo" ariaLabel="Hello World" />
+  );
+  expect(getByLabelText("Hello World")).toBeInstanceOf(HTMLDivElement);
 });
