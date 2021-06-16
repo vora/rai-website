@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from "react";
 import { Helmet } from "react-helmet";
 import { withPrefix } from "gatsby";
 
-import { Banner } from "@/components/Banner";
+import { WebsiteBanner } from "@/components/WebsiteBanner";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import styles from "./Layout.module.css";
@@ -38,7 +38,7 @@ export function Layout({
       </Helmet>
 
       <div className={styles.layout}>
-        <Banner />
+        <WebsiteBanner />
         <Navigation />
         <main className={styles.main}>{children}</main>
         <Footer />

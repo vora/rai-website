@@ -1,0 +1,31 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Banner } from ".";
+
+<Meta title="components/Banner" component={Banner} />
+
+# Banner
+
+A `Banner` is used to provide important information to a user. Banners should appear at the top of the screen or directly above the content that they reference.
+
+## Usage
+
+```tsx
+import { Banner } from "@/components/Banner";
+```
+
+## Props
+
+<ArgsTable component={Banner} />
+
+## Accessibility Notes
+
+- The `Banner` provides a `role` of `alert`.
+- The banner allows for an `aria-label` to be added for more descriptive information for screen readers.
+
+## Example
+
+<Canvas>
+  <Story name="Default" args={{ title: "No, you are the one who is useless" }}>
+    {(args) => <Banner {...args} />}
+  </Story>
+</Canvas>

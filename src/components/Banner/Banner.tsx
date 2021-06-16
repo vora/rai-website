@@ -1,25 +1,20 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import { Text } from "../Text";
 
 import styles from "./Banner.module.css";
 
-export function Banner() {
-  const data = useStaticQuery(graphql`
-    query bannerQuery {
-      contentfulMicroContent(key: { eq: "Website Banner" }) {
-        value
-      }
-    }
-  `);
+interface BannerProps {
+  /**
+   * The title string that will render inside the Banner
+   */
+  readonly title: string;
+  readonly ariaLabel?: string;
+}
 
-  if (!data?.contentfulMicroContent?.value) {
-    return <></>;
-  }
-
+export function Banner({ title, ariaLabel }: BannerProps) {
   return (
-    <div className={styles.banner} role="alert" aria-label="Important Message">
-      <Text size="small">{data.contentfulMicroContent.value}</Text>
+    <div className={styles.banner} role="alert" aria-label={ariaLabel}>
+      <Text size="small">{title}</Text>
     </div>
   );
 }

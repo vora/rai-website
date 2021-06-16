@@ -26,7 +26,7 @@
     "test": "jest --coverage",
     "typecheck": "tsc --noEmit --project tsconfig.json",
     "cssTypes": "tcm src/components",
-    "storybook": "start-storybook -p 8100",
+    "storybook": "start-storybook -p 8100 -s public",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
@@ -77,6 +77,8 @@
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "babel-loader": "^8.2.2",
+    "babel-plugin-remove-graphql-queries": "^3.7.1",
+    "babel-preset-react-app": "^10.0.0",
     "css-loader": "^5.2.6",
     "eslint": "^7.25.0",
     "eslint-config-airbnb": "^18.2.1",

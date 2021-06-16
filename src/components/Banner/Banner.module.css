@@ -1,8 +1,9 @@
 .banner {
   background: var(--color--carbon);
-  padding: var(--space--xxsmall) var(--space--base);
+  padding: var(--space--xsmall) var(--space--base);
   color: var(--color--blanco);
   text-align: center;
+  box-shadow: 0 var(--space--xxsmall) var(--space--xxsmall) -3px rgba(var(--color--carbon--rgb), 0.4);
 }
 
 .banner p {
