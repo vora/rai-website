@@ -114,33 +114,27 @@ function Certification() {
         <JumboText>
           <Headline2>Why RAI Certification?</Headline2>
           <MediumBody>
-            <strong>Certification of AI Systems</strong>
+            <strong>RAI Certification Allows for:</strong>
             <br />
-            Our certification program looks comprehensively across the data,<br/>
-             systems, and the context which the AI system are being used.
             <br />
-            <br /> <strong>Build on existing frameworks and regulations</strong>
+            Recognizing, preparing for, and mitigating potential harmful effects of 
+            <br/>data and algorithm bias from blackbox AI. 
             <br />
-            Provide a practical and unified framework that translates across
-            <br /> already-existing work from the industry. We are not trying to
-            <br /> re-inventing the wheel.
+            Improving explainability to build customer trust and build competitive
+            <br/> advantage with your AI systems.
             <br />
-            <br /> <strong>Assessments specific to system type</strong>
+            Ensuring legal compliance and ethical alignment of your AI with your
+            <br/> values and improve overall AI governance.
             <br />
-            Assessment criteria will be customized based on the type of AI
-            system
-            <br /> being assessed (e.g., Intelligent process automation, Image
-            &amp; Object
-            <br /> recognition, Text &amp; Speech Analysis, Advanced data
-            analytics, NLP &amp;
-            <br /> content creation)
-            <br />
-            <br /> <strong>Assessments specific to domain and region</strong>
-            <br />
-            In order to have meaningful substance, assessment criteria will also
-            <br /> cover specific application domains (e.g., credit &amp;
-            collections,
-            <br /> healthcare diagnostics, etc.), and regions.
+            Addressing stakeholder expectations towards your company’s 
+            <br/>behavior and corporate social responsibility.
+            <br/>
+            Avoiding reputational damage by increasing the transparency and 
+            <br/>explainability of AI decision making processes.
+            <br/>
+            Leveraging our RAI community to solve AI trust problems and 
+            <br/>improve the performance and quality of your AI systems.
+            <br/>
           </MediumBody>
           <br />
           <PDFButton href="/Whitepaper.pdf">
@@ -159,9 +153,9 @@ function Certification() {
             <br />
             <BorderTitle>Automated Diagnosis and Treatment</BorderTitle>
             <br />
-            <BorderTitle>Health recommendation systems</BorderTitle>
+            <BorderTitle>Health Recommendation Systems</BorderTitle>
             <br />
-            <BorderTitle>Automated Hiring</BorderTitle>
+            <BorderTitle>Automated Human Resources</BorderTitle>
           </LargeBody>
         </GrayPanel>
       </Jumbotron>

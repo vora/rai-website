@@ -59,6 +59,15 @@ const plugins = [
     },
     __key: "images",
   },
+  {
+    resolve: `gatsby-plugin-google-gtag`,
+    options: {
+      trackingIds: [process.env.GA4_TAG],
+      pluginConfig: {
+        head: true,
+      },
+    },
+  },
 ];
 
 /**
