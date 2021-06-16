@@ -1,0 +1,26 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { WebsiteBanner } from ".";
+
+<Meta title="Layout/WebsiteBanner" component={WebsiteBanner} />
+
+# WebsiteBanner
+
+The `WebsiteBanner` is used to provide important information at the top of the website. It uses the [Banner](?path=/docs/components-banner--default-story) component.
+
+It gathers its data from the `Contentful Micro Content` content model.
+
+## Usage
+
+```tsx
+import { WebsiteBanner } from "@/components/WebsiteBanner";
+```
+
+## Props
+
+<ArgsTable component={WebsiteBanner} />
+
+## Example
+
+<Canvas>
+  <Story name="Default">{(args) => <WebsiteBanner {...args} />}</Story>
+</Canvas>
