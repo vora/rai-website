@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 /* Font colors */
 const carbon = "#2f2d34";
@@ -49,11 +49,11 @@ export const SecondaryBtn = styled.button`
   width: fit-content;
   margin-bottom: 12px;
 
-  &:hover, :active {
+  &:hover,
+  :active {
     background: ${(props) => (props.dark ? stone : ghost)};
   }
 `;
-
 
 export const ShareContainer = styled.div`
   margin: 40px 0px;

@@ -1,8 +1,9 @@
 import React from "react";
-import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { Heading } from '@/components/Heading';
+import { Heading } from "@/components/Heading";
+import { CallToAction } from "@/blocks/CallToAction";
+import Layout from "../components/Layout";
 import {
   Headline2,
   Headline4,
@@ -18,7 +19,6 @@ import {
   Row,
 } from "../components/Blocks";
 import certification from "../images/rai-content/Certification.png";
-import { CallToAction } from '@/blocks/CallToAction';
 
 const RectangleImg = styled.img`
   width: 100%;
@@ -117,24 +117,30 @@ function Certification() {
             <strong>RAI Certification Allows for:</strong>
             <br />
             <br />
-            Recognizing, preparing for, and mitigating potential harmful effects of 
-            <br/>data and algorithm bias from blackbox AI. 
+            Recognizing, preparing for, and mitigating potential harmful effects
+            of
             <br />
-            Improving explainability to build customer trust and build competitive
-            <br/> advantage with your AI systems.
+            data and algorithm bias from blackbox AI.
+            <br />
+            Improving explainability to build customer trust and build
+            competitive
+            <br /> advantage with your AI systems.
             <br />
             Ensuring legal compliance and ethical alignment of your AI with your
-            <br/> values and improve overall AI governance.
+            <br /> values and improve overall AI governance.
             <br />
-            Addressing stakeholder expectations towards your company’s 
-            <br/>behavior and corporate social responsibility.
-            <br/>
-            Avoiding reputational damage by increasing the transparency and 
-            <br/>explainability of AI decision making processes.
-            <br/>
-            Leveraging our RAI community to solve AI trust problems and 
-            <br/>improve the performance and quality of your AI systems.
-            <br/>
+            Addressing stakeholder expectations towards your company’s
+            <br />
+            behavior and corporate social responsibility.
+            <br />
+            Avoiding reputational damage by increasing the transparency and
+            <br />
+            explainability of AI decision making processes.
+            <br />
+            Leveraging our RAI community to solve AI trust problems and
+            <br />
+            improve the performance and quality of your AI systems.
+            <br />
           </MediumBody>
           <br />
           <PDFButton href="/Whitepaper.pdf">
@@ -201,15 +207,15 @@ function Certification() {
           </a>
         </div>
       </Row>
-      <div style={{margin: 'var(--space--xxlarge) 0'}}>
-      <CallToAction 
-        title="Get Involved" 
-        action={{
-          title: "Become a member",
-          url: "/membership"
-        }} 
-        content={{
-          raw: `{
+      <div style={{ margin: "var(--space--xxlarge) 0" }}>
+        <CallToAction
+          title="Get Involved"
+          action={{
+            title: "Become a member",
+            url: "/membership",
+          }}
+          content={{
+            raw: `{
               "data":{},
               "content":[
                 {
@@ -272,9 +278,9 @@ function Certification() {
                 }
               ],
               "nodeType":"document"
-            }`
-        }}
-      />
+            }`,
+          }}
+        />
       </div>
     </Layout>
   );

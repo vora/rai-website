@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { Heading } from "@/components/Heading";
+import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
-import { Heading } from '@/components/Heading'
 import {
   Headline2,
   LargeBody,
@@ -22,7 +23,6 @@ import {
 import StyledLink from "../components/StyledLink";
 import Slideshow from "../components/Slideshow";
 import News from "../components/News";
-import { StaticImage } from "gatsby-plugin-image";
 
 /* Images */
 import checkbox from "../images/icons/checkbox.png";

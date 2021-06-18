@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../components/Layout";
-import { Row, Jumbotron, JumboText } from "../components/Blocks";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
+import { Heading } from "@/components/Heading";
+import Layout from "../components/Layout";
+import { Row, Jumbotron, JumboText } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
-import { Heading } from '@/components/Heading'
 
 import {
   Headline2,
@@ -81,9 +81,11 @@ function Fellowship() {
         <JumboText>
           <Headline2>RAI Research Fellow</Headline2>
           <MediumBody>
-            The RAI Research Fellowship is an intensive, eight-week<br/> development
-            program for graduates, grad students and<br/> researchers that helps
-            bridge the gap to a full-time career in<br/> data &amp; AI-related fields.
+            The RAI Research Fellowship is an intensive, eight-week
+            <br /> development program for graduates, grad students and
+            <br /> researchers that helps bridge the gap to a full-time career
+            in
+            <br /> data &amp; AI-related fields.
           </MediumBody>
         </JumboText>
         <Column>
@@ -110,9 +112,10 @@ function Fellowship() {
               marginBottom: "40px",
             }}
           >
-            Technical Fellows come from a mix of data driven STEM<br/> fields,
-            including physics, math, engineering, statistics,
-            <br /> computer science, machine &amp; deep learning, computer vision,
+            Technical Fellows come from a mix of data driven STEM
+            <br /> fields, including physics, math, engineering, statistics,
+            <br /> computer science, machine &amp; deep learning, computer
+            vision,
             <br /> NLP, quantitative finance, genomics, biology, neuroscience,
             <br /> and others.
           </MediumBody>
@@ -316,7 +319,8 @@ function Fellowship() {
               marginBottom: "40px",
             }}
           >
-            Youth Fellows are juniors or seniors in high school and/or<br/> 
+            Youth Fellows are juniors or seniors in high school and/or
+            <br />
             undergraduates in accredited colleges or universities, where
             <br /> the Fellow is seeking to further their knowledge and skillset
             <br /> in AI technologies across new or innovative applications and

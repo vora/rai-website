@@ -1,6 +1,8 @@
+/* eslint-disable import/no-default-export */
+/* eslint-disable react/prop-types */
 import React from "react";
 import styled from "styled-components";
-import arrow from "../images/icons/arrow.png"
+import arrow from "../images/icons/arrow.png";
 
 const LinkContainer = styled.div`
   display: flex;
@@ -10,7 +12,7 @@ const LinkContainer = styled.div`
   align-items: center;
 
   :hover {
-    opacity: .6;
+    opacity: 0.6;
   }
 `;
 
@@ -28,7 +30,7 @@ function StyledLink({ text, link }) {
   return (
     <LinkContainer>
       <CustomLink href={link}>{text}</CustomLink>
-      <img src={arrow} alt="arrow" style={{marginLeft: "5px"}}/>
+      <img src={arrow} alt="arrow" style={{ marginLeft: "5px" }} />
     </LinkContainer>
   );
 }

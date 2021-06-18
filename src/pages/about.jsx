@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React, { useState } from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+// eslint-disable-next-line import/no-unresolved
 import Layout from "components/Layout";
-import { Heading } from '@/components/Heading';
-import {
-  MediumBody,
-  Headline2,
-  Headline4,
-} from "../components/OldText";
+import { Heading } from "@/components/Heading";
+import Modal from "react-modal";
+import { CallToAction } from "@/blocks/CallToAction";
+import { MediumBody, Headline2, Headline4 } from "../components/OldText";
 import {
   Jumbotron,
   JumboText,
@@ -21,9 +22,7 @@ import {
 } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
-import Modal from "react-modal";
 import close from "../images/icons/exit.png";
-import { CallToAction } from '@/blocks/CallToAction';
 
 import manoj from "../images/people/manoj.png";
 import matt from "../images/people/matt.png";
@@ -55,6 +54,7 @@ import male from "../images/people/male.png";
 Modal.setAppElement(`#___gatsby`);
 // Because ReactModal is from a third party library, a function is needed to adapt the modal for styled components
 // https://github.com/reactjs/react-modal/issues/603#issuecomment-378847885
+// eslint-disable-next-line react/prop-types
 function ReactModalAdapter({ className, ...props }) {
   const contentClassName = `${className}__content`;
   const overlayClassName = `${className}__overlay`;
@@ -63,6 +63,7 @@ function ReactModalAdapter({ className, ...props }) {
       portalClassName={className}
       className={contentClassName}
       overlayClassName={overlayClassName}
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     />
   );
@@ -112,16 +113,6 @@ const ModalHeader = styled.div`
   border-bottom: 2px solid #2f2d34;
   padding: 40px;
   box-sizing: border-box;
-`;
-
-const ModalPersonImg = styled.img`
-  max-width: 90px;
-  width: 90px;
-  grid-area: personImage;
-  border-radius: 50%;
-  border: 1px solid black;
-  align-self: center;
-  margin-right: 20px;
 `;
 
 const ModalPersonName = styled.div`
@@ -240,7 +231,7 @@ function BiographyModal(props) {
         </ModalPersonName>
         <ModalPersonPosition>{props.person.position}</ModalPersonPosition>
         <ModalClose onClick={() => props.handler(false)}>
-          <img src={close} alt="close"></img>
+          <img src={close} alt="close" />
         </ModalClose>
       </ModalHeader>
       <ModalContent>
@@ -255,13 +246,12 @@ function BiographyModal(props) {
   );
 }
 
-function About(props) {
+function About() {
   // modal logic
   const [modalOpen, setModalOpen] = useState(false);
   const [modalPerson, setModalPerson] = useState({});
 
   function modalHandler(value) {
-    console.log("value: ", value);
     setModalOpen(value);
   }
 
@@ -340,7 +330,7 @@ function About(props) {
                   "Chair, Responsible AI Certification Working Group, World Economic Forum",
                 biography1:
                   "Ashley is an engaged and innovative leader who has always had a deep interest in advancing the public good. Recently leaving her long-standing career in the public service where she was last Director of Data and Digital for the Government of Canada, she has now taken on the role of Executive Director of Responsible AI Institute, a non-profit dedicated to creating practical tools to ensure the responsible use of AI. Throughout her career she has worked at the intersection of innovative technology and data, and its impact on providing better information and services.",
-                biography2: 
+                biography2:
                   "As a recognized leader in the social tech community she has developed a strong reputation for developing workable governance for data, artificial intelligence, and open source tools. Her work and ability to bring experts together to solve important challenges has led to meaningful change in government and beyond. Her work helps to inform government, industry, and academic research.",
               })
             }
@@ -377,7 +367,7 @@ function About(props) {
                 introduction: "Marketing and Comms Extraordinaire",
                 biography1:
                   "Kara Scully is an accomplished marketing, public relations, and communications expert. She worked in CPG and product PR, social media, and marketing communications for the first five years of her career, and has since focused on marketing and communications for nonprofits and startups. Under her guidance, an array of name-brand CPG products in the food, health, and lifestyle space have substantially increased their reach to new customers and markets.",
-                biography2: 
+                biography2:
                   "Kara brings a fresh approach to complex messages by her use of great visuals, succinct messaging, and a consistent theme. Kara holds a BA degree in Public Relations from the University of Southern California, Annenberg School for Communication and Journalism.",
               })
             }
@@ -416,7 +406,7 @@ function About(props) {
           onRequestClose={() => modalHandler(false)}
           handler={modalHandler}
           person={modalPerson}
-        ></BiographyModal>
+        />
       </Row>
       <Row style={{ backgroundColor: "#f6f6f6", paddingBottom: 0 }}>
         <Headline2>Governance Board</Headline2>
@@ -431,7 +421,7 @@ function About(props) {
                 introduction:
                   "Executive Chairman, CognitiveScale; MD, The Entrepreneurs’ Fund; Chairman, Federal Reserve Bank of Dallas/San Antonio; Former General Manager, IBM Watson.",
                 biography1:
-                  "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments. Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001.", 
+                  "Manoj Saxena is the Executive Chairman of CognitiveScale and a founding managing director of The Entrepreneurs’ Fund IV, a $100m seed fund focused exclusively on the cognitive computing and machine intelligence market with eight active investments. Previously, he was IBM’s first general manager of IBM Watson (2011-14), where his team built the world’s first cognitive systems for healthcare, retail, and financial services. He received the IBM Chairman’s award for Watson commercialization and helped with the formation of Watson Business Group in January 2014 with a $1B investment from IBM. Prior to IBM, he successfully founded, scaled, and sold two venture-backed software companies within a five-year span. Webify, an emerging leader in industry-specific SOA middleware, was acquired by IBM in 2006, and Exterprise, a business process collaboration company, was purchased by Commerce One in 2001.",
                 biography2:
                   "Saxena also serves as Chairman for The Federal Reserve Bank of Dallas, San Antonio Branch and the Saxena Family Foundation. Holder of nine software patents. An avid auto racing enthusiast, he has completed track, endurance and auto rally races around the world including 24-day Singapore-Malaysia-Thailand-Burma race, a 19-day Trans-America race, and a 10-day Madrid to Marrakesh race. Saxena holds a masters degree in business administration from Michigan State University, and a masters in management sciences from the Birla Institute of Technology & Science in Pilani, India.",
               })
@@ -468,7 +458,7 @@ function About(props) {
                 introduction: "President and CEO of EqualAI",
                 biography1:
                   "Miriam is the President and CEO of EqualAI, a non-profit that was created to address and reduce unconscious bias in artificial intelligence (AI).  Miriam is also a Senior Advisor to WestExec Advisors and teaches Technology Law and Policy at Georgetown University Law Center.Previously, Miriam served in U.S. government leadership, including positions in the three branches of federal government. Most recently, she served as Associate Deputy Attorney General, where she advised the Attorney General and the Deputy Attorney General (DAG) on a broad range of legal, policy and operational issues. Under the direction of DAG Sally Yates, Miriam led the creation and development of the Implicit Bias Training for Federal Law Enforcement. Miriam also spearheaded the Department’s Intellectual Property (IP) efforts to identify and dismantle IP theft domestically and internationally and worked with the DAG to manage Department divisions’ multibillion-dollar budgets, resolve high-level challenges, and represent the Department in briefings for White House, Congressional and GAO staff on policy initiatives and oversight matters.",
-                biography2: 
+                biography2:
                   "Miriam served in the White House in two Administrations, most recently as the Acting Director of Justice and Regulatory Affairs. She led the President's Equal Pay Task Force to promote equality in the workplace. She also advised White House leadership on regulatory, women, economic, food safety and LGBT policy and a wide array of criminal justice matters. Prior to serving in the Obama administration, Miriam was Associate General Counsel at Dana-Farber Cancer Institute and practiced entertainment/corporate transactional law at Sheppard Mullin in Los Angeles. Miriam began her legal career as a federal clerk in Denver, Colorado after graduating from Georgetown University Law Center and is a third generation alumna from the University of Michigan.  She currently resides in Chevy Chase, MD with her husband and two daughters. ",
               })
             }
@@ -486,7 +476,7 @@ function About(props) {
                 introduction: "Founder, Chairmen, and CEO of Lucid.AI",
                 biography1:
                   "Founding Visionary of AIAustin, Michael has been an Austin-based AI entrepreneur and technology innovator for almost 30 years. During that time, he witnessed the critical importance played by public/private structures like MCC, Sematech, and others in fostering the right climate and support infrastructures in Austin for the growth of leading-edge technologies here. Working with and alongside those organizations helped shape Michael’s Founding-vision behind creating “AI-Austin” to help make the incredible city of Austin, TX the epicenter of Artificial Intelligence globally.• As far back as the late 1980’s, Michael served as a principal systems design specialist for the U.S. and other national governments, pioneering systems integration strategies and scaled architectures of next-generation knowledge computing and autonomous software agent systems, starting with one of his earlier companies and its work with the MCC Research Consortium in Austin and other organizations globally.",
-                biography2: 
+                biography2:
                   "Over the ensuing years, Michael has been leading the creation of innovative integrations of web-based and AI-related technologies in Austin and around the world, and is now the Chairman/CEO and Founder of Austin-based Lucid Holdings, Inc. In addition to its successful deployments of AI solutions for global clients, Lucid was the first AI company in the world to create a public-facing Ethics Advisory Panel (EAP) comprised of renowned thought-leaders. Lucid’s deep ethical perspective and knowledge in the intersections of AI with such issues has led to collaborations and work with many national and uber-national governmental entities, academics, non-profits, and other global organizations in leading this incredibly important challenge.",
               })
             }
@@ -504,7 +494,7 @@ function About(props) {
                 introduction: "Chief Scientific Officer, Cognitive Scale",
                 biography1:
                   "Dr. Joydeep Ghosh (PhD ’88) is the Chief Scientific Officer at CognitiveScale, responsible for shaping corporate vision, influencing technology strategy, overseeing algorithmic science, and positioning the company for growth in the coming months and years. Dr. Ghosh is also the Schlumberger Centennial Chair Professor at the University of Texas (UT), Austin with appointments across multiple colleges involved in the theory, design and application of AI-related technologies and systems.",
-                biography2: 
+                biography2:
                   "He is the founder-director of UT-MINDS, considered among the top academic groups worldwide researching full-stack Machine Intelligence and Decision Systems. Dr. Ghosh has authored over 500 peer-reviewed publications related to data and knowledge driven insights, won 16 Best Paper awards, chaired or keynoted at top data mining and machine learning conferences, and led numerous successful projects for industry and government over the past 30 years.",
               })
             }
@@ -530,7 +520,7 @@ function About(props) {
                 biography1:
                   "Rajeev Ronanki serves as Senior Vice President, Chief Digital Officer at Anthem, Inc. He is leading the transformation of Anthem to become a digital/AI-first enterprise through driving the vision, strategy, and execution of Anthem’s Digital, Artificial Intelligence (AI), Exponential Technology, and Innovation Portfolios. Through these efforts, Ronanki is enabling Anthem to harness the power of AI and data to better understand healthcare consumers and provide tailored, personalized care. His experience spans over 20 years of innovation-driven industry and social change across healthcare and technology.",
                 biography2:
-                 "Prior to joining Anthem, Ronanki was a Partner at Deloitte Consulting, LLC where he established and led Deloitte’s Life Sciences and Healthcare Advanced Analytics, Artificial Intelligence, and Innovation practices. Additionally, he was instrumental in shaping Deloitte’s blockchain and cryptocurrency solutions and authored pieces on various exponential technology topics. Ronanki also led Deloitte’s strategic partnerships across a wide range of innovation programs, such as doc.ai, Singularity University, Exponential Conference Series, and MIT Media Labs, that seek to evangelize disruptive technologies like artificial intelligence, blockchain, and precision medicine. Ronanki obtained a Bachelor’s Degree in Mechanical Engineering from Osmania University in India and a Master’s Degree in Computer Science from the University of Pennsylvania.",
+                  "Prior to joining Anthem, Ronanki was a Partner at Deloitte Consulting, LLC where he established and led Deloitte’s Life Sciences and Healthcare Advanced Analytics, Artificial Intelligence, and Innovation practices. Additionally, he was instrumental in shaping Deloitte’s blockchain and cryptocurrency solutions and authored pieces on various exponential technology topics. Ronanki also led Deloitte’s strategic partnerships across a wide range of innovation programs, such as doc.ai, Singularity University, Exponential Conference Series, and MIT Media Labs, that seek to evangelize disruptive technologies like artificial intelligence, blockchain, and precision medicine. Ronanki obtained a Bachelor’s Degree in Mechanical Engineering from Osmania University in India and a Master’s Degree in Computer Science from the University of Pennsylvania.",
               })
             }
           >
@@ -567,7 +557,7 @@ function About(props) {
                   "VP of Enterprise Architecture, Jackson Enterprise Technologies",
                 biography1:
                   "Dr. Bhatt Vadlamani is serving as VP of Enterprise Architecture at Jackson Enterprise Technologies, the U.S. based technology arm of the global insurance giant, Prudential Plc. In that capacity, he drives the Business Process Engineering Center of Excellence and the AI Center of Excellence that deliver data-driven insights to business teams at the speed of business to succeed in its digital ecosystem. Dr. Vadlamani served as a Member of the G-20/B-20 Digitalization Task Forces during 2017-2018 as a subject matter expert on Digital Economy and holds a US Patent on Gamification of Analytics for digital marketing. He is a Certified ITIL V3 Expert in operationalizing digital technologies.",
-                biography2: 
+                biography2:
                   "He has over three decades of experience in orchestrating Digital Transformations in large enterprises including Sun Microsystems, eBay, Disney, and Blue Shield of California by delivering innovative services including Digital Health, Cloud Platforms, High Performance Computing, Digital Analytics, and Digital Twin Organization to govern the deployment of digital products and AI models in global enterprises in ethical manner. He has published in scholarly journals including Strategic Management Journal and International Journal of Technology Management. He did his Ph.D. in Strategic Management and M.S. in Analytics from Stern School of Business at New York University, M.B.A. in Strategic Management from Indian Institute of Management at Ahmedabad, and B.S. in Computer Science from Indian Institute of Technology at Delhi.",
               })
             }
@@ -586,7 +576,7 @@ function About(props) {
                   "Global Chief Information officer (CIO) for Retail Banking and Wealth Management (RBWM), HSBC",
                 biography1:
                   "Gavin Munroe is the HSBC Global Chief Information officer (CIO) for Retail Banking and Wealth Management (RBWM) overseeing all Technology aspects of RBWM globally across all markets. As the CIO for RBWM he works in close partnership with the different business lines of Retail Banking, Wealth Management, Insurance and Asset Management to deliver sustainable solutions that balance cost, risk and regulatory demands, while driving the digital transformation journey with the ability to rapidly innovate within RBWM. Gavin has a proven track record of delivering technology solutions at global scale, managing and building global teams, and leading large transformation programs aligned to business goals and strategies. Based in London at HSBC’s global headquarters in Canary Wharf, Gavin has more than 20 years of the financial industry experience. He joined HSBC in November 2018 from Merrill Lynch/Bank of America where he was the Machine Learning (ML) CIO accountable for driving the digitization of ML technology.",
-                biography2: 
+                biography2:
                   "At Bank of America / Merrill Lynch he held a number of senior roles, most notability head of global consumer products (card, deposit, mortgage) and CIO for Wealth Management Technology teams. He oversaw the transformation of the wealth function, digitizing and modernizing its capability to drive growth. Prior to that, he worked for Synechron as MD of Asia Pac, a specialist provider of business technology solutions for capital markets, insurance and mortgage banking, leading their expansion into Asia Pacific. he also held the positions of CIO Saxon, a subsidiary of Morgan Stanley and Head of Technology for the West Coast USA for Wachovia. Gavin graduated at the University of Port Elizabeth, South Africa and has a Bachelor of Science Degree, with dual majors in both Computer Science and Physics.",
               })
             }
@@ -604,7 +594,7 @@ function About(props) {
                 introduction: "SVP Corporate Decisions Sciences, NBCUniversal",
                 biography1:
                   "Cameron Davies is the SVP, Corporate Decisions Sciences for NBCUniversal responsible for the overall development and execution of the NBCU data and advanced analytics strategies designed to further NBCU priorities and support evolving business models. This includes areas such as defining and leading the overall NBCU Data Strategy, Forecasting, Content Efficacy, Pricing and Yield Management, Machine Learning, and advanced AI practices.",
-                biography2: 
+                biography2:
                   "Prior to joining NBCUniversal in 2013, Cameron spent over 18 years at Disney developing and leading advanced analytical teams for a variety of business areas including Disney Parks and Resorts, Media Networks, Walt Disney Studios, Disney Interactive, and Disney Consumer Products. His final role was Sr. Director and GM, Management Science and Integration, leading the internal COE for Advanced Analytics. In this role he worked closely with executives across the enterprise to deliver advanced analytics tools to drive business priorities. Prior to joining Disney he spent time as a Professor of Business/Finance for Pensacola Christian College. Cameron has an MBA and Master of Accountancy (MACC) from the University of West Florida and a BS Business Administration/Accounting from Pensacola Christian College.",
               })
             }
@@ -659,7 +649,7 @@ function About(props) {
                   "Global Lead, Government Azure Strategy, Microsoft",
                 biography1:
                   "Alex Benay is an avid user of technology and he often voices the importance of taking risks, failing fast and challenging the status quo when it comes to technological innovation, especially in the government. Benay believes in the strength of social media channels to communicate to Canadians and engage them on shaping the way forward. He also uses social media as an outlet to offer a running commentary on the big initiatives and projects he’s involved in. Benay is not your typical executive! At Microsoft, Benay is making digital government a reality by helping lead the company’s global government cloud strategy. In his previous role as Partner of Digital and Government Solutions at KPMG AI, Benay helped the firms’ public sector clients effectively implement key digital technologies and solutions such as Artificial Intelligence (including ethical AI), Blockchain, Cloud computing, Data Security and Privacy, Digital Identification, Digital Integrity and Assurance. In his previous role as Canada’s CIO, Benay was responsible for a broad portfolio with a budget of $6 billion, 17 thousand employees and countless vendors. With technology and change as constants, Benay balanced the needs of government information systems with the demands of an increasingly dynamic, digitally-savvy and on-demand population.",
-                biography2: 
+                biography2:
                   "His previous roles have included that of President and Chief Executive Officer of the Canada Science and Technology Museums Corporation, and Vice-President, Government Affairs and Business Development at OpenText, Canada’s largest software company. Benay’s authored a few books including:  “Canadian Failures: Stories of Building toward Success”. He brings together successful Canadians such as astronauts and gold medal athletes to explore how failure got them to where they are today, in an effort to remove the national stigma surrounding the term ‘to fail’. He’s also released “Government Digital: The Quest to Regain Public Trust” that will lay down a blueprint for digital change for other governments and organizations.",
               })
             }
@@ -769,8 +759,7 @@ function About(props) {
                   "Director at the Center for Responsible AI at NYU ",
                 biography1:
                   "Julia Stoyanovich is an Assistant Professor in the Department of Computer Science and Engineering at the Tandon School of Engineering, and the Center for Data Science.  She is a recipient of an NSF CAREER award and of an NSF/CRA CI Fellowship.  Julia's research focuses on responsible data management and analysis practices: on operationalizing fairness, diversity, transparency, and data protection in all stages of the data  acquisition and processing lifecycle. She established the Data, Responsibly consortium, and serves on the New York City Automated Decision Systems Task Force (by appointment by Mayor de Blasio).  In addition to data ethics, Julia works on management and analysis of preference data, and on querying large evolving graphs.  She holds M.S. and Ph.D. degrees in Computer Science from Columbia University, and a B.S. in Computer Science and in Mathematics and Statistics from the University of Massachusetts at Amherst",
-                biography2:
-                  ""
+                biography2: "",
               })
             }
           >
@@ -1009,15 +998,15 @@ function About(props) {
           </MediumBody>
         </FellowshipDescription>
       </Row>
-      <div style={{margin: 'var(--space--xxlarge) 0'}}>
-      <CallToAction 
-        title="Get Involved" 
-        action={{
-          title: "Become a member",
-          url: "/membership"
-        }} 
-        content={{
-          raw: `{
+      <div style={{ margin: "var(--space--xxlarge) 0" }}>
+        <CallToAction
+          title="Get Involved"
+          action={{
+            title: "Become a member",
+            url: "/membership",
+          }}
+          content={{
+            raw: `{
               "data":{},
               "content":[
                 {
@@ -1080,9 +1069,9 @@ function About(props) {
                 }
               ],
               "nodeType":"document"
-            }`
-        }}
-      />
+            }`,
+          }}
+        />
       </div>
       <Row gray>
         <TitleLink>

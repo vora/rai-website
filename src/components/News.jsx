@@ -1,21 +1,20 @@
 import React from "react";
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
+import { Caption } from "@/components/Caption";
 import { Headline5 } from "./OldText";
-import { Caption } from '@/components/Caption';
 
 const carbon = "#2f2d34";
-const gray = "#797b80";
 
 const NewsRow = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
 
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 800px) {
     flex-direction: column;
     justify-content: start;
 
-    div{
+    div {
       width: 100%;
     }
   }
@@ -100,4 +99,5 @@ function News() {
   );
 }
 
+// eslint-disable-next-line import/no-default-export
 export default News;

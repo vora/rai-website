@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled, { ThemeProvider } from "styled-components";
+// eslint-disable-next-line import/no-unresolved
 import { lightTheme } from "styles/Themes";
 import { Helmet } from "react-helmet";
 import { withPrefix } from "gatsby";
-import Navbar from "./Navbar";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
-import { WebsiteBanner } from '@/components/WebsiteBanner'
+import { WebsiteBanner } from "@/components/WebsiteBanner";
 
 const Content = styled.div`
   max-width: 100%;
@@ -14,6 +14,7 @@ const Content = styled.div`
   flex-direction: column;
 `;
 
+// eslint-disable-next-line react/prop-types
 function Layout({ children, title }) {
   return (
     <ThemeProvider theme={lightTheme}>
@@ -38,4 +39,5 @@ function Layout({ children, title }) {
   );
 }
 
+// eslint-disable-next-line import/no-default-export
 export default Layout;

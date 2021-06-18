@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import styled from "styled-components";
 import { Headline5, MediumBody } from "./OldText";
@@ -18,7 +19,7 @@ const QuoteContainer = styled.div`
 function QuoteBlock({ quote, title, author }) {
   return (
     <QuoteContainer>
-      <Headline5>{"“" + quote + "”"}</Headline5>
+      <Headline5>“{quote}”</Headline5>
       <MediumBody>
         <strong>{author}</strong>, {title}
       </MediumBody>
@@ -26,4 +27,5 @@ function QuoteBlock({ quote, title, author }) {
   );
 }
 
+// eslint-disable-next-line import/no-default-export
 export default QuoteBlock;

@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
-import { Heading } from '@/components/Heading'
+import { Heading } from "@/components/Heading";
 import styled from "styled-components";
+import Layout from "../components/Layout";
 import {
   Jumbotron,
   JumboText,
@@ -28,6 +28,7 @@ import calendar from "../images/rai-icons/calendar.png";
 import tools from "../images/rai-content/Tools.png";
 import badge from "../images/rai-icons/rai-badge.png";
 import designassistant from "../images/rai-icons/design-assistant.png";
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -277,10 +278,10 @@ function Tools() {
               </Headline5>
               <SmallBody>
                 Everyone is talking about AI, but how and where is it actually
-                being used? We've mapped out examples where AI has been harmful
-                and where it's been helpful. Cases are updated weekly and found
-                from various sources such as Awful AI, Upturn, Equal AI, and
-                Charlie Pownall/CPC & Associates.
+                being used? We&apos;ve mapped out examples where AI has been
+                harmful and where it&apos;s been helpful. Cases are updated
+                weekly and found from various sources such as Awful AI, Upturn,
+                Equal AI, and Charlie Pownall/CPC &amp; Associates.
                 <br />
                 <br />
                 <StyledLink

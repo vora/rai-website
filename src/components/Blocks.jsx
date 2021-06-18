@@ -210,10 +210,11 @@ export const Row = styled.div`
     props.small &&
     css`
       padding-bottom: 25px;
-    
-    @media screen and (max-width: 585px) {
-      padding: 45px 35px;
-    }`}
+
+      @media screen and (max-width: 585px) {
+        padding: 45px 35px;
+      }
+    `}
 `;
 
 export const Divider = styled.div`
@@ -283,8 +284,8 @@ export const Card = styled.div`
   padding: 32px;
 
   @media screen and (min-width: 1190px) {
-    width: ${({ width }) => (width ? width : "26%")};
-    max-width: ${({ width }) => (width ? width : "26%")};
+    width: ${({ width }) => width || "26%"};
+    max-width: ${({ width }) => width || "26%"};
     flex: ${({ width }) => (width ? `1 0 ${width}` : "1 0 26%")};
   }
 `;

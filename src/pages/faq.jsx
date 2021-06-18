@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
+import { withPrefix } from "gatsby";
+import { Heading } from "@/components/Heading";
 import Layout from "../components/Layout";
-import {withPrefix} from "gatsby";
-import { Heading } from '@/components/Heading';
 
 import {
   MediumBody,
@@ -58,7 +58,9 @@ function Faq() {
         </MediumBody>
         <br />
         <PrimaryBtn dark>
-          <BlankLink white noHover
+          <BlankLink
+            white
+            noHover
             href={withPrefix("../Whitepaper.pdf")}
             target="_blank"
             rel="noopener noreferrer"

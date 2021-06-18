@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useRef } from "react";
 import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { StaticImage } from "gatsby-plugin-image";
 
-/* Font colors*/
+/* Font colors */
 const carbon = "#2f2d34";
 const blanco = "#ffffff";
 
@@ -14,7 +15,7 @@ const MediumBody = styled.p`
   font-size: 18px;
   line-height: 28px;
   color: ${(props) => (props.dark ? blanco : carbon)};
-  border-left: ${(props) => (props.bordered ? "3px solid " + carbon : "none")};
+  border-left: ${(props) => (props.bordered ? `3px solid ${carbon}` : "none")};
   padding-left: ${(props) => (props.bordered ? "20px" : "0")};
   @media screen and (max-width: 600px) {
     font-size: 16px;
@@ -53,12 +54,10 @@ const Views = styled.div`
   }
 
   @media screen and (max-width: 950px) {
-    .view:nth-of-type(2){
+    .view:nth-of-type(2) {
       display: none;
     }
-    
   }
-
 `;
 const View = styled.div`
   display: flex;
@@ -68,7 +67,7 @@ const View = styled.div`
   padding: 40px;
   border: 1px solid ${carbon};
 
-  @media screen and (max-width: 950px){
+  @media screen and (max-width: 950px) {
     width: 90%;
   }
 `;
@@ -97,11 +96,11 @@ function Slideshow() {
         <Views>
           <View className="view">
             <MediumBody>
-              "We’re delighted to be working with RAI toward an independent and
-              community-developed AI certification program. RAI will provide
+              &quot;We’re delighted to be working with RAI toward an independent
+              and community-developed AI certification program. RAI will provide
               organizations the right guard rails not only to preserve trust and
               avoid harm, but also enable organizations to innovate and drive
-              better societal outcomes with AI.”
+              better societal outcomes with AI.&quot;
             </MediumBody>
             <div
               style={{
@@ -124,13 +123,13 @@ function Slideshow() {
           </View>
           <View className="view">
             <MediumBody>
-              "The continued emergence of Artificial Intelligence (AI)
+              &quot;The continued emergence of Artificial Intelligence (AI)
               technologies presents an exciting opportunity for Anthem to
               explore the development of next-generation products and services.
               As one of the initial charter members of RAI, we are thrilled to
               see this community grow through active collaboration and are
               pleased to provide our insights and expertise by participating in
-              the RAI Certification beta pilot.”
+              the RAI Certification beta pilot.&quot;
             </MediumBody>
             <div
               style={{
@@ -273,11 +272,11 @@ function Slideshow() {
         <Views>
           <View className="view">
             <MediumBody>
-              "We don’t think Banking can work in an environment without trust.
-              Independent certification programs like the one from RAI Institute
-              help technical and business leaders develop the appropriate
-              safeguards for use of data and AI in an ethical and trusted
-              manner.”
+              &quot;We don’t think Banking can work in an environment without
+              trust. Independent certification programs like the one from RAI
+              Institute help technical and business leaders develop the
+              appropriate safeguards for use of data and AI in an ethical and
+              trusted manner.&quot;
             </MediumBody>
             <div
               style={{
@@ -389,4 +388,5 @@ function Slideshow() {
   );
 }
 
+// eslint-disable-next-line import/no-default-export
 export default Slideshow;

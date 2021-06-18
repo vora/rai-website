@@ -1,22 +1,18 @@
 import React from "react";
+import { Heading } from "@/components/Heading";
+import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
-import { Heading } from '@/components/Heading';
 import {
   Headline2,
   MediumBody,
   UpperCaption,
   BlankLink,
 } from "../components/OldText";
-import {
-  Row,
-  Divider,
-  TitleLink,
-} from "../components/Blocks";
+import { Row, Divider, TitleLink } from "../components/Blocks";
 import { ShareContainer } from "../components/Buttons";
 import QuoteBlock from "../components/QuoteBlock";
 import News from "../components/News";
 import StyledLink from "../components/StyledLink";
-import { StaticImage } from "gatsby-plugin-image";
 
 function Page() {
   return (
@@ -32,7 +28,7 @@ function Page() {
           <UpperCaption style={{ marginRight: "20px" }}>
             MARCH 31, 2021
           </UpperCaption>
-          <div className="s9-widget-wrapper"></div>
+          <div className="s9-widget-wrapper" />
         </ShareContainer>
         <div style={{ width: "100%", textAlign: "center" }}>
           <StaticImage

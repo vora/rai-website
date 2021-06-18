@@ -1,15 +1,11 @@
 import React from "react";
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
+import { Heading } from "@/components/Heading";
 import Layout from "../components/Layout";
-import {
-  Headline2,
-  Headline4,
-  Headline5,
-} from "../components/OldText";
+import { Headline2, Headline4, Headline5 } from "../components/OldText";
 import { Row, TitleLink } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
-import { Heading } from '@/components/Heading'
 
 const carbon = "#2f2d34";
 const gray = "#797b80";

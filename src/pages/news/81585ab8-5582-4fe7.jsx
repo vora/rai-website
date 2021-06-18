@@ -1,6 +1,6 @@
 import React from "react";
+import { Heading } from "@/components/Heading";
 import Layout from "../../components/Layout";
-import { Heading } from '@/components/Heading';
 import {
   Headline2,
   MediumBody,
@@ -27,7 +27,7 @@ function Page() {
           <UpperCaption style={{ marginRight: "20px" }}>
             DECEMBER 1, 2020
           </UpperCaption>
-          <div className="s9-widget-wrapper"></div>
+          <div className="s9-widget-wrapper" />
         </ShareContainer>
         <MediumBody bold>
           The World Economic Forum, AI Global, and the Schwartz Reisman
