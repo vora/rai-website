@@ -14,6 +14,12 @@ const plugins = [
   `gatsby-plugin-sitemap`,
   `gatsby-plugin-sharp`,
   {
+    resolve: `gatsby-plugin-graphql-codegen`,
+    options: {
+      fileName: "./graphql/graphql-types.ts",
+    },
+  },
+  {
     resolve: `gatsby-plugin-postcss`,
     options: {
       cssLoaderOptions: {

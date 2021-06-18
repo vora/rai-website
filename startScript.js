@@ -8,12 +8,12 @@ const concurrently = require("concurrently");
 
 concurrently(
   [
+    { command: "npm:start:gatsby", name: "Gatsby", prefixColor: "#8A4BAF" },
     {
       command: "npm:start:storybook",
       name: "Storybook",
       prefixColor: "#FE4784",
     },
-    { command: "npm:start:gatsby", name: "Gatsby", prefixColor: "#8A4BAF" },
   ],
   {
     killOthers: ["failure", "success"],

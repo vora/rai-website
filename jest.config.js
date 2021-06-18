@@ -12,5 +12,6 @@ module.exports = {
     "^@/components(.*)$": "<rootDir>/src/components$1",
     "^@/blocks(.*)$": "<rootDir>/src/blocks$1",
     "^@/hooks(.*)$": "<rootDir>/src/hooks$1",
+    "^@/graphql(.*)$": "<rootDir>/graphql$1",
   },
 };
