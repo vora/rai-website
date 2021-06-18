@@ -6962,6 +6962,12 @@ export type StaticImageSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
+export type CallToActionFragmentFragment = (
+  { __typename: 'ContentfulBlockCallToAction' }
+  & Pick<ContentfulBlockCallToAction, 'title'>
+  & { content?: Maybe<Pick<ContentfulBlockCallToActionContent, 'raw'>>, button?: Maybe<{ button?: Maybe<Pick<ContentfulBlockCallToActionButtonJsonNodeButton, 'title' | 'url' | 'external'>> }> }
+);
+
 export type BannerQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -6986,4 +6992,14 @@ export type Unnamed_2_Query = { blog?: Maybe<(
       Pick<ContentfulAuthor, 'name'>
       & { biography?: Maybe<Pick<ContentfulAuthorBiographyTextNode, 'biography'>> }
     )>, featuredImage?: Maybe<Pick<ContentfulAsset, 'gatsbyImageData'>>, content?: Maybe<Pick<ContentfulBlogPostContent, 'raw'>> }
+  )> };
+
+export type PageTemplateQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type PageTemplateQuery = { blog?: Maybe<(
+    Pick<ContentfulPage, 'title'>
+    & { blocks?: Maybe<Array<Maybe<CallToActionFragmentFragment>>> }
   )> };

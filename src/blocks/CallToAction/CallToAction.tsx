@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import { Container } from "@/components/Container";
 import { Button, ButtonProps } from "@/components/Button";
 import { Heading } from "@/components/Heading";
@@ -25,3 +26,20 @@ export function CallToAction({ title, content, action }: CallToActionProps) {
     </Container>
   );
 }
+
+export const CallToActionFragment = graphql`
+  fragment CallToActionFragment on ContentfulBlockCallToAction {
+    __typename
+    title
+    content {
+      raw
+    }
+    button {
+      button {
+        title
+        url
+        external
+      }
+    }
+  }
+`;
