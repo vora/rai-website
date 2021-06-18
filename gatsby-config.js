@@ -14,12 +14,6 @@ const plugins = [
   `gatsby-plugin-sitemap`,
   `gatsby-plugin-sharp`,
   {
-    resolve: `gatsby-plugin-graphql-codegen`,
-    options: {
-      fileName: "./graphql/graphql-types.ts",
-    },
-  },
-  {
     resolve: `gatsby-plugin-postcss`,
     options: {
       cssLoaderOptions: {
@@ -75,6 +69,15 @@ const plugins = [
     },
   },
 ];
+
+if (process.NODE_ENV === "development") {
+  plugins.push({
+    resolve: `gatsby-plugin-graphql-codegen`,
+    options: {
+      fileName: "./graphql/graphql-types.ts",
+    },
+  });
+}
 
 /**
  * The site is useless without Contentful, lets kill the process

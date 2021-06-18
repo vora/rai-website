@@ -254,8 +254,6 @@ export type DirectoryCtimeArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
-  port?: Maybe<Scalars['Int']>;
-  host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -927,7 +925,7 @@ export type ContentfulPage = ContentfulReference & ContentfulEntry & Node & {
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
-  blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockJumboTronUnion>>>;
+  blocks?: Maybe<Array<Maybe<ContentfulAuthorContentfulBlockCallToActionContentfulBlockJumboTronUnion>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
@@ -953,7 +951,7 @@ export type ContentfulPageUpdatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
-export type ContentfulBlockCallToActionContentfulBlockJumboTronUnion = ContentfulBlockCallToAction | ContentfulBlockJumboTron;
+export type ContentfulAuthorContentfulBlockCallToActionContentfulBlockJumboTronUnion = ContentfulAuthor | ContentfulBlockCallToAction | ContentfulBlockJumboTron;
 
 export type ContentfulPageSys = {
   type?: Maybe<Scalars['String']>;
@@ -1028,22 +1026,22 @@ export type ContentfulBlockCallToActionSysContentTypeSys = {
   id?: Maybe<Scalars['String']>;
 };
 
-export type ContentfulBlockJumboTron = ContentfulReference & ContentfulEntry & Node & {
-  contentful_id: Scalars['String'];
+export type ContentfulBlockJumboTron = Node & {
   id: Scalars['ID'];
-  node_locale: Scalars['String'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
   title?: Maybe<Scalars['String']>;
   content?: Maybe<ContentfulBlockJumboTronContent>;
   featuredImage?: Maybe<ContentfulAsset>;
   backgroundImage?: Maybe<ContentfulAsset>;
   page?: Maybe<Array<Maybe<ContentfulPage>>>;
   spaceId?: Maybe<Scalars['String']>;
+  contentful_id?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulBlockJumboTronSys>;
-  parent?: Maybe<Node>;
-  children: Array<Node>;
-  internal: Internal;
+  node_locale?: Maybe<Scalars['String']>;
 };
 
 
@@ -1202,6 +1200,10 @@ export type SitePluginPluginOptions = {
   name?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
   pluginConfig?: Maybe<SitePluginPluginOptionsPluginConfig>;
+  pathCheck?: Maybe<Scalars['Boolean']>;
+  allExtensions?: Maybe<Scalars['Boolean']>;
+  isTSX?: Maybe<Scalars['Boolean']>;
+  jsxPragma?: Maybe<Scalars['String']>;
   accessToken?: Maybe<Scalars['String']>;
   spaceId?: Maybe<Scalars['String']>;
   environment?: Maybe<Scalars['String']>;
@@ -1211,10 +1213,6 @@ export type SitePluginPluginOptions = {
   pageLimit?: Maybe<Scalars['Int']>;
   assetDownloadWorkers?: Maybe<Scalars['Int']>;
   useNameForId?: Maybe<Scalars['Boolean']>;
-  pathCheck?: Maybe<Scalars['Boolean']>;
-  allExtensions?: Maybe<Scalars['Boolean']>;
-  isTSX?: Maybe<Scalars['Boolean']>;
-  jsxPragma?: Maybe<Scalars['String']>;
 };
 
 export type SitePluginPluginOptionsCssLoaderOptions = {
@@ -1403,8 +1401,6 @@ export type QueryAllDirectoryArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<IntQueryOperatorInput>;
-  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -1654,21 +1650,21 @@ export type QueryAllContentfulBlockCallToActionArgs = {
 
 
 export type QueryContentfulBlockJumboTronArgs = {
-  contentful_id?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
-  node_locale?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
   title?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<ContentfulBlockJumboTronContentFilterInput>;
   featuredImage?: Maybe<ContentfulAssetFilterInput>;
   backgroundImage?: Maybe<ContentfulAssetFilterInput>;
   page?: Maybe<ContentfulPageFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockJumboTronSysFilterInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
 };
 
 
@@ -2537,8 +2533,6 @@ export type SiteFieldsEnum =
   | 'siteMetadata___description'
   | 'siteMetadata___author'
   | 'siteMetadata___siteUrl'
-  | 'port'
-  | 'host'
   | 'polyfill'
   | 'pathPrefix'
   | 'id'
@@ -2640,8 +2634,6 @@ export type SiteGroupConnection = {
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<IntQueryOperatorInput>;
-  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2703,6 +2695,10 @@ export type SitePluginPluginOptionsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
   pluginConfig?: Maybe<SitePluginPluginOptionsPluginConfigFilterInput>;
+  pathCheck?: Maybe<BooleanQueryOperatorInput>;
+  allExtensions?: Maybe<BooleanQueryOperatorInput>;
+  isTSX?: Maybe<BooleanQueryOperatorInput>;
+  jsxPragma?: Maybe<StringQueryOperatorInput>;
   accessToken?: Maybe<StringQueryOperatorInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   environment?: Maybe<StringQueryOperatorInput>;
@@ -2712,10 +2708,6 @@ export type SitePluginPluginOptionsFilterInput = {
   pageLimit?: Maybe<IntQueryOperatorInput>;
   assetDownloadWorkers?: Maybe<IntQueryOperatorInput>;
   useNameForId?: Maybe<BooleanQueryOperatorInput>;
-  pathCheck?: Maybe<BooleanQueryOperatorInput>;
-  allExtensions?: Maybe<BooleanQueryOperatorInput>;
-  isTSX?: Maybe<BooleanQueryOperatorInput>;
-  jsxPragma?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsCssLoaderOptionsFilterInput = {
@@ -2959,6 +2951,10 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___name'
   | 'pluginCreator___pluginOptions___path'
   | 'pluginCreator___pluginOptions___pluginConfig___head'
+  | 'pluginCreator___pluginOptions___pathCheck'
+  | 'pluginCreator___pluginOptions___allExtensions'
+  | 'pluginCreator___pluginOptions___isTSX'
+  | 'pluginCreator___pluginOptions___jsxPragma'
   | 'pluginCreator___pluginOptions___accessToken'
   | 'pluginCreator___pluginOptions___spaceId'
   | 'pluginCreator___pluginOptions___environment'
@@ -2968,10 +2964,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___pageLimit'
   | 'pluginCreator___pluginOptions___assetDownloadWorkers'
   | 'pluginCreator___pluginOptions___useNameForId'
-  | 'pluginCreator___pluginOptions___pathCheck'
-  | 'pluginCreator___pluginOptions___allExtensions'
-  | 'pluginCreator___pluginOptions___isTSX'
-  | 'pluginCreator___pluginOptions___jsxPragma'
   | 'pluginCreator___nodeAPIs'
   | 'pluginCreator___browserAPIs'
   | 'pluginCreator___ssrAPIs'
@@ -5415,9 +5407,92 @@ export type ContentfulBlockJumboTronEdge = {
 };
 
 export type ContentfulBlockJumboTronFieldsEnum =
-  | 'contentful_id'
   | 'id'
-  | 'node_locale'
+  | 'parent___id'
+  | 'parent___parent___id'
+  | 'parent___parent___parent___id'
+  | 'parent___parent___parent___children'
+  | 'parent___parent___children'
+  | 'parent___parent___children___id'
+  | 'parent___parent___children___children'
+  | 'parent___parent___internal___content'
+  | 'parent___parent___internal___contentDigest'
+  | 'parent___parent___internal___description'
+  | 'parent___parent___internal___fieldOwners'
+  | 'parent___parent___internal___ignoreType'
+  | 'parent___parent___internal___mediaType'
+  | 'parent___parent___internal___owner'
+  | 'parent___parent___internal___type'
+  | 'parent___children'
+  | 'parent___children___id'
+  | 'parent___children___parent___id'
+  | 'parent___children___parent___children'
+  | 'parent___children___children'
+  | 'parent___children___children___id'
+  | 'parent___children___children___children'
+  | 'parent___children___internal___content'
+  | 'parent___children___internal___contentDigest'
+  | 'parent___children___internal___description'
+  | 'parent___children___internal___fieldOwners'
+  | 'parent___children___internal___ignoreType'
+  | 'parent___children___internal___mediaType'
+  | 'parent___children___internal___owner'
+  | 'parent___children___internal___type'
+  | 'parent___internal___content'
+  | 'parent___internal___contentDigest'
+  | 'parent___internal___description'
+  | 'parent___internal___fieldOwners'
+  | 'parent___internal___ignoreType'
+  | 'parent___internal___mediaType'
+  | 'parent___internal___owner'
+  | 'parent___internal___type'
+  | 'children'
+  | 'children___id'
+  | 'children___parent___id'
+  | 'children___parent___parent___id'
+  | 'children___parent___parent___children'
+  | 'children___parent___children'
+  | 'children___parent___children___id'
+  | 'children___parent___children___children'
+  | 'children___parent___internal___content'
+  | 'children___parent___internal___contentDigest'
+  | 'children___parent___internal___description'
+  | 'children___parent___internal___fieldOwners'
+  | 'children___parent___internal___ignoreType'
+  | 'children___parent___internal___mediaType'
+  | 'children___parent___internal___owner'
+  | 'children___parent___internal___type'
+  | 'children___children'
+  | 'children___children___id'
+  | 'children___children___parent___id'
+  | 'children___children___parent___children'
+  | 'children___children___children'
+  | 'children___children___children___id'
+  | 'children___children___children___children'
+  | 'children___children___internal___content'
+  | 'children___children___internal___contentDigest'
+  | 'children___children___internal___description'
+  | 'children___children___internal___fieldOwners'
+  | 'children___children___internal___ignoreType'
+  | 'children___children___internal___mediaType'
+  | 'children___children___internal___owner'
+  | 'children___children___internal___type'
+  | 'children___internal___content'
+  | 'children___internal___contentDigest'
+  | 'children___internal___description'
+  | 'children___internal___fieldOwners'
+  | 'children___internal___ignoreType'
+  | 'children___internal___mediaType'
+  | 'children___internal___owner'
+  | 'children___internal___type'
+  | 'internal___content'
+  | 'internal___contentDigest'
+  | 'internal___description'
+  | 'internal___fieldOwners'
+  | 'internal___ignoreType'
+  | 'internal___mediaType'
+  | 'internal___owner'
+  | 'internal___type'
   | 'title'
   | 'content___raw'
   | 'featuredImage___contentful_id'
@@ -5619,6 +5694,7 @@ export type ContentfulBlockJumboTronFieldsEnum =
   | 'page___internal___owner'
   | 'page___internal___type'
   | 'spaceId'
+  | 'contentful_id'
   | 'createdAt'
   | 'updatedAt'
   | 'sys___type'
@@ -5626,91 +5702,7 @@ export type ContentfulBlockJumboTronFieldsEnum =
   | 'sys___contentType___sys___type'
   | 'sys___contentType___sys___linkType'
   | 'sys___contentType___sys___id'
-  | 'parent___id'
-  | 'parent___parent___id'
-  | 'parent___parent___parent___id'
-  | 'parent___parent___parent___children'
-  | 'parent___parent___children'
-  | 'parent___parent___children___id'
-  | 'parent___parent___children___children'
-  | 'parent___parent___internal___content'
-  | 'parent___parent___internal___contentDigest'
-  | 'parent___parent___internal___description'
-  | 'parent___parent___internal___fieldOwners'
-  | 'parent___parent___internal___ignoreType'
-  | 'parent___parent___internal___mediaType'
-  | 'parent___parent___internal___owner'
-  | 'parent___parent___internal___type'
-  | 'parent___children'
-  | 'parent___children___id'
-  | 'parent___children___parent___id'
-  | 'parent___children___parent___children'
-  | 'parent___children___children'
-  | 'parent___children___children___id'
-  | 'parent___children___children___children'
-  | 'parent___children___internal___content'
-  | 'parent___children___internal___contentDigest'
-  | 'parent___children___internal___description'
-  | 'parent___children___internal___fieldOwners'
-  | 'parent___children___internal___ignoreType'
-  | 'parent___children___internal___mediaType'
-  | 'parent___children___internal___owner'
-  | 'parent___children___internal___type'
-  | 'parent___internal___content'
-  | 'parent___internal___contentDigest'
-  | 'parent___internal___description'
-  | 'parent___internal___fieldOwners'
-  | 'parent___internal___ignoreType'
-  | 'parent___internal___mediaType'
-  | 'parent___internal___owner'
-  | 'parent___internal___type'
-  | 'children'
-  | 'children___id'
-  | 'children___parent___id'
-  | 'children___parent___parent___id'
-  | 'children___parent___parent___children'
-  | 'children___parent___children'
-  | 'children___parent___children___id'
-  | 'children___parent___children___children'
-  | 'children___parent___internal___content'
-  | 'children___parent___internal___contentDigest'
-  | 'children___parent___internal___description'
-  | 'children___parent___internal___fieldOwners'
-  | 'children___parent___internal___ignoreType'
-  | 'children___parent___internal___mediaType'
-  | 'children___parent___internal___owner'
-  | 'children___parent___internal___type'
-  | 'children___children'
-  | 'children___children___id'
-  | 'children___children___parent___id'
-  | 'children___children___parent___children'
-  | 'children___children___children'
-  | 'children___children___children___id'
-  | 'children___children___children___children'
-  | 'children___children___internal___content'
-  | 'children___children___internal___contentDigest'
-  | 'children___children___internal___description'
-  | 'children___children___internal___fieldOwners'
-  | 'children___children___internal___ignoreType'
-  | 'children___children___internal___mediaType'
-  | 'children___children___internal___owner'
-  | 'children___children___internal___type'
-  | 'children___internal___content'
-  | 'children___internal___contentDigest'
-  | 'children___internal___description'
-  | 'children___internal___fieldOwners'
-  | 'children___internal___ignoreType'
-  | 'children___internal___mediaType'
-  | 'children___internal___owner'
-  | 'children___internal___type'
-  | 'internal___content'
-  | 'internal___contentDigest'
-  | 'internal___description'
-  | 'internal___fieldOwners'
-  | 'internal___ignoreType'
-  | 'internal___mediaType'
-  | 'internal___owner'
-  | 'internal___type';
+  | 'node_locale';
 
 export type ContentfulBlockJumboTronGroupConnection = {
   totalCount: Scalars['Int'];
@@ -5722,21 +5714,21 @@ export type ContentfulBlockJumboTronGroupConnection = {
 };
 
 export type ContentfulBlockJumboTronFilterInput = {
-  contentful_id?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
-  node_locale?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
   title?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<ContentfulBlockJumboTronContentFilterInput>;
   featuredImage?: Maybe<ContentfulAssetFilterInput>;
   backgroundImage?: Maybe<ContentfulAssetFilterInput>;
   page?: Maybe<ContentfulPageFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockJumboTronSysFilterInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
 };
 
 export type ContentfulBlockJumboTronSortInput = {
@@ -6570,6 +6562,10 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___name'
   | 'pluginOptions___path'
   | 'pluginOptions___pluginConfig___head'
+  | 'pluginOptions___pathCheck'
+  | 'pluginOptions___allExtensions'
+  | 'pluginOptions___isTSX'
+  | 'pluginOptions___jsxPragma'
   | 'pluginOptions___accessToken'
   | 'pluginOptions___spaceId'
   | 'pluginOptions___environment'
@@ -6579,10 +6575,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___pageLimit'
   | 'pluginOptions___assetDownloadWorkers'
   | 'pluginOptions___useNameForId'
-  | 'pluginOptions___pathCheck'
-  | 'pluginOptions___allExtensions'
-  | 'pluginOptions___isTSX'
-  | 'pluginOptions___jsxPragma'
   | 'nodeAPIs'
   | 'browserAPIs'
   | 'ssrAPIs'
