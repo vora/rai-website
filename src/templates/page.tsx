@@ -1,6 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "@/components/NewLayout";
+import { EmptyPage } from "@/components/EmptyPage";
+import { Text } from "@/components/Text";
+import { Icon } from "@/components/Icon";
 import { ContentfulBlocks } from "@/components/ContentfulBlocks";
 import { PageTemplateQuery } from "@/graphql/graphql-types";
 
@@ -14,7 +17,12 @@ function Page({ data }: PageProps) {
       {data?.blog?.blocks ? (
         <ContentfulBlocks blocks={data.blog.blocks} />
       ) : (
-        "No Blocks"
+        <EmptyPage>
+          <Icon icon="AlertTriangle" />{" "}
+          <Text>
+            There is no content on this page, the robots must have eaten it up
+          </Text>
+        </EmptyPage>
       )}
     </Layout>
   );
