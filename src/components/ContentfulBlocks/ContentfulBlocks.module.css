@@ -17,3 +17,11 @@
   border-radius: 2px;
   text-align: center;
 }
+
+.code {
+  max-width: 100%;
+  overflow-x: scroll;
+  font-family: monospace;
+  font-size: var(--font-size--small);
+  text-align: left;
+}

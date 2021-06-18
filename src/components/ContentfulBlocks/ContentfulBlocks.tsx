@@ -4,27 +4,20 @@ import { Container } from "@/components/Container";
 
 import styles from "./ContentfulBlocks.module.css";
 
+type BlockType = Maybe<CallToActionFragmentFragment>;
 interface BlockProps {
-  blocks: Maybe<CallToActionFragmentFragment>[];
+  blocks: BlockType[];
 }
 
 export function ContentfulBlocks({ blocks }: BlockProps) {
   return (
     <>
       {blocks.map((block) => {
-        if (!block?.__typename) {
-          return (
-            <div className={styles.spacer}>
-              <UnknownBlock />
-            </div>
-          );
-        }
-
-        switch (block.__typename) {
+        switch (block?.__typename) {
           default:
             return (
               <div className={styles.spacer}>
-                <UnknownBlock title={block.__typename} />
+                <UnknownBlock block={block} />
               </div>
             );
         }
@@ -34,14 +27,18 @@ export function ContentfulBlocks({ blocks }: BlockProps) {
 }
 
 interface UnknownBlockProps {
-  readonly title?: string;
+  readonly block?: BlockType;
 }
 
-function UnknownBlock({ title = "No Typename" }: UnknownBlockProps) {
+function UnknownBlock({ block }: UnknownBlockProps) {
   return (
     <Container>
       <div className={styles.unknown}>
-        Unknown block type: <span>{title}</span>
+        Unknown block type: <span>{block?.__typename || "No Typename"}</span>
+        <details>
+          <summary>Block Info</summary>
+          <pre className={styles.code}>{JSON.stringify(block, null, 2)}</pre>
+        </details>
       </div>
     </Container>
   );
