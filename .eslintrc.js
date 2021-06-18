@@ -25,6 +25,7 @@ module.exports = {
           ["@/components", "./src/components"],
           ["@/hooks", "./src/hooks"],
           ["@/blocks", "./src/blocks"],
+          ["@/graphql", "./graphql"],
         ],
         extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
       },
