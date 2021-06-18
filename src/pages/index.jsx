@@ -1,7 +1,8 @@
 import React from "react";
-import Layout from "../components/Layout";
 import { navigate } from "gatsby";
-import { Heading } from '@/components/Heading';
+import { Heading } from "@/components/Heading";
+import { StaticImage } from "gatsby-plugin-image";
+import Layout from "../components/Layout";
 import {
   MediumBody,
   Heading1,
@@ -25,7 +26,6 @@ import {
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";
 import Slideshow from "../components/Slideshow";
-import { StaticImage } from "gatsby-plugin-image";
 
 function Index() {
   return (
@@ -176,7 +176,7 @@ function Index() {
       <Jumbotron text>
         <JumboText>
           <Heading as="h1">
-            AI's Power <br /> Needs Guardrails.
+            AI&apos;s Power <br /> Needs Guardrails.
           </Heading>
           <MediumBody>
             When not designed in a thoughtful and responsible manner, AI systems{" "}
@@ -185,7 +185,7 @@ function Index() {
             going <br />
             so far as to violate human rights. AI presents significant risk of
             financial
-            <br /> and reputational harm for companies that haven't thought
+            <br /> and reputational harm for companies that haven&apos;t thought
             through their <br />
             strategies and roadmaps.
           </MediumBody>
@@ -260,7 +260,7 @@ function Index() {
         />
         <JumboText style={{ order: "4" }} className="jumbo-text">
           <Heading1 dark>
-            The World's First Independent, <br />
+            The World&apos;s First Independent, <br />
             Accredited Certification Program <br />
             for Responsible AI
           </Heading1>

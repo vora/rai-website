@@ -1,11 +1,7 @@
 import React from "react";
+import { Heading } from "@/components/Heading";
 import Layout from "../../components/Layout";
-import { Heading } from '@/components/Heading'
-import {
-  Headline2,
-  MediumBody,
-  UpperCaption,
-} from "../../components/OldText";
+import { Headline2, MediumBody, UpperCaption } from "../../components/OldText";
 import { Row, Divider, TitleLink } from "../../components/Blocks";
 import { ShareContainer } from "../../components/Buttons";
 import News from "../../components/News";
@@ -25,7 +21,7 @@ function Page() {
           <UpperCaption style={{ marginRight: "20px" }}>
             DECEMBER 29, 2020
           </UpperCaption>
-          <div className="s9-widget-wrapper"></div>
+          <div className="s9-widget-wrapper" />
         </ShareContainer>
         <MediumBody bold>
           Annual awards program honors standout organizations and individuals

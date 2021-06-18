@@ -23,13 +23,13 @@ export const JumboContainer = styled.div`
     }
   }
 
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 450px) {
     img {
       margin-top: 500px;
     }
   }
 
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 400px) {
     img {
       margin-top: 550px;
       height: 40vh;
@@ -37,7 +37,7 @@ export const JumboContainer = styled.div`
     }
   }
 
-  @media screen and (max-width: 350px){
+  @media screen and (max-width: 350px) {
     img {
       margin-top: 620px;
     }

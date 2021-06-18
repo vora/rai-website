@@ -1,6 +1,6 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 
-/* Font colors*/
+/* Font colors */
 const carbon = "#2f2d34";
 const blanco = "#ffffff";
 const gravy = "#797b80";
@@ -67,7 +67,7 @@ export const LargeBody = styled.p`
   line-height: 32px;
   margin: 0px 0px 12px 0px;
   color: ${(props) => (props.dark ? blanco : carbon)};
-  border-left: ${(props) => (props.bordered ? "3px solid " + carbon : "none")};
+  border-left: ${(props) => (props.bordered ? `3px solid ${carbon}` : "none")};
   padding-left: ${(props) => (props.bordered ? "20px" : "0")};
 `;
 export const MediumBody = styled.p`
@@ -76,7 +76,7 @@ export const MediumBody = styled.p`
   font-size: 18px;
   line-height: 28px;
   color: ${(props) => (props.dark ? blanco : carbon)};
-  border-left: ${(props) => (props.bordered ? "3px solid " + carbon : "none")};
+  border-left: ${(props) => (props.bordered ? `3px solid ${carbon}` : "none")};
   padding-left: ${(props) => (props.bordered ? "20px" : "0")};
   margin: ${(props) =>
     props.bordered ? "0px 0px 20px 0px" : "0px 0px 12px 0px"};

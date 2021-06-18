@@ -1,6 +1,7 @@
 import React from "react";
+import { Heading } from "@/components/Heading";
+import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
-import { Heading } from '@/components/Heading'
 import {
   Headline2,
   MediumBody,
@@ -17,7 +18,6 @@ import {
 } from "../components/Blocks";
 import News from "../components/News";
 import StyledLink from "../components/StyledLink";
-import { StaticImage } from "gatsby-plugin-image";
 
 function NewsPage() {
   return (

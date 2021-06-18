@@ -1,11 +1,7 @@
 import React from "react";
+import { Heading } from "@/components/Heading";
 import Layout from "../../components/Layout";
-import { Heading } from '@/components/Heading'
-import {
-  Headline2,
-  MediumBody,
-  UpperCaption,
-} from "../../components/OldText";
+import { Headline2, MediumBody, UpperCaption } from "../../components/OldText";
 import { Row, Divider, TitleLink } from "../../components/Blocks";
 import { ShareContainer } from "../../components/Buttons";
 import News from "../../components/News";
@@ -22,7 +18,7 @@ function Page() {
           <UpperCaption style={{ marginRight: "20px" }}>
             NOVEMBER 7, 2020
           </UpperCaption>
-          <div className="s9-widget-wrapper"></div>
+          <div className="s9-widget-wrapper" />
         </ShareContainer>
         <MediumBody bold>
           Interactive web visualization raises awareness on helpful and harmful
@@ -58,7 +54,7 @@ function Page() {
           services to law enforcement, set a year range, and filter by
           categorization on whether AI has been helpful or harmful.
         </MediumBody>
-        <br/>
+        <br />
         <MediumBody>
           <strong>Where AI was Harmful</strong>
           <br />
@@ -73,7 +69,7 @@ function Page() {
           managed in a responsible way, AI systems can be biased, insecure, and
           in some cases (often inadvertently) violate human rights.
         </MediumBody>
-        <br/>
+        <br />
         <MediumBody>
           <strong>Where AI Has Helped</strong>
           <br />
@@ -86,7 +82,7 @@ function Page() {
             COVID-19.
           </strong>
         </MediumBody>
-        <br/>
+        <br />
         <MediumBody>
           <strong>Our Process of AI Has Been Harmful/Helpful Labeling</strong>
           <br />
