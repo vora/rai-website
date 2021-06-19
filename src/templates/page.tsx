@@ -5,10 +5,10 @@ import { EmptyPage } from "@/components/EmptyPage";
 import { Text } from "@/components/Text";
 import { Icon } from "@/components/Icon";
 import { ContentfulBlocks } from "@/components/ContentfulBlocks";
-import { PageTemplateQuery } from "@/graphql/graphql-types";
+import { PageTemplateQueryQuery } from "@/graphql/graphql-types";
 
 interface PageProps {
-  data: PageTemplateQuery;
+  data: PageTemplateQueryQuery;
 }
 
 function Page({ data }: PageProps) {
@@ -29,13 +29,11 @@ function Page({ data }: PageProps) {
 }
 
 export const query = graphql`
-  query pageTemplate($slug: String!) {
+  query PageTemplateQuery($slug: String!) {
     blog: contentfulPage(slug: { eq: $slug }) {
       title
       blocks {
-        ... on ContentfulBlockCallToAction {
-          ...CallToActionFragment
-        }
+        ...CallToActionFragment
       }
     }
   }

@@ -21,7 +21,7 @@ import News from "../components/News";
 import styles from "./blogTemplate.module.css";
 
 export const query = graphql`
-  query($slug: String!) {
+  query BlogTemplateQuery($slug: String!) {
     blog: contentfulBlogPost(slug: { eq: $slug }) {
       id
       title

@@ -6819,12 +6819,12 @@ export type Unnamed_1_Query = (
   ) }
 );
 
-export type Unnamed_2_QueryVariables = Exact<{
+export type BlogTemplateQueryQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
 
 
-export type Unnamed_2_Query = (
+export type BlogTemplateQueryQuery = (
   { __typename?: 'Query' }
   & { blog?: Maybe<(
     { __typename?: 'ContentfulBlogPost' }
@@ -6846,12 +6846,12 @@ export type Unnamed_2_Query = (
   )> }
 );
 
-export type PageTemplateQueryVariables = Exact<{
+export type PageTemplateQueryQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
 
 
-export type PageTemplateQuery = (
+export type PageTemplateQueryQuery = (
   { __typename?: 'Query' }
   & { blog?: Maybe<(
     { __typename?: 'ContentfulPage' }
