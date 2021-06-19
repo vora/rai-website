@@ -433,6 +433,8 @@ export type ContentfulAuthorConnectionGroupArgs = {
   field: ContentfulAuthorFieldsEnum;
 };
 
+export type ContentfulAuthorContentfulBlockCallToActionContentfulBlockJumboTronUnion = ContentfulAuthor | ContentfulBlockCallToAction | ContentfulBlockJumboTron;
+
 export type ContentfulAuthorEdge = {
   __typename?: 'ContentfulAuthorEdge';
   next?: Maybe<ContentfulAuthor>;
@@ -996,8 +998,6 @@ export type ContentfulBlockCallToActionContent = {
 export type ContentfulBlockCallToActionContentFilterInput = {
   raw?: Maybe<StringQueryOperatorInput>;
 };
-
-export type ContentfulBlockCallToActionContentfulBlockJumboTronUnion = ContentfulBlockCallToAction | ContentfulBlockJumboTron;
 
 export type ContentfulBlockCallToActionEdge = {
   __typename?: 'ContentfulBlockCallToActionEdge';
@@ -3042,7 +3042,7 @@ export type ContentfulPage = ContentfulReference & ContentfulEntry & Node & {
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
-  blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockJumboTronUnion>>>;
+  blocks?: Maybe<Array<Maybe<ContentfulAuthorContentfulBlockCallToActionContentfulBlockJumboTronUnion>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
@@ -5723,6 +5723,10 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___name = 'pluginCreator___pluginOptions___name',
   pluginCreator___pluginOptions___path = 'pluginCreator___pluginOptions___path',
   pluginCreator___pluginOptions___pluginConfig___head = 'pluginCreator___pluginOptions___pluginConfig___head',
+  pluginCreator___pluginOptions___pathCheck = 'pluginCreator___pluginOptions___pathCheck',
+  pluginCreator___pluginOptions___allExtensions = 'pluginCreator___pluginOptions___allExtensions',
+  pluginCreator___pluginOptions___isTSX = 'pluginCreator___pluginOptions___isTSX',
+  pluginCreator___pluginOptions___jsxPragma = 'pluginCreator___pluginOptions___jsxPragma',
   pluginCreator___pluginOptions___accessToken = 'pluginCreator___pluginOptions___accessToken',
   pluginCreator___pluginOptions___spaceId = 'pluginCreator___pluginOptions___spaceId',
   pluginCreator___pluginOptions___environment = 'pluginCreator___pluginOptions___environment',
@@ -5732,10 +5736,6 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___pageLimit = 'pluginCreator___pluginOptions___pageLimit',
   pluginCreator___pluginOptions___assetDownloadWorkers = 'pluginCreator___pluginOptions___assetDownloadWorkers',
   pluginCreator___pluginOptions___useNameForId = 'pluginCreator___pluginOptions___useNameForId',
-  pluginCreator___pluginOptions___pathCheck = 'pluginCreator___pluginOptions___pathCheck',
-  pluginCreator___pluginOptions___allExtensions = 'pluginCreator___pluginOptions___allExtensions',
-  pluginCreator___pluginOptions___isTSX = 'pluginCreator___pluginOptions___isTSX',
-  pluginCreator___pluginOptions___jsxPragma = 'pluginCreator___pluginOptions___jsxPragma',
   pluginCreator___nodeAPIs = 'pluginCreator___nodeAPIs',
   pluginCreator___browserAPIs = 'pluginCreator___browserAPIs',
   pluginCreator___ssrAPIs = 'pluginCreator___ssrAPIs',
@@ -5956,6 +5956,10 @@ export enum SitePluginFieldsEnum {
   pluginOptions___name = 'pluginOptions___name',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___pluginConfig___head = 'pluginOptions___pluginConfig___head',
+  pluginOptions___pathCheck = 'pluginOptions___pathCheck',
+  pluginOptions___allExtensions = 'pluginOptions___allExtensions',
+  pluginOptions___isTSX = 'pluginOptions___isTSX',
+  pluginOptions___jsxPragma = 'pluginOptions___jsxPragma',
   pluginOptions___accessToken = 'pluginOptions___accessToken',
   pluginOptions___spaceId = 'pluginOptions___spaceId',
   pluginOptions___environment = 'pluginOptions___environment',
@@ -5965,10 +5969,6 @@ export enum SitePluginFieldsEnum {
   pluginOptions___pageLimit = 'pluginOptions___pageLimit',
   pluginOptions___assetDownloadWorkers = 'pluginOptions___assetDownloadWorkers',
   pluginOptions___useNameForId = 'pluginOptions___useNameForId',
-  pluginOptions___pathCheck = 'pluginOptions___pathCheck',
-  pluginOptions___allExtensions = 'pluginOptions___allExtensions',
-  pluginOptions___isTSX = 'pluginOptions___isTSX',
-  pluginOptions___jsxPragma = 'pluginOptions___jsxPragma',
   nodeAPIs = 'nodeAPIs',
   browserAPIs = 'browserAPIs',
   ssrAPIs = 'ssrAPIs',
@@ -6116,6 +6116,10 @@ export type SitePluginPluginOptions = {
   name?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
   pluginConfig?: Maybe<SitePluginPluginOptionsPluginConfig>;
+  pathCheck?: Maybe<Scalars['Boolean']>;
+  allExtensions?: Maybe<Scalars['Boolean']>;
+  isTSX?: Maybe<Scalars['Boolean']>;
+  jsxPragma?: Maybe<Scalars['String']>;
   accessToken?: Maybe<Scalars['String']>;
   spaceId?: Maybe<Scalars['String']>;
   environment?: Maybe<Scalars['String']>;
@@ -6125,10 +6129,6 @@ export type SitePluginPluginOptions = {
   pageLimit?: Maybe<Scalars['Int']>;
   assetDownloadWorkers?: Maybe<Scalars['Int']>;
   useNameForId?: Maybe<Scalars['Boolean']>;
-  pathCheck?: Maybe<Scalars['Boolean']>;
-  allExtensions?: Maybe<Scalars['Boolean']>;
-  isTSX?: Maybe<Scalars['Boolean']>;
-  jsxPragma?: Maybe<Scalars['String']>;
 };
 
 export type SitePluginPluginOptionsCssLoaderOptions = {
@@ -6180,6 +6180,10 @@ export type SitePluginPluginOptionsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
   pluginConfig?: Maybe<SitePluginPluginOptionsPluginConfigFilterInput>;
+  pathCheck?: Maybe<BooleanQueryOperatorInput>;
+  allExtensions?: Maybe<BooleanQueryOperatorInput>;
+  isTSX?: Maybe<BooleanQueryOperatorInput>;
+  jsxPragma?: Maybe<StringQueryOperatorInput>;
   accessToken?: Maybe<StringQueryOperatorInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   environment?: Maybe<StringQueryOperatorInput>;
@@ -6189,10 +6193,6 @@ export type SitePluginPluginOptionsFilterInput = {
   pageLimit?: Maybe<IntQueryOperatorInput>;
   assetDownloadWorkers?: Maybe<IntQueryOperatorInput>;
   useNameForId?: Maybe<BooleanQueryOperatorInput>;
-  pathCheck?: Maybe<BooleanQueryOperatorInput>;
-  allExtensions?: Maybe<BooleanQueryOperatorInput>;
-  isTSX?: Maybe<BooleanQueryOperatorInput>;
-  jsxPragma?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsPluginConfig = {
@@ -6853,12 +6853,22 @@ export type PageTemplateQueryQueryVariables = Exact<{
 
 export type PageTemplateQueryQuery = (
   { __typename?: 'Query' }
-  & { blog?: Maybe<(
+  & { page?: Maybe<(
     { __typename?: 'ContentfulPage' }
     & Pick<ContentfulPage, 'title'>
-    & { blocks?: Maybe<Array<Maybe<(
-      { __typename?: 'ContentfulBlockCallToAction' }
-      & CallToActionFragmentFragment
+    & { blocks?: Maybe<Array<Maybe<{ __typename?: 'ContentfulAuthor' } | (
+      { __typename: 'ContentfulBlockCallToAction' }
+      & Pick<ContentfulBlockCallToAction, 'title'>
+      & { content?: Maybe<(
+        { __typename?: 'ContentfulBlockCallToActionContent' }
+        & Pick<ContentfulBlockCallToActionContent, 'raw'>
+      )>, button?: Maybe<(
+        { __typename?: 'contentfulBlockCallToActionButtonJsonNode' }
+        & { button?: Maybe<(
+          { __typename?: 'contentfulBlockCallToActionButtonJsonNodeButton' }
+          & Pick<ContentfulBlockCallToActionButtonJsonNodeButton, 'title' | 'url' | 'external'>
+        )> }
+      )> }
     ) | { __typename?: 'ContentfulBlockJumboTron' }>>> }
   )> }
 );

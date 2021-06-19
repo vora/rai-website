@@ -14,8 +14,8 @@ interface PageProps {
 function Page({ data }: PageProps) {
   return (
     <Layout>
-      {data?.blog?.blocks ? (
-        <ContentfulBlocks blocks={data.blog.blocks} />
+      {data?.page?.blocks ? (
+        <ContentfulBlocks blocks={data.page.blocks} />
       ) : (
         <EmptyPage>
           <Icon icon="AlertTriangle" />{" "}
@@ -30,7 +30,7 @@ function Page({ data }: PageProps) {
 
 export const query = graphql`
   query PageTemplateQuery($slug: String!) {
-    blog: contentfulPage(slug: { eq: $slug }) {
+    page: contentfulPage(slug: { eq: $slug }) {
       title
       blocks {
         ... on ContentfulBlockCallToAction {

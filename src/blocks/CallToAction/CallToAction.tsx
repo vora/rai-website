@@ -26,20 +26,3 @@ export function CallToAction({ title, content, action }: CallToActionProps) {
     </Container>
   );
 }
-
-export const CallToActionFragment = graphql`
-  fragment CallToActionFragment on ContentfulBlockCallToAction {
-    __typename
-    title
-    content {
-      raw
-    }
-    button {
-      button {
-        title
-        url
-        external
-      }
-    }
-  }
-`;
