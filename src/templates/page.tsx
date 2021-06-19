@@ -29,25 +29,9 @@ function Page({ data }: PageProps) {
 }
 
 export const query = graphql`
-  query PageTemplateQuery($slug: String!) {
+  query RandomPageQuery($slug: String!) {
     page: contentfulPage(slug: { eq: $slug }) {
       title
-      blocks {
-        ... on ContentfulBlockCallToAction {
-          __typename
-          title
-          content {
-            raw
-          }
-          button {
-            button {
-              title
-              url
-              external
-            }
-          }
-        }
-      }
     }
   }
 `;
