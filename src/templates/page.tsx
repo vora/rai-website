@@ -33,7 +33,20 @@ export const query = graphql`
     blog: contentfulPage(slug: { eq: $slug }) {
       title
       blocks {
-        ...CallToActionFragment
+        ... on ContentfulBlockCallToAction {
+          __typename
+          title
+          content {
+            raw
+          }
+          button {
+            button {
+              title
+              url
+              external
+            }
+          }
+        }
       }
     }
   }
