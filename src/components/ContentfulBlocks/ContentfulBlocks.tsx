@@ -4,12 +4,22 @@ import { Container } from "@/components/Container";
 
 import styles from "./ContentfulBlocks.module.css";
 
-type BlockType = Maybe<CallToActionFragmentFragment>;
+type BlockType = Maybe<
+  | CallToActionFragmentFragment
+  | {
+      __typename?: "ContentfulBlockJumboTron";
+    }
+>;
+
 interface BlockProps {
-  blocks: BlockType[];
+  blocks: Maybe<Array<Maybe<BlockType>>>;
 }
 
 export function ContentfulBlocks({ blocks }: BlockProps) {
+  if (!blocks) {
+    return <></>;
+  }
+
   return (
     <>
       {blocks.map((block) => {
