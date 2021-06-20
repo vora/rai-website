@@ -27,7 +27,8 @@
     "typecheck": "tsc --noEmit --project tsconfig.json",
     "cssTypes": "tcm src/components",
     "storybook": "start-storybook -p 8100 -s public",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@contentful/rich-text-types": "^14.1.2",

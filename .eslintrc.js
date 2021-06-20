@@ -33,6 +33,7 @@ module.exports = {
   },
   rules: {
     "no-use-before-define": "off",
+    "no-underscore-dangle": ["error", { allow: ["__typename"] }],
     "prettier/prettier": "error",
     "import/extensions": [
       "error",

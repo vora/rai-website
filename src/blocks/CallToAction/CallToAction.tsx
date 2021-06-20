@@ -3,6 +3,7 @@ import { Container } from "@/components/Container";
 import { Button, ButtonProps } from "@/components/Button";
 import { Heading } from "@/components/Heading";
 import { RichText, RichTextContent } from "@/components/RichText";
+import { graphql } from "gatsby";
 
 import styles from "./CallToAction.module.css";
 
@@ -25,3 +26,10 @@ export function CallToAction({ title, content, action }: CallToActionProps) {
     </Container>
   );
 }
+
+export const CallToActionFragment = graphql`
+  fragment CallToActionFragment on ContentfulBlockCallToAction {
+    __typename
+    title
+  }
+`;

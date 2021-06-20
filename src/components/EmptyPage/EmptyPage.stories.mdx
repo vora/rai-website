@@ -1,0 +1,32 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { EmptyPage } from ".";
+
+<Meta title="components/EmptyPage" component={EmptyPage} />
+
+# EmptyPage
+
+`EmptyPage` is used to display content in the center of the page when it is empty.
+
+Ideally used for empty states of pages and errors states.
+
+## Usage
+
+```tsx
+import { EmptyPage } from "@/components/EmptyPage";
+```
+
+## Props
+
+<ArgsTable component={EmptyPage} />
+
+## Example
+
+<Canvas>
+  <Story name="Default">
+    {(args) => (
+      <EmptyPage>
+        Sir, it’s quite possible this asteroid is not entirely stable.
+      </EmptyPage>
+    )}
+  </Story>
+</Canvas>
