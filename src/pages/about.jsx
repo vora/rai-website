@@ -1000,13 +1000,16 @@ function About() {
       </Row>
       <div style={{ margin: "var(--space--xxlarge) 0" }}>
         <CallToAction
-          title="Get Involved"
-          action={{
-            title: "Become a member",
-            url: "/membership",
-          }}
-          content={{
-            raw: `{
+          data={{
+            title: "Get Involved",
+            button: {
+              action: {
+                title: "Become a member",
+                url: "/membership",
+              },
+            },
+            content: {
+              raw: `{
               "data":{},
               "content":[
                 {
@@ -1070,6 +1073,7 @@ function About() {
               ],
               "nodeType":"document"
             }`,
+            },
           }}
         />
       </div>

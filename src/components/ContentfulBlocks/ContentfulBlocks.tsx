@@ -1,5 +1,6 @@
 import React from "react";
 import { Maybe, CallToActionFragmentFragment } from "@/graphql/graphql-types";
+import { CallToAction } from "@/blocks/CallToAction";
 import { Container } from "@/components/Container";
 
 import styles from "./ContentfulBlocks.module.css";
@@ -24,6 +25,8 @@ export function ContentfulBlocks({ blocks }: BlockProps) {
     <>
       {blocks.map((block) => {
         switch (block?.__typename) {
+          case "ContentfulBlockCallToAction":
+            return <CallToAction data={block} />;
           default:
             return (
               <div className={styles.spacer}>

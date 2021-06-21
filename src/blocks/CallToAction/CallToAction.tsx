@@ -1,27 +1,36 @@
 import React from "react";
 import { Container } from "@/components/Container";
-import { Button, ButtonProps } from "@/components/Button";
+import { Button } from "@/components/Button";
 import { Heading } from "@/components/Heading";
 import { RichText, RichTextContent } from "@/components/RichText";
+import { CallToActionFragmentFragment } from "@/graphql/graphql-types";
 import { graphql } from "gatsby";
 
 import styles from "./CallToAction.module.css";
 
 interface CallToActionProps {
-  readonly title: string;
-  readonly content: RichTextContent;
-  readonly action: Pick<ButtonProps, "title" | "url">;
+  readonly data: CallToActionFragmentFragment;
 }
 
-export function CallToAction({ title, content, action }: CallToActionProps) {
+export function CallToAction({
+  data: { title, content, button },
+}: CallToActionProps) {
   return (
     <Container>
       <div className={styles.cta}>
-        <Heading>{title}</Heading>
-        <div className={styles.content}>
-          <RichText size="large" content={content} />
-        </div>
-        <Button title={action.title} url={action.url} variation="inverted" />
+        {title && <Heading>{title}</Heading>}
+        {content && (
+          <div className={styles.content}>
+            <RichText size="large" content={content as RichTextContent} />
+          </div>
+        )}
+        {button?.action && (
+          <Button
+            title={button.action.title as string}
+            url={button.action.url as string}
+            variation="inverted"
+          />
+        )}
       </div>
     </Container>
   );
@@ -31,5 +40,15 @@ export const CallToActionFragment = graphql`
   fragment CallToActionFragment on ContentfulBlockCallToAction {
     __typename
     title
+    content {
+      raw
+    }
+    button {
+      action {
+        title
+        url
+        external
+      }
+    }
   }
 `;
