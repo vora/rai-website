@@ -34,18 +34,7 @@ export const query = graphql`
       title
       blocks {
         ... on ContentfulBlockCallToAction {
-          __typename
-          title
-          content {
-            raw
-          }
-          button {
-            action {
-              title
-              url
-              external
-            }
-          }
+          ...CallToActionFragment
         }
       }
     }

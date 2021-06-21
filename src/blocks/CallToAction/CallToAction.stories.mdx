@@ -22,19 +22,23 @@ import { CallToAction } from "@/blocks/CallToAction";
   <Story
     name="Default"
     args={{
-      title: "Get Involved",
-      content: {
-        raw: `{
+      data: {
+        title: "Get Involved",
+        content: {
+          raw: `{
               "data":{},
               "content":[
                 ${mockParagraphWithLink}
               ],
               "nodeType":"document"
             }`,
-      },
-      action: {
-        title: "Become a member",
-        url: "/membership",
+        },
+        button: {
+          action: {
+            title: "Become a member",
+            url: "/membership",
+          },
+        },
       },
     }}
   >
