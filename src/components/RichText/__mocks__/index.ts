@@ -45,14 +45,14 @@ const mockHeadingThree = `
   "nodeType":"heading-3"
 }`;
 
-const mockParagraph = `
+export const mockParagraph = `
 {
   "data":{},
   "content":[
     {
       "data":{},
       "marks":[],
-      "value":"This is sample paragraph ",
+      "value":"Dummy content ",
       "nodeType":"text"
     }
   ],
@@ -100,3 +100,13 @@ export const mockContent = {
       "nodeType":"document"
     }`,
 } as RenderRichTextData<ContentfulRichTextGatsbyReference>;
+
+export const dummyContent = {
+  raw: `{
+        "data":{},
+        "content":[
+          ${mockParagraph}
+        ],
+        "nodeType":"document"
+      }`,
+};
