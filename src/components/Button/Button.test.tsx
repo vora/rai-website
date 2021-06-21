@@ -20,3 +20,8 @@ it("can have the inverted class", () => {
   );
   expect(getByText("Foo").classList).toContain("inverted");
 });
+
+it("opens in a new window when external", () => {
+  const { getByText } = render(<Button title="Foo" url="/" external />);
+  expect(getByText("Foo").getAttribute("target")).toBe("_blank");
+});

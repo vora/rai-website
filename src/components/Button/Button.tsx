@@ -16,13 +16,43 @@ export interface ButtonProps {
    */
   readonly url: string;
   readonly variation?: "primary" | "inverted";
+  /**
+   * Should the link open in a new window
+   */
+  readonly external?: boolean;
 }
 
-export function Button({ title, url, variation = "primary" }: ButtonProps) {
+export function Button({
+  title,
+  url,
+  variation = "primary",
+  external,
+}: ButtonProps) {
   const buttonClasses = classnames(styles.button, styles[variation]);
+  const buttonProps = {
+    className: buttonClasses,
+  };
+
+  if (external) {
+    return (
+      /**
+       * Disabling props spreading as we want to share props
+       * betweeen both returns.
+       */
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      <a {...buttonProps} href={url} target="_blank" rel="noopener noreferrer">
+        {title}
+      </a>
+    );
+  }
 
   return (
-    <Link to={url} className={buttonClasses}>
+    /**
+     * Disabling props spreading as we want to share props
+     * betweeen both returns.
+     */
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Link {...buttonProps} to={url}>
       {title}
     </Link>
   );
