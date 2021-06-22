@@ -1,3 +1,15 @@
+.blocks > * {
+  margin-top: var(--space--large);
+}
+
+.blocks > *:first-of-type {
+  margin-top: 0;
+}
+
+.blocks > *:last-of-type {
+  margin-bottom: var(--space--xlarge);
+}
+
 .spacer {
   margin: var(--space--base) 0;
 }

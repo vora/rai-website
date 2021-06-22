@@ -1,0 +1,11 @@
+.content {
+  border: 1px solid var(--color--stone);
+  border-radius: 2px;
+  padding: var(--space--large);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space--large);
+}

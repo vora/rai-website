@@ -1,12 +1,18 @@
 import React from "react";
-import { Maybe, CallToActionFragmentFragment } from "@/graphql/graphql-types";
+import {
+  Maybe,
+  CallToActionFragmentFragment,
+  ContentFragmentFragment,
+} from "@/graphql/graphql-types";
 import { CallToAction } from "@/blocks/CallToAction";
+import { Content } from "@/blocks/Content";
 import { Container } from "@/components/Container";
 
 import styles from "./ContentfulBlocks.module.css";
 
 type BlockType = Maybe<
   | CallToActionFragmentFragment
+  | ContentFragmentFragment
   | {
       __typename?: "ContentfulBlockJumboTron";
     }
@@ -22,11 +28,13 @@ export function ContentfulBlocks({ blocks }: BlockProps) {
   }
 
   return (
-    <>
+    <div className={styles.blocks}>
       {blocks.map((block) => {
         switch (block?.__typename) {
           case "ContentfulBlockCallToAction":
-            return <CallToAction data={block} />;
+            return <CallToAction data={block} key={block.id} />;
+          case "ContentfulBlockContent":
+            return <Content data={block} key={block.id} />;
           default:
             return (
               <div className={styles.spacer}>
@@ -35,7 +43,7 @@ export function ContentfulBlocks({ blocks }: BlockProps) {
             );
         }
       })}
-    </>
+    </div>
   );
 }
 

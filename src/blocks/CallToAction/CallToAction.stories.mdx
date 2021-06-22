@@ -1,6 +1,7 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
 import { CallToAction } from ".";
-import { mockParagraphWithLink } from "@/components/RichText/__mocks__/mockContent";
+import { dummyContent } from "@/components/RichText/__mocks__";
+import { dummyButton } from "@/components/Button/__mocks__";
 
 <Meta title="blocks/CallToAction" component={CallToAction} />
 
@@ -24,21 +25,8 @@ import { CallToAction } from "@/blocks/CallToAction";
     args={{
       data: {
         title: "Get Involved",
-        content: {
-          raw: `{
-              "data":{},
-              "content":[
-                ${mockParagraphWithLink}
-              ],
-              "nodeType":"document"
-            }`,
-        },
-        button: {
-          action: {
-            title: "Become a member",
-            url: "/membership",
-          },
-        },
+        content: dummyContent,
+        button: dummyButton,
       },
     }}
   >

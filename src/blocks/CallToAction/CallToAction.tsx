@@ -39,6 +39,7 @@ export function CallToAction({
 export const CallToActionFragment = graphql`
   fragment CallToActionFragment on ContentfulBlockCallToAction {
     __typename
+    id
     title
     content {
       raw

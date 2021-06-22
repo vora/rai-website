@@ -36,6 +36,9 @@ export const query = graphql`
         ... on ContentfulBlockCallToAction {
           ...CallToActionFragment
         }
+        ... on ContentfulBlockContent {
+          ...ContentFragment
+        }
       }
     }
   }
