@@ -14,6 +14,11 @@ concurrently(
       name: "Storybook",
       prefixColor: "#FE4784",
     },
+    {
+      command: "npm:start:codegen",
+      name: "Codegen",
+      prefixColor: "#ffba00",
+    },
   ],
   {
     killOthers: ["failure", "success"],
