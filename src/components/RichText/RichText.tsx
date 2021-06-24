@@ -4,7 +4,13 @@ import {
   ContentfulRichTextGatsbyReference,
   renderRichText,
 } from "gatsby-source-contentful/rich-text";
-import { BLOCKS, INLINES, Inline, Block } from "@contentful/rich-text-types";
+import {
+  BLOCKS,
+  INLINES,
+  Inline,
+  Block,
+  MARKS,
+} from "@contentful/rich-text-types";
 import { Heading } from "@/components/Heading";
 import { Text } from "@/components/Text";
 import { Link } from "@/components/Link";
@@ -18,6 +24,9 @@ interface RichTextProps {
 
 export function RichText({ size = "base", content }: RichTextProps) {
   const options = {
+    renderMark: {
+      [MARKS.BOLD]: (text: ReactNode) => <strong>{text}</strong>,
+    },
     renderNode: {
       [BLOCKS.HEADING_1]: (node: Block | Inline, children: ReactNode) => (
         <Heading as="h1">{children}</Heading>

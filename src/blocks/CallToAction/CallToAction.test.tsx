@@ -7,7 +7,7 @@ import { CallToAction } from ".";
 
 const mockData = {
   title: "Foo",
-  button: dummyButton,
+  raiButton: dummyButton,
   content: dummyContent,
 };
 
@@ -31,7 +31,7 @@ it("renders a button", () => {
 
 it("does not render a button", () => {
   const { queryByText } = render(
-    <MockCta data={{ ...mockData, button: null }} />
+    <MockCta data={{ ...mockData, raiButton: null }} />
   );
   expect(queryByText("Dummy Button")).toBeNull();
 });

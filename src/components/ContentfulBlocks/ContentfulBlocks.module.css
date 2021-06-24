@@ -1,5 +1,5 @@
 .blocks > * {
-  margin-top: var(--space--large);
+  margin-top: var(--space--xlarge);
 }
 
 .blocks > *:first-of-type {
@@ -7,7 +7,7 @@
 }
 
 .blocks > *:last-of-type {
-  margin-bottom: var(--space--xlarge);
+  margin-bottom: var(--space--xxlarge);
 }
 
 .spacer {
