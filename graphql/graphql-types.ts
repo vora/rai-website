@@ -7984,6 +7984,24 @@ export type ContentFragmentFragment = (
   )> }
 );
 
+export type ContentListFragmentFragment = (
+  { __typename: 'ContentfulBlockContentList' }
+  & Pick<ContentfulBlockContentList, 'id' | 'title' | 'listTitle'>
+  & { content?: Maybe<(
+    { __typename?: 'ContentfulBlockContentListContent' }
+    & Pick<ContentfulBlockContentListContent, 'raw'>
+  )>, raiButton?: Maybe<(
+    { __typename?: 'contentfulBlockContentListRaiButtonJsonNode' }
+    & { action?: Maybe<(
+      { __typename?: 'contentfulBlockContentListRaiButtonJsonNodeAction' }
+      & Pick<ContentfulBlockContentListRaiButtonJsonNodeAction, 'enabled' | 'title' | 'url' | 'external'>
+    )> }
+  )>, raiList?: Maybe<(
+    { __typename?: 'contentfulBlockContentListRaiListJsonNode' }
+    & Pick<ContentfulBlockContentListRaiListJsonNode, 'items'>
+  )> }
+);
+
 export type BannerQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -8059,6 +8077,9 @@ export type PageTemplateQueryQuery = (
     ) | (
       { __typename?: 'ContentfulBlockContent' }
       & ContentFragmentFragment
-    ) | { __typename?: 'ContentfulBlockContentList' }>>> }
+    ) | (
+      { __typename?: 'ContentfulBlockContentList' }
+      & ContentListFragmentFragment
+    )>>> }
   )> }
 );
