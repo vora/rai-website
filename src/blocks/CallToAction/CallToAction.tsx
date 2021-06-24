@@ -13,7 +13,7 @@ interface CallToActionProps {
 }
 
 export function CallToAction({
-  data: { title, content, button },
+  data: { title, content, raiButton },
 }: CallToActionProps) {
   return (
     <Container>
@@ -24,10 +24,11 @@ export function CallToAction({
             <RichText size="large" content={content as RichTextContent} />
           </div>
         )}
-        {button?.action && (
+        {raiButton?.action?.enabled && (
           <Button
-            title={button.action.title as string}
-            url={button.action.url as string}
+            title={raiButton?.action?.title as string}
+            url={raiButton?.action?.url as string}
+            external={raiButton?.action?.external as boolean}
             variation="inverted"
           />
         )}
@@ -44,8 +45,9 @@ export const CallToActionFragment = graphql`
     content {
       raw
     }
-    button {
+    raiButton {
       action {
+        enabled
         title
         url
         external

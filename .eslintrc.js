@@ -54,6 +54,7 @@ module.exports = {
     "react/jsx-one-expression-per-line": "off",
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
