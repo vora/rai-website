@@ -11,17 +11,17 @@ interface ContentProps {
   readonly data: ContentFragmentFragment;
 }
 
-export function Content({ data: { content, button } }: ContentProps) {
+export function Content({ data: { content, raiButton } }: ContentProps) {
   return (
     <Container>
       <div className={styles.content}>
         {content && <RichText content={content as RichTextContent} />}
-        {button && (
+        {raiButton?.action?.enabled && (
           <div className={styles.button}>
             <Button
-              title={button.action?.title as string}
-              url={button.action?.url as string}
-              external={button.action?.external as boolean}
+              title={raiButton?.action?.title as string}
+              url={raiButton?.action?.url as string}
+              external={raiButton?.action?.external as boolean}
             />
           </div>
         )}
@@ -37,8 +37,9 @@ export const ContentFragment = graphql`
     content {
       raw
     }
-    button {
+    raiButton {
       action {
+        enabled
         title
         url
         external
