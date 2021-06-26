@@ -1,28 +1,24 @@
-import { ContentFragmentFragment } from "@/graphql/graphql-types";
+import React from "react";
 import { graphql } from "gatsby";
+import { ContentFragmentFragment } from "@/graphql/graphql-types";
 import { Container } from "@/components/Container";
 import { RichText, RichTextContent } from "@/components/RichText";
-import React from "react";
+import { ContentfulButton } from "@/components/ContentfulButton";
 
-import { Button } from "@/components/Button";
 import styles from "./Content.module.css";
 
 interface ContentProps {
   readonly data: ContentFragmentFragment;
 }
 
-export function Content({ data: { content, raiButton } }: ContentProps) {
+export function Content({ data: { content, button } }: ContentProps) {
   return (
     <Container>
       <div className={styles.content}>
         {content && <RichText content={content as RichTextContent} />}
-        {raiButton?.action?.enabled && (
+        {button?.action && (
           <div className={styles.button}>
-            <Button
-              title={raiButton?.action?.title as string}
-              url={raiButton?.action?.url as string}
-              external={raiButton?.action?.external as boolean}
-            />
+            <ContentfulButton action={button?.action} />
           </div>
         )}
       </div>
@@ -37,12 +33,13 @@ export const ContentFragment = graphql`
     content {
       raw
     }
-    raiButton {
+    button {
       action {
         enabled
-        title
-        url
+        entrySlug
         external
+        externalUrl
+        title
       }
     }
   }

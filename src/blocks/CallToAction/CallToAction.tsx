@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@/components/Container";
-import { Button } from "@/components/Button";
+import { ContentfulButton } from "@/components/ContentfulButton";
 import { Heading } from "@/components/Heading";
 import { RichText, RichTextContent } from "@/components/RichText";
 import { CallToActionFragmentFragment } from "@/graphql/graphql-types";
@@ -13,7 +13,7 @@ interface CallToActionProps {
 }
 
 export function CallToAction({
-  data: { title, content, raiButton },
+  data: { title, content, button },
 }: CallToActionProps) {
   return (
     <Container>
@@ -24,13 +24,12 @@ export function CallToAction({
             <RichText size="large" content={content as RichTextContent} />
           </div>
         )}
-        {raiButton?.action?.enabled && (
-          <Button
-            title={raiButton?.action?.title as string}
-            url={raiButton?.action?.url as string}
-            external={raiButton?.action?.external as boolean}
-            variation="inverted"
-          />
+        {button?.action?.enabled && (
+          <div className={styles.button}>
+            <ContentfulButton
+              action={{ ...button?.action, variation: "inverted" }}
+            />
+          </div>
         )}
       </div>
     </Container>
@@ -45,12 +44,13 @@ export const CallToActionFragment = graphql`
     content {
       raw
     }
-    raiButton {
+    button {
       action {
         enabled
-        title
-        url
+        entrySlug
         external
+        externalUrl
+        title
       }
     }
   }

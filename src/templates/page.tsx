@@ -36,15 +36,19 @@ export const query = graphql`
         ... on ContentfulBlockCallToAction {
           ...CallToActionFragment
         }
-        ... on ContentfulBlockContent {
+      }
+    }
+  }
+`;
+
+/**
+ * 
+ ... on ContentfulBlockContent {
           ...ContentFragment
         }
         ... on ContentfulBlockContentList {
           ...ContentListFragment
         }
-      }
-    }
-  }
-`;
+ */
 
 export default Page;
