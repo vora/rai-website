@@ -52,7 +52,25 @@ export const mockParagraph = `
     {
       "data":{},
       "marks":[],
-      "value":"Dummy content ",
+      "value":"A robot may not injure a human being or, through inaction, allow a human being to come to harm ",
+      "nodeType":"text"
+    },
+    {
+      "data":{},
+      "marks":[{"type":"bold"}],
+      "value":"To boldly go where no robot has gone before. ",
+      "nodeType":"text"
+    },
+    {
+      "data":{},
+      "marks":[{"type":"underline"}],
+      "value":"The underlying problem with robots is that they are robots. ",
+      "nodeType":"text"
+    },
+    {
+      "data":{},
+      "marks":[{"type":"italic"}],
+      "value":"The Robot R1 is an italian humanoid. ",
       "nodeType":"text"
     }
   ],
@@ -87,6 +105,20 @@ export const mockParagraphWithLink = `
   "nodeType":"paragraph"
 }`;
 
+export const mockStrongParagraph = `
+{
+  "data":{},
+  "content":[
+    {
+      "data":{},
+      "marks":[{"type":"bold"}],
+      "value":"Dummy strong content ",
+      "nodeType":"text"
+    }
+  ],
+  "nodeType":"paragraph"
+}`;
+
 export const mockContent = {
   raw: `{
       "data":{},
@@ -110,3 +142,51 @@ export const dummyContent = {
         "nodeType":"document"
       }`,
 };
+
+// {
+//   "data":{},
+//   "content":[
+//     {
+//       "data":{},
+//     "content":[
+//       {
+//         "data":{},
+//         "marks":[{"type":"bold"}],
+//         "value":"This text should be bold",
+//         "nodeType":"text"
+//       },
+//       {
+//         "data":{},
+//         "marks":[],
+//         "value":", ",
+//         "nodeType":"text"
+//       },
+//       {
+//         "data":{},
+//         "marks":[{"type":"italic"}],
+//         "value":"This text should be italic",
+//         "nodeType":"text"
+//       },
+//       {
+//         "data":{},
+//         "marks":[],
+//         "value":", ",
+//         "nodeType":"text"
+//       },
+//       {
+//         "data":{},
+//         "marks":[{"type":"underline"}],
+//         "value":"This text should be underlined",
+//         "nodeType":"text"
+//       },
+//       {
+//         "data":{},
+//         "marks":[],
+//         "value":", sed do errus mod tempor in conduit ut laboratory et deplore electromagna aliqua. Ut enim ad minimum veniam, quis no indestruct exoform ullamco laboris nisi ut alius equip ex ea commando evaluant. Duis ex machina aute ire dolorus in scan detectus an voluptate volt esse cesium dolore eu futile nulla parameter. Execute primus sint occaecat cupidatat non proident, sunt in culpa qui technia deserunt mondus anim id est proceus.",
+//         "nodeType":"text"
+//       }
+//     ],
+//     "nodeType":"paragraph"
+//   }
+// ],
+// }
