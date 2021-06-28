@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { ImageBandFragmentFragment } from "@/graphql/graphql-types";
 import { Container } from "@/components/Container";
 
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styles from "./ImageBande.module.css";
 
 interface ImageBandProps {
