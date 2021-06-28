@@ -1,0 +1,1 @@
+export { ContentfulDemo } from "./ContentfulDemo";
