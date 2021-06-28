@@ -41,3 +41,16 @@ External links can, and should be opened in a new tab using the `external` prop.
     {(args) => <Link {...args}>Are Droids Allowed Here?</Link>}
   </Story>
 </Canvas>
+
+## With Icon
+
+Links can have icons added to them on the left or right hand side
+
+<Canvas>
+  <Story
+    name="With Icon"
+    args={{ url: "https://responsible.ai", icon: "Command", iconOnRight: true }}
+  >
+    {(args) => <Link {...args}>Are Droids Allowed Here?</Link>}
+  </Story>
+</Canvas>
