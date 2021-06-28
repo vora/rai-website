@@ -1,0 +1,7 @@
+.imageBand {
+  background-color: rgba(var(--color--carbon--rgb), 0.9);
+  background-image: repeating-linear-gradient(-45deg, var(--color--carbon), var(--color--carbon) 5px, rgba(var(--color--carbon--rgb), 0.9) 5px, rgba(var(--color--carbon--rgb), 0.9) 25px);
+  background-size: 10px 100%;
+  padding: var(--space--xlarge) 0;
+  text-align: center;
+}
