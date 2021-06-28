@@ -3,6 +3,7 @@
   color: var(--color--blanco);
   text-align: center;
   padding: var(--space--large);
+  border-radius: 3px;
 }
 
 @media (min-width: 1024px) {
@@ -18,5 +19,9 @@
 }
 
 .content {
-  margin: var(--space--base) 0 var(--space--large);
+  margin: var(--space--base) 0 0;
+}
+
+.button {
+  margin-top: var(--space--large);
 }

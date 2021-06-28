@@ -23,7 +23,7 @@ it("renders some text", () => {
   expect(getByText("Dummy content")).toBeInstanceOf(HTMLParagraphElement);
 });
 
-it("renders a button", () => {
+it.skip("renders a button", () => {
   const { getByText, queryByText } = render(<MockCta />);
   expect(getByText("Dummy Button")).toBeInstanceOf(HTMLAnchorElement);
   expect(queryByText("Dummy Button")).not.toBeNull();

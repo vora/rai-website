@@ -1,0 +1,49 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { ContentfulButton } from ".";
+
+<Meta title="components/ContentfulButton" component={ContentfulButton} />
+
+# Button
+
+`ContentfulButton` is used to render a button based on the contentful button response.
+
+## Usage
+
+```tsx
+import { ContentfulButton } from "@/components/ContentfulButton";
+```
+
+## Props
+
+<ArgsTable component={ContentfulButton} />
+
+## Accessibility Notes
+
+- `Button` variations should be chosen to have high contrast with the background.
+
+## Example
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      action: {
+        title: "Roger, roger",
+        external: false,
+        entrySlug: "/foo",
+        enabled: true,
+        variation: "default",
+      },
+    }}
+  >
+    {(args) => <ContentfulButton {...args} />}
+  </Story>
+</Canvas>
+
+<!-- url?: Maybe<string> | undefined;
+    title?: Maybe<string> | undefined;
+    externalUrl?: Maybe<string> | undefined;
+    external?: Maybe<boolean> | undefined;
+    enabled?: Maybe<...> | undefined;
+    entrySlug?: Maybe<...> | undefined;
+    variation?: "primary" | ... 1 more ...  -->
