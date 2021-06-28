@@ -1,0 +1,28 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Emphasis } from ".";
+
+<Meta title="components/Emphasis" component={Emphasis} />
+
+# Emphasis
+
+`Emphasis` should be used to emphasise inline content.
+
+## Usage
+
+```tsx
+import { Emphasis } from "@/components/Emphasis";
+```
+
+## Props
+
+<ArgsTable component={Emphasis} />
+
+## Example
+
+<Canvas>
+  <Story name="Default" args={{ variation: "bold" }}>
+    {(args) => (
+      <Emphasis {...args}>To boldly go where no robot has gone before</Emphasis>
+    )}
+  </Story>
+</Canvas>
