@@ -20,7 +20,11 @@ it("renders the title", () => {
 
 it("renders some text", () => {
   const { getByText } = render(<MockCta />);
-  expect(getByText("Dummy content")).toBeInstanceOf(HTMLParagraphElement);
+  expect(
+    getByText(
+      "A robot may not injure a human being or, through inaction, allow a human being to come to harm"
+    )
+  ).toBeInstanceOf(HTMLParagraphElement);
 });
 
 it.skip("renders a button", () => {

@@ -14,6 +14,7 @@ import {
 import { Heading } from "@/components/Heading";
 import { Text } from "@/components/Text";
 import { Link } from "@/components/Link";
+import { Emphasis } from "@/components/Emphasis";
 
 export type RichTextContent = RenderRichTextData<ContentfulRichTextGatsbyReference>;
 
@@ -25,7 +26,15 @@ interface RichTextProps {
 export function RichText({ size = "base", content }: RichTextProps) {
   const options = {
     renderMark: {
-      [MARKS.BOLD]: (text: ReactNode) => <strong>{text}</strong>,
+      [MARKS.BOLD]: (text: ReactNode) => (
+        <Emphasis variation="bold">{text}</Emphasis>
+      ),
+      [MARKS.ITALIC]: (text: ReactNode) => (
+        <Emphasis variation="italics">{text}</Emphasis>
+      ),
+      [MARKS.UNDERLINE]: (text: ReactNode) => (
+        <Emphasis variation="underline">{text}</Emphasis>
+      ),
     },
     renderNode: {
       [BLOCKS.HEADING_1]: (node: Block | Inline, children: ReactNode) => (
