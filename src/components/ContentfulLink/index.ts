@@ -1,0 +1,1 @@
+export { ContentfulLink } from "./ContentfulLink";

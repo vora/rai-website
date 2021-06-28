@@ -20,7 +20,7 @@ interface LinkWithIconProps extends BaseLinkProps {
   readonly iconOnRight?: boolean;
 }
 
-type LinkProps = XOR<BaseLinkProps, LinkWithIconProps>;
+export type LinkProps = XOR<BaseLinkProps, LinkWithIconProps>;
 
 export function Link({
   external = false,

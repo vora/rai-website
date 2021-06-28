@@ -9,6 +9,9 @@ export function ListAllContentBlocks() {
       allContentfulBlockContent {
         nodes {
           blockTitle
+          page {
+            title
+          }
           ...ContentFragment
         }
       }
@@ -25,7 +28,12 @@ export function ListAllContentBlocks() {
     <>
       {blocks.map((block: any) => {
         return (
-          <ContentfulDemo title={block.blockTitle} data={block}>
+          <ContentfulDemo
+            key={block.id}
+            title={block.blockTitle}
+            data={block}
+            pages={block.page}
+          >
             <Content data={block} />
           </ContentfulDemo>
         );

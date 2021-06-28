@@ -1,24 +1,21 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
-import { ContentfulButton } from ".";
+import { ContentfulLink } from ".";
 
-<Meta
-  title="contentful/Components/ContentfulButton"
-  component={ContentfulButton}
-/>
+<Meta title="contentful/Components/ContentfulLink" component={ContentfulLink} />
 
 # Button
 
-`ContentfulButton` is used to render a button based on the contentful button response.
+`ContentfulLink` is used to render a `Link` based on the contentful button response.
 
 ## Usage
 
 ```tsx
-import { ContentfulButton } from "@/components/ContentfulButton";
+import { ContentfulLink } from "@/components/ContentfulLink";
 ```
 
 ## Props
 
-<ArgsTable component={ContentfulButton} />
+<ArgsTable component={ContentfulLink} />
 
 ## Example
 
@@ -35,6 +32,6 @@ import { ContentfulButton } from "@/components/ContentfulButton";
       },
     }}
   >
-    {(args) => <ContentfulButton {...args} />}
+    {(args) => <ContentfulLink {...args} />}
   </Story>
 </Canvas>

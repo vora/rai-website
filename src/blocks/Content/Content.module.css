@@ -1,7 +1,16 @@
+.wrapper.fullWidth {
+  background: var(--color--ghost);
+}
+
 .content {
   border: 1px solid var(--color--stone);
   border-radius: 3px;
   padding: var(--space--large);
+}
+
+.content.fullWidth {
+  border: none;
+  padding: var(--space--xlarge) 0 var(--space--xxlarge);
 }
 
 .button {
@@ -9,3 +18,9 @@
   justify-content: center;
   margin-top: var(--space--large);
 }
+
+.button.fullWidth {
+  justify-content: flex-start;
+}
+
+
