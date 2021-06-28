@@ -1,0 +1,22 @@
+.demo {
+  margin: var(--space--xxlarge) 0;
+}
+
+.content {
+  margin: var(--space--base) 0;
+}
+
+.summary {
+  background: var(--color--ghost);
+  padding: var(--space--xxsmall) var(--space--base);
+  cursor: pointer;
+  border-radius: 2px 2px 0 0;
+}
+
+.details {
+  border: 1px solid var(--color--ghost);
+  padding: var(--space--base);
+  font-family: monospace;
+  font-size: 15px;
+  overflow-x: scroll;
+}

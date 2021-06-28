@@ -454,76 +454,6 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___featured = 'blog_post___featured',
   blog_post___published = 'blog_post___published',
   blog_post___content___raw = 'blog_post___content___raw',
-  blog_post___seoTitle = 'blog_post___seoTitle',
-  blog_post___author___contentful_id = 'blog_post___author___contentful_id',
-  blog_post___author___id = 'blog_post___author___id',
-  blog_post___author___node_locale = 'blog_post___author___node_locale',
-  blog_post___author___name = 'blog_post___author___name',
-  blog_post___author___blog_post = 'blog_post___author___blog_post',
-  blog_post___author___blog_post___contentful_id = 'blog_post___author___blog_post___contentful_id',
-  blog_post___author___blog_post___id = 'blog_post___author___blog_post___id',
-  blog_post___author___blog_post___node_locale = 'blog_post___author___blog_post___node_locale',
-  blog_post___author___blog_post___title = 'blog_post___author___blog_post___title',
-  blog_post___author___blog_post___slug = 'blog_post___author___blog_post___slug',
-  blog_post___author___blog_post___featured = 'blog_post___author___blog_post___featured',
-  blog_post___author___blog_post___published = 'blog_post___author___blog_post___published',
-  blog_post___author___blog_post___seoTitle = 'blog_post___author___blog_post___seoTitle',
-  blog_post___author___blog_post___spaceId = 'blog_post___author___blog_post___spaceId',
-  blog_post___author___blog_post___createdAt = 'blog_post___author___blog_post___createdAt',
-  blog_post___author___blog_post___updatedAt = 'blog_post___author___blog_post___updatedAt',
-  blog_post___author___blog_post___seoDescription = 'blog_post___author___blog_post___seoDescription',
-  blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode',
-  blog_post___author___blog_post___children = 'blog_post___author___blog_post___children',
-  blog_post___author___spaceId = 'blog_post___author___spaceId',
-  blog_post___author___createdAt = 'blog_post___author___createdAt',
-  blog_post___author___updatedAt = 'blog_post___author___updatedAt',
-  blog_post___author___sys___type = 'blog_post___author___sys___type',
-  blog_post___author___sys___revision = 'blog_post___author___sys___revision',
-  blog_post___author___biography___id = 'blog_post___author___biography___id',
-  blog_post___author___biography___children = 'blog_post___author___biography___children',
-  blog_post___author___biography___biography = 'blog_post___author___biography___biography',
-  blog_post___author___childrenContentfulAuthorBiographyTextNode = 'blog_post___author___childrenContentfulAuthorBiographyTextNode',
-  blog_post___author___childrenContentfulAuthorBiographyTextNode___id = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___id',
-  blog_post___author___childrenContentfulAuthorBiographyTextNode___children = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___children',
-  blog_post___author___childrenContentfulAuthorBiographyTextNode___biography = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___biography',
-  blog_post___author___childContentfulAuthorBiographyTextNode___id = 'blog_post___author___childContentfulAuthorBiographyTextNode___id',
-  blog_post___author___childContentfulAuthorBiographyTextNode___children = 'blog_post___author___childContentfulAuthorBiographyTextNode___children',
-  blog_post___author___childContentfulAuthorBiographyTextNode___biography = 'blog_post___author___childContentfulAuthorBiographyTextNode___biography',
-  blog_post___author___parent___id = 'blog_post___author___parent___id',
-  blog_post___author___parent___children = 'blog_post___author___parent___children',
-  blog_post___author___children = 'blog_post___author___children',
-  blog_post___author___children___id = 'blog_post___author___children___id',
-  blog_post___author___children___children = 'blog_post___author___children___children',
-  blog_post___author___internal___content = 'blog_post___author___internal___content',
-  blog_post___author___internal___contentDigest = 'blog_post___author___internal___contentDigest',
-  blog_post___author___internal___description = 'blog_post___author___internal___description',
-  blog_post___author___internal___fieldOwners = 'blog_post___author___internal___fieldOwners',
-  blog_post___author___internal___ignoreType = 'blog_post___author___internal___ignoreType',
-  blog_post___author___internal___mediaType = 'blog_post___author___internal___mediaType',
-  blog_post___author___internal___owner = 'blog_post___author___internal___owner',
-  blog_post___author___internal___type = 'blog_post___author___internal___type',
-  blog_post___spaceId = 'blog_post___spaceId',
-  blog_post___createdAt = 'blog_post___createdAt',
-  blog_post___updatedAt = 'blog_post___updatedAt',
-  blog_post___sys___type = 'blog_post___sys___type',
-  blog_post___sys___revision = 'blog_post___sys___revision',
-  blog_post___seoDescription = 'blog_post___seoDescription',
-  blog_post___excerpt___id = 'blog_post___excerpt___id',
-  blog_post___excerpt___parent___id = 'blog_post___excerpt___parent___id',
-  blog_post___excerpt___parent___children = 'blog_post___excerpt___parent___children',
-  blog_post___excerpt___children = 'blog_post___excerpt___children',
-  blog_post___excerpt___children___id = 'blog_post___excerpt___children___id',
-  blog_post___excerpt___children___children = 'blog_post___excerpt___children___children',
-  blog_post___excerpt___internal___content = 'blog_post___excerpt___internal___content',
-  blog_post___excerpt___internal___contentDigest = 'blog_post___excerpt___internal___contentDigest',
-  blog_post___excerpt___internal___description = 'blog_post___excerpt___internal___description',
-  blog_post___excerpt___internal___fieldOwners = 'blog_post___excerpt___internal___fieldOwners',
-  blog_post___excerpt___internal___ignoreType = 'blog_post___excerpt___internal___ignoreType',
-  blog_post___excerpt___internal___mediaType = 'blog_post___excerpt___internal___mediaType',
-  blog_post___excerpt___internal___owner = 'blog_post___excerpt___internal___owner',
-  blog_post___excerpt___internal___type = 'blog_post___excerpt___internal___type',
-  blog_post___excerpt___excerpt = 'blog_post___excerpt___excerpt',
-  blog_post___excerpt___sys___type = 'blog_post___excerpt___sys___type',
   blog_post___featuredImage___contentful_id = 'blog_post___featuredImage___contentful_id',
   blog_post___featuredImage___id = 'blog_post___featuredImage___id',
   blog_post___featuredImage___spaceId = 'blog_post___featuredImage___spaceId',
@@ -574,6 +504,76 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___featuredImage___internal___mediaType = 'blog_post___featuredImage___internal___mediaType',
   blog_post___featuredImage___internal___owner = 'blog_post___featuredImage___internal___owner',
   blog_post___featuredImage___internal___type = 'blog_post___featuredImage___internal___type',
+  blog_post___spaceId = 'blog_post___spaceId',
+  blog_post___createdAt = 'blog_post___createdAt',
+  blog_post___updatedAt = 'blog_post___updatedAt',
+  blog_post___sys___type = 'blog_post___sys___type',
+  blog_post___sys___revision = 'blog_post___sys___revision',
+  blog_post___seoTitle = 'blog_post___seoTitle',
+  blog_post___author___contentful_id = 'blog_post___author___contentful_id',
+  blog_post___author___id = 'blog_post___author___id',
+  blog_post___author___node_locale = 'blog_post___author___node_locale',
+  blog_post___author___name = 'blog_post___author___name',
+  blog_post___author___blog_post = 'blog_post___author___blog_post',
+  blog_post___author___blog_post___contentful_id = 'blog_post___author___blog_post___contentful_id',
+  blog_post___author___blog_post___id = 'blog_post___author___blog_post___id',
+  blog_post___author___blog_post___node_locale = 'blog_post___author___blog_post___node_locale',
+  blog_post___author___blog_post___title = 'blog_post___author___blog_post___title',
+  blog_post___author___blog_post___slug = 'blog_post___author___blog_post___slug',
+  blog_post___author___blog_post___featured = 'blog_post___author___blog_post___featured',
+  blog_post___author___blog_post___published = 'blog_post___author___blog_post___published',
+  blog_post___author___blog_post___spaceId = 'blog_post___author___blog_post___spaceId',
+  blog_post___author___blog_post___createdAt = 'blog_post___author___blog_post___createdAt',
+  blog_post___author___blog_post___updatedAt = 'blog_post___author___blog_post___updatedAt',
+  blog_post___author___blog_post___seoTitle = 'blog_post___author___blog_post___seoTitle',
+  blog_post___author___blog_post___seoDescription = 'blog_post___author___blog_post___seoDescription',
+  blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode',
+  blog_post___author___blog_post___children = 'blog_post___author___blog_post___children',
+  blog_post___author___spaceId = 'blog_post___author___spaceId',
+  blog_post___author___createdAt = 'blog_post___author___createdAt',
+  blog_post___author___updatedAt = 'blog_post___author___updatedAt',
+  blog_post___author___sys___type = 'blog_post___author___sys___type',
+  blog_post___author___sys___revision = 'blog_post___author___sys___revision',
+  blog_post___author___biography___id = 'blog_post___author___biography___id',
+  blog_post___author___biography___children = 'blog_post___author___biography___children',
+  blog_post___author___biography___biography = 'blog_post___author___biography___biography',
+  blog_post___author___childrenContentfulAuthorBiographyTextNode = 'blog_post___author___childrenContentfulAuthorBiographyTextNode',
+  blog_post___author___childrenContentfulAuthorBiographyTextNode___id = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___id',
+  blog_post___author___childrenContentfulAuthorBiographyTextNode___children = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___children',
+  blog_post___author___childrenContentfulAuthorBiographyTextNode___biography = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___biography',
+  blog_post___author___childContentfulAuthorBiographyTextNode___id = 'blog_post___author___childContentfulAuthorBiographyTextNode___id',
+  blog_post___author___childContentfulAuthorBiographyTextNode___children = 'blog_post___author___childContentfulAuthorBiographyTextNode___children',
+  blog_post___author___childContentfulAuthorBiographyTextNode___biography = 'blog_post___author___childContentfulAuthorBiographyTextNode___biography',
+  blog_post___author___parent___id = 'blog_post___author___parent___id',
+  blog_post___author___parent___children = 'blog_post___author___parent___children',
+  blog_post___author___children = 'blog_post___author___children',
+  blog_post___author___children___id = 'blog_post___author___children___id',
+  blog_post___author___children___children = 'blog_post___author___children___children',
+  blog_post___author___internal___content = 'blog_post___author___internal___content',
+  blog_post___author___internal___contentDigest = 'blog_post___author___internal___contentDigest',
+  blog_post___author___internal___description = 'blog_post___author___internal___description',
+  blog_post___author___internal___fieldOwners = 'blog_post___author___internal___fieldOwners',
+  blog_post___author___internal___ignoreType = 'blog_post___author___internal___ignoreType',
+  blog_post___author___internal___mediaType = 'blog_post___author___internal___mediaType',
+  blog_post___author___internal___owner = 'blog_post___author___internal___owner',
+  blog_post___author___internal___type = 'blog_post___author___internal___type',
+  blog_post___seoDescription = 'blog_post___seoDescription',
+  blog_post___excerpt___id = 'blog_post___excerpt___id',
+  blog_post___excerpt___parent___id = 'blog_post___excerpt___parent___id',
+  blog_post___excerpt___parent___children = 'blog_post___excerpt___parent___children',
+  blog_post___excerpt___children = 'blog_post___excerpt___children',
+  blog_post___excerpt___children___id = 'blog_post___excerpt___children___id',
+  blog_post___excerpt___children___children = 'blog_post___excerpt___children___children',
+  blog_post___excerpt___internal___content = 'blog_post___excerpt___internal___content',
+  blog_post___excerpt___internal___contentDigest = 'blog_post___excerpt___internal___contentDigest',
+  blog_post___excerpt___internal___description = 'blog_post___excerpt___internal___description',
+  blog_post___excerpt___internal___fieldOwners = 'blog_post___excerpt___internal___fieldOwners',
+  blog_post___excerpt___internal___ignoreType = 'blog_post___excerpt___internal___ignoreType',
+  blog_post___excerpt___internal___mediaType = 'blog_post___excerpt___internal___mediaType',
+  blog_post___excerpt___internal___owner = 'blog_post___excerpt___internal___owner',
+  blog_post___excerpt___internal___type = 'blog_post___excerpt___internal___type',
+  blog_post___excerpt___excerpt = 'blog_post___excerpt___excerpt',
+  blog_post___excerpt___sys___type = 'blog_post___excerpt___sys___type',
   blog_post___childrenContentfulBlogPostExcerptTextNode = 'blog_post___childrenContentfulBlogPostExcerptTextNode',
   blog_post___childrenContentfulBlogPostExcerptTextNode___id = 'blog_post___childrenContentfulBlogPostExcerptTextNode___id',
   blog_post___childrenContentfulBlogPostExcerptTextNode___parent___id = 'blog_post___childrenContentfulBlogPostExcerptTextNode___parent___id',
@@ -997,7 +997,7 @@ export type ContentfulBlockCallToActionContentFilterInput = {
   raw?: Maybe<StringQueryOperatorInput>;
 };
 
-export type ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListUnion = ContentfulBlockCallToAction | ContentfulBlockContent | ContentfulBlockContentList;
+export type ContentfulBlockCallToActionContentfulBlockContentUnion = ContentfulBlockCallToAction | ContentfulBlockContent;
 
 export type ContentfulBlockCallToActionEdge = {
   __typename?: 'ContentfulBlockCallToActionEdge';
@@ -1098,11 +1098,11 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   button___internal___mediaType = 'button___internal___mediaType',
   button___internal___owner = 'button___internal___owner',
   button___internal___type = 'button___internal___type',
-  button___action___url = 'button___action___url',
   button___action___title = 'button___action___title',
-  button___action___external = 'button___action___external',
   button___action___enabled = 'button___action___enabled',
+  button___action___external = 'button___action___external',
   button___action___entrySlug = 'button___action___entrySlug',
+  button___action___externalUrl = 'button___action___externalUrl',
   button___sys___type = 'button___sys___type',
   spaceId = 'spaceId',
   createdAt = 'createdAt',
@@ -1151,11 +1151,11 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   childrenContentfulBlockCallToActionButtonJsonNode___internal___mediaType = 'childrenContentfulBlockCallToActionButtonJsonNode___internal___mediaType',
   childrenContentfulBlockCallToActionButtonJsonNode___internal___owner = 'childrenContentfulBlockCallToActionButtonJsonNode___internal___owner',
   childrenContentfulBlockCallToActionButtonJsonNode___internal___type = 'childrenContentfulBlockCallToActionButtonJsonNode___internal___type',
-  childrenContentfulBlockCallToActionButtonJsonNode___action___url = 'childrenContentfulBlockCallToActionButtonJsonNode___action___url',
   childrenContentfulBlockCallToActionButtonJsonNode___action___title = 'childrenContentfulBlockCallToActionButtonJsonNode___action___title',
-  childrenContentfulBlockCallToActionButtonJsonNode___action___external = 'childrenContentfulBlockCallToActionButtonJsonNode___action___external',
   childrenContentfulBlockCallToActionButtonJsonNode___action___enabled = 'childrenContentfulBlockCallToActionButtonJsonNode___action___enabled',
+  childrenContentfulBlockCallToActionButtonJsonNode___action___external = 'childrenContentfulBlockCallToActionButtonJsonNode___action___external',
   childrenContentfulBlockCallToActionButtonJsonNode___action___entrySlug = 'childrenContentfulBlockCallToActionButtonJsonNode___action___entrySlug',
+  childrenContentfulBlockCallToActionButtonJsonNode___action___externalUrl = 'childrenContentfulBlockCallToActionButtonJsonNode___action___externalUrl',
   childrenContentfulBlockCallToActionButtonJsonNode___sys___type = 'childrenContentfulBlockCallToActionButtonJsonNode___sys___type',
   childContentfulBlockCallToActionButtonJsonNode___id = 'childContentfulBlockCallToActionButtonJsonNode___id',
   childContentfulBlockCallToActionButtonJsonNode___parent___id = 'childContentfulBlockCallToActionButtonJsonNode___parent___id',
@@ -1195,11 +1195,11 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   childContentfulBlockCallToActionButtonJsonNode___internal___mediaType = 'childContentfulBlockCallToActionButtonJsonNode___internal___mediaType',
   childContentfulBlockCallToActionButtonJsonNode___internal___owner = 'childContentfulBlockCallToActionButtonJsonNode___internal___owner',
   childContentfulBlockCallToActionButtonJsonNode___internal___type = 'childContentfulBlockCallToActionButtonJsonNode___internal___type',
-  childContentfulBlockCallToActionButtonJsonNode___action___url = 'childContentfulBlockCallToActionButtonJsonNode___action___url',
   childContentfulBlockCallToActionButtonJsonNode___action___title = 'childContentfulBlockCallToActionButtonJsonNode___action___title',
-  childContentfulBlockCallToActionButtonJsonNode___action___external = 'childContentfulBlockCallToActionButtonJsonNode___action___external',
   childContentfulBlockCallToActionButtonJsonNode___action___enabled = 'childContentfulBlockCallToActionButtonJsonNode___action___enabled',
+  childContentfulBlockCallToActionButtonJsonNode___action___external = 'childContentfulBlockCallToActionButtonJsonNode___action___external',
   childContentfulBlockCallToActionButtonJsonNode___action___entrySlug = 'childContentfulBlockCallToActionButtonJsonNode___action___entrySlug',
+  childContentfulBlockCallToActionButtonJsonNode___action___externalUrl = 'childContentfulBlockCallToActionButtonJsonNode___action___externalUrl',
   childContentfulBlockCallToActionButtonJsonNode___sys___type = 'childContentfulBlockCallToActionButtonJsonNode___sys___type',
   parent___id = 'parent___id',
   parent___parent___id = 'parent___parent___id',
@@ -1363,13 +1363,14 @@ export type ContentfulBlockContent = ContentfulReference & ContentfulEntry & Nod
   id: Scalars['ID'];
   node_locale: Scalars['String'];
   blockTitle?: Maybe<Scalars['String']>;
+  variation?: Maybe<Scalars['String']>;
   content?: Maybe<ContentfulBlockContentContent>;
-  page?: Maybe<Array<Maybe<ContentfulPage>>>;
   button?: Maybe<ContentfulBlockContentButtonJsonNode>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulBlockContentSys>;
+  page?: Maybe<Array<Maybe<ContentfulPage>>>;
   /** Returns all children nodes filtered by type contentfulBlockContentButtonJsonNode */
   childrenContentfulBlockContentButtonJsonNode?: Maybe<Array<Maybe<ContentfulBlockContentButtonJsonNode>>>;
   /** Returns the first child node of type contentfulBlockContentButtonJsonNode or null if there are no children of given type on this node */
@@ -1438,7 +1439,60 @@ export enum ContentfulBlockContentFieldsEnum {
   id = 'id',
   node_locale = 'node_locale',
   blockTitle = 'blockTitle',
+  variation = 'variation',
   content___raw = 'content___raw',
+  button___id = 'button___id',
+  button___parent___id = 'button___parent___id',
+  button___parent___parent___id = 'button___parent___parent___id',
+  button___parent___parent___children = 'button___parent___parent___children',
+  button___parent___children = 'button___parent___children',
+  button___parent___children___id = 'button___parent___children___id',
+  button___parent___children___children = 'button___parent___children___children',
+  button___parent___internal___content = 'button___parent___internal___content',
+  button___parent___internal___contentDigest = 'button___parent___internal___contentDigest',
+  button___parent___internal___description = 'button___parent___internal___description',
+  button___parent___internal___fieldOwners = 'button___parent___internal___fieldOwners',
+  button___parent___internal___ignoreType = 'button___parent___internal___ignoreType',
+  button___parent___internal___mediaType = 'button___parent___internal___mediaType',
+  button___parent___internal___owner = 'button___parent___internal___owner',
+  button___parent___internal___type = 'button___parent___internal___type',
+  button___children = 'button___children',
+  button___children___id = 'button___children___id',
+  button___children___parent___id = 'button___children___parent___id',
+  button___children___parent___children = 'button___children___parent___children',
+  button___children___children = 'button___children___children',
+  button___children___children___id = 'button___children___children___id',
+  button___children___children___children = 'button___children___children___children',
+  button___children___internal___content = 'button___children___internal___content',
+  button___children___internal___contentDigest = 'button___children___internal___contentDigest',
+  button___children___internal___description = 'button___children___internal___description',
+  button___children___internal___fieldOwners = 'button___children___internal___fieldOwners',
+  button___children___internal___ignoreType = 'button___children___internal___ignoreType',
+  button___children___internal___mediaType = 'button___children___internal___mediaType',
+  button___children___internal___owner = 'button___children___internal___owner',
+  button___children___internal___type = 'button___children___internal___type',
+  button___internal___content = 'button___internal___content',
+  button___internal___contentDigest = 'button___internal___contentDigest',
+  button___internal___description = 'button___internal___description',
+  button___internal___fieldOwners = 'button___internal___fieldOwners',
+  button___internal___ignoreType = 'button___internal___ignoreType',
+  button___internal___mediaType = 'button___internal___mediaType',
+  button___internal___owner = 'button___internal___owner',
+  button___internal___type = 'button___internal___type',
+  button___action___enabled = 'button___action___enabled',
+  button___action___title = 'button___action___title',
+  button___action___external = 'button___action___external',
+  button___action___externalUrl = 'button___action___externalUrl',
+  button___action___entrySlug = 'button___action___entrySlug',
+  button___sys___type = 'button___sys___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
   page = 'page',
   page___contentful_id = 'page___contentful_id',
   page___id = 'page___id',
@@ -1487,59 +1541,6 @@ export enum ContentfulBlockContentFieldsEnum {
   page___internal___mediaType = 'page___internal___mediaType',
   page___internal___owner = 'page___internal___owner',
   page___internal___type = 'page___internal___type',
-  button___id = 'button___id',
-  button___parent___id = 'button___parent___id',
-  button___parent___parent___id = 'button___parent___parent___id',
-  button___parent___parent___children = 'button___parent___parent___children',
-  button___parent___children = 'button___parent___children',
-  button___parent___children___id = 'button___parent___children___id',
-  button___parent___children___children = 'button___parent___children___children',
-  button___parent___internal___content = 'button___parent___internal___content',
-  button___parent___internal___contentDigest = 'button___parent___internal___contentDigest',
-  button___parent___internal___description = 'button___parent___internal___description',
-  button___parent___internal___fieldOwners = 'button___parent___internal___fieldOwners',
-  button___parent___internal___ignoreType = 'button___parent___internal___ignoreType',
-  button___parent___internal___mediaType = 'button___parent___internal___mediaType',
-  button___parent___internal___owner = 'button___parent___internal___owner',
-  button___parent___internal___type = 'button___parent___internal___type',
-  button___children = 'button___children',
-  button___children___id = 'button___children___id',
-  button___children___parent___id = 'button___children___parent___id',
-  button___children___parent___children = 'button___children___parent___children',
-  button___children___children = 'button___children___children',
-  button___children___children___id = 'button___children___children___id',
-  button___children___children___children = 'button___children___children___children',
-  button___children___internal___content = 'button___children___internal___content',
-  button___children___internal___contentDigest = 'button___children___internal___contentDigest',
-  button___children___internal___description = 'button___children___internal___description',
-  button___children___internal___fieldOwners = 'button___children___internal___fieldOwners',
-  button___children___internal___ignoreType = 'button___children___internal___ignoreType',
-  button___children___internal___mediaType = 'button___children___internal___mediaType',
-  button___children___internal___owner = 'button___children___internal___owner',
-  button___children___internal___type = 'button___children___internal___type',
-  button___internal___content = 'button___internal___content',
-  button___internal___contentDigest = 'button___internal___contentDigest',
-  button___internal___description = 'button___internal___description',
-  button___internal___fieldOwners = 'button___internal___fieldOwners',
-  button___internal___ignoreType = 'button___internal___ignoreType',
-  button___internal___mediaType = 'button___internal___mediaType',
-  button___internal___owner = 'button___internal___owner',
-  button___internal___type = 'button___internal___type',
-  button___action___url = 'button___action___url',
-  button___action___title = 'button___action___title',
-  button___action___external = 'button___action___external',
-  button___action___enabled = 'button___action___enabled',
-  button___action___externalUrl = 'button___action___externalUrl',
-  button___action___entrySlug = 'button___action___entrySlug',
-  button___sys___type = 'button___sys___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
   childrenContentfulBlockContentButtonJsonNode = 'childrenContentfulBlockContentButtonJsonNode',
   childrenContentfulBlockContentButtonJsonNode___id = 'childrenContentfulBlockContentButtonJsonNode___id',
   childrenContentfulBlockContentButtonJsonNode___parent___id = 'childrenContentfulBlockContentButtonJsonNode___parent___id',
@@ -1579,10 +1580,9 @@ export enum ContentfulBlockContentFieldsEnum {
   childrenContentfulBlockContentButtonJsonNode___internal___mediaType = 'childrenContentfulBlockContentButtonJsonNode___internal___mediaType',
   childrenContentfulBlockContentButtonJsonNode___internal___owner = 'childrenContentfulBlockContentButtonJsonNode___internal___owner',
   childrenContentfulBlockContentButtonJsonNode___internal___type = 'childrenContentfulBlockContentButtonJsonNode___internal___type',
-  childrenContentfulBlockContentButtonJsonNode___action___url = 'childrenContentfulBlockContentButtonJsonNode___action___url',
+  childrenContentfulBlockContentButtonJsonNode___action___enabled = 'childrenContentfulBlockContentButtonJsonNode___action___enabled',
   childrenContentfulBlockContentButtonJsonNode___action___title = 'childrenContentfulBlockContentButtonJsonNode___action___title',
   childrenContentfulBlockContentButtonJsonNode___action___external = 'childrenContentfulBlockContentButtonJsonNode___action___external',
-  childrenContentfulBlockContentButtonJsonNode___action___enabled = 'childrenContentfulBlockContentButtonJsonNode___action___enabled',
   childrenContentfulBlockContentButtonJsonNode___action___externalUrl = 'childrenContentfulBlockContentButtonJsonNode___action___externalUrl',
   childrenContentfulBlockContentButtonJsonNode___action___entrySlug = 'childrenContentfulBlockContentButtonJsonNode___action___entrySlug',
   childrenContentfulBlockContentButtonJsonNode___sys___type = 'childrenContentfulBlockContentButtonJsonNode___sys___type',
@@ -1624,10 +1624,9 @@ export enum ContentfulBlockContentFieldsEnum {
   childContentfulBlockContentButtonJsonNode___internal___mediaType = 'childContentfulBlockContentButtonJsonNode___internal___mediaType',
   childContentfulBlockContentButtonJsonNode___internal___owner = 'childContentfulBlockContentButtonJsonNode___internal___owner',
   childContentfulBlockContentButtonJsonNode___internal___type = 'childContentfulBlockContentButtonJsonNode___internal___type',
-  childContentfulBlockContentButtonJsonNode___action___url = 'childContentfulBlockContentButtonJsonNode___action___url',
+  childContentfulBlockContentButtonJsonNode___action___enabled = 'childContentfulBlockContentButtonJsonNode___action___enabled',
   childContentfulBlockContentButtonJsonNode___action___title = 'childContentfulBlockContentButtonJsonNode___action___title',
   childContentfulBlockContentButtonJsonNode___action___external = 'childContentfulBlockContentButtonJsonNode___action___external',
-  childContentfulBlockContentButtonJsonNode___action___enabled = 'childContentfulBlockContentButtonJsonNode___action___enabled',
   childContentfulBlockContentButtonJsonNode___action___externalUrl = 'childContentfulBlockContentButtonJsonNode___action___externalUrl',
   childContentfulBlockContentButtonJsonNode___action___entrySlug = 'childContentfulBlockContentButtonJsonNode___action___entrySlug',
   childContentfulBlockContentButtonJsonNode___sys___type = 'childContentfulBlockContentButtonJsonNode___sys___type',
@@ -1723,13 +1722,14 @@ export type ContentfulBlockContentFilterInput = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   blockTitle?: Maybe<StringQueryOperatorInput>;
+  variation?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<ContentfulBlockContentContentFilterInput>;
-  page?: Maybe<ContentfulPageFilterListInput>;
   button?: Maybe<ContentfulBlockContentButtonJsonNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockContentSysFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
   childrenContentfulBlockContentButtonJsonNode?: Maybe<ContentfulBlockContentButtonJsonNodeFilterListInput>;
   childContentfulBlockContentButtonJsonNode?: Maybe<ContentfulBlockContentButtonJsonNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -1752,43 +1752,9 @@ export type ContentfulBlockContentList = ContentfulReference & ContentfulEntry &
   contentful_id: Scalars['String'];
   id: Scalars['ID'];
   node_locale: Scalars['String'];
-  title?: Maybe<Scalars['String']>;
-  content?: Maybe<ContentfulBlockContentListContent>;
-  listTitle?: Maybe<Scalars['String']>;
-  page?: Maybe<Array<Maybe<ContentfulPage>>>;
-  raiButton?: Maybe<ContentfulBlockContentListRaiButtonJsonNode>;
-  raiList?: Maybe<ContentfulBlockContentListRaiListJsonNode>;
-  spaceId?: Maybe<Scalars['String']>;
-  createdAt?: Maybe<Scalars['Date']>;
-  updatedAt?: Maybe<Scalars['Date']>;
-  sys?: Maybe<ContentfulBlockContentListSys>;
-  /** Returns all children nodes filtered by type contentfulBlockContentListRaiListJsonNode */
-  childrenContentfulBlockContentListRaiListJsonNode?: Maybe<Array<Maybe<ContentfulBlockContentListRaiListJsonNode>>>;
-  /** Returns the first child node of type contentfulBlockContentListRaiListJsonNode or null if there are no children of given type on this node */
-  childContentfulBlockContentListRaiListJsonNode?: Maybe<ContentfulBlockContentListRaiListJsonNode>;
-  /** Returns all children nodes filtered by type contentfulBlockContentListRaiButtonJsonNode */
-  childrenContentfulBlockContentListRaiButtonJsonNode?: Maybe<Array<Maybe<ContentfulBlockContentListRaiButtonJsonNode>>>;
-  /** Returns the first child node of type contentfulBlockContentListRaiButtonJsonNode or null if there are no children of given type on this node */
-  childContentfulBlockContentListRaiButtonJsonNode?: Maybe<ContentfulBlockContentListRaiButtonJsonNode>;
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
-};
-
-
-export type ContentfulBlockContentListCreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
-};
-
-
-export type ContentfulBlockContentListUpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
 };
 
 export type ContentfulBlockContentListConnection = {
@@ -1813,15 +1779,6 @@ export type ContentfulBlockContentListConnectionGroupArgs = {
   field: ContentfulBlockContentListFieldsEnum;
 };
 
-export type ContentfulBlockContentListContent = {
-  __typename?: 'ContentfulBlockContentListContent';
-  raw?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulBlockContentListContentFilterInput = {
-  raw?: Maybe<StringQueryOperatorInput>;
-};
-
 export type ContentfulBlockContentListEdge = {
   __typename?: 'ContentfulBlockContentListEdge';
   next?: Maybe<ContentfulBlockContentList>;
@@ -1833,316 +1790,6 @@ export enum ContentfulBlockContentListFieldsEnum {
   contentful_id = 'contentful_id',
   id = 'id',
   node_locale = 'node_locale',
-  title = 'title',
-  content___raw = 'content___raw',
-  listTitle = 'listTitle',
-  page = 'page',
-  page___contentful_id = 'page___contentful_id',
-  page___id = 'page___id',
-  page___node_locale = 'page___node_locale',
-  page___title = 'page___title',
-  page___slug = 'page___slug',
-  page___spaceId = 'page___spaceId',
-  page___createdAt = 'page___createdAt',
-  page___updatedAt = 'page___updatedAt',
-  page___sys___type = 'page___sys___type',
-  page___sys___revision = 'page___sys___revision',
-  page___parent___id = 'page___parent___id',
-  page___parent___parent___id = 'page___parent___parent___id',
-  page___parent___parent___children = 'page___parent___parent___children',
-  page___parent___children = 'page___parent___children',
-  page___parent___children___id = 'page___parent___children___id',
-  page___parent___children___children = 'page___parent___children___children',
-  page___parent___internal___content = 'page___parent___internal___content',
-  page___parent___internal___contentDigest = 'page___parent___internal___contentDigest',
-  page___parent___internal___description = 'page___parent___internal___description',
-  page___parent___internal___fieldOwners = 'page___parent___internal___fieldOwners',
-  page___parent___internal___ignoreType = 'page___parent___internal___ignoreType',
-  page___parent___internal___mediaType = 'page___parent___internal___mediaType',
-  page___parent___internal___owner = 'page___parent___internal___owner',
-  page___parent___internal___type = 'page___parent___internal___type',
-  page___children = 'page___children',
-  page___children___id = 'page___children___id',
-  page___children___parent___id = 'page___children___parent___id',
-  page___children___parent___children = 'page___children___parent___children',
-  page___children___children = 'page___children___children',
-  page___children___children___id = 'page___children___children___id',
-  page___children___children___children = 'page___children___children___children',
-  page___children___internal___content = 'page___children___internal___content',
-  page___children___internal___contentDigest = 'page___children___internal___contentDigest',
-  page___children___internal___description = 'page___children___internal___description',
-  page___children___internal___fieldOwners = 'page___children___internal___fieldOwners',
-  page___children___internal___ignoreType = 'page___children___internal___ignoreType',
-  page___children___internal___mediaType = 'page___children___internal___mediaType',
-  page___children___internal___owner = 'page___children___internal___owner',
-  page___children___internal___type = 'page___children___internal___type',
-  page___internal___content = 'page___internal___content',
-  page___internal___contentDigest = 'page___internal___contentDigest',
-  page___internal___description = 'page___internal___description',
-  page___internal___fieldOwners = 'page___internal___fieldOwners',
-  page___internal___ignoreType = 'page___internal___ignoreType',
-  page___internal___mediaType = 'page___internal___mediaType',
-  page___internal___owner = 'page___internal___owner',
-  page___internal___type = 'page___internal___type',
-  raiButton___id = 'raiButton___id',
-  raiButton___parent___id = 'raiButton___parent___id',
-  raiButton___parent___parent___id = 'raiButton___parent___parent___id',
-  raiButton___parent___parent___children = 'raiButton___parent___parent___children',
-  raiButton___parent___children = 'raiButton___parent___children',
-  raiButton___parent___children___id = 'raiButton___parent___children___id',
-  raiButton___parent___children___children = 'raiButton___parent___children___children',
-  raiButton___parent___internal___content = 'raiButton___parent___internal___content',
-  raiButton___parent___internal___contentDigest = 'raiButton___parent___internal___contentDigest',
-  raiButton___parent___internal___description = 'raiButton___parent___internal___description',
-  raiButton___parent___internal___fieldOwners = 'raiButton___parent___internal___fieldOwners',
-  raiButton___parent___internal___ignoreType = 'raiButton___parent___internal___ignoreType',
-  raiButton___parent___internal___mediaType = 'raiButton___parent___internal___mediaType',
-  raiButton___parent___internal___owner = 'raiButton___parent___internal___owner',
-  raiButton___parent___internal___type = 'raiButton___parent___internal___type',
-  raiButton___children = 'raiButton___children',
-  raiButton___children___id = 'raiButton___children___id',
-  raiButton___children___parent___id = 'raiButton___children___parent___id',
-  raiButton___children___parent___children = 'raiButton___children___parent___children',
-  raiButton___children___children = 'raiButton___children___children',
-  raiButton___children___children___id = 'raiButton___children___children___id',
-  raiButton___children___children___children = 'raiButton___children___children___children',
-  raiButton___children___internal___content = 'raiButton___children___internal___content',
-  raiButton___children___internal___contentDigest = 'raiButton___children___internal___contentDigest',
-  raiButton___children___internal___description = 'raiButton___children___internal___description',
-  raiButton___children___internal___fieldOwners = 'raiButton___children___internal___fieldOwners',
-  raiButton___children___internal___ignoreType = 'raiButton___children___internal___ignoreType',
-  raiButton___children___internal___mediaType = 'raiButton___children___internal___mediaType',
-  raiButton___children___internal___owner = 'raiButton___children___internal___owner',
-  raiButton___children___internal___type = 'raiButton___children___internal___type',
-  raiButton___internal___content = 'raiButton___internal___content',
-  raiButton___internal___contentDigest = 'raiButton___internal___contentDigest',
-  raiButton___internal___description = 'raiButton___internal___description',
-  raiButton___internal___fieldOwners = 'raiButton___internal___fieldOwners',
-  raiButton___internal___ignoreType = 'raiButton___internal___ignoreType',
-  raiButton___internal___mediaType = 'raiButton___internal___mediaType',
-  raiButton___internal___owner = 'raiButton___internal___owner',
-  raiButton___internal___type = 'raiButton___internal___type',
-  raiButton___action___url = 'raiButton___action___url',
-  raiButton___action___title = 'raiButton___action___title',
-  raiButton___action___enabled = 'raiButton___action___enabled',
-  raiButton___action___external = 'raiButton___action___external',
-  raiButton___sys___type = 'raiButton___sys___type',
-  raiList___id = 'raiList___id',
-  raiList___parent___id = 'raiList___parent___id',
-  raiList___parent___parent___id = 'raiList___parent___parent___id',
-  raiList___parent___parent___children = 'raiList___parent___parent___children',
-  raiList___parent___children = 'raiList___parent___children',
-  raiList___parent___children___id = 'raiList___parent___children___id',
-  raiList___parent___children___children = 'raiList___parent___children___children',
-  raiList___parent___internal___content = 'raiList___parent___internal___content',
-  raiList___parent___internal___contentDigest = 'raiList___parent___internal___contentDigest',
-  raiList___parent___internal___description = 'raiList___parent___internal___description',
-  raiList___parent___internal___fieldOwners = 'raiList___parent___internal___fieldOwners',
-  raiList___parent___internal___ignoreType = 'raiList___parent___internal___ignoreType',
-  raiList___parent___internal___mediaType = 'raiList___parent___internal___mediaType',
-  raiList___parent___internal___owner = 'raiList___parent___internal___owner',
-  raiList___parent___internal___type = 'raiList___parent___internal___type',
-  raiList___children = 'raiList___children',
-  raiList___children___id = 'raiList___children___id',
-  raiList___children___parent___id = 'raiList___children___parent___id',
-  raiList___children___parent___children = 'raiList___children___parent___children',
-  raiList___children___children = 'raiList___children___children',
-  raiList___children___children___id = 'raiList___children___children___id',
-  raiList___children___children___children = 'raiList___children___children___children',
-  raiList___children___internal___content = 'raiList___children___internal___content',
-  raiList___children___internal___contentDigest = 'raiList___children___internal___contentDigest',
-  raiList___children___internal___description = 'raiList___children___internal___description',
-  raiList___children___internal___fieldOwners = 'raiList___children___internal___fieldOwners',
-  raiList___children___internal___ignoreType = 'raiList___children___internal___ignoreType',
-  raiList___children___internal___mediaType = 'raiList___children___internal___mediaType',
-  raiList___children___internal___owner = 'raiList___children___internal___owner',
-  raiList___children___internal___type = 'raiList___children___internal___type',
-  raiList___internal___content = 'raiList___internal___content',
-  raiList___internal___contentDigest = 'raiList___internal___contentDigest',
-  raiList___internal___description = 'raiList___internal___description',
-  raiList___internal___fieldOwners = 'raiList___internal___fieldOwners',
-  raiList___internal___ignoreType = 'raiList___internal___ignoreType',
-  raiList___internal___mediaType = 'raiList___internal___mediaType',
-  raiList___internal___owner = 'raiList___internal___owner',
-  raiList___internal___type = 'raiList___internal___type',
-  raiList___items = 'raiList___items',
-  raiList___sys___type = 'raiList___sys___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
-  childrenContentfulBlockContentListRaiListJsonNode = 'childrenContentfulBlockContentListRaiListJsonNode',
-  childrenContentfulBlockContentListRaiListJsonNode___id = 'childrenContentfulBlockContentListRaiListJsonNode___id',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___id = 'childrenContentfulBlockContentListRaiListJsonNode___parent___id',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___parent___id = 'childrenContentfulBlockContentListRaiListJsonNode___parent___parent___id',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___parent___children = 'childrenContentfulBlockContentListRaiListJsonNode___parent___parent___children',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___children = 'childrenContentfulBlockContentListRaiListJsonNode___parent___children',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___children___id = 'childrenContentfulBlockContentListRaiListJsonNode___parent___children___id',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___children___children = 'childrenContentfulBlockContentListRaiListJsonNode___parent___children___children',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___internal___content = 'childrenContentfulBlockContentListRaiListJsonNode___parent___internal___content',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___internal___contentDigest = 'childrenContentfulBlockContentListRaiListJsonNode___parent___internal___contentDigest',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___internal___description = 'childrenContentfulBlockContentListRaiListJsonNode___parent___internal___description',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___internal___fieldOwners = 'childrenContentfulBlockContentListRaiListJsonNode___parent___internal___fieldOwners',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___internal___ignoreType = 'childrenContentfulBlockContentListRaiListJsonNode___parent___internal___ignoreType',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___internal___mediaType = 'childrenContentfulBlockContentListRaiListJsonNode___parent___internal___mediaType',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___internal___owner = 'childrenContentfulBlockContentListRaiListJsonNode___parent___internal___owner',
-  childrenContentfulBlockContentListRaiListJsonNode___parent___internal___type = 'childrenContentfulBlockContentListRaiListJsonNode___parent___internal___type',
-  childrenContentfulBlockContentListRaiListJsonNode___children = 'childrenContentfulBlockContentListRaiListJsonNode___children',
-  childrenContentfulBlockContentListRaiListJsonNode___children___id = 'childrenContentfulBlockContentListRaiListJsonNode___children___id',
-  childrenContentfulBlockContentListRaiListJsonNode___children___parent___id = 'childrenContentfulBlockContentListRaiListJsonNode___children___parent___id',
-  childrenContentfulBlockContentListRaiListJsonNode___children___parent___children = 'childrenContentfulBlockContentListRaiListJsonNode___children___parent___children',
-  childrenContentfulBlockContentListRaiListJsonNode___children___children = 'childrenContentfulBlockContentListRaiListJsonNode___children___children',
-  childrenContentfulBlockContentListRaiListJsonNode___children___children___id = 'childrenContentfulBlockContentListRaiListJsonNode___children___children___id',
-  childrenContentfulBlockContentListRaiListJsonNode___children___children___children = 'childrenContentfulBlockContentListRaiListJsonNode___children___children___children',
-  childrenContentfulBlockContentListRaiListJsonNode___children___internal___content = 'childrenContentfulBlockContentListRaiListJsonNode___children___internal___content',
-  childrenContentfulBlockContentListRaiListJsonNode___children___internal___contentDigest = 'childrenContentfulBlockContentListRaiListJsonNode___children___internal___contentDigest',
-  childrenContentfulBlockContentListRaiListJsonNode___children___internal___description = 'childrenContentfulBlockContentListRaiListJsonNode___children___internal___description',
-  childrenContentfulBlockContentListRaiListJsonNode___children___internal___fieldOwners = 'childrenContentfulBlockContentListRaiListJsonNode___children___internal___fieldOwners',
-  childrenContentfulBlockContentListRaiListJsonNode___children___internal___ignoreType = 'childrenContentfulBlockContentListRaiListJsonNode___children___internal___ignoreType',
-  childrenContentfulBlockContentListRaiListJsonNode___children___internal___mediaType = 'childrenContentfulBlockContentListRaiListJsonNode___children___internal___mediaType',
-  childrenContentfulBlockContentListRaiListJsonNode___children___internal___owner = 'childrenContentfulBlockContentListRaiListJsonNode___children___internal___owner',
-  childrenContentfulBlockContentListRaiListJsonNode___children___internal___type = 'childrenContentfulBlockContentListRaiListJsonNode___children___internal___type',
-  childrenContentfulBlockContentListRaiListJsonNode___internal___content = 'childrenContentfulBlockContentListRaiListJsonNode___internal___content',
-  childrenContentfulBlockContentListRaiListJsonNode___internal___contentDigest = 'childrenContentfulBlockContentListRaiListJsonNode___internal___contentDigest',
-  childrenContentfulBlockContentListRaiListJsonNode___internal___description = 'childrenContentfulBlockContentListRaiListJsonNode___internal___description',
-  childrenContentfulBlockContentListRaiListJsonNode___internal___fieldOwners = 'childrenContentfulBlockContentListRaiListJsonNode___internal___fieldOwners',
-  childrenContentfulBlockContentListRaiListJsonNode___internal___ignoreType = 'childrenContentfulBlockContentListRaiListJsonNode___internal___ignoreType',
-  childrenContentfulBlockContentListRaiListJsonNode___internal___mediaType = 'childrenContentfulBlockContentListRaiListJsonNode___internal___mediaType',
-  childrenContentfulBlockContentListRaiListJsonNode___internal___owner = 'childrenContentfulBlockContentListRaiListJsonNode___internal___owner',
-  childrenContentfulBlockContentListRaiListJsonNode___internal___type = 'childrenContentfulBlockContentListRaiListJsonNode___internal___type',
-  childrenContentfulBlockContentListRaiListJsonNode___items = 'childrenContentfulBlockContentListRaiListJsonNode___items',
-  childrenContentfulBlockContentListRaiListJsonNode___sys___type = 'childrenContentfulBlockContentListRaiListJsonNode___sys___type',
-  childContentfulBlockContentListRaiListJsonNode___id = 'childContentfulBlockContentListRaiListJsonNode___id',
-  childContentfulBlockContentListRaiListJsonNode___parent___id = 'childContentfulBlockContentListRaiListJsonNode___parent___id',
-  childContentfulBlockContentListRaiListJsonNode___parent___parent___id = 'childContentfulBlockContentListRaiListJsonNode___parent___parent___id',
-  childContentfulBlockContentListRaiListJsonNode___parent___parent___children = 'childContentfulBlockContentListRaiListJsonNode___parent___parent___children',
-  childContentfulBlockContentListRaiListJsonNode___parent___children = 'childContentfulBlockContentListRaiListJsonNode___parent___children',
-  childContentfulBlockContentListRaiListJsonNode___parent___children___id = 'childContentfulBlockContentListRaiListJsonNode___parent___children___id',
-  childContentfulBlockContentListRaiListJsonNode___parent___children___children = 'childContentfulBlockContentListRaiListJsonNode___parent___children___children',
-  childContentfulBlockContentListRaiListJsonNode___parent___internal___content = 'childContentfulBlockContentListRaiListJsonNode___parent___internal___content',
-  childContentfulBlockContentListRaiListJsonNode___parent___internal___contentDigest = 'childContentfulBlockContentListRaiListJsonNode___parent___internal___contentDigest',
-  childContentfulBlockContentListRaiListJsonNode___parent___internal___description = 'childContentfulBlockContentListRaiListJsonNode___parent___internal___description',
-  childContentfulBlockContentListRaiListJsonNode___parent___internal___fieldOwners = 'childContentfulBlockContentListRaiListJsonNode___parent___internal___fieldOwners',
-  childContentfulBlockContentListRaiListJsonNode___parent___internal___ignoreType = 'childContentfulBlockContentListRaiListJsonNode___parent___internal___ignoreType',
-  childContentfulBlockContentListRaiListJsonNode___parent___internal___mediaType = 'childContentfulBlockContentListRaiListJsonNode___parent___internal___mediaType',
-  childContentfulBlockContentListRaiListJsonNode___parent___internal___owner = 'childContentfulBlockContentListRaiListJsonNode___parent___internal___owner',
-  childContentfulBlockContentListRaiListJsonNode___parent___internal___type = 'childContentfulBlockContentListRaiListJsonNode___parent___internal___type',
-  childContentfulBlockContentListRaiListJsonNode___children = 'childContentfulBlockContentListRaiListJsonNode___children',
-  childContentfulBlockContentListRaiListJsonNode___children___id = 'childContentfulBlockContentListRaiListJsonNode___children___id',
-  childContentfulBlockContentListRaiListJsonNode___children___parent___id = 'childContentfulBlockContentListRaiListJsonNode___children___parent___id',
-  childContentfulBlockContentListRaiListJsonNode___children___parent___children = 'childContentfulBlockContentListRaiListJsonNode___children___parent___children',
-  childContentfulBlockContentListRaiListJsonNode___children___children = 'childContentfulBlockContentListRaiListJsonNode___children___children',
-  childContentfulBlockContentListRaiListJsonNode___children___children___id = 'childContentfulBlockContentListRaiListJsonNode___children___children___id',
-  childContentfulBlockContentListRaiListJsonNode___children___children___children = 'childContentfulBlockContentListRaiListJsonNode___children___children___children',
-  childContentfulBlockContentListRaiListJsonNode___children___internal___content = 'childContentfulBlockContentListRaiListJsonNode___children___internal___content',
-  childContentfulBlockContentListRaiListJsonNode___children___internal___contentDigest = 'childContentfulBlockContentListRaiListJsonNode___children___internal___contentDigest',
-  childContentfulBlockContentListRaiListJsonNode___children___internal___description = 'childContentfulBlockContentListRaiListJsonNode___children___internal___description',
-  childContentfulBlockContentListRaiListJsonNode___children___internal___fieldOwners = 'childContentfulBlockContentListRaiListJsonNode___children___internal___fieldOwners',
-  childContentfulBlockContentListRaiListJsonNode___children___internal___ignoreType = 'childContentfulBlockContentListRaiListJsonNode___children___internal___ignoreType',
-  childContentfulBlockContentListRaiListJsonNode___children___internal___mediaType = 'childContentfulBlockContentListRaiListJsonNode___children___internal___mediaType',
-  childContentfulBlockContentListRaiListJsonNode___children___internal___owner = 'childContentfulBlockContentListRaiListJsonNode___children___internal___owner',
-  childContentfulBlockContentListRaiListJsonNode___children___internal___type = 'childContentfulBlockContentListRaiListJsonNode___children___internal___type',
-  childContentfulBlockContentListRaiListJsonNode___internal___content = 'childContentfulBlockContentListRaiListJsonNode___internal___content',
-  childContentfulBlockContentListRaiListJsonNode___internal___contentDigest = 'childContentfulBlockContentListRaiListJsonNode___internal___contentDigest',
-  childContentfulBlockContentListRaiListJsonNode___internal___description = 'childContentfulBlockContentListRaiListJsonNode___internal___description',
-  childContentfulBlockContentListRaiListJsonNode___internal___fieldOwners = 'childContentfulBlockContentListRaiListJsonNode___internal___fieldOwners',
-  childContentfulBlockContentListRaiListJsonNode___internal___ignoreType = 'childContentfulBlockContentListRaiListJsonNode___internal___ignoreType',
-  childContentfulBlockContentListRaiListJsonNode___internal___mediaType = 'childContentfulBlockContentListRaiListJsonNode___internal___mediaType',
-  childContentfulBlockContentListRaiListJsonNode___internal___owner = 'childContentfulBlockContentListRaiListJsonNode___internal___owner',
-  childContentfulBlockContentListRaiListJsonNode___internal___type = 'childContentfulBlockContentListRaiListJsonNode___internal___type',
-  childContentfulBlockContentListRaiListJsonNode___items = 'childContentfulBlockContentListRaiListJsonNode___items',
-  childContentfulBlockContentListRaiListJsonNode___sys___type = 'childContentfulBlockContentListRaiListJsonNode___sys___type',
-  childrenContentfulBlockContentListRaiButtonJsonNode = 'childrenContentfulBlockContentListRaiButtonJsonNode',
-  childrenContentfulBlockContentListRaiButtonJsonNode___id = 'childrenContentfulBlockContentListRaiButtonJsonNode___id',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___id = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___id',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___parent___id = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___parent___id',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___parent___children = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___parent___children',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___children = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___children',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___children___id = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___children___id',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___children___children = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___children___children',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___content = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___content',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___contentDigest = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___contentDigest',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___description = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___description',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___fieldOwners = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___fieldOwners',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___ignoreType = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___ignoreType',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___mediaType = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___mediaType',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___owner = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___owner',
-  childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___type = 'childrenContentfulBlockContentListRaiButtonJsonNode___parent___internal___type',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children = 'childrenContentfulBlockContentListRaiButtonJsonNode___children',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___id = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___id',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___parent___id = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___parent___id',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___parent___children = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___parent___children',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___children = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___children',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___children___id = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___children___id',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___children___children = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___children___children',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___content = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___content',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___contentDigest = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___contentDigest',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___description = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___description',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___fieldOwners = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___fieldOwners',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___ignoreType = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___ignoreType',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___mediaType = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___mediaType',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___owner = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___owner',
-  childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___type = 'childrenContentfulBlockContentListRaiButtonJsonNode___children___internal___type',
-  childrenContentfulBlockContentListRaiButtonJsonNode___internal___content = 'childrenContentfulBlockContentListRaiButtonJsonNode___internal___content',
-  childrenContentfulBlockContentListRaiButtonJsonNode___internal___contentDigest = 'childrenContentfulBlockContentListRaiButtonJsonNode___internal___contentDigest',
-  childrenContentfulBlockContentListRaiButtonJsonNode___internal___description = 'childrenContentfulBlockContentListRaiButtonJsonNode___internal___description',
-  childrenContentfulBlockContentListRaiButtonJsonNode___internal___fieldOwners = 'childrenContentfulBlockContentListRaiButtonJsonNode___internal___fieldOwners',
-  childrenContentfulBlockContentListRaiButtonJsonNode___internal___ignoreType = 'childrenContentfulBlockContentListRaiButtonJsonNode___internal___ignoreType',
-  childrenContentfulBlockContentListRaiButtonJsonNode___internal___mediaType = 'childrenContentfulBlockContentListRaiButtonJsonNode___internal___mediaType',
-  childrenContentfulBlockContentListRaiButtonJsonNode___internal___owner = 'childrenContentfulBlockContentListRaiButtonJsonNode___internal___owner',
-  childrenContentfulBlockContentListRaiButtonJsonNode___internal___type = 'childrenContentfulBlockContentListRaiButtonJsonNode___internal___type',
-  childrenContentfulBlockContentListRaiButtonJsonNode___action___url = 'childrenContentfulBlockContentListRaiButtonJsonNode___action___url',
-  childrenContentfulBlockContentListRaiButtonJsonNode___action___title = 'childrenContentfulBlockContentListRaiButtonJsonNode___action___title',
-  childrenContentfulBlockContentListRaiButtonJsonNode___action___enabled = 'childrenContentfulBlockContentListRaiButtonJsonNode___action___enabled',
-  childrenContentfulBlockContentListRaiButtonJsonNode___action___external = 'childrenContentfulBlockContentListRaiButtonJsonNode___action___external',
-  childrenContentfulBlockContentListRaiButtonJsonNode___sys___type = 'childrenContentfulBlockContentListRaiButtonJsonNode___sys___type',
-  childContentfulBlockContentListRaiButtonJsonNode___id = 'childContentfulBlockContentListRaiButtonJsonNode___id',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___id = 'childContentfulBlockContentListRaiButtonJsonNode___parent___id',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___parent___id = 'childContentfulBlockContentListRaiButtonJsonNode___parent___parent___id',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___parent___children = 'childContentfulBlockContentListRaiButtonJsonNode___parent___parent___children',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___children = 'childContentfulBlockContentListRaiButtonJsonNode___parent___children',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___children___id = 'childContentfulBlockContentListRaiButtonJsonNode___parent___children___id',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___children___children = 'childContentfulBlockContentListRaiButtonJsonNode___parent___children___children',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___internal___content = 'childContentfulBlockContentListRaiButtonJsonNode___parent___internal___content',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___internal___contentDigest = 'childContentfulBlockContentListRaiButtonJsonNode___parent___internal___contentDigest',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___internal___description = 'childContentfulBlockContentListRaiButtonJsonNode___parent___internal___description',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___internal___fieldOwners = 'childContentfulBlockContentListRaiButtonJsonNode___parent___internal___fieldOwners',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___internal___ignoreType = 'childContentfulBlockContentListRaiButtonJsonNode___parent___internal___ignoreType',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___internal___mediaType = 'childContentfulBlockContentListRaiButtonJsonNode___parent___internal___mediaType',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___internal___owner = 'childContentfulBlockContentListRaiButtonJsonNode___parent___internal___owner',
-  childContentfulBlockContentListRaiButtonJsonNode___parent___internal___type = 'childContentfulBlockContentListRaiButtonJsonNode___parent___internal___type',
-  childContentfulBlockContentListRaiButtonJsonNode___children = 'childContentfulBlockContentListRaiButtonJsonNode___children',
-  childContentfulBlockContentListRaiButtonJsonNode___children___id = 'childContentfulBlockContentListRaiButtonJsonNode___children___id',
-  childContentfulBlockContentListRaiButtonJsonNode___children___parent___id = 'childContentfulBlockContentListRaiButtonJsonNode___children___parent___id',
-  childContentfulBlockContentListRaiButtonJsonNode___children___parent___children = 'childContentfulBlockContentListRaiButtonJsonNode___children___parent___children',
-  childContentfulBlockContentListRaiButtonJsonNode___children___children = 'childContentfulBlockContentListRaiButtonJsonNode___children___children',
-  childContentfulBlockContentListRaiButtonJsonNode___children___children___id = 'childContentfulBlockContentListRaiButtonJsonNode___children___children___id',
-  childContentfulBlockContentListRaiButtonJsonNode___children___children___children = 'childContentfulBlockContentListRaiButtonJsonNode___children___children___children',
-  childContentfulBlockContentListRaiButtonJsonNode___children___internal___content = 'childContentfulBlockContentListRaiButtonJsonNode___children___internal___content',
-  childContentfulBlockContentListRaiButtonJsonNode___children___internal___contentDigest = 'childContentfulBlockContentListRaiButtonJsonNode___children___internal___contentDigest',
-  childContentfulBlockContentListRaiButtonJsonNode___children___internal___description = 'childContentfulBlockContentListRaiButtonJsonNode___children___internal___description',
-  childContentfulBlockContentListRaiButtonJsonNode___children___internal___fieldOwners = 'childContentfulBlockContentListRaiButtonJsonNode___children___internal___fieldOwners',
-  childContentfulBlockContentListRaiButtonJsonNode___children___internal___ignoreType = 'childContentfulBlockContentListRaiButtonJsonNode___children___internal___ignoreType',
-  childContentfulBlockContentListRaiButtonJsonNode___children___internal___mediaType = 'childContentfulBlockContentListRaiButtonJsonNode___children___internal___mediaType',
-  childContentfulBlockContentListRaiButtonJsonNode___children___internal___owner = 'childContentfulBlockContentListRaiButtonJsonNode___children___internal___owner',
-  childContentfulBlockContentListRaiButtonJsonNode___children___internal___type = 'childContentfulBlockContentListRaiButtonJsonNode___children___internal___type',
-  childContentfulBlockContentListRaiButtonJsonNode___internal___content = 'childContentfulBlockContentListRaiButtonJsonNode___internal___content',
-  childContentfulBlockContentListRaiButtonJsonNode___internal___contentDigest = 'childContentfulBlockContentListRaiButtonJsonNode___internal___contentDigest',
-  childContentfulBlockContentListRaiButtonJsonNode___internal___description = 'childContentfulBlockContentListRaiButtonJsonNode___internal___description',
-  childContentfulBlockContentListRaiButtonJsonNode___internal___fieldOwners = 'childContentfulBlockContentListRaiButtonJsonNode___internal___fieldOwners',
-  childContentfulBlockContentListRaiButtonJsonNode___internal___ignoreType = 'childContentfulBlockContentListRaiButtonJsonNode___internal___ignoreType',
-  childContentfulBlockContentListRaiButtonJsonNode___internal___mediaType = 'childContentfulBlockContentListRaiButtonJsonNode___internal___mediaType',
-  childContentfulBlockContentListRaiButtonJsonNode___internal___owner = 'childContentfulBlockContentListRaiButtonJsonNode___internal___owner',
-  childContentfulBlockContentListRaiButtonJsonNode___internal___type = 'childContentfulBlockContentListRaiButtonJsonNode___internal___type',
-  childContentfulBlockContentListRaiButtonJsonNode___action___url = 'childContentfulBlockContentListRaiButtonJsonNode___action___url',
-  childContentfulBlockContentListRaiButtonJsonNode___action___title = 'childContentfulBlockContentListRaiButtonJsonNode___action___title',
-  childContentfulBlockContentListRaiButtonJsonNode___action___enabled = 'childContentfulBlockContentListRaiButtonJsonNode___action___enabled',
-  childContentfulBlockContentListRaiButtonJsonNode___action___external = 'childContentfulBlockContentListRaiButtonJsonNode___action___external',
-  childContentfulBlockContentListRaiButtonJsonNode___sys___type = 'childContentfulBlockContentListRaiButtonJsonNode___sys___type',
   parent___id = 'parent___id',
   parent___parent___id = 'parent___parent___id',
   parent___parent___parent___id = 'parent___parent___parent___id',
@@ -2234,20 +1881,6 @@ export type ContentfulBlockContentListFilterInput = {
   contentful_id?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  content?: Maybe<ContentfulBlockContentListContentFilterInput>;
-  listTitle?: Maybe<StringQueryOperatorInput>;
-  page?: Maybe<ContentfulPageFilterListInput>;
-  raiButton?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeFilterInput>;
-  raiList?: Maybe<ContentfulBlockContentListRaiListJsonNodeFilterInput>;
-  spaceId?: Maybe<StringQueryOperatorInput>;
-  createdAt?: Maybe<DateQueryOperatorInput>;
-  updatedAt?: Maybe<DateQueryOperatorInput>;
-  sys?: Maybe<ContentfulBlockContentListSysFilterInput>;
-  childrenContentfulBlockContentListRaiListJsonNode?: Maybe<ContentfulBlockContentListRaiListJsonNodeFilterListInput>;
-  childContentfulBlockContentListRaiListJsonNode?: Maybe<ContentfulBlockContentListRaiListJsonNodeFilterInput>;
-  childrenContentfulBlockContentListRaiButtonJsonNode?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeFilterListInput>;
-  childContentfulBlockContentListRaiButtonJsonNode?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
@@ -2266,41 +1899,6 @@ export type ContentfulBlockContentListGroupConnection = {
 export type ContentfulBlockContentListSortInput = {
   fields?: Maybe<Array<Maybe<ContentfulBlockContentListFieldsEnum>>>;
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
-};
-
-export type ContentfulBlockContentListSys = {
-  __typename?: 'ContentfulBlockContentListSys';
-  type?: Maybe<Scalars['String']>;
-  revision?: Maybe<Scalars['Int']>;
-  contentType?: Maybe<ContentfulBlockContentListSysContentType>;
-};
-
-export type ContentfulBlockContentListSysContentType = {
-  __typename?: 'ContentfulBlockContentListSysContentType';
-  sys?: Maybe<ContentfulBlockContentListSysContentTypeSys>;
-};
-
-export type ContentfulBlockContentListSysContentTypeFilterInput = {
-  sys?: Maybe<ContentfulBlockContentListSysContentTypeSysFilterInput>;
-};
-
-export type ContentfulBlockContentListSysContentTypeSys = {
-  __typename?: 'ContentfulBlockContentListSysContentTypeSys';
-  type?: Maybe<Scalars['String']>;
-  linkType?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulBlockContentListSysContentTypeSysFilterInput = {
-  type?: Maybe<StringQueryOperatorInput>;
-  linkType?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-};
-
-export type ContentfulBlockContentListSysFilterInput = {
-  type?: Maybe<StringQueryOperatorInput>;
-  revision?: Maybe<IntQueryOperatorInput>;
-  contentType?: Maybe<ContentfulBlockContentListSysContentTypeFilterInput>;
 };
 
 export type ContentfulBlockContentSortInput = {
@@ -2353,15 +1951,15 @@ export type ContentfulBlogPost = ContentfulReference & ContentfulEntry & Node & 
   featured?: Maybe<Scalars['Boolean']>;
   published?: Maybe<Scalars['Date']>;
   content?: Maybe<ContentfulBlogPostContent>;
-  seoTitle?: Maybe<Scalars['String']>;
-  author?: Maybe<ContentfulAuthor>;
+  featuredImage?: Maybe<ContentfulAsset>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulBlogPostSys>;
+  seoTitle?: Maybe<Scalars['String']>;
+  author?: Maybe<ContentfulAuthor>;
   seoDescription?: Maybe<Scalars['String']>;
   excerpt?: Maybe<ContentfulBlogPostExcerptTextNode>;
-  featuredImage?: Maybe<ContentfulAsset>;
   /** Returns all children nodes filtered by type contentfulBlogPostExcerptTextNode */
   childrenContentfulBlogPostExcerptTextNode?: Maybe<Array<Maybe<ContentfulBlogPostExcerptTextNode>>>;
   /** Returns the first child node of type contentfulBlogPostExcerptTextNode or null if there are no children of given type on this node */
@@ -2442,6 +2040,89 @@ export enum ContentfulBlogPostFieldsEnum {
   featured = 'featured',
   published = 'published',
   content___raw = 'content___raw',
+  featuredImage___contentful_id = 'featuredImage___contentful_id',
+  featuredImage___id = 'featuredImage___id',
+  featuredImage___spaceId = 'featuredImage___spaceId',
+  featuredImage___createdAt = 'featuredImage___createdAt',
+  featuredImage___updatedAt = 'featuredImage___updatedAt',
+  featuredImage___file___url = 'featuredImage___file___url',
+  featuredImage___file___details___size = 'featuredImage___file___details___size',
+  featuredImage___file___fileName = 'featuredImage___file___fileName',
+  featuredImage___file___contentType = 'featuredImage___file___contentType',
+  featuredImage___title = 'featuredImage___title',
+  featuredImage___description = 'featuredImage___description',
+  featuredImage___node_locale = 'featuredImage___node_locale',
+  featuredImage___sys___type = 'featuredImage___sys___type',
+  featuredImage___sys___revision = 'featuredImage___sys___revision',
+  featuredImage___fixed___base64 = 'featuredImage___fixed___base64',
+  featuredImage___fixed___tracedSVG = 'featuredImage___fixed___tracedSVG',
+  featuredImage___fixed___aspectRatio = 'featuredImage___fixed___aspectRatio',
+  featuredImage___fixed___width = 'featuredImage___fixed___width',
+  featuredImage___fixed___height = 'featuredImage___fixed___height',
+  featuredImage___fixed___src = 'featuredImage___fixed___src',
+  featuredImage___fixed___srcSet = 'featuredImage___fixed___srcSet',
+  featuredImage___fixed___srcWebp = 'featuredImage___fixed___srcWebp',
+  featuredImage___fixed___srcSetWebp = 'featuredImage___fixed___srcSetWebp',
+  featuredImage___fluid___base64 = 'featuredImage___fluid___base64',
+  featuredImage___fluid___tracedSVG = 'featuredImage___fluid___tracedSVG',
+  featuredImage___fluid___aspectRatio = 'featuredImage___fluid___aspectRatio',
+  featuredImage___fluid___src = 'featuredImage___fluid___src',
+  featuredImage___fluid___srcSet = 'featuredImage___fluid___srcSet',
+  featuredImage___fluid___srcWebp = 'featuredImage___fluid___srcWebp',
+  featuredImage___fluid___srcSetWebp = 'featuredImage___fluid___srcSetWebp',
+  featuredImage___fluid___sizes = 'featuredImage___fluid___sizes',
+  featuredImage___gatsbyImageData = 'featuredImage___gatsbyImageData',
+  featuredImage___resize___base64 = 'featuredImage___resize___base64',
+  featuredImage___resize___tracedSVG = 'featuredImage___resize___tracedSVG',
+  featuredImage___resize___src = 'featuredImage___resize___src',
+  featuredImage___resize___width = 'featuredImage___resize___width',
+  featuredImage___resize___height = 'featuredImage___resize___height',
+  featuredImage___resize___aspectRatio = 'featuredImage___resize___aspectRatio',
+  featuredImage___parent___id = 'featuredImage___parent___id',
+  featuredImage___parent___parent___id = 'featuredImage___parent___parent___id',
+  featuredImage___parent___parent___children = 'featuredImage___parent___parent___children',
+  featuredImage___parent___children = 'featuredImage___parent___children',
+  featuredImage___parent___children___id = 'featuredImage___parent___children___id',
+  featuredImage___parent___children___children = 'featuredImage___parent___children___children',
+  featuredImage___parent___internal___content = 'featuredImage___parent___internal___content',
+  featuredImage___parent___internal___contentDigest = 'featuredImage___parent___internal___contentDigest',
+  featuredImage___parent___internal___description = 'featuredImage___parent___internal___description',
+  featuredImage___parent___internal___fieldOwners = 'featuredImage___parent___internal___fieldOwners',
+  featuredImage___parent___internal___ignoreType = 'featuredImage___parent___internal___ignoreType',
+  featuredImage___parent___internal___mediaType = 'featuredImage___parent___internal___mediaType',
+  featuredImage___parent___internal___owner = 'featuredImage___parent___internal___owner',
+  featuredImage___parent___internal___type = 'featuredImage___parent___internal___type',
+  featuredImage___children = 'featuredImage___children',
+  featuredImage___children___id = 'featuredImage___children___id',
+  featuredImage___children___parent___id = 'featuredImage___children___parent___id',
+  featuredImage___children___parent___children = 'featuredImage___children___parent___children',
+  featuredImage___children___children = 'featuredImage___children___children',
+  featuredImage___children___children___id = 'featuredImage___children___children___id',
+  featuredImage___children___children___children = 'featuredImage___children___children___children',
+  featuredImage___children___internal___content = 'featuredImage___children___internal___content',
+  featuredImage___children___internal___contentDigest = 'featuredImage___children___internal___contentDigest',
+  featuredImage___children___internal___description = 'featuredImage___children___internal___description',
+  featuredImage___children___internal___fieldOwners = 'featuredImage___children___internal___fieldOwners',
+  featuredImage___children___internal___ignoreType = 'featuredImage___children___internal___ignoreType',
+  featuredImage___children___internal___mediaType = 'featuredImage___children___internal___mediaType',
+  featuredImage___children___internal___owner = 'featuredImage___children___internal___owner',
+  featuredImage___children___internal___type = 'featuredImage___children___internal___type',
+  featuredImage___internal___content = 'featuredImage___internal___content',
+  featuredImage___internal___contentDigest = 'featuredImage___internal___contentDigest',
+  featuredImage___internal___description = 'featuredImage___internal___description',
+  featuredImage___internal___fieldOwners = 'featuredImage___internal___fieldOwners',
+  featuredImage___internal___ignoreType = 'featuredImage___internal___ignoreType',
+  featuredImage___internal___mediaType = 'featuredImage___internal___mediaType',
+  featuredImage___internal___owner = 'featuredImage___internal___owner',
+  featuredImage___internal___type = 'featuredImage___internal___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
   seoTitle = 'seoTitle',
   author___contentful_id = 'author___contentful_id',
   author___id = 'author___id',
@@ -2456,6 +2137,21 @@ export enum ContentfulBlogPostFieldsEnum {
   author___blog_post___featured = 'author___blog_post___featured',
   author___blog_post___published = 'author___blog_post___published',
   author___blog_post___content___raw = 'author___blog_post___content___raw',
+  author___blog_post___featuredImage___contentful_id = 'author___blog_post___featuredImage___contentful_id',
+  author___blog_post___featuredImage___id = 'author___blog_post___featuredImage___id',
+  author___blog_post___featuredImage___spaceId = 'author___blog_post___featuredImage___spaceId',
+  author___blog_post___featuredImage___createdAt = 'author___blog_post___featuredImage___createdAt',
+  author___blog_post___featuredImage___updatedAt = 'author___blog_post___featuredImage___updatedAt',
+  author___blog_post___featuredImage___title = 'author___blog_post___featuredImage___title',
+  author___blog_post___featuredImage___description = 'author___blog_post___featuredImage___description',
+  author___blog_post___featuredImage___node_locale = 'author___blog_post___featuredImage___node_locale',
+  author___blog_post___featuredImage___gatsbyImageData = 'author___blog_post___featuredImage___gatsbyImageData',
+  author___blog_post___featuredImage___children = 'author___blog_post___featuredImage___children',
+  author___blog_post___spaceId = 'author___blog_post___spaceId',
+  author___blog_post___createdAt = 'author___blog_post___createdAt',
+  author___blog_post___updatedAt = 'author___blog_post___updatedAt',
+  author___blog_post___sys___type = 'author___blog_post___sys___type',
+  author___blog_post___sys___revision = 'author___blog_post___sys___revision',
   author___blog_post___seoTitle = 'author___blog_post___seoTitle',
   author___blog_post___author___contentful_id = 'author___blog_post___author___contentful_id',
   author___blog_post___author___id = 'author___blog_post___author___id',
@@ -2467,25 +2163,10 @@ export enum ContentfulBlogPostFieldsEnum {
   author___blog_post___author___updatedAt = 'author___blog_post___author___updatedAt',
   author___blog_post___author___childrenContentfulAuthorBiographyTextNode = 'author___blog_post___author___childrenContentfulAuthorBiographyTextNode',
   author___blog_post___author___children = 'author___blog_post___author___children',
-  author___blog_post___spaceId = 'author___blog_post___spaceId',
-  author___blog_post___createdAt = 'author___blog_post___createdAt',
-  author___blog_post___updatedAt = 'author___blog_post___updatedAt',
-  author___blog_post___sys___type = 'author___blog_post___sys___type',
-  author___blog_post___sys___revision = 'author___blog_post___sys___revision',
   author___blog_post___seoDescription = 'author___blog_post___seoDescription',
   author___blog_post___excerpt___id = 'author___blog_post___excerpt___id',
   author___blog_post___excerpt___children = 'author___blog_post___excerpt___children',
   author___blog_post___excerpt___excerpt = 'author___blog_post___excerpt___excerpt',
-  author___blog_post___featuredImage___contentful_id = 'author___blog_post___featuredImage___contentful_id',
-  author___blog_post___featuredImage___id = 'author___blog_post___featuredImage___id',
-  author___blog_post___featuredImage___spaceId = 'author___blog_post___featuredImage___spaceId',
-  author___blog_post___featuredImage___createdAt = 'author___blog_post___featuredImage___createdAt',
-  author___blog_post___featuredImage___updatedAt = 'author___blog_post___featuredImage___updatedAt',
-  author___blog_post___featuredImage___title = 'author___blog_post___featuredImage___title',
-  author___blog_post___featuredImage___description = 'author___blog_post___featuredImage___description',
-  author___blog_post___featuredImage___node_locale = 'author___blog_post___featuredImage___node_locale',
-  author___blog_post___featuredImage___gatsbyImageData = 'author___blog_post___featuredImage___gatsbyImageData',
-  author___blog_post___featuredImage___children = 'author___blog_post___featuredImage___children',
   author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode',
   author___blog_post___childrenContentfulBlogPostExcerptTextNode___id = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___id',
   author___blog_post___childrenContentfulBlogPostExcerptTextNode___children = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___children',
@@ -2597,14 +2278,6 @@ export enum ContentfulBlogPostFieldsEnum {
   author___internal___mediaType = 'author___internal___mediaType',
   author___internal___owner = 'author___internal___owner',
   author___internal___type = 'author___internal___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
   seoDescription = 'seoDescription',
   excerpt___id = 'excerpt___id',
   excerpt___parent___id = 'excerpt___parent___id',
@@ -2646,81 +2319,6 @@ export enum ContentfulBlogPostFieldsEnum {
   excerpt___internal___type = 'excerpt___internal___type',
   excerpt___excerpt = 'excerpt___excerpt',
   excerpt___sys___type = 'excerpt___sys___type',
-  featuredImage___contentful_id = 'featuredImage___contentful_id',
-  featuredImage___id = 'featuredImage___id',
-  featuredImage___spaceId = 'featuredImage___spaceId',
-  featuredImage___createdAt = 'featuredImage___createdAt',
-  featuredImage___updatedAt = 'featuredImage___updatedAt',
-  featuredImage___file___url = 'featuredImage___file___url',
-  featuredImage___file___details___size = 'featuredImage___file___details___size',
-  featuredImage___file___fileName = 'featuredImage___file___fileName',
-  featuredImage___file___contentType = 'featuredImage___file___contentType',
-  featuredImage___title = 'featuredImage___title',
-  featuredImage___description = 'featuredImage___description',
-  featuredImage___node_locale = 'featuredImage___node_locale',
-  featuredImage___sys___type = 'featuredImage___sys___type',
-  featuredImage___sys___revision = 'featuredImage___sys___revision',
-  featuredImage___fixed___base64 = 'featuredImage___fixed___base64',
-  featuredImage___fixed___tracedSVG = 'featuredImage___fixed___tracedSVG',
-  featuredImage___fixed___aspectRatio = 'featuredImage___fixed___aspectRatio',
-  featuredImage___fixed___width = 'featuredImage___fixed___width',
-  featuredImage___fixed___height = 'featuredImage___fixed___height',
-  featuredImage___fixed___src = 'featuredImage___fixed___src',
-  featuredImage___fixed___srcSet = 'featuredImage___fixed___srcSet',
-  featuredImage___fixed___srcWebp = 'featuredImage___fixed___srcWebp',
-  featuredImage___fixed___srcSetWebp = 'featuredImage___fixed___srcSetWebp',
-  featuredImage___fluid___base64 = 'featuredImage___fluid___base64',
-  featuredImage___fluid___tracedSVG = 'featuredImage___fluid___tracedSVG',
-  featuredImage___fluid___aspectRatio = 'featuredImage___fluid___aspectRatio',
-  featuredImage___fluid___src = 'featuredImage___fluid___src',
-  featuredImage___fluid___srcSet = 'featuredImage___fluid___srcSet',
-  featuredImage___fluid___srcWebp = 'featuredImage___fluid___srcWebp',
-  featuredImage___fluid___srcSetWebp = 'featuredImage___fluid___srcSetWebp',
-  featuredImage___fluid___sizes = 'featuredImage___fluid___sizes',
-  featuredImage___gatsbyImageData = 'featuredImage___gatsbyImageData',
-  featuredImage___resize___base64 = 'featuredImage___resize___base64',
-  featuredImage___resize___tracedSVG = 'featuredImage___resize___tracedSVG',
-  featuredImage___resize___src = 'featuredImage___resize___src',
-  featuredImage___resize___width = 'featuredImage___resize___width',
-  featuredImage___resize___height = 'featuredImage___resize___height',
-  featuredImage___resize___aspectRatio = 'featuredImage___resize___aspectRatio',
-  featuredImage___parent___id = 'featuredImage___parent___id',
-  featuredImage___parent___parent___id = 'featuredImage___parent___parent___id',
-  featuredImage___parent___parent___children = 'featuredImage___parent___parent___children',
-  featuredImage___parent___children = 'featuredImage___parent___children',
-  featuredImage___parent___children___id = 'featuredImage___parent___children___id',
-  featuredImage___parent___children___children = 'featuredImage___parent___children___children',
-  featuredImage___parent___internal___content = 'featuredImage___parent___internal___content',
-  featuredImage___parent___internal___contentDigest = 'featuredImage___parent___internal___contentDigest',
-  featuredImage___parent___internal___description = 'featuredImage___parent___internal___description',
-  featuredImage___parent___internal___fieldOwners = 'featuredImage___parent___internal___fieldOwners',
-  featuredImage___parent___internal___ignoreType = 'featuredImage___parent___internal___ignoreType',
-  featuredImage___parent___internal___mediaType = 'featuredImage___parent___internal___mediaType',
-  featuredImage___parent___internal___owner = 'featuredImage___parent___internal___owner',
-  featuredImage___parent___internal___type = 'featuredImage___parent___internal___type',
-  featuredImage___children = 'featuredImage___children',
-  featuredImage___children___id = 'featuredImage___children___id',
-  featuredImage___children___parent___id = 'featuredImage___children___parent___id',
-  featuredImage___children___parent___children = 'featuredImage___children___parent___children',
-  featuredImage___children___children = 'featuredImage___children___children',
-  featuredImage___children___children___id = 'featuredImage___children___children___id',
-  featuredImage___children___children___children = 'featuredImage___children___children___children',
-  featuredImage___children___internal___content = 'featuredImage___children___internal___content',
-  featuredImage___children___internal___contentDigest = 'featuredImage___children___internal___contentDigest',
-  featuredImage___children___internal___description = 'featuredImage___children___internal___description',
-  featuredImage___children___internal___fieldOwners = 'featuredImage___children___internal___fieldOwners',
-  featuredImage___children___internal___ignoreType = 'featuredImage___children___internal___ignoreType',
-  featuredImage___children___internal___mediaType = 'featuredImage___children___internal___mediaType',
-  featuredImage___children___internal___owner = 'featuredImage___children___internal___owner',
-  featuredImage___children___internal___type = 'featuredImage___children___internal___type',
-  featuredImage___internal___content = 'featuredImage___internal___content',
-  featuredImage___internal___contentDigest = 'featuredImage___internal___contentDigest',
-  featuredImage___internal___description = 'featuredImage___internal___description',
-  featuredImage___internal___fieldOwners = 'featuredImage___internal___fieldOwners',
-  featuredImage___internal___ignoreType = 'featuredImage___internal___ignoreType',
-  featuredImage___internal___mediaType = 'featuredImage___internal___mediaType',
-  featuredImage___internal___owner = 'featuredImage___internal___owner',
-  featuredImage___internal___type = 'featuredImage___internal___type',
   childrenContentfulBlogPostExcerptTextNode = 'childrenContentfulBlogPostExcerptTextNode',
   childrenContentfulBlogPostExcerptTextNode___id = 'childrenContentfulBlogPostExcerptTextNode___id',
   childrenContentfulBlogPostExcerptTextNode___parent___id = 'childrenContentfulBlogPostExcerptTextNode___parent___id',
@@ -2898,15 +2496,15 @@ export type ContentfulBlogPostFilterInput = {
   featured?: Maybe<BooleanQueryOperatorInput>;
   published?: Maybe<DateQueryOperatorInput>;
   content?: Maybe<ContentfulBlogPostContentFilterInput>;
-  seoTitle?: Maybe<StringQueryOperatorInput>;
-  author?: Maybe<ContentfulAuthorFilterInput>;
+  featuredImage?: Maybe<ContentfulAssetFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlogPostSysFilterInput>;
+  seoTitle?: Maybe<StringQueryOperatorInput>;
+  author?: Maybe<ContentfulAuthorFilterInput>;
   seoDescription?: Maybe<StringQueryOperatorInput>;
   excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
-  featuredImage?: Maybe<ContentfulAssetFilterInput>;
   childrenContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterListInput>;
   childContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -3594,7 +3192,7 @@ export type ContentfulPage = ContentfulReference & ContentfulEntry & Node & {
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
-  blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListUnion>>>;
+  blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockContentUnion>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
@@ -5216,10 +4814,6 @@ export type Query = {
   allContentfulBlockContent: ContentfulBlockContentConnection;
   contentfulBlockContentList?: Maybe<ContentfulBlockContentList>;
   allContentfulBlockContentList: ContentfulBlockContentListConnection;
-  contentfulBlockContentListRaiListJsonNode?: Maybe<ContentfulBlockContentListRaiListJsonNode>;
-  allContentfulBlockContentListRaiListJsonNode: ContentfulBlockContentListRaiListJsonNodeConnection;
-  contentfulBlockContentListRaiButtonJsonNode?: Maybe<ContentfulBlockContentListRaiButtonJsonNode>;
-  allContentfulBlockContentListRaiButtonJsonNode: ContentfulBlockContentListRaiButtonJsonNodeConnection;
   contentfulBlockContentButtonJsonNode?: Maybe<ContentfulBlockContentButtonJsonNode>;
   allContentfulBlockContentButtonJsonNode: ContentfulBlockContentButtonJsonNodeConnection;
   contentfulBlockCallToActionButtonJsonNode?: Maybe<ContentfulBlockCallToActionButtonJsonNode>;
@@ -5487,15 +5081,15 @@ export type QueryContentfulBlogPostArgs = {
   featured?: Maybe<BooleanQueryOperatorInput>;
   published?: Maybe<DateQueryOperatorInput>;
   content?: Maybe<ContentfulBlogPostContentFilterInput>;
-  seoTitle?: Maybe<StringQueryOperatorInput>;
-  author?: Maybe<ContentfulAuthorFilterInput>;
+  featuredImage?: Maybe<ContentfulAssetFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlogPostSysFilterInput>;
+  seoTitle?: Maybe<StringQueryOperatorInput>;
+  author?: Maybe<ContentfulAuthorFilterInput>;
   seoDescription?: Maybe<StringQueryOperatorInput>;
   excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
-  featuredImage?: Maybe<ContentfulAssetFilterInput>;
   childrenContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterListInput>;
   childContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -5596,13 +5190,14 @@ export type QueryContentfulBlockContentArgs = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   blockTitle?: Maybe<StringQueryOperatorInput>;
+  variation?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<ContentfulBlockContentContentFilterInput>;
-  page?: Maybe<ContentfulPageFilterListInput>;
   button?: Maybe<ContentfulBlockContentButtonJsonNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockContentSysFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
   childrenContentfulBlockContentButtonJsonNode?: Maybe<ContentfulBlockContentButtonJsonNodeFilterListInput>;
   childContentfulBlockContentButtonJsonNode?: Maybe<ContentfulBlockContentButtonJsonNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -5623,20 +5218,6 @@ export type QueryContentfulBlockContentListArgs = {
   contentful_id?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  content?: Maybe<ContentfulBlockContentListContentFilterInput>;
-  listTitle?: Maybe<StringQueryOperatorInput>;
-  page?: Maybe<ContentfulPageFilterListInput>;
-  raiButton?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeFilterInput>;
-  raiList?: Maybe<ContentfulBlockContentListRaiListJsonNodeFilterInput>;
-  spaceId?: Maybe<StringQueryOperatorInput>;
-  createdAt?: Maybe<DateQueryOperatorInput>;
-  updatedAt?: Maybe<DateQueryOperatorInput>;
-  sys?: Maybe<ContentfulBlockContentListSysFilterInput>;
-  childrenContentfulBlockContentListRaiListJsonNode?: Maybe<ContentfulBlockContentListRaiListJsonNodeFilterListInput>;
-  childContentfulBlockContentListRaiListJsonNode?: Maybe<ContentfulBlockContentListRaiListJsonNodeFilterInput>;
-  childrenContentfulBlockContentListRaiButtonJsonNode?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeFilterListInput>;
-  childContentfulBlockContentListRaiButtonJsonNode?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
@@ -5646,42 +5227,6 @@ export type QueryContentfulBlockContentListArgs = {
 export type QueryAllContentfulBlockContentListArgs = {
   filter?: Maybe<ContentfulBlockContentListFilterInput>;
   sort?: Maybe<ContentfulBlockContentListSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
-};
-
-
-export type QueryContentfulBlockContentListRaiListJsonNodeArgs = {
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-  items?: Maybe<StringQueryOperatorInput>;
-  sys?: Maybe<ContentfulBlockContentListRaiListJsonNodeSysFilterInput>;
-};
-
-
-export type QueryAllContentfulBlockContentListRaiListJsonNodeArgs = {
-  filter?: Maybe<ContentfulBlockContentListRaiListJsonNodeFilterInput>;
-  sort?: Maybe<ContentfulBlockContentListRaiListJsonNodeSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
-};
-
-
-export type QueryContentfulBlockContentListRaiButtonJsonNodeArgs = {
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-  action?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeActionFilterInput>;
-  sys?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeSysFilterInput>;
-};
-
-
-export type QueryAllContentfulBlockContentListRaiButtonJsonNodeArgs = {
-  filter?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeFilterInput>;
-  sort?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -7086,19 +6631,19 @@ export type ContentfulBlockCallToActionButtonJsonNode = Node & {
 
 export type ContentfulBlockCallToActionButtonJsonNodeAction = {
   __typename?: 'contentfulBlockCallToActionButtonJsonNodeAction';
-  url?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
-  external?: Maybe<Scalars['Boolean']>;
   enabled?: Maybe<Scalars['Boolean']>;
+  external?: Maybe<Scalars['Boolean']>;
   entrySlug?: Maybe<Scalars['String']>;
+  externalUrl?: Maybe<Scalars['String']>;
 };
 
 export type ContentfulBlockCallToActionButtonJsonNodeActionFilterInput = {
-  url?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
-  external?: Maybe<BooleanQueryOperatorInput>;
   enabled?: Maybe<BooleanQueryOperatorInput>;
+  external?: Maybe<BooleanQueryOperatorInput>;
   entrySlug?: Maybe<StringQueryOperatorInput>;
+  externalUrl?: Maybe<StringQueryOperatorInput>;
 };
 
 export type ContentfulBlockCallToActionButtonJsonNodeConnection = {
@@ -7217,11 +6762,11 @@ export enum ContentfulBlockCallToActionButtonJsonNodeFieldsEnum {
   internal___mediaType = 'internal___mediaType',
   internal___owner = 'internal___owner',
   internal___type = 'internal___type',
-  action___url = 'action___url',
   action___title = 'action___title',
-  action___external = 'action___external',
   action___enabled = 'action___enabled',
+  action___external = 'action___external',
   action___entrySlug = 'action___entrySlug',
+  action___externalUrl = 'action___externalUrl',
   sys___type = 'sys___type'
 }
 
@@ -7274,19 +6819,17 @@ export type ContentfulBlockContentButtonJsonNode = Node & {
 
 export type ContentfulBlockContentButtonJsonNodeAction = {
   __typename?: 'contentfulBlockContentButtonJsonNodeAction';
-  url?: Maybe<Scalars['String']>;
+  enabled?: Maybe<Scalars['Boolean']>;
   title?: Maybe<Scalars['String']>;
   external?: Maybe<Scalars['Boolean']>;
-  enabled?: Maybe<Scalars['Boolean']>;
   externalUrl?: Maybe<Scalars['String']>;
   entrySlug?: Maybe<Scalars['String']>;
 };
 
 export type ContentfulBlockContentButtonJsonNodeActionFilterInput = {
-  url?: Maybe<StringQueryOperatorInput>;
+  enabled?: Maybe<BooleanQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   external?: Maybe<BooleanQueryOperatorInput>;
-  enabled?: Maybe<BooleanQueryOperatorInput>;
   externalUrl?: Maybe<StringQueryOperatorInput>;
   entrySlug?: Maybe<StringQueryOperatorInput>;
 };
@@ -7407,10 +6950,9 @@ export enum ContentfulBlockContentButtonJsonNodeFieldsEnum {
   internal___mediaType = 'internal___mediaType',
   internal___owner = 'internal___owner',
   internal___type = 'internal___type',
-  action___url = 'action___url',
+  action___enabled = 'action___enabled',
   action___title = 'action___title',
   action___external = 'action___external',
-  action___enabled = 'action___enabled',
   action___externalUrl = 'action___externalUrl',
   action___entrySlug = 'action___entrySlug',
   sys___type = 'sys___type'
@@ -7450,358 +6992,6 @@ export type ContentfulBlockContentButtonJsonNodeSys = {
 };
 
 export type ContentfulBlockContentButtonJsonNodeSysFilterInput = {
-  type?: Maybe<StringQueryOperatorInput>;
-};
-
-export type ContentfulBlockContentListRaiButtonJsonNode = Node & {
-  __typename?: 'contentfulBlockContentListRaiButtonJsonNode';
-  id: Scalars['ID'];
-  parent?: Maybe<Node>;
-  children: Array<Node>;
-  internal: Internal;
-  action?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeAction>;
-  sys?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeSys>;
-};
-
-export type ContentfulBlockContentListRaiButtonJsonNodeAction = {
-  __typename?: 'contentfulBlockContentListRaiButtonJsonNodeAction';
-  url?: Maybe<Scalars['String']>;
-  title?: Maybe<Scalars['String']>;
-  enabled?: Maybe<Scalars['Boolean']>;
-  external?: Maybe<Scalars['Boolean']>;
-};
-
-export type ContentfulBlockContentListRaiButtonJsonNodeActionFilterInput = {
-  url?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  enabled?: Maybe<BooleanQueryOperatorInput>;
-  external?: Maybe<BooleanQueryOperatorInput>;
-};
-
-export type ContentfulBlockContentListRaiButtonJsonNodeConnection = {
-  __typename?: 'contentfulBlockContentListRaiButtonJsonNodeConnection';
-  totalCount: Scalars['Int'];
-  edges: Array<ContentfulBlockContentListRaiButtonJsonNodeEdge>;
-  nodes: Array<ContentfulBlockContentListRaiButtonJsonNode>;
-  pageInfo: PageInfo;
-  distinct: Array<Scalars['String']>;
-  group: Array<ContentfulBlockContentListRaiButtonJsonNodeGroupConnection>;
-};
-
-
-export type ContentfulBlockContentListRaiButtonJsonNodeConnectionDistinctArgs = {
-  field: ContentfulBlockContentListRaiButtonJsonNodeFieldsEnum;
-};
-
-
-export type ContentfulBlockContentListRaiButtonJsonNodeConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
-  field: ContentfulBlockContentListRaiButtonJsonNodeFieldsEnum;
-};
-
-export type ContentfulBlockContentListRaiButtonJsonNodeEdge = {
-  __typename?: 'contentfulBlockContentListRaiButtonJsonNodeEdge';
-  next?: Maybe<ContentfulBlockContentListRaiButtonJsonNode>;
-  node: ContentfulBlockContentListRaiButtonJsonNode;
-  previous?: Maybe<ContentfulBlockContentListRaiButtonJsonNode>;
-};
-
-export enum ContentfulBlockContentListRaiButtonJsonNodeFieldsEnum {
-  id = 'id',
-  parent___id = 'parent___id',
-  parent___parent___id = 'parent___parent___id',
-  parent___parent___parent___id = 'parent___parent___parent___id',
-  parent___parent___parent___children = 'parent___parent___parent___children',
-  parent___parent___children = 'parent___parent___children',
-  parent___parent___children___id = 'parent___parent___children___id',
-  parent___parent___children___children = 'parent___parent___children___children',
-  parent___parent___internal___content = 'parent___parent___internal___content',
-  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
-  parent___parent___internal___description = 'parent___parent___internal___description',
-  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
-  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
-  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
-  parent___parent___internal___owner = 'parent___parent___internal___owner',
-  parent___parent___internal___type = 'parent___parent___internal___type',
-  parent___children = 'parent___children',
-  parent___children___id = 'parent___children___id',
-  parent___children___parent___id = 'parent___children___parent___id',
-  parent___children___parent___children = 'parent___children___parent___children',
-  parent___children___children = 'parent___children___children',
-  parent___children___children___id = 'parent___children___children___id',
-  parent___children___children___children = 'parent___children___children___children',
-  parent___children___internal___content = 'parent___children___internal___content',
-  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
-  parent___children___internal___description = 'parent___children___internal___description',
-  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
-  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
-  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
-  parent___children___internal___owner = 'parent___children___internal___owner',
-  parent___children___internal___type = 'parent___children___internal___type',
-  parent___internal___content = 'parent___internal___content',
-  parent___internal___contentDigest = 'parent___internal___contentDigest',
-  parent___internal___description = 'parent___internal___description',
-  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
-  parent___internal___ignoreType = 'parent___internal___ignoreType',
-  parent___internal___mediaType = 'parent___internal___mediaType',
-  parent___internal___owner = 'parent___internal___owner',
-  parent___internal___type = 'parent___internal___type',
-  children = 'children',
-  children___id = 'children___id',
-  children___parent___id = 'children___parent___id',
-  children___parent___parent___id = 'children___parent___parent___id',
-  children___parent___parent___children = 'children___parent___parent___children',
-  children___parent___children = 'children___parent___children',
-  children___parent___children___id = 'children___parent___children___id',
-  children___parent___children___children = 'children___parent___children___children',
-  children___parent___internal___content = 'children___parent___internal___content',
-  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
-  children___parent___internal___description = 'children___parent___internal___description',
-  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
-  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
-  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
-  children___parent___internal___owner = 'children___parent___internal___owner',
-  children___parent___internal___type = 'children___parent___internal___type',
-  children___children = 'children___children',
-  children___children___id = 'children___children___id',
-  children___children___parent___id = 'children___children___parent___id',
-  children___children___parent___children = 'children___children___parent___children',
-  children___children___children = 'children___children___children',
-  children___children___children___id = 'children___children___children___id',
-  children___children___children___children = 'children___children___children___children',
-  children___children___internal___content = 'children___children___internal___content',
-  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
-  children___children___internal___description = 'children___children___internal___description',
-  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
-  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
-  children___children___internal___mediaType = 'children___children___internal___mediaType',
-  children___children___internal___owner = 'children___children___internal___owner',
-  children___children___internal___type = 'children___children___internal___type',
-  children___internal___content = 'children___internal___content',
-  children___internal___contentDigest = 'children___internal___contentDigest',
-  children___internal___description = 'children___internal___description',
-  children___internal___fieldOwners = 'children___internal___fieldOwners',
-  children___internal___ignoreType = 'children___internal___ignoreType',
-  children___internal___mediaType = 'children___internal___mediaType',
-  children___internal___owner = 'children___internal___owner',
-  children___internal___type = 'children___internal___type',
-  internal___content = 'internal___content',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___description = 'internal___description',
-  internal___fieldOwners = 'internal___fieldOwners',
-  internal___ignoreType = 'internal___ignoreType',
-  internal___mediaType = 'internal___mediaType',
-  internal___owner = 'internal___owner',
-  internal___type = 'internal___type',
-  action___url = 'action___url',
-  action___title = 'action___title',
-  action___enabled = 'action___enabled',
-  action___external = 'action___external',
-  sys___type = 'sys___type'
-}
-
-export type ContentfulBlockContentListRaiButtonJsonNodeFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-  action?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeActionFilterInput>;
-  sys?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeSysFilterInput>;
-};
-
-export type ContentfulBlockContentListRaiButtonJsonNodeFilterListInput = {
-  elemMatch?: Maybe<ContentfulBlockContentListRaiButtonJsonNodeFilterInput>;
-};
-
-export type ContentfulBlockContentListRaiButtonJsonNodeGroupConnection = {
-  __typename?: 'contentfulBlockContentListRaiButtonJsonNodeGroupConnection';
-  totalCount: Scalars['Int'];
-  edges: Array<ContentfulBlockContentListRaiButtonJsonNodeEdge>;
-  nodes: Array<ContentfulBlockContentListRaiButtonJsonNode>;
-  pageInfo: PageInfo;
-  field: Scalars['String'];
-  fieldValue?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulBlockContentListRaiButtonJsonNodeSortInput = {
-  fields?: Maybe<Array<Maybe<ContentfulBlockContentListRaiButtonJsonNodeFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
-};
-
-export type ContentfulBlockContentListRaiButtonJsonNodeSys = {
-  __typename?: 'contentfulBlockContentListRaiButtonJsonNodeSys';
-  type?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulBlockContentListRaiButtonJsonNodeSysFilterInput = {
-  type?: Maybe<StringQueryOperatorInput>;
-};
-
-export type ContentfulBlockContentListRaiListJsonNode = Node & {
-  __typename?: 'contentfulBlockContentListRaiListJsonNode';
-  id: Scalars['ID'];
-  parent?: Maybe<Node>;
-  children: Array<Node>;
-  internal: Internal;
-  items?: Maybe<Array<Maybe<Scalars['String']>>>;
-  sys?: Maybe<ContentfulBlockContentListRaiListJsonNodeSys>;
-};
-
-export type ContentfulBlockContentListRaiListJsonNodeConnection = {
-  __typename?: 'contentfulBlockContentListRaiListJsonNodeConnection';
-  totalCount: Scalars['Int'];
-  edges: Array<ContentfulBlockContentListRaiListJsonNodeEdge>;
-  nodes: Array<ContentfulBlockContentListRaiListJsonNode>;
-  pageInfo: PageInfo;
-  distinct: Array<Scalars['String']>;
-  group: Array<ContentfulBlockContentListRaiListJsonNodeGroupConnection>;
-};
-
-
-export type ContentfulBlockContentListRaiListJsonNodeConnectionDistinctArgs = {
-  field: ContentfulBlockContentListRaiListJsonNodeFieldsEnum;
-};
-
-
-export type ContentfulBlockContentListRaiListJsonNodeConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
-  field: ContentfulBlockContentListRaiListJsonNodeFieldsEnum;
-};
-
-export type ContentfulBlockContentListRaiListJsonNodeEdge = {
-  __typename?: 'contentfulBlockContentListRaiListJsonNodeEdge';
-  next?: Maybe<ContentfulBlockContentListRaiListJsonNode>;
-  node: ContentfulBlockContentListRaiListJsonNode;
-  previous?: Maybe<ContentfulBlockContentListRaiListJsonNode>;
-};
-
-export enum ContentfulBlockContentListRaiListJsonNodeFieldsEnum {
-  id = 'id',
-  parent___id = 'parent___id',
-  parent___parent___id = 'parent___parent___id',
-  parent___parent___parent___id = 'parent___parent___parent___id',
-  parent___parent___parent___children = 'parent___parent___parent___children',
-  parent___parent___children = 'parent___parent___children',
-  parent___parent___children___id = 'parent___parent___children___id',
-  parent___parent___children___children = 'parent___parent___children___children',
-  parent___parent___internal___content = 'parent___parent___internal___content',
-  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
-  parent___parent___internal___description = 'parent___parent___internal___description',
-  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
-  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
-  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
-  parent___parent___internal___owner = 'parent___parent___internal___owner',
-  parent___parent___internal___type = 'parent___parent___internal___type',
-  parent___children = 'parent___children',
-  parent___children___id = 'parent___children___id',
-  parent___children___parent___id = 'parent___children___parent___id',
-  parent___children___parent___children = 'parent___children___parent___children',
-  parent___children___children = 'parent___children___children',
-  parent___children___children___id = 'parent___children___children___id',
-  parent___children___children___children = 'parent___children___children___children',
-  parent___children___internal___content = 'parent___children___internal___content',
-  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
-  parent___children___internal___description = 'parent___children___internal___description',
-  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
-  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
-  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
-  parent___children___internal___owner = 'parent___children___internal___owner',
-  parent___children___internal___type = 'parent___children___internal___type',
-  parent___internal___content = 'parent___internal___content',
-  parent___internal___contentDigest = 'parent___internal___contentDigest',
-  parent___internal___description = 'parent___internal___description',
-  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
-  parent___internal___ignoreType = 'parent___internal___ignoreType',
-  parent___internal___mediaType = 'parent___internal___mediaType',
-  parent___internal___owner = 'parent___internal___owner',
-  parent___internal___type = 'parent___internal___type',
-  children = 'children',
-  children___id = 'children___id',
-  children___parent___id = 'children___parent___id',
-  children___parent___parent___id = 'children___parent___parent___id',
-  children___parent___parent___children = 'children___parent___parent___children',
-  children___parent___children = 'children___parent___children',
-  children___parent___children___id = 'children___parent___children___id',
-  children___parent___children___children = 'children___parent___children___children',
-  children___parent___internal___content = 'children___parent___internal___content',
-  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
-  children___parent___internal___description = 'children___parent___internal___description',
-  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
-  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
-  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
-  children___parent___internal___owner = 'children___parent___internal___owner',
-  children___parent___internal___type = 'children___parent___internal___type',
-  children___children = 'children___children',
-  children___children___id = 'children___children___id',
-  children___children___parent___id = 'children___children___parent___id',
-  children___children___parent___children = 'children___children___parent___children',
-  children___children___children = 'children___children___children',
-  children___children___children___id = 'children___children___children___id',
-  children___children___children___children = 'children___children___children___children',
-  children___children___internal___content = 'children___children___internal___content',
-  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
-  children___children___internal___description = 'children___children___internal___description',
-  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
-  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
-  children___children___internal___mediaType = 'children___children___internal___mediaType',
-  children___children___internal___owner = 'children___children___internal___owner',
-  children___children___internal___type = 'children___children___internal___type',
-  children___internal___content = 'children___internal___content',
-  children___internal___contentDigest = 'children___internal___contentDigest',
-  children___internal___description = 'children___internal___description',
-  children___internal___fieldOwners = 'children___internal___fieldOwners',
-  children___internal___ignoreType = 'children___internal___ignoreType',
-  children___internal___mediaType = 'children___internal___mediaType',
-  children___internal___owner = 'children___internal___owner',
-  children___internal___type = 'children___internal___type',
-  internal___content = 'internal___content',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___description = 'internal___description',
-  internal___fieldOwners = 'internal___fieldOwners',
-  internal___ignoreType = 'internal___ignoreType',
-  internal___mediaType = 'internal___mediaType',
-  internal___owner = 'internal___owner',
-  internal___type = 'internal___type',
-  items = 'items',
-  sys___type = 'sys___type'
-}
-
-export type ContentfulBlockContentListRaiListJsonNodeFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-  items?: Maybe<StringQueryOperatorInput>;
-  sys?: Maybe<ContentfulBlockContentListRaiListJsonNodeSysFilterInput>;
-};
-
-export type ContentfulBlockContentListRaiListJsonNodeFilterListInput = {
-  elemMatch?: Maybe<ContentfulBlockContentListRaiListJsonNodeFilterInput>;
-};
-
-export type ContentfulBlockContentListRaiListJsonNodeGroupConnection = {
-  __typename?: 'contentfulBlockContentListRaiListJsonNodeGroupConnection';
-  totalCount: Scalars['Int'];
-  edges: Array<ContentfulBlockContentListRaiListJsonNodeEdge>;
-  nodes: Array<ContentfulBlockContentListRaiListJsonNode>;
-  pageInfo: PageInfo;
-  field: Scalars['String'];
-  fieldValue?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulBlockContentListRaiListJsonNodeSortInput = {
-  fields?: Maybe<Array<Maybe<ContentfulBlockContentListRaiListJsonNodeFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
-};
-
-export type ContentfulBlockContentListRaiListJsonNodeSys = {
-  __typename?: 'contentfulBlockContentListRaiListJsonNodeSys';
-  type?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulBlockContentListRaiListJsonNodeSysFilterInput = {
   type?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -7982,14 +7172,14 @@ export type CallToActionFragmentFragment = (
     { __typename?: 'contentfulBlockCallToActionButtonJsonNode' }
     & { action?: Maybe<(
       { __typename?: 'contentfulBlockCallToActionButtonJsonNodeAction' }
-      & Pick<ContentfulBlockCallToActionButtonJsonNodeAction, 'enabled' | 'entrySlug' | 'external' | 'title' | 'url'>
+      & Pick<ContentfulBlockCallToActionButtonJsonNodeAction, 'enabled' | 'entrySlug' | 'external' | 'externalUrl' | 'title'>
     )> }
   )> }
 );
 
 export type ContentFragmentFragment = (
   { __typename: 'ContentfulBlockContent' }
-  & Pick<ContentfulBlockContent, 'id'>
+  & Pick<ContentfulBlockContent, 'id' | 'variation'>
   & { content?: Maybe<(
     { __typename?: 'ContentfulBlockContentContent' }
     & Pick<ContentfulBlockContentContent, 'raw'>
@@ -7997,27 +7187,28 @@ export type ContentFragmentFragment = (
     { __typename?: 'contentfulBlockContentButtonJsonNode' }
     & { action?: Maybe<(
       { __typename?: 'contentfulBlockContentButtonJsonNodeAction' }
-      & Pick<ContentfulBlockContentButtonJsonNodeAction, 'enabled' | 'entrySlug' | 'external' | 'externalUrl' | 'title' | 'url'>
+      & Pick<ContentfulBlockContentButtonJsonNodeAction, 'enabled' | 'entrySlug' | 'external' | 'externalUrl' | 'title'>
     )> }
   )> }
 );
 
-export type ContentListFragmentFragment = (
-  { __typename: 'ContentfulBlockContentList' }
-  & Pick<ContentfulBlockContentList, 'id' | 'title' | 'listTitle'>
-  & { content?: Maybe<(
-    { __typename?: 'ContentfulBlockContentListContent' }
-    & Pick<ContentfulBlockContentListContent, 'raw'>
-  )>, raiButton?: Maybe<(
-    { __typename?: 'contentfulBlockContentListRaiButtonJsonNode' }
-    & { action?: Maybe<(
-      { __typename?: 'contentfulBlockContentListRaiButtonJsonNodeAction' }
-      & Pick<ContentfulBlockContentListRaiButtonJsonNodeAction, 'enabled' | 'title' | 'url' | 'external'>
+export type AllContentBlockContentQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllContentBlockContentQuery = (
+  { __typename?: 'Query' }
+  & { allContentfulBlockContent: (
+    { __typename?: 'ContentfulBlockContentConnection' }
+    & { nodes: Array<(
+      { __typename?: 'ContentfulBlockContent' }
+      & Pick<ContentfulBlockContent, 'blockTitle'>
+      & { page?: Maybe<Array<Maybe<(
+        { __typename?: 'ContentfulPage' }
+        & Pick<ContentfulPage, 'title'>
+      )>>> }
+      & ContentFragmentFragment
     )> }
-  )>, raiList?: Maybe<(
-    { __typename?: 'contentfulBlockContentListRaiListJsonNode' }
-    & Pick<ContentfulBlockContentListRaiListJsonNode, 'items'>
-  )> }
+  ) }
 );
 
 export type BannerQueryQueryVariables = Exact<{ [key: string]: never; }>;
@@ -8095,9 +7286,6 @@ export type PageTemplateQueryQuery = (
     ) | (
       { __typename?: 'ContentfulBlockContent' }
       & ContentFragmentFragment
-    ) | (
-      { __typename?: 'ContentfulBlockContentList' }
-      & ContentListFragmentFragment
     )>>> }
   )> }
 );
