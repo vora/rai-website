@@ -18,7 +18,7 @@ export function ContentfulButton({ action }: ContentfulButtonProps) {
   const url = external ? externalUrl : `/${entrySlug}`;
 
   if (!enabled || !title || !url) {
-    return <>NO BUTTON</>;
+    return <></>;
   }
 
   return <Button {...(action as ButtonProps)} url={url} />;

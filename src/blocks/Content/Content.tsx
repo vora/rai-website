@@ -16,7 +16,7 @@ export function Content({ data: { content, button } }: ContentProps) {
     <Container>
       <div className={styles.content}>
         {content && <RichText content={content as RichTextContent} />}
-        {button?.action && (
+        {button?.action?.enabled && (
           <div className={styles.button}>
             <ContentfulButton action={button?.action} />
           </div>
