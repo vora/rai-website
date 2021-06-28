@@ -22,3 +22,12 @@ it("has a target blank if external", () => {
   );
   expect(getByText("Foo").getAttribute("target")).toBe("_blank");
 });
+
+it("renders an Icon", () => {
+  const { getByTestId } = render(
+    <Link url="/foo" icon="Coffee">
+      Foo
+    </Link>
+  );
+  expect(getByTestId("icon-Coffee")).toBeInstanceOf(SVGElement);
+});

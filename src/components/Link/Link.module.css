@@ -1,11 +1,24 @@
 .link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space--xxsmall);
   position: relative;
   color: inherit;
   text-decoration: underline;
-  transition: opacity 300ms;
+  transition: opacity 300ms, gap 300ms;
 }
 
 .link:hover {
   opacity: .8;
   text-decoration: none;
+  gap: var(--space--xsmall);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.iconOnRight {
+  order: -1;
 }
