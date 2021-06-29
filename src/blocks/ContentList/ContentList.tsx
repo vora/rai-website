@@ -1,72 +1,93 @@
-// import React from "react";
-// import { graphql } from "gatsby";
-// import { ContentListFragmentFragment } from "@/graphql/graphql-types";
-// import { Container } from "@/components/Container";
-// import { Heading } from "@/components/Heading";
-// import { RichText, RichTextContent } from "@/components/RichText";
-// import { Button } from "@/components/Button";
+import React from "react";
+import classnames from "classnames";
+import { graphql } from "gatsby";
+import { ContentListFragmentFragment } from "@/graphql/graphql-types";
+import { Container } from "@/components/Container";
+import { Heading } from "@/components/Heading";
+import { RichText, RichTextContent } from "@/components/RichText";
+import { ContentfulButton } from "@/components/ContentfulButton";
 
-// import styles from "./ContentList.module.css";
+import styles from "./ContentList.module.css";
 
-// interface ContentListProps {
-//   readonly data: ContentListFragmentFragment;
-// }
+interface ContentListProps {
+  readonly data: ContentListFragmentFragment;
+}
 
-// export function ContentList({
-//   data: { title, content, raiButton, listTitle, raiList },
-// }: ContentListProps) {
-//   return (
-//     <div className={styles.wrapper}>
-//       <Container>
-//         <div className={styles.container}>
-//           <div className={styles.content}>
-//             <Heading>{title}</Heading>
-//             <RichText content={content as RichTextContent} />
-//             {raiButton?.action?.enabled && (
-//               <Button
-//                 title={raiButton?.action?.title as string}
-//                 url={raiButton?.action?.url as string}
-//                 external={raiButton?.action?.external as boolean}
-//               />
-//             )}
-//           </div>
-//           <div className={styles.list}>
-//             <Heading as="h3">{listTitle}</Heading>
-//             {raiList?.items && (
-//               <ul className={styles.ul}>
-//                 {raiList.items.map((item) => (
-//                   <li className={styles.item} key={item}>
-//                     {item}
-//                   </li>
-//                 ))}
-//               </ul>
-//             )}
-//           </div>
-//         </div>
-//       </Container>
-//     </div>
-//   );
-// }
+export function ContentList({
+  data: { title, content, button, listTitle, list, listDescription, highlight },
+}: ContentListProps) {
+  const wrapperClass = classnames(styles.wrapper, {
+    [styles.full]: highlight === "Full",
+    [styles.none]: highlight === "None",
+    [styles.left]: highlight === "Left",
+  });
 
-// export const ContentListFragment = graphql`
-//   fragment ContentListFragment on ContentfulBlockContentList {
-//     __typename
-//     id
-//     title
-//     content {
-//       raw
-//     }
-//     raiButton {
-//       action {
-//         enabled
-//         title
-//         url
-//         external
-//       }
-//     }
-//     listTitle
-//     raiList {
-//       items
-//     }
-//   }
-// `;
+  return (
+    <div className={wrapperClass}>
+      <Container>
+        <div className={styles.container}>
+          <div className={styles.content}>
+            <Heading as="h3">{title}</Heading>
+            <RichText content={content as RichTextContent} />
+            {button?.action?.enabled && (
+              <div className={styles.button}>
+                <ContentfulButton action={button?.action} />
+              </div>
+            )}
+          </div>
+
+          <div className={styles.listWrapper}>
+            {listTitle && (
+              <div className={styles.listTitle}>
+                <Heading as="h4">{listTitle}</Heading>
+              </div>
+            )}
+            {list?.items && (
+              <ul className={styles.list}>
+                {list.items.map((item) => {
+                  return (
+                    <li key={item} className={styles.item}>
+                      {item}
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+            {listDescription && (
+              <div className={styles.description}>
+                <RichText content={listDescription as RichTextContent} />
+              </div>
+            )}
+          </div>
+        </div>
+      </Container>
+    </div>
+  );
+}
+
+export const ContentListFragment = graphql`
+  fragment ContentListFragment on ContentfulBlockContentList {
+    __typename
+    id
+    highlight
+    title
+    content {
+      raw
+    }
+    button {
+      action {
+        enabled
+        entrySlug
+        externalUrl
+        title
+      }
+    }
+    listTitle
+    listDescription {
+      raw
+    }
+    list {
+      items
+    }
+  }
+`;

@@ -3,22 +3,19 @@ import {
   Maybe,
   CallToActionFragmentFragment,
   ContentFragmentFragment,
-  // ContentListFragmentFragment,
+  ContentListFragmentFragment,
 } from "@/graphql/graphql-types";
 import { CallToAction } from "@/blocks/CallToAction";
 import { Content } from "@/blocks/Content";
 import { Container } from "@/components/Container";
-// import { ContentList } from "@/blocks/ContentList";
+import { ContentList } from "@/blocks/ContentList";
 
 import styles from "./ContentfulBlocks.module.css";
 
 type BlockType = Maybe<
   | CallToActionFragmentFragment
   | ContentFragmentFragment
-  // | ContentListFragmentFragment
-  | {
-      __typename?: "ContentfulBlockJumboTron";
-    }
+  | ContentListFragmentFragment
 >;
 
 interface BlockProps {
@@ -38,8 +35,8 @@ export function ContentfulBlocks({ blocks }: BlockProps) {
             return <CallToAction data={block} key={block.id} />;
           case "ContentfulBlockContent":
             return <Content data={block} key={block.id} />;
-          // case "ContentfulBlockContentList":
-          //   return <ContentList data={block} key={block.id} />;
+          case "ContentfulBlockContentList":
+            return <ContentList data={block} key={block.id} />;
           default:
             return (
               <div className={styles.spacer}>

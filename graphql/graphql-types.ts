@@ -997,7 +997,7 @@ export type ContentfulBlockCallToActionContentFilterInput = {
   raw?: Maybe<StringQueryOperatorInput>;
 };
 
-export type ContentfulBlockCallToActionContentfulBlockContentUnion = ContentfulBlockCallToAction | ContentfulBlockContent;
+export type ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListUnion = ContentfulBlockCallToAction | ContentfulBlockContent | ContentfulBlockContentList;
 
 export type ContentfulBlockCallToActionEdge = {
   __typename?: 'ContentfulBlockCallToActionEdge';
@@ -1752,9 +1752,45 @@ export type ContentfulBlockContentList = ContentfulReference & ContentfulEntry &
   contentful_id: Scalars['String'];
   id: Scalars['ID'];
   node_locale: Scalars['String'];
+  title?: Maybe<Scalars['String']>;
+  highlight?: Maybe<Scalars['String']>;
+  content?: Maybe<ContentfulBlockContentListContent>;
+  button?: Maybe<ContentfulBlockContentListButtonJsonNode>;
+  list?: Maybe<ContentfulBlockContentListListJsonNode>;
+  spaceId?: Maybe<Scalars['String']>;
+  createdAt?: Maybe<Scalars['Date']>;
+  updatedAt?: Maybe<Scalars['Date']>;
+  sys?: Maybe<ContentfulBlockContentListSys>;
+  listTitle?: Maybe<Scalars['String']>;
+  listDescription?: Maybe<ContentfulBlockContentListListDescription>;
+  page?: Maybe<Array<Maybe<ContentfulPage>>>;
+  /** Returns all children nodes filtered by type contentfulBlockContentListListJsonNode */
+  childrenContentfulBlockContentListListJsonNode?: Maybe<Array<Maybe<ContentfulBlockContentListListJsonNode>>>;
+  /** Returns the first child node of type contentfulBlockContentListListJsonNode or null if there are no children of given type on this node */
+  childContentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNode>;
+  /** Returns all children nodes filtered by type contentfulBlockContentListButtonJsonNode */
+  childrenContentfulBlockContentListButtonJsonNode?: Maybe<Array<Maybe<ContentfulBlockContentListButtonJsonNode>>>;
+  /** Returns the first child node of type contentfulBlockContentListButtonJsonNode or null if there are no children of given type on this node */
+  childContentfulBlockContentListButtonJsonNode?: Maybe<ContentfulBlockContentListButtonJsonNode>;
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
+};
+
+
+export type ContentfulBlockContentListCreatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+
+export type ContentfulBlockContentListUpdatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
 };
 
 export type ContentfulBlockContentListConnection = {
@@ -1779,6 +1815,15 @@ export type ContentfulBlockContentListConnectionGroupArgs = {
   field: ContentfulBlockContentListFieldsEnum;
 };
 
+export type ContentfulBlockContentListContent = {
+  __typename?: 'ContentfulBlockContentListContent';
+  raw?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockContentListContentFilterInput = {
+  raw?: Maybe<StringQueryOperatorInput>;
+};
+
 export type ContentfulBlockContentListEdge = {
   __typename?: 'ContentfulBlockContentListEdge';
   next?: Maybe<ContentfulBlockContentList>;
@@ -1790,6 +1835,318 @@ export enum ContentfulBlockContentListFieldsEnum {
   contentful_id = 'contentful_id',
   id = 'id',
   node_locale = 'node_locale',
+  title = 'title',
+  highlight = 'highlight',
+  content___raw = 'content___raw',
+  button___id = 'button___id',
+  button___parent___id = 'button___parent___id',
+  button___parent___parent___id = 'button___parent___parent___id',
+  button___parent___parent___children = 'button___parent___parent___children',
+  button___parent___children = 'button___parent___children',
+  button___parent___children___id = 'button___parent___children___id',
+  button___parent___children___children = 'button___parent___children___children',
+  button___parent___internal___content = 'button___parent___internal___content',
+  button___parent___internal___contentDigest = 'button___parent___internal___contentDigest',
+  button___parent___internal___description = 'button___parent___internal___description',
+  button___parent___internal___fieldOwners = 'button___parent___internal___fieldOwners',
+  button___parent___internal___ignoreType = 'button___parent___internal___ignoreType',
+  button___parent___internal___mediaType = 'button___parent___internal___mediaType',
+  button___parent___internal___owner = 'button___parent___internal___owner',
+  button___parent___internal___type = 'button___parent___internal___type',
+  button___children = 'button___children',
+  button___children___id = 'button___children___id',
+  button___children___parent___id = 'button___children___parent___id',
+  button___children___parent___children = 'button___children___parent___children',
+  button___children___children = 'button___children___children',
+  button___children___children___id = 'button___children___children___id',
+  button___children___children___children = 'button___children___children___children',
+  button___children___internal___content = 'button___children___internal___content',
+  button___children___internal___contentDigest = 'button___children___internal___contentDigest',
+  button___children___internal___description = 'button___children___internal___description',
+  button___children___internal___fieldOwners = 'button___children___internal___fieldOwners',
+  button___children___internal___ignoreType = 'button___children___internal___ignoreType',
+  button___children___internal___mediaType = 'button___children___internal___mediaType',
+  button___children___internal___owner = 'button___children___internal___owner',
+  button___children___internal___type = 'button___children___internal___type',
+  button___internal___content = 'button___internal___content',
+  button___internal___contentDigest = 'button___internal___contentDigest',
+  button___internal___description = 'button___internal___description',
+  button___internal___fieldOwners = 'button___internal___fieldOwners',
+  button___internal___ignoreType = 'button___internal___ignoreType',
+  button___internal___mediaType = 'button___internal___mediaType',
+  button___internal___owner = 'button___internal___owner',
+  button___internal___type = 'button___internal___type',
+  button___action___title = 'button___action___title',
+  button___action___enabled = 'button___action___enabled',
+  button___action___entrySlug = 'button___action___entrySlug',
+  button___action___externalUrl = 'button___action___externalUrl',
+  button___sys___type = 'button___sys___type',
+  list___id = 'list___id',
+  list___parent___id = 'list___parent___id',
+  list___parent___parent___id = 'list___parent___parent___id',
+  list___parent___parent___children = 'list___parent___parent___children',
+  list___parent___children = 'list___parent___children',
+  list___parent___children___id = 'list___parent___children___id',
+  list___parent___children___children = 'list___parent___children___children',
+  list___parent___internal___content = 'list___parent___internal___content',
+  list___parent___internal___contentDigest = 'list___parent___internal___contentDigest',
+  list___parent___internal___description = 'list___parent___internal___description',
+  list___parent___internal___fieldOwners = 'list___parent___internal___fieldOwners',
+  list___parent___internal___ignoreType = 'list___parent___internal___ignoreType',
+  list___parent___internal___mediaType = 'list___parent___internal___mediaType',
+  list___parent___internal___owner = 'list___parent___internal___owner',
+  list___parent___internal___type = 'list___parent___internal___type',
+  list___children = 'list___children',
+  list___children___id = 'list___children___id',
+  list___children___parent___id = 'list___children___parent___id',
+  list___children___parent___children = 'list___children___parent___children',
+  list___children___children = 'list___children___children',
+  list___children___children___id = 'list___children___children___id',
+  list___children___children___children = 'list___children___children___children',
+  list___children___internal___content = 'list___children___internal___content',
+  list___children___internal___contentDigest = 'list___children___internal___contentDigest',
+  list___children___internal___description = 'list___children___internal___description',
+  list___children___internal___fieldOwners = 'list___children___internal___fieldOwners',
+  list___children___internal___ignoreType = 'list___children___internal___ignoreType',
+  list___children___internal___mediaType = 'list___children___internal___mediaType',
+  list___children___internal___owner = 'list___children___internal___owner',
+  list___children___internal___type = 'list___children___internal___type',
+  list___internal___content = 'list___internal___content',
+  list___internal___contentDigest = 'list___internal___contentDigest',
+  list___internal___description = 'list___internal___description',
+  list___internal___fieldOwners = 'list___internal___fieldOwners',
+  list___internal___ignoreType = 'list___internal___ignoreType',
+  list___internal___mediaType = 'list___internal___mediaType',
+  list___internal___owner = 'list___internal___owner',
+  list___internal___type = 'list___internal___type',
+  list___items = 'list___items',
+  list___sys___type = 'list___sys___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
+  listTitle = 'listTitle',
+  listDescription___raw = 'listDescription___raw',
+  page = 'page',
+  page___contentful_id = 'page___contentful_id',
+  page___id = 'page___id',
+  page___node_locale = 'page___node_locale',
+  page___title = 'page___title',
+  page___slug = 'page___slug',
+  page___spaceId = 'page___spaceId',
+  page___createdAt = 'page___createdAt',
+  page___updatedAt = 'page___updatedAt',
+  page___sys___type = 'page___sys___type',
+  page___sys___revision = 'page___sys___revision',
+  page___parent___id = 'page___parent___id',
+  page___parent___parent___id = 'page___parent___parent___id',
+  page___parent___parent___children = 'page___parent___parent___children',
+  page___parent___children = 'page___parent___children',
+  page___parent___children___id = 'page___parent___children___id',
+  page___parent___children___children = 'page___parent___children___children',
+  page___parent___internal___content = 'page___parent___internal___content',
+  page___parent___internal___contentDigest = 'page___parent___internal___contentDigest',
+  page___parent___internal___description = 'page___parent___internal___description',
+  page___parent___internal___fieldOwners = 'page___parent___internal___fieldOwners',
+  page___parent___internal___ignoreType = 'page___parent___internal___ignoreType',
+  page___parent___internal___mediaType = 'page___parent___internal___mediaType',
+  page___parent___internal___owner = 'page___parent___internal___owner',
+  page___parent___internal___type = 'page___parent___internal___type',
+  page___children = 'page___children',
+  page___children___id = 'page___children___id',
+  page___children___parent___id = 'page___children___parent___id',
+  page___children___parent___children = 'page___children___parent___children',
+  page___children___children = 'page___children___children',
+  page___children___children___id = 'page___children___children___id',
+  page___children___children___children = 'page___children___children___children',
+  page___children___internal___content = 'page___children___internal___content',
+  page___children___internal___contentDigest = 'page___children___internal___contentDigest',
+  page___children___internal___description = 'page___children___internal___description',
+  page___children___internal___fieldOwners = 'page___children___internal___fieldOwners',
+  page___children___internal___ignoreType = 'page___children___internal___ignoreType',
+  page___children___internal___mediaType = 'page___children___internal___mediaType',
+  page___children___internal___owner = 'page___children___internal___owner',
+  page___children___internal___type = 'page___children___internal___type',
+  page___internal___content = 'page___internal___content',
+  page___internal___contentDigest = 'page___internal___contentDigest',
+  page___internal___description = 'page___internal___description',
+  page___internal___fieldOwners = 'page___internal___fieldOwners',
+  page___internal___ignoreType = 'page___internal___ignoreType',
+  page___internal___mediaType = 'page___internal___mediaType',
+  page___internal___owner = 'page___internal___owner',
+  page___internal___type = 'page___internal___type',
+  childrenContentfulBlockContentListListJsonNode = 'childrenContentfulBlockContentListListJsonNode',
+  childrenContentfulBlockContentListListJsonNode___id = 'childrenContentfulBlockContentListListJsonNode___id',
+  childrenContentfulBlockContentListListJsonNode___parent___id = 'childrenContentfulBlockContentListListJsonNode___parent___id',
+  childrenContentfulBlockContentListListJsonNode___parent___parent___id = 'childrenContentfulBlockContentListListJsonNode___parent___parent___id',
+  childrenContentfulBlockContentListListJsonNode___parent___parent___children = 'childrenContentfulBlockContentListListJsonNode___parent___parent___children',
+  childrenContentfulBlockContentListListJsonNode___parent___children = 'childrenContentfulBlockContentListListJsonNode___parent___children',
+  childrenContentfulBlockContentListListJsonNode___parent___children___id = 'childrenContentfulBlockContentListListJsonNode___parent___children___id',
+  childrenContentfulBlockContentListListJsonNode___parent___children___children = 'childrenContentfulBlockContentListListJsonNode___parent___children___children',
+  childrenContentfulBlockContentListListJsonNode___parent___internal___content = 'childrenContentfulBlockContentListListJsonNode___parent___internal___content',
+  childrenContentfulBlockContentListListJsonNode___parent___internal___contentDigest = 'childrenContentfulBlockContentListListJsonNode___parent___internal___contentDigest',
+  childrenContentfulBlockContentListListJsonNode___parent___internal___description = 'childrenContentfulBlockContentListListJsonNode___parent___internal___description',
+  childrenContentfulBlockContentListListJsonNode___parent___internal___fieldOwners = 'childrenContentfulBlockContentListListJsonNode___parent___internal___fieldOwners',
+  childrenContentfulBlockContentListListJsonNode___parent___internal___ignoreType = 'childrenContentfulBlockContentListListJsonNode___parent___internal___ignoreType',
+  childrenContentfulBlockContentListListJsonNode___parent___internal___mediaType = 'childrenContentfulBlockContentListListJsonNode___parent___internal___mediaType',
+  childrenContentfulBlockContentListListJsonNode___parent___internal___owner = 'childrenContentfulBlockContentListListJsonNode___parent___internal___owner',
+  childrenContentfulBlockContentListListJsonNode___parent___internal___type = 'childrenContentfulBlockContentListListJsonNode___parent___internal___type',
+  childrenContentfulBlockContentListListJsonNode___children = 'childrenContentfulBlockContentListListJsonNode___children',
+  childrenContentfulBlockContentListListJsonNode___children___id = 'childrenContentfulBlockContentListListJsonNode___children___id',
+  childrenContentfulBlockContentListListJsonNode___children___parent___id = 'childrenContentfulBlockContentListListJsonNode___children___parent___id',
+  childrenContentfulBlockContentListListJsonNode___children___parent___children = 'childrenContentfulBlockContentListListJsonNode___children___parent___children',
+  childrenContentfulBlockContentListListJsonNode___children___children = 'childrenContentfulBlockContentListListJsonNode___children___children',
+  childrenContentfulBlockContentListListJsonNode___children___children___id = 'childrenContentfulBlockContentListListJsonNode___children___children___id',
+  childrenContentfulBlockContentListListJsonNode___children___children___children = 'childrenContentfulBlockContentListListJsonNode___children___children___children',
+  childrenContentfulBlockContentListListJsonNode___children___internal___content = 'childrenContentfulBlockContentListListJsonNode___children___internal___content',
+  childrenContentfulBlockContentListListJsonNode___children___internal___contentDigest = 'childrenContentfulBlockContentListListJsonNode___children___internal___contentDigest',
+  childrenContentfulBlockContentListListJsonNode___children___internal___description = 'childrenContentfulBlockContentListListJsonNode___children___internal___description',
+  childrenContentfulBlockContentListListJsonNode___children___internal___fieldOwners = 'childrenContentfulBlockContentListListJsonNode___children___internal___fieldOwners',
+  childrenContentfulBlockContentListListJsonNode___children___internal___ignoreType = 'childrenContentfulBlockContentListListJsonNode___children___internal___ignoreType',
+  childrenContentfulBlockContentListListJsonNode___children___internal___mediaType = 'childrenContentfulBlockContentListListJsonNode___children___internal___mediaType',
+  childrenContentfulBlockContentListListJsonNode___children___internal___owner = 'childrenContentfulBlockContentListListJsonNode___children___internal___owner',
+  childrenContentfulBlockContentListListJsonNode___children___internal___type = 'childrenContentfulBlockContentListListJsonNode___children___internal___type',
+  childrenContentfulBlockContentListListJsonNode___internal___content = 'childrenContentfulBlockContentListListJsonNode___internal___content',
+  childrenContentfulBlockContentListListJsonNode___internal___contentDigest = 'childrenContentfulBlockContentListListJsonNode___internal___contentDigest',
+  childrenContentfulBlockContentListListJsonNode___internal___description = 'childrenContentfulBlockContentListListJsonNode___internal___description',
+  childrenContentfulBlockContentListListJsonNode___internal___fieldOwners = 'childrenContentfulBlockContentListListJsonNode___internal___fieldOwners',
+  childrenContentfulBlockContentListListJsonNode___internal___ignoreType = 'childrenContentfulBlockContentListListJsonNode___internal___ignoreType',
+  childrenContentfulBlockContentListListJsonNode___internal___mediaType = 'childrenContentfulBlockContentListListJsonNode___internal___mediaType',
+  childrenContentfulBlockContentListListJsonNode___internal___owner = 'childrenContentfulBlockContentListListJsonNode___internal___owner',
+  childrenContentfulBlockContentListListJsonNode___internal___type = 'childrenContentfulBlockContentListListJsonNode___internal___type',
+  childrenContentfulBlockContentListListJsonNode___items = 'childrenContentfulBlockContentListListJsonNode___items',
+  childrenContentfulBlockContentListListJsonNode___sys___type = 'childrenContentfulBlockContentListListJsonNode___sys___type',
+  childContentfulBlockContentListListJsonNode___id = 'childContentfulBlockContentListListJsonNode___id',
+  childContentfulBlockContentListListJsonNode___parent___id = 'childContentfulBlockContentListListJsonNode___parent___id',
+  childContentfulBlockContentListListJsonNode___parent___parent___id = 'childContentfulBlockContentListListJsonNode___parent___parent___id',
+  childContentfulBlockContentListListJsonNode___parent___parent___children = 'childContentfulBlockContentListListJsonNode___parent___parent___children',
+  childContentfulBlockContentListListJsonNode___parent___children = 'childContentfulBlockContentListListJsonNode___parent___children',
+  childContentfulBlockContentListListJsonNode___parent___children___id = 'childContentfulBlockContentListListJsonNode___parent___children___id',
+  childContentfulBlockContentListListJsonNode___parent___children___children = 'childContentfulBlockContentListListJsonNode___parent___children___children',
+  childContentfulBlockContentListListJsonNode___parent___internal___content = 'childContentfulBlockContentListListJsonNode___parent___internal___content',
+  childContentfulBlockContentListListJsonNode___parent___internal___contentDigest = 'childContentfulBlockContentListListJsonNode___parent___internal___contentDigest',
+  childContentfulBlockContentListListJsonNode___parent___internal___description = 'childContentfulBlockContentListListJsonNode___parent___internal___description',
+  childContentfulBlockContentListListJsonNode___parent___internal___fieldOwners = 'childContentfulBlockContentListListJsonNode___parent___internal___fieldOwners',
+  childContentfulBlockContentListListJsonNode___parent___internal___ignoreType = 'childContentfulBlockContentListListJsonNode___parent___internal___ignoreType',
+  childContentfulBlockContentListListJsonNode___parent___internal___mediaType = 'childContentfulBlockContentListListJsonNode___parent___internal___mediaType',
+  childContentfulBlockContentListListJsonNode___parent___internal___owner = 'childContentfulBlockContentListListJsonNode___parent___internal___owner',
+  childContentfulBlockContentListListJsonNode___parent___internal___type = 'childContentfulBlockContentListListJsonNode___parent___internal___type',
+  childContentfulBlockContentListListJsonNode___children = 'childContentfulBlockContentListListJsonNode___children',
+  childContentfulBlockContentListListJsonNode___children___id = 'childContentfulBlockContentListListJsonNode___children___id',
+  childContentfulBlockContentListListJsonNode___children___parent___id = 'childContentfulBlockContentListListJsonNode___children___parent___id',
+  childContentfulBlockContentListListJsonNode___children___parent___children = 'childContentfulBlockContentListListJsonNode___children___parent___children',
+  childContentfulBlockContentListListJsonNode___children___children = 'childContentfulBlockContentListListJsonNode___children___children',
+  childContentfulBlockContentListListJsonNode___children___children___id = 'childContentfulBlockContentListListJsonNode___children___children___id',
+  childContentfulBlockContentListListJsonNode___children___children___children = 'childContentfulBlockContentListListJsonNode___children___children___children',
+  childContentfulBlockContentListListJsonNode___children___internal___content = 'childContentfulBlockContentListListJsonNode___children___internal___content',
+  childContentfulBlockContentListListJsonNode___children___internal___contentDigest = 'childContentfulBlockContentListListJsonNode___children___internal___contentDigest',
+  childContentfulBlockContentListListJsonNode___children___internal___description = 'childContentfulBlockContentListListJsonNode___children___internal___description',
+  childContentfulBlockContentListListJsonNode___children___internal___fieldOwners = 'childContentfulBlockContentListListJsonNode___children___internal___fieldOwners',
+  childContentfulBlockContentListListJsonNode___children___internal___ignoreType = 'childContentfulBlockContentListListJsonNode___children___internal___ignoreType',
+  childContentfulBlockContentListListJsonNode___children___internal___mediaType = 'childContentfulBlockContentListListJsonNode___children___internal___mediaType',
+  childContentfulBlockContentListListJsonNode___children___internal___owner = 'childContentfulBlockContentListListJsonNode___children___internal___owner',
+  childContentfulBlockContentListListJsonNode___children___internal___type = 'childContentfulBlockContentListListJsonNode___children___internal___type',
+  childContentfulBlockContentListListJsonNode___internal___content = 'childContentfulBlockContentListListJsonNode___internal___content',
+  childContentfulBlockContentListListJsonNode___internal___contentDigest = 'childContentfulBlockContentListListJsonNode___internal___contentDigest',
+  childContentfulBlockContentListListJsonNode___internal___description = 'childContentfulBlockContentListListJsonNode___internal___description',
+  childContentfulBlockContentListListJsonNode___internal___fieldOwners = 'childContentfulBlockContentListListJsonNode___internal___fieldOwners',
+  childContentfulBlockContentListListJsonNode___internal___ignoreType = 'childContentfulBlockContentListListJsonNode___internal___ignoreType',
+  childContentfulBlockContentListListJsonNode___internal___mediaType = 'childContentfulBlockContentListListJsonNode___internal___mediaType',
+  childContentfulBlockContentListListJsonNode___internal___owner = 'childContentfulBlockContentListListJsonNode___internal___owner',
+  childContentfulBlockContentListListJsonNode___internal___type = 'childContentfulBlockContentListListJsonNode___internal___type',
+  childContentfulBlockContentListListJsonNode___items = 'childContentfulBlockContentListListJsonNode___items',
+  childContentfulBlockContentListListJsonNode___sys___type = 'childContentfulBlockContentListListJsonNode___sys___type',
+  childrenContentfulBlockContentListButtonJsonNode = 'childrenContentfulBlockContentListButtonJsonNode',
+  childrenContentfulBlockContentListButtonJsonNode___id = 'childrenContentfulBlockContentListButtonJsonNode___id',
+  childrenContentfulBlockContentListButtonJsonNode___parent___id = 'childrenContentfulBlockContentListButtonJsonNode___parent___id',
+  childrenContentfulBlockContentListButtonJsonNode___parent___parent___id = 'childrenContentfulBlockContentListButtonJsonNode___parent___parent___id',
+  childrenContentfulBlockContentListButtonJsonNode___parent___parent___children = 'childrenContentfulBlockContentListButtonJsonNode___parent___parent___children',
+  childrenContentfulBlockContentListButtonJsonNode___parent___children = 'childrenContentfulBlockContentListButtonJsonNode___parent___children',
+  childrenContentfulBlockContentListButtonJsonNode___parent___children___id = 'childrenContentfulBlockContentListButtonJsonNode___parent___children___id',
+  childrenContentfulBlockContentListButtonJsonNode___parent___children___children = 'childrenContentfulBlockContentListButtonJsonNode___parent___children___children',
+  childrenContentfulBlockContentListButtonJsonNode___parent___internal___content = 'childrenContentfulBlockContentListButtonJsonNode___parent___internal___content',
+  childrenContentfulBlockContentListButtonJsonNode___parent___internal___contentDigest = 'childrenContentfulBlockContentListButtonJsonNode___parent___internal___contentDigest',
+  childrenContentfulBlockContentListButtonJsonNode___parent___internal___description = 'childrenContentfulBlockContentListButtonJsonNode___parent___internal___description',
+  childrenContentfulBlockContentListButtonJsonNode___parent___internal___fieldOwners = 'childrenContentfulBlockContentListButtonJsonNode___parent___internal___fieldOwners',
+  childrenContentfulBlockContentListButtonJsonNode___parent___internal___ignoreType = 'childrenContentfulBlockContentListButtonJsonNode___parent___internal___ignoreType',
+  childrenContentfulBlockContentListButtonJsonNode___parent___internal___mediaType = 'childrenContentfulBlockContentListButtonJsonNode___parent___internal___mediaType',
+  childrenContentfulBlockContentListButtonJsonNode___parent___internal___owner = 'childrenContentfulBlockContentListButtonJsonNode___parent___internal___owner',
+  childrenContentfulBlockContentListButtonJsonNode___parent___internal___type = 'childrenContentfulBlockContentListButtonJsonNode___parent___internal___type',
+  childrenContentfulBlockContentListButtonJsonNode___children = 'childrenContentfulBlockContentListButtonJsonNode___children',
+  childrenContentfulBlockContentListButtonJsonNode___children___id = 'childrenContentfulBlockContentListButtonJsonNode___children___id',
+  childrenContentfulBlockContentListButtonJsonNode___children___parent___id = 'childrenContentfulBlockContentListButtonJsonNode___children___parent___id',
+  childrenContentfulBlockContentListButtonJsonNode___children___parent___children = 'childrenContentfulBlockContentListButtonJsonNode___children___parent___children',
+  childrenContentfulBlockContentListButtonJsonNode___children___children = 'childrenContentfulBlockContentListButtonJsonNode___children___children',
+  childrenContentfulBlockContentListButtonJsonNode___children___children___id = 'childrenContentfulBlockContentListButtonJsonNode___children___children___id',
+  childrenContentfulBlockContentListButtonJsonNode___children___children___children = 'childrenContentfulBlockContentListButtonJsonNode___children___children___children',
+  childrenContentfulBlockContentListButtonJsonNode___children___internal___content = 'childrenContentfulBlockContentListButtonJsonNode___children___internal___content',
+  childrenContentfulBlockContentListButtonJsonNode___children___internal___contentDigest = 'childrenContentfulBlockContentListButtonJsonNode___children___internal___contentDigest',
+  childrenContentfulBlockContentListButtonJsonNode___children___internal___description = 'childrenContentfulBlockContentListButtonJsonNode___children___internal___description',
+  childrenContentfulBlockContentListButtonJsonNode___children___internal___fieldOwners = 'childrenContentfulBlockContentListButtonJsonNode___children___internal___fieldOwners',
+  childrenContentfulBlockContentListButtonJsonNode___children___internal___ignoreType = 'childrenContentfulBlockContentListButtonJsonNode___children___internal___ignoreType',
+  childrenContentfulBlockContentListButtonJsonNode___children___internal___mediaType = 'childrenContentfulBlockContentListButtonJsonNode___children___internal___mediaType',
+  childrenContentfulBlockContentListButtonJsonNode___children___internal___owner = 'childrenContentfulBlockContentListButtonJsonNode___children___internal___owner',
+  childrenContentfulBlockContentListButtonJsonNode___children___internal___type = 'childrenContentfulBlockContentListButtonJsonNode___children___internal___type',
+  childrenContentfulBlockContentListButtonJsonNode___internal___content = 'childrenContentfulBlockContentListButtonJsonNode___internal___content',
+  childrenContentfulBlockContentListButtonJsonNode___internal___contentDigest = 'childrenContentfulBlockContentListButtonJsonNode___internal___contentDigest',
+  childrenContentfulBlockContentListButtonJsonNode___internal___description = 'childrenContentfulBlockContentListButtonJsonNode___internal___description',
+  childrenContentfulBlockContentListButtonJsonNode___internal___fieldOwners = 'childrenContentfulBlockContentListButtonJsonNode___internal___fieldOwners',
+  childrenContentfulBlockContentListButtonJsonNode___internal___ignoreType = 'childrenContentfulBlockContentListButtonJsonNode___internal___ignoreType',
+  childrenContentfulBlockContentListButtonJsonNode___internal___mediaType = 'childrenContentfulBlockContentListButtonJsonNode___internal___mediaType',
+  childrenContentfulBlockContentListButtonJsonNode___internal___owner = 'childrenContentfulBlockContentListButtonJsonNode___internal___owner',
+  childrenContentfulBlockContentListButtonJsonNode___internal___type = 'childrenContentfulBlockContentListButtonJsonNode___internal___type',
+  childrenContentfulBlockContentListButtonJsonNode___action___title = 'childrenContentfulBlockContentListButtonJsonNode___action___title',
+  childrenContentfulBlockContentListButtonJsonNode___action___enabled = 'childrenContentfulBlockContentListButtonJsonNode___action___enabled',
+  childrenContentfulBlockContentListButtonJsonNode___action___entrySlug = 'childrenContentfulBlockContentListButtonJsonNode___action___entrySlug',
+  childrenContentfulBlockContentListButtonJsonNode___action___externalUrl = 'childrenContentfulBlockContentListButtonJsonNode___action___externalUrl',
+  childrenContentfulBlockContentListButtonJsonNode___sys___type = 'childrenContentfulBlockContentListButtonJsonNode___sys___type',
+  childContentfulBlockContentListButtonJsonNode___id = 'childContentfulBlockContentListButtonJsonNode___id',
+  childContentfulBlockContentListButtonJsonNode___parent___id = 'childContentfulBlockContentListButtonJsonNode___parent___id',
+  childContentfulBlockContentListButtonJsonNode___parent___parent___id = 'childContentfulBlockContentListButtonJsonNode___parent___parent___id',
+  childContentfulBlockContentListButtonJsonNode___parent___parent___children = 'childContentfulBlockContentListButtonJsonNode___parent___parent___children',
+  childContentfulBlockContentListButtonJsonNode___parent___children = 'childContentfulBlockContentListButtonJsonNode___parent___children',
+  childContentfulBlockContentListButtonJsonNode___parent___children___id = 'childContentfulBlockContentListButtonJsonNode___parent___children___id',
+  childContentfulBlockContentListButtonJsonNode___parent___children___children = 'childContentfulBlockContentListButtonJsonNode___parent___children___children',
+  childContentfulBlockContentListButtonJsonNode___parent___internal___content = 'childContentfulBlockContentListButtonJsonNode___parent___internal___content',
+  childContentfulBlockContentListButtonJsonNode___parent___internal___contentDigest = 'childContentfulBlockContentListButtonJsonNode___parent___internal___contentDigest',
+  childContentfulBlockContentListButtonJsonNode___parent___internal___description = 'childContentfulBlockContentListButtonJsonNode___parent___internal___description',
+  childContentfulBlockContentListButtonJsonNode___parent___internal___fieldOwners = 'childContentfulBlockContentListButtonJsonNode___parent___internal___fieldOwners',
+  childContentfulBlockContentListButtonJsonNode___parent___internal___ignoreType = 'childContentfulBlockContentListButtonJsonNode___parent___internal___ignoreType',
+  childContentfulBlockContentListButtonJsonNode___parent___internal___mediaType = 'childContentfulBlockContentListButtonJsonNode___parent___internal___mediaType',
+  childContentfulBlockContentListButtonJsonNode___parent___internal___owner = 'childContentfulBlockContentListButtonJsonNode___parent___internal___owner',
+  childContentfulBlockContentListButtonJsonNode___parent___internal___type = 'childContentfulBlockContentListButtonJsonNode___parent___internal___type',
+  childContentfulBlockContentListButtonJsonNode___children = 'childContentfulBlockContentListButtonJsonNode___children',
+  childContentfulBlockContentListButtonJsonNode___children___id = 'childContentfulBlockContentListButtonJsonNode___children___id',
+  childContentfulBlockContentListButtonJsonNode___children___parent___id = 'childContentfulBlockContentListButtonJsonNode___children___parent___id',
+  childContentfulBlockContentListButtonJsonNode___children___parent___children = 'childContentfulBlockContentListButtonJsonNode___children___parent___children',
+  childContentfulBlockContentListButtonJsonNode___children___children = 'childContentfulBlockContentListButtonJsonNode___children___children',
+  childContentfulBlockContentListButtonJsonNode___children___children___id = 'childContentfulBlockContentListButtonJsonNode___children___children___id',
+  childContentfulBlockContentListButtonJsonNode___children___children___children = 'childContentfulBlockContentListButtonJsonNode___children___children___children',
+  childContentfulBlockContentListButtonJsonNode___children___internal___content = 'childContentfulBlockContentListButtonJsonNode___children___internal___content',
+  childContentfulBlockContentListButtonJsonNode___children___internal___contentDigest = 'childContentfulBlockContentListButtonJsonNode___children___internal___contentDigest',
+  childContentfulBlockContentListButtonJsonNode___children___internal___description = 'childContentfulBlockContentListButtonJsonNode___children___internal___description',
+  childContentfulBlockContentListButtonJsonNode___children___internal___fieldOwners = 'childContentfulBlockContentListButtonJsonNode___children___internal___fieldOwners',
+  childContentfulBlockContentListButtonJsonNode___children___internal___ignoreType = 'childContentfulBlockContentListButtonJsonNode___children___internal___ignoreType',
+  childContentfulBlockContentListButtonJsonNode___children___internal___mediaType = 'childContentfulBlockContentListButtonJsonNode___children___internal___mediaType',
+  childContentfulBlockContentListButtonJsonNode___children___internal___owner = 'childContentfulBlockContentListButtonJsonNode___children___internal___owner',
+  childContentfulBlockContentListButtonJsonNode___children___internal___type = 'childContentfulBlockContentListButtonJsonNode___children___internal___type',
+  childContentfulBlockContentListButtonJsonNode___internal___content = 'childContentfulBlockContentListButtonJsonNode___internal___content',
+  childContentfulBlockContentListButtonJsonNode___internal___contentDigest = 'childContentfulBlockContentListButtonJsonNode___internal___contentDigest',
+  childContentfulBlockContentListButtonJsonNode___internal___description = 'childContentfulBlockContentListButtonJsonNode___internal___description',
+  childContentfulBlockContentListButtonJsonNode___internal___fieldOwners = 'childContentfulBlockContentListButtonJsonNode___internal___fieldOwners',
+  childContentfulBlockContentListButtonJsonNode___internal___ignoreType = 'childContentfulBlockContentListButtonJsonNode___internal___ignoreType',
+  childContentfulBlockContentListButtonJsonNode___internal___mediaType = 'childContentfulBlockContentListButtonJsonNode___internal___mediaType',
+  childContentfulBlockContentListButtonJsonNode___internal___owner = 'childContentfulBlockContentListButtonJsonNode___internal___owner',
+  childContentfulBlockContentListButtonJsonNode___internal___type = 'childContentfulBlockContentListButtonJsonNode___internal___type',
+  childContentfulBlockContentListButtonJsonNode___action___title = 'childContentfulBlockContentListButtonJsonNode___action___title',
+  childContentfulBlockContentListButtonJsonNode___action___enabled = 'childContentfulBlockContentListButtonJsonNode___action___enabled',
+  childContentfulBlockContentListButtonJsonNode___action___entrySlug = 'childContentfulBlockContentListButtonJsonNode___action___entrySlug',
+  childContentfulBlockContentListButtonJsonNode___action___externalUrl = 'childContentfulBlockContentListButtonJsonNode___action___externalUrl',
+  childContentfulBlockContentListButtonJsonNode___sys___type = 'childContentfulBlockContentListButtonJsonNode___sys___type',
   parent___id = 'parent___id',
   parent___parent___id = 'parent___parent___id',
   parent___parent___parent___id = 'parent___parent___parent___id',
@@ -1881,6 +2238,22 @@ export type ContentfulBlockContentListFilterInput = {
   contentful_id?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  highlight?: Maybe<StringQueryOperatorInput>;
+  content?: Maybe<ContentfulBlockContentListContentFilterInput>;
+  button?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterInput>;
+  list?: Maybe<ContentfulBlockContentListListJsonNodeFilterInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulBlockContentListSysFilterInput>;
+  listTitle?: Maybe<StringQueryOperatorInput>;
+  listDescription?: Maybe<ContentfulBlockContentListListDescriptionFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
+  childrenContentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNodeFilterListInput>;
+  childContentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNodeFilterInput>;
+  childrenContentfulBlockContentListButtonJsonNode?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterListInput>;
+  childContentfulBlockContentListButtonJsonNode?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
@@ -1896,9 +2269,53 @@ export type ContentfulBlockContentListGroupConnection = {
   fieldValue?: Maybe<Scalars['String']>;
 };
 
+export type ContentfulBlockContentListListDescription = {
+  __typename?: 'ContentfulBlockContentListListDescription';
+  raw?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockContentListListDescriptionFilterInput = {
+  raw?: Maybe<StringQueryOperatorInput>;
+};
+
 export type ContentfulBlockContentListSortInput = {
   fields?: Maybe<Array<Maybe<ContentfulBlockContentListFieldsEnum>>>;
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulBlockContentListSys = {
+  __typename?: 'ContentfulBlockContentListSys';
+  type?: Maybe<Scalars['String']>;
+  revision?: Maybe<Scalars['Int']>;
+  contentType?: Maybe<ContentfulBlockContentListSysContentType>;
+};
+
+export type ContentfulBlockContentListSysContentType = {
+  __typename?: 'ContentfulBlockContentListSysContentType';
+  sys?: Maybe<ContentfulBlockContentListSysContentTypeSys>;
+};
+
+export type ContentfulBlockContentListSysContentTypeFilterInput = {
+  sys?: Maybe<ContentfulBlockContentListSysContentTypeSysFilterInput>;
+};
+
+export type ContentfulBlockContentListSysContentTypeSys = {
+  __typename?: 'ContentfulBlockContentListSysContentTypeSys';
+  type?: Maybe<Scalars['String']>;
+  linkType?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockContentListSysContentTypeSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  linkType?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type ContentfulBlockContentListSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  revision?: Maybe<IntQueryOperatorInput>;
+  contentType?: Maybe<ContentfulBlockContentListSysContentTypeFilterInput>;
 };
 
 export type ContentfulBlockContentSortInput = {
@@ -3493,7 +3910,7 @@ export type ContentfulPage = ContentfulReference & ContentfulEntry & Node & {
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
-  blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockContentUnion>>>;
+  blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListUnion>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
@@ -5117,6 +5534,10 @@ export type Query = {
   allContentfulBlockContentList: ContentfulBlockContentListConnection;
   contentfulBlockImageBand?: Maybe<ContentfulBlockImageBand>;
   allContentfulBlockImageBand: ContentfulBlockImageBandConnection;
+  contentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNode>;
+  allContentfulBlockContentListListJsonNode: ContentfulBlockContentListListJsonNodeConnection;
+  contentfulBlockContentListButtonJsonNode?: Maybe<ContentfulBlockContentListButtonJsonNode>;
+  allContentfulBlockContentListButtonJsonNode: ContentfulBlockContentListButtonJsonNodeConnection;
   contentfulBlockContentButtonJsonNode?: Maybe<ContentfulBlockContentButtonJsonNode>;
   allContentfulBlockContentButtonJsonNode: ContentfulBlockContentButtonJsonNodeConnection;
   contentfulBlockCallToActionButtonJsonNode?: Maybe<ContentfulBlockCallToActionButtonJsonNode>;
@@ -5521,6 +5942,22 @@ export type QueryContentfulBlockContentListArgs = {
   contentful_id?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  highlight?: Maybe<StringQueryOperatorInput>;
+  content?: Maybe<ContentfulBlockContentListContentFilterInput>;
+  button?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterInput>;
+  list?: Maybe<ContentfulBlockContentListListJsonNodeFilterInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulBlockContentListSysFilterInput>;
+  listTitle?: Maybe<StringQueryOperatorInput>;
+  listDescription?: Maybe<ContentfulBlockContentListListDescriptionFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
+  childrenContentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNodeFilterListInput>;
+  childContentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNodeFilterInput>;
+  childrenContentfulBlockContentListButtonJsonNode?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterListInput>;
+  childContentfulBlockContentListButtonJsonNode?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
@@ -5554,6 +5991,42 @@ export type QueryContentfulBlockImageBandArgs = {
 export type QueryAllContentfulBlockImageBandArgs = {
   filter?: Maybe<ContentfulBlockImageBandFilterInput>;
   sort?: Maybe<ContentfulBlockImageBandSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulBlockContentListListJsonNodeArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  items?: Maybe<StringQueryOperatorInput>;
+  sys?: Maybe<ContentfulBlockContentListListJsonNodeSysFilterInput>;
+};
+
+
+export type QueryAllContentfulBlockContentListListJsonNodeArgs = {
+  filter?: Maybe<ContentfulBlockContentListListJsonNodeFilterInput>;
+  sort?: Maybe<ContentfulBlockContentListListJsonNodeSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulBlockContentListButtonJsonNodeArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  action?: Maybe<ContentfulBlockContentListButtonJsonNodeActionFilterInput>;
+  sys?: Maybe<ContentfulBlockContentListButtonJsonNodeSysFilterInput>;
+};
+
+
+export type QueryAllContentfulBlockContentListButtonJsonNodeArgs = {
+  filter?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterInput>;
+  sort?: Maybe<ContentfulBlockContentListButtonJsonNodeSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -7322,6 +7795,358 @@ export type ContentfulBlockContentButtonJsonNodeSysFilterInput = {
   type?: Maybe<StringQueryOperatorInput>;
 };
 
+export type ContentfulBlockContentListButtonJsonNode = Node & {
+  __typename?: 'contentfulBlockContentListButtonJsonNode';
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+  action?: Maybe<ContentfulBlockContentListButtonJsonNodeAction>;
+  sys?: Maybe<ContentfulBlockContentListButtonJsonNodeSys>;
+};
+
+export type ContentfulBlockContentListButtonJsonNodeAction = {
+  __typename?: 'contentfulBlockContentListButtonJsonNodeAction';
+  title?: Maybe<Scalars['String']>;
+  enabled?: Maybe<Scalars['Boolean']>;
+  entrySlug?: Maybe<Scalars['String']>;
+  externalUrl?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockContentListButtonJsonNodeActionFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>;
+  enabled?: Maybe<BooleanQueryOperatorInput>;
+  entrySlug?: Maybe<StringQueryOperatorInput>;
+  externalUrl?: Maybe<StringQueryOperatorInput>;
+};
+
+export type ContentfulBlockContentListButtonJsonNodeConnection = {
+  __typename?: 'contentfulBlockContentListButtonJsonNodeConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulBlockContentListButtonJsonNodeEdge>;
+  nodes: Array<ContentfulBlockContentListButtonJsonNode>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<ContentfulBlockContentListButtonJsonNodeGroupConnection>;
+};
+
+
+export type ContentfulBlockContentListButtonJsonNodeConnectionDistinctArgs = {
+  field: ContentfulBlockContentListButtonJsonNodeFieldsEnum;
+};
+
+
+export type ContentfulBlockContentListButtonJsonNodeConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: ContentfulBlockContentListButtonJsonNodeFieldsEnum;
+};
+
+export type ContentfulBlockContentListButtonJsonNodeEdge = {
+  __typename?: 'contentfulBlockContentListButtonJsonNodeEdge';
+  next?: Maybe<ContentfulBlockContentListButtonJsonNode>;
+  node: ContentfulBlockContentListButtonJsonNode;
+  previous?: Maybe<ContentfulBlockContentListButtonJsonNode>;
+};
+
+export enum ContentfulBlockContentListButtonJsonNodeFieldsEnum {
+  id = 'id',
+  parent___id = 'parent___id',
+  parent___parent___id = 'parent___parent___id',
+  parent___parent___parent___id = 'parent___parent___parent___id',
+  parent___parent___parent___children = 'parent___parent___parent___children',
+  parent___parent___children = 'parent___parent___children',
+  parent___parent___children___id = 'parent___parent___children___id',
+  parent___parent___children___children = 'parent___parent___children___children',
+  parent___parent___internal___content = 'parent___parent___internal___content',
+  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
+  parent___parent___internal___description = 'parent___parent___internal___description',
+  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
+  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
+  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
+  parent___parent___internal___owner = 'parent___parent___internal___owner',
+  parent___parent___internal___type = 'parent___parent___internal___type',
+  parent___children = 'parent___children',
+  parent___children___id = 'parent___children___id',
+  parent___children___parent___id = 'parent___children___parent___id',
+  parent___children___parent___children = 'parent___children___parent___children',
+  parent___children___children = 'parent___children___children',
+  parent___children___children___id = 'parent___children___children___id',
+  parent___children___children___children = 'parent___children___children___children',
+  parent___children___internal___content = 'parent___children___internal___content',
+  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
+  parent___children___internal___description = 'parent___children___internal___description',
+  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
+  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
+  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
+  parent___children___internal___owner = 'parent___children___internal___owner',
+  parent___children___internal___type = 'parent___children___internal___type',
+  parent___internal___content = 'parent___internal___content',
+  parent___internal___contentDigest = 'parent___internal___contentDigest',
+  parent___internal___description = 'parent___internal___description',
+  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
+  parent___internal___ignoreType = 'parent___internal___ignoreType',
+  parent___internal___mediaType = 'parent___internal___mediaType',
+  parent___internal___owner = 'parent___internal___owner',
+  parent___internal___type = 'parent___internal___type',
+  children = 'children',
+  children___id = 'children___id',
+  children___parent___id = 'children___parent___id',
+  children___parent___parent___id = 'children___parent___parent___id',
+  children___parent___parent___children = 'children___parent___parent___children',
+  children___parent___children = 'children___parent___children',
+  children___parent___children___id = 'children___parent___children___id',
+  children___parent___children___children = 'children___parent___children___children',
+  children___parent___internal___content = 'children___parent___internal___content',
+  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
+  children___parent___internal___description = 'children___parent___internal___description',
+  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
+  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
+  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
+  children___parent___internal___owner = 'children___parent___internal___owner',
+  children___parent___internal___type = 'children___parent___internal___type',
+  children___children = 'children___children',
+  children___children___id = 'children___children___id',
+  children___children___parent___id = 'children___children___parent___id',
+  children___children___parent___children = 'children___children___parent___children',
+  children___children___children = 'children___children___children',
+  children___children___children___id = 'children___children___children___id',
+  children___children___children___children = 'children___children___children___children',
+  children___children___internal___content = 'children___children___internal___content',
+  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
+  children___children___internal___description = 'children___children___internal___description',
+  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
+  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
+  children___children___internal___mediaType = 'children___children___internal___mediaType',
+  children___children___internal___owner = 'children___children___internal___owner',
+  children___children___internal___type = 'children___children___internal___type',
+  children___internal___content = 'children___internal___content',
+  children___internal___contentDigest = 'children___internal___contentDigest',
+  children___internal___description = 'children___internal___description',
+  children___internal___fieldOwners = 'children___internal___fieldOwners',
+  children___internal___ignoreType = 'children___internal___ignoreType',
+  children___internal___mediaType = 'children___internal___mediaType',
+  children___internal___owner = 'children___internal___owner',
+  children___internal___type = 'children___internal___type',
+  internal___content = 'internal___content',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___fieldOwners = 'internal___fieldOwners',
+  internal___ignoreType = 'internal___ignoreType',
+  internal___mediaType = 'internal___mediaType',
+  internal___owner = 'internal___owner',
+  internal___type = 'internal___type',
+  action___title = 'action___title',
+  action___enabled = 'action___enabled',
+  action___entrySlug = 'action___entrySlug',
+  action___externalUrl = 'action___externalUrl',
+  sys___type = 'sys___type'
+}
+
+export type ContentfulBlockContentListButtonJsonNodeFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  action?: Maybe<ContentfulBlockContentListButtonJsonNodeActionFilterInput>;
+  sys?: Maybe<ContentfulBlockContentListButtonJsonNodeSysFilterInput>;
+};
+
+export type ContentfulBlockContentListButtonJsonNodeFilterListInput = {
+  elemMatch?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterInput>;
+};
+
+export type ContentfulBlockContentListButtonJsonNodeGroupConnection = {
+  __typename?: 'contentfulBlockContentListButtonJsonNodeGroupConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulBlockContentListButtonJsonNodeEdge>;
+  nodes: Array<ContentfulBlockContentListButtonJsonNode>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockContentListButtonJsonNodeSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulBlockContentListButtonJsonNodeFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulBlockContentListButtonJsonNodeSys = {
+  __typename?: 'contentfulBlockContentListButtonJsonNodeSys';
+  type?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockContentListButtonJsonNodeSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+};
+
+export type ContentfulBlockContentListListJsonNode = Node & {
+  __typename?: 'contentfulBlockContentListListJsonNode';
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+  items?: Maybe<Array<Maybe<Scalars['String']>>>;
+  sys?: Maybe<ContentfulBlockContentListListJsonNodeSys>;
+};
+
+export type ContentfulBlockContentListListJsonNodeConnection = {
+  __typename?: 'contentfulBlockContentListListJsonNodeConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulBlockContentListListJsonNodeEdge>;
+  nodes: Array<ContentfulBlockContentListListJsonNode>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<ContentfulBlockContentListListJsonNodeGroupConnection>;
+};
+
+
+export type ContentfulBlockContentListListJsonNodeConnectionDistinctArgs = {
+  field: ContentfulBlockContentListListJsonNodeFieldsEnum;
+};
+
+
+export type ContentfulBlockContentListListJsonNodeConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: ContentfulBlockContentListListJsonNodeFieldsEnum;
+};
+
+export type ContentfulBlockContentListListJsonNodeEdge = {
+  __typename?: 'contentfulBlockContentListListJsonNodeEdge';
+  next?: Maybe<ContentfulBlockContentListListJsonNode>;
+  node: ContentfulBlockContentListListJsonNode;
+  previous?: Maybe<ContentfulBlockContentListListJsonNode>;
+};
+
+export enum ContentfulBlockContentListListJsonNodeFieldsEnum {
+  id = 'id',
+  parent___id = 'parent___id',
+  parent___parent___id = 'parent___parent___id',
+  parent___parent___parent___id = 'parent___parent___parent___id',
+  parent___parent___parent___children = 'parent___parent___parent___children',
+  parent___parent___children = 'parent___parent___children',
+  parent___parent___children___id = 'parent___parent___children___id',
+  parent___parent___children___children = 'parent___parent___children___children',
+  parent___parent___internal___content = 'parent___parent___internal___content',
+  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
+  parent___parent___internal___description = 'parent___parent___internal___description',
+  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
+  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
+  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
+  parent___parent___internal___owner = 'parent___parent___internal___owner',
+  parent___parent___internal___type = 'parent___parent___internal___type',
+  parent___children = 'parent___children',
+  parent___children___id = 'parent___children___id',
+  parent___children___parent___id = 'parent___children___parent___id',
+  parent___children___parent___children = 'parent___children___parent___children',
+  parent___children___children = 'parent___children___children',
+  parent___children___children___id = 'parent___children___children___id',
+  parent___children___children___children = 'parent___children___children___children',
+  parent___children___internal___content = 'parent___children___internal___content',
+  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
+  parent___children___internal___description = 'parent___children___internal___description',
+  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
+  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
+  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
+  parent___children___internal___owner = 'parent___children___internal___owner',
+  parent___children___internal___type = 'parent___children___internal___type',
+  parent___internal___content = 'parent___internal___content',
+  parent___internal___contentDigest = 'parent___internal___contentDigest',
+  parent___internal___description = 'parent___internal___description',
+  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
+  parent___internal___ignoreType = 'parent___internal___ignoreType',
+  parent___internal___mediaType = 'parent___internal___mediaType',
+  parent___internal___owner = 'parent___internal___owner',
+  parent___internal___type = 'parent___internal___type',
+  children = 'children',
+  children___id = 'children___id',
+  children___parent___id = 'children___parent___id',
+  children___parent___parent___id = 'children___parent___parent___id',
+  children___parent___parent___children = 'children___parent___parent___children',
+  children___parent___children = 'children___parent___children',
+  children___parent___children___id = 'children___parent___children___id',
+  children___parent___children___children = 'children___parent___children___children',
+  children___parent___internal___content = 'children___parent___internal___content',
+  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
+  children___parent___internal___description = 'children___parent___internal___description',
+  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
+  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
+  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
+  children___parent___internal___owner = 'children___parent___internal___owner',
+  children___parent___internal___type = 'children___parent___internal___type',
+  children___children = 'children___children',
+  children___children___id = 'children___children___id',
+  children___children___parent___id = 'children___children___parent___id',
+  children___children___parent___children = 'children___children___parent___children',
+  children___children___children = 'children___children___children',
+  children___children___children___id = 'children___children___children___id',
+  children___children___children___children = 'children___children___children___children',
+  children___children___internal___content = 'children___children___internal___content',
+  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
+  children___children___internal___description = 'children___children___internal___description',
+  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
+  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
+  children___children___internal___mediaType = 'children___children___internal___mediaType',
+  children___children___internal___owner = 'children___children___internal___owner',
+  children___children___internal___type = 'children___children___internal___type',
+  children___internal___content = 'children___internal___content',
+  children___internal___contentDigest = 'children___internal___contentDigest',
+  children___internal___description = 'children___internal___description',
+  children___internal___fieldOwners = 'children___internal___fieldOwners',
+  children___internal___ignoreType = 'children___internal___ignoreType',
+  children___internal___mediaType = 'children___internal___mediaType',
+  children___internal___owner = 'children___internal___owner',
+  children___internal___type = 'children___internal___type',
+  internal___content = 'internal___content',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___fieldOwners = 'internal___fieldOwners',
+  internal___ignoreType = 'internal___ignoreType',
+  internal___mediaType = 'internal___mediaType',
+  internal___owner = 'internal___owner',
+  internal___type = 'internal___type',
+  items = 'items',
+  sys___type = 'sys___type'
+}
+
+export type ContentfulBlockContentListListJsonNodeFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  items?: Maybe<StringQueryOperatorInput>;
+  sys?: Maybe<ContentfulBlockContentListListJsonNodeSysFilterInput>;
+};
+
+export type ContentfulBlockContentListListJsonNodeFilterListInput = {
+  elemMatch?: Maybe<ContentfulBlockContentListListJsonNodeFilterInput>;
+};
+
+export type ContentfulBlockContentListListJsonNodeGroupConnection = {
+  __typename?: 'contentfulBlockContentListListJsonNodeGroupConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulBlockContentListListJsonNodeEdge>;
+  nodes: Array<ContentfulBlockContentListListJsonNode>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockContentListListJsonNodeSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulBlockContentListListJsonNodeFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulBlockContentListListJsonNodeSys = {
+  __typename?: 'contentfulBlockContentListListJsonNodeSys';
+  type?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockContentListListJsonNodeSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+};
+
 export type ContentfulBlogPostExcerptTextNode = Node & {
   __typename?: 'contentfulBlogPostExcerptTextNode';
   id: Scalars['ID'];
@@ -7538,6 +8363,45 @@ export type AllContentBlockContentQuery = (
   ) }
 );
 
+export type ContentListFragmentFragment = (
+  { __typename: 'ContentfulBlockContentList' }
+  & Pick<ContentfulBlockContentList, 'id' | 'highlight' | 'title' | 'listTitle'>
+  & { content?: Maybe<(
+    { __typename?: 'ContentfulBlockContentListContent' }
+    & Pick<ContentfulBlockContentListContent, 'raw'>
+  )>, button?: Maybe<(
+    { __typename?: 'contentfulBlockContentListButtonJsonNode' }
+    & { action?: Maybe<(
+      { __typename?: 'contentfulBlockContentListButtonJsonNodeAction' }
+      & Pick<ContentfulBlockContentListButtonJsonNodeAction, 'enabled' | 'entrySlug' | 'externalUrl' | 'title'>
+    )> }
+  )>, listDescription?: Maybe<(
+    { __typename?: 'ContentfulBlockContentListListDescription' }
+    & Pick<ContentfulBlockContentListListDescription, 'raw'>
+  )>, list?: Maybe<(
+    { __typename?: 'contentfulBlockContentListListJsonNode' }
+    & Pick<ContentfulBlockContentListListJsonNode, 'items'>
+  )> }
+);
+
+export type AllContentListBlockContentQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllContentListBlockContentQuery = (
+  { __typename?: 'Query' }
+  & { allContentfulBlockContentList: (
+    { __typename?: 'ContentfulBlockContentListConnection' }
+    & { nodes: Array<(
+      { __typename?: 'ContentfulBlockContentList' }
+      & { page?: Maybe<Array<Maybe<(
+        { __typename?: 'ContentfulPage' }
+        & Pick<ContentfulPage, 'title'>
+      )>>> }
+      & ContentListFragmentFragment
+    )> }
+  ) }
+);
+
 export type ImageBandFragmentFragment = (
   { __typename: 'ContentfulBlockImageBand' }
   & Pick<ContentfulBlockImageBand, 'id'>
@@ -7637,6 +8501,9 @@ export type PageTemplateQueryQuery = (
     ) | (
       { __typename?: 'ContentfulBlockContent' }
       & ContentFragmentFragment
+    ) | (
+      { __typename?: 'ContentfulBlockContentList' }
+      & ContentListFragmentFragment
     )>>> }
   )> }
 );
