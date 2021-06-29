@@ -22,3 +22,8 @@
   --font-size--heading: calc(var(--space--base) * 1.6);
 }
 
+.h4 {
+  font-family: var(--font-family--base);
+  --font-size--heading: calc(var(--space--base) * 1.3);
+}
+
