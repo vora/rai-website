@@ -9216,7 +9216,41 @@ export type AllContentBlockContentQuery = (
 
 export type ContentListFragmentFragment = (
   { __typename: 'ContentfulBlockContentList' }
-  & Pick<ContentfulBlockContentList, 'id' | 'title'>
+  & Pick<ContentfulBlockContentList, 'id' | 'highlight' | 'title' | 'listTitle'>
+  & { content?: Maybe<(
+    { __typename?: 'ContentfulBlockContentListContent' }
+    & Pick<ContentfulBlockContentListContent, 'raw'>
+  )>, button?: Maybe<(
+    { __typename?: 'contentfulBlockContentListButtonJsonNode' }
+    & { action?: Maybe<(
+      { __typename?: 'contentfulBlockContentListButtonJsonNodeAction' }
+      & Pick<ContentfulBlockContentListButtonJsonNodeAction, 'enabled' | 'entrySlug' | 'externalUrl' | 'title'>
+    )> }
+  )>, listDescription?: Maybe<(
+    { __typename?: 'ContentfulBlockContentListListDescription' }
+    & Pick<ContentfulBlockContentListListDescription, 'raw'>
+  )>, list?: Maybe<(
+    { __typename?: 'contentfulBlockContentListListJsonNode' }
+    & Pick<ContentfulBlockContentListListJsonNode, 'items'>
+  )> }
+);
+
+export type AllContentListBlockContentQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllContentListBlockContentQuery = (
+  { __typename?: 'Query' }
+  & { allContentfulBlockContentList: (
+    { __typename?: 'ContentfulBlockContentListConnection' }
+    & { nodes: Array<(
+      { __typename?: 'ContentfulBlockContentList' }
+      & { page?: Maybe<Array<Maybe<(
+        { __typename?: 'ContentfulPage' }
+        & Pick<ContentfulPage, 'title'>
+      )>>> }
+      & ContentListFragmentFragment
+    )> }
+  ) }
 );
 
 export type ImageBandFragmentFragment = (

@@ -47,10 +47,4 @@ export const query = graphql`
   }
 `;
 
-/**
-  ... on ContentfulBlockContentList {
-    ...ContentListFragment
-  }
- */
-
 export default Page;

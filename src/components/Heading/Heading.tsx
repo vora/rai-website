@@ -4,7 +4,7 @@ import classnames from "classnames";
 import styles from "./Heading.module.css";
 
 interface HeadingProps {
-  readonly as?: "h1" | "h2" | "h3";
+  readonly as?: "h1" | "h2" | "h3" | "h4";
 }
 
 export function Heading({
