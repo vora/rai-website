@@ -1,5 +1,5 @@
 // import React from "react";
-// import { graphql } from "gatsby";
+import { graphql } from "gatsby";
 // import { ContentListFragmentFragment } from "@/graphql/graphql-types";
 // import { Container } from "@/components/Container";
 // import { Heading } from "@/components/Heading";
@@ -48,25 +48,10 @@
 //   );
 // }
 
-// export const ContentListFragment = graphql`
-//   fragment ContentListFragment on ContentfulBlockContentList {
-//     __typename
-//     id
-//     title
-//     content {
-//       raw
-//     }
-//     raiButton {
-//       action {
-//         enabled
-//         title
-//         url
-//         external
-//       }
-//     }
-//     listTitle
-//     raiList {
-//       items
-//     }
-//   }
-// `;
+export const ContentListFragment = graphql`
+  fragment ContentListFragment on ContentfulBlockContentList {
+    __typename
+    id
+    title
+  }
+`;

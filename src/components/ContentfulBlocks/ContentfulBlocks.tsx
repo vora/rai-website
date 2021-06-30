@@ -3,7 +3,7 @@ import {
   Maybe,
   CallToActionFragmentFragment,
   ContentFragmentFragment,
-  // ContentListFragmentFragment,
+  ContentListFragmentFragment,
 } from "@/graphql/graphql-types";
 import { CallToAction } from "@/blocks/CallToAction";
 import { Content } from "@/blocks/Content";
@@ -15,7 +15,7 @@ import styles from "./ContentfulBlocks.module.css";
 type BlockType = Maybe<
   | CallToActionFragmentFragment
   | ContentFragmentFragment
-  // | ContentListFragmentFragment
+  | ContentListFragmentFragment
   | {
       __typename?: "ContentfulBlockJumboTron";
     }
