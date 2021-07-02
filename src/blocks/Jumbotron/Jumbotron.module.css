@@ -16,29 +16,15 @@
 
 @media (min-width: 1024px) {
   .wrapper {
-    padding: var(--space--xlarge) 0;
+    padding: var(--space--xxxlarge) 0;
   }
 
   .wrapper.bottom {
-    padding: var(--space--xlarge) 0 0;
+    padding: var(--space--xxxlarge) 0 0;
   }
 
   .wrapper.top {
-    padding: 0 0 var(--space--xlarge);
-  }
-}
-
-@media(min-width: 1200px) {
-  .wrapper {
-    padding: var(--space--xxlarge) 0;
-  }
-
-  .wrapper.bottom {
-    padding: var(--space--xxlarge) 0 0;
-  }
-  
-  .wrapper.top {
-    padding: 0 0 var(--space--xxlarge);
+    padding: 0 0 var(--space--xxxlarge);
   }
 }
 
@@ -77,6 +63,7 @@
 
 @media (min-width: 1024px) {
   .image {
+    position: relative;
     margin-top: 0;
     flex: 1 0 50%;
     max-width: 50%;

@@ -10,6 +10,10 @@
   margin-bottom: var(--space--xxxlarge);
 }
 
+.blocks > .noSpace + * {
+  margin-top: 0;
+}
+
 .spacer {
   margin: var(--space--base) 0;
 }

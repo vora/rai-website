@@ -8,6 +8,7 @@ import { Heading } from "@/components/Heading";
 import { RichText, RichTextContent } from "@/components/RichText";
 import { ContentfulButton } from "@/components/ContentfulButton";
 
+import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Jumbotron.module.css";
 
 interface JumbotronProps {
@@ -56,13 +57,19 @@ export function Jumbotron({
           </div>
 
           {mainImage && (
-            <div className={imageClass}>
-              <GatsbyImage
-                image={mainImage}
-                alt={image?.description ?? ""}
-                title={image?.title ?? ""}
-              />
-            </div>
+            <AnimatePresence>
+              <motion.div
+                className={imageClass}
+                initial={{ left: 250, opacity: 0 }}
+                animate={{ left: 0, opacity: 1 }}
+              >
+                <GatsbyImage
+                  image={mainImage}
+                  alt={image?.description ?? ""}
+                  title={image?.title ?? ""}
+                />
+              </motion.div>
+            </AnimatePresence>
           )}
         </div>
       </Container>

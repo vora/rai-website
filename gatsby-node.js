@@ -35,6 +35,10 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
     if (process.env.NODE_ENV === "development") {
       // Generate our pages
       result.data.allContentfulPage.nodes.forEach((node) => {
+        if (node.slug !== "rai-certification") {
+          return;
+        }
+
         createPage({
           path: `/${node.slug.replace(/ /g, "-")}`,
           component: path.resolve(`./src/templates/page.tsx`),
