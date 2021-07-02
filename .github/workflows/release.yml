@@ -11,18 +11,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: npm-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-
       - name: "lint javascript"
         run: |
-          npm install
+          npm ci --ignore-scripts
           npm run lint:js
 
   jest_unit_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: npm-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-
       - name: "jest unit test"
         run: |
-          npm install
+          npm ci --ignore-scripts
           npm run test
 
   deploy_heroku:
