@@ -4,11 +4,15 @@ import {
   CallToActionFragmentFragment,
   ContentFragmentFragment,
   ContentListFragmentFragment,
+  ImageBandFragmentFragment,
+  JumbotronFragmentFragment,
 } from "@/graphql/graphql-types";
 import { CallToAction } from "@/blocks/CallToAction";
 import { Content } from "@/blocks/Content";
 import { Container } from "@/components/Container";
 import { ContentList } from "@/blocks/ContentList";
+import { ImageBand } from "@/blocks/ImageBand";
+import { Jumbotron } from "@/blocks/Jumbotron";
 
 import styles from "./ContentfulBlocks.module.css";
 
@@ -16,6 +20,8 @@ type BlockType = Maybe<
   | CallToActionFragmentFragment
   | ContentFragmentFragment
   | ContentListFragmentFragment
+  | ImageBandFragmentFragment
+  | JumbotronFragmentFragment
 >;
 
 interface BlockProps {
@@ -37,6 +43,14 @@ export function ContentfulBlocks({ blocks }: BlockProps) {
             return <Content data={block} key={block.id} />;
           case "ContentfulBlockContentList":
             return <ContentList data={block} key={block.id} />;
+          case "ContentfulBlockImageBand":
+            return <ImageBand data={block} key={block.id} />;
+          case "ContentfulBlockJumbotron":
+            return (
+              <div className={styles.noSpace}>
+                <Jumbotron data={block} key={block.id} />
+              </div>
+            );
           default:
             return (
               <div className={styles.spacer}>
