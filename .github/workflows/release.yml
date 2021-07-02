@@ -33,7 +33,7 @@ jobs:
           restore-keys: npm-
       - name: "jest unit test"
         run: |
-          npm ci npm ci --ignore-scripts
+          npm ci --ignore-scripts
           npm run test
 
   deploy_heroku:
