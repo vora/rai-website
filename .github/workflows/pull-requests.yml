@@ -2,22 +2,34 @@ name: "pull request"
 on: [pull_request]
 
 jobs:
+  install_dependecies:
+    name: "install"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/cache@v2
+    env:
+      cache-name: cache-node-modules
+    with:
+      path: ~/.npm
+      key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+      restore-keys: |
+        ${{ runner.os }}-build-${{ env.cache-name }}-
+        ${{ runner.os }}-build-
+        ${{ runner.os }}-
+
   lint_javascript:
+    needs: [install_dependecies]
     name: "lint"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: "lint javascript"
-        run: |
-          npm install
-          npm run lint:js
+        run: npm run lint:js
 
   jest_unit_test:
+    needs: [install_dependecies]
     name: "test"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: "jest unit test"
-        run: |
-          npm install
-          npm run test
+        run: npm run test
