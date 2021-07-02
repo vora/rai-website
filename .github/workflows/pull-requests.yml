@@ -2,6 +2,7 @@ on: [pull_request]
 
 jobs:
   lint_javascript:
+    name: "lint"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,6 +12,7 @@ jobs:
           npm run lint:js
 
   jest_unit_test:
+    name: "test"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
