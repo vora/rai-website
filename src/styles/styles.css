@@ -8,7 +8,19 @@
 */
 @import './reset.css';
 
+::selection {
+  background: var(--color--warning);
+  color: var(--color--carbon);
+}
+
+::-moz-selection {
+  background: var(--color--warning);
+  color: var(--color--carbon);
+}
+
 .gatsby-image-wrapper {
   vertical-align: bottom;
 }
+
+
 

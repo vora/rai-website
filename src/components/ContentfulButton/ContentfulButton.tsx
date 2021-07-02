@@ -15,11 +15,17 @@ interface ContentfulButtonProps {
 
 export function ContentfulButton({ action }: ContentfulButtonProps) {
   const { title, external, externalUrl, enabled, entrySlug } = action;
-  const url = external ? externalUrl : `/${entrySlug}`;
+  const url = external ? externalUrl : entrySlug;
 
   if (!enabled || !title || !url) {
     return <></>;
   }
 
-  return <Button {...(action as ButtonProps)} url={url} />;
+  return (
+    <Button
+      {...(action as ButtonProps)}
+      url={url}
+      external={external || entrySlug?.startsWith("//assets")}
+    />
+  );
 }

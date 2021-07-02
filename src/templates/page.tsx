@@ -42,6 +42,12 @@ export const query = graphql`
         ... on ContentfulBlockContentList {
           ...ContentListFragment
         }
+        ... on ContentfulBlockImageBand {
+          ...ImageBandFragment
+        }
+        ... on ContentfulBlockJumbotron {
+          ...JumbotronFragment
+        }
       }
     }
   }
