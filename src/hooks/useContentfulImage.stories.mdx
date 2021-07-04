@@ -1,0 +1,22 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { useContentfulImage } from "./useContentfulImage";
+
+<Meta title="hooks/useContentfulImage" />
+
+# useContentfulImage
+
+The `useContentfulImage` hook is used to get an image from contentful when using a query is not available.
+
+## Usage
+
+```tsx
+import { useContentfulImage } from "@/hooks/useContentfulImage";
+```
+
+`useContentfulImage` accepts an argument of the `contentful_id` of the image you are trying to get.
+
+```tsx
+const image = useContentfulImage("ax0dj5nnfhls");
+```
+
+The `contentful_id` can be found in either Contetnful, or by using graphql.
