@@ -9425,24 +9425,24 @@ export type BannerQueryQuery = (
   )> }
 );
 
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
+export type AllContentfulAssetsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_1_Query = (
+export type AllContentfulAssetsQuery = (
   { __typename?: 'Query' }
   & { allContentfulAsset: (
     { __typename?: 'ContentfulAssetConnection' }
     & { nodes: Array<(
       { __typename?: 'ContentfulAsset' }
-      & Pick<ContentfulAsset, 'gatsbyImageData' | 'contentful_id'>
+      & Pick<ContentfulAsset, 'title' | 'description' | 'gatsbyImageData' | 'contentful_id'>
     )> }
   ) }
 );
 
-export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
+export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_2_Query = (
+export type Unnamed_1_Query = (
   { __typename?: 'Query' }
   & { allContentfulBlogPost: (
     { __typename?: 'ContentfulBlogPostConnection' }

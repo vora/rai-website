@@ -1,11 +1,13 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { ContentfulAsset } from "@/graphql/graphql-types";
 
-export function useContentfulImage(id: string) {
+export function useContentfulImage(id: string): ContentfulAsset {
   const images = useStaticQuery(graphql`
-    query {
+    query AllContentfulAssets {
       allContentfulAsset {
         nodes {
+          title
+          description
           gatsbyImageData
           contentful_id
         }
