@@ -518,6 +518,22 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___author___internal___mediaType = 'blog_post___author___internal___mediaType',
   blog_post___author___internal___owner = 'blog_post___author___internal___owner',
   blog_post___author___internal___type = 'blog_post___author___internal___type',
+  blog_post___excerpt___id = 'blog_post___excerpt___id',
+  blog_post___excerpt___parent___id = 'blog_post___excerpt___parent___id',
+  blog_post___excerpt___parent___children = 'blog_post___excerpt___parent___children',
+  blog_post___excerpt___children = 'blog_post___excerpt___children',
+  blog_post___excerpt___children___id = 'blog_post___excerpt___children___id',
+  blog_post___excerpt___children___children = 'blog_post___excerpt___children___children',
+  blog_post___excerpt___internal___content = 'blog_post___excerpt___internal___content',
+  blog_post___excerpt___internal___contentDigest = 'blog_post___excerpt___internal___contentDigest',
+  blog_post___excerpt___internal___description = 'blog_post___excerpt___internal___description',
+  blog_post___excerpt___internal___fieldOwners = 'blog_post___excerpt___internal___fieldOwners',
+  blog_post___excerpt___internal___ignoreType = 'blog_post___excerpt___internal___ignoreType',
+  blog_post___excerpt___internal___mediaType = 'blog_post___excerpt___internal___mediaType',
+  blog_post___excerpt___internal___owner = 'blog_post___excerpt___internal___owner',
+  blog_post___excerpt___internal___type = 'blog_post___excerpt___internal___type',
+  blog_post___excerpt___excerpt = 'blog_post___excerpt___excerpt',
+  blog_post___excerpt___sys___type = 'blog_post___excerpt___sys___type',
   blog_post___spaceId = 'blog_post___spaceId',
   blog_post___createdAt = 'blog_post___createdAt',
   blog_post___updatedAt = 'blog_post___updatedAt',
@@ -573,22 +589,6 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___featuredImage___internal___mediaType = 'blog_post___featuredImage___internal___mediaType',
   blog_post___featuredImage___internal___owner = 'blog_post___featuredImage___internal___owner',
   blog_post___featuredImage___internal___type = 'blog_post___featuredImage___internal___type',
-  blog_post___excerpt___id = 'blog_post___excerpt___id',
-  blog_post___excerpt___parent___id = 'blog_post___excerpt___parent___id',
-  blog_post___excerpt___parent___children = 'blog_post___excerpt___parent___children',
-  blog_post___excerpt___children = 'blog_post___excerpt___children',
-  blog_post___excerpt___children___id = 'blog_post___excerpt___children___id',
-  blog_post___excerpt___children___children = 'blog_post___excerpt___children___children',
-  blog_post___excerpt___internal___content = 'blog_post___excerpt___internal___content',
-  blog_post___excerpt___internal___contentDigest = 'blog_post___excerpt___internal___contentDigest',
-  blog_post___excerpt___internal___description = 'blog_post___excerpt___internal___description',
-  blog_post___excerpt___internal___fieldOwners = 'blog_post___excerpt___internal___fieldOwners',
-  blog_post___excerpt___internal___ignoreType = 'blog_post___excerpt___internal___ignoreType',
-  blog_post___excerpt___internal___mediaType = 'blog_post___excerpt___internal___mediaType',
-  blog_post___excerpt___internal___owner = 'blog_post___excerpt___internal___owner',
-  blog_post___excerpt___internal___type = 'blog_post___excerpt___internal___type',
-  blog_post___excerpt___excerpt = 'blog_post___excerpt___excerpt',
-  blog_post___excerpt___sys___type = 'blog_post___excerpt___sys___type',
   blog_post___childrenContentfulBlogPostExcerptTextNode = 'blog_post___childrenContentfulBlogPostExcerptTextNode',
   blog_post___childrenContentfulBlogPostExcerptTextNode___id = 'blog_post___childrenContentfulBlogPostExcerptTextNode___id',
   blog_post___childrenContentfulBlogPostExcerptTextNode___parent___id = 'blog_post___childrenContentfulBlogPostExcerptTextNode___parent___id',
@@ -3327,12 +3327,12 @@ export type ContentfulBlogPost = ContentfulReference & ContentfulEntry & Node & 
   seoTitle?: Maybe<Scalars['String']>;
   seoDescription?: Maybe<Scalars['String']>;
   author?: Maybe<ContentfulAuthor>;
+  excerpt?: Maybe<ContentfulBlogPostExcerptTextNode>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulBlogPostSys>;
   featuredImage?: Maybe<ContentfulAsset>;
-  excerpt?: Maybe<ContentfulBlogPostExcerptTextNode>;
   /** Returns all children nodes filtered by type contentfulBlogPostExcerptTextNode */
   childrenContentfulBlogPostExcerptTextNode?: Maybe<Array<Maybe<ContentfulBlogPostExcerptTextNode>>>;
   /** Returns the first child node of type contentfulBlogPostExcerptTextNode or null if there are no children of given type on this node */
@@ -3494,6 +3494,9 @@ export enum ContentfulBlogPostFieldsEnum {
   author___blog_post___author___updatedAt = 'author___blog_post___author___updatedAt',
   author___blog_post___author___childrenContentfulAuthorBiographyTextNode = 'author___blog_post___author___childrenContentfulAuthorBiographyTextNode',
   author___blog_post___author___children = 'author___blog_post___author___children',
+  author___blog_post___excerpt___id = 'author___blog_post___excerpt___id',
+  author___blog_post___excerpt___children = 'author___blog_post___excerpt___children',
+  author___blog_post___excerpt___excerpt = 'author___blog_post___excerpt___excerpt',
   author___blog_post___spaceId = 'author___blog_post___spaceId',
   author___blog_post___createdAt = 'author___blog_post___createdAt',
   author___blog_post___updatedAt = 'author___blog_post___updatedAt',
@@ -3509,9 +3512,6 @@ export enum ContentfulBlogPostFieldsEnum {
   author___blog_post___featuredImage___node_locale = 'author___blog_post___featuredImage___node_locale',
   author___blog_post___featuredImage___gatsbyImageData = 'author___blog_post___featuredImage___gatsbyImageData',
   author___blog_post___featuredImage___children = 'author___blog_post___featuredImage___children',
-  author___blog_post___excerpt___id = 'author___blog_post___excerpt___id',
-  author___blog_post___excerpt___children = 'author___blog_post___excerpt___children',
-  author___blog_post___excerpt___excerpt = 'author___blog_post___excerpt___excerpt',
   author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode',
   author___blog_post___childrenContentfulBlogPostExcerptTextNode___id = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___id',
   author___blog_post___childrenContentfulBlogPostExcerptTextNode___children = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___children',
@@ -3623,6 +3623,46 @@ export enum ContentfulBlogPostFieldsEnum {
   author___internal___mediaType = 'author___internal___mediaType',
   author___internal___owner = 'author___internal___owner',
   author___internal___type = 'author___internal___type',
+  excerpt___id = 'excerpt___id',
+  excerpt___parent___id = 'excerpt___parent___id',
+  excerpt___parent___parent___id = 'excerpt___parent___parent___id',
+  excerpt___parent___parent___children = 'excerpt___parent___parent___children',
+  excerpt___parent___children = 'excerpt___parent___children',
+  excerpt___parent___children___id = 'excerpt___parent___children___id',
+  excerpt___parent___children___children = 'excerpt___parent___children___children',
+  excerpt___parent___internal___content = 'excerpt___parent___internal___content',
+  excerpt___parent___internal___contentDigest = 'excerpt___parent___internal___contentDigest',
+  excerpt___parent___internal___description = 'excerpt___parent___internal___description',
+  excerpt___parent___internal___fieldOwners = 'excerpt___parent___internal___fieldOwners',
+  excerpt___parent___internal___ignoreType = 'excerpt___parent___internal___ignoreType',
+  excerpt___parent___internal___mediaType = 'excerpt___parent___internal___mediaType',
+  excerpt___parent___internal___owner = 'excerpt___parent___internal___owner',
+  excerpt___parent___internal___type = 'excerpt___parent___internal___type',
+  excerpt___children = 'excerpt___children',
+  excerpt___children___id = 'excerpt___children___id',
+  excerpt___children___parent___id = 'excerpt___children___parent___id',
+  excerpt___children___parent___children = 'excerpt___children___parent___children',
+  excerpt___children___children = 'excerpt___children___children',
+  excerpt___children___children___id = 'excerpt___children___children___id',
+  excerpt___children___children___children = 'excerpt___children___children___children',
+  excerpt___children___internal___content = 'excerpt___children___internal___content',
+  excerpt___children___internal___contentDigest = 'excerpt___children___internal___contentDigest',
+  excerpt___children___internal___description = 'excerpt___children___internal___description',
+  excerpt___children___internal___fieldOwners = 'excerpt___children___internal___fieldOwners',
+  excerpt___children___internal___ignoreType = 'excerpt___children___internal___ignoreType',
+  excerpt___children___internal___mediaType = 'excerpt___children___internal___mediaType',
+  excerpt___children___internal___owner = 'excerpt___children___internal___owner',
+  excerpt___children___internal___type = 'excerpt___children___internal___type',
+  excerpt___internal___content = 'excerpt___internal___content',
+  excerpt___internal___contentDigest = 'excerpt___internal___contentDigest',
+  excerpt___internal___description = 'excerpt___internal___description',
+  excerpt___internal___fieldOwners = 'excerpt___internal___fieldOwners',
+  excerpt___internal___ignoreType = 'excerpt___internal___ignoreType',
+  excerpt___internal___mediaType = 'excerpt___internal___mediaType',
+  excerpt___internal___owner = 'excerpt___internal___owner',
+  excerpt___internal___type = 'excerpt___internal___type',
+  excerpt___excerpt = 'excerpt___excerpt',
+  excerpt___sys___type = 'excerpt___sys___type',
   spaceId = 'spaceId',
   createdAt = 'createdAt',
   updatedAt = 'updatedAt',
@@ -3706,46 +3746,6 @@ export enum ContentfulBlogPostFieldsEnum {
   featuredImage___internal___mediaType = 'featuredImage___internal___mediaType',
   featuredImage___internal___owner = 'featuredImage___internal___owner',
   featuredImage___internal___type = 'featuredImage___internal___type',
-  excerpt___id = 'excerpt___id',
-  excerpt___parent___id = 'excerpt___parent___id',
-  excerpt___parent___parent___id = 'excerpt___parent___parent___id',
-  excerpt___parent___parent___children = 'excerpt___parent___parent___children',
-  excerpt___parent___children = 'excerpt___parent___children',
-  excerpt___parent___children___id = 'excerpt___parent___children___id',
-  excerpt___parent___children___children = 'excerpt___parent___children___children',
-  excerpt___parent___internal___content = 'excerpt___parent___internal___content',
-  excerpt___parent___internal___contentDigest = 'excerpt___parent___internal___contentDigest',
-  excerpt___parent___internal___description = 'excerpt___parent___internal___description',
-  excerpt___parent___internal___fieldOwners = 'excerpt___parent___internal___fieldOwners',
-  excerpt___parent___internal___ignoreType = 'excerpt___parent___internal___ignoreType',
-  excerpt___parent___internal___mediaType = 'excerpt___parent___internal___mediaType',
-  excerpt___parent___internal___owner = 'excerpt___parent___internal___owner',
-  excerpt___parent___internal___type = 'excerpt___parent___internal___type',
-  excerpt___children = 'excerpt___children',
-  excerpt___children___id = 'excerpt___children___id',
-  excerpt___children___parent___id = 'excerpt___children___parent___id',
-  excerpt___children___parent___children = 'excerpt___children___parent___children',
-  excerpt___children___children = 'excerpt___children___children',
-  excerpt___children___children___id = 'excerpt___children___children___id',
-  excerpt___children___children___children = 'excerpt___children___children___children',
-  excerpt___children___internal___content = 'excerpt___children___internal___content',
-  excerpt___children___internal___contentDigest = 'excerpt___children___internal___contentDigest',
-  excerpt___children___internal___description = 'excerpt___children___internal___description',
-  excerpt___children___internal___fieldOwners = 'excerpt___children___internal___fieldOwners',
-  excerpt___children___internal___ignoreType = 'excerpt___children___internal___ignoreType',
-  excerpt___children___internal___mediaType = 'excerpt___children___internal___mediaType',
-  excerpt___children___internal___owner = 'excerpt___children___internal___owner',
-  excerpt___children___internal___type = 'excerpt___children___internal___type',
-  excerpt___internal___content = 'excerpt___internal___content',
-  excerpt___internal___contentDigest = 'excerpt___internal___contentDigest',
-  excerpt___internal___description = 'excerpt___internal___description',
-  excerpt___internal___fieldOwners = 'excerpt___internal___fieldOwners',
-  excerpt___internal___ignoreType = 'excerpt___internal___ignoreType',
-  excerpt___internal___mediaType = 'excerpt___internal___mediaType',
-  excerpt___internal___owner = 'excerpt___internal___owner',
-  excerpt___internal___type = 'excerpt___internal___type',
-  excerpt___excerpt = 'excerpt___excerpt',
-  excerpt___sys___type = 'excerpt___sys___type',
   childrenContentfulBlogPostExcerptTextNode = 'childrenContentfulBlogPostExcerptTextNode',
   childrenContentfulBlogPostExcerptTextNode___id = 'childrenContentfulBlogPostExcerptTextNode___id',
   childrenContentfulBlogPostExcerptTextNode___parent___id = 'childrenContentfulBlogPostExcerptTextNode___parent___id',
@@ -3926,12 +3926,12 @@ export type ContentfulBlogPostFilterInput = {
   seoTitle?: Maybe<StringQueryOperatorInput>;
   seoDescription?: Maybe<StringQueryOperatorInput>;
   author?: Maybe<ContentfulAuthorFilterInput>;
+  excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlogPostSysFilterInput>;
   featuredImage?: Maybe<ContentfulAssetFilterInput>;
-  excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   childrenContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterListInput>;
   childContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -6521,12 +6521,12 @@ export type QueryContentfulBlogPostArgs = {
   seoTitle?: Maybe<StringQueryOperatorInput>;
   seoDescription?: Maybe<StringQueryOperatorInput>;
   author?: Maybe<ContentfulAuthorFilterInput>;
+  excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlogPostSysFilterInput>;
   featuredImage?: Maybe<ContentfulAssetFilterInput>;
-  excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   childrenContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterListInput>;
   childContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;

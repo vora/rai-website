@@ -872,6 +872,15 @@ function About() {
                 placeholder="blurred"
               />
             </GridContainer>
+            <GridContainer>
+              <StaticImage
+                src="../images/members-logos/tiq.png"
+                alt="TIQ"
+                width="200"
+                quality={100}
+                placeholder="blurred"
+              />
+            </GridContainer>
           </GridRow>
         </Grid>
         <br />
