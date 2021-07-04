@@ -15,6 +15,7 @@ import { Caption } from "@/components/Caption";
 import { Text } from "@/components/Text";
 import { Divider } from "@/components/Divider";
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
+import { useContentfulImage } from "@/hooks/useContentfulImage";
 // @ts-expect-error TODO: will move this to typescript and contentful
 import News from "../components/News";
 
@@ -82,6 +83,20 @@ function BlogPost({ data: { blog } }: BlogPostProps) {
       [BLOCKS.HEADING_3]: (node, children) => (
         <Heading as="h3">{children}</Heading>
       ),
+      // @ts-expect-error TODO: Figure out how to type this
+      [BLOCKS.EMBEDDED_ASSET]: ({ data }) => {
+        const image = useContentfulImage(data.target.sys.id);
+        const contentfulImage = getImage(image?.gatsbyImageData);
+        return contentfulImage ? (
+          <GatsbyImage
+            image={contentfulImage}
+            alt={image?.description ?? ""}
+            title={image?.title ?? ""}
+          />
+        ) : (
+          <div>NO IMAGE AVAILABLE</div>
+        );
+      },
       // @ts-expect-error TODO: Figure out how to type this
       [BLOCKS.QUOTE]: (node, children) => (
         <blockquote className={styles.blockQuote}>{children}</blockquote>
