@@ -1,4 +1,4 @@
-export type Maybe<T> = T | null;
+export type Maybe<T> = T;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
@@ -1033,6 +1033,8 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
   page___slug = 'page___slug',
+  page___seoTitle = 'page___seoTitle',
+  page___seoDescription = 'page___seoDescription',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
   page___updatedAt = 'page___updatedAt',
@@ -1514,6 +1516,8 @@ export enum ContentfulBlockContentFieldsEnum {
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
   page___slug = 'page___slug',
+  page___seoTitle = 'page___seoTitle',
+  page___seoDescription = 'page___seoDescription',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
   page___updatedAt = 'page___updatedAt',
@@ -1860,6 +1864,8 @@ export enum ContentfulBlockContentListFieldsEnum {
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
   page___slug = 'page___slug',
+  page___seoTitle = 'page___seoTitle',
+  page___seoDescription = 'page___seoDescription',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
   page___updatedAt = 'page___updatedAt',
@@ -2529,6 +2535,8 @@ export enum ContentfulBlockImageBandFieldsEnum {
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
   page___slug = 'page___slug',
+  page___seoTitle = 'page___seoTitle',
+  page___seoDescription = 'page___seoDescription',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
   page___updatedAt = 'page___updatedAt',
@@ -2736,12 +2744,12 @@ export type ContentfulBlockJumbotron = ContentfulReference & ContentfulEntry & N
   imageOnLeft?: Maybe<Scalars['Boolean']>;
   image?: Maybe<ContentfulAsset>;
   backgroundImage?: Maybe<ContentfulAsset>;
-  page?: Maybe<Array<Maybe<ContentfulPage>>>;
   button?: Maybe<ContentfulBlockJumbotronButtonJsonNode>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulBlockJumbotronSys>;
+  page?: Maybe<Array<Maybe<ContentfulPage>>>;
   /** Returns all children nodes filtered by type contentfulBlockJumbotronButtonJsonNode */
   childrenContentfulBlockJumbotronButtonJsonNode?: Maybe<Array<Maybe<ContentfulBlockJumbotronButtonJsonNode>>>;
   /** Returns the first child node of type contentfulBlockJumbotronButtonJsonNode or null if there are no children of given type on this node */
@@ -2964,54 +2972,6 @@ export enum ContentfulBlockJumbotronFieldsEnum {
   backgroundImage___internal___mediaType = 'backgroundImage___internal___mediaType',
   backgroundImage___internal___owner = 'backgroundImage___internal___owner',
   backgroundImage___internal___type = 'backgroundImage___internal___type',
-  page = 'page',
-  page___contentful_id = 'page___contentful_id',
-  page___id = 'page___id',
-  page___node_locale = 'page___node_locale',
-  page___title = 'page___title',
-  page___slug = 'page___slug',
-  page___spaceId = 'page___spaceId',
-  page___createdAt = 'page___createdAt',
-  page___updatedAt = 'page___updatedAt',
-  page___sys___type = 'page___sys___type',
-  page___sys___revision = 'page___sys___revision',
-  page___parent___id = 'page___parent___id',
-  page___parent___parent___id = 'page___parent___parent___id',
-  page___parent___parent___children = 'page___parent___parent___children',
-  page___parent___children = 'page___parent___children',
-  page___parent___children___id = 'page___parent___children___id',
-  page___parent___children___children = 'page___parent___children___children',
-  page___parent___internal___content = 'page___parent___internal___content',
-  page___parent___internal___contentDigest = 'page___parent___internal___contentDigest',
-  page___parent___internal___description = 'page___parent___internal___description',
-  page___parent___internal___fieldOwners = 'page___parent___internal___fieldOwners',
-  page___parent___internal___ignoreType = 'page___parent___internal___ignoreType',
-  page___parent___internal___mediaType = 'page___parent___internal___mediaType',
-  page___parent___internal___owner = 'page___parent___internal___owner',
-  page___parent___internal___type = 'page___parent___internal___type',
-  page___children = 'page___children',
-  page___children___id = 'page___children___id',
-  page___children___parent___id = 'page___children___parent___id',
-  page___children___parent___children = 'page___children___parent___children',
-  page___children___children = 'page___children___children',
-  page___children___children___id = 'page___children___children___id',
-  page___children___children___children = 'page___children___children___children',
-  page___children___internal___content = 'page___children___internal___content',
-  page___children___internal___contentDigest = 'page___children___internal___contentDigest',
-  page___children___internal___description = 'page___children___internal___description',
-  page___children___internal___fieldOwners = 'page___children___internal___fieldOwners',
-  page___children___internal___ignoreType = 'page___children___internal___ignoreType',
-  page___children___internal___mediaType = 'page___children___internal___mediaType',
-  page___children___internal___owner = 'page___children___internal___owner',
-  page___children___internal___type = 'page___children___internal___type',
-  page___internal___content = 'page___internal___content',
-  page___internal___contentDigest = 'page___internal___contentDigest',
-  page___internal___description = 'page___internal___description',
-  page___internal___fieldOwners = 'page___internal___fieldOwners',
-  page___internal___ignoreType = 'page___internal___ignoreType',
-  page___internal___mediaType = 'page___internal___mediaType',
-  page___internal___owner = 'page___internal___owner',
-  page___internal___type = 'page___internal___type',
   button___id = 'button___id',
   button___parent___id = 'button___parent___id',
   button___parent___parent___id = 'button___parent___parent___id',
@@ -3064,6 +3024,56 @@ export enum ContentfulBlockJumbotronFieldsEnum {
   sys___contentType___sys___type = 'sys___contentType___sys___type',
   sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
   sys___contentType___sys___id = 'sys___contentType___sys___id',
+  page = 'page',
+  page___contentful_id = 'page___contentful_id',
+  page___id = 'page___id',
+  page___node_locale = 'page___node_locale',
+  page___title = 'page___title',
+  page___slug = 'page___slug',
+  page___seoTitle = 'page___seoTitle',
+  page___seoDescription = 'page___seoDescription',
+  page___spaceId = 'page___spaceId',
+  page___createdAt = 'page___createdAt',
+  page___updatedAt = 'page___updatedAt',
+  page___sys___type = 'page___sys___type',
+  page___sys___revision = 'page___sys___revision',
+  page___parent___id = 'page___parent___id',
+  page___parent___parent___id = 'page___parent___parent___id',
+  page___parent___parent___children = 'page___parent___parent___children',
+  page___parent___children = 'page___parent___children',
+  page___parent___children___id = 'page___parent___children___id',
+  page___parent___children___children = 'page___parent___children___children',
+  page___parent___internal___content = 'page___parent___internal___content',
+  page___parent___internal___contentDigest = 'page___parent___internal___contentDigest',
+  page___parent___internal___description = 'page___parent___internal___description',
+  page___parent___internal___fieldOwners = 'page___parent___internal___fieldOwners',
+  page___parent___internal___ignoreType = 'page___parent___internal___ignoreType',
+  page___parent___internal___mediaType = 'page___parent___internal___mediaType',
+  page___parent___internal___owner = 'page___parent___internal___owner',
+  page___parent___internal___type = 'page___parent___internal___type',
+  page___children = 'page___children',
+  page___children___id = 'page___children___id',
+  page___children___parent___id = 'page___children___parent___id',
+  page___children___parent___children = 'page___children___parent___children',
+  page___children___children = 'page___children___children',
+  page___children___children___id = 'page___children___children___id',
+  page___children___children___children = 'page___children___children___children',
+  page___children___internal___content = 'page___children___internal___content',
+  page___children___internal___contentDigest = 'page___children___internal___contentDigest',
+  page___children___internal___description = 'page___children___internal___description',
+  page___children___internal___fieldOwners = 'page___children___internal___fieldOwners',
+  page___children___internal___ignoreType = 'page___children___internal___ignoreType',
+  page___children___internal___mediaType = 'page___children___internal___mediaType',
+  page___children___internal___owner = 'page___children___internal___owner',
+  page___children___internal___type = 'page___children___internal___type',
+  page___internal___content = 'page___internal___content',
+  page___internal___contentDigest = 'page___internal___contentDigest',
+  page___internal___description = 'page___internal___description',
+  page___internal___fieldOwners = 'page___internal___fieldOwners',
+  page___internal___ignoreType = 'page___internal___ignoreType',
+  page___internal___mediaType = 'page___internal___mediaType',
+  page___internal___owner = 'page___internal___owner',
+  page___internal___type = 'page___internal___type',
   childrenContentfulBlockJumbotronButtonJsonNode = 'childrenContentfulBlockJumbotronButtonJsonNode',
   childrenContentfulBlockJumbotronButtonJsonNode___id = 'childrenContentfulBlockJumbotronButtonJsonNode___id',
   childrenContentfulBlockJumbotronButtonJsonNode___parent___id = 'childrenContentfulBlockJumbotronButtonJsonNode___parent___id',
@@ -3251,12 +3261,12 @@ export type ContentfulBlockJumbotronFilterInput = {
   imageOnLeft?: Maybe<BooleanQueryOperatorInput>;
   image?: Maybe<ContentfulAssetFilterInput>;
   backgroundImage?: Maybe<ContentfulAssetFilterInput>;
-  page?: Maybe<ContentfulPageFilterListInput>;
   button?: Maybe<ContentfulBlockJumbotronButtonJsonNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockJumbotronSysFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
   childrenContentfulBlockJumbotronButtonJsonNode?: Maybe<ContentfulBlockJumbotronButtonJsonNodeFilterListInput>;
   childContentfulBlockJumbotronButtonJsonNode?: Maybe<ContentfulBlockJumbotronButtonJsonNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -4619,6 +4629,8 @@ export type ContentfulPage = ContentfulReference & ContentfulEntry & Node & {
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
+  seoTitle?: Maybe<Scalars['String']>;
+  seoDescription?: Maybe<Scalars['String']>;
   blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListContentfulBlockImageBandContentfulBlockJumbotronUnion>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
@@ -4680,6 +4692,8 @@ export enum ContentfulPageFieldsEnum {
   node_locale = 'node_locale',
   title = 'title',
   slug = 'slug',
+  seoTitle = 'seoTitle',
+  seoDescription = 'seoDescription',
   spaceId = 'spaceId',
   createdAt = 'createdAt',
   updatedAt = 'updatedAt',
@@ -4781,6 +4795,8 @@ export type ContentfulPageFilterInput = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
+  seoTitle?: Maybe<StringQueryOperatorInput>;
+  seoDescription?: Maybe<StringQueryOperatorInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
@@ -6576,6 +6592,8 @@ export type QueryContentfulPageArgs = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
+  seoTitle?: Maybe<StringQueryOperatorInput>;
+  seoDescription?: Maybe<StringQueryOperatorInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
@@ -6721,12 +6739,12 @@ export type QueryContentfulBlockJumbotronArgs = {
   imageOnLeft?: Maybe<BooleanQueryOperatorInput>;
   image?: Maybe<ContentfulAssetFilterInput>;
   backgroundImage?: Maybe<ContentfulAssetFilterInput>;
-  page?: Maybe<ContentfulPageFilterListInput>;
   button?: Maybe<ContentfulBlockJumbotronButtonJsonNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockJumbotronSysFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
   childrenContentfulBlockJumbotronButtonJsonNode?: Maybe<ContentfulBlockJumbotronButtonJsonNodeFilterListInput>;
   childContentfulBlockJumbotronButtonJsonNode?: Maybe<ContentfulBlockJumbotronButtonJsonNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -9496,7 +9514,7 @@ export type PageTemplateQueryQuery = (
   { __typename?: 'Query' }
   & { page?: Maybe<(
     { __typename?: 'ContentfulPage' }
-    & Pick<ContentfulPage, 'title'>
+    & Pick<ContentfulPage, 'title' | 'seoTitle' | 'seoDescription'>
     & { blocks?: Maybe<Array<Maybe<(
       { __typename?: 'ContentfulBlockCallToAction' }
       & CallToActionFragmentFragment
