@@ -8,5 +8,6 @@ generates:
       - "typescript"
       - "typescript-operations"
 config:
+  maybeValue: "T"
   namingConvention:
     enumValues: keep

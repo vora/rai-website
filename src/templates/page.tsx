@@ -12,10 +12,15 @@ interface PageProps {
 }
 
 function Page({ data }: PageProps) {
+  const { page } = data;
+
   return (
-    <Layout>
-      {data?.page?.blocks ? (
-        <ContentfulBlocks blocks={data.page.blocks} />
+    <Layout
+      title={page?.seoTitle || page?.title}
+      description={page?.seoDescription}
+    >
+      {page?.blocks ? (
+        <ContentfulBlocks blocks={page.blocks} />
       ) : (
         <EmptyPage>
           <Icon icon="AlertTriangle" />{" "}
@@ -32,6 +37,8 @@ export const query = graphql`
   query PageTemplateQuery($slug: String!) {
     page: contentfulPage(slug: { eq: $slug }) {
       title
+      seoTitle
+      seoDescription
       blocks {
         ... on ContentfulBlockCallToAction {
           ...CallToActionFragment
