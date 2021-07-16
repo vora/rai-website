@@ -3,5 +3,6 @@
 **/coverage/**
 
 public
+storybook-static
 
 .env
