@@ -1,6 +1,7 @@
 **/.cache/**
 **/node_modules/**
 **/public/**
+**/storybook-static/**
 **/static/**
 **/graphql/graphql-types.ts
 **/*.css.d.ts
