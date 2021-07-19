@@ -5,6 +5,12 @@
   max-width: 100%;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .large {
   flex: 1;
   justify-self: flex-end;

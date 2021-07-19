@@ -1,13 +1,14 @@
 import React from "react";
-import { Heading } from "@/components/Heading";
 import { StaticImage } from "gatsby-plugin-image";
-import Layout from "../components/Layout";
+import { Layout } from "@/components/NewLayout";
+import { PageTitle } from "@/components/PageTitle";
 import {
   Headline2,
   MediumBody,
   UpperCaption,
   Headline4,
   BlankLink,
+  // @ts-expect-error Old component
 } from "../components/OldText";
 import {
   Jumbotron,
@@ -15,16 +16,17 @@ import {
   Row,
   Divider,
   TitleLink,
+  // @ts-expect-error Old component
 } from "../components/Blocks";
+// @ts-expect-error Old component
 import News from "../components/News";
+// @ts-expect-error Old component
 import StyledLink from "../components/StyledLink";
 
 function NewsPage() {
   return (
     <Layout title="News">
-      <Row small>
-        <Heading as="h1">In the News</Heading>
-      </Row>
+      <PageTitle title="In the News" />
       <Jumbotron style={{ marginBottom: "0px" }} gray>
         <JumboText>
           <UpperCaption>FEATURED ARTICLE</UpperCaption>

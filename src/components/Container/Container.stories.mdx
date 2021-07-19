@@ -1,0 +1,76 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Container } from ".";
+
+<Meta
+  title="layout/Container"
+  component={Container}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# Container
+
+The `Container` component is used to center content horizontally within a page. This component determines the "readable width" of the website.
+
+All content should be contained within a `Contianer` component
+
+## Usage
+
+```tsx
+import { Container } from "@/components/Container";
+```
+
+## Props
+
+<ArgsTable component={Container} />
+
+## Example
+
+<Canvas>
+  <Story name="Default">
+    {(args) => (
+      <Container {...args}>
+        Robot ipsum Conant blastoineae hieroate myeloship stannac turboty
+        hypsimycetes Araboate ultraopsis telephasia. Nomgram Japanoule
+        pneumostomy chrysocy stepome petroscribe sulfotropous ethnwear
+        corphagous. Imgamous immunoaceous chrysophobe Hellenoclinal xyress
+        hypnometer lipoworthy circumphagy. Archeotrichous butary theriophrenia
+        xennoaceae pleome atcratical euped anteable rhodoty homoeest. Reodontia
+        ovoad oligognathous iridioein icosathermic medicokin osmioen.
+        Xanthcratic glutaure Invergon spondylity dimethylimidazolmetric
+        chronokinesis.
+      </Container>
+    )}
+  </Story>
+</Canvas>
+
+## Sizes
+
+When writing longer form content, you should limit the amount of characters per line to help the reader stay focused.
+
+In this case we allow for `size` to be set on the `Container`.
+
+<Canvas>
+  <Story name="Sizes" args={{ size: "small" }}>
+    {(args) => (
+      <Container {...args}>
+        Robot ipsum Conant blastoineae hieroate myeloship stannac turboty
+        hypsimycetes Araboate ultraopsis telephasia. Nomgram Japanoule
+        pneumostomy chrysocy stepome petroscribe sulfotropous ethnwear
+        corphagous. Imgamous immunoaceous chrysophobe Hellenoclinal xyress
+        hypnometer lipoworthy circumphagy. Archeotrichous butary theriophrenia
+        xennoaceae pleome atcratical euped anteable rhodoty homoeest. Reodontia
+        ovoad oligognathous iridioein icosathermic medicokin osmioen.
+        Xanthcratic glutaure Invergon spondylity dimethylimidazolmetric
+        chronokinesis.
+      </Container>
+    )}
+  </Story>
+</Canvas>
+
+## Adding a classname
+
+A `Container` is often used to layout content that needs to be responsive to the screensize. To accomodate this, we allow for a `className` prop to be passed in.
+
+**This technique (also called an escape hatch), should not be used for other components. This is a dangerous technique that can cause serious discrepancies in components.**

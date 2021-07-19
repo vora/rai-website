@@ -1,5 +1,6 @@
 declare const styles: {
   readonly "navigation": string;
+  readonly "container": string;
   readonly "large": string;
   readonly "button": string;
   readonly "buttonOpen": string;

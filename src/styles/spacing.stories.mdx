@@ -1,0 +1,75 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta
+  title="design/Spacing"
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# Spacing
+
+We use CSS Custom Properties for spacing values within the Responsible AI website. There are a couple of reasons for this.
+
+1. **It allows for easy, consistent spacing throughout the site.** With these pre-defined values, there is no need to guess what a value should be.
+2. **It allows for much more simple responsive spacing.** Because every value is based off of `--space--base`, we are able to change the `--space--base` value at our different breakpoints and the results will cascade to the other valued. For an example of this, reload this window on desktop, and then on mobile and notice that the values will have changed.
+
+export function Visual({ of: size }) {
+  const style = {
+    width: `var(--space--${size})`,
+    height: "var(--space--base)",
+    backgroundColor: "var(--color--stone)",
+  };
+  return <div style={style} />;
+}
+
+export function Height({ of: size }) {
+  const element = document.createElement("div");
+  element.style.height = `var(--space--${size})`;
+  document.body.appendChild(element);
+  const value = getComputedStyle(element).height;
+  element.remove();
+  return value;
+}
+
+| Name               | Visual                   | Value                    |
+| :----------------- | :----------------------- | :----------------------- |
+| `--space--xxsmall` | <Visual of="xxsmall" />  | <Height of="xxsmall" />  |
+| `--space--xsmall`  | <Visual of="xsmall" />   | <Height of="xsmall" />   |
+| `--space-small`    | <Visual of="small" />    | <Height of="small" />    |
+| `--space-base`     | <Visual of="base" />     | <Height of="base" />     |
+| `--space-large`    | <Visual of="large" />    | <Height of="large" />    |
+| `--space-xlarge`   | <Visual of="xlarge" />   | <Height of="xlarge" />   |
+| `--space-xxlarge`  | <Visual of="xxlarge" />  | <Height of="xxlarge" />  |
+| `--space-xxxlarge` | <Visual of="xxxlarge" /> | <Height of="xxxlarge" /> |
+
+## Usage
+
+Spacing should be used in CSS with padding, margins, heights, widths and basically any value that has pixel value.
+
+```css
+.component {
+  ...
+  margin: var(--space--base) var(--space--large);
+  padding: var(--space--xxlarge);
+}
+```
+
+## Creating custom properties
+
+There will be times when you need to create a custom value for a component. These values should be based off of `--space--base` and not arbitrarily set.
+
+For example, say we have a component `Robot` that needs to be `300px` wide. Instead of setting the style to `width: 300px` we should create a new property and use that.
+
+```css
+// ❌ Incorrect
+.robot {
+  width: 300px;
+}
+
+// ✅ Correct
+.robot {
+  --component--robot--width: calc(var(--space--base) * 15);
+  width: var(--component--robot--width);
+}
+```

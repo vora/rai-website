@@ -49,7 +49,7 @@ export function Navigation() {
 
   return (
     <header ref={ref} className={styles.navigation}>
-      <Container flex justifyContent="spaceBetween">
+      <Container className={styles.container}>
         <Link to="/" aria-label="Responsible AI - Home Page">
           <Logo size={isLarge ? "base" : "small"} />
         </Link>

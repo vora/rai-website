@@ -42,11 +42,7 @@ export function Footer() {
 
   return (
     <footer className={styles.footer} ref={ref}>
-      <Container
-        flex={width >= Breakpoints.medium}
-        justifyContent="spaceBetween"
-        alignItems={isLarge ? "center" : "flexStart"}
-      >
+      <Container className={styles.container}>
         <Link to="/" aria-label="Responsible AI Home">
           <Logo size={isLarge ? "base" : "small"} variation="inverted" />
         </Link>
