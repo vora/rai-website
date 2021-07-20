@@ -1,4 +1,5 @@
 import { Meta } from "@storybook/addon-docs/blocks";
+import { getCustomProperties } from "../../docs/scripts/scripts";
 
 <Meta
   title="design/Spacing"
@@ -16,7 +17,7 @@ We use CSS Custom Properties for spacing values within the Responsible AI websit
 
 export function Visual({ of: size }) {
   const style = {
-    width: `var(--space--${size})`,
+    width: `var(${size})`,
     height: "var(--space--base)",
     backgroundColor: "var(--color--stone)",
   };
@@ -25,23 +26,45 @@ export function Visual({ of: size }) {
 
 export function Height({ of: size }) {
   const element = document.createElement("div");
-  element.style.height = `var(--space--${size})`;
+  element.style.height = `var(${size})`;
   document.body.appendChild(element);
   const value = getComputedStyle(element).height;
   element.remove();
   return value;
 }
 
-| Name               | Visual                   | Value                    |
-| :----------------- | :----------------------- | :----------------------- |
-| `--space--xxsmall` | <Visual of="xxsmall" />  | <Height of="xxsmall" />  |
-| `--space--xsmall`  | <Visual of="xsmall" />   | <Height of="xsmall" />   |
-| `--space-small`    | <Visual of="small" />    | <Height of="small" />    |
-| `--space-base`     | <Visual of="base" />     | <Height of="base" />     |
-| `--space-large`    | <Visual of="large" />    | <Height of="large" />    |
-| `--space-xlarge`   | <Visual of="xlarge" />   | <Height of="xlarge" />   |
-| `--space-xxlarge`  | <Visual of="xxlarge" />  | <Height of="xxlarge" />  |
-| `--space-xxxlarge` | <Visual of="xxxlarge" /> | <Height of="xxxlarge" /> |
+export function Spaces() {
+  const spacing = getCustomProperties("--space");
+  const theadStyle = { textAlign: "left" };
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th style={theadStyle}>Name</th>
+          <th style={theadStyle}>Visual</th>
+          <th style={theadStyle}>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {spacing.map((space) => {
+          return (
+            <tr key={space.key}>
+              <td>{space.key}</td>
+              <td>
+                <Visual of={space.key} />
+              </td>
+              <td>
+                <Height of={space.key} />
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+}
+
+<Spaces />
 
 ## Usage
 
