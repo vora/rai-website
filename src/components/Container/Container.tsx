@@ -4,7 +4,13 @@ import classnames from "classnames";
 import styles from "./Container.module.css";
 
 interface ContainerProps {
+  /**
+   * Add an additional className to the container component
+   */
   readonly className?: string;
+  /**
+   * Determine the size (width) of the container
+   */
   readonly size?: "base" | "small";
 }
 
