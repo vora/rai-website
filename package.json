@@ -27,8 +27,8 @@
     "test": "jest --coverage",
     "typecheck": "tsc --noEmit --project tsconfig.json",
     "cssTypes": "tcm src/components",
-    "storybook": "start-storybook -p 8100 -s public --docs",
-    "build-storybook": "build-storybook -s public --docs",
+    "storybook": "start-storybook -p 8100 -s public",
+    "build-storybook": "build-storybook -s public",
     "publish-storybook": "npm run build && npm run build-storybook",
     "codegen": "graphql-codegen --config codegen.yml",
     "generate:types": "gatsby build --die-on-codegen"
