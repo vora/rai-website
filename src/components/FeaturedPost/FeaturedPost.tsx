@@ -5,29 +5,73 @@ import { Heading } from "@/components/Heading";
 import { Text } from "@/components/Text";
 import { Link } from "@/components/Link";
 
+import { FeaturedPostNewsFragmentFragment } from "@/graphql/graphql-types";
+import { graphql } from "gatsby";
 import styles from "./FeaturedPost.module.css";
+import { Image } from "../Image";
 
-export function FeaturedPost() {
+interface FeaturedPostProps {
+  readonly data: FeaturedPostNewsFragmentFragment;
+  readonly caption?: string;
+  readonly linkText: string;
+  readonly slugPrefix?: string;
+}
+
+export function FeaturedPost({
+  data,
+  caption,
+  linkText,
+  slugPrefix,
+}: FeaturedPostProps) {
+  const url = createUrl();
   return (
     <div className={styles.wrapper}>
-      <Container>
+      <Container className={styles.container}>
         <div>
-          <Caption title="Featured Article" />
-          <Heading>
-            Independent Certification Working Group Launched for Advancing
-            Ethical and Responsible AI
-          </Heading>
-          <Text>
-            Implement AI in a responsible and ethical way with our Responsible
-            AI certification, the first independent, accredited program of its
-            kind, developed in partnership with the World Economic Forum and
-            Schwartz.
-          </Text>
-          <Link url="/foo" icon="ArrowRight">
-            Foo
-          </Link>
+          {caption && (
+            <div className={styles.caption}>
+              <Caption title={caption} />
+            </div>
+          )}
+          <Heading>{data.title}</Heading>
+          <Text>{data.excerpt?.excerpt}</Text>
+          <div className={styles.link}>
+            <Link url={url} icon="ArrowRight">
+              {linkText}
+            </Link>
+          </div>
         </div>
+        {data.featuredImage && (
+          <div className={styles.image}>
+            <Image animation="slide-from-left" {...data.featuredImage} />
+          </div>
+        )}
       </Container>
     </div>
   );
+
+  function createUrl() {
+    let newUrl = "/";
+
+    if (slugPrefix) {
+      newUrl = `${newUrl + slugPrefix}/`;
+    }
+
+    newUrl += data.slug;
+
+    return newUrl;
+  }
 }
+
+export const FeaturedPostNewsFragment = graphql`
+  fragment FeaturedPostNewsFragment on ContentfulNews {
+    title
+    excerpt {
+      excerpt
+    }
+    slug
+    featuredImage {
+      ...ImageFragment
+    }
+  }
+`;

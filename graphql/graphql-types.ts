@@ -10635,6 +10635,18 @@ export type AllJumbotronBlocksQuery = (
   ) }
 );
 
+export type FeaturedPostNewsFragmentFragment = (
+  { __typename?: 'ContentfulNews' }
+  & Pick<ContentfulNews, 'title' | 'slug'>
+  & { excerpt?: Maybe<(
+    { __typename?: 'contentfulNewsExcerptTextNode' }
+    & Pick<ContentfulNewsExcerptTextNode, 'excerpt'>
+  )>, featuredImage?: Maybe<(
+    { __typename?: 'ContentfulAsset' }
+    & ImageFragmentFragment
+  )> }
+);
+
 export type ImageFragmentFragment = (
   { __typename?: 'ContentfulAsset' }
   & Pick<ContentfulAsset, 'title' | 'description' | 'gatsbyImageData'>
@@ -10682,6 +10694,21 @@ export type Unnamed_1_Query = (
         { __typename?: 'ContentfulAsset' }
         & Pick<ContentfulAsset, 'gatsbyImageData'>
       )> }
+    )> }
+  ) }
+);
+
+export type AllContentfulNewsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllContentfulNewsQuery = (
+  { __typename?: 'Query' }
+  & { allContentfulNews: (
+    { __typename?: 'ContentfulNewsConnection' }
+    & { nodes: Array<(
+      { __typename?: 'ContentfulNews' }
+      & Pick<ContentfulNews, 'featured'>
+      & FeaturedPostNewsFragmentFragment
     )> }
   ) }
 );
