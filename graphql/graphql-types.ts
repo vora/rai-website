@@ -10635,6 +10635,11 @@ export type AllJumbotronBlocksQuery = (
   ) }
 );
 
+export type ImageFragmentFragment = (
+  { __typename?: 'ContentfulAsset' }
+  & Pick<ContentfulAsset, 'title' | 'description' | 'gatsbyImageData'>
+);
+
 export type BannerQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
