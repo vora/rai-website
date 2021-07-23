@@ -10647,6 +10647,18 @@ export type FeaturedPostNewsFragmentFragment = (
   )> }
 );
 
+export type FeaturedPostBlogFragmentFragment = (
+  { __typename?: 'ContentfulBlogPost' }
+  & Pick<ContentfulBlogPost, 'title' | 'slug'>
+  & { excerpt?: Maybe<(
+    { __typename?: 'contentfulBlogPostExcerptTextNode' }
+    & Pick<ContentfulBlogPostExcerptTextNode, 'excerpt'>
+  )>, featuredImage?: Maybe<(
+    { __typename?: 'ContentfulAsset' }
+    & ImageFragmentFragment
+  )> }
+);
+
 export type ImageFragmentFragment = (
   { __typename?: 'ContentfulAsset' }
   & Pick<ContentfulAsset, 'title' | 'description' | 'gatsbyImageData'>
@@ -10677,23 +10689,17 @@ export type AllContentfulAssetsQuery = (
   ) }
 );
 
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
+export type AllContentfulBlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_1_Query = (
+export type AllContentfulBlogPostsQuery = (
   { __typename?: 'Query' }
   & { allContentfulBlogPost: (
     { __typename?: 'ContentfulBlogPostConnection' }
     & { nodes: Array<(
       { __typename?: 'ContentfulBlogPost' }
-      & Pick<ContentfulBlogPost, 'id' | 'slug' | 'title' | 'published' | 'featured'>
-      & { excerpt?: Maybe<(
-        { __typename?: 'contentfulBlogPostExcerptTextNode' }
-        & Pick<ContentfulBlogPostExcerptTextNode, 'excerpt'>
-      )>, featuredImage?: Maybe<(
-        { __typename?: 'ContentfulAsset' }
-        & Pick<ContentfulAsset, 'gatsbyImageData'>
-      )> }
+      & Pick<ContentfulBlogPost, 'id' | 'published' | 'featured'>
+      & FeaturedPostBlogFragmentFragment
     )> }
   ) }
 );

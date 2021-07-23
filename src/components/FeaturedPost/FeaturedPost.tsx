@@ -1,17 +1,21 @@
 import React from "react";
+import { graphql } from "gatsby";
 import { Container } from "@/components/Container";
 import { Caption } from "@/components/Caption";
 import { Heading } from "@/components/Heading";
 import { Text } from "@/components/Text";
 import { Link } from "@/components/Link";
-
-import { FeaturedPostNewsFragmentFragment } from "@/graphql/graphql-types";
-import { graphql } from "gatsby";
+import { Image } from "@/components/Image";
+import {
+  FeaturedPostNewsFragmentFragment,
+  FeaturedPostBlogFragmentFragment,
+} from "@/graphql/graphql-types";
 import styles from "./FeaturedPost.module.css";
-import { Image } from "../Image";
 
 interface FeaturedPostProps {
-  readonly data: FeaturedPostNewsFragmentFragment;
+  readonly data:
+    | FeaturedPostNewsFragmentFragment
+    | FeaturedPostBlogFragmentFragment;
   readonly caption?: string;
   readonly linkText: string;
   readonly slugPrefix?: string;
@@ -65,6 +69,19 @@ export function FeaturedPost({
 
 export const FeaturedPostNewsFragment = graphql`
   fragment FeaturedPostNewsFragment on ContentfulNews {
+    title
+    excerpt {
+      excerpt
+    }
+    slug
+    featuredImage {
+      ...ImageFragment
+    }
+  }
+`;
+
+export const FeaturedPostBlogFragment = graphql`
+  fragment FeaturedPostBlogFragment on ContentfulBlogPost {
     title
     excerpt {
       excerpt
