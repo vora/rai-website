@@ -1,0 +1,62 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { PostList } from ".";
+
+<Meta
+  title="posts/PostList"
+  component={PostList}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# PostList
+
+A `PostList` is used to display a list of `Post`s.
+
+## Usage
+
+```tsx
+import { PostList } from "@/components/PostList";
+```
+
+## Props
+
+<ArgsTable component={PostList} />
+
+## Example
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      posts: [
+        {
+          title: "Robots invade the world",
+          excerpt: {
+            excerpt: "The captain says you are a friend. I will not kill you.",
+          },
+          slug: "/robots",
+          published: "April 7th, 2021",
+        },
+        {
+          title: "Robots invade the world",
+          excerpt: {
+            excerpt: "The captain says you are a friend. I will not kill you.",
+          },
+          slug: "/robots",
+          published: "April 7th, 2021",
+        },
+        {
+          title: "Robots invade the world",
+          excerpt: {
+            excerpt: "The captain says you are a friend. I will not kill you.",
+          },
+          slug: "/robots",
+          published: "April 7th, 2021",
+        },
+      ],
+    }}
+  >
+    {(args) => <PostList {...args} />}
+  </Story>
+</Canvas>

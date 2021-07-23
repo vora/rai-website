@@ -1,0 +1,44 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Post } from ".";
+
+<Meta
+  title="posts/Post"
+  component={Post}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# Post
+
+A `Post` is used to show a preview of the contents of a `Contentful` post.
+
+## Usage
+
+```tsx
+import { Post } from "@/components/Post";
+```
+
+## Props
+
+<ArgsTable component={Post} />
+
+## Example
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      data: {
+        title: "Robots invade the world",
+        excerpt: {
+          excerpt: "The captain says you are a friend. I will not kill you.",
+        },
+        slug: "/robots",
+        published: "April 7th, 2021",
+      },
+    }}
+  >
+    {(args) => <Post {...args} />}
+  </Story>
+</Canvas>
