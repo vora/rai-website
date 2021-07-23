@@ -10664,6 +10664,24 @@ export type ImageFragmentFragment = (
   & Pick<ContentfulAsset, 'title' | 'description' | 'gatsbyImageData'>
 );
 
+export type PostNewsFragmentFragment = (
+  { __typename?: 'ContentfulNews' }
+  & Pick<ContentfulNews, 'id' | 'title' | 'slug' | 'published'>
+  & { excerpt?: Maybe<(
+    { __typename?: 'contentfulNewsExcerptTextNode' }
+    & Pick<ContentfulNewsExcerptTextNode, 'excerpt'>
+  )> }
+);
+
+export type PostBlogFragmentFragment = (
+  { __typename?: 'ContentfulBlogPost' }
+  & Pick<ContentfulBlogPost, 'id' | 'title' | 'slug' | 'published'>
+  & { excerpt?: Maybe<(
+    { __typename?: 'contentfulBlogPostExcerptTextNode' }
+    & Pick<ContentfulBlogPostExcerptTextNode, 'excerpt'>
+  )> }
+);
+
 export type BannerQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -10698,7 +10716,8 @@ export type AllContentfulBlogPostsQuery = (
     { __typename?: 'ContentfulBlogPostConnection' }
     & { nodes: Array<(
       { __typename?: 'ContentfulBlogPost' }
-      & Pick<ContentfulBlogPost, 'id' | 'published' | 'featured'>
+      & Pick<ContentfulBlogPost, 'id' | 'featured'>
+      & PostBlogFragmentFragment
       & FeaturedPostBlogFragmentFragment
     )> }
   ) }
@@ -10713,7 +10732,8 @@ export type AllContentfulNewsQuery = (
     { __typename?: 'ContentfulNewsConnection' }
     & { nodes: Array<(
       { __typename?: 'ContentfulNews' }
-      & Pick<ContentfulNews, 'featured'>
+      & Pick<ContentfulNews, 'id' | 'featured'>
+      & PostNewsFragmentFragment
       & FeaturedPostNewsFragmentFragment
     )> }
   ) }

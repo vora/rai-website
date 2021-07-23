@@ -4,6 +4,7 @@ import { Layout } from "@/components/NewLayout";
 import { PageTitle } from "@/components/PageTitle";
 import { FeaturedPost } from "@/components/FeaturedPost";
 import { AllContentfulBlogPostsQuery } from "@/graphql/graphql-types";
+import { PostList } from "@/components/PostList";
 
 interface BlogProps {
   data: AllContentfulBlogPostsQuery;
@@ -23,13 +24,9 @@ function Blog({ data }: BlogProps) {
         linkText="Read Blog Post"
         slugPrefix="blog"
       />
-      {/* {posts && (
-        <Container>
-          <PostList
-            posts={posts.filter((_, index) => index !== featuredPostIndex)}
-          />
-        </Container>
-      )} */}
+      <PostList
+        posts={posts.filter((_, index) => index !== featuredPostIndex)}
+      />
     </Layout>
   );
 }
@@ -39,8 +36,8 @@ export const query = graphql`
     allContentfulBlogPost(sort: { fields: published, order: DESC }) {
       nodes {
         id
-        published(formatString: "MMMM D, YYYY")
         featured
+        ...PostBlogFragment
         ...FeaturedPostBlogFragment
       }
     }
