@@ -10794,3 +10794,19 @@ export type PageTemplateQueryQuery = (
     )>>> }
   )> }
 );
+
+export type PostQueryQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type PostQueryQuery = (
+  { __typename?: 'Query' }
+  & { contentfulBlogPost?: Maybe<(
+    { __typename?: 'ContentfulBlogPost' }
+    & Pick<ContentfulBlogPost, 'title'>
+  )>, contentfulNews?: Maybe<(
+    { __typename?: 'ContentfulNews' }
+    & Pick<ContentfulNews, 'title'>
+  )> }
+);

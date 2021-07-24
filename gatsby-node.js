@@ -14,15 +14,31 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
           slug
         }
       }
+      allContentfulNews {
+        nodes {
+          slug
+        }
+      }
       allContentfulPage {
         nodes {
           slug
         }
       }
     }
-  `).then((result) => {
+  `).then(({ data }) => {
+    // Generate our news pages
+    data.allContentfulNews.nodes.forEach((node) => {
+      createPage({
+        path: `/news/${node.slug.replace(/ /g, "-")}`,
+        component: path.resolve(`./src/templates/post.tsx`),
+        context: {
+          slug: node.slug,
+        },
+      });
+    });
+
     // Generate our blog pages
-    result.data.allContentfulBlogPost.nodes.forEach((node) => {
+    data.allContentfulBlogPost.nodes.forEach((node) => {
       createPage({
         path: `/blog/${node.slug.replace(/ /g, "-")}`,
         component: path.resolve(`./src/templates/blog.tsx`),
@@ -33,7 +49,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
     });
 
     // Generate our pages
-    result.data.allContentfulPage.nodes.forEach((node) => {
+    data.allContentfulPage.nodes.forEach((node) => {
       if (node.slug !== "certification") {
         return;
       }

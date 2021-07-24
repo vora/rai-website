@@ -1,6 +1,5 @@
 import React from "react";
 import { Heading } from "@/components/Heading";
-import { Container } from "@/components/Container";
 
 import styles from "./PageTitle.module.css";
 
@@ -10,8 +9,8 @@ interface PageTitleProps {
 
 export function PageTitle({ title }: PageTitleProps) {
   return (
-    <Container className={styles.title}>
+    <div className={styles.title}>
       <Heading as="h1">{title}</Heading>
-    </Container>
+    </div>
   );
 }

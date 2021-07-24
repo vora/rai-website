@@ -3,8 +3,9 @@ import { graphql } from "gatsby";
 import { Layout } from "@/components/NewLayout";
 import { PageTitle } from "@/components/PageTitle";
 import { FeaturedPost } from "@/components/FeaturedPost";
-import { AllContentfulBlogPostsQuery } from "@/graphql/graphql-types";
 import { PostList } from "@/components/PostList";
+import { Container } from "@/components/Container";
+import { AllContentfulBlogPostsQuery } from "@/graphql/graphql-types";
 
 interface BlogProps {
   data: AllContentfulBlogPostsQuery;
@@ -17,7 +18,9 @@ function Blog({ data }: BlogProps) {
 
   return (
     <Layout title="Blog">
-      <PageTitle title="Blog" />
+      <Container>
+        <PageTitle title="Blog" />
+      </Container>
       <FeaturedPost
         data={featuredPost}
         caption="Featured Article"

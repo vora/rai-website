@@ -19,7 +19,9 @@ function NewsPage({ data }: NewsPageProps) {
   const featuredPost = posts[featuredPostIndex];
   return (
     <Layout title="News">
-      <PageTitle title="In the News" />
+      <Container>
+        <PageTitle title="In the News" />
+      </Container>
       <FeaturedPost
         data={featuredPost}
         caption="Featured Article"
