@@ -1,0 +1,40 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { BlockQuote } from ".";
+import { Text } from "@/components/Text";
+
+<Meta
+  title="components/BlockQuote"
+  component={BlockQuote}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# BlockQuote
+
+A `BlockQuote` is used to show a quote from a source. It is most commonly used within `RichText` from `Contentful`.
+
+## Usage
+
+```tsx
+import { BlockQuote } from "@/components/BlockQuote";
+```
+
+## Props
+
+<ArgsTable component={BlockQuote} />
+
+## Example
+
+<Canvas>
+  <Story name="Default">
+    {(args) => (
+      <BlockQuote {...args}>
+        <Text>
+          Why couldn’t that bounty hunter have taken Captain Solo to a more...
+          pleasant environment?
+        </Text>
+      </BlockQuote>
+    )}
+  </Story>
+</Canvas>
