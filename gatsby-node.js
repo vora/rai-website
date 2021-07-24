@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
     data.allContentfulBlogPost.nodes.forEach((node) => {
       createPage({
         path: `/blog/${node.slug.replace(/ /g, "-")}`,
-        component: path.resolve(`./src/templates/blog.tsx`),
+        component: path.resolve(`./src/templates/post.tsx`),
         context: {
           slug: node.slug,
         },
