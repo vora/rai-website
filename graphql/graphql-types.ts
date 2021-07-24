@@ -10804,9 +10804,9 @@ export type PostQueryQuery = (
   { __typename?: 'Query' }
   & { contentfulBlogPost?: Maybe<(
     { __typename?: 'ContentfulBlogPost' }
-    & Pick<ContentfulBlogPost, 'title'>
+    & Pick<ContentfulBlogPost, 'title' | 'published'>
   )>, contentfulNews?: Maybe<(
     { __typename?: 'ContentfulNews' }
-    & Pick<ContentfulNews, 'title'>
+    & Pick<ContentfulNews, 'title' | 'published'>
   )> }
 );

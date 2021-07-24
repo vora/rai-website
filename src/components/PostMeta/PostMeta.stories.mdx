@@ -1,0 +1,32 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { PostMeta } from ".";
+
+<Meta
+  title="posts/PostMeta"
+  component={PostMeta}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# PostMeta
+
+A `PostMeta` component will show all the meta information related to a `Post`.
+
+## Usage
+
+```tsx
+import { PostMeta } from "@/components/PostMeta";
+```
+
+## Props
+
+<ArgsTable component={PostMeta} />
+
+## Example
+
+<Canvas>
+  <Story name="Default" args={{ date: "April 7th, 2021" }}>
+    {(args) => <PostMeta {...args} />}
+  </Story>
+</Canvas>
