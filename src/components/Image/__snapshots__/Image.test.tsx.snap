@@ -34,6 +34,7 @@ exports[`renders an image 1`] = `
       />
       <img
         alt="Rai Badge in Full - Description"
+        contentful_id="12345"
         data-gatsby-image-ssr=""
         data-main-image=""
         data-src="//images.ctfassets.net/rz1q59puyoaw/7GDSSUgdGoG1l2HEfVSrxz/0b8303fcaa1f283b1acd8f38be624dfb/rai-badge-full.png?w=337&h=338&q=50&fm=png"
