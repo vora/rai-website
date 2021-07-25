@@ -1,8 +1,9 @@
 .quote {
-  border-left: var(--space--xxsmall) solid var(--color--gravy);
-  padding: var(--space--xsmall) var(--space--base);
+  border-left: 2px solid var(--color--gravy);
+  padding: var(--space--xsmall) var(--space--large);
   background: var(--color--ghost);
   border-radius: 2px;
+  margin: var(--space--large) 0;
 }
 
 .quote * {

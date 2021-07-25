@@ -7,6 +7,7 @@ import { PageTitle } from "@/components/PageTitle";
 import { Divider } from "@/components/Divider";
 import { PostMeta } from "@/components/PostMeta";
 import { Image } from "@/components/Image";
+import { PostAuthor } from "@/components/PostAuthor";
 import { PostContent, PostContentContext } from "@/components/PostContent";
 
 interface PostProps {
@@ -14,10 +15,7 @@ interface PostProps {
 }
 
 function Post({ data }: PostProps) {
-  /**
-   * Select whether we are dealing with news or blog post
-   */
-  const post = data.contentfulBlogPost || data.contentfulNews;
+  const post = data.contentfulBlogPost;
 
   return (
     <Layout>
@@ -33,6 +31,7 @@ function Post({ data }: PostProps) {
         {post?.content && (
           <PostContent content={post?.content as PostContentContext} />
         )}
+        {post?.author && <PostAuthor data={post?.author} />}
       </Container>
     </Layout>
   );
@@ -44,17 +43,15 @@ export const query = graphql`
       title
       published(formatString: "MMM D, YYYY")
       featuredImage {
-        ...ImageFragment
+        contentful_id
+        title
+        description
+        gatsbyImageData(width: 900, placeholder: BLURRED, formats: [AUTO, WEBP])
+      }
+      author {
+        ...PostAuthorFragment
       }
       ...PostContentBlogFragment
-    }
-    contentfulNews(slug: { eq: $slug }) {
-      title
-      published(formatString: "MMM D, YYYY")
-      featuredImage {
-        ...ImageFragment
-      }
-      ...PostContentNewsFragment
     }
   }
 `;
