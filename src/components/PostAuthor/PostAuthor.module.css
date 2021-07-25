@@ -1,0 +1,7 @@
+.author {
+  margin: var(--space--xxlarge) 0;
+}
+
+.bio {
+  margin-top: var(--space--small);
+}
