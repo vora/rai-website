@@ -6,16 +6,11 @@ import { Heading } from "@/components/Heading";
 import { Text } from "@/components/Text";
 import { Link } from "@/components/Link";
 import { Image } from "@/components/Image";
-import {
-  FeaturedPostNewsFragmentFragment,
-  FeaturedPostBlogFragmentFragment,
-} from "@/graphql/graphql-types";
+import { FeaturedPostFragmentFragment } from "@/graphql/graphql-types";
 import styles from "./FeaturedPost.module.css";
 
 interface FeaturedPostProps {
-  readonly data:
-    | FeaturedPostNewsFragmentFragment
-    | FeaturedPostBlogFragmentFragment;
+  readonly data: FeaturedPostFragmentFragment;
   readonly caption?: string;
   readonly linkText: string;
   readonly slugPrefix?: string;
@@ -67,21 +62,8 @@ export function FeaturedPost({
   }
 }
 
-export const FeaturedPostNewsFragment = graphql`
-  fragment FeaturedPostNewsFragment on ContentfulNews {
-    title
-    excerpt {
-      excerpt
-    }
-    slug
-    featuredImage {
-      ...ImageFragment
-    }
-  }
-`;
-
-export const FeaturedPostBlogFragment = graphql`
-  fragment FeaturedPostBlogFragment on ContentfulBlogPost {
+export const FeaturedPostFragment = graphql`
+  fragment FeaturedPostFragment on ContentfulBlogPost {
     title
     excerpt {
       excerpt

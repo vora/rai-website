@@ -4,15 +4,12 @@ import { Link } from "@/components/Link";
 import { Heading } from "@/components/Heading";
 import { Text } from "@/components/Text";
 import { Caption } from "@/components/Caption";
-import {
-  PostNewsFragmentFragment,
-  PostBlogFragmentFragment,
-} from "@/graphql/graphql-types";
+import { PostFragmentFragment } from "@/graphql/graphql-types";
 
 import styles from "./Post.module.css";
 
 interface PostProps {
-  readonly data: PostNewsFragmentFragment | PostBlogFragmentFragment;
+  readonly data: PostFragmentFragment;
 }
 
 export function Post({ data }: PostProps) {
@@ -29,20 +26,8 @@ export function Post({ data }: PostProps) {
   );
 }
 
-export const PostNewsFragment = graphql`
-  fragment PostNewsFragment on ContentfulNews {
-    id
-    title
-    slug
-    published(formatString: "MMMM D, YYYY")
-    excerpt {
-      excerpt
-    }
-  }
-`;
-
-export const PostBlogFragment = graphql`
-  fragment PostBlogFragment on ContentfulBlogPost {
+export const PostFragment = graphql`
+  fragment PostFragment on ContentfulBlogPost {
     id
     title
     slug

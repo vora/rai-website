@@ -35,13 +35,13 @@ function Blog({ data }: BlogProps) {
 }
 
 export const query = graphql`
-  query AllContentfulBlogPosts {
+  query BlogPage {
     allContentfulBlogPost(sort: { fields: published, order: DESC }) {
       nodes {
         id
         featured
-        ...PostBlogFragment
-        ...FeaturedPostBlogFragment
+        ...PostFragment
+        ...FeaturedPostFragment
       }
     }
   }

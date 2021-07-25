@@ -10701,19 +10701,7 @@ export type AllJumbotronBlocksQuery = (
   ) }
 );
 
-export type FeaturedPostNewsFragmentFragment = (
-  { __typename?: 'ContentfulNews' }
-  & Pick<ContentfulNews, 'title' | 'slug'>
-  & { excerpt?: Maybe<(
-    { __typename?: 'contentfulNewsExcerptTextNode' }
-    & Pick<ContentfulNewsExcerptTextNode, 'excerpt'>
-  )>, featuredImage?: Maybe<(
-    { __typename?: 'ContentfulAsset' }
-    & ImageFragmentFragment
-  )> }
-);
-
-export type FeaturedPostBlogFragmentFragment = (
+export type FeaturedPostFragmentFragment = (
   { __typename?: 'ContentfulBlogPost' }
   & Pick<ContentfulBlogPost, 'title' | 'slug'>
   & { excerpt?: Maybe<(
@@ -10730,16 +10718,7 @@ export type ImageFragmentFragment = (
   & Pick<ContentfulAsset, 'contentful_id' | 'title' | 'description' | 'gatsbyImageData'>
 );
 
-export type PostNewsFragmentFragment = (
-  { __typename?: 'ContentfulNews' }
-  & Pick<ContentfulNews, 'id' | 'title' | 'slug' | 'published'>
-  & { excerpt?: Maybe<(
-    { __typename?: 'contentfulNewsExcerptTextNode' }
-    & Pick<ContentfulNewsExcerptTextNode, 'excerpt'>
-  )> }
-);
-
-export type PostBlogFragmentFragment = (
+export type PostFragmentFragment = (
   { __typename?: 'ContentfulBlogPost' }
   & Pick<ContentfulBlogPost, 'id' | 'title' | 'slug' | 'published'>
   & { excerpt?: Maybe<(
@@ -10807,8 +10786,8 @@ export type AllContentfulBlogPostsQuery = (
     & { nodes: Array<(
       { __typename?: 'ContentfulBlogPost' }
       & Pick<ContentfulBlogPost, 'id' | 'featured'>
-      & PostBlogFragmentFragment
-      & FeaturedPostBlogFragmentFragment
+      & PostFragmentFragment
+      & FeaturedPostFragmentFragment
     )> }
   ) }
 );
@@ -10823,8 +10802,6 @@ export type AllContentfulNewsQuery = (
     & { nodes: Array<(
       { __typename?: 'ContentfulNews' }
       & Pick<ContentfulNews, 'id' | 'featured'>
-      & PostNewsFragmentFragment
-      & FeaturedPostNewsFragmentFragment
     )> }
   ) }
 );

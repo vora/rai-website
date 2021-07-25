@@ -2,15 +2,12 @@ import React, { Fragment } from "react";
 import { Post } from "@/components/Post";
 import { Divider } from "@/components/Divider";
 import { Container } from "@/components/Container";
-import {
-  PostNewsFragmentFragment,
-  PostBlogFragmentFragment,
-} from "@/graphql/graphql-types";
+import { PostFragmentFragment } from "@/graphql/graphql-types";
 
 import styles from "./PostList.module.css";
 
 interface PostListProps {
-  readonly posts: Array<PostNewsFragmentFragment | PostBlogFragmentFragment>;
+  readonly posts: Array<PostFragmentFragment>;
 }
 
 export function PostList({ posts }: PostListProps) {

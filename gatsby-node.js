@@ -26,17 +26,6 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
       }
     }
   `).then(({ data }) => {
-    // Generate our news pages
-    data.allContentfulNews.nodes.forEach((node) => {
-      createPage({
-        path: `/news/${node.slug.replace(/ /g, "-")}`,
-        component: path.resolve(`./src/templates/post.tsx`),
-        context: {
-          slug: node.slug,
-        },
-      });
-    });
-
     // Generate our blog pages
     data.allContentfulBlogPost.nodes.forEach((node) => {
       createPage({
