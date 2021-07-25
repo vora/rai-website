@@ -6,6 +6,8 @@ import { Container } from "@/components/Container";
 import { PageTitle } from "@/components/PageTitle";
 import { Divider } from "@/components/Divider";
 import { PostMeta } from "@/components/PostMeta";
+import { Image } from "@/components/Image";
+import { PostContent, PostContentContext } from "@/components/PostContent";
 
 interface PostProps {
   data: PostQueryQuery;
@@ -26,8 +28,11 @@ function Post({ data }: PostProps) {
             <Divider />
           </>
         )}
-
         <PostMeta date={post?.published} />
+        {post?.featuredImage && <Image {...post.featuredImage} />}
+        {post?.content && (
+          <PostContent content={post?.content as PostContentContext} />
+        )}
       </Container>
     </Layout>
   );
@@ -38,10 +43,18 @@ export const query = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       published(formatString: "MMM D, YYYY")
+      featuredImage {
+        ...ImageFragment
+      }
+      ...PostContentBlogFragment
     }
     contentfulNews(slug: { eq: $slug }) {
       title
       published(formatString: "MMM D, YYYY")
+      featuredImage {
+        ...ImageFragment
+      }
+      ...PostContentNewsFragment
     }
   }
 `;

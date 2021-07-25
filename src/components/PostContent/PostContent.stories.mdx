@@ -1,0 +1,28 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { PostContent } from ".";
+
+<Meta
+  title="posts/PostContent"
+  component={PostContent}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# PostContent
+
+## Usage
+
+```tsx
+import { PostContent } from "@/components/PostContent";
+```
+
+## Props
+
+<ArgsTable component={PostContent} />
+
+## Example
+
+<Canvas>
+  <Story name="Default">{(args) => <PostContent {...args} />}</Story>
+</Canvas>

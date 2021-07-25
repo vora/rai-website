@@ -1,4 +1,5 @@
 export const mockImage = {
+  contentful_id: "12345",
   gatsbyImageData: {
     images: {
       sources: [

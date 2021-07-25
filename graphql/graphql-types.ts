@@ -456,9 +456,43 @@ export enum ContentfulAuthorFieldsEnum {
   news___node_locale = 'news___node_locale',
   news___title = 'news___title',
   news___slug = 'news___slug',
-  news___featured = 'news___featured',
   news___published = 'news___published',
   news___content___raw = 'news___content___raw',
+  news___content___references = 'news___content___references',
+  news___content___references___contentful_id = 'news___content___references___contentful_id',
+  news___content___references___id = 'news___content___references___id',
+  news___content___references___spaceId = 'news___content___references___spaceId',
+  news___content___references___createdAt = 'news___content___references___createdAt',
+  news___content___references___updatedAt = 'news___content___references___updatedAt',
+  news___content___references___title = 'news___content___references___title',
+  news___content___references___description = 'news___content___references___description',
+  news___content___references___node_locale = 'news___content___references___node_locale',
+  news___content___references___gatsbyImageData = 'news___content___references___gatsbyImageData',
+  news___content___references___children = 'news___content___references___children',
+  news___seoTitle = 'news___seoTitle',
+  news___seoDescription = 'news___seoDescription',
+  news___excerpt___id = 'news___excerpt___id',
+  news___excerpt___parent___id = 'news___excerpt___parent___id',
+  news___excerpt___parent___children = 'news___excerpt___parent___children',
+  news___excerpt___children = 'news___excerpt___children',
+  news___excerpt___children___id = 'news___excerpt___children___id',
+  news___excerpt___children___children = 'news___excerpt___children___children',
+  news___excerpt___internal___content = 'news___excerpt___internal___content',
+  news___excerpt___internal___contentDigest = 'news___excerpt___internal___contentDigest',
+  news___excerpt___internal___description = 'news___excerpt___internal___description',
+  news___excerpt___internal___fieldOwners = 'news___excerpt___internal___fieldOwners',
+  news___excerpt___internal___ignoreType = 'news___excerpt___internal___ignoreType',
+  news___excerpt___internal___mediaType = 'news___excerpt___internal___mediaType',
+  news___excerpt___internal___owner = 'news___excerpt___internal___owner',
+  news___excerpt___internal___type = 'news___excerpt___internal___type',
+  news___excerpt___excerpt = 'news___excerpt___excerpt',
+  news___excerpt___sys___type = 'news___excerpt___sys___type',
+  news___spaceId = 'news___spaceId',
+  news___createdAt = 'news___createdAt',
+  news___updatedAt = 'news___updatedAt',
+  news___sys___type = 'news___sys___type',
+  news___sys___revision = 'news___sys___revision',
+  news___featured = 'news___featured',
   news___featuredImage___contentful_id = 'news___featuredImage___contentful_id',
   news___featuredImage___id = 'news___featuredImage___id',
   news___featuredImage___spaceId = 'news___featuredImage___spaceId',
@@ -509,29 +543,6 @@ export enum ContentfulAuthorFieldsEnum {
   news___featuredImage___internal___mediaType = 'news___featuredImage___internal___mediaType',
   news___featuredImage___internal___owner = 'news___featuredImage___internal___owner',
   news___featuredImage___internal___type = 'news___featuredImage___internal___type',
-  news___excerpt___id = 'news___excerpt___id',
-  news___excerpt___parent___id = 'news___excerpt___parent___id',
-  news___excerpt___parent___children = 'news___excerpt___parent___children',
-  news___excerpt___children = 'news___excerpt___children',
-  news___excerpt___children___id = 'news___excerpt___children___id',
-  news___excerpt___children___children = 'news___excerpt___children___children',
-  news___excerpt___internal___content = 'news___excerpt___internal___content',
-  news___excerpt___internal___contentDigest = 'news___excerpt___internal___contentDigest',
-  news___excerpt___internal___description = 'news___excerpt___internal___description',
-  news___excerpt___internal___fieldOwners = 'news___excerpt___internal___fieldOwners',
-  news___excerpt___internal___ignoreType = 'news___excerpt___internal___ignoreType',
-  news___excerpt___internal___mediaType = 'news___excerpt___internal___mediaType',
-  news___excerpt___internal___owner = 'news___excerpt___internal___owner',
-  news___excerpt___internal___type = 'news___excerpt___internal___type',
-  news___excerpt___excerpt = 'news___excerpt___excerpt',
-  news___excerpt___sys___type = 'news___excerpt___sys___type',
-  news___spaceId = 'news___spaceId',
-  news___createdAt = 'news___createdAt',
-  news___updatedAt = 'news___updatedAt',
-  news___sys___type = 'news___sys___type',
-  news___sys___revision = 'news___sys___revision',
-  news___seoTitle = 'news___seoTitle',
-  news___seoDescription = 'news___seoDescription',
   news___author___contentful_id = 'news___author___contentful_id',
   news___author___id = 'news___author___id',
   news___author___node_locale = 'news___author___node_locale',
@@ -542,13 +553,13 @@ export enum ContentfulAuthorFieldsEnum {
   news___author___news___node_locale = 'news___author___news___node_locale',
   news___author___news___title = 'news___author___news___title',
   news___author___news___slug = 'news___author___news___slug',
-  news___author___news___featured = 'news___author___news___featured',
   news___author___news___published = 'news___author___news___published',
+  news___author___news___seoTitle = 'news___author___news___seoTitle',
+  news___author___news___seoDescription = 'news___author___news___seoDescription',
   news___author___news___spaceId = 'news___author___news___spaceId',
   news___author___news___createdAt = 'news___author___news___createdAt',
   news___author___news___updatedAt = 'news___author___news___updatedAt',
-  news___author___news___seoTitle = 'news___author___news___seoTitle',
-  news___author___news___seoDescription = 'news___author___news___seoDescription',
+  news___author___news___featured = 'news___author___news___featured',
   news___author___news___childrenContentfulNewsExcerptTextNode = 'news___author___news___childrenContentfulNewsExcerptTextNode',
   news___author___news___children = 'news___author___news___children',
   news___author___biography___id = 'news___author___biography___id',
@@ -744,13 +755,13 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___author___news___node_locale = 'blog_post___author___news___node_locale',
   blog_post___author___news___title = 'blog_post___author___news___title',
   blog_post___author___news___slug = 'blog_post___author___news___slug',
-  blog_post___author___news___featured = 'blog_post___author___news___featured',
   blog_post___author___news___published = 'blog_post___author___news___published',
+  blog_post___author___news___seoTitle = 'blog_post___author___news___seoTitle',
+  blog_post___author___news___seoDescription = 'blog_post___author___news___seoDescription',
   blog_post___author___news___spaceId = 'blog_post___author___news___spaceId',
   blog_post___author___news___createdAt = 'blog_post___author___news___createdAt',
   blog_post___author___news___updatedAt = 'blog_post___author___news___updatedAt',
-  blog_post___author___news___seoTitle = 'blog_post___author___news___seoTitle',
-  blog_post___author___news___seoDescription = 'blog_post___author___news___seoDescription',
+  blog_post___author___news___featured = 'blog_post___author___news___featured',
   blog_post___author___news___childrenContentfulNewsExcerptTextNode = 'blog_post___author___news___childrenContentfulNewsExcerptTextNode',
   blog_post___author___news___children = 'blog_post___author___news___children',
   blog_post___author___biography___id = 'blog_post___author___biography___id',
@@ -3719,9 +3730,20 @@ export enum ContentfulBlogPostFieldsEnum {
   author___news___node_locale = 'author___news___node_locale',
   author___news___title = 'author___news___title',
   author___news___slug = 'author___news___slug',
-  author___news___featured = 'author___news___featured',
   author___news___published = 'author___news___published',
   author___news___content___raw = 'author___news___content___raw',
+  author___news___content___references = 'author___news___content___references',
+  author___news___seoTitle = 'author___news___seoTitle',
+  author___news___seoDescription = 'author___news___seoDescription',
+  author___news___excerpt___id = 'author___news___excerpt___id',
+  author___news___excerpt___children = 'author___news___excerpt___children',
+  author___news___excerpt___excerpt = 'author___news___excerpt___excerpt',
+  author___news___spaceId = 'author___news___spaceId',
+  author___news___createdAt = 'author___news___createdAt',
+  author___news___updatedAt = 'author___news___updatedAt',
+  author___news___sys___type = 'author___news___sys___type',
+  author___news___sys___revision = 'author___news___sys___revision',
+  author___news___featured = 'author___news___featured',
   author___news___featuredImage___contentful_id = 'author___news___featuredImage___contentful_id',
   author___news___featuredImage___id = 'author___news___featuredImage___id',
   author___news___featuredImage___spaceId = 'author___news___featuredImage___spaceId',
@@ -3732,16 +3754,6 @@ export enum ContentfulBlogPostFieldsEnum {
   author___news___featuredImage___node_locale = 'author___news___featuredImage___node_locale',
   author___news___featuredImage___gatsbyImageData = 'author___news___featuredImage___gatsbyImageData',
   author___news___featuredImage___children = 'author___news___featuredImage___children',
-  author___news___excerpt___id = 'author___news___excerpt___id',
-  author___news___excerpt___children = 'author___news___excerpt___children',
-  author___news___excerpt___excerpt = 'author___news___excerpt___excerpt',
-  author___news___spaceId = 'author___news___spaceId',
-  author___news___createdAt = 'author___news___createdAt',
-  author___news___updatedAt = 'author___news___updatedAt',
-  author___news___sys___type = 'author___news___sys___type',
-  author___news___sys___revision = 'author___news___sys___revision',
-  author___news___seoTitle = 'author___news___seoTitle',
-  author___news___seoDescription = 'author___news___seoDescription',
   author___news___author___contentful_id = 'author___news___author___contentful_id',
   author___news___author___id = 'author___news___author___id',
   author___news___author___node_locale = 'author___news___author___node_locale',
@@ -4921,17 +4933,17 @@ export type ContentfulNews = ContentfulReference & ContentfulEntry & Node & {
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
-  featured?: Maybe<Scalars['Boolean']>;
   published?: Maybe<Scalars['Date']>;
   content?: Maybe<ContentfulNewsContent>;
-  featuredImage?: Maybe<ContentfulAsset>;
+  seoTitle?: Maybe<Scalars['String']>;
+  seoDescription?: Maybe<Scalars['String']>;
   excerpt?: Maybe<ContentfulNewsExcerptTextNode>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulNewsSys>;
-  seoTitle?: Maybe<Scalars['String']>;
-  seoDescription?: Maybe<Scalars['String']>;
+  featured?: Maybe<Scalars['Boolean']>;
+  featuredImage?: Maybe<ContentfulAsset>;
   author?: Maybe<ContentfulAuthor>;
   /** Returns all children nodes filtered by type contentfulNewsExcerptTextNode */
   childrenContentfulNewsExcerptTextNode?: Maybe<Array<Maybe<ContentfulNewsExcerptTextNode>>>;
@@ -4991,10 +5003,12 @@ export type ContentfulNewsConnectionGroupArgs = {
 export type ContentfulNewsContent = {
   __typename?: 'ContentfulNewsContent';
   raw?: Maybe<Scalars['String']>;
+  references?: Maybe<Array<Maybe<ContentfulAsset>>>;
 };
 
 export type ContentfulNewsContentFilterInput = {
   raw?: Maybe<StringQueryOperatorInput>;
+  references?: Maybe<ContentfulAssetFilterListInput>;
 };
 
 export type ContentfulNewsEdge = {
@@ -5010,9 +5024,110 @@ export enum ContentfulNewsFieldsEnum {
   node_locale = 'node_locale',
   title = 'title',
   slug = 'slug',
-  featured = 'featured',
   published = 'published',
   content___raw = 'content___raw',
+  content___references = 'content___references',
+  content___references___contentful_id = 'content___references___contentful_id',
+  content___references___id = 'content___references___id',
+  content___references___spaceId = 'content___references___spaceId',
+  content___references___createdAt = 'content___references___createdAt',
+  content___references___updatedAt = 'content___references___updatedAt',
+  content___references___file___url = 'content___references___file___url',
+  content___references___file___fileName = 'content___references___file___fileName',
+  content___references___file___contentType = 'content___references___file___contentType',
+  content___references___title = 'content___references___title',
+  content___references___description = 'content___references___description',
+  content___references___node_locale = 'content___references___node_locale',
+  content___references___sys___type = 'content___references___sys___type',
+  content___references___sys___revision = 'content___references___sys___revision',
+  content___references___fixed___base64 = 'content___references___fixed___base64',
+  content___references___fixed___tracedSVG = 'content___references___fixed___tracedSVG',
+  content___references___fixed___aspectRatio = 'content___references___fixed___aspectRatio',
+  content___references___fixed___width = 'content___references___fixed___width',
+  content___references___fixed___height = 'content___references___fixed___height',
+  content___references___fixed___src = 'content___references___fixed___src',
+  content___references___fixed___srcSet = 'content___references___fixed___srcSet',
+  content___references___fixed___srcWebp = 'content___references___fixed___srcWebp',
+  content___references___fixed___srcSetWebp = 'content___references___fixed___srcSetWebp',
+  content___references___fluid___base64 = 'content___references___fluid___base64',
+  content___references___fluid___tracedSVG = 'content___references___fluid___tracedSVG',
+  content___references___fluid___aspectRatio = 'content___references___fluid___aspectRatio',
+  content___references___fluid___src = 'content___references___fluid___src',
+  content___references___fluid___srcSet = 'content___references___fluid___srcSet',
+  content___references___fluid___srcWebp = 'content___references___fluid___srcWebp',
+  content___references___fluid___srcSetWebp = 'content___references___fluid___srcSetWebp',
+  content___references___fluid___sizes = 'content___references___fluid___sizes',
+  content___references___gatsbyImageData = 'content___references___gatsbyImageData',
+  content___references___resize___base64 = 'content___references___resize___base64',
+  content___references___resize___tracedSVG = 'content___references___resize___tracedSVG',
+  content___references___resize___src = 'content___references___resize___src',
+  content___references___resize___width = 'content___references___resize___width',
+  content___references___resize___height = 'content___references___resize___height',
+  content___references___resize___aspectRatio = 'content___references___resize___aspectRatio',
+  content___references___parent___id = 'content___references___parent___id',
+  content___references___parent___children = 'content___references___parent___children',
+  content___references___children = 'content___references___children',
+  content___references___children___id = 'content___references___children___id',
+  content___references___children___children = 'content___references___children___children',
+  content___references___internal___content = 'content___references___internal___content',
+  content___references___internal___contentDigest = 'content___references___internal___contentDigest',
+  content___references___internal___description = 'content___references___internal___description',
+  content___references___internal___fieldOwners = 'content___references___internal___fieldOwners',
+  content___references___internal___ignoreType = 'content___references___internal___ignoreType',
+  content___references___internal___mediaType = 'content___references___internal___mediaType',
+  content___references___internal___owner = 'content___references___internal___owner',
+  content___references___internal___type = 'content___references___internal___type',
+  seoTitle = 'seoTitle',
+  seoDescription = 'seoDescription',
+  excerpt___id = 'excerpt___id',
+  excerpt___parent___id = 'excerpt___parent___id',
+  excerpt___parent___parent___id = 'excerpt___parent___parent___id',
+  excerpt___parent___parent___children = 'excerpt___parent___parent___children',
+  excerpt___parent___children = 'excerpt___parent___children',
+  excerpt___parent___children___id = 'excerpt___parent___children___id',
+  excerpt___parent___children___children = 'excerpt___parent___children___children',
+  excerpt___parent___internal___content = 'excerpt___parent___internal___content',
+  excerpt___parent___internal___contentDigest = 'excerpt___parent___internal___contentDigest',
+  excerpt___parent___internal___description = 'excerpt___parent___internal___description',
+  excerpt___parent___internal___fieldOwners = 'excerpt___parent___internal___fieldOwners',
+  excerpt___parent___internal___ignoreType = 'excerpt___parent___internal___ignoreType',
+  excerpt___parent___internal___mediaType = 'excerpt___parent___internal___mediaType',
+  excerpt___parent___internal___owner = 'excerpt___parent___internal___owner',
+  excerpt___parent___internal___type = 'excerpt___parent___internal___type',
+  excerpt___children = 'excerpt___children',
+  excerpt___children___id = 'excerpt___children___id',
+  excerpt___children___parent___id = 'excerpt___children___parent___id',
+  excerpt___children___parent___children = 'excerpt___children___parent___children',
+  excerpt___children___children = 'excerpt___children___children',
+  excerpt___children___children___id = 'excerpt___children___children___id',
+  excerpt___children___children___children = 'excerpt___children___children___children',
+  excerpt___children___internal___content = 'excerpt___children___internal___content',
+  excerpt___children___internal___contentDigest = 'excerpt___children___internal___contentDigest',
+  excerpt___children___internal___description = 'excerpt___children___internal___description',
+  excerpt___children___internal___fieldOwners = 'excerpt___children___internal___fieldOwners',
+  excerpt___children___internal___ignoreType = 'excerpt___children___internal___ignoreType',
+  excerpt___children___internal___mediaType = 'excerpt___children___internal___mediaType',
+  excerpt___children___internal___owner = 'excerpt___children___internal___owner',
+  excerpt___children___internal___type = 'excerpt___children___internal___type',
+  excerpt___internal___content = 'excerpt___internal___content',
+  excerpt___internal___contentDigest = 'excerpt___internal___contentDigest',
+  excerpt___internal___description = 'excerpt___internal___description',
+  excerpt___internal___fieldOwners = 'excerpt___internal___fieldOwners',
+  excerpt___internal___ignoreType = 'excerpt___internal___ignoreType',
+  excerpt___internal___mediaType = 'excerpt___internal___mediaType',
+  excerpt___internal___owner = 'excerpt___internal___owner',
+  excerpt___internal___type = 'excerpt___internal___type',
+  excerpt___excerpt = 'excerpt___excerpt',
+  excerpt___sys___type = 'excerpt___sys___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
+  featured = 'featured',
   featuredImage___contentful_id = 'featuredImage___contentful_id',
   featuredImage___id = 'featuredImage___id',
   featuredImage___spaceId = 'featuredImage___spaceId',
@@ -5088,56 +5203,6 @@ export enum ContentfulNewsFieldsEnum {
   featuredImage___internal___mediaType = 'featuredImage___internal___mediaType',
   featuredImage___internal___owner = 'featuredImage___internal___owner',
   featuredImage___internal___type = 'featuredImage___internal___type',
-  excerpt___id = 'excerpt___id',
-  excerpt___parent___id = 'excerpt___parent___id',
-  excerpt___parent___parent___id = 'excerpt___parent___parent___id',
-  excerpt___parent___parent___children = 'excerpt___parent___parent___children',
-  excerpt___parent___children = 'excerpt___parent___children',
-  excerpt___parent___children___id = 'excerpt___parent___children___id',
-  excerpt___parent___children___children = 'excerpt___parent___children___children',
-  excerpt___parent___internal___content = 'excerpt___parent___internal___content',
-  excerpt___parent___internal___contentDigest = 'excerpt___parent___internal___contentDigest',
-  excerpt___parent___internal___description = 'excerpt___parent___internal___description',
-  excerpt___parent___internal___fieldOwners = 'excerpt___parent___internal___fieldOwners',
-  excerpt___parent___internal___ignoreType = 'excerpt___parent___internal___ignoreType',
-  excerpt___parent___internal___mediaType = 'excerpt___parent___internal___mediaType',
-  excerpt___parent___internal___owner = 'excerpt___parent___internal___owner',
-  excerpt___parent___internal___type = 'excerpt___parent___internal___type',
-  excerpt___children = 'excerpt___children',
-  excerpt___children___id = 'excerpt___children___id',
-  excerpt___children___parent___id = 'excerpt___children___parent___id',
-  excerpt___children___parent___children = 'excerpt___children___parent___children',
-  excerpt___children___children = 'excerpt___children___children',
-  excerpt___children___children___id = 'excerpt___children___children___id',
-  excerpt___children___children___children = 'excerpt___children___children___children',
-  excerpt___children___internal___content = 'excerpt___children___internal___content',
-  excerpt___children___internal___contentDigest = 'excerpt___children___internal___contentDigest',
-  excerpt___children___internal___description = 'excerpt___children___internal___description',
-  excerpt___children___internal___fieldOwners = 'excerpt___children___internal___fieldOwners',
-  excerpt___children___internal___ignoreType = 'excerpt___children___internal___ignoreType',
-  excerpt___children___internal___mediaType = 'excerpt___children___internal___mediaType',
-  excerpt___children___internal___owner = 'excerpt___children___internal___owner',
-  excerpt___children___internal___type = 'excerpt___children___internal___type',
-  excerpt___internal___content = 'excerpt___internal___content',
-  excerpt___internal___contentDigest = 'excerpt___internal___contentDigest',
-  excerpt___internal___description = 'excerpt___internal___description',
-  excerpt___internal___fieldOwners = 'excerpt___internal___fieldOwners',
-  excerpt___internal___ignoreType = 'excerpt___internal___ignoreType',
-  excerpt___internal___mediaType = 'excerpt___internal___mediaType',
-  excerpt___internal___owner = 'excerpt___internal___owner',
-  excerpt___internal___type = 'excerpt___internal___type',
-  excerpt___excerpt = 'excerpt___excerpt',
-  excerpt___sys___type = 'excerpt___sys___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
-  seoTitle = 'seoTitle',
-  seoDescription = 'seoDescription',
   author___contentful_id = 'author___contentful_id',
   author___id = 'author___id',
   author___node_locale = 'author___node_locale',
@@ -5148,9 +5213,20 @@ export enum ContentfulNewsFieldsEnum {
   author___news___node_locale = 'author___news___node_locale',
   author___news___title = 'author___news___title',
   author___news___slug = 'author___news___slug',
-  author___news___featured = 'author___news___featured',
   author___news___published = 'author___news___published',
   author___news___content___raw = 'author___news___content___raw',
+  author___news___content___references = 'author___news___content___references',
+  author___news___seoTitle = 'author___news___seoTitle',
+  author___news___seoDescription = 'author___news___seoDescription',
+  author___news___excerpt___id = 'author___news___excerpt___id',
+  author___news___excerpt___children = 'author___news___excerpt___children',
+  author___news___excerpt___excerpt = 'author___news___excerpt___excerpt',
+  author___news___spaceId = 'author___news___spaceId',
+  author___news___createdAt = 'author___news___createdAt',
+  author___news___updatedAt = 'author___news___updatedAt',
+  author___news___sys___type = 'author___news___sys___type',
+  author___news___sys___revision = 'author___news___sys___revision',
+  author___news___featured = 'author___news___featured',
   author___news___featuredImage___contentful_id = 'author___news___featuredImage___contentful_id',
   author___news___featuredImage___id = 'author___news___featuredImage___id',
   author___news___featuredImage___spaceId = 'author___news___featuredImage___spaceId',
@@ -5161,16 +5237,6 @@ export enum ContentfulNewsFieldsEnum {
   author___news___featuredImage___node_locale = 'author___news___featuredImage___node_locale',
   author___news___featuredImage___gatsbyImageData = 'author___news___featuredImage___gatsbyImageData',
   author___news___featuredImage___children = 'author___news___featuredImage___children',
-  author___news___excerpt___id = 'author___news___excerpt___id',
-  author___news___excerpt___children = 'author___news___excerpt___children',
-  author___news___excerpt___excerpt = 'author___news___excerpt___excerpt',
-  author___news___spaceId = 'author___news___spaceId',
-  author___news___createdAt = 'author___news___createdAt',
-  author___news___updatedAt = 'author___news___updatedAt',
-  author___news___sys___type = 'author___news___sys___type',
-  author___news___sys___revision = 'author___news___sys___revision',
-  author___news___seoTitle = 'author___news___seoTitle',
-  author___news___seoDescription = 'author___news___seoDescription',
   author___news___author___contentful_id = 'author___news___author___contentful_id',
   author___news___author___id = 'author___news___author___id',
   author___news___author___node_locale = 'author___news___author___node_locale',
@@ -5528,17 +5594,17 @@ export type ContentfulNewsFilterInput = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
-  featured?: Maybe<BooleanQueryOperatorInput>;
   published?: Maybe<DateQueryOperatorInput>;
   content?: Maybe<ContentfulNewsContentFilterInput>;
-  featuredImage?: Maybe<ContentfulAssetFilterInput>;
+  seoTitle?: Maybe<StringQueryOperatorInput>;
+  seoDescription?: Maybe<StringQueryOperatorInput>;
   excerpt?: Maybe<ContentfulNewsExcerptTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulNewsSysFilterInput>;
-  seoTitle?: Maybe<StringQueryOperatorInput>;
-  seoDescription?: Maybe<StringQueryOperatorInput>;
+  featured?: Maybe<BooleanQueryOperatorInput>;
+  featuredImage?: Maybe<ContentfulAssetFilterInput>;
   author?: Maybe<ContentfulAuthorFilterInput>;
   childrenContentfulNewsExcerptTextNode?: Maybe<ContentfulNewsExcerptTextNodeFilterListInput>;
   childContentfulNewsExcerptTextNode?: Maybe<ContentfulNewsExcerptTextNodeFilterInput>;
@@ -7751,17 +7817,17 @@ export type QueryContentfulNewsArgs = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
-  featured?: Maybe<BooleanQueryOperatorInput>;
   published?: Maybe<DateQueryOperatorInput>;
   content?: Maybe<ContentfulNewsContentFilterInput>;
-  featuredImage?: Maybe<ContentfulAssetFilterInput>;
+  seoTitle?: Maybe<StringQueryOperatorInput>;
+  seoDescription?: Maybe<StringQueryOperatorInput>;
   excerpt?: Maybe<ContentfulNewsExcerptTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulNewsSysFilterInput>;
-  seoTitle?: Maybe<StringQueryOperatorInput>;
-  seoDescription?: Maybe<StringQueryOperatorInput>;
+  featured?: Maybe<BooleanQueryOperatorInput>;
+  featuredImage?: Maybe<ContentfulAssetFilterInput>;
   author?: Maybe<ContentfulAuthorFilterInput>;
   childrenContentfulNewsExcerptTextNode?: Maybe<ContentfulNewsExcerptTextNodeFilterListInput>;
   childContentfulNewsExcerptTextNode?: Maybe<ContentfulNewsExcerptTextNodeFilterInput>;
@@ -10661,7 +10727,7 @@ export type FeaturedPostBlogFragmentFragment = (
 
 export type ImageFragmentFragment = (
   { __typename?: 'ContentfulAsset' }
-  & Pick<ContentfulAsset, 'title' | 'description' | 'gatsbyImageData'>
+  & Pick<ContentfulAsset, 'contentful_id' | 'title' | 'description' | 'gatsbyImageData'>
 );
 
 export type PostNewsFragmentFragment = (
@@ -10679,6 +10745,30 @@ export type PostBlogFragmentFragment = (
   & { excerpt?: Maybe<(
     { __typename?: 'contentfulBlogPostExcerptTextNode' }
     & Pick<ContentfulBlogPostExcerptTextNode, 'excerpt'>
+  )> }
+);
+
+export type PostContentBlogFragmentFragment = (
+  { __typename?: 'ContentfulBlogPost' }
+  & { content?: Maybe<(
+    { __typename?: 'ContentfulBlogPostContent' }
+    & Pick<ContentfulBlogPostContent, 'raw'>
+    & { references?: Maybe<Array<Maybe<(
+      { __typename?: 'ContentfulAsset' }
+      & ImageFragmentFragment
+    )>>> }
+  )> }
+);
+
+export type PostContentNewsFragmentFragment = (
+  { __typename?: 'ContentfulNews' }
+  & { content?: Maybe<(
+    { __typename?: 'ContentfulNewsContent' }
+    & Pick<ContentfulNewsContent, 'raw'>
+    & { references?: Maybe<Array<Maybe<(
+      { __typename?: 'ContentfulAsset' }
+      & ImageFragmentFragment
+    )>>> }
   )> }
 );
 
@@ -10805,8 +10895,18 @@ export type PostQueryQuery = (
   & { contentfulBlogPost?: Maybe<(
     { __typename?: 'ContentfulBlogPost' }
     & Pick<ContentfulBlogPost, 'title' | 'published'>
+    & { featuredImage?: Maybe<(
+      { __typename?: 'ContentfulAsset' }
+      & ImageFragmentFragment
+    )> }
+    & PostContentBlogFragmentFragment
   )>, contentfulNews?: Maybe<(
     { __typename?: 'ContentfulNews' }
     & Pick<ContentfulNews, 'title' | 'published'>
+    & { featuredImage?: Maybe<(
+      { __typename?: 'ContentfulAsset' }
+      & ImageFragmentFragment
+    )> }
+    & PostContentNewsFragmentFragment
   )> }
 );
