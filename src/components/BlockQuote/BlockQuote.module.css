@@ -1,0 +1,11 @@
+.quote {
+  border-left: 2px solid var(--color--gravy);
+  padding: var(--space--xsmall) var(--space--large);
+  background: var(--color--ghost);
+  border-radius: 2px;
+  margin: var(--space--large) 0;
+}
+
+.quote * {
+  font-family: var(--font-family--display) !important;
+}

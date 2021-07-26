@@ -1,0 +1,47 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { FeaturedPost } from ".";
+import { mockImage } from "@/components/Image/__mocks__/mockImage";
+
+<Meta
+  title="posts/FeaturedPost"
+  component={FeaturedPost}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# FeaturedPost
+
+A `FeaturedPost` is used to show the latest featured post from `Contentful`.
+
+## Usage
+
+```tsx
+import { FeaturedPost } from "@/components/FeaturedPost";
+```
+
+## Props
+
+<ArgsTable component={FeaturedPost} />
+
+## Example
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      data: {
+        title: "Robots invade the world",
+        excerpt: {
+          excerpt: "The captain says you are a friend. I will not kill you.",
+        },
+        slug: "/robots",
+        featuredImage: mockImage,
+      },
+      caption: "The droids are coming",
+      linkText: "Learn more",
+    }}
+  >
+    {(args) => <FeaturedPost {...args} />}
+  </Story>
+</Canvas>

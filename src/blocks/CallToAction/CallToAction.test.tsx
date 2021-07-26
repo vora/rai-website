@@ -1,7 +1,7 @@
 import React from "react";
 import { cleanup, render } from "@testing-library/react";
 import { dummyButton } from "@/components/Button/__mocks__";
-import { dummyContent } from "@/components/RichText/__mocks__";
+import { dummyContent } from "@/components/RichText/__mocks__/mockRichText";
 import { CallToActionFragmentFragment } from "@/graphql/graphql-types";
 import { CallToAction } from ".";
 

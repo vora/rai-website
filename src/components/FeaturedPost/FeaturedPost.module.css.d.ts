@@ -1,10 +1,9 @@
 declare const styles: {
-  readonly "featured": string;
+  readonly "wrapper": string;
   readonly "container": string;
-  readonly "content": string;
   readonly "caption": string;
-  readonly "image": string;
   readonly "link": string;
+  readonly "image": string;
 };
 export = styles;
 

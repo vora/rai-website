@@ -1,0 +1,32 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { SocialShare } from ".";
+
+<Meta
+  title="components/SocialShare"
+  component={SocialShare}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# SocialShare
+
+`SocialShare` uses [social9](https://social9.com/) to display a group of social media share buttons.
+
+## Usage
+
+```tsx
+import { SocialShare } from "@/components/SocialShare";
+```
+
+## Props
+
+<ArgsTable component={SocialShare} />
+
+## Example
+
+The example for this component will not display as it requires specific scripts included by the `gatsby-plugin-social9-socialshare` plugin.
+
+<Canvas>
+  <Story name="Default">{(args) => <SocialShare />}</Story>
+</Canvas>

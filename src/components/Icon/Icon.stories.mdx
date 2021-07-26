@@ -1,0 +1,62 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Icon } from ".";
+import * as icons from "react-feather";
+
+<Meta
+  title="components/Icon"
+  component={Icon}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+export function Icons() {
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Icon</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.keys(icons).map((icon) => (
+          <tr key={icon}>
+            <td>
+              <Icon icon={icon} />
+            </td>
+            <td>{icon}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+# Icon
+
+The `Icon` component is a wrapper around `react-feather` and uses [feather icons](https://feathericons.com).
+
+An `Icon` should be used to display small visual aids to micro-content.
+
+## Usage
+
+```tsx
+import { Icon } from "@/components/Icon";
+```
+
+## Props
+
+<ArgsTable component={Icon} />
+
+## Example
+
+<Canvas>
+  <Story name="Default" args={{ icon: "Coffee" }}>
+    {(args) => <Icon {...args} />}
+  </Story>
+</Canvas>
+
+## All Icons
+
+<Icons />

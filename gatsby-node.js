@@ -12,6 +12,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
       allContentfulBlogPost {
         nodes {
           slug
+          category
         }
       }
       allContentfulPage {
@@ -20,12 +21,20 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
         }
       }
     }
-  `).then((result) => {
+  `).then(({ data }) => {
     // Generate our blog pages
-    result.data.allContentfulBlogPost.nodes.forEach((node) => {
+    data.allContentfulBlogPost.nodes.forEach((node) => {
+      const getCategory = () => {
+        if (node.category === "News") {
+          return "news";
+        }
+
+        return "blog";
+      };
+
       createPage({
-        path: `/blog/${node.slug.replace(/ /g, "-")}`,
-        component: path.resolve(`./src/templates/blog.tsx`),
+        path: `/${getCategory()}/${node.slug.replace(/ /g, "-")}`,
+        component: path.resolve(`./src/templates/post.tsx`),
         context: {
           slug: node.slug,
         },
@@ -33,7 +42,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
     });
 
     // Generate our pages
-    result.data.allContentfulPage.nodes.forEach((node) => {
+    data.allContentfulPage.nodes.forEach((node) => {
       if (node.slug !== "certification") {
         return;
       }

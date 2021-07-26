@@ -384,13 +384,12 @@ export type ContentfulAuthor = ContentfulReference & ContentfulEntry & Node & {
   id: Scalars['ID'];
   node_locale: Scalars['String'];
   name?: Maybe<Scalars['String']>;
-  news?: Maybe<Array<Maybe<ContentfulNews>>>;
+  blog_post?: Maybe<Array<Maybe<ContentfulBlogPost>>>;
   biography?: Maybe<ContentfulAuthorBiographyTextNode>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulAuthorSys>;
-  blog_post?: Maybe<Array<Maybe<ContentfulBlogPost>>>;
   /** Returns all children nodes filtered by type contentfulAuthorBiographyTextNode */
   childrenContentfulAuthorBiographyTextNode?: Maybe<Array<Maybe<ContentfulAuthorBiographyTextNode>>>;
   /** Returns the first child node of type contentfulAuthorBiographyTextNode or null if there are no children of given type on this node */
@@ -450,275 +449,13 @@ export enum ContentfulAuthorFieldsEnum {
   id = 'id',
   node_locale = 'node_locale',
   name = 'name',
-  news = 'news',
-  news___contentful_id = 'news___contentful_id',
-  news___id = 'news___id',
-  news___node_locale = 'news___node_locale',
-  news___title = 'news___title',
-  news___slug = 'news___slug',
-  news___featured = 'news___featured',
-  news___published = 'news___published',
-  news___content___raw = 'news___content___raw',
-  news___featuredImage___contentful_id = 'news___featuredImage___contentful_id',
-  news___featuredImage___id = 'news___featuredImage___id',
-  news___featuredImage___spaceId = 'news___featuredImage___spaceId',
-  news___featuredImage___createdAt = 'news___featuredImage___createdAt',
-  news___featuredImage___updatedAt = 'news___featuredImage___updatedAt',
-  news___featuredImage___file___url = 'news___featuredImage___file___url',
-  news___featuredImage___file___fileName = 'news___featuredImage___file___fileName',
-  news___featuredImage___file___contentType = 'news___featuredImage___file___contentType',
-  news___featuredImage___title = 'news___featuredImage___title',
-  news___featuredImage___description = 'news___featuredImage___description',
-  news___featuredImage___node_locale = 'news___featuredImage___node_locale',
-  news___featuredImage___sys___type = 'news___featuredImage___sys___type',
-  news___featuredImage___sys___revision = 'news___featuredImage___sys___revision',
-  news___featuredImage___fixed___base64 = 'news___featuredImage___fixed___base64',
-  news___featuredImage___fixed___tracedSVG = 'news___featuredImage___fixed___tracedSVG',
-  news___featuredImage___fixed___aspectRatio = 'news___featuredImage___fixed___aspectRatio',
-  news___featuredImage___fixed___width = 'news___featuredImage___fixed___width',
-  news___featuredImage___fixed___height = 'news___featuredImage___fixed___height',
-  news___featuredImage___fixed___src = 'news___featuredImage___fixed___src',
-  news___featuredImage___fixed___srcSet = 'news___featuredImage___fixed___srcSet',
-  news___featuredImage___fixed___srcWebp = 'news___featuredImage___fixed___srcWebp',
-  news___featuredImage___fixed___srcSetWebp = 'news___featuredImage___fixed___srcSetWebp',
-  news___featuredImage___fluid___base64 = 'news___featuredImage___fluid___base64',
-  news___featuredImage___fluid___tracedSVG = 'news___featuredImage___fluid___tracedSVG',
-  news___featuredImage___fluid___aspectRatio = 'news___featuredImage___fluid___aspectRatio',
-  news___featuredImage___fluid___src = 'news___featuredImage___fluid___src',
-  news___featuredImage___fluid___srcSet = 'news___featuredImage___fluid___srcSet',
-  news___featuredImage___fluid___srcWebp = 'news___featuredImage___fluid___srcWebp',
-  news___featuredImage___fluid___srcSetWebp = 'news___featuredImage___fluid___srcSetWebp',
-  news___featuredImage___fluid___sizes = 'news___featuredImage___fluid___sizes',
-  news___featuredImage___gatsbyImageData = 'news___featuredImage___gatsbyImageData',
-  news___featuredImage___resize___base64 = 'news___featuredImage___resize___base64',
-  news___featuredImage___resize___tracedSVG = 'news___featuredImage___resize___tracedSVG',
-  news___featuredImage___resize___src = 'news___featuredImage___resize___src',
-  news___featuredImage___resize___width = 'news___featuredImage___resize___width',
-  news___featuredImage___resize___height = 'news___featuredImage___resize___height',
-  news___featuredImage___resize___aspectRatio = 'news___featuredImage___resize___aspectRatio',
-  news___featuredImage___parent___id = 'news___featuredImage___parent___id',
-  news___featuredImage___parent___children = 'news___featuredImage___parent___children',
-  news___featuredImage___children = 'news___featuredImage___children',
-  news___featuredImage___children___id = 'news___featuredImage___children___id',
-  news___featuredImage___children___children = 'news___featuredImage___children___children',
-  news___featuredImage___internal___content = 'news___featuredImage___internal___content',
-  news___featuredImage___internal___contentDigest = 'news___featuredImage___internal___contentDigest',
-  news___featuredImage___internal___description = 'news___featuredImage___internal___description',
-  news___featuredImage___internal___fieldOwners = 'news___featuredImage___internal___fieldOwners',
-  news___featuredImage___internal___ignoreType = 'news___featuredImage___internal___ignoreType',
-  news___featuredImage___internal___mediaType = 'news___featuredImage___internal___mediaType',
-  news___featuredImage___internal___owner = 'news___featuredImage___internal___owner',
-  news___featuredImage___internal___type = 'news___featuredImage___internal___type',
-  news___excerpt___id = 'news___excerpt___id',
-  news___excerpt___parent___id = 'news___excerpt___parent___id',
-  news___excerpt___parent___children = 'news___excerpt___parent___children',
-  news___excerpt___children = 'news___excerpt___children',
-  news___excerpt___children___id = 'news___excerpt___children___id',
-  news___excerpt___children___children = 'news___excerpt___children___children',
-  news___excerpt___internal___content = 'news___excerpt___internal___content',
-  news___excerpt___internal___contentDigest = 'news___excerpt___internal___contentDigest',
-  news___excerpt___internal___description = 'news___excerpt___internal___description',
-  news___excerpt___internal___fieldOwners = 'news___excerpt___internal___fieldOwners',
-  news___excerpt___internal___ignoreType = 'news___excerpt___internal___ignoreType',
-  news___excerpt___internal___mediaType = 'news___excerpt___internal___mediaType',
-  news___excerpt___internal___owner = 'news___excerpt___internal___owner',
-  news___excerpt___internal___type = 'news___excerpt___internal___type',
-  news___excerpt___excerpt = 'news___excerpt___excerpt',
-  news___excerpt___sys___type = 'news___excerpt___sys___type',
-  news___spaceId = 'news___spaceId',
-  news___createdAt = 'news___createdAt',
-  news___updatedAt = 'news___updatedAt',
-  news___sys___type = 'news___sys___type',
-  news___sys___revision = 'news___sys___revision',
-  news___seoTitle = 'news___seoTitle',
-  news___seoDescription = 'news___seoDescription',
-  news___author___contentful_id = 'news___author___contentful_id',
-  news___author___id = 'news___author___id',
-  news___author___node_locale = 'news___author___node_locale',
-  news___author___name = 'news___author___name',
-  news___author___news = 'news___author___news',
-  news___author___news___contentful_id = 'news___author___news___contentful_id',
-  news___author___news___id = 'news___author___news___id',
-  news___author___news___node_locale = 'news___author___news___node_locale',
-  news___author___news___title = 'news___author___news___title',
-  news___author___news___slug = 'news___author___news___slug',
-  news___author___news___featured = 'news___author___news___featured',
-  news___author___news___published = 'news___author___news___published',
-  news___author___news___spaceId = 'news___author___news___spaceId',
-  news___author___news___createdAt = 'news___author___news___createdAt',
-  news___author___news___updatedAt = 'news___author___news___updatedAt',
-  news___author___news___seoTitle = 'news___author___news___seoTitle',
-  news___author___news___seoDescription = 'news___author___news___seoDescription',
-  news___author___news___childrenContentfulNewsExcerptTextNode = 'news___author___news___childrenContentfulNewsExcerptTextNode',
-  news___author___news___children = 'news___author___news___children',
-  news___author___biography___id = 'news___author___biography___id',
-  news___author___biography___children = 'news___author___biography___children',
-  news___author___biography___biography = 'news___author___biography___biography',
-  news___author___spaceId = 'news___author___spaceId',
-  news___author___createdAt = 'news___author___createdAt',
-  news___author___updatedAt = 'news___author___updatedAt',
-  news___author___sys___type = 'news___author___sys___type',
-  news___author___sys___revision = 'news___author___sys___revision',
-  news___author___blog_post = 'news___author___blog_post',
-  news___author___blog_post___contentful_id = 'news___author___blog_post___contentful_id',
-  news___author___blog_post___id = 'news___author___blog_post___id',
-  news___author___blog_post___node_locale = 'news___author___blog_post___node_locale',
-  news___author___blog_post___title = 'news___author___blog_post___title',
-  news___author___blog_post___slug = 'news___author___blog_post___slug',
-  news___author___blog_post___featured = 'news___author___blog_post___featured',
-  news___author___blog_post___published = 'news___author___blog_post___published',
-  news___author___blog_post___seoTitle = 'news___author___blog_post___seoTitle',
-  news___author___blog_post___seoDescription = 'news___author___blog_post___seoDescription',
-  news___author___blog_post___spaceId = 'news___author___blog_post___spaceId',
-  news___author___blog_post___createdAt = 'news___author___blog_post___createdAt',
-  news___author___blog_post___updatedAt = 'news___author___blog_post___updatedAt',
-  news___author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'news___author___blog_post___childrenContentfulBlogPostExcerptTextNode',
-  news___author___blog_post___children = 'news___author___blog_post___children',
-  news___author___childrenContentfulAuthorBiographyTextNode = 'news___author___childrenContentfulAuthorBiographyTextNode',
-  news___author___childrenContentfulAuthorBiographyTextNode___id = 'news___author___childrenContentfulAuthorBiographyTextNode___id',
-  news___author___childrenContentfulAuthorBiographyTextNode___children = 'news___author___childrenContentfulAuthorBiographyTextNode___children',
-  news___author___childrenContentfulAuthorBiographyTextNode___biography = 'news___author___childrenContentfulAuthorBiographyTextNode___biography',
-  news___author___childContentfulAuthorBiographyTextNode___id = 'news___author___childContentfulAuthorBiographyTextNode___id',
-  news___author___childContentfulAuthorBiographyTextNode___children = 'news___author___childContentfulAuthorBiographyTextNode___children',
-  news___author___childContentfulAuthorBiographyTextNode___biography = 'news___author___childContentfulAuthorBiographyTextNode___biography',
-  news___author___parent___id = 'news___author___parent___id',
-  news___author___parent___children = 'news___author___parent___children',
-  news___author___children = 'news___author___children',
-  news___author___children___id = 'news___author___children___id',
-  news___author___children___children = 'news___author___children___children',
-  news___author___internal___content = 'news___author___internal___content',
-  news___author___internal___contentDigest = 'news___author___internal___contentDigest',
-  news___author___internal___description = 'news___author___internal___description',
-  news___author___internal___fieldOwners = 'news___author___internal___fieldOwners',
-  news___author___internal___ignoreType = 'news___author___internal___ignoreType',
-  news___author___internal___mediaType = 'news___author___internal___mediaType',
-  news___author___internal___owner = 'news___author___internal___owner',
-  news___author___internal___type = 'news___author___internal___type',
-  news___childrenContentfulNewsExcerptTextNode = 'news___childrenContentfulNewsExcerptTextNode',
-  news___childrenContentfulNewsExcerptTextNode___id = 'news___childrenContentfulNewsExcerptTextNode___id',
-  news___childrenContentfulNewsExcerptTextNode___parent___id = 'news___childrenContentfulNewsExcerptTextNode___parent___id',
-  news___childrenContentfulNewsExcerptTextNode___parent___children = 'news___childrenContentfulNewsExcerptTextNode___parent___children',
-  news___childrenContentfulNewsExcerptTextNode___children = 'news___childrenContentfulNewsExcerptTextNode___children',
-  news___childrenContentfulNewsExcerptTextNode___children___id = 'news___childrenContentfulNewsExcerptTextNode___children___id',
-  news___childrenContentfulNewsExcerptTextNode___children___children = 'news___childrenContentfulNewsExcerptTextNode___children___children',
-  news___childrenContentfulNewsExcerptTextNode___internal___content = 'news___childrenContentfulNewsExcerptTextNode___internal___content',
-  news___childrenContentfulNewsExcerptTextNode___internal___contentDigest = 'news___childrenContentfulNewsExcerptTextNode___internal___contentDigest',
-  news___childrenContentfulNewsExcerptTextNode___internal___description = 'news___childrenContentfulNewsExcerptTextNode___internal___description',
-  news___childrenContentfulNewsExcerptTextNode___internal___fieldOwners = 'news___childrenContentfulNewsExcerptTextNode___internal___fieldOwners',
-  news___childrenContentfulNewsExcerptTextNode___internal___ignoreType = 'news___childrenContentfulNewsExcerptTextNode___internal___ignoreType',
-  news___childrenContentfulNewsExcerptTextNode___internal___mediaType = 'news___childrenContentfulNewsExcerptTextNode___internal___mediaType',
-  news___childrenContentfulNewsExcerptTextNode___internal___owner = 'news___childrenContentfulNewsExcerptTextNode___internal___owner',
-  news___childrenContentfulNewsExcerptTextNode___internal___type = 'news___childrenContentfulNewsExcerptTextNode___internal___type',
-  news___childrenContentfulNewsExcerptTextNode___excerpt = 'news___childrenContentfulNewsExcerptTextNode___excerpt',
-  news___childrenContentfulNewsExcerptTextNode___sys___type = 'news___childrenContentfulNewsExcerptTextNode___sys___type',
-  news___childContentfulNewsExcerptTextNode___id = 'news___childContentfulNewsExcerptTextNode___id',
-  news___childContentfulNewsExcerptTextNode___parent___id = 'news___childContentfulNewsExcerptTextNode___parent___id',
-  news___childContentfulNewsExcerptTextNode___parent___children = 'news___childContentfulNewsExcerptTextNode___parent___children',
-  news___childContentfulNewsExcerptTextNode___children = 'news___childContentfulNewsExcerptTextNode___children',
-  news___childContentfulNewsExcerptTextNode___children___id = 'news___childContentfulNewsExcerptTextNode___children___id',
-  news___childContentfulNewsExcerptTextNode___children___children = 'news___childContentfulNewsExcerptTextNode___children___children',
-  news___childContentfulNewsExcerptTextNode___internal___content = 'news___childContentfulNewsExcerptTextNode___internal___content',
-  news___childContentfulNewsExcerptTextNode___internal___contentDigest = 'news___childContentfulNewsExcerptTextNode___internal___contentDigest',
-  news___childContentfulNewsExcerptTextNode___internal___description = 'news___childContentfulNewsExcerptTextNode___internal___description',
-  news___childContentfulNewsExcerptTextNode___internal___fieldOwners = 'news___childContentfulNewsExcerptTextNode___internal___fieldOwners',
-  news___childContentfulNewsExcerptTextNode___internal___ignoreType = 'news___childContentfulNewsExcerptTextNode___internal___ignoreType',
-  news___childContentfulNewsExcerptTextNode___internal___mediaType = 'news___childContentfulNewsExcerptTextNode___internal___mediaType',
-  news___childContentfulNewsExcerptTextNode___internal___owner = 'news___childContentfulNewsExcerptTextNode___internal___owner',
-  news___childContentfulNewsExcerptTextNode___internal___type = 'news___childContentfulNewsExcerptTextNode___internal___type',
-  news___childContentfulNewsExcerptTextNode___excerpt = 'news___childContentfulNewsExcerptTextNode___excerpt',
-  news___childContentfulNewsExcerptTextNode___sys___type = 'news___childContentfulNewsExcerptTextNode___sys___type',
-  news___parent___id = 'news___parent___id',
-  news___parent___parent___id = 'news___parent___parent___id',
-  news___parent___parent___children = 'news___parent___parent___children',
-  news___parent___children = 'news___parent___children',
-  news___parent___children___id = 'news___parent___children___id',
-  news___parent___children___children = 'news___parent___children___children',
-  news___parent___internal___content = 'news___parent___internal___content',
-  news___parent___internal___contentDigest = 'news___parent___internal___contentDigest',
-  news___parent___internal___description = 'news___parent___internal___description',
-  news___parent___internal___fieldOwners = 'news___parent___internal___fieldOwners',
-  news___parent___internal___ignoreType = 'news___parent___internal___ignoreType',
-  news___parent___internal___mediaType = 'news___parent___internal___mediaType',
-  news___parent___internal___owner = 'news___parent___internal___owner',
-  news___parent___internal___type = 'news___parent___internal___type',
-  news___children = 'news___children',
-  news___children___id = 'news___children___id',
-  news___children___parent___id = 'news___children___parent___id',
-  news___children___parent___children = 'news___children___parent___children',
-  news___children___children = 'news___children___children',
-  news___children___children___id = 'news___children___children___id',
-  news___children___children___children = 'news___children___children___children',
-  news___children___internal___content = 'news___children___internal___content',
-  news___children___internal___contentDigest = 'news___children___internal___contentDigest',
-  news___children___internal___description = 'news___children___internal___description',
-  news___children___internal___fieldOwners = 'news___children___internal___fieldOwners',
-  news___children___internal___ignoreType = 'news___children___internal___ignoreType',
-  news___children___internal___mediaType = 'news___children___internal___mediaType',
-  news___children___internal___owner = 'news___children___internal___owner',
-  news___children___internal___type = 'news___children___internal___type',
-  news___internal___content = 'news___internal___content',
-  news___internal___contentDigest = 'news___internal___contentDigest',
-  news___internal___description = 'news___internal___description',
-  news___internal___fieldOwners = 'news___internal___fieldOwners',
-  news___internal___ignoreType = 'news___internal___ignoreType',
-  news___internal___mediaType = 'news___internal___mediaType',
-  news___internal___owner = 'news___internal___owner',
-  news___internal___type = 'news___internal___type',
-  biography___id = 'biography___id',
-  biography___parent___id = 'biography___parent___id',
-  biography___parent___parent___id = 'biography___parent___parent___id',
-  biography___parent___parent___children = 'biography___parent___parent___children',
-  biography___parent___children = 'biography___parent___children',
-  biography___parent___children___id = 'biography___parent___children___id',
-  biography___parent___children___children = 'biography___parent___children___children',
-  biography___parent___internal___content = 'biography___parent___internal___content',
-  biography___parent___internal___contentDigest = 'biography___parent___internal___contentDigest',
-  biography___parent___internal___description = 'biography___parent___internal___description',
-  biography___parent___internal___fieldOwners = 'biography___parent___internal___fieldOwners',
-  biography___parent___internal___ignoreType = 'biography___parent___internal___ignoreType',
-  biography___parent___internal___mediaType = 'biography___parent___internal___mediaType',
-  biography___parent___internal___owner = 'biography___parent___internal___owner',
-  biography___parent___internal___type = 'biography___parent___internal___type',
-  biography___children = 'biography___children',
-  biography___children___id = 'biography___children___id',
-  biography___children___parent___id = 'biography___children___parent___id',
-  biography___children___parent___children = 'biography___children___parent___children',
-  biography___children___children = 'biography___children___children',
-  biography___children___children___id = 'biography___children___children___id',
-  biography___children___children___children = 'biography___children___children___children',
-  biography___children___internal___content = 'biography___children___internal___content',
-  biography___children___internal___contentDigest = 'biography___children___internal___contentDigest',
-  biography___children___internal___description = 'biography___children___internal___description',
-  biography___children___internal___fieldOwners = 'biography___children___internal___fieldOwners',
-  biography___children___internal___ignoreType = 'biography___children___internal___ignoreType',
-  biography___children___internal___mediaType = 'biography___children___internal___mediaType',
-  biography___children___internal___owner = 'biography___children___internal___owner',
-  biography___children___internal___type = 'biography___children___internal___type',
-  biography___internal___content = 'biography___internal___content',
-  biography___internal___contentDigest = 'biography___internal___contentDigest',
-  biography___internal___description = 'biography___internal___description',
-  biography___internal___fieldOwners = 'biography___internal___fieldOwners',
-  biography___internal___ignoreType = 'biography___internal___ignoreType',
-  biography___internal___mediaType = 'biography___internal___mediaType',
-  biography___internal___owner = 'biography___internal___owner',
-  biography___internal___type = 'biography___internal___type',
-  biography___biography = 'biography___biography',
-  biography___sys___type = 'biography___sys___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
   blog_post = 'blog_post',
   blog_post___contentful_id = 'blog_post___contentful_id',
   blog_post___id = 'blog_post___id',
   blog_post___node_locale = 'blog_post___node_locale',
   blog_post___title = 'blog_post___title',
   blog_post___slug = 'blog_post___slug',
-  blog_post___featured = 'blog_post___featured',
+  blog_post___category = 'blog_post___category',
   blog_post___published = 'blog_post___published',
   blog_post___content___raw = 'blog_post___content___raw',
   blog_post___content___references = 'blog_post___content___references',
@@ -732,27 +469,26 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___content___references___node_locale = 'blog_post___content___references___node_locale',
   blog_post___content___references___gatsbyImageData = 'blog_post___content___references___gatsbyImageData',
   blog_post___content___references___children = 'blog_post___content___references___children',
-  blog_post___seoTitle = 'blog_post___seoTitle',
-  blog_post___seoDescription = 'blog_post___seoDescription',
   blog_post___author___contentful_id = 'blog_post___author___contentful_id',
   blog_post___author___id = 'blog_post___author___id',
   blog_post___author___node_locale = 'blog_post___author___node_locale',
   blog_post___author___name = 'blog_post___author___name',
-  blog_post___author___news = 'blog_post___author___news',
-  blog_post___author___news___contentful_id = 'blog_post___author___news___contentful_id',
-  blog_post___author___news___id = 'blog_post___author___news___id',
-  blog_post___author___news___node_locale = 'blog_post___author___news___node_locale',
-  blog_post___author___news___title = 'blog_post___author___news___title',
-  blog_post___author___news___slug = 'blog_post___author___news___slug',
-  blog_post___author___news___featured = 'blog_post___author___news___featured',
-  blog_post___author___news___published = 'blog_post___author___news___published',
-  blog_post___author___news___spaceId = 'blog_post___author___news___spaceId',
-  blog_post___author___news___createdAt = 'blog_post___author___news___createdAt',
-  blog_post___author___news___updatedAt = 'blog_post___author___news___updatedAt',
-  blog_post___author___news___seoTitle = 'blog_post___author___news___seoTitle',
-  blog_post___author___news___seoDescription = 'blog_post___author___news___seoDescription',
-  blog_post___author___news___childrenContentfulNewsExcerptTextNode = 'blog_post___author___news___childrenContentfulNewsExcerptTextNode',
-  blog_post___author___news___children = 'blog_post___author___news___children',
+  blog_post___author___blog_post = 'blog_post___author___blog_post',
+  blog_post___author___blog_post___contentful_id = 'blog_post___author___blog_post___contentful_id',
+  blog_post___author___blog_post___id = 'blog_post___author___blog_post___id',
+  blog_post___author___blog_post___node_locale = 'blog_post___author___blog_post___node_locale',
+  blog_post___author___blog_post___title = 'blog_post___author___blog_post___title',
+  blog_post___author___blog_post___slug = 'blog_post___author___blog_post___slug',
+  blog_post___author___blog_post___category = 'blog_post___author___blog_post___category',
+  blog_post___author___blog_post___published = 'blog_post___author___blog_post___published',
+  blog_post___author___blog_post___spaceId = 'blog_post___author___blog_post___spaceId',
+  blog_post___author___blog_post___createdAt = 'blog_post___author___blog_post___createdAt',
+  blog_post___author___blog_post___updatedAt = 'blog_post___author___blog_post___updatedAt',
+  blog_post___author___blog_post___featured = 'blog_post___author___blog_post___featured',
+  blog_post___author___blog_post___seoTitle = 'blog_post___author___blog_post___seoTitle',
+  blog_post___author___blog_post___seoDescription = 'blog_post___author___blog_post___seoDescription',
+  blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode',
+  blog_post___author___blog_post___children = 'blog_post___author___blog_post___children',
   blog_post___author___biography___id = 'blog_post___author___biography___id',
   blog_post___author___biography___children = 'blog_post___author___biography___children',
   blog_post___author___biography___biography = 'blog_post___author___biography___biography',
@@ -761,21 +497,6 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___author___updatedAt = 'blog_post___author___updatedAt',
   blog_post___author___sys___type = 'blog_post___author___sys___type',
   blog_post___author___sys___revision = 'blog_post___author___sys___revision',
-  blog_post___author___blog_post = 'blog_post___author___blog_post',
-  blog_post___author___blog_post___contentful_id = 'blog_post___author___blog_post___contentful_id',
-  blog_post___author___blog_post___id = 'blog_post___author___blog_post___id',
-  blog_post___author___blog_post___node_locale = 'blog_post___author___blog_post___node_locale',
-  blog_post___author___blog_post___title = 'blog_post___author___blog_post___title',
-  blog_post___author___blog_post___slug = 'blog_post___author___blog_post___slug',
-  blog_post___author___blog_post___featured = 'blog_post___author___blog_post___featured',
-  blog_post___author___blog_post___published = 'blog_post___author___blog_post___published',
-  blog_post___author___blog_post___seoTitle = 'blog_post___author___blog_post___seoTitle',
-  blog_post___author___blog_post___seoDescription = 'blog_post___author___blog_post___seoDescription',
-  blog_post___author___blog_post___spaceId = 'blog_post___author___blog_post___spaceId',
-  blog_post___author___blog_post___createdAt = 'blog_post___author___blog_post___createdAt',
-  blog_post___author___blog_post___updatedAt = 'blog_post___author___blog_post___updatedAt',
-  blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode',
-  blog_post___author___blog_post___children = 'blog_post___author___blog_post___children',
   blog_post___author___childrenContentfulAuthorBiographyTextNode = 'blog_post___author___childrenContentfulAuthorBiographyTextNode',
   blog_post___author___childrenContentfulAuthorBiographyTextNode___id = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___id',
   blog_post___author___childrenContentfulAuthorBiographyTextNode___children = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___children',
@@ -817,6 +538,7 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___updatedAt = 'blog_post___updatedAt',
   blog_post___sys___type = 'blog_post___sys___type',
   blog_post___sys___revision = 'blog_post___sys___revision',
+  blog_post___featured = 'blog_post___featured',
   blog_post___featuredImage___contentful_id = 'blog_post___featuredImage___contentful_id',
   blog_post___featuredImage___id = 'blog_post___featuredImage___id',
   blog_post___featuredImage___spaceId = 'blog_post___featuredImage___spaceId',
@@ -867,6 +589,8 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___featuredImage___internal___mediaType = 'blog_post___featuredImage___internal___mediaType',
   blog_post___featuredImage___internal___owner = 'blog_post___featuredImage___internal___owner',
   blog_post___featuredImage___internal___type = 'blog_post___featuredImage___internal___type',
+  blog_post___seoTitle = 'blog_post___seoTitle',
+  blog_post___seoDescription = 'blog_post___seoDescription',
   blog_post___childrenContentfulBlogPostExcerptTextNode = 'blog_post___childrenContentfulBlogPostExcerptTextNode',
   blog_post___childrenContentfulBlogPostExcerptTextNode___id = 'blog_post___childrenContentfulBlogPostExcerptTextNode___id',
   blog_post___childrenContentfulBlogPostExcerptTextNode___parent___id = 'blog_post___childrenContentfulBlogPostExcerptTextNode___parent___id',
@@ -937,6 +661,54 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___internal___mediaType = 'blog_post___internal___mediaType',
   blog_post___internal___owner = 'blog_post___internal___owner',
   blog_post___internal___type = 'blog_post___internal___type',
+  biography___id = 'biography___id',
+  biography___parent___id = 'biography___parent___id',
+  biography___parent___parent___id = 'biography___parent___parent___id',
+  biography___parent___parent___children = 'biography___parent___parent___children',
+  biography___parent___children = 'biography___parent___children',
+  biography___parent___children___id = 'biography___parent___children___id',
+  biography___parent___children___children = 'biography___parent___children___children',
+  biography___parent___internal___content = 'biography___parent___internal___content',
+  biography___parent___internal___contentDigest = 'biography___parent___internal___contentDigest',
+  biography___parent___internal___description = 'biography___parent___internal___description',
+  biography___parent___internal___fieldOwners = 'biography___parent___internal___fieldOwners',
+  biography___parent___internal___ignoreType = 'biography___parent___internal___ignoreType',
+  biography___parent___internal___mediaType = 'biography___parent___internal___mediaType',
+  biography___parent___internal___owner = 'biography___parent___internal___owner',
+  biography___parent___internal___type = 'biography___parent___internal___type',
+  biography___children = 'biography___children',
+  biography___children___id = 'biography___children___id',
+  biography___children___parent___id = 'biography___children___parent___id',
+  biography___children___parent___children = 'biography___children___parent___children',
+  biography___children___children = 'biography___children___children',
+  biography___children___children___id = 'biography___children___children___id',
+  biography___children___children___children = 'biography___children___children___children',
+  biography___children___internal___content = 'biography___children___internal___content',
+  biography___children___internal___contentDigest = 'biography___children___internal___contentDigest',
+  biography___children___internal___description = 'biography___children___internal___description',
+  biography___children___internal___fieldOwners = 'biography___children___internal___fieldOwners',
+  biography___children___internal___ignoreType = 'biography___children___internal___ignoreType',
+  biography___children___internal___mediaType = 'biography___children___internal___mediaType',
+  biography___children___internal___owner = 'biography___children___internal___owner',
+  biography___children___internal___type = 'biography___children___internal___type',
+  biography___internal___content = 'biography___internal___content',
+  biography___internal___contentDigest = 'biography___internal___contentDigest',
+  biography___internal___description = 'biography___internal___description',
+  biography___internal___fieldOwners = 'biography___internal___fieldOwners',
+  biography___internal___ignoreType = 'biography___internal___ignoreType',
+  biography___internal___mediaType = 'biography___internal___mediaType',
+  biography___internal___owner = 'biography___internal___owner',
+  biography___internal___type = 'biography___internal___type',
+  biography___biography = 'biography___biography',
+  biography___sys___type = 'biography___sys___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
   childrenContentfulAuthorBiographyTextNode = 'childrenContentfulAuthorBiographyTextNode',
   childrenContentfulAuthorBiographyTextNode___id = 'childrenContentfulAuthorBiographyTextNode___id',
   childrenContentfulAuthorBiographyTextNode___parent___id = 'childrenContentfulAuthorBiographyTextNode___parent___id',
@@ -1110,13 +882,12 @@ export type ContentfulAuthorFilterInput = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
-  news?: Maybe<ContentfulNewsFilterListInput>;
+  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
   biography?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulAuthorSysFilterInput>;
-  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
   childrenContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterListInput>;
   childContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -3562,18 +3333,19 @@ export type ContentfulBlogPost = ContentfulReference & ContentfulEntry & Node & 
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
-  featured?: Maybe<Scalars['Boolean']>;
+  category?: Maybe<Scalars['String']>;
   published?: Maybe<Scalars['Date']>;
   content?: Maybe<ContentfulBlogPostContent>;
-  seoTitle?: Maybe<Scalars['String']>;
-  seoDescription?: Maybe<Scalars['String']>;
   author?: Maybe<ContentfulAuthor>;
   excerpt?: Maybe<ContentfulBlogPostExcerptTextNode>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulBlogPostSys>;
+  featured?: Maybe<Scalars['Boolean']>;
   featuredImage?: Maybe<ContentfulAsset>;
+  seoTitle?: Maybe<Scalars['String']>;
+  seoDescription?: Maybe<Scalars['String']>;
   /** Returns all children nodes filtered by type contentfulBlogPostExcerptTextNode */
   childrenContentfulBlogPostExcerptTextNode?: Maybe<Array<Maybe<ContentfulBlogPostExcerptTextNode>>>;
   /** Returns the first child node of type contentfulBlogPostExcerptTextNode or null if there are no children of given type on this node */
@@ -3653,7 +3425,7 @@ export enum ContentfulBlogPostFieldsEnum {
   node_locale = 'node_locale',
   title = 'title',
   slug = 'slug',
-  featured = 'featured',
+  category = 'category',
   published = 'published',
   content___raw = 'content___raw',
   content___references = 'content___references',
@@ -3707,72 +3479,71 @@ export enum ContentfulBlogPostFieldsEnum {
   content___references___internal___mediaType = 'content___references___internal___mediaType',
   content___references___internal___owner = 'content___references___internal___owner',
   content___references___internal___type = 'content___references___internal___type',
-  seoTitle = 'seoTitle',
-  seoDescription = 'seoDescription',
   author___contentful_id = 'author___contentful_id',
   author___id = 'author___id',
   author___node_locale = 'author___node_locale',
   author___name = 'author___name',
-  author___news = 'author___news',
-  author___news___contentful_id = 'author___news___contentful_id',
-  author___news___id = 'author___news___id',
-  author___news___node_locale = 'author___news___node_locale',
-  author___news___title = 'author___news___title',
-  author___news___slug = 'author___news___slug',
-  author___news___featured = 'author___news___featured',
-  author___news___published = 'author___news___published',
-  author___news___content___raw = 'author___news___content___raw',
-  author___news___featuredImage___contentful_id = 'author___news___featuredImage___contentful_id',
-  author___news___featuredImage___id = 'author___news___featuredImage___id',
-  author___news___featuredImage___spaceId = 'author___news___featuredImage___spaceId',
-  author___news___featuredImage___createdAt = 'author___news___featuredImage___createdAt',
-  author___news___featuredImage___updatedAt = 'author___news___featuredImage___updatedAt',
-  author___news___featuredImage___title = 'author___news___featuredImage___title',
-  author___news___featuredImage___description = 'author___news___featuredImage___description',
-  author___news___featuredImage___node_locale = 'author___news___featuredImage___node_locale',
-  author___news___featuredImage___gatsbyImageData = 'author___news___featuredImage___gatsbyImageData',
-  author___news___featuredImage___children = 'author___news___featuredImage___children',
-  author___news___excerpt___id = 'author___news___excerpt___id',
-  author___news___excerpt___children = 'author___news___excerpt___children',
-  author___news___excerpt___excerpt = 'author___news___excerpt___excerpt',
-  author___news___spaceId = 'author___news___spaceId',
-  author___news___createdAt = 'author___news___createdAt',
-  author___news___updatedAt = 'author___news___updatedAt',
-  author___news___sys___type = 'author___news___sys___type',
-  author___news___sys___revision = 'author___news___sys___revision',
-  author___news___seoTitle = 'author___news___seoTitle',
-  author___news___seoDescription = 'author___news___seoDescription',
-  author___news___author___contentful_id = 'author___news___author___contentful_id',
-  author___news___author___id = 'author___news___author___id',
-  author___news___author___node_locale = 'author___news___author___node_locale',
-  author___news___author___name = 'author___news___author___name',
-  author___news___author___news = 'author___news___author___news',
-  author___news___author___spaceId = 'author___news___author___spaceId',
-  author___news___author___createdAt = 'author___news___author___createdAt',
-  author___news___author___updatedAt = 'author___news___author___updatedAt',
-  author___news___author___blog_post = 'author___news___author___blog_post',
-  author___news___author___childrenContentfulAuthorBiographyTextNode = 'author___news___author___childrenContentfulAuthorBiographyTextNode',
-  author___news___author___children = 'author___news___author___children',
-  author___news___childrenContentfulNewsExcerptTextNode = 'author___news___childrenContentfulNewsExcerptTextNode',
-  author___news___childrenContentfulNewsExcerptTextNode___id = 'author___news___childrenContentfulNewsExcerptTextNode___id',
-  author___news___childrenContentfulNewsExcerptTextNode___children = 'author___news___childrenContentfulNewsExcerptTextNode___children',
-  author___news___childrenContentfulNewsExcerptTextNode___excerpt = 'author___news___childrenContentfulNewsExcerptTextNode___excerpt',
-  author___news___childContentfulNewsExcerptTextNode___id = 'author___news___childContentfulNewsExcerptTextNode___id',
-  author___news___childContentfulNewsExcerptTextNode___children = 'author___news___childContentfulNewsExcerptTextNode___children',
-  author___news___childContentfulNewsExcerptTextNode___excerpt = 'author___news___childContentfulNewsExcerptTextNode___excerpt',
-  author___news___parent___id = 'author___news___parent___id',
-  author___news___parent___children = 'author___news___parent___children',
-  author___news___children = 'author___news___children',
-  author___news___children___id = 'author___news___children___id',
-  author___news___children___children = 'author___news___children___children',
-  author___news___internal___content = 'author___news___internal___content',
-  author___news___internal___contentDigest = 'author___news___internal___contentDigest',
-  author___news___internal___description = 'author___news___internal___description',
-  author___news___internal___fieldOwners = 'author___news___internal___fieldOwners',
-  author___news___internal___ignoreType = 'author___news___internal___ignoreType',
-  author___news___internal___mediaType = 'author___news___internal___mediaType',
-  author___news___internal___owner = 'author___news___internal___owner',
-  author___news___internal___type = 'author___news___internal___type',
+  author___blog_post = 'author___blog_post',
+  author___blog_post___contentful_id = 'author___blog_post___contentful_id',
+  author___blog_post___id = 'author___blog_post___id',
+  author___blog_post___node_locale = 'author___blog_post___node_locale',
+  author___blog_post___title = 'author___blog_post___title',
+  author___blog_post___slug = 'author___blog_post___slug',
+  author___blog_post___category = 'author___blog_post___category',
+  author___blog_post___published = 'author___blog_post___published',
+  author___blog_post___content___raw = 'author___blog_post___content___raw',
+  author___blog_post___content___references = 'author___blog_post___content___references',
+  author___blog_post___author___contentful_id = 'author___blog_post___author___contentful_id',
+  author___blog_post___author___id = 'author___blog_post___author___id',
+  author___blog_post___author___node_locale = 'author___blog_post___author___node_locale',
+  author___blog_post___author___name = 'author___blog_post___author___name',
+  author___blog_post___author___blog_post = 'author___blog_post___author___blog_post',
+  author___blog_post___author___spaceId = 'author___blog_post___author___spaceId',
+  author___blog_post___author___createdAt = 'author___blog_post___author___createdAt',
+  author___blog_post___author___updatedAt = 'author___blog_post___author___updatedAt',
+  author___blog_post___author___childrenContentfulAuthorBiographyTextNode = 'author___blog_post___author___childrenContentfulAuthorBiographyTextNode',
+  author___blog_post___author___children = 'author___blog_post___author___children',
+  author___blog_post___excerpt___id = 'author___blog_post___excerpt___id',
+  author___blog_post___excerpt___children = 'author___blog_post___excerpt___children',
+  author___blog_post___excerpt___excerpt = 'author___blog_post___excerpt___excerpt',
+  author___blog_post___spaceId = 'author___blog_post___spaceId',
+  author___blog_post___createdAt = 'author___blog_post___createdAt',
+  author___blog_post___updatedAt = 'author___blog_post___updatedAt',
+  author___blog_post___sys___type = 'author___blog_post___sys___type',
+  author___blog_post___sys___revision = 'author___blog_post___sys___revision',
+  author___blog_post___featured = 'author___blog_post___featured',
+  author___blog_post___featuredImage___contentful_id = 'author___blog_post___featuredImage___contentful_id',
+  author___blog_post___featuredImage___id = 'author___blog_post___featuredImage___id',
+  author___blog_post___featuredImage___spaceId = 'author___blog_post___featuredImage___spaceId',
+  author___blog_post___featuredImage___createdAt = 'author___blog_post___featuredImage___createdAt',
+  author___blog_post___featuredImage___updatedAt = 'author___blog_post___featuredImage___updatedAt',
+  author___blog_post___featuredImage___title = 'author___blog_post___featuredImage___title',
+  author___blog_post___featuredImage___description = 'author___blog_post___featuredImage___description',
+  author___blog_post___featuredImage___node_locale = 'author___blog_post___featuredImage___node_locale',
+  author___blog_post___featuredImage___gatsbyImageData = 'author___blog_post___featuredImage___gatsbyImageData',
+  author___blog_post___featuredImage___children = 'author___blog_post___featuredImage___children',
+  author___blog_post___seoTitle = 'author___blog_post___seoTitle',
+  author___blog_post___seoDescription = 'author___blog_post___seoDescription',
+  author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode',
+  author___blog_post___childrenContentfulBlogPostExcerptTextNode___id = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___id',
+  author___blog_post___childrenContentfulBlogPostExcerptTextNode___children = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___children',
+  author___blog_post___childrenContentfulBlogPostExcerptTextNode___excerpt = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___excerpt',
+  author___blog_post___childContentfulBlogPostExcerptTextNode___id = 'author___blog_post___childContentfulBlogPostExcerptTextNode___id',
+  author___blog_post___childContentfulBlogPostExcerptTextNode___children = 'author___blog_post___childContentfulBlogPostExcerptTextNode___children',
+  author___blog_post___childContentfulBlogPostExcerptTextNode___excerpt = 'author___blog_post___childContentfulBlogPostExcerptTextNode___excerpt',
+  author___blog_post___parent___id = 'author___blog_post___parent___id',
+  author___blog_post___parent___children = 'author___blog_post___parent___children',
+  author___blog_post___children = 'author___blog_post___children',
+  author___blog_post___children___id = 'author___blog_post___children___id',
+  author___blog_post___children___children = 'author___blog_post___children___children',
+  author___blog_post___internal___content = 'author___blog_post___internal___content',
+  author___blog_post___internal___contentDigest = 'author___blog_post___internal___contentDigest',
+  author___blog_post___internal___description = 'author___blog_post___internal___description',
+  author___blog_post___internal___fieldOwners = 'author___blog_post___internal___fieldOwners',
+  author___blog_post___internal___ignoreType = 'author___blog_post___internal___ignoreType',
+  author___blog_post___internal___mediaType = 'author___blog_post___internal___mediaType',
+  author___blog_post___internal___owner = 'author___blog_post___internal___owner',
+  author___blog_post___internal___type = 'author___blog_post___internal___type',
   author___biography___id = 'author___biography___id',
   author___biography___parent___id = 'author___biography___parent___id',
   author___biography___parent___children = 'author___biography___parent___children',
@@ -3794,67 +3565,6 @@ export enum ContentfulBlogPostFieldsEnum {
   author___updatedAt = 'author___updatedAt',
   author___sys___type = 'author___sys___type',
   author___sys___revision = 'author___sys___revision',
-  author___blog_post = 'author___blog_post',
-  author___blog_post___contentful_id = 'author___blog_post___contentful_id',
-  author___blog_post___id = 'author___blog_post___id',
-  author___blog_post___node_locale = 'author___blog_post___node_locale',
-  author___blog_post___title = 'author___blog_post___title',
-  author___blog_post___slug = 'author___blog_post___slug',
-  author___blog_post___featured = 'author___blog_post___featured',
-  author___blog_post___published = 'author___blog_post___published',
-  author___blog_post___content___raw = 'author___blog_post___content___raw',
-  author___blog_post___content___references = 'author___blog_post___content___references',
-  author___blog_post___seoTitle = 'author___blog_post___seoTitle',
-  author___blog_post___seoDescription = 'author___blog_post___seoDescription',
-  author___blog_post___author___contentful_id = 'author___blog_post___author___contentful_id',
-  author___blog_post___author___id = 'author___blog_post___author___id',
-  author___blog_post___author___node_locale = 'author___blog_post___author___node_locale',
-  author___blog_post___author___name = 'author___blog_post___author___name',
-  author___blog_post___author___news = 'author___blog_post___author___news',
-  author___blog_post___author___spaceId = 'author___blog_post___author___spaceId',
-  author___blog_post___author___createdAt = 'author___blog_post___author___createdAt',
-  author___blog_post___author___updatedAt = 'author___blog_post___author___updatedAt',
-  author___blog_post___author___blog_post = 'author___blog_post___author___blog_post',
-  author___blog_post___author___childrenContentfulAuthorBiographyTextNode = 'author___blog_post___author___childrenContentfulAuthorBiographyTextNode',
-  author___blog_post___author___children = 'author___blog_post___author___children',
-  author___blog_post___excerpt___id = 'author___blog_post___excerpt___id',
-  author___blog_post___excerpt___children = 'author___blog_post___excerpt___children',
-  author___blog_post___excerpt___excerpt = 'author___blog_post___excerpt___excerpt',
-  author___blog_post___spaceId = 'author___blog_post___spaceId',
-  author___blog_post___createdAt = 'author___blog_post___createdAt',
-  author___blog_post___updatedAt = 'author___blog_post___updatedAt',
-  author___blog_post___sys___type = 'author___blog_post___sys___type',
-  author___blog_post___sys___revision = 'author___blog_post___sys___revision',
-  author___blog_post___featuredImage___contentful_id = 'author___blog_post___featuredImage___contentful_id',
-  author___blog_post___featuredImage___id = 'author___blog_post___featuredImage___id',
-  author___blog_post___featuredImage___spaceId = 'author___blog_post___featuredImage___spaceId',
-  author___blog_post___featuredImage___createdAt = 'author___blog_post___featuredImage___createdAt',
-  author___blog_post___featuredImage___updatedAt = 'author___blog_post___featuredImage___updatedAt',
-  author___blog_post___featuredImage___title = 'author___blog_post___featuredImage___title',
-  author___blog_post___featuredImage___description = 'author___blog_post___featuredImage___description',
-  author___blog_post___featuredImage___node_locale = 'author___blog_post___featuredImage___node_locale',
-  author___blog_post___featuredImage___gatsbyImageData = 'author___blog_post___featuredImage___gatsbyImageData',
-  author___blog_post___featuredImage___children = 'author___blog_post___featuredImage___children',
-  author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode',
-  author___blog_post___childrenContentfulBlogPostExcerptTextNode___id = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___id',
-  author___blog_post___childrenContentfulBlogPostExcerptTextNode___children = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___children',
-  author___blog_post___childrenContentfulBlogPostExcerptTextNode___excerpt = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___excerpt',
-  author___blog_post___childContentfulBlogPostExcerptTextNode___id = 'author___blog_post___childContentfulBlogPostExcerptTextNode___id',
-  author___blog_post___childContentfulBlogPostExcerptTextNode___children = 'author___blog_post___childContentfulBlogPostExcerptTextNode___children',
-  author___blog_post___childContentfulBlogPostExcerptTextNode___excerpt = 'author___blog_post___childContentfulBlogPostExcerptTextNode___excerpt',
-  author___blog_post___parent___id = 'author___blog_post___parent___id',
-  author___blog_post___parent___children = 'author___blog_post___parent___children',
-  author___blog_post___children = 'author___blog_post___children',
-  author___blog_post___children___id = 'author___blog_post___children___id',
-  author___blog_post___children___children = 'author___blog_post___children___children',
-  author___blog_post___internal___content = 'author___blog_post___internal___content',
-  author___blog_post___internal___contentDigest = 'author___blog_post___internal___contentDigest',
-  author___blog_post___internal___description = 'author___blog_post___internal___description',
-  author___blog_post___internal___fieldOwners = 'author___blog_post___internal___fieldOwners',
-  author___blog_post___internal___ignoreType = 'author___blog_post___internal___ignoreType',
-  author___blog_post___internal___mediaType = 'author___blog_post___internal___mediaType',
-  author___blog_post___internal___owner = 'author___blog_post___internal___owner',
-  author___blog_post___internal___type = 'author___blog_post___internal___type',
   author___childrenContentfulAuthorBiographyTextNode = 'author___childrenContentfulAuthorBiographyTextNode',
   author___childrenContentfulAuthorBiographyTextNode___id = 'author___childrenContentfulAuthorBiographyTextNode___id',
   author___childrenContentfulAuthorBiographyTextNode___parent___id = 'author___childrenContentfulAuthorBiographyTextNode___parent___id',
@@ -3973,6 +3683,7 @@ export enum ContentfulBlogPostFieldsEnum {
   sys___contentType___sys___type = 'sys___contentType___sys___type',
   sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
   sys___contentType___sys___id = 'sys___contentType___sys___id',
+  featured = 'featured',
   featuredImage___contentful_id = 'featuredImage___contentful_id',
   featuredImage___id = 'featuredImage___id',
   featuredImage___spaceId = 'featuredImage___spaceId',
@@ -4048,6 +3759,8 @@ export enum ContentfulBlogPostFieldsEnum {
   featuredImage___internal___mediaType = 'featuredImage___internal___mediaType',
   featuredImage___internal___owner = 'featuredImage___internal___owner',
   featuredImage___internal___type = 'featuredImage___internal___type',
+  seoTitle = 'seoTitle',
+  seoDescription = 'seoDescription',
   childrenContentfulBlogPostExcerptTextNode = 'childrenContentfulBlogPostExcerptTextNode',
   childrenContentfulBlogPostExcerptTextNode___id = 'childrenContentfulBlogPostExcerptTextNode___id',
   childrenContentfulBlogPostExcerptTextNode___parent___id = 'childrenContentfulBlogPostExcerptTextNode___parent___id',
@@ -4222,18 +3935,19 @@ export type ContentfulBlogPostFilterInput = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
-  featured?: Maybe<BooleanQueryOperatorInput>;
+  category?: Maybe<StringQueryOperatorInput>;
   published?: Maybe<DateQueryOperatorInput>;
   content?: Maybe<ContentfulBlogPostContentFilterInput>;
-  seoTitle?: Maybe<StringQueryOperatorInput>;
-  seoDescription?: Maybe<StringQueryOperatorInput>;
   author?: Maybe<ContentfulAuthorFilterInput>;
   excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlogPostSysFilterInput>;
+  featured?: Maybe<BooleanQueryOperatorInput>;
   featuredImage?: Maybe<ContentfulAssetFilterInput>;
+  seoTitle?: Maybe<StringQueryOperatorInput>;
+  seoDescription?: Maybe<StringQueryOperatorInput>;
   childrenContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterListInput>;
   childContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -4912,693 +4626,6 @@ export type ContentfulMicroContentSysFilterInput = {
   type?: Maybe<StringQueryOperatorInput>;
   revision?: Maybe<IntQueryOperatorInput>;
   contentType?: Maybe<ContentfulMicroContentSysContentTypeFilterInput>;
-};
-
-export type ContentfulNews = ContentfulReference & ContentfulEntry & Node & {
-  __typename?: 'ContentfulNews';
-  contentful_id: Scalars['String'];
-  id: Scalars['ID'];
-  node_locale: Scalars['String'];
-  title?: Maybe<Scalars['String']>;
-  slug?: Maybe<Scalars['String']>;
-  featured?: Maybe<Scalars['Boolean']>;
-  published?: Maybe<Scalars['Date']>;
-  content?: Maybe<ContentfulNewsContent>;
-  featuredImage?: Maybe<ContentfulAsset>;
-  excerpt?: Maybe<ContentfulNewsExcerptTextNode>;
-  spaceId?: Maybe<Scalars['String']>;
-  createdAt?: Maybe<Scalars['Date']>;
-  updatedAt?: Maybe<Scalars['Date']>;
-  sys?: Maybe<ContentfulNewsSys>;
-  seoTitle?: Maybe<Scalars['String']>;
-  seoDescription?: Maybe<Scalars['String']>;
-  author?: Maybe<ContentfulAuthor>;
-  /** Returns all children nodes filtered by type contentfulNewsExcerptTextNode */
-  childrenContentfulNewsExcerptTextNode?: Maybe<Array<Maybe<ContentfulNewsExcerptTextNode>>>;
-  /** Returns the first child node of type contentfulNewsExcerptTextNode or null if there are no children of given type on this node */
-  childContentfulNewsExcerptTextNode?: Maybe<ContentfulNewsExcerptTextNode>;
-  parent?: Maybe<Node>;
-  children: Array<Node>;
-  internal: Internal;
-};
-
-
-export type ContentfulNewsPublishedArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
-};
-
-
-export type ContentfulNewsCreatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
-};
-
-
-export type ContentfulNewsUpdatedAtArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulNewsConnection = {
-  __typename?: 'ContentfulNewsConnection';
-  totalCount: Scalars['Int'];
-  edges: Array<ContentfulNewsEdge>;
-  nodes: Array<ContentfulNews>;
-  pageInfo: PageInfo;
-  distinct: Array<Scalars['String']>;
-  group: Array<ContentfulNewsGroupConnection>;
-};
-
-
-export type ContentfulNewsConnectionDistinctArgs = {
-  field: ContentfulNewsFieldsEnum;
-};
-
-
-export type ContentfulNewsConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
-  field: ContentfulNewsFieldsEnum;
-};
-
-export type ContentfulNewsContent = {
-  __typename?: 'ContentfulNewsContent';
-  raw?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulNewsContentFilterInput = {
-  raw?: Maybe<StringQueryOperatorInput>;
-};
-
-export type ContentfulNewsEdge = {
-  __typename?: 'ContentfulNewsEdge';
-  next?: Maybe<ContentfulNews>;
-  node: ContentfulNews;
-  previous?: Maybe<ContentfulNews>;
-};
-
-export enum ContentfulNewsFieldsEnum {
-  contentful_id = 'contentful_id',
-  id = 'id',
-  node_locale = 'node_locale',
-  title = 'title',
-  slug = 'slug',
-  featured = 'featured',
-  published = 'published',
-  content___raw = 'content___raw',
-  featuredImage___contentful_id = 'featuredImage___contentful_id',
-  featuredImage___id = 'featuredImage___id',
-  featuredImage___spaceId = 'featuredImage___spaceId',
-  featuredImage___createdAt = 'featuredImage___createdAt',
-  featuredImage___updatedAt = 'featuredImage___updatedAt',
-  featuredImage___file___url = 'featuredImage___file___url',
-  featuredImage___file___details___size = 'featuredImage___file___details___size',
-  featuredImage___file___fileName = 'featuredImage___file___fileName',
-  featuredImage___file___contentType = 'featuredImage___file___contentType',
-  featuredImage___title = 'featuredImage___title',
-  featuredImage___description = 'featuredImage___description',
-  featuredImage___node_locale = 'featuredImage___node_locale',
-  featuredImage___sys___type = 'featuredImage___sys___type',
-  featuredImage___sys___revision = 'featuredImage___sys___revision',
-  featuredImage___fixed___base64 = 'featuredImage___fixed___base64',
-  featuredImage___fixed___tracedSVG = 'featuredImage___fixed___tracedSVG',
-  featuredImage___fixed___aspectRatio = 'featuredImage___fixed___aspectRatio',
-  featuredImage___fixed___width = 'featuredImage___fixed___width',
-  featuredImage___fixed___height = 'featuredImage___fixed___height',
-  featuredImage___fixed___src = 'featuredImage___fixed___src',
-  featuredImage___fixed___srcSet = 'featuredImage___fixed___srcSet',
-  featuredImage___fixed___srcWebp = 'featuredImage___fixed___srcWebp',
-  featuredImage___fixed___srcSetWebp = 'featuredImage___fixed___srcSetWebp',
-  featuredImage___fluid___base64 = 'featuredImage___fluid___base64',
-  featuredImage___fluid___tracedSVG = 'featuredImage___fluid___tracedSVG',
-  featuredImage___fluid___aspectRatio = 'featuredImage___fluid___aspectRatio',
-  featuredImage___fluid___src = 'featuredImage___fluid___src',
-  featuredImage___fluid___srcSet = 'featuredImage___fluid___srcSet',
-  featuredImage___fluid___srcWebp = 'featuredImage___fluid___srcWebp',
-  featuredImage___fluid___srcSetWebp = 'featuredImage___fluid___srcSetWebp',
-  featuredImage___fluid___sizes = 'featuredImage___fluid___sizes',
-  featuredImage___gatsbyImageData = 'featuredImage___gatsbyImageData',
-  featuredImage___resize___base64 = 'featuredImage___resize___base64',
-  featuredImage___resize___tracedSVG = 'featuredImage___resize___tracedSVG',
-  featuredImage___resize___src = 'featuredImage___resize___src',
-  featuredImage___resize___width = 'featuredImage___resize___width',
-  featuredImage___resize___height = 'featuredImage___resize___height',
-  featuredImage___resize___aspectRatio = 'featuredImage___resize___aspectRatio',
-  featuredImage___parent___id = 'featuredImage___parent___id',
-  featuredImage___parent___parent___id = 'featuredImage___parent___parent___id',
-  featuredImage___parent___parent___children = 'featuredImage___parent___parent___children',
-  featuredImage___parent___children = 'featuredImage___parent___children',
-  featuredImage___parent___children___id = 'featuredImage___parent___children___id',
-  featuredImage___parent___children___children = 'featuredImage___parent___children___children',
-  featuredImage___parent___internal___content = 'featuredImage___parent___internal___content',
-  featuredImage___parent___internal___contentDigest = 'featuredImage___parent___internal___contentDigest',
-  featuredImage___parent___internal___description = 'featuredImage___parent___internal___description',
-  featuredImage___parent___internal___fieldOwners = 'featuredImage___parent___internal___fieldOwners',
-  featuredImage___parent___internal___ignoreType = 'featuredImage___parent___internal___ignoreType',
-  featuredImage___parent___internal___mediaType = 'featuredImage___parent___internal___mediaType',
-  featuredImage___parent___internal___owner = 'featuredImage___parent___internal___owner',
-  featuredImage___parent___internal___type = 'featuredImage___parent___internal___type',
-  featuredImage___children = 'featuredImage___children',
-  featuredImage___children___id = 'featuredImage___children___id',
-  featuredImage___children___parent___id = 'featuredImage___children___parent___id',
-  featuredImage___children___parent___children = 'featuredImage___children___parent___children',
-  featuredImage___children___children = 'featuredImage___children___children',
-  featuredImage___children___children___id = 'featuredImage___children___children___id',
-  featuredImage___children___children___children = 'featuredImage___children___children___children',
-  featuredImage___children___internal___content = 'featuredImage___children___internal___content',
-  featuredImage___children___internal___contentDigest = 'featuredImage___children___internal___contentDigest',
-  featuredImage___children___internal___description = 'featuredImage___children___internal___description',
-  featuredImage___children___internal___fieldOwners = 'featuredImage___children___internal___fieldOwners',
-  featuredImage___children___internal___ignoreType = 'featuredImage___children___internal___ignoreType',
-  featuredImage___children___internal___mediaType = 'featuredImage___children___internal___mediaType',
-  featuredImage___children___internal___owner = 'featuredImage___children___internal___owner',
-  featuredImage___children___internal___type = 'featuredImage___children___internal___type',
-  featuredImage___internal___content = 'featuredImage___internal___content',
-  featuredImage___internal___contentDigest = 'featuredImage___internal___contentDigest',
-  featuredImage___internal___description = 'featuredImage___internal___description',
-  featuredImage___internal___fieldOwners = 'featuredImage___internal___fieldOwners',
-  featuredImage___internal___ignoreType = 'featuredImage___internal___ignoreType',
-  featuredImage___internal___mediaType = 'featuredImage___internal___mediaType',
-  featuredImage___internal___owner = 'featuredImage___internal___owner',
-  featuredImage___internal___type = 'featuredImage___internal___type',
-  excerpt___id = 'excerpt___id',
-  excerpt___parent___id = 'excerpt___parent___id',
-  excerpt___parent___parent___id = 'excerpt___parent___parent___id',
-  excerpt___parent___parent___children = 'excerpt___parent___parent___children',
-  excerpt___parent___children = 'excerpt___parent___children',
-  excerpt___parent___children___id = 'excerpt___parent___children___id',
-  excerpt___parent___children___children = 'excerpt___parent___children___children',
-  excerpt___parent___internal___content = 'excerpt___parent___internal___content',
-  excerpt___parent___internal___contentDigest = 'excerpt___parent___internal___contentDigest',
-  excerpt___parent___internal___description = 'excerpt___parent___internal___description',
-  excerpt___parent___internal___fieldOwners = 'excerpt___parent___internal___fieldOwners',
-  excerpt___parent___internal___ignoreType = 'excerpt___parent___internal___ignoreType',
-  excerpt___parent___internal___mediaType = 'excerpt___parent___internal___mediaType',
-  excerpt___parent___internal___owner = 'excerpt___parent___internal___owner',
-  excerpt___parent___internal___type = 'excerpt___parent___internal___type',
-  excerpt___children = 'excerpt___children',
-  excerpt___children___id = 'excerpt___children___id',
-  excerpt___children___parent___id = 'excerpt___children___parent___id',
-  excerpt___children___parent___children = 'excerpt___children___parent___children',
-  excerpt___children___children = 'excerpt___children___children',
-  excerpt___children___children___id = 'excerpt___children___children___id',
-  excerpt___children___children___children = 'excerpt___children___children___children',
-  excerpt___children___internal___content = 'excerpt___children___internal___content',
-  excerpt___children___internal___contentDigest = 'excerpt___children___internal___contentDigest',
-  excerpt___children___internal___description = 'excerpt___children___internal___description',
-  excerpt___children___internal___fieldOwners = 'excerpt___children___internal___fieldOwners',
-  excerpt___children___internal___ignoreType = 'excerpt___children___internal___ignoreType',
-  excerpt___children___internal___mediaType = 'excerpt___children___internal___mediaType',
-  excerpt___children___internal___owner = 'excerpt___children___internal___owner',
-  excerpt___children___internal___type = 'excerpt___children___internal___type',
-  excerpt___internal___content = 'excerpt___internal___content',
-  excerpt___internal___contentDigest = 'excerpt___internal___contentDigest',
-  excerpt___internal___description = 'excerpt___internal___description',
-  excerpt___internal___fieldOwners = 'excerpt___internal___fieldOwners',
-  excerpt___internal___ignoreType = 'excerpt___internal___ignoreType',
-  excerpt___internal___mediaType = 'excerpt___internal___mediaType',
-  excerpt___internal___owner = 'excerpt___internal___owner',
-  excerpt___internal___type = 'excerpt___internal___type',
-  excerpt___excerpt = 'excerpt___excerpt',
-  excerpt___sys___type = 'excerpt___sys___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
-  seoTitle = 'seoTitle',
-  seoDescription = 'seoDescription',
-  author___contentful_id = 'author___contentful_id',
-  author___id = 'author___id',
-  author___node_locale = 'author___node_locale',
-  author___name = 'author___name',
-  author___news = 'author___news',
-  author___news___contentful_id = 'author___news___contentful_id',
-  author___news___id = 'author___news___id',
-  author___news___node_locale = 'author___news___node_locale',
-  author___news___title = 'author___news___title',
-  author___news___slug = 'author___news___slug',
-  author___news___featured = 'author___news___featured',
-  author___news___published = 'author___news___published',
-  author___news___content___raw = 'author___news___content___raw',
-  author___news___featuredImage___contentful_id = 'author___news___featuredImage___contentful_id',
-  author___news___featuredImage___id = 'author___news___featuredImage___id',
-  author___news___featuredImage___spaceId = 'author___news___featuredImage___spaceId',
-  author___news___featuredImage___createdAt = 'author___news___featuredImage___createdAt',
-  author___news___featuredImage___updatedAt = 'author___news___featuredImage___updatedAt',
-  author___news___featuredImage___title = 'author___news___featuredImage___title',
-  author___news___featuredImage___description = 'author___news___featuredImage___description',
-  author___news___featuredImage___node_locale = 'author___news___featuredImage___node_locale',
-  author___news___featuredImage___gatsbyImageData = 'author___news___featuredImage___gatsbyImageData',
-  author___news___featuredImage___children = 'author___news___featuredImage___children',
-  author___news___excerpt___id = 'author___news___excerpt___id',
-  author___news___excerpt___children = 'author___news___excerpt___children',
-  author___news___excerpt___excerpt = 'author___news___excerpt___excerpt',
-  author___news___spaceId = 'author___news___spaceId',
-  author___news___createdAt = 'author___news___createdAt',
-  author___news___updatedAt = 'author___news___updatedAt',
-  author___news___sys___type = 'author___news___sys___type',
-  author___news___sys___revision = 'author___news___sys___revision',
-  author___news___seoTitle = 'author___news___seoTitle',
-  author___news___seoDescription = 'author___news___seoDescription',
-  author___news___author___contentful_id = 'author___news___author___contentful_id',
-  author___news___author___id = 'author___news___author___id',
-  author___news___author___node_locale = 'author___news___author___node_locale',
-  author___news___author___name = 'author___news___author___name',
-  author___news___author___news = 'author___news___author___news',
-  author___news___author___spaceId = 'author___news___author___spaceId',
-  author___news___author___createdAt = 'author___news___author___createdAt',
-  author___news___author___updatedAt = 'author___news___author___updatedAt',
-  author___news___author___blog_post = 'author___news___author___blog_post',
-  author___news___author___childrenContentfulAuthorBiographyTextNode = 'author___news___author___childrenContentfulAuthorBiographyTextNode',
-  author___news___author___children = 'author___news___author___children',
-  author___news___childrenContentfulNewsExcerptTextNode = 'author___news___childrenContentfulNewsExcerptTextNode',
-  author___news___childrenContentfulNewsExcerptTextNode___id = 'author___news___childrenContentfulNewsExcerptTextNode___id',
-  author___news___childrenContentfulNewsExcerptTextNode___children = 'author___news___childrenContentfulNewsExcerptTextNode___children',
-  author___news___childrenContentfulNewsExcerptTextNode___excerpt = 'author___news___childrenContentfulNewsExcerptTextNode___excerpt',
-  author___news___childContentfulNewsExcerptTextNode___id = 'author___news___childContentfulNewsExcerptTextNode___id',
-  author___news___childContentfulNewsExcerptTextNode___children = 'author___news___childContentfulNewsExcerptTextNode___children',
-  author___news___childContentfulNewsExcerptTextNode___excerpt = 'author___news___childContentfulNewsExcerptTextNode___excerpt',
-  author___news___parent___id = 'author___news___parent___id',
-  author___news___parent___children = 'author___news___parent___children',
-  author___news___children = 'author___news___children',
-  author___news___children___id = 'author___news___children___id',
-  author___news___children___children = 'author___news___children___children',
-  author___news___internal___content = 'author___news___internal___content',
-  author___news___internal___contentDigest = 'author___news___internal___contentDigest',
-  author___news___internal___description = 'author___news___internal___description',
-  author___news___internal___fieldOwners = 'author___news___internal___fieldOwners',
-  author___news___internal___ignoreType = 'author___news___internal___ignoreType',
-  author___news___internal___mediaType = 'author___news___internal___mediaType',
-  author___news___internal___owner = 'author___news___internal___owner',
-  author___news___internal___type = 'author___news___internal___type',
-  author___biography___id = 'author___biography___id',
-  author___biography___parent___id = 'author___biography___parent___id',
-  author___biography___parent___children = 'author___biography___parent___children',
-  author___biography___children = 'author___biography___children',
-  author___biography___children___id = 'author___biography___children___id',
-  author___biography___children___children = 'author___biography___children___children',
-  author___biography___internal___content = 'author___biography___internal___content',
-  author___biography___internal___contentDigest = 'author___biography___internal___contentDigest',
-  author___biography___internal___description = 'author___biography___internal___description',
-  author___biography___internal___fieldOwners = 'author___biography___internal___fieldOwners',
-  author___biography___internal___ignoreType = 'author___biography___internal___ignoreType',
-  author___biography___internal___mediaType = 'author___biography___internal___mediaType',
-  author___biography___internal___owner = 'author___biography___internal___owner',
-  author___biography___internal___type = 'author___biography___internal___type',
-  author___biography___biography = 'author___biography___biography',
-  author___biography___sys___type = 'author___biography___sys___type',
-  author___spaceId = 'author___spaceId',
-  author___createdAt = 'author___createdAt',
-  author___updatedAt = 'author___updatedAt',
-  author___sys___type = 'author___sys___type',
-  author___sys___revision = 'author___sys___revision',
-  author___blog_post = 'author___blog_post',
-  author___blog_post___contentful_id = 'author___blog_post___contentful_id',
-  author___blog_post___id = 'author___blog_post___id',
-  author___blog_post___node_locale = 'author___blog_post___node_locale',
-  author___blog_post___title = 'author___blog_post___title',
-  author___blog_post___slug = 'author___blog_post___slug',
-  author___blog_post___featured = 'author___blog_post___featured',
-  author___blog_post___published = 'author___blog_post___published',
-  author___blog_post___content___raw = 'author___blog_post___content___raw',
-  author___blog_post___content___references = 'author___blog_post___content___references',
-  author___blog_post___seoTitle = 'author___blog_post___seoTitle',
-  author___blog_post___seoDescription = 'author___blog_post___seoDescription',
-  author___blog_post___author___contentful_id = 'author___blog_post___author___contentful_id',
-  author___blog_post___author___id = 'author___blog_post___author___id',
-  author___blog_post___author___node_locale = 'author___blog_post___author___node_locale',
-  author___blog_post___author___name = 'author___blog_post___author___name',
-  author___blog_post___author___news = 'author___blog_post___author___news',
-  author___blog_post___author___spaceId = 'author___blog_post___author___spaceId',
-  author___blog_post___author___createdAt = 'author___blog_post___author___createdAt',
-  author___blog_post___author___updatedAt = 'author___blog_post___author___updatedAt',
-  author___blog_post___author___blog_post = 'author___blog_post___author___blog_post',
-  author___blog_post___author___childrenContentfulAuthorBiographyTextNode = 'author___blog_post___author___childrenContentfulAuthorBiographyTextNode',
-  author___blog_post___author___children = 'author___blog_post___author___children',
-  author___blog_post___excerpt___id = 'author___blog_post___excerpt___id',
-  author___blog_post___excerpt___children = 'author___blog_post___excerpt___children',
-  author___blog_post___excerpt___excerpt = 'author___blog_post___excerpt___excerpt',
-  author___blog_post___spaceId = 'author___blog_post___spaceId',
-  author___blog_post___createdAt = 'author___blog_post___createdAt',
-  author___blog_post___updatedAt = 'author___blog_post___updatedAt',
-  author___blog_post___sys___type = 'author___blog_post___sys___type',
-  author___blog_post___sys___revision = 'author___blog_post___sys___revision',
-  author___blog_post___featuredImage___contentful_id = 'author___blog_post___featuredImage___contentful_id',
-  author___blog_post___featuredImage___id = 'author___blog_post___featuredImage___id',
-  author___blog_post___featuredImage___spaceId = 'author___blog_post___featuredImage___spaceId',
-  author___blog_post___featuredImage___createdAt = 'author___blog_post___featuredImage___createdAt',
-  author___blog_post___featuredImage___updatedAt = 'author___blog_post___featuredImage___updatedAt',
-  author___blog_post___featuredImage___title = 'author___blog_post___featuredImage___title',
-  author___blog_post___featuredImage___description = 'author___blog_post___featuredImage___description',
-  author___blog_post___featuredImage___node_locale = 'author___blog_post___featuredImage___node_locale',
-  author___blog_post___featuredImage___gatsbyImageData = 'author___blog_post___featuredImage___gatsbyImageData',
-  author___blog_post___featuredImage___children = 'author___blog_post___featuredImage___children',
-  author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode',
-  author___blog_post___childrenContentfulBlogPostExcerptTextNode___id = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___id',
-  author___blog_post___childrenContentfulBlogPostExcerptTextNode___children = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___children',
-  author___blog_post___childrenContentfulBlogPostExcerptTextNode___excerpt = 'author___blog_post___childrenContentfulBlogPostExcerptTextNode___excerpt',
-  author___blog_post___childContentfulBlogPostExcerptTextNode___id = 'author___blog_post___childContentfulBlogPostExcerptTextNode___id',
-  author___blog_post___childContentfulBlogPostExcerptTextNode___children = 'author___blog_post___childContentfulBlogPostExcerptTextNode___children',
-  author___blog_post___childContentfulBlogPostExcerptTextNode___excerpt = 'author___blog_post___childContentfulBlogPostExcerptTextNode___excerpt',
-  author___blog_post___parent___id = 'author___blog_post___parent___id',
-  author___blog_post___parent___children = 'author___blog_post___parent___children',
-  author___blog_post___children = 'author___blog_post___children',
-  author___blog_post___children___id = 'author___blog_post___children___id',
-  author___blog_post___children___children = 'author___blog_post___children___children',
-  author___blog_post___internal___content = 'author___blog_post___internal___content',
-  author___blog_post___internal___contentDigest = 'author___blog_post___internal___contentDigest',
-  author___blog_post___internal___description = 'author___blog_post___internal___description',
-  author___blog_post___internal___fieldOwners = 'author___blog_post___internal___fieldOwners',
-  author___blog_post___internal___ignoreType = 'author___blog_post___internal___ignoreType',
-  author___blog_post___internal___mediaType = 'author___blog_post___internal___mediaType',
-  author___blog_post___internal___owner = 'author___blog_post___internal___owner',
-  author___blog_post___internal___type = 'author___blog_post___internal___type',
-  author___childrenContentfulAuthorBiographyTextNode = 'author___childrenContentfulAuthorBiographyTextNode',
-  author___childrenContentfulAuthorBiographyTextNode___id = 'author___childrenContentfulAuthorBiographyTextNode___id',
-  author___childrenContentfulAuthorBiographyTextNode___parent___id = 'author___childrenContentfulAuthorBiographyTextNode___parent___id',
-  author___childrenContentfulAuthorBiographyTextNode___parent___children = 'author___childrenContentfulAuthorBiographyTextNode___parent___children',
-  author___childrenContentfulAuthorBiographyTextNode___children = 'author___childrenContentfulAuthorBiographyTextNode___children',
-  author___childrenContentfulAuthorBiographyTextNode___children___id = 'author___childrenContentfulAuthorBiographyTextNode___children___id',
-  author___childrenContentfulAuthorBiographyTextNode___children___children = 'author___childrenContentfulAuthorBiographyTextNode___children___children',
-  author___childrenContentfulAuthorBiographyTextNode___internal___content = 'author___childrenContentfulAuthorBiographyTextNode___internal___content',
-  author___childrenContentfulAuthorBiographyTextNode___internal___contentDigest = 'author___childrenContentfulAuthorBiographyTextNode___internal___contentDigest',
-  author___childrenContentfulAuthorBiographyTextNode___internal___description = 'author___childrenContentfulAuthorBiographyTextNode___internal___description',
-  author___childrenContentfulAuthorBiographyTextNode___internal___fieldOwners = 'author___childrenContentfulAuthorBiographyTextNode___internal___fieldOwners',
-  author___childrenContentfulAuthorBiographyTextNode___internal___ignoreType = 'author___childrenContentfulAuthorBiographyTextNode___internal___ignoreType',
-  author___childrenContentfulAuthorBiographyTextNode___internal___mediaType = 'author___childrenContentfulAuthorBiographyTextNode___internal___mediaType',
-  author___childrenContentfulAuthorBiographyTextNode___internal___owner = 'author___childrenContentfulAuthorBiographyTextNode___internal___owner',
-  author___childrenContentfulAuthorBiographyTextNode___internal___type = 'author___childrenContentfulAuthorBiographyTextNode___internal___type',
-  author___childrenContentfulAuthorBiographyTextNode___biography = 'author___childrenContentfulAuthorBiographyTextNode___biography',
-  author___childrenContentfulAuthorBiographyTextNode___sys___type = 'author___childrenContentfulAuthorBiographyTextNode___sys___type',
-  author___childContentfulAuthorBiographyTextNode___id = 'author___childContentfulAuthorBiographyTextNode___id',
-  author___childContentfulAuthorBiographyTextNode___parent___id = 'author___childContentfulAuthorBiographyTextNode___parent___id',
-  author___childContentfulAuthorBiographyTextNode___parent___children = 'author___childContentfulAuthorBiographyTextNode___parent___children',
-  author___childContentfulAuthorBiographyTextNode___children = 'author___childContentfulAuthorBiographyTextNode___children',
-  author___childContentfulAuthorBiographyTextNode___children___id = 'author___childContentfulAuthorBiographyTextNode___children___id',
-  author___childContentfulAuthorBiographyTextNode___children___children = 'author___childContentfulAuthorBiographyTextNode___children___children',
-  author___childContentfulAuthorBiographyTextNode___internal___content = 'author___childContentfulAuthorBiographyTextNode___internal___content',
-  author___childContentfulAuthorBiographyTextNode___internal___contentDigest = 'author___childContentfulAuthorBiographyTextNode___internal___contentDigest',
-  author___childContentfulAuthorBiographyTextNode___internal___description = 'author___childContentfulAuthorBiographyTextNode___internal___description',
-  author___childContentfulAuthorBiographyTextNode___internal___fieldOwners = 'author___childContentfulAuthorBiographyTextNode___internal___fieldOwners',
-  author___childContentfulAuthorBiographyTextNode___internal___ignoreType = 'author___childContentfulAuthorBiographyTextNode___internal___ignoreType',
-  author___childContentfulAuthorBiographyTextNode___internal___mediaType = 'author___childContentfulAuthorBiographyTextNode___internal___mediaType',
-  author___childContentfulAuthorBiographyTextNode___internal___owner = 'author___childContentfulAuthorBiographyTextNode___internal___owner',
-  author___childContentfulAuthorBiographyTextNode___internal___type = 'author___childContentfulAuthorBiographyTextNode___internal___type',
-  author___childContentfulAuthorBiographyTextNode___biography = 'author___childContentfulAuthorBiographyTextNode___biography',
-  author___childContentfulAuthorBiographyTextNode___sys___type = 'author___childContentfulAuthorBiographyTextNode___sys___type',
-  author___parent___id = 'author___parent___id',
-  author___parent___parent___id = 'author___parent___parent___id',
-  author___parent___parent___children = 'author___parent___parent___children',
-  author___parent___children = 'author___parent___children',
-  author___parent___children___id = 'author___parent___children___id',
-  author___parent___children___children = 'author___parent___children___children',
-  author___parent___internal___content = 'author___parent___internal___content',
-  author___parent___internal___contentDigest = 'author___parent___internal___contentDigest',
-  author___parent___internal___description = 'author___parent___internal___description',
-  author___parent___internal___fieldOwners = 'author___parent___internal___fieldOwners',
-  author___parent___internal___ignoreType = 'author___parent___internal___ignoreType',
-  author___parent___internal___mediaType = 'author___parent___internal___mediaType',
-  author___parent___internal___owner = 'author___parent___internal___owner',
-  author___parent___internal___type = 'author___parent___internal___type',
-  author___children = 'author___children',
-  author___children___id = 'author___children___id',
-  author___children___parent___id = 'author___children___parent___id',
-  author___children___parent___children = 'author___children___parent___children',
-  author___children___children = 'author___children___children',
-  author___children___children___id = 'author___children___children___id',
-  author___children___children___children = 'author___children___children___children',
-  author___children___internal___content = 'author___children___internal___content',
-  author___children___internal___contentDigest = 'author___children___internal___contentDigest',
-  author___children___internal___description = 'author___children___internal___description',
-  author___children___internal___fieldOwners = 'author___children___internal___fieldOwners',
-  author___children___internal___ignoreType = 'author___children___internal___ignoreType',
-  author___children___internal___mediaType = 'author___children___internal___mediaType',
-  author___children___internal___owner = 'author___children___internal___owner',
-  author___children___internal___type = 'author___children___internal___type',
-  author___internal___content = 'author___internal___content',
-  author___internal___contentDigest = 'author___internal___contentDigest',
-  author___internal___description = 'author___internal___description',
-  author___internal___fieldOwners = 'author___internal___fieldOwners',
-  author___internal___ignoreType = 'author___internal___ignoreType',
-  author___internal___mediaType = 'author___internal___mediaType',
-  author___internal___owner = 'author___internal___owner',
-  author___internal___type = 'author___internal___type',
-  childrenContentfulNewsExcerptTextNode = 'childrenContentfulNewsExcerptTextNode',
-  childrenContentfulNewsExcerptTextNode___id = 'childrenContentfulNewsExcerptTextNode___id',
-  childrenContentfulNewsExcerptTextNode___parent___id = 'childrenContentfulNewsExcerptTextNode___parent___id',
-  childrenContentfulNewsExcerptTextNode___parent___parent___id = 'childrenContentfulNewsExcerptTextNode___parent___parent___id',
-  childrenContentfulNewsExcerptTextNode___parent___parent___children = 'childrenContentfulNewsExcerptTextNode___parent___parent___children',
-  childrenContentfulNewsExcerptTextNode___parent___children = 'childrenContentfulNewsExcerptTextNode___parent___children',
-  childrenContentfulNewsExcerptTextNode___parent___children___id = 'childrenContentfulNewsExcerptTextNode___parent___children___id',
-  childrenContentfulNewsExcerptTextNode___parent___children___children = 'childrenContentfulNewsExcerptTextNode___parent___children___children',
-  childrenContentfulNewsExcerptTextNode___parent___internal___content = 'childrenContentfulNewsExcerptTextNode___parent___internal___content',
-  childrenContentfulNewsExcerptTextNode___parent___internal___contentDigest = 'childrenContentfulNewsExcerptTextNode___parent___internal___contentDigest',
-  childrenContentfulNewsExcerptTextNode___parent___internal___description = 'childrenContentfulNewsExcerptTextNode___parent___internal___description',
-  childrenContentfulNewsExcerptTextNode___parent___internal___fieldOwners = 'childrenContentfulNewsExcerptTextNode___parent___internal___fieldOwners',
-  childrenContentfulNewsExcerptTextNode___parent___internal___ignoreType = 'childrenContentfulNewsExcerptTextNode___parent___internal___ignoreType',
-  childrenContentfulNewsExcerptTextNode___parent___internal___mediaType = 'childrenContentfulNewsExcerptTextNode___parent___internal___mediaType',
-  childrenContentfulNewsExcerptTextNode___parent___internal___owner = 'childrenContentfulNewsExcerptTextNode___parent___internal___owner',
-  childrenContentfulNewsExcerptTextNode___parent___internal___type = 'childrenContentfulNewsExcerptTextNode___parent___internal___type',
-  childrenContentfulNewsExcerptTextNode___children = 'childrenContentfulNewsExcerptTextNode___children',
-  childrenContentfulNewsExcerptTextNode___children___id = 'childrenContentfulNewsExcerptTextNode___children___id',
-  childrenContentfulNewsExcerptTextNode___children___parent___id = 'childrenContentfulNewsExcerptTextNode___children___parent___id',
-  childrenContentfulNewsExcerptTextNode___children___parent___children = 'childrenContentfulNewsExcerptTextNode___children___parent___children',
-  childrenContentfulNewsExcerptTextNode___children___children = 'childrenContentfulNewsExcerptTextNode___children___children',
-  childrenContentfulNewsExcerptTextNode___children___children___id = 'childrenContentfulNewsExcerptTextNode___children___children___id',
-  childrenContentfulNewsExcerptTextNode___children___children___children = 'childrenContentfulNewsExcerptTextNode___children___children___children',
-  childrenContentfulNewsExcerptTextNode___children___internal___content = 'childrenContentfulNewsExcerptTextNode___children___internal___content',
-  childrenContentfulNewsExcerptTextNode___children___internal___contentDigest = 'childrenContentfulNewsExcerptTextNode___children___internal___contentDigest',
-  childrenContentfulNewsExcerptTextNode___children___internal___description = 'childrenContentfulNewsExcerptTextNode___children___internal___description',
-  childrenContentfulNewsExcerptTextNode___children___internal___fieldOwners = 'childrenContentfulNewsExcerptTextNode___children___internal___fieldOwners',
-  childrenContentfulNewsExcerptTextNode___children___internal___ignoreType = 'childrenContentfulNewsExcerptTextNode___children___internal___ignoreType',
-  childrenContentfulNewsExcerptTextNode___children___internal___mediaType = 'childrenContentfulNewsExcerptTextNode___children___internal___mediaType',
-  childrenContentfulNewsExcerptTextNode___children___internal___owner = 'childrenContentfulNewsExcerptTextNode___children___internal___owner',
-  childrenContentfulNewsExcerptTextNode___children___internal___type = 'childrenContentfulNewsExcerptTextNode___children___internal___type',
-  childrenContentfulNewsExcerptTextNode___internal___content = 'childrenContentfulNewsExcerptTextNode___internal___content',
-  childrenContentfulNewsExcerptTextNode___internal___contentDigest = 'childrenContentfulNewsExcerptTextNode___internal___contentDigest',
-  childrenContentfulNewsExcerptTextNode___internal___description = 'childrenContentfulNewsExcerptTextNode___internal___description',
-  childrenContentfulNewsExcerptTextNode___internal___fieldOwners = 'childrenContentfulNewsExcerptTextNode___internal___fieldOwners',
-  childrenContentfulNewsExcerptTextNode___internal___ignoreType = 'childrenContentfulNewsExcerptTextNode___internal___ignoreType',
-  childrenContentfulNewsExcerptTextNode___internal___mediaType = 'childrenContentfulNewsExcerptTextNode___internal___mediaType',
-  childrenContentfulNewsExcerptTextNode___internal___owner = 'childrenContentfulNewsExcerptTextNode___internal___owner',
-  childrenContentfulNewsExcerptTextNode___internal___type = 'childrenContentfulNewsExcerptTextNode___internal___type',
-  childrenContentfulNewsExcerptTextNode___excerpt = 'childrenContentfulNewsExcerptTextNode___excerpt',
-  childrenContentfulNewsExcerptTextNode___sys___type = 'childrenContentfulNewsExcerptTextNode___sys___type',
-  childContentfulNewsExcerptTextNode___id = 'childContentfulNewsExcerptTextNode___id',
-  childContentfulNewsExcerptTextNode___parent___id = 'childContentfulNewsExcerptTextNode___parent___id',
-  childContentfulNewsExcerptTextNode___parent___parent___id = 'childContentfulNewsExcerptTextNode___parent___parent___id',
-  childContentfulNewsExcerptTextNode___parent___parent___children = 'childContentfulNewsExcerptTextNode___parent___parent___children',
-  childContentfulNewsExcerptTextNode___parent___children = 'childContentfulNewsExcerptTextNode___parent___children',
-  childContentfulNewsExcerptTextNode___parent___children___id = 'childContentfulNewsExcerptTextNode___parent___children___id',
-  childContentfulNewsExcerptTextNode___parent___children___children = 'childContentfulNewsExcerptTextNode___parent___children___children',
-  childContentfulNewsExcerptTextNode___parent___internal___content = 'childContentfulNewsExcerptTextNode___parent___internal___content',
-  childContentfulNewsExcerptTextNode___parent___internal___contentDigest = 'childContentfulNewsExcerptTextNode___parent___internal___contentDigest',
-  childContentfulNewsExcerptTextNode___parent___internal___description = 'childContentfulNewsExcerptTextNode___parent___internal___description',
-  childContentfulNewsExcerptTextNode___parent___internal___fieldOwners = 'childContentfulNewsExcerptTextNode___parent___internal___fieldOwners',
-  childContentfulNewsExcerptTextNode___parent___internal___ignoreType = 'childContentfulNewsExcerptTextNode___parent___internal___ignoreType',
-  childContentfulNewsExcerptTextNode___parent___internal___mediaType = 'childContentfulNewsExcerptTextNode___parent___internal___mediaType',
-  childContentfulNewsExcerptTextNode___parent___internal___owner = 'childContentfulNewsExcerptTextNode___parent___internal___owner',
-  childContentfulNewsExcerptTextNode___parent___internal___type = 'childContentfulNewsExcerptTextNode___parent___internal___type',
-  childContentfulNewsExcerptTextNode___children = 'childContentfulNewsExcerptTextNode___children',
-  childContentfulNewsExcerptTextNode___children___id = 'childContentfulNewsExcerptTextNode___children___id',
-  childContentfulNewsExcerptTextNode___children___parent___id = 'childContentfulNewsExcerptTextNode___children___parent___id',
-  childContentfulNewsExcerptTextNode___children___parent___children = 'childContentfulNewsExcerptTextNode___children___parent___children',
-  childContentfulNewsExcerptTextNode___children___children = 'childContentfulNewsExcerptTextNode___children___children',
-  childContentfulNewsExcerptTextNode___children___children___id = 'childContentfulNewsExcerptTextNode___children___children___id',
-  childContentfulNewsExcerptTextNode___children___children___children = 'childContentfulNewsExcerptTextNode___children___children___children',
-  childContentfulNewsExcerptTextNode___children___internal___content = 'childContentfulNewsExcerptTextNode___children___internal___content',
-  childContentfulNewsExcerptTextNode___children___internal___contentDigest = 'childContentfulNewsExcerptTextNode___children___internal___contentDigest',
-  childContentfulNewsExcerptTextNode___children___internal___description = 'childContentfulNewsExcerptTextNode___children___internal___description',
-  childContentfulNewsExcerptTextNode___children___internal___fieldOwners = 'childContentfulNewsExcerptTextNode___children___internal___fieldOwners',
-  childContentfulNewsExcerptTextNode___children___internal___ignoreType = 'childContentfulNewsExcerptTextNode___children___internal___ignoreType',
-  childContentfulNewsExcerptTextNode___children___internal___mediaType = 'childContentfulNewsExcerptTextNode___children___internal___mediaType',
-  childContentfulNewsExcerptTextNode___children___internal___owner = 'childContentfulNewsExcerptTextNode___children___internal___owner',
-  childContentfulNewsExcerptTextNode___children___internal___type = 'childContentfulNewsExcerptTextNode___children___internal___type',
-  childContentfulNewsExcerptTextNode___internal___content = 'childContentfulNewsExcerptTextNode___internal___content',
-  childContentfulNewsExcerptTextNode___internal___contentDigest = 'childContentfulNewsExcerptTextNode___internal___contentDigest',
-  childContentfulNewsExcerptTextNode___internal___description = 'childContentfulNewsExcerptTextNode___internal___description',
-  childContentfulNewsExcerptTextNode___internal___fieldOwners = 'childContentfulNewsExcerptTextNode___internal___fieldOwners',
-  childContentfulNewsExcerptTextNode___internal___ignoreType = 'childContentfulNewsExcerptTextNode___internal___ignoreType',
-  childContentfulNewsExcerptTextNode___internal___mediaType = 'childContentfulNewsExcerptTextNode___internal___mediaType',
-  childContentfulNewsExcerptTextNode___internal___owner = 'childContentfulNewsExcerptTextNode___internal___owner',
-  childContentfulNewsExcerptTextNode___internal___type = 'childContentfulNewsExcerptTextNode___internal___type',
-  childContentfulNewsExcerptTextNode___excerpt = 'childContentfulNewsExcerptTextNode___excerpt',
-  childContentfulNewsExcerptTextNode___sys___type = 'childContentfulNewsExcerptTextNode___sys___type',
-  parent___id = 'parent___id',
-  parent___parent___id = 'parent___parent___id',
-  parent___parent___parent___id = 'parent___parent___parent___id',
-  parent___parent___parent___children = 'parent___parent___parent___children',
-  parent___parent___children = 'parent___parent___children',
-  parent___parent___children___id = 'parent___parent___children___id',
-  parent___parent___children___children = 'parent___parent___children___children',
-  parent___parent___internal___content = 'parent___parent___internal___content',
-  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
-  parent___parent___internal___description = 'parent___parent___internal___description',
-  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
-  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
-  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
-  parent___parent___internal___owner = 'parent___parent___internal___owner',
-  parent___parent___internal___type = 'parent___parent___internal___type',
-  parent___children = 'parent___children',
-  parent___children___id = 'parent___children___id',
-  parent___children___parent___id = 'parent___children___parent___id',
-  parent___children___parent___children = 'parent___children___parent___children',
-  parent___children___children = 'parent___children___children',
-  parent___children___children___id = 'parent___children___children___id',
-  parent___children___children___children = 'parent___children___children___children',
-  parent___children___internal___content = 'parent___children___internal___content',
-  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
-  parent___children___internal___description = 'parent___children___internal___description',
-  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
-  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
-  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
-  parent___children___internal___owner = 'parent___children___internal___owner',
-  parent___children___internal___type = 'parent___children___internal___type',
-  parent___internal___content = 'parent___internal___content',
-  parent___internal___contentDigest = 'parent___internal___contentDigest',
-  parent___internal___description = 'parent___internal___description',
-  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
-  parent___internal___ignoreType = 'parent___internal___ignoreType',
-  parent___internal___mediaType = 'parent___internal___mediaType',
-  parent___internal___owner = 'parent___internal___owner',
-  parent___internal___type = 'parent___internal___type',
-  children = 'children',
-  children___id = 'children___id',
-  children___parent___id = 'children___parent___id',
-  children___parent___parent___id = 'children___parent___parent___id',
-  children___parent___parent___children = 'children___parent___parent___children',
-  children___parent___children = 'children___parent___children',
-  children___parent___children___id = 'children___parent___children___id',
-  children___parent___children___children = 'children___parent___children___children',
-  children___parent___internal___content = 'children___parent___internal___content',
-  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
-  children___parent___internal___description = 'children___parent___internal___description',
-  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
-  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
-  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
-  children___parent___internal___owner = 'children___parent___internal___owner',
-  children___parent___internal___type = 'children___parent___internal___type',
-  children___children = 'children___children',
-  children___children___id = 'children___children___id',
-  children___children___parent___id = 'children___children___parent___id',
-  children___children___parent___children = 'children___children___parent___children',
-  children___children___children = 'children___children___children',
-  children___children___children___id = 'children___children___children___id',
-  children___children___children___children = 'children___children___children___children',
-  children___children___internal___content = 'children___children___internal___content',
-  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
-  children___children___internal___description = 'children___children___internal___description',
-  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
-  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
-  children___children___internal___mediaType = 'children___children___internal___mediaType',
-  children___children___internal___owner = 'children___children___internal___owner',
-  children___children___internal___type = 'children___children___internal___type',
-  children___internal___content = 'children___internal___content',
-  children___internal___contentDigest = 'children___internal___contentDigest',
-  children___internal___description = 'children___internal___description',
-  children___internal___fieldOwners = 'children___internal___fieldOwners',
-  children___internal___ignoreType = 'children___internal___ignoreType',
-  children___internal___mediaType = 'children___internal___mediaType',
-  children___internal___owner = 'children___internal___owner',
-  children___internal___type = 'children___internal___type',
-  internal___content = 'internal___content',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___description = 'internal___description',
-  internal___fieldOwners = 'internal___fieldOwners',
-  internal___ignoreType = 'internal___ignoreType',
-  internal___mediaType = 'internal___mediaType',
-  internal___owner = 'internal___owner',
-  internal___type = 'internal___type'
-}
-
-export type ContentfulNewsFilterInput = {
-  contentful_id?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  node_locale?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<StringQueryOperatorInput>;
-  featured?: Maybe<BooleanQueryOperatorInput>;
-  published?: Maybe<DateQueryOperatorInput>;
-  content?: Maybe<ContentfulNewsContentFilterInput>;
-  featuredImage?: Maybe<ContentfulAssetFilterInput>;
-  excerpt?: Maybe<ContentfulNewsExcerptTextNodeFilterInput>;
-  spaceId?: Maybe<StringQueryOperatorInput>;
-  createdAt?: Maybe<DateQueryOperatorInput>;
-  updatedAt?: Maybe<DateQueryOperatorInput>;
-  sys?: Maybe<ContentfulNewsSysFilterInput>;
-  seoTitle?: Maybe<StringQueryOperatorInput>;
-  seoDescription?: Maybe<StringQueryOperatorInput>;
-  author?: Maybe<ContentfulAuthorFilterInput>;
-  childrenContentfulNewsExcerptTextNode?: Maybe<ContentfulNewsExcerptTextNodeFilterListInput>;
-  childContentfulNewsExcerptTextNode?: Maybe<ContentfulNewsExcerptTextNodeFilterInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-};
-
-export type ContentfulNewsFilterListInput = {
-  elemMatch?: Maybe<ContentfulNewsFilterInput>;
-};
-
-export type ContentfulNewsGroupConnection = {
-  __typename?: 'ContentfulNewsGroupConnection';
-  totalCount: Scalars['Int'];
-  edges: Array<ContentfulNewsEdge>;
-  nodes: Array<ContentfulNews>;
-  pageInfo: PageInfo;
-  field: Scalars['String'];
-  fieldValue?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulNewsSortInput = {
-  fields?: Maybe<Array<Maybe<ContentfulNewsFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
-};
-
-export type ContentfulNewsSys = {
-  __typename?: 'ContentfulNewsSys';
-  type?: Maybe<Scalars['String']>;
-  revision?: Maybe<Scalars['Int']>;
-  contentType?: Maybe<ContentfulNewsSysContentType>;
-};
-
-export type ContentfulNewsSysContentType = {
-  __typename?: 'ContentfulNewsSysContentType';
-  sys?: Maybe<ContentfulNewsSysContentTypeSys>;
-};
-
-export type ContentfulNewsSysContentTypeFilterInput = {
-  sys?: Maybe<ContentfulNewsSysContentTypeSysFilterInput>;
-};
-
-export type ContentfulNewsSysContentTypeSys = {
-  __typename?: 'ContentfulNewsSysContentTypeSys';
-  type?: Maybe<Scalars['String']>;
-  linkType?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulNewsSysContentTypeSysFilterInput = {
-  type?: Maybe<StringQueryOperatorInput>;
-  linkType?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-};
-
-export type ContentfulNewsSysFilterInput = {
-  type?: Maybe<StringQueryOperatorInput>;
-  revision?: Maybe<IntQueryOperatorInput>;
-  contentType?: Maybe<ContentfulNewsSysContentTypeFilterInput>;
 };
 
 export type ContentfulPage = ContentfulReference & ContentfulEntry & Node & {
@@ -7240,10 +6267,6 @@ export type Query = {
   allContentfulBlockImageBand: ContentfulBlockImageBandConnection;
   contentfulBlockJumbotron?: Maybe<ContentfulBlockJumbotron>;
   allContentfulBlockJumbotron: ContentfulBlockJumbotronConnection;
-  contentfulNews?: Maybe<ContentfulNews>;
-  allContentfulNews: ContentfulNewsConnection;
-  contentfulNewsExcerptTextNode?: Maybe<ContentfulNewsExcerptTextNode>;
-  allContentfulNewsExcerptTextNode: ContentfulNewsExcerptTextNodeConnection;
   contentfulBlockJumbotronButtonJsonNode?: Maybe<ContentfulBlockJumbotronButtonJsonNode>;
   allContentfulBlockJumbotronButtonJsonNode: ContentfulBlockJumbotronButtonJsonNodeConnection;
   contentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNode>;
@@ -7514,18 +6537,19 @@ export type QueryContentfulBlogPostArgs = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
-  featured?: Maybe<BooleanQueryOperatorInput>;
+  category?: Maybe<StringQueryOperatorInput>;
   published?: Maybe<DateQueryOperatorInput>;
   content?: Maybe<ContentfulBlogPostContentFilterInput>;
-  seoTitle?: Maybe<StringQueryOperatorInput>;
-  seoDescription?: Maybe<StringQueryOperatorInput>;
   author?: Maybe<ContentfulAuthorFilterInput>;
   excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlogPostSysFilterInput>;
+  featured?: Maybe<BooleanQueryOperatorInput>;
   featuredImage?: Maybe<ContentfulAssetFilterInput>;
+  seoTitle?: Maybe<StringQueryOperatorInput>;
+  seoDescription?: Maybe<StringQueryOperatorInput>;
   childrenContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterListInput>;
   childContentfulBlogPostExcerptTextNode?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -7547,13 +6571,12 @@ export type QueryContentfulAuthorArgs = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
-  news?: Maybe<ContentfulNewsFilterListInput>;
+  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
   biography?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulAuthorSysFilterInput>;
-  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
   childrenContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterListInput>;
   childContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -7740,58 +6763,6 @@ export type QueryContentfulBlockJumbotronArgs = {
 export type QueryAllContentfulBlockJumbotronArgs = {
   filter?: Maybe<ContentfulBlockJumbotronFilterInput>;
   sort?: Maybe<ContentfulBlockJumbotronSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
-};
-
-
-export type QueryContentfulNewsArgs = {
-  contentful_id?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  node_locale?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<StringQueryOperatorInput>;
-  featured?: Maybe<BooleanQueryOperatorInput>;
-  published?: Maybe<DateQueryOperatorInput>;
-  content?: Maybe<ContentfulNewsContentFilterInput>;
-  featuredImage?: Maybe<ContentfulAssetFilterInput>;
-  excerpt?: Maybe<ContentfulNewsExcerptTextNodeFilterInput>;
-  spaceId?: Maybe<StringQueryOperatorInput>;
-  createdAt?: Maybe<DateQueryOperatorInput>;
-  updatedAt?: Maybe<DateQueryOperatorInput>;
-  sys?: Maybe<ContentfulNewsSysFilterInput>;
-  seoTitle?: Maybe<StringQueryOperatorInput>;
-  seoDescription?: Maybe<StringQueryOperatorInput>;
-  author?: Maybe<ContentfulAuthorFilterInput>;
-  childrenContentfulNewsExcerptTextNode?: Maybe<ContentfulNewsExcerptTextNodeFilterListInput>;
-  childContentfulNewsExcerptTextNode?: Maybe<ContentfulNewsExcerptTextNodeFilterInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-};
-
-
-export type QueryAllContentfulNewsArgs = {
-  filter?: Maybe<ContentfulNewsFilterInput>;
-  sort?: Maybe<ContentfulNewsSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
-};
-
-
-export type QueryContentfulNewsExcerptTextNodeArgs = {
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-  excerpt?: Maybe<StringQueryOperatorInput>;
-  sys?: Maybe<ContentfulNewsExcerptTextNodeSysFilterInput>;
-};
-
-
-export type QueryAllContentfulNewsExcerptTextNodeArgs = {
-  filter?: Maybe<ContentfulNewsExcerptTextNodeFilterInput>;
-  sort?: Maybe<ContentfulNewsExcerptTextNodeSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -10321,173 +9292,6 @@ export type ContentfulBlogPostExcerptTextNodeSysFilterInput = {
   type?: Maybe<StringQueryOperatorInput>;
 };
 
-export type ContentfulNewsExcerptTextNode = Node & {
-  __typename?: 'contentfulNewsExcerptTextNode';
-  id: Scalars['ID'];
-  parent?: Maybe<Node>;
-  children: Array<Node>;
-  internal: Internal;
-  excerpt?: Maybe<Scalars['String']>;
-  sys?: Maybe<ContentfulNewsExcerptTextNodeSys>;
-};
-
-export type ContentfulNewsExcerptTextNodeConnection = {
-  __typename?: 'contentfulNewsExcerptTextNodeConnection';
-  totalCount: Scalars['Int'];
-  edges: Array<ContentfulNewsExcerptTextNodeEdge>;
-  nodes: Array<ContentfulNewsExcerptTextNode>;
-  pageInfo: PageInfo;
-  distinct: Array<Scalars['String']>;
-  group: Array<ContentfulNewsExcerptTextNodeGroupConnection>;
-};
-
-
-export type ContentfulNewsExcerptTextNodeConnectionDistinctArgs = {
-  field: ContentfulNewsExcerptTextNodeFieldsEnum;
-};
-
-
-export type ContentfulNewsExcerptTextNodeConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
-  field: ContentfulNewsExcerptTextNodeFieldsEnum;
-};
-
-export type ContentfulNewsExcerptTextNodeEdge = {
-  __typename?: 'contentfulNewsExcerptTextNodeEdge';
-  next?: Maybe<ContentfulNewsExcerptTextNode>;
-  node: ContentfulNewsExcerptTextNode;
-  previous?: Maybe<ContentfulNewsExcerptTextNode>;
-};
-
-export enum ContentfulNewsExcerptTextNodeFieldsEnum {
-  id = 'id',
-  parent___id = 'parent___id',
-  parent___parent___id = 'parent___parent___id',
-  parent___parent___parent___id = 'parent___parent___parent___id',
-  parent___parent___parent___children = 'parent___parent___parent___children',
-  parent___parent___children = 'parent___parent___children',
-  parent___parent___children___id = 'parent___parent___children___id',
-  parent___parent___children___children = 'parent___parent___children___children',
-  parent___parent___internal___content = 'parent___parent___internal___content',
-  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
-  parent___parent___internal___description = 'parent___parent___internal___description',
-  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
-  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
-  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
-  parent___parent___internal___owner = 'parent___parent___internal___owner',
-  parent___parent___internal___type = 'parent___parent___internal___type',
-  parent___children = 'parent___children',
-  parent___children___id = 'parent___children___id',
-  parent___children___parent___id = 'parent___children___parent___id',
-  parent___children___parent___children = 'parent___children___parent___children',
-  parent___children___children = 'parent___children___children',
-  parent___children___children___id = 'parent___children___children___id',
-  parent___children___children___children = 'parent___children___children___children',
-  parent___children___internal___content = 'parent___children___internal___content',
-  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
-  parent___children___internal___description = 'parent___children___internal___description',
-  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
-  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
-  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
-  parent___children___internal___owner = 'parent___children___internal___owner',
-  parent___children___internal___type = 'parent___children___internal___type',
-  parent___internal___content = 'parent___internal___content',
-  parent___internal___contentDigest = 'parent___internal___contentDigest',
-  parent___internal___description = 'parent___internal___description',
-  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
-  parent___internal___ignoreType = 'parent___internal___ignoreType',
-  parent___internal___mediaType = 'parent___internal___mediaType',
-  parent___internal___owner = 'parent___internal___owner',
-  parent___internal___type = 'parent___internal___type',
-  children = 'children',
-  children___id = 'children___id',
-  children___parent___id = 'children___parent___id',
-  children___parent___parent___id = 'children___parent___parent___id',
-  children___parent___parent___children = 'children___parent___parent___children',
-  children___parent___children = 'children___parent___children',
-  children___parent___children___id = 'children___parent___children___id',
-  children___parent___children___children = 'children___parent___children___children',
-  children___parent___internal___content = 'children___parent___internal___content',
-  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
-  children___parent___internal___description = 'children___parent___internal___description',
-  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
-  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
-  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
-  children___parent___internal___owner = 'children___parent___internal___owner',
-  children___parent___internal___type = 'children___parent___internal___type',
-  children___children = 'children___children',
-  children___children___id = 'children___children___id',
-  children___children___parent___id = 'children___children___parent___id',
-  children___children___parent___children = 'children___children___parent___children',
-  children___children___children = 'children___children___children',
-  children___children___children___id = 'children___children___children___id',
-  children___children___children___children = 'children___children___children___children',
-  children___children___internal___content = 'children___children___internal___content',
-  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
-  children___children___internal___description = 'children___children___internal___description',
-  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
-  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
-  children___children___internal___mediaType = 'children___children___internal___mediaType',
-  children___children___internal___owner = 'children___children___internal___owner',
-  children___children___internal___type = 'children___children___internal___type',
-  children___internal___content = 'children___internal___content',
-  children___internal___contentDigest = 'children___internal___contentDigest',
-  children___internal___description = 'children___internal___description',
-  children___internal___fieldOwners = 'children___internal___fieldOwners',
-  children___internal___ignoreType = 'children___internal___ignoreType',
-  children___internal___mediaType = 'children___internal___mediaType',
-  children___internal___owner = 'children___internal___owner',
-  children___internal___type = 'children___internal___type',
-  internal___content = 'internal___content',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___description = 'internal___description',
-  internal___fieldOwners = 'internal___fieldOwners',
-  internal___ignoreType = 'internal___ignoreType',
-  internal___mediaType = 'internal___mediaType',
-  internal___owner = 'internal___owner',
-  internal___type = 'internal___type',
-  excerpt = 'excerpt',
-  sys___type = 'sys___type'
-}
-
-export type ContentfulNewsExcerptTextNodeFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-  excerpt?: Maybe<StringQueryOperatorInput>;
-  sys?: Maybe<ContentfulNewsExcerptTextNodeSysFilterInput>;
-};
-
-export type ContentfulNewsExcerptTextNodeFilterListInput = {
-  elemMatch?: Maybe<ContentfulNewsExcerptTextNodeFilterInput>;
-};
-
-export type ContentfulNewsExcerptTextNodeGroupConnection = {
-  __typename?: 'contentfulNewsExcerptTextNodeGroupConnection';
-  totalCount: Scalars['Int'];
-  edges: Array<ContentfulNewsExcerptTextNodeEdge>;
-  nodes: Array<ContentfulNewsExcerptTextNode>;
-  pageInfo: PageInfo;
-  field: Scalars['String'];
-  fieldValue?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulNewsExcerptTextNodeSortInput = {
-  fields?: Maybe<Array<Maybe<ContentfulNewsExcerptTextNodeFieldsEnum>>>;
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
-};
-
-export type ContentfulNewsExcerptTextNodeSys = {
-  __typename?: 'contentfulNewsExcerptTextNodeSys';
-  type?: Maybe<Scalars['String']>;
-};
-
-export type ContentfulNewsExcerptTextNodeSysFilterInput = {
-  type?: Maybe<StringQueryOperatorInput>;
-};
-
 export type CallToActionFragmentFragment = (
   { __typename: 'ContentfulBlockCallToAction' }
   & Pick<ContentfulBlockCallToAction, 'id' | 'title'>
@@ -10635,6 +9439,53 @@ export type AllJumbotronBlocksQuery = (
   ) }
 );
 
+export type FeaturedPostFragmentFragment = (
+  { __typename?: 'ContentfulBlogPost' }
+  & Pick<ContentfulBlogPost, 'title' | 'slug'>
+  & { excerpt?: Maybe<(
+    { __typename?: 'contentfulBlogPostExcerptTextNode' }
+    & Pick<ContentfulBlogPostExcerptTextNode, 'excerpt'>
+  )>, featuredImage?: Maybe<(
+    { __typename?: 'ContentfulAsset' }
+    & ImageFragmentFragment
+  )> }
+);
+
+export type ImageFragmentFragment = (
+  { __typename?: 'ContentfulAsset' }
+  & Pick<ContentfulAsset, 'contentful_id' | 'title' | 'description' | 'gatsbyImageData'>
+);
+
+export type PostFragmentFragment = (
+  { __typename?: 'ContentfulBlogPost' }
+  & Pick<ContentfulBlogPost, 'id' | 'title' | 'slug' | 'published'>
+  & { excerpt?: Maybe<(
+    { __typename?: 'contentfulBlogPostExcerptTextNode' }
+    & Pick<ContentfulBlogPostExcerptTextNode, 'excerpt'>
+  )> }
+);
+
+export type PostAuthorFragmentFragment = (
+  { __typename?: 'ContentfulAuthor' }
+  & Pick<ContentfulAuthor, 'name'>
+  & { biography?: Maybe<(
+    { __typename?: 'contentfulAuthorBiographyTextNode' }
+    & Pick<ContentfulAuthorBiographyTextNode, 'biography'>
+  )> }
+);
+
+export type PostContentFragmentFragment = (
+  { __typename?: 'ContentfulBlogPost' }
+  & { content?: Maybe<(
+    { __typename?: 'ContentfulBlogPostContent' }
+    & Pick<ContentfulBlogPostContent, 'raw'>
+    & { references?: Maybe<Array<Maybe<(
+      { __typename?: 'ContentfulAsset' }
+      & ImageFragmentFragment
+    )>>> }
+  )> }
+);
+
 export type BannerQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -10660,23 +9511,40 @@ export type AllContentfulAssetsQuery = (
   ) }
 );
 
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
+export type BlogPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_1_Query = (
+export type BlogPageQuery = (
   { __typename?: 'Query' }
-  & { allContentfulBlogPost: (
+  & { contentfulMicroContent?: Maybe<(
+    { __typename?: 'ContentfulMicroContent' }
+    & Pick<ContentfulMicroContent, 'value'>
+  )>, allContentfulBlogPost: (
     { __typename?: 'ContentfulBlogPostConnection' }
     & { nodes: Array<(
       { __typename?: 'ContentfulBlogPost' }
-      & Pick<ContentfulBlogPost, 'id' | 'slug' | 'title' | 'published' | 'featured'>
-      & { excerpt?: Maybe<(
-        { __typename?: 'contentfulBlogPostExcerptTextNode' }
-        & Pick<ContentfulBlogPostExcerptTextNode, 'excerpt'>
-      )>, featuredImage?: Maybe<(
-        { __typename?: 'ContentfulAsset' }
-        & Pick<ContentfulAsset, 'gatsbyImageData'>
-      )> }
+      & Pick<ContentfulBlogPost, 'id' | 'featured'>
+      & PostFragmentFragment
+      & FeaturedPostFragmentFragment
+    )> }
+  ) }
+);
+
+export type NewsPageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type NewsPageQuery = (
+  { __typename?: 'Query' }
+  & { contentfulMicroContent?: Maybe<(
+    { __typename?: 'ContentfulMicroContent' }
+    & Pick<ContentfulMicroContent, 'value'>
+  )>, allContentfulBlogPost: (
+    { __typename?: 'ContentfulBlogPostConnection' }
+    & { nodes: Array<(
+      { __typename?: 'ContentfulBlogPost' }
+      & Pick<ContentfulBlogPost, 'id' | 'featured'>
+      & PostFragmentFragment
+      & FeaturedPostFragmentFragment
     )> }
   ) }
 );
@@ -10734,5 +9602,26 @@ export type PageTemplateQueryQuery = (
       { __typename?: 'ContentfulBlockJumbotron' }
       & JumbotronFragmentFragment
     )>>> }
+  )> }
+);
+
+export type PostQueryQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type PostQueryQuery = (
+  { __typename?: 'Query' }
+  & { contentfulBlogPost?: Maybe<(
+    { __typename?: 'ContentfulBlogPost' }
+    & Pick<ContentfulBlogPost, 'title' | 'published'>
+    & { featuredImage?: Maybe<(
+      { __typename?: 'ContentfulAsset' }
+      & Pick<ContentfulAsset, 'contentful_id' | 'title' | 'description' | 'gatsbyImageData'>
+    )>, author?: Maybe<(
+      { __typename?: 'ContentfulAuthor' }
+      & PostAuthorFragmentFragment
+    )> }
+    & PostContentFragmentFragment
   )> }
 );

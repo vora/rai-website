@@ -1,0 +1,61 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Image } from ".";
+import { mockImage } from "./__mocks__/mockImage";
+
+<Meta
+  title="components/Image"
+  component={Image}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# Image
+
+The `Image` component is a wrapper around the `gatsby-plugin-image` component.
+
+### Why a wrapper?
+
+We use a wrapper component so that in the future if for some reason we decide to move away from the `gatsby-plugin-image` component, we can keep the API of the `Image` component the same and not worry about breaking every use case.
+
+## Usage
+
+```tsx
+import { Image } from "@/components/Image";
+```
+
+Images should almost always be hosted on `Contentful`. Therefore, images should almost always be grabbed through `graphql`. To help get the minimum information required for an image, a `fragment` is available:
+
+```graphql
+query BasicImageQuery {
+  image {
+    ...ImageFragment
+  }
+}
+```
+
+## Props
+
+<ArgsTable component={Image} />
+
+## Accessibility Notes
+
+- The `Image` component should always have an `alt` and `title` associated so that screen readers are able to describe the image.
+
+## Example
+
+<Canvas>
+  <Story name="Default" args={{ ...mockImage }}>
+    {(args) => <Image {...args} />}
+  </Story>
+</Canvas>
+
+## Animation
+
+Animations are available for `Image`. The animation will be played `onLoad`. If the image is off the screen, the animation will not be played. Take this into consideration when using animation on Images.
+
+<Canvas>
+  <Story name="Animation" args={{ ...mockImage, animation: "slide-from-left" }}>
+    {(args) => <Image {...args} />}
+  </Story>
+</Canvas>

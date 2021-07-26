@@ -1,0 +1,81 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { getCustomProperties } from "../../docs/scripts/scripts";
+
+<Meta
+  title="design/Colors"
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+export function Swatch({ color }) {
+  const styles = {
+    textAlign: "center",
+    fontSize: "var(--font-size--small)",
+    border: "1px solid var(--color--ghost)",
+    borderRadius: "2px",
+    paddingBottom: "var(--space--base)",
+  };
+  const block = {
+    height: "var(--space--xxxlarge)",
+    borderRadius: "2px",
+    background: `var(${color.key})`,
+    marginBottom: "var(--space--xsmall)",
+    borderBottom: "1px solid var(--color--ghost)",
+  };
+  return (
+    <div style={styles}>
+      <div style={block} />
+      {color.key}
+    </div>
+  );
+}
+
+export function Colors() {
+  const colors = getCustomProperties("--color--");
+  const styles = {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr",
+    gap: "var(--space--base)",
+  };
+  return (
+    <div style={styles}>
+      {colors
+        .filter((color) => !color.key.includes("--rgb"))
+        .map((color) => (
+          <Swatch key={color.key} color={color} />
+        ))}
+    </div>
+  );
+}
+
+# Colors
+
+The Responsible AI website uses CSS Custom Properties to define all of its colors. This allows for a much better developer experience as we do not need to guess colors, or remember random hex codes.
+
+All colors should be created using 2 custom properties. One to define the colors `RGB` value, and one to define the color.
+
+```css
+:root {
+  --color--tomato--rgb: 100, 39, 28;
+  --color--tomato: rgb(var(--color--tomato--rgb));
+}
+```
+
+This allows for the color to be used as a solid color, or with an alpha (`RGBA`).
+
+```css
+.foo {
+  background: var(--color--tomato);
+}
+
+.bar {
+  background: rgba(var(--color--tomato--rgb), 0.5);
+}
+```
+
+## Available Colors
+
+As mentioned above, all colors should be created with 2 custom properties. That will mean that all colors below will have the `RGB` color available as well by adding `--rgb` to the end of the property.
+
+<Colors />

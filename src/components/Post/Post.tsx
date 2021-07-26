@@ -1,38 +1,39 @@
 import React from "react";
+import { graphql } from "gatsby";
+import { Link } from "@/components/Link";
 import { Heading } from "@/components/Heading";
 import { Text } from "@/components/Text";
 import { Caption } from "@/components/Caption";
-import { Link } from "gatsby";
-import { IGatsbyImageData } from "gatsby-plugin-image";
+import { PostFragmentFragment } from "@/graphql/graphql-types";
 
 import styles from "./Post.module.css";
 
-export type PostProps = {
-  readonly id: string;
-  readonly slug: string;
-  readonly title: string;
-  readonly published: string;
-  readonly featured: boolean;
-  readonly featuredImage: IGatsbyImageData;
-  readonly excerpt?: {
-    excerpt: string;
-  };
-};
-
-interface PostComponentProps {
-  readonly post: PostProps;
+interface PostProps {
+  readonly data: PostFragmentFragment;
 }
 
-export function Post({ post }: PostComponentProps) {
+export function Post({ data }: PostProps) {
   return (
     <article>
-      <Link to={post.slug} className={styles.heading}>
-        <Heading as="h3">{post.title}</Heading>
+      <Link url={data?.slug ?? ""}>
+        <Heading as="h3">{data.title}</Heading>
       </Link>
-      {post?.excerpt?.excerpt && <Text>{post?.excerpt?.excerpt}</Text>}
+      {data.excerpt?.excerpt && <Text>{data.excerpt?.excerpt}</Text>}
       <div className={styles.date}>
-        <Caption title={post.published} />
+        <Caption title={data.published} />
       </div>
     </article>
   );
 }
+
+export const PostFragment = graphql`
+  fragment PostFragment on ContentfulBlogPost {
+    id
+    title
+    slug
+    published(formatString: "MMMM D, YYYY")
+    excerpt {
+      excerpt
+    }
+  }
+`;

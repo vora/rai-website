@@ -2,7 +2,6 @@ import React, { ReactNode } from "react";
 import {
   RenderRichTextData,
   ContentfulRichTextGatsbyReference,
-  renderRichText,
 } from "gatsby-source-contentful/rich-text";
 import {
   BLOCKS,
@@ -15,6 +14,11 @@ import { Heading } from "@/components/Heading";
 import { Text } from "@/components/Text";
 import { Link } from "@/components/Link";
 import { Emphasis } from "@/components/Emphasis";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Image } from "@/components/Image";
+import { ImageFragmentFragment } from "@/graphql/graphql-types";
+import { Divider } from "@/components/Divider";
+import { BlockQuote } from "@/components/BlockQuote";
 
 export type RichTextContent = RenderRichTextData<ContentfulRichTextGatsbyReference>;
 
@@ -37,19 +41,24 @@ export function RichText({ size = "base", content }: RichTextProps) {
       ),
     },
     renderNode: {
-      [BLOCKS.HEADING_1]: (node: Block | Inline, children: ReactNode) => (
+      [BLOCKS.HEADING_1]: (node: ReactNode, children: ReactNode) => (
         <Heading as="h1">{children}</Heading>
       ),
-      [BLOCKS.HEADING_2]: (node: Block | Inline, children: ReactNode) => (
+      [BLOCKS.HEADING_2]: (node: ReactNode, children: ReactNode) => (
         <Heading>{children}</Heading>
       ),
-      [BLOCKS.HEADING_3]: (node: Block | Inline, children: ReactNode) => (
+      [BLOCKS.HEADING_3]: (node: ReactNode, children: ReactNode) => (
         <Heading as="h3">{children}</Heading>
       ),
-      [BLOCKS.PARAGRAPH]: (node: Block | Inline, children: ReactNode) => (
+      [BLOCKS.PARAGRAPH]: (node: ReactNode, children: ReactNode) => (
         <Text size={size}>{children}</Text>
       ),
-      [INLINES.HYPERLINK]: ({ data }: Block | Inline, children: ReactNode) => {
+      [BLOCKS.QUOTE]: (node: ReactNode, children: ReactNode) => (
+        <BlockQuote>{children}</BlockQuote>
+      ),
+      [BLOCKS.HR]: () => <Divider />,
+      [INLINES.HYPERLINK]: (node: ReactNode, children: ReactNode) => {
+        const { data } = node as Block | Inline;
         return (
           <Link url={data.uri} external={getIsExternal()}>
             {children}
@@ -61,11 +70,21 @@ export function RichText({ size = "base", content }: RichTextProps) {
           if (data.uri.includes("mailto:")) {
             return true;
           }
+          if (!data.uri.includes("responsible.ai")) {
+            return true;
+          }
           return false;
         }
+      },
+      [BLOCKS.EMBEDDED_ASSET]: (node: ReactNode) => {
+        const { data } = node as Inline | Block;
+        const image = content.references.find(
+          (asset) => asset.contentful_id === data.target.sys.id
+        );
+        return <Image {...(image as ImageFragmentFragment)} />;
       },
     },
   };
 
-  return <>{renderRichText(content, options)}</>;
+  return <>{documentToReactComponents(JSON.parse(content.raw), options)}</>;
 }
