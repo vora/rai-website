@@ -2,62 +2,55 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "@/components/NewLayout";
 import { PageTitle } from "@/components/PageTitle";
+import { FeaturedPost } from "@/components/FeaturedPost";
+import { PostList } from "@/components/PostList";
 import { Container } from "@/components/Container";
-import { Heading } from "@/components/Heading";
-// import { FeaturedPost } from "@/components/FeaturedPost";
-// import { PostList } from "@/components/PostList";
-import { AllContentfulNewsQuery } from "@/graphql/graphql-types";
-// @ts-expect-error Old component
-import News from "../components/News";
+import { NewsPageQuery } from "@/graphql/graphql-types";
 
-interface NewsPageProps {
-  readonly data: AllContentfulNewsQuery;
+interface BlogProps {
+  data: NewsPageQuery;
 }
-function NewsPage({ data }: NewsPageProps) {
-  console.log(data);
-  // const posts = [...data.allContentfulNews?.nodes];
-  // const featuredPostIndex = posts.findIndex((post) => post.featured);
-  // const featuredPost = posts[featuredPostIndex];
+
+function News({ data }: BlogProps) {
+  const pageTitle = data.contentfulMicroContent?.value ?? "News";
+  const posts = [...data.allContentfulBlogPost?.nodes];
+  const featuredPostIndex = posts.findIndex((post) => post.featured);
+  const featuredPost = posts[featuredPostIndex];
+
   return (
-    <Layout title="News">
+    <Layout title="Blog">
       <Container>
-        <PageTitle title="In the News" />
+        <PageTitle title={pageTitle} />
       </Container>
-      {/* <FeaturedPost
+      <FeaturedPost
         data={featuredPost}
         caption="Featured Article"
-        linkText="Read Article"
-        slugPrefix="news"
-      /> */}
-      {/* <PostList
+        linkText="Read Blog Post"
+        slugPrefix="blog"
+      />
+      <PostList
         posts={posts.filter((_, index) => index !== featuredPostIndex)}
-      /> */}
-      <div
-        style={{
-          background: "var(--color--ghost)",
-          padding: "var(--space--xxlarge)",
-        }}
-      >
-        <Container>
-          <Heading as="h3">More News</Heading>
-          <div style={{ marginTop: "var(--space--large" }}>
-            <News />
-          </div>
-        </Container>
-      </div>
+      />
     </Layout>
   );
 }
-
 export const query = graphql`
-  query AllContentfulNews {
-    allContentfulNews(sort: { fields: published, order: DESC }) {
+  query NewsPage {
+    contentfulMicroContent(key: { eq: "News Page Title" }) {
+      value
+    }
+    allContentfulBlogPost(
+      sort: { fields: published, order: DESC }
+      filter: { category: { eq: "News" } }
+    ) {
       nodes {
         id
         featured
+        ...PostFragment
+        ...FeaturedPostFragment
       }
     }
   }
 `;
 
-export default NewsPage;
+export default News;

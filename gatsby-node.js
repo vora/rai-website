@@ -12,11 +12,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
       allContentfulBlogPost {
         nodes {
           slug
-        }
-      }
-      allContentfulNews {
-        nodes {
-          slug
+          category
         }
       }
       allContentfulPage {
@@ -28,8 +24,16 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
   `).then(({ data }) => {
     // Generate our blog pages
     data.allContentfulBlogPost.nodes.forEach((node) => {
+      const getCategory = () => {
+        if (node.category === "News") {
+          return "news";
+        }
+
+        return "blog";
+      };
+
       createPage({
-        path: `/blog/${node.slug.replace(/ /g, "-")}`,
+        path: `/${getCategory()}/${node.slug.replace(/ /g, "-")}`,
         component: path.resolve(`./src/templates/post.tsx`),
         context: {
           slug: node.slug,

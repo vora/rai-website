@@ -51,7 +51,7 @@ export const query = graphql`
       author {
         ...PostAuthorFragment
       }
-      ...PostContentBlogFragment
+      ...PostContentFragment
     }
   }
 `;

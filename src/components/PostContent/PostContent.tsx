@@ -1,16 +1,11 @@
 import React from "react";
 import { RichText, RichTextContent } from "@/components/RichText";
-import {
-  PostContentNewsFragmentFragment,
-  PostContentBlogFragmentFragment,
-} from "@/graphql/graphql-types";
+import { PostContentFragmentFragment } from "@/graphql/graphql-types";
 
 import { graphql } from "gatsby";
 import styles from "./PostContent.module.css";
 
-export type PostContentContext =
-  | PostContentNewsFragmentFragment
-  | PostContentBlogFragmentFragment;
+export type PostContentContext = PostContentFragmentFragment;
 
 interface PostContentProps {
   readonly content: PostContentContext;
@@ -24,21 +19,8 @@ export function PostContent({ content }: PostContentProps) {
   );
 }
 
-export const PostContentBlogFragment = graphql`
-  fragment PostContentBlogFragment on ContentfulBlogPost {
-    content {
-      raw
-      references {
-        ... on ContentfulAsset {
-          ...ImageFragment
-        }
-      }
-    }
-  }
-`;
-
-export const PostContentNewsFragment = graphql`
-  fragment PostContentNewsFragment on ContentfulNews {
+export const PostContentFragment = graphql`
+  fragment PostContentFragment on ContentfulBlogPost {
     content {
       raw
       references {
