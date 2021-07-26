@@ -25,8 +25,8 @@ function News({ data }: BlogProps) {
       <FeaturedPost
         data={featuredPost}
         caption="Featured Article"
-        linkText="Read Blog Post"
-        slugPrefix="blog"
+        linkText="Read Article"
+        slugPrefix="news"
       />
       <PostList
         posts={posts.filter((_, index) => index !== featuredPostIndex)}
