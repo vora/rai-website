@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders some stuff 1`] = `
+<div>
+  <h1
+    class="heading h1"
+  >
+    Heading 1
+  </h1>
+  <h2
+    class="heading h2"
+  >
+    Heading 2
+  </h2>
+  <h3
+    class="heading h3"
+  >
+    Heading 3
+  </h3>
+  <p
+    class="text base"
+  >
+    A robot may not injure a human being or, through inaction, allow a human being to come to harm 
+    <strong
+      class="strong"
+    >
+      To boldly go where no robot has gone before. 
+    </strong>
+    <u
+      class="u"
+    >
+      The underlying problem with robots is that they are robots. 
+    </u>
+    <em
+      class="em"
+    >
+      The Robot R1 is an italian humanoid. 
+    </em>
+  </p>
+  <p
+    class="text base"
+  >
+    This is sample paragraph 
+    <a
+      class="link"
+      href="/foo"
+      rel="noreferrer"
+      target="_blank"
+    >
+      with a link
+    </a>
+  </p>
+</div>
+`;
