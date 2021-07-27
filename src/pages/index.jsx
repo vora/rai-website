@@ -1,7 +1,8 @@
 import React from "react";
-import { navigate } from "gatsby";
+import { navigate, withPrefix } from "gatsby";
 import { Heading } from "@/components/Heading";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "@/components/Link";
 import Layout from "../components/Layout";
 import {
   MediumBody,
@@ -248,6 +249,14 @@ function Index() {
             this powerful technology. The right tools and guidance can turn
             situations like these into great benefits for humanity.
           </MediumBody>
+
+          <Link
+            url={withPrefix("../rai-overview.pdf")}
+            external
+            icon="ArrowRight"
+          >
+            RAI Overview Deck
+          </Link>
         </GrayPanel>
       </Jumbotron>
       <Jumbotron dark style={{ justifyContent: "center" }} text>
