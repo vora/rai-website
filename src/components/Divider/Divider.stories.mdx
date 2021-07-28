@@ -1,0 +1,30 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Divider } from ".";
+
+<Meta
+  title="components/Divider"
+  component={Divider}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# Divider
+
+A `Divider` is used to divide areas of contents or pieces of or UI.
+
+## Usage
+
+```tsx
+import { Divider } from "@/components/Divider";
+```
+
+## Props
+
+<ArgsTable component={Divider} />
+
+## Example
+
+<Canvas>
+  <Story name="Default">{(args) => <Divider {...args} />}</Story>
+</Canvas>

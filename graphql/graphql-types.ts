@@ -1777,6 +1777,7 @@ export type ContentfulBlockContentList = ContentfulReference & ContentfulEntry &
   highlight?: Maybe<Scalars['String']>;
   content?: Maybe<ContentfulBlockContentListContent>;
   listTitle?: Maybe<Scalars['String']>;
+  listDescription?: Maybe<ContentfulBlockContentListListDescription>;
   page?: Maybe<Array<Maybe<ContentfulPage>>>;
   button?: Maybe<ContentfulBlockContentListButtonJsonNode>;
   list?: Maybe<ContentfulBlockContentListListJsonNode>;
@@ -1784,7 +1785,6 @@ export type ContentfulBlockContentList = ContentfulReference & ContentfulEntry &
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulBlockContentListSys>;
-  listDescription?: Maybe<ContentfulBlockContentListListDescription>;
   /** Returns all children nodes filtered by type contentfulBlockContentListListJsonNode */
   childrenContentfulBlockContentListListJsonNode?: Maybe<Array<Maybe<ContentfulBlockContentListListJsonNode>>>;
   /** Returns the first child node of type contentfulBlockContentListListJsonNode or null if there are no children of given type on this node */
@@ -1860,6 +1860,7 @@ export enum ContentfulBlockContentListFieldsEnum {
   highlight = 'highlight',
   content___raw = 'content___raw',
   listTitle = 'listTitle',
+  listDescription___raw = 'listDescription___raw',
   page = 'page',
   page___contentful_id = 'page___contentful_id',
   page___id = 'page___id',
@@ -2001,7 +2002,6 @@ export enum ContentfulBlockContentListFieldsEnum {
   sys___contentType___sys___type = 'sys___contentType___sys___type',
   sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
   sys___contentType___sys___id = 'sys___contentType___sys___id',
-  listDescription___raw = 'listDescription___raw',
   childrenContentfulBlockContentListListJsonNode = 'childrenContentfulBlockContentListListJsonNode',
   childrenContentfulBlockContentListListJsonNode___id = 'childrenContentfulBlockContentListListJsonNode___id',
   childrenContentfulBlockContentListListJsonNode___parent___id = 'childrenContentfulBlockContentListListJsonNode___parent___id',
@@ -2265,6 +2265,7 @@ export type ContentfulBlockContentListFilterInput = {
   highlight?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<ContentfulBlockContentListContentFilterInput>;
   listTitle?: Maybe<StringQueryOperatorInput>;
+  listDescription?: Maybe<ContentfulBlockContentListListDescriptionFilterInput>;
   page?: Maybe<ContentfulPageFilterListInput>;
   button?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterInput>;
   list?: Maybe<ContentfulBlockContentListListJsonNodeFilterInput>;
@@ -2272,7 +2273,6 @@ export type ContentfulBlockContentListFilterInput = {
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockContentListSysFilterInput>;
-  listDescription?: Maybe<ContentfulBlockContentListListDescriptionFilterInput>;
   childrenContentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNodeFilterListInput>;
   childContentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNodeFilterInput>;
   childrenContentfulBlockContentListButtonJsonNode?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterListInput>;
@@ -6684,6 +6684,7 @@ export type QueryContentfulBlockContentListArgs = {
   highlight?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<ContentfulBlockContentListContentFilterInput>;
   listTitle?: Maybe<StringQueryOperatorInput>;
+  listDescription?: Maybe<ContentfulBlockContentListListDescriptionFilterInput>;
   page?: Maybe<ContentfulPageFilterListInput>;
   button?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterInput>;
   list?: Maybe<ContentfulBlockContentListListJsonNodeFilterInput>;
@@ -6691,7 +6692,6 @@ export type QueryContentfulBlockContentListArgs = {
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockContentListSysFilterInput>;
-  listDescription?: Maybe<ContentfulBlockContentListListDescriptionFilterInput>;
   childrenContentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNodeFilterListInput>;
   childContentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNodeFilterInput>;
   childrenContentfulBlockContentListButtonJsonNode?: Maybe<ContentfulBlockContentListButtonJsonNodeFilterListInput>;

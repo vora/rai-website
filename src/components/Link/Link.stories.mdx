@@ -11,7 +11,9 @@ import { Link } from ".";
 
 # Link
 
-A `Link` is used to navigate another page or website.
+A `Link` is used to navigate to another page on the website, or to link to an external website.
+
+A `Link` should be considered when writing paragraph content. If you are creating a call to action, consider using a `Button` component.
 
 ## Usage
 
@@ -30,7 +32,7 @@ import { Link } from "@/components/Link";
 ## Example
 
 <Canvas>
-  <Story name="Default" args={{ url: "https://responsible.ai" }}>
+  <Story name="Default" args={{ url: "/droids" }}>
     {(args) => <Link {...args}>Are Droids Allowed Here?</Link>}
   </Story>
 </Canvas>
@@ -42,7 +44,7 @@ External links can, and should be opened in a new tab using the `external` prop.
 <Canvas>
   <Story
     name="External Links"
-    args={{ url: "https://responsible.ai", external: true }}
+    args={{ url: "https://eddysims.com", external: true }}
   >
     {(args) => <Link {...args}>Are Droids Allowed Here?</Link>}
   </Story>
@@ -50,12 +52,12 @@ External links can, and should be opened in a new tab using the `external` prop.
 
 ## With Icon
 
-Links can have icons added to them on the left or right hand side
+Links can have an `Icon` added to them to give them more visual presence. The `Icon` can be added on the left or right hand side using the `iconOnRight` prop.
 
 <Canvas>
   <Story
     name="With Icon"
-    args={{ url: "https://responsible.ai", icon: "Command", iconOnRight: true }}
+    args={{ url: "/droids", icon: "Command", iconOnRight: true }}
   >
     {(args) => <Link {...args}>Are Droids Allowed Here?</Link>}
   </Story>
