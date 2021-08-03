@@ -69,7 +69,7 @@ function Resource({ data }: ResourceProps) {
   );
 }
 
-export const ResourceResourceFragments = graphql`
+export const ResourceResourceFragment = graphql`
   fragment ResourceResourceFragment on ContentfulResource {
     __typename
     id
