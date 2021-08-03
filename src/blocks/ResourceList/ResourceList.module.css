@@ -15,7 +15,7 @@
   margin-bottom: var(--space--large);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .heading {
     flex-direction: row;
     justify-content: space-between;
@@ -28,6 +28,12 @@
 }
 
 @media (min-width: 640px) {
+  .headingLink {
+    margin-top: var(--space--xsmall);
+  }
+}
+
+@media (min-width: 1024px) {
   .headingLink {
     margin-top: 0;
   }
