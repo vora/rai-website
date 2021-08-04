@@ -43,16 +43,63 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
 
     // Generate our pages
     data.allContentfulPage.nodes.forEach((node) => {
-      if (node.slug !== "certification") {
+      /**
+       * Create a context object that will pass into our
+       * template component. This will be passed in as a
+       * pageContext prop
+       */
+      const context = {
+        slug: node.slug,
+      };
+
+      /**
+       * Set the default template component to render. We leave
+       * this as a "let" as we want to be able to change it.
+       */
+      let component = path.resolve(`./src/templates/page.tsx`);
+
+      /**
+       * Create a list of pages that use the blog post
+       * template
+       */
+      const blogPages = ["news", "blog"];
+
+      /**
+       * Create a list of pages that are "safe", meaning that
+       * they are fully converted to Contentful. Hopefully we
+       * can remove this soon.
+       */
+      const safePages = [...blogPages, "certification"];
+
+      /**
+       * If the slug is not in the safePages array, we
+       * don't want to create a page. This prevents us
+       * from having half baked Contentful pages.
+       */
+      if (!safePages.includes(node.slug)) {
         return;
+      }
+
+      /**
+       * Set up the component and the context for our blog
+       * post pages.
+       */
+      if (blogPages.includes(node.slug)) {
+        component = path.resolve(`./src/templates/blog.tsx`);
+
+        if (node.slug === "news") {
+          context.category = "News";
+        }
+
+        if (node.slug === "blog") {
+          context.category = "Blog";
+        }
       }
 
       createPage({
         path: `/${node.slug.replace(/ /g, "-")}`,
-        component: path.resolve(`./src/templates/page.tsx`),
-        context: {
-          slug: node.slug,
-        },
+        component,
+        context,
       });
     });
   });
