@@ -33,29 +33,23 @@ function Page({ data }: PageProps) {
   );
 }
 
+/**
+ * We create a fragment here, as there are other templates
+ * that will use the same query as page.
+ */
+export const PageFragment = graphql`
+  fragment PageFragment on ContentfulPage {
+    title
+    seoTitle
+    seoDescription
+  }
+`;
+
 export const query = graphql`
   query PageTemplateQuery($slug: String!) {
     page: contentfulPage(slug: { eq: $slug }) {
-      title
-      seoTitle
-      seoDescription
-      blocks {
-        ... on ContentfulBlockCallToAction {
-          ...CallToActionFragment
-        }
-        ... on ContentfulBlockContent {
-          ...ContentFragment
-        }
-        ... on ContentfulBlockContentList {
-          ...ContentListFragment
-        }
-        ... on ContentfulBlockImageBand {
-          ...ImageBandFragment
-        }
-        ... on ContentfulBlockJumbotron {
-          ...JumbotronFragment
-        }
-      }
+      ...PageFragment
+      ...ContentfulBlocksFragment
     }
   }
 `;

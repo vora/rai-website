@@ -384,12 +384,12 @@ export type ContentfulAuthor = ContentfulReference & ContentfulEntry & Node & {
   id: Scalars['ID'];
   node_locale: Scalars['String'];
   name?: Maybe<Scalars['String']>;
-  biography?: Maybe<ContentfulAuthorBiographyTextNode>;
+  blog_post?: Maybe<Array<Maybe<ContentfulBlogPost>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulAuthorSys>;
-  blog_post?: Maybe<Array<Maybe<ContentfulBlogPost>>>;
+  biography?: Maybe<ContentfulAuthorBiographyTextNode>;
   /** Returns all children nodes filtered by type contentfulAuthorBiographyTextNode */
   childrenContentfulAuthorBiographyTextNode?: Maybe<Array<Maybe<ContentfulAuthorBiographyTextNode>>>;
   /** Returns the first child node of type contentfulAuthorBiographyTextNode or null if there are no children of given type on this node */
@@ -449,54 +449,6 @@ export enum ContentfulAuthorFieldsEnum {
   id = 'id',
   node_locale = 'node_locale',
   name = 'name',
-  biography___id = 'biography___id',
-  biography___parent___id = 'biography___parent___id',
-  biography___parent___parent___id = 'biography___parent___parent___id',
-  biography___parent___parent___children = 'biography___parent___parent___children',
-  biography___parent___children = 'biography___parent___children',
-  biography___parent___children___id = 'biography___parent___children___id',
-  biography___parent___children___children = 'biography___parent___children___children',
-  biography___parent___internal___content = 'biography___parent___internal___content',
-  biography___parent___internal___contentDigest = 'biography___parent___internal___contentDigest',
-  biography___parent___internal___description = 'biography___parent___internal___description',
-  biography___parent___internal___fieldOwners = 'biography___parent___internal___fieldOwners',
-  biography___parent___internal___ignoreType = 'biography___parent___internal___ignoreType',
-  biography___parent___internal___mediaType = 'biography___parent___internal___mediaType',
-  biography___parent___internal___owner = 'biography___parent___internal___owner',
-  biography___parent___internal___type = 'biography___parent___internal___type',
-  biography___children = 'biography___children',
-  biography___children___id = 'biography___children___id',
-  biography___children___parent___id = 'biography___children___parent___id',
-  biography___children___parent___children = 'biography___children___parent___children',
-  biography___children___children = 'biography___children___children',
-  biography___children___children___id = 'biography___children___children___id',
-  biography___children___children___children = 'biography___children___children___children',
-  biography___children___internal___content = 'biography___children___internal___content',
-  biography___children___internal___contentDigest = 'biography___children___internal___contentDigest',
-  biography___children___internal___description = 'biography___children___internal___description',
-  biography___children___internal___fieldOwners = 'biography___children___internal___fieldOwners',
-  biography___children___internal___ignoreType = 'biography___children___internal___ignoreType',
-  biography___children___internal___mediaType = 'biography___children___internal___mediaType',
-  biography___children___internal___owner = 'biography___children___internal___owner',
-  biography___children___internal___type = 'biography___children___internal___type',
-  biography___internal___content = 'biography___internal___content',
-  biography___internal___contentDigest = 'biography___internal___contentDigest',
-  biography___internal___description = 'biography___internal___description',
-  biography___internal___fieldOwners = 'biography___internal___fieldOwners',
-  biography___internal___ignoreType = 'biography___internal___ignoreType',
-  biography___internal___mediaType = 'biography___internal___mediaType',
-  biography___internal___owner = 'biography___internal___owner',
-  biography___internal___type = 'biography___internal___type',
-  biography___biography = 'biography___biography',
-  biography___sys___type = 'biography___sys___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
   blog_post = 'blog_post',
   blog_post___contentful_id = 'blog_post___contentful_id',
   blog_post___id = 'blog_post___id',
@@ -522,14 +474,6 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___author___id = 'blog_post___author___id',
   blog_post___author___node_locale = 'blog_post___author___node_locale',
   blog_post___author___name = 'blog_post___author___name',
-  blog_post___author___biography___id = 'blog_post___author___biography___id',
-  blog_post___author___biography___children = 'blog_post___author___biography___children',
-  blog_post___author___biography___biography = 'blog_post___author___biography___biography',
-  blog_post___author___spaceId = 'blog_post___author___spaceId',
-  blog_post___author___createdAt = 'blog_post___author___createdAt',
-  blog_post___author___updatedAt = 'blog_post___author___updatedAt',
-  blog_post___author___sys___type = 'blog_post___author___sys___type',
-  blog_post___author___sys___revision = 'blog_post___author___sys___revision',
   blog_post___author___blog_post = 'blog_post___author___blog_post',
   blog_post___author___blog_post___contentful_id = 'blog_post___author___blog_post___contentful_id',
   blog_post___author___blog_post___id = 'blog_post___author___blog_post___id',
@@ -547,6 +491,14 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___author___blog_post___block__resource_list = 'blog_post___author___blog_post___block__resource_list',
   blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode',
   blog_post___author___blog_post___children = 'blog_post___author___blog_post___children',
+  blog_post___author___spaceId = 'blog_post___author___spaceId',
+  blog_post___author___createdAt = 'blog_post___author___createdAt',
+  blog_post___author___updatedAt = 'blog_post___author___updatedAt',
+  blog_post___author___sys___type = 'blog_post___author___sys___type',
+  blog_post___author___sys___revision = 'blog_post___author___sys___revision',
+  blog_post___author___biography___id = 'blog_post___author___biography___id',
+  blog_post___author___biography___children = 'blog_post___author___biography___children',
+  blog_post___author___biography___biography = 'blog_post___author___biography___biography',
   blog_post___author___childrenContentfulAuthorBiographyTextNode = 'blog_post___author___childrenContentfulAuthorBiographyTextNode',
   blog_post___author___childrenContentfulAuthorBiographyTextNode___id = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___id',
   blog_post___author___childrenContentfulAuthorBiographyTextNode___children = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___children',
@@ -567,6 +519,11 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___author___internal___mediaType = 'blog_post___author___internal___mediaType',
   blog_post___author___internal___owner = 'blog_post___author___internal___owner',
   blog_post___author___internal___type = 'blog_post___author___internal___type',
+  blog_post___spaceId = 'blog_post___spaceId',
+  blog_post___createdAt = 'blog_post___createdAt',
+  blog_post___updatedAt = 'blog_post___updatedAt',
+  blog_post___sys___type = 'blog_post___sys___type',
+  blog_post___sys___revision = 'blog_post___sys___revision',
   blog_post___excerpt___id = 'blog_post___excerpt___id',
   blog_post___excerpt___parent___id = 'blog_post___excerpt___parent___id',
   blog_post___excerpt___parent___children = 'blog_post___excerpt___parent___children',
@@ -583,11 +540,6 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___excerpt___internal___type = 'blog_post___excerpt___internal___type',
   blog_post___excerpt___excerpt = 'blog_post___excerpt___excerpt',
   blog_post___excerpt___sys___type = 'blog_post___excerpt___sys___type',
-  blog_post___spaceId = 'blog_post___spaceId',
-  blog_post___createdAt = 'blog_post___createdAt',
-  blog_post___updatedAt = 'blog_post___updatedAt',
-  blog_post___sys___type = 'blog_post___sys___type',
-  blog_post___sys___revision = 'blog_post___sys___revision',
   blog_post___featuredImage___contentful_id = 'blog_post___featuredImage___contentful_id',
   blog_post___featuredImage___id = 'blog_post___featuredImage___id',
   blog_post___featuredImage___spaceId = 'blog_post___featuredImage___spaceId',
@@ -651,13 +603,26 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___block__resource_list___headingLink___node_locale = 'blog_post___block__resource_list___headingLink___node_locale',
   blog_post___block__resource_list___headingLink___title = 'blog_post___block__resource_list___headingLink___title',
   blog_post___block__resource_list___headingLink___slug = 'blog_post___block__resource_list___headingLink___slug',
-  blog_post___block__resource_list___headingLink___block__resource_list = 'blog_post___block__resource_list___headingLink___block__resource_list',
   blog_post___block__resource_list___headingLink___spaceId = 'blog_post___block__resource_list___headingLink___spaceId',
   blog_post___block__resource_list___headingLink___createdAt = 'blog_post___block__resource_list___headingLink___createdAt',
   blog_post___block__resource_list___headingLink___updatedAt = 'blog_post___block__resource_list___headingLink___updatedAt',
+  blog_post___block__resource_list___headingLink___block__resource_list = 'blog_post___block__resource_list___headingLink___block__resource_list',
   blog_post___block__resource_list___headingLink___seoTitle = 'blog_post___block__resource_list___headingLink___seoTitle',
   blog_post___block__resource_list___headingLink___seoDescription = 'blog_post___block__resource_list___headingLink___seoDescription',
   blog_post___block__resource_list___headingLink___children = 'blog_post___block__resource_list___headingLink___children',
+  blog_post___block__resource_list___page = 'blog_post___block__resource_list___page',
+  blog_post___block__resource_list___page___contentful_id = 'blog_post___block__resource_list___page___contentful_id',
+  blog_post___block__resource_list___page___id = 'blog_post___block__resource_list___page___id',
+  blog_post___block__resource_list___page___node_locale = 'blog_post___block__resource_list___page___node_locale',
+  blog_post___block__resource_list___page___title = 'blog_post___block__resource_list___page___title',
+  blog_post___block__resource_list___page___slug = 'blog_post___block__resource_list___page___slug',
+  blog_post___block__resource_list___page___spaceId = 'blog_post___block__resource_list___page___spaceId',
+  blog_post___block__resource_list___page___createdAt = 'blog_post___block__resource_list___page___createdAt',
+  blog_post___block__resource_list___page___updatedAt = 'blog_post___block__resource_list___page___updatedAt',
+  blog_post___block__resource_list___page___block__resource_list = 'blog_post___block__resource_list___page___block__resource_list',
+  blog_post___block__resource_list___page___seoTitle = 'blog_post___block__resource_list___page___seoTitle',
+  blog_post___block__resource_list___page___seoDescription = 'blog_post___block__resource_list___page___seoDescription',
+  blog_post___block__resource_list___page___children = 'blog_post___block__resource_list___page___children',
   blog_post___block__resource_list___spaceId = 'blog_post___block__resource_list___spaceId',
   blog_post___block__resource_list___createdAt = 'blog_post___block__resource_list___createdAt',
   blog_post___block__resource_list___updatedAt = 'blog_post___block__resource_list___updatedAt',
@@ -746,6 +711,54 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___internal___mediaType = 'blog_post___internal___mediaType',
   blog_post___internal___owner = 'blog_post___internal___owner',
   blog_post___internal___type = 'blog_post___internal___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
+  biography___id = 'biography___id',
+  biography___parent___id = 'biography___parent___id',
+  biography___parent___parent___id = 'biography___parent___parent___id',
+  biography___parent___parent___children = 'biography___parent___parent___children',
+  biography___parent___children = 'biography___parent___children',
+  biography___parent___children___id = 'biography___parent___children___id',
+  biography___parent___children___children = 'biography___parent___children___children',
+  biography___parent___internal___content = 'biography___parent___internal___content',
+  biography___parent___internal___contentDigest = 'biography___parent___internal___contentDigest',
+  biography___parent___internal___description = 'biography___parent___internal___description',
+  biography___parent___internal___fieldOwners = 'biography___parent___internal___fieldOwners',
+  biography___parent___internal___ignoreType = 'biography___parent___internal___ignoreType',
+  biography___parent___internal___mediaType = 'biography___parent___internal___mediaType',
+  biography___parent___internal___owner = 'biography___parent___internal___owner',
+  biography___parent___internal___type = 'biography___parent___internal___type',
+  biography___children = 'biography___children',
+  biography___children___id = 'biography___children___id',
+  biography___children___parent___id = 'biography___children___parent___id',
+  biography___children___parent___children = 'biography___children___parent___children',
+  biography___children___children = 'biography___children___children',
+  biography___children___children___id = 'biography___children___children___id',
+  biography___children___children___children = 'biography___children___children___children',
+  biography___children___internal___content = 'biography___children___internal___content',
+  biography___children___internal___contentDigest = 'biography___children___internal___contentDigest',
+  biography___children___internal___description = 'biography___children___internal___description',
+  biography___children___internal___fieldOwners = 'biography___children___internal___fieldOwners',
+  biography___children___internal___ignoreType = 'biography___children___internal___ignoreType',
+  biography___children___internal___mediaType = 'biography___children___internal___mediaType',
+  biography___children___internal___owner = 'biography___children___internal___owner',
+  biography___children___internal___type = 'biography___children___internal___type',
+  biography___internal___content = 'biography___internal___content',
+  biography___internal___contentDigest = 'biography___internal___contentDigest',
+  biography___internal___description = 'biography___internal___description',
+  biography___internal___fieldOwners = 'biography___internal___fieldOwners',
+  biography___internal___ignoreType = 'biography___internal___ignoreType',
+  biography___internal___mediaType = 'biography___internal___mediaType',
+  biography___internal___owner = 'biography___internal___owner',
+  biography___internal___type = 'biography___internal___type',
+  biography___biography = 'biography___biography',
+  biography___sys___type = 'biography___sys___type',
   childrenContentfulAuthorBiographyTextNode = 'childrenContentfulAuthorBiographyTextNode',
   childrenContentfulAuthorBiographyTextNode___id = 'childrenContentfulAuthorBiographyTextNode___id',
   childrenContentfulAuthorBiographyTextNode___parent___id = 'childrenContentfulAuthorBiographyTextNode___parent___id',
@@ -919,12 +932,12 @@ export type ContentfulAuthorFilterInput = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
-  biography?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
+  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulAuthorSysFilterInput>;
-  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
+  biography?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   childrenContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterListInput>;
   childContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -1051,7 +1064,7 @@ export type ContentfulBlockCallToActionContentFilterInput = {
   raw?: Maybe<StringQueryOperatorInput>;
 };
 
-export type ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListContentfulBlockImageBandContentfulBlockJumbotronUnion = ContentfulBlockCallToAction | ContentfulBlockContent | ContentfulBlockContentList | ContentfulBlockImageBand | ContentfulBlockJumbotron;
+export type ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListContentfulBlockImageBandContentfulBlockJumbotronContentfulBlockResourceListUnion = ContentfulBlockCallToAction | ContentfulBlockContent | ContentfulBlockContentList | ContentfulBlockImageBand | ContentfulBlockJumbotron | ContentfulBlockResourceList;
 
 export type ContentfulBlockCallToActionEdge = {
   __typename?: 'ContentfulBlockCallToActionEdge';
@@ -1072,6 +1085,11 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
   page___slug = 'page___slug',
+  page___spaceId = 'page___spaceId',
+  page___createdAt = 'page___createdAt',
+  page___updatedAt = 'page___updatedAt',
+  page___sys___type = 'page___sys___type',
+  page___sys___revision = 'page___sys___revision',
   page___block__resource_list = 'page___block__resource_list',
   page___block__resource_list___contentful_id = 'page___block__resource_list___contentful_id',
   page___block__resource_list___id = 'page___block__resource_list___id',
@@ -1083,13 +1101,26 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
-  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
   page___block__resource_list___headingLink___updatedAt = 'page___block__resource_list___headingLink___updatedAt',
+  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
   page___block__resource_list___headingLink___seoTitle = 'page___block__resource_list___headingLink___seoTitle',
   page___block__resource_list___headingLink___seoDescription = 'page___block__resource_list___headingLink___seoDescription',
   page___block__resource_list___headingLink___children = 'page___block__resource_list___headingLink___children',
+  page___block__resource_list___page = 'page___block__resource_list___page',
+  page___block__resource_list___page___contentful_id = 'page___block__resource_list___page___contentful_id',
+  page___block__resource_list___page___id = 'page___block__resource_list___page___id',
+  page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
+  page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
+  page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
+  page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
+  page___block__resource_list___page___updatedAt = 'page___block__resource_list___page___updatedAt',
+  page___block__resource_list___page___block__resource_list = 'page___block__resource_list___page___block__resource_list',
+  page___block__resource_list___page___seoTitle = 'page___block__resource_list___page___seoTitle',
+  page___block__resource_list___page___seoDescription = 'page___block__resource_list___page___seoDescription',
+  page___block__resource_list___page___children = 'page___block__resource_list___page___children',
   page___block__resource_list___spaceId = 'page___block__resource_list___spaceId',
   page___block__resource_list___createdAt = 'page___block__resource_list___createdAt',
   page___block__resource_list___updatedAt = 'page___block__resource_list___updatedAt',
@@ -1108,11 +1139,6 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   page___block__resource_list___internal___mediaType = 'page___block__resource_list___internal___mediaType',
   page___block__resource_list___internal___owner = 'page___block__resource_list___internal___owner',
   page___block__resource_list___internal___type = 'page___block__resource_list___internal___type',
-  page___spaceId = 'page___spaceId',
-  page___createdAt = 'page___createdAt',
-  page___updatedAt = 'page___updatedAt',
-  page___sys___type = 'page___sys___type',
-  page___sys___revision = 'page___sys___revision',
   page___seoTitle = 'page___seoTitle',
   page___seoDescription = 'page___seoDescription',
   page___parent___id = 'page___parent___id',
@@ -1591,6 +1617,11 @@ export enum ContentfulBlockContentFieldsEnum {
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
   page___slug = 'page___slug',
+  page___spaceId = 'page___spaceId',
+  page___createdAt = 'page___createdAt',
+  page___updatedAt = 'page___updatedAt',
+  page___sys___type = 'page___sys___type',
+  page___sys___revision = 'page___sys___revision',
   page___block__resource_list = 'page___block__resource_list',
   page___block__resource_list___contentful_id = 'page___block__resource_list___contentful_id',
   page___block__resource_list___id = 'page___block__resource_list___id',
@@ -1602,13 +1633,26 @@ export enum ContentfulBlockContentFieldsEnum {
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
-  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
   page___block__resource_list___headingLink___updatedAt = 'page___block__resource_list___headingLink___updatedAt',
+  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
   page___block__resource_list___headingLink___seoTitle = 'page___block__resource_list___headingLink___seoTitle',
   page___block__resource_list___headingLink___seoDescription = 'page___block__resource_list___headingLink___seoDescription',
   page___block__resource_list___headingLink___children = 'page___block__resource_list___headingLink___children',
+  page___block__resource_list___page = 'page___block__resource_list___page',
+  page___block__resource_list___page___contentful_id = 'page___block__resource_list___page___contentful_id',
+  page___block__resource_list___page___id = 'page___block__resource_list___page___id',
+  page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
+  page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
+  page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
+  page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
+  page___block__resource_list___page___updatedAt = 'page___block__resource_list___page___updatedAt',
+  page___block__resource_list___page___block__resource_list = 'page___block__resource_list___page___block__resource_list',
+  page___block__resource_list___page___seoTitle = 'page___block__resource_list___page___seoTitle',
+  page___block__resource_list___page___seoDescription = 'page___block__resource_list___page___seoDescription',
+  page___block__resource_list___page___children = 'page___block__resource_list___page___children',
   page___block__resource_list___spaceId = 'page___block__resource_list___spaceId',
   page___block__resource_list___createdAt = 'page___block__resource_list___createdAt',
   page___block__resource_list___updatedAt = 'page___block__resource_list___updatedAt',
@@ -1627,11 +1671,6 @@ export enum ContentfulBlockContentFieldsEnum {
   page___block__resource_list___internal___mediaType = 'page___block__resource_list___internal___mediaType',
   page___block__resource_list___internal___owner = 'page___block__resource_list___internal___owner',
   page___block__resource_list___internal___type = 'page___block__resource_list___internal___type',
-  page___spaceId = 'page___spaceId',
-  page___createdAt = 'page___createdAt',
-  page___updatedAt = 'page___updatedAt',
-  page___sys___type = 'page___sys___type',
-  page___sys___revision = 'page___sys___revision',
   page___seoTitle = 'page___seoTitle',
   page___seoDescription = 'page___seoDescription',
   page___parent___id = 'page___parent___id',
@@ -1976,6 +2015,11 @@ export enum ContentfulBlockContentListFieldsEnum {
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
   page___slug = 'page___slug',
+  page___spaceId = 'page___spaceId',
+  page___createdAt = 'page___createdAt',
+  page___updatedAt = 'page___updatedAt',
+  page___sys___type = 'page___sys___type',
+  page___sys___revision = 'page___sys___revision',
   page___block__resource_list = 'page___block__resource_list',
   page___block__resource_list___contentful_id = 'page___block__resource_list___contentful_id',
   page___block__resource_list___id = 'page___block__resource_list___id',
@@ -1987,13 +2031,26 @@ export enum ContentfulBlockContentListFieldsEnum {
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
-  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
   page___block__resource_list___headingLink___updatedAt = 'page___block__resource_list___headingLink___updatedAt',
+  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
   page___block__resource_list___headingLink___seoTitle = 'page___block__resource_list___headingLink___seoTitle',
   page___block__resource_list___headingLink___seoDescription = 'page___block__resource_list___headingLink___seoDescription',
   page___block__resource_list___headingLink___children = 'page___block__resource_list___headingLink___children',
+  page___block__resource_list___page = 'page___block__resource_list___page',
+  page___block__resource_list___page___contentful_id = 'page___block__resource_list___page___contentful_id',
+  page___block__resource_list___page___id = 'page___block__resource_list___page___id',
+  page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
+  page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
+  page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
+  page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
+  page___block__resource_list___page___updatedAt = 'page___block__resource_list___page___updatedAt',
+  page___block__resource_list___page___block__resource_list = 'page___block__resource_list___page___block__resource_list',
+  page___block__resource_list___page___seoTitle = 'page___block__resource_list___page___seoTitle',
+  page___block__resource_list___page___seoDescription = 'page___block__resource_list___page___seoDescription',
+  page___block__resource_list___page___children = 'page___block__resource_list___page___children',
   page___block__resource_list___spaceId = 'page___block__resource_list___spaceId',
   page___block__resource_list___createdAt = 'page___block__resource_list___createdAt',
   page___block__resource_list___updatedAt = 'page___block__resource_list___updatedAt',
@@ -2012,11 +2069,6 @@ export enum ContentfulBlockContentListFieldsEnum {
   page___block__resource_list___internal___mediaType = 'page___block__resource_list___internal___mediaType',
   page___block__resource_list___internal___owner = 'page___block__resource_list___internal___owner',
   page___block__resource_list___internal___type = 'page___block__resource_list___internal___type',
-  page___spaceId = 'page___spaceId',
-  page___createdAt = 'page___createdAt',
-  page___updatedAt = 'page___updatedAt',
-  page___sys___type = 'page___sys___type',
-  page___sys___revision = 'page___sys___revision',
   page___seoTitle = 'page___seoTitle',
   page___seoDescription = 'page___seoDescription',
   page___parent___id = 'page___parent___id',
@@ -2682,6 +2734,11 @@ export enum ContentfulBlockImageBandFieldsEnum {
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
   page___slug = 'page___slug',
+  page___spaceId = 'page___spaceId',
+  page___createdAt = 'page___createdAt',
+  page___updatedAt = 'page___updatedAt',
+  page___sys___type = 'page___sys___type',
+  page___sys___revision = 'page___sys___revision',
   page___block__resource_list = 'page___block__resource_list',
   page___block__resource_list___contentful_id = 'page___block__resource_list___contentful_id',
   page___block__resource_list___id = 'page___block__resource_list___id',
@@ -2693,13 +2750,26 @@ export enum ContentfulBlockImageBandFieldsEnum {
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
-  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
   page___block__resource_list___headingLink___updatedAt = 'page___block__resource_list___headingLink___updatedAt',
+  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
   page___block__resource_list___headingLink___seoTitle = 'page___block__resource_list___headingLink___seoTitle',
   page___block__resource_list___headingLink___seoDescription = 'page___block__resource_list___headingLink___seoDescription',
   page___block__resource_list___headingLink___children = 'page___block__resource_list___headingLink___children',
+  page___block__resource_list___page = 'page___block__resource_list___page',
+  page___block__resource_list___page___contentful_id = 'page___block__resource_list___page___contentful_id',
+  page___block__resource_list___page___id = 'page___block__resource_list___page___id',
+  page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
+  page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
+  page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
+  page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
+  page___block__resource_list___page___updatedAt = 'page___block__resource_list___page___updatedAt',
+  page___block__resource_list___page___block__resource_list = 'page___block__resource_list___page___block__resource_list',
+  page___block__resource_list___page___seoTitle = 'page___block__resource_list___page___seoTitle',
+  page___block__resource_list___page___seoDescription = 'page___block__resource_list___page___seoDescription',
+  page___block__resource_list___page___children = 'page___block__resource_list___page___children',
   page___block__resource_list___spaceId = 'page___block__resource_list___spaceId',
   page___block__resource_list___createdAt = 'page___block__resource_list___createdAt',
   page___block__resource_list___updatedAt = 'page___block__resource_list___updatedAt',
@@ -2718,11 +2788,6 @@ export enum ContentfulBlockImageBandFieldsEnum {
   page___block__resource_list___internal___mediaType = 'page___block__resource_list___internal___mediaType',
   page___block__resource_list___internal___owner = 'page___block__resource_list___internal___owner',
   page___block__resource_list___internal___type = 'page___block__resource_list___internal___type',
-  page___spaceId = 'page___spaceId',
-  page___createdAt = 'page___createdAt',
-  page___updatedAt = 'page___updatedAt',
-  page___sys___type = 'page___sys___type',
-  page___sys___revision = 'page___sys___revision',
   page___seoTitle = 'page___seoTitle',
   page___seoDescription = 'page___seoDescription',
   page___parent___id = 'page___parent___id',
@@ -3213,6 +3278,11 @@ export enum ContentfulBlockJumbotronFieldsEnum {
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
   page___slug = 'page___slug',
+  page___spaceId = 'page___spaceId',
+  page___createdAt = 'page___createdAt',
+  page___updatedAt = 'page___updatedAt',
+  page___sys___type = 'page___sys___type',
+  page___sys___revision = 'page___sys___revision',
   page___block__resource_list = 'page___block__resource_list',
   page___block__resource_list___contentful_id = 'page___block__resource_list___contentful_id',
   page___block__resource_list___id = 'page___block__resource_list___id',
@@ -3224,13 +3294,26 @@ export enum ContentfulBlockJumbotronFieldsEnum {
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
-  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
   page___block__resource_list___headingLink___updatedAt = 'page___block__resource_list___headingLink___updatedAt',
+  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
   page___block__resource_list___headingLink___seoTitle = 'page___block__resource_list___headingLink___seoTitle',
   page___block__resource_list___headingLink___seoDescription = 'page___block__resource_list___headingLink___seoDescription',
   page___block__resource_list___headingLink___children = 'page___block__resource_list___headingLink___children',
+  page___block__resource_list___page = 'page___block__resource_list___page',
+  page___block__resource_list___page___contentful_id = 'page___block__resource_list___page___contentful_id',
+  page___block__resource_list___page___id = 'page___block__resource_list___page___id',
+  page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
+  page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
+  page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
+  page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
+  page___block__resource_list___page___updatedAt = 'page___block__resource_list___page___updatedAt',
+  page___block__resource_list___page___block__resource_list = 'page___block__resource_list___page___block__resource_list',
+  page___block__resource_list___page___seoTitle = 'page___block__resource_list___page___seoTitle',
+  page___block__resource_list___page___seoDescription = 'page___block__resource_list___page___seoDescription',
+  page___block__resource_list___page___children = 'page___block__resource_list___page___children',
   page___block__resource_list___spaceId = 'page___block__resource_list___spaceId',
   page___block__resource_list___createdAt = 'page___block__resource_list___createdAt',
   page___block__resource_list___updatedAt = 'page___block__resource_list___updatedAt',
@@ -3249,11 +3332,6 @@ export enum ContentfulBlockJumbotronFieldsEnum {
   page___block__resource_list___internal___mediaType = 'page___block__resource_list___internal___mediaType',
   page___block__resource_list___internal___owner = 'page___block__resource_list___internal___owner',
   page___block__resource_list___internal___type = 'page___block__resource_list___internal___type',
-  page___spaceId = 'page___spaceId',
-  page___createdAt = 'page___createdAt',
-  page___updatedAt = 'page___updatedAt',
-  page___sys___type = 'page___sys___type',
-  page___sys___revision = 'page___sys___revision',
   page___seoTitle = 'page___seoTitle',
   page___seoDescription = 'page___seoDescription',
   page___parent___id = 'page___parent___id',
@@ -3552,6 +3630,7 @@ export type ContentfulBlockResourceList = ContentfulReference & ContentfulEntry 
   customHeadingLinkText?: Maybe<Scalars['String']>;
   headingLink?: Maybe<ContentfulPage>;
   resources?: Maybe<Array<Maybe<ContentfulBlogPostContentfulResourceUnion>>>;
+  page?: Maybe<Array<Maybe<ContentfulPage>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
@@ -3617,6 +3696,11 @@ export enum ContentfulBlockResourceListFieldsEnum {
   headingLink___node_locale = 'headingLink___node_locale',
   headingLink___title = 'headingLink___title',
   headingLink___slug = 'headingLink___slug',
+  headingLink___spaceId = 'headingLink___spaceId',
+  headingLink___createdAt = 'headingLink___createdAt',
+  headingLink___updatedAt = 'headingLink___updatedAt',
+  headingLink___sys___type = 'headingLink___sys___type',
+  headingLink___sys___revision = 'headingLink___sys___revision',
   headingLink___block__resource_list = 'headingLink___block__resource_list',
   headingLink___block__resource_list___contentful_id = 'headingLink___block__resource_list___contentful_id',
   headingLink___block__resource_list___id = 'headingLink___block__resource_list___id',
@@ -3628,13 +3712,26 @@ export enum ContentfulBlockResourceListFieldsEnum {
   headingLink___block__resource_list___headingLink___node_locale = 'headingLink___block__resource_list___headingLink___node_locale',
   headingLink___block__resource_list___headingLink___title = 'headingLink___block__resource_list___headingLink___title',
   headingLink___block__resource_list___headingLink___slug = 'headingLink___block__resource_list___headingLink___slug',
-  headingLink___block__resource_list___headingLink___block__resource_list = 'headingLink___block__resource_list___headingLink___block__resource_list',
   headingLink___block__resource_list___headingLink___spaceId = 'headingLink___block__resource_list___headingLink___spaceId',
   headingLink___block__resource_list___headingLink___createdAt = 'headingLink___block__resource_list___headingLink___createdAt',
   headingLink___block__resource_list___headingLink___updatedAt = 'headingLink___block__resource_list___headingLink___updatedAt',
+  headingLink___block__resource_list___headingLink___block__resource_list = 'headingLink___block__resource_list___headingLink___block__resource_list',
   headingLink___block__resource_list___headingLink___seoTitle = 'headingLink___block__resource_list___headingLink___seoTitle',
   headingLink___block__resource_list___headingLink___seoDescription = 'headingLink___block__resource_list___headingLink___seoDescription',
   headingLink___block__resource_list___headingLink___children = 'headingLink___block__resource_list___headingLink___children',
+  headingLink___block__resource_list___page = 'headingLink___block__resource_list___page',
+  headingLink___block__resource_list___page___contentful_id = 'headingLink___block__resource_list___page___contentful_id',
+  headingLink___block__resource_list___page___id = 'headingLink___block__resource_list___page___id',
+  headingLink___block__resource_list___page___node_locale = 'headingLink___block__resource_list___page___node_locale',
+  headingLink___block__resource_list___page___title = 'headingLink___block__resource_list___page___title',
+  headingLink___block__resource_list___page___slug = 'headingLink___block__resource_list___page___slug',
+  headingLink___block__resource_list___page___spaceId = 'headingLink___block__resource_list___page___spaceId',
+  headingLink___block__resource_list___page___createdAt = 'headingLink___block__resource_list___page___createdAt',
+  headingLink___block__resource_list___page___updatedAt = 'headingLink___block__resource_list___page___updatedAt',
+  headingLink___block__resource_list___page___block__resource_list = 'headingLink___block__resource_list___page___block__resource_list',
+  headingLink___block__resource_list___page___seoTitle = 'headingLink___block__resource_list___page___seoTitle',
+  headingLink___block__resource_list___page___seoDescription = 'headingLink___block__resource_list___page___seoDescription',
+  headingLink___block__resource_list___page___children = 'headingLink___block__resource_list___page___children',
   headingLink___block__resource_list___spaceId = 'headingLink___block__resource_list___spaceId',
   headingLink___block__resource_list___createdAt = 'headingLink___block__resource_list___createdAt',
   headingLink___block__resource_list___updatedAt = 'headingLink___block__resource_list___updatedAt',
@@ -3653,11 +3750,6 @@ export enum ContentfulBlockResourceListFieldsEnum {
   headingLink___block__resource_list___internal___mediaType = 'headingLink___block__resource_list___internal___mediaType',
   headingLink___block__resource_list___internal___owner = 'headingLink___block__resource_list___internal___owner',
   headingLink___block__resource_list___internal___type = 'headingLink___block__resource_list___internal___type',
-  headingLink___spaceId = 'headingLink___spaceId',
-  headingLink___createdAt = 'headingLink___createdAt',
-  headingLink___updatedAt = 'headingLink___updatedAt',
-  headingLink___sys___type = 'headingLink___sys___type',
-  headingLink___sys___revision = 'headingLink___sys___revision',
   headingLink___seoTitle = 'headingLink___seoTitle',
   headingLink___seoDescription = 'headingLink___seoDescription',
   headingLink___parent___id = 'headingLink___parent___id',
@@ -3697,6 +3789,105 @@ export enum ContentfulBlockResourceListFieldsEnum {
   headingLink___internal___mediaType = 'headingLink___internal___mediaType',
   headingLink___internal___owner = 'headingLink___internal___owner',
   headingLink___internal___type = 'headingLink___internal___type',
+  page = 'page',
+  page___contentful_id = 'page___contentful_id',
+  page___id = 'page___id',
+  page___node_locale = 'page___node_locale',
+  page___title = 'page___title',
+  page___slug = 'page___slug',
+  page___spaceId = 'page___spaceId',
+  page___createdAt = 'page___createdAt',
+  page___updatedAt = 'page___updatedAt',
+  page___sys___type = 'page___sys___type',
+  page___sys___revision = 'page___sys___revision',
+  page___block__resource_list = 'page___block__resource_list',
+  page___block__resource_list___contentful_id = 'page___block__resource_list___contentful_id',
+  page___block__resource_list___id = 'page___block__resource_list___id',
+  page___block__resource_list___node_locale = 'page___block__resource_list___node_locale',
+  page___block__resource_list___title = 'page___block__resource_list___title',
+  page___block__resource_list___customHeadingLinkText = 'page___block__resource_list___customHeadingLinkText',
+  page___block__resource_list___headingLink___contentful_id = 'page___block__resource_list___headingLink___contentful_id',
+  page___block__resource_list___headingLink___id = 'page___block__resource_list___headingLink___id',
+  page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
+  page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
+  page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
+  page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
+  page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
+  page___block__resource_list___headingLink___updatedAt = 'page___block__resource_list___headingLink___updatedAt',
+  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
+  page___block__resource_list___headingLink___seoTitle = 'page___block__resource_list___headingLink___seoTitle',
+  page___block__resource_list___headingLink___seoDescription = 'page___block__resource_list___headingLink___seoDescription',
+  page___block__resource_list___headingLink___children = 'page___block__resource_list___headingLink___children',
+  page___block__resource_list___page = 'page___block__resource_list___page',
+  page___block__resource_list___page___contentful_id = 'page___block__resource_list___page___contentful_id',
+  page___block__resource_list___page___id = 'page___block__resource_list___page___id',
+  page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
+  page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
+  page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
+  page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
+  page___block__resource_list___page___updatedAt = 'page___block__resource_list___page___updatedAt',
+  page___block__resource_list___page___block__resource_list = 'page___block__resource_list___page___block__resource_list',
+  page___block__resource_list___page___seoTitle = 'page___block__resource_list___page___seoTitle',
+  page___block__resource_list___page___seoDescription = 'page___block__resource_list___page___seoDescription',
+  page___block__resource_list___page___children = 'page___block__resource_list___page___children',
+  page___block__resource_list___spaceId = 'page___block__resource_list___spaceId',
+  page___block__resource_list___createdAt = 'page___block__resource_list___createdAt',
+  page___block__resource_list___updatedAt = 'page___block__resource_list___updatedAt',
+  page___block__resource_list___sys___type = 'page___block__resource_list___sys___type',
+  page___block__resource_list___sys___revision = 'page___block__resource_list___sys___revision',
+  page___block__resource_list___parent___id = 'page___block__resource_list___parent___id',
+  page___block__resource_list___parent___children = 'page___block__resource_list___parent___children',
+  page___block__resource_list___children = 'page___block__resource_list___children',
+  page___block__resource_list___children___id = 'page___block__resource_list___children___id',
+  page___block__resource_list___children___children = 'page___block__resource_list___children___children',
+  page___block__resource_list___internal___content = 'page___block__resource_list___internal___content',
+  page___block__resource_list___internal___contentDigest = 'page___block__resource_list___internal___contentDigest',
+  page___block__resource_list___internal___description = 'page___block__resource_list___internal___description',
+  page___block__resource_list___internal___fieldOwners = 'page___block__resource_list___internal___fieldOwners',
+  page___block__resource_list___internal___ignoreType = 'page___block__resource_list___internal___ignoreType',
+  page___block__resource_list___internal___mediaType = 'page___block__resource_list___internal___mediaType',
+  page___block__resource_list___internal___owner = 'page___block__resource_list___internal___owner',
+  page___block__resource_list___internal___type = 'page___block__resource_list___internal___type',
+  page___seoTitle = 'page___seoTitle',
+  page___seoDescription = 'page___seoDescription',
+  page___parent___id = 'page___parent___id',
+  page___parent___parent___id = 'page___parent___parent___id',
+  page___parent___parent___children = 'page___parent___parent___children',
+  page___parent___children = 'page___parent___children',
+  page___parent___children___id = 'page___parent___children___id',
+  page___parent___children___children = 'page___parent___children___children',
+  page___parent___internal___content = 'page___parent___internal___content',
+  page___parent___internal___contentDigest = 'page___parent___internal___contentDigest',
+  page___parent___internal___description = 'page___parent___internal___description',
+  page___parent___internal___fieldOwners = 'page___parent___internal___fieldOwners',
+  page___parent___internal___ignoreType = 'page___parent___internal___ignoreType',
+  page___parent___internal___mediaType = 'page___parent___internal___mediaType',
+  page___parent___internal___owner = 'page___parent___internal___owner',
+  page___parent___internal___type = 'page___parent___internal___type',
+  page___children = 'page___children',
+  page___children___id = 'page___children___id',
+  page___children___parent___id = 'page___children___parent___id',
+  page___children___parent___children = 'page___children___parent___children',
+  page___children___children = 'page___children___children',
+  page___children___children___id = 'page___children___children___id',
+  page___children___children___children = 'page___children___children___children',
+  page___children___internal___content = 'page___children___internal___content',
+  page___children___internal___contentDigest = 'page___children___internal___contentDigest',
+  page___children___internal___description = 'page___children___internal___description',
+  page___children___internal___fieldOwners = 'page___children___internal___fieldOwners',
+  page___children___internal___ignoreType = 'page___children___internal___ignoreType',
+  page___children___internal___mediaType = 'page___children___internal___mediaType',
+  page___children___internal___owner = 'page___children___internal___owner',
+  page___children___internal___type = 'page___children___internal___type',
+  page___internal___content = 'page___internal___content',
+  page___internal___contentDigest = 'page___internal___contentDigest',
+  page___internal___description = 'page___internal___description',
+  page___internal___fieldOwners = 'page___internal___fieldOwners',
+  page___internal___ignoreType = 'page___internal___ignoreType',
+  page___internal___mediaType = 'page___internal___mediaType',
+  page___internal___owner = 'page___internal___owner',
+  page___internal___type = 'page___internal___type',
   spaceId = 'spaceId',
   createdAt = 'createdAt',
   updatedAt = 'updatedAt',
@@ -3799,6 +3990,7 @@ export type ContentfulBlockResourceListFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   customHeadingLinkText?: Maybe<StringQueryOperatorInput>;
   headingLink?: Maybe<ContentfulPageFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
@@ -3874,11 +4066,11 @@ export type ContentfulBlogPost = ContentfulReference & ContentfulEntry & Node & 
   published?: Maybe<Scalars['Date']>;
   content?: Maybe<ContentfulBlogPostContent>;
   author?: Maybe<ContentfulAuthor>;
-  excerpt?: Maybe<ContentfulBlogPostExcerptTextNode>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulBlogPostSys>;
+  excerpt?: Maybe<ContentfulBlogPostExcerptTextNode>;
   featuredImage?: Maybe<ContentfulAsset>;
   seoTitle?: Maybe<Scalars['String']>;
   seoDescription?: Maybe<Scalars['String']>;
@@ -4023,27 +4215,6 @@ export enum ContentfulBlogPostFieldsEnum {
   author___id = 'author___id',
   author___node_locale = 'author___node_locale',
   author___name = 'author___name',
-  author___biography___id = 'author___biography___id',
-  author___biography___parent___id = 'author___biography___parent___id',
-  author___biography___parent___children = 'author___biography___parent___children',
-  author___biography___children = 'author___biography___children',
-  author___biography___children___id = 'author___biography___children___id',
-  author___biography___children___children = 'author___biography___children___children',
-  author___biography___internal___content = 'author___biography___internal___content',
-  author___biography___internal___contentDigest = 'author___biography___internal___contentDigest',
-  author___biography___internal___description = 'author___biography___internal___description',
-  author___biography___internal___fieldOwners = 'author___biography___internal___fieldOwners',
-  author___biography___internal___ignoreType = 'author___biography___internal___ignoreType',
-  author___biography___internal___mediaType = 'author___biography___internal___mediaType',
-  author___biography___internal___owner = 'author___biography___internal___owner',
-  author___biography___internal___type = 'author___biography___internal___type',
-  author___biography___biography = 'author___biography___biography',
-  author___biography___sys___type = 'author___biography___sys___type',
-  author___spaceId = 'author___spaceId',
-  author___createdAt = 'author___createdAt',
-  author___updatedAt = 'author___updatedAt',
-  author___sys___type = 'author___sys___type',
-  author___sys___revision = 'author___sys___revision',
   author___blog_post = 'author___blog_post',
   author___blog_post___contentful_id = 'author___blog_post___contentful_id',
   author___blog_post___id = 'author___blog_post___id',
@@ -4059,20 +4230,20 @@ export enum ContentfulBlogPostFieldsEnum {
   author___blog_post___author___id = 'author___blog_post___author___id',
   author___blog_post___author___node_locale = 'author___blog_post___author___node_locale',
   author___blog_post___author___name = 'author___blog_post___author___name',
+  author___blog_post___author___blog_post = 'author___blog_post___author___blog_post',
   author___blog_post___author___spaceId = 'author___blog_post___author___spaceId',
   author___blog_post___author___createdAt = 'author___blog_post___author___createdAt',
   author___blog_post___author___updatedAt = 'author___blog_post___author___updatedAt',
-  author___blog_post___author___blog_post = 'author___blog_post___author___blog_post',
   author___blog_post___author___childrenContentfulAuthorBiographyTextNode = 'author___blog_post___author___childrenContentfulAuthorBiographyTextNode',
   author___blog_post___author___children = 'author___blog_post___author___children',
-  author___blog_post___excerpt___id = 'author___blog_post___excerpt___id',
-  author___blog_post___excerpt___children = 'author___blog_post___excerpt___children',
-  author___blog_post___excerpt___excerpt = 'author___blog_post___excerpt___excerpt',
   author___blog_post___spaceId = 'author___blog_post___spaceId',
   author___blog_post___createdAt = 'author___blog_post___createdAt',
   author___blog_post___updatedAt = 'author___blog_post___updatedAt',
   author___blog_post___sys___type = 'author___blog_post___sys___type',
   author___blog_post___sys___revision = 'author___blog_post___sys___revision',
+  author___blog_post___excerpt___id = 'author___blog_post___excerpt___id',
+  author___blog_post___excerpt___children = 'author___blog_post___excerpt___children',
+  author___blog_post___excerpt___excerpt = 'author___blog_post___excerpt___excerpt',
   author___blog_post___featuredImage___contentful_id = 'author___blog_post___featuredImage___contentful_id',
   author___blog_post___featuredImage___id = 'author___blog_post___featuredImage___id',
   author___blog_post___featuredImage___spaceId = 'author___blog_post___featuredImage___spaceId',
@@ -4091,6 +4262,7 @@ export enum ContentfulBlogPostFieldsEnum {
   author___blog_post___block__resource_list___node_locale = 'author___blog_post___block__resource_list___node_locale',
   author___blog_post___block__resource_list___title = 'author___blog_post___block__resource_list___title',
   author___blog_post___block__resource_list___customHeadingLinkText = 'author___blog_post___block__resource_list___customHeadingLinkText',
+  author___blog_post___block__resource_list___page = 'author___blog_post___block__resource_list___page',
   author___blog_post___block__resource_list___spaceId = 'author___blog_post___block__resource_list___spaceId',
   author___blog_post___block__resource_list___createdAt = 'author___blog_post___block__resource_list___createdAt',
   author___blog_post___block__resource_list___updatedAt = 'author___blog_post___block__resource_list___updatedAt',
@@ -4115,6 +4287,27 @@ export enum ContentfulBlogPostFieldsEnum {
   author___blog_post___internal___mediaType = 'author___blog_post___internal___mediaType',
   author___blog_post___internal___owner = 'author___blog_post___internal___owner',
   author___blog_post___internal___type = 'author___blog_post___internal___type',
+  author___spaceId = 'author___spaceId',
+  author___createdAt = 'author___createdAt',
+  author___updatedAt = 'author___updatedAt',
+  author___sys___type = 'author___sys___type',
+  author___sys___revision = 'author___sys___revision',
+  author___biography___id = 'author___biography___id',
+  author___biography___parent___id = 'author___biography___parent___id',
+  author___biography___parent___children = 'author___biography___parent___children',
+  author___biography___children = 'author___biography___children',
+  author___biography___children___id = 'author___biography___children___id',
+  author___biography___children___children = 'author___biography___children___children',
+  author___biography___internal___content = 'author___biography___internal___content',
+  author___biography___internal___contentDigest = 'author___biography___internal___contentDigest',
+  author___biography___internal___description = 'author___biography___internal___description',
+  author___biography___internal___fieldOwners = 'author___biography___internal___fieldOwners',
+  author___biography___internal___ignoreType = 'author___biography___internal___ignoreType',
+  author___biography___internal___mediaType = 'author___biography___internal___mediaType',
+  author___biography___internal___owner = 'author___biography___internal___owner',
+  author___biography___internal___type = 'author___biography___internal___type',
+  author___biography___biography = 'author___biography___biography',
+  author___biography___sys___type = 'author___biography___sys___type',
   author___childrenContentfulAuthorBiographyTextNode = 'author___childrenContentfulAuthorBiographyTextNode',
   author___childrenContentfulAuthorBiographyTextNode___id = 'author___childrenContentfulAuthorBiographyTextNode___id',
   author___childrenContentfulAuthorBiographyTextNode___parent___id = 'author___childrenContentfulAuthorBiographyTextNode___parent___id',
@@ -4185,6 +4378,14 @@ export enum ContentfulBlogPostFieldsEnum {
   author___internal___mediaType = 'author___internal___mediaType',
   author___internal___owner = 'author___internal___owner',
   author___internal___type = 'author___internal___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
   excerpt___id = 'excerpt___id',
   excerpt___parent___id = 'excerpt___parent___id',
   excerpt___parent___parent___id = 'excerpt___parent___parent___id',
@@ -4225,14 +4426,6 @@ export enum ContentfulBlogPostFieldsEnum {
   excerpt___internal___type = 'excerpt___internal___type',
   excerpt___excerpt = 'excerpt___excerpt',
   excerpt___sys___type = 'excerpt___sys___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
   featuredImage___contentful_id = 'featuredImage___contentful_id',
   featuredImage___id = 'featuredImage___id',
   featuredImage___spaceId = 'featuredImage___spaceId',
@@ -4321,21 +4514,22 @@ export enum ContentfulBlogPostFieldsEnum {
   block__resource_list___headingLink___node_locale = 'block__resource_list___headingLink___node_locale',
   block__resource_list___headingLink___title = 'block__resource_list___headingLink___title',
   block__resource_list___headingLink___slug = 'block__resource_list___headingLink___slug',
+  block__resource_list___headingLink___spaceId = 'block__resource_list___headingLink___spaceId',
+  block__resource_list___headingLink___createdAt = 'block__resource_list___headingLink___createdAt',
+  block__resource_list___headingLink___updatedAt = 'block__resource_list___headingLink___updatedAt',
+  block__resource_list___headingLink___sys___type = 'block__resource_list___headingLink___sys___type',
+  block__resource_list___headingLink___sys___revision = 'block__resource_list___headingLink___sys___revision',
   block__resource_list___headingLink___block__resource_list = 'block__resource_list___headingLink___block__resource_list',
   block__resource_list___headingLink___block__resource_list___contentful_id = 'block__resource_list___headingLink___block__resource_list___contentful_id',
   block__resource_list___headingLink___block__resource_list___id = 'block__resource_list___headingLink___block__resource_list___id',
   block__resource_list___headingLink___block__resource_list___node_locale = 'block__resource_list___headingLink___block__resource_list___node_locale',
   block__resource_list___headingLink___block__resource_list___title = 'block__resource_list___headingLink___block__resource_list___title',
   block__resource_list___headingLink___block__resource_list___customHeadingLinkText = 'block__resource_list___headingLink___block__resource_list___customHeadingLinkText',
+  block__resource_list___headingLink___block__resource_list___page = 'block__resource_list___headingLink___block__resource_list___page',
   block__resource_list___headingLink___block__resource_list___spaceId = 'block__resource_list___headingLink___block__resource_list___spaceId',
   block__resource_list___headingLink___block__resource_list___createdAt = 'block__resource_list___headingLink___block__resource_list___createdAt',
   block__resource_list___headingLink___block__resource_list___updatedAt = 'block__resource_list___headingLink___block__resource_list___updatedAt',
   block__resource_list___headingLink___block__resource_list___children = 'block__resource_list___headingLink___block__resource_list___children',
-  block__resource_list___headingLink___spaceId = 'block__resource_list___headingLink___spaceId',
-  block__resource_list___headingLink___createdAt = 'block__resource_list___headingLink___createdAt',
-  block__resource_list___headingLink___updatedAt = 'block__resource_list___headingLink___updatedAt',
-  block__resource_list___headingLink___sys___type = 'block__resource_list___headingLink___sys___type',
-  block__resource_list___headingLink___sys___revision = 'block__resource_list___headingLink___sys___revision',
   block__resource_list___headingLink___seoTitle = 'block__resource_list___headingLink___seoTitle',
   block__resource_list___headingLink___seoDescription = 'block__resource_list___headingLink___seoDescription',
   block__resource_list___headingLink___parent___id = 'block__resource_list___headingLink___parent___id',
@@ -4351,6 +4545,43 @@ export enum ContentfulBlogPostFieldsEnum {
   block__resource_list___headingLink___internal___mediaType = 'block__resource_list___headingLink___internal___mediaType',
   block__resource_list___headingLink___internal___owner = 'block__resource_list___headingLink___internal___owner',
   block__resource_list___headingLink___internal___type = 'block__resource_list___headingLink___internal___type',
+  block__resource_list___page = 'block__resource_list___page',
+  block__resource_list___page___contentful_id = 'block__resource_list___page___contentful_id',
+  block__resource_list___page___id = 'block__resource_list___page___id',
+  block__resource_list___page___node_locale = 'block__resource_list___page___node_locale',
+  block__resource_list___page___title = 'block__resource_list___page___title',
+  block__resource_list___page___slug = 'block__resource_list___page___slug',
+  block__resource_list___page___spaceId = 'block__resource_list___page___spaceId',
+  block__resource_list___page___createdAt = 'block__resource_list___page___createdAt',
+  block__resource_list___page___updatedAt = 'block__resource_list___page___updatedAt',
+  block__resource_list___page___sys___type = 'block__resource_list___page___sys___type',
+  block__resource_list___page___sys___revision = 'block__resource_list___page___sys___revision',
+  block__resource_list___page___block__resource_list = 'block__resource_list___page___block__resource_list',
+  block__resource_list___page___block__resource_list___contentful_id = 'block__resource_list___page___block__resource_list___contentful_id',
+  block__resource_list___page___block__resource_list___id = 'block__resource_list___page___block__resource_list___id',
+  block__resource_list___page___block__resource_list___node_locale = 'block__resource_list___page___block__resource_list___node_locale',
+  block__resource_list___page___block__resource_list___title = 'block__resource_list___page___block__resource_list___title',
+  block__resource_list___page___block__resource_list___customHeadingLinkText = 'block__resource_list___page___block__resource_list___customHeadingLinkText',
+  block__resource_list___page___block__resource_list___page = 'block__resource_list___page___block__resource_list___page',
+  block__resource_list___page___block__resource_list___spaceId = 'block__resource_list___page___block__resource_list___spaceId',
+  block__resource_list___page___block__resource_list___createdAt = 'block__resource_list___page___block__resource_list___createdAt',
+  block__resource_list___page___block__resource_list___updatedAt = 'block__resource_list___page___block__resource_list___updatedAt',
+  block__resource_list___page___block__resource_list___children = 'block__resource_list___page___block__resource_list___children',
+  block__resource_list___page___seoTitle = 'block__resource_list___page___seoTitle',
+  block__resource_list___page___seoDescription = 'block__resource_list___page___seoDescription',
+  block__resource_list___page___parent___id = 'block__resource_list___page___parent___id',
+  block__resource_list___page___parent___children = 'block__resource_list___page___parent___children',
+  block__resource_list___page___children = 'block__resource_list___page___children',
+  block__resource_list___page___children___id = 'block__resource_list___page___children___id',
+  block__resource_list___page___children___children = 'block__resource_list___page___children___children',
+  block__resource_list___page___internal___content = 'block__resource_list___page___internal___content',
+  block__resource_list___page___internal___contentDigest = 'block__resource_list___page___internal___contentDigest',
+  block__resource_list___page___internal___description = 'block__resource_list___page___internal___description',
+  block__resource_list___page___internal___fieldOwners = 'block__resource_list___page___internal___fieldOwners',
+  block__resource_list___page___internal___ignoreType = 'block__resource_list___page___internal___ignoreType',
+  block__resource_list___page___internal___mediaType = 'block__resource_list___page___internal___mediaType',
+  block__resource_list___page___internal___owner = 'block__resource_list___page___internal___owner',
+  block__resource_list___page___internal___type = 'block__resource_list___page___internal___type',
   block__resource_list___spaceId = 'block__resource_list___spaceId',
   block__resource_list___createdAt = 'block__resource_list___createdAt',
   block__resource_list___updatedAt = 'block__resource_list___updatedAt',
@@ -4572,11 +4803,11 @@ export type ContentfulBlogPostFilterInput = {
   published?: Maybe<DateQueryOperatorInput>;
   content?: Maybe<ContentfulBlogPostContentFilterInput>;
   author?: Maybe<ContentfulAuthorFilterInput>;
-  excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlogPostSysFilterInput>;
+  excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   featuredImage?: Maybe<ContentfulAssetFilterInput>;
   seoTitle?: Maybe<StringQueryOperatorInput>;
   seoDescription?: Maybe<StringQueryOperatorInput>;
@@ -5268,12 +5499,12 @@ export type ContentfulPage = ContentfulReference & ContentfulEntry & Node & {
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
-  blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListContentfulBlockImageBandContentfulBlockJumbotronUnion>>>;
-  block__resource_list?: Maybe<Array<Maybe<ContentfulBlockResourceList>>>;
+  blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListContentfulBlockImageBandContentfulBlockJumbotronContentfulBlockResourceListUnion>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulPageSys>;
+  block__resource_list?: Maybe<Array<Maybe<ContentfulBlockResourceList>>>;
   seoTitle?: Maybe<Scalars['String']>;
   seoDescription?: Maybe<Scalars['String']>;
   parent?: Maybe<Node>;
@@ -5332,6 +5563,14 @@ export enum ContentfulPageFieldsEnum {
   node_locale = 'node_locale',
   title = 'title',
   slug = 'slug',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
   block__resource_list = 'block__resource_list',
   block__resource_list___contentful_id = 'block__resource_list___contentful_id',
   block__resource_list___id = 'block__resource_list___id',
@@ -5343,21 +5582,22 @@ export enum ContentfulPageFieldsEnum {
   block__resource_list___headingLink___node_locale = 'block__resource_list___headingLink___node_locale',
   block__resource_list___headingLink___title = 'block__resource_list___headingLink___title',
   block__resource_list___headingLink___slug = 'block__resource_list___headingLink___slug',
+  block__resource_list___headingLink___spaceId = 'block__resource_list___headingLink___spaceId',
+  block__resource_list___headingLink___createdAt = 'block__resource_list___headingLink___createdAt',
+  block__resource_list___headingLink___updatedAt = 'block__resource_list___headingLink___updatedAt',
+  block__resource_list___headingLink___sys___type = 'block__resource_list___headingLink___sys___type',
+  block__resource_list___headingLink___sys___revision = 'block__resource_list___headingLink___sys___revision',
   block__resource_list___headingLink___block__resource_list = 'block__resource_list___headingLink___block__resource_list',
   block__resource_list___headingLink___block__resource_list___contentful_id = 'block__resource_list___headingLink___block__resource_list___contentful_id',
   block__resource_list___headingLink___block__resource_list___id = 'block__resource_list___headingLink___block__resource_list___id',
   block__resource_list___headingLink___block__resource_list___node_locale = 'block__resource_list___headingLink___block__resource_list___node_locale',
   block__resource_list___headingLink___block__resource_list___title = 'block__resource_list___headingLink___block__resource_list___title',
   block__resource_list___headingLink___block__resource_list___customHeadingLinkText = 'block__resource_list___headingLink___block__resource_list___customHeadingLinkText',
+  block__resource_list___headingLink___block__resource_list___page = 'block__resource_list___headingLink___block__resource_list___page',
   block__resource_list___headingLink___block__resource_list___spaceId = 'block__resource_list___headingLink___block__resource_list___spaceId',
   block__resource_list___headingLink___block__resource_list___createdAt = 'block__resource_list___headingLink___block__resource_list___createdAt',
   block__resource_list___headingLink___block__resource_list___updatedAt = 'block__resource_list___headingLink___block__resource_list___updatedAt',
   block__resource_list___headingLink___block__resource_list___children = 'block__resource_list___headingLink___block__resource_list___children',
-  block__resource_list___headingLink___spaceId = 'block__resource_list___headingLink___spaceId',
-  block__resource_list___headingLink___createdAt = 'block__resource_list___headingLink___createdAt',
-  block__resource_list___headingLink___updatedAt = 'block__resource_list___headingLink___updatedAt',
-  block__resource_list___headingLink___sys___type = 'block__resource_list___headingLink___sys___type',
-  block__resource_list___headingLink___sys___revision = 'block__resource_list___headingLink___sys___revision',
   block__resource_list___headingLink___seoTitle = 'block__resource_list___headingLink___seoTitle',
   block__resource_list___headingLink___seoDescription = 'block__resource_list___headingLink___seoDescription',
   block__resource_list___headingLink___parent___id = 'block__resource_list___headingLink___parent___id',
@@ -5373,6 +5613,43 @@ export enum ContentfulPageFieldsEnum {
   block__resource_list___headingLink___internal___mediaType = 'block__resource_list___headingLink___internal___mediaType',
   block__resource_list___headingLink___internal___owner = 'block__resource_list___headingLink___internal___owner',
   block__resource_list___headingLink___internal___type = 'block__resource_list___headingLink___internal___type',
+  block__resource_list___page = 'block__resource_list___page',
+  block__resource_list___page___contentful_id = 'block__resource_list___page___contentful_id',
+  block__resource_list___page___id = 'block__resource_list___page___id',
+  block__resource_list___page___node_locale = 'block__resource_list___page___node_locale',
+  block__resource_list___page___title = 'block__resource_list___page___title',
+  block__resource_list___page___slug = 'block__resource_list___page___slug',
+  block__resource_list___page___spaceId = 'block__resource_list___page___spaceId',
+  block__resource_list___page___createdAt = 'block__resource_list___page___createdAt',
+  block__resource_list___page___updatedAt = 'block__resource_list___page___updatedAt',
+  block__resource_list___page___sys___type = 'block__resource_list___page___sys___type',
+  block__resource_list___page___sys___revision = 'block__resource_list___page___sys___revision',
+  block__resource_list___page___block__resource_list = 'block__resource_list___page___block__resource_list',
+  block__resource_list___page___block__resource_list___contentful_id = 'block__resource_list___page___block__resource_list___contentful_id',
+  block__resource_list___page___block__resource_list___id = 'block__resource_list___page___block__resource_list___id',
+  block__resource_list___page___block__resource_list___node_locale = 'block__resource_list___page___block__resource_list___node_locale',
+  block__resource_list___page___block__resource_list___title = 'block__resource_list___page___block__resource_list___title',
+  block__resource_list___page___block__resource_list___customHeadingLinkText = 'block__resource_list___page___block__resource_list___customHeadingLinkText',
+  block__resource_list___page___block__resource_list___page = 'block__resource_list___page___block__resource_list___page',
+  block__resource_list___page___block__resource_list___spaceId = 'block__resource_list___page___block__resource_list___spaceId',
+  block__resource_list___page___block__resource_list___createdAt = 'block__resource_list___page___block__resource_list___createdAt',
+  block__resource_list___page___block__resource_list___updatedAt = 'block__resource_list___page___block__resource_list___updatedAt',
+  block__resource_list___page___block__resource_list___children = 'block__resource_list___page___block__resource_list___children',
+  block__resource_list___page___seoTitle = 'block__resource_list___page___seoTitle',
+  block__resource_list___page___seoDescription = 'block__resource_list___page___seoDescription',
+  block__resource_list___page___parent___id = 'block__resource_list___page___parent___id',
+  block__resource_list___page___parent___children = 'block__resource_list___page___parent___children',
+  block__resource_list___page___children = 'block__resource_list___page___children',
+  block__resource_list___page___children___id = 'block__resource_list___page___children___id',
+  block__resource_list___page___children___children = 'block__resource_list___page___children___children',
+  block__resource_list___page___internal___content = 'block__resource_list___page___internal___content',
+  block__resource_list___page___internal___contentDigest = 'block__resource_list___page___internal___contentDigest',
+  block__resource_list___page___internal___description = 'block__resource_list___page___internal___description',
+  block__resource_list___page___internal___fieldOwners = 'block__resource_list___page___internal___fieldOwners',
+  block__resource_list___page___internal___ignoreType = 'block__resource_list___page___internal___ignoreType',
+  block__resource_list___page___internal___mediaType = 'block__resource_list___page___internal___mediaType',
+  block__resource_list___page___internal___owner = 'block__resource_list___page___internal___owner',
+  block__resource_list___page___internal___type = 'block__resource_list___page___internal___type',
   block__resource_list___spaceId = 'block__resource_list___spaceId',
   block__resource_list___createdAt = 'block__resource_list___createdAt',
   block__resource_list___updatedAt = 'block__resource_list___updatedAt',
@@ -5415,14 +5692,6 @@ export enum ContentfulPageFieldsEnum {
   block__resource_list___internal___mediaType = 'block__resource_list___internal___mediaType',
   block__resource_list___internal___owner = 'block__resource_list___internal___owner',
   block__resource_list___internal___type = 'block__resource_list___internal___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
   seoTitle = 'seoTitle',
   seoDescription = 'seoDescription',
   parent___id = 'parent___id',
@@ -5518,11 +5787,11 @@ export type ContentfulPageFilterInput = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
-  block__resource_list?: Maybe<ContentfulBlockResourceListFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulPageSysFilterInput>;
+  block__resource_list?: Maybe<ContentfulBlockResourceListFilterListInput>;
   seoTitle?: Maybe<StringQueryOperatorInput>;
   seoDescription?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -5697,21 +5966,22 @@ export enum ContentfulResourceFieldsEnum {
   block__resource_list___headingLink___node_locale = 'block__resource_list___headingLink___node_locale',
   block__resource_list___headingLink___title = 'block__resource_list___headingLink___title',
   block__resource_list___headingLink___slug = 'block__resource_list___headingLink___slug',
+  block__resource_list___headingLink___spaceId = 'block__resource_list___headingLink___spaceId',
+  block__resource_list___headingLink___createdAt = 'block__resource_list___headingLink___createdAt',
+  block__resource_list___headingLink___updatedAt = 'block__resource_list___headingLink___updatedAt',
+  block__resource_list___headingLink___sys___type = 'block__resource_list___headingLink___sys___type',
+  block__resource_list___headingLink___sys___revision = 'block__resource_list___headingLink___sys___revision',
   block__resource_list___headingLink___block__resource_list = 'block__resource_list___headingLink___block__resource_list',
   block__resource_list___headingLink___block__resource_list___contentful_id = 'block__resource_list___headingLink___block__resource_list___contentful_id',
   block__resource_list___headingLink___block__resource_list___id = 'block__resource_list___headingLink___block__resource_list___id',
   block__resource_list___headingLink___block__resource_list___node_locale = 'block__resource_list___headingLink___block__resource_list___node_locale',
   block__resource_list___headingLink___block__resource_list___title = 'block__resource_list___headingLink___block__resource_list___title',
   block__resource_list___headingLink___block__resource_list___customHeadingLinkText = 'block__resource_list___headingLink___block__resource_list___customHeadingLinkText',
+  block__resource_list___headingLink___block__resource_list___page = 'block__resource_list___headingLink___block__resource_list___page',
   block__resource_list___headingLink___block__resource_list___spaceId = 'block__resource_list___headingLink___block__resource_list___spaceId',
   block__resource_list___headingLink___block__resource_list___createdAt = 'block__resource_list___headingLink___block__resource_list___createdAt',
   block__resource_list___headingLink___block__resource_list___updatedAt = 'block__resource_list___headingLink___block__resource_list___updatedAt',
   block__resource_list___headingLink___block__resource_list___children = 'block__resource_list___headingLink___block__resource_list___children',
-  block__resource_list___headingLink___spaceId = 'block__resource_list___headingLink___spaceId',
-  block__resource_list___headingLink___createdAt = 'block__resource_list___headingLink___createdAt',
-  block__resource_list___headingLink___updatedAt = 'block__resource_list___headingLink___updatedAt',
-  block__resource_list___headingLink___sys___type = 'block__resource_list___headingLink___sys___type',
-  block__resource_list___headingLink___sys___revision = 'block__resource_list___headingLink___sys___revision',
   block__resource_list___headingLink___seoTitle = 'block__resource_list___headingLink___seoTitle',
   block__resource_list___headingLink___seoDescription = 'block__resource_list___headingLink___seoDescription',
   block__resource_list___headingLink___parent___id = 'block__resource_list___headingLink___parent___id',
@@ -5727,6 +5997,43 @@ export enum ContentfulResourceFieldsEnum {
   block__resource_list___headingLink___internal___mediaType = 'block__resource_list___headingLink___internal___mediaType',
   block__resource_list___headingLink___internal___owner = 'block__resource_list___headingLink___internal___owner',
   block__resource_list___headingLink___internal___type = 'block__resource_list___headingLink___internal___type',
+  block__resource_list___page = 'block__resource_list___page',
+  block__resource_list___page___contentful_id = 'block__resource_list___page___contentful_id',
+  block__resource_list___page___id = 'block__resource_list___page___id',
+  block__resource_list___page___node_locale = 'block__resource_list___page___node_locale',
+  block__resource_list___page___title = 'block__resource_list___page___title',
+  block__resource_list___page___slug = 'block__resource_list___page___slug',
+  block__resource_list___page___spaceId = 'block__resource_list___page___spaceId',
+  block__resource_list___page___createdAt = 'block__resource_list___page___createdAt',
+  block__resource_list___page___updatedAt = 'block__resource_list___page___updatedAt',
+  block__resource_list___page___sys___type = 'block__resource_list___page___sys___type',
+  block__resource_list___page___sys___revision = 'block__resource_list___page___sys___revision',
+  block__resource_list___page___block__resource_list = 'block__resource_list___page___block__resource_list',
+  block__resource_list___page___block__resource_list___contentful_id = 'block__resource_list___page___block__resource_list___contentful_id',
+  block__resource_list___page___block__resource_list___id = 'block__resource_list___page___block__resource_list___id',
+  block__resource_list___page___block__resource_list___node_locale = 'block__resource_list___page___block__resource_list___node_locale',
+  block__resource_list___page___block__resource_list___title = 'block__resource_list___page___block__resource_list___title',
+  block__resource_list___page___block__resource_list___customHeadingLinkText = 'block__resource_list___page___block__resource_list___customHeadingLinkText',
+  block__resource_list___page___block__resource_list___page = 'block__resource_list___page___block__resource_list___page',
+  block__resource_list___page___block__resource_list___spaceId = 'block__resource_list___page___block__resource_list___spaceId',
+  block__resource_list___page___block__resource_list___createdAt = 'block__resource_list___page___block__resource_list___createdAt',
+  block__resource_list___page___block__resource_list___updatedAt = 'block__resource_list___page___block__resource_list___updatedAt',
+  block__resource_list___page___block__resource_list___children = 'block__resource_list___page___block__resource_list___children',
+  block__resource_list___page___seoTitle = 'block__resource_list___page___seoTitle',
+  block__resource_list___page___seoDescription = 'block__resource_list___page___seoDescription',
+  block__resource_list___page___parent___id = 'block__resource_list___page___parent___id',
+  block__resource_list___page___parent___children = 'block__resource_list___page___parent___children',
+  block__resource_list___page___children = 'block__resource_list___page___children',
+  block__resource_list___page___children___id = 'block__resource_list___page___children___id',
+  block__resource_list___page___children___children = 'block__resource_list___page___children___children',
+  block__resource_list___page___internal___content = 'block__resource_list___page___internal___content',
+  block__resource_list___page___internal___contentDigest = 'block__resource_list___page___internal___contentDigest',
+  block__resource_list___page___internal___description = 'block__resource_list___page___internal___description',
+  block__resource_list___page___internal___fieldOwners = 'block__resource_list___page___internal___fieldOwners',
+  block__resource_list___page___internal___ignoreType = 'block__resource_list___page___internal___ignoreType',
+  block__resource_list___page___internal___mediaType = 'block__resource_list___page___internal___mediaType',
+  block__resource_list___page___internal___owner = 'block__resource_list___page___internal___owner',
+  block__resource_list___page___internal___type = 'block__resource_list___page___internal___type',
   block__resource_list___spaceId = 'block__resource_list___spaceId',
   block__resource_list___createdAt = 'block__resource_list___createdAt',
   block__resource_list___updatedAt = 'block__resource_list___updatedAt',
@@ -7587,11 +7894,11 @@ export type QueryContentfulBlogPostArgs = {
   published?: Maybe<DateQueryOperatorInput>;
   content?: Maybe<ContentfulBlogPostContentFilterInput>;
   author?: Maybe<ContentfulAuthorFilterInput>;
-  excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlogPostSysFilterInput>;
+  excerpt?: Maybe<ContentfulBlogPostExcerptTextNodeFilterInput>;
   featuredImage?: Maybe<ContentfulAssetFilterInput>;
   seoTitle?: Maybe<StringQueryOperatorInput>;
   seoDescription?: Maybe<StringQueryOperatorInput>;
@@ -7617,12 +7924,12 @@ export type QueryContentfulAuthorArgs = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
-  biography?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
+  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulAuthorSysFilterInput>;
-  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
+  biography?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   childrenContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterListInput>;
   childContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -7645,11 +7952,11 @@ export type QueryContentfulPageArgs = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
-  block__resource_list?: Maybe<ContentfulBlockResourceListFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulPageSysFilterInput>;
+  block__resource_list?: Maybe<ContentfulBlockResourceListFilterListInput>;
   seoTitle?: Maybe<StringQueryOperatorInput>;
   seoDescription?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -7848,6 +8155,7 @@ export type QueryContentfulBlockResourceListArgs = {
   title?: Maybe<StringQueryOperatorInput>;
   customHeadingLinkText?: Maybe<StringQueryOperatorInput>;
   headingLink?: Maybe<ContentfulPageFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
@@ -8427,10 +8735,12 @@ export type SitePageConnectionGroupArgs = {
 export type SitePageContext = {
   __typename?: 'SitePageContext';
   slug?: Maybe<Scalars['String']>;
+  category?: Maybe<Scalars['String']>;
 };
 
 export type SitePageContextFilterInput = {
   slug?: Maybe<StringQueryOperatorInput>;
+  category?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -8534,6 +8844,7 @@ export enum SitePageFieldsEnum {
   internal___type = 'internal___type',
   isCreatedByStatefulCreatePages = 'isCreatedByStatefulCreatePages',
   context___slug = 'context___slug',
+  context___category = 'context___category',
   pluginCreator___id = 'pluginCreator___id',
   pluginCreator___parent___id = 'pluginCreator___parent___id',
   pluginCreator___parent___parent___id = 'pluginCreator___parent___parent___id',
@@ -10576,6 +10887,29 @@ export type ResourceListFragmentFragment = (
   )>>> }
 );
 
+export type ContentfulBlocksFragmentFragment = (
+  { __typename?: 'ContentfulPage' }
+  & { blocks?: Maybe<Array<Maybe<(
+    { __typename?: 'ContentfulBlockCallToAction' }
+    & CallToActionFragmentFragment
+  ) | (
+    { __typename?: 'ContentfulBlockContent' }
+    & ContentFragmentFragment
+  ) | (
+    { __typename?: 'ContentfulBlockContentList' }
+    & ContentListFragmentFragment
+  ) | (
+    { __typename?: 'ContentfulBlockImageBand' }
+    & ImageBandFragmentFragment
+  ) | (
+    { __typename?: 'ContentfulBlockJumbotron' }
+    & JumbotronFragmentFragment
+  ) | (
+    { __typename?: 'ContentfulBlockResourceList' }
+    & ResourceListFragmentFragment
+  )>>> }
+);
+
 export type FeaturedPostFragmentFragment = (
   { __typename?: 'ContentfulBlogPost' }
   & Pick<ContentfulBlogPost, 'title' | 'slug'>
@@ -10648,69 +10982,32 @@ export type AllContentfulAssetsQuery = (
   ) }
 );
 
-export type BlogPageQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type BlogPageQuery = (
-  { __typename?: 'Query' }
-  & { contentfulMicroContent?: Maybe<(
-    { __typename?: 'ContentfulMicroContent' }
-    & Pick<ContentfulMicroContent, 'value'>
-  )>, allContentfulBlogPost: (
-    { __typename?: 'ContentfulBlogPostConnection' }
-    & { nodes: Array<(
-      { __typename?: 'ContentfulBlogPost' }
-      & Pick<ContentfulBlogPost, 'id' | 'featured'>
-      & PostFragmentFragment
-      & FeaturedPostFragmentFragment
-    )> }
-  ) }
-);
-
-export type NewsPageQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type NewsPageQuery = (
-  { __typename?: 'Query' }
-  & { contentfulMicroContent?: Maybe<(
-    { __typename?: 'ContentfulMicroContent' }
-    & Pick<ContentfulMicroContent, 'value'>
-  )>, allContentfulBlogPost: (
-    { __typename?: 'ContentfulBlogPostConnection' }
-    & { nodes: Array<(
-      { __typename?: 'ContentfulBlogPost' }
-      & Pick<ContentfulBlogPost, 'id' | 'featured'>
-      & PostFragmentFragment
-      & FeaturedPostFragmentFragment
-    )> }
-  ) }
-);
-
 export type BlogTemplateQueryQueryVariables = Exact<{
   slug: Scalars['String'];
+  category: Scalars['String'];
 }>;
 
 
 export type BlogTemplateQueryQuery = (
   { __typename?: 'Query' }
-  & { blog?: Maybe<(
-    { __typename?: 'ContentfulBlogPost' }
-    & Pick<ContentfulBlogPost, 'id' | 'title' | 'published' | 'seoTitle' | 'seoDescription'>
-    & { author?: Maybe<(
-      { __typename?: 'ContentfulAuthor' }
-      & Pick<ContentfulAuthor, 'name'>
-      & { biography?: Maybe<(
-        { __typename?: 'contentfulAuthorBiographyTextNode' }
-        & Pick<ContentfulAuthorBiographyTextNode, 'biography'>
-      )> }
-    )>, featuredImage?: Maybe<(
-      { __typename?: 'ContentfulAsset' }
-      & Pick<ContentfulAsset, 'gatsbyImageData'>
-    )>, content?: Maybe<(
-      { __typename?: 'ContentfulBlogPostContent' }
-      & Pick<ContentfulBlogPostContent, 'raw'>
+  & { contentfulPage?: Maybe<(
+    { __typename?: 'ContentfulPage' }
+    & PageFragmentFragment
+    & ContentfulBlocksFragmentFragment
+  )>, allContentfulBlogPost: (
+    { __typename?: 'ContentfulBlogPostConnection' }
+    & { nodes: Array<(
+      { __typename?: 'ContentfulBlogPost' }
+      & Pick<ContentfulBlogPost, 'id' | 'featured'>
+      & PostFragmentFragment
+      & FeaturedPostFragmentFragment
     )> }
-  )> }
+  ) }
+);
+
+export type PageFragmentFragment = (
+  { __typename?: 'ContentfulPage' }
+  & Pick<ContentfulPage, 'title' | 'seoTitle' | 'seoDescription'>
 );
 
 export type PageTemplateQueryQueryVariables = Exact<{
@@ -10722,23 +11019,8 @@ export type PageTemplateQueryQuery = (
   { __typename?: 'Query' }
   & { page?: Maybe<(
     { __typename?: 'ContentfulPage' }
-    & Pick<ContentfulPage, 'title' | 'seoTitle' | 'seoDescription'>
-    & { blocks?: Maybe<Array<Maybe<(
-      { __typename?: 'ContentfulBlockCallToAction' }
-      & CallToActionFragmentFragment
-    ) | (
-      { __typename?: 'ContentfulBlockContent' }
-      & ContentFragmentFragment
-    ) | (
-      { __typename?: 'ContentfulBlockContentList' }
-      & ContentListFragmentFragment
-    ) | (
-      { __typename?: 'ContentfulBlockImageBand' }
-      & ImageBandFragmentFragment
-    ) | (
-      { __typename?: 'ContentfulBlockJumbotron' }
-      & JumbotronFragmentFragment
-    )>>> }
+    & PageFragmentFragment
+    & ContentfulBlocksFragmentFragment
   )> }
 );
 

@@ -1,164 +1,82 @@
 import React from "react";
-import { Container } from "@/components/Container";
-import { graphql, Link } from "gatsby";
-import {
-  RenderRichTextData,
-  ContentfulRichTextGatsbyReference,
-  renderRichText,
-} from "gatsby-source-contentful/rich-text";
-import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
+import { graphql, PageProps } from "gatsby";
 import { Layout } from "@/components/NewLayout";
-import { Heading } from "@/components/Heading";
-import { Icon } from "@/components/Icon";
+import { Container } from "@/components/Container";
 import { PageTitle } from "@/components/PageTitle";
-import { Caption } from "@/components/Caption";
-import { Text } from "@/components/Text";
-import { Divider } from "@/components/Divider";
-import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
-import { useContentfulImage } from "@/hooks/useContentfulImage";
-// @ts-expect-error TODO: will move this to typescript and contentful
-import News from "../components/News";
+import { FeaturedPost } from "@/components/FeaturedPost";
+import { PostList } from "@/components/PostList";
+import { ContentfulBlocks } from "@/components/ContentfulBlocks";
+import { BlogTemplateQueryQuery } from "@/graphql/graphql-types";
 
-import styles from "./blogTemplate.module.css";
-
-export const query = graphql`
-  query BlogTemplateQuery($slug: String!) {
-    blog: contentfulBlogPost(slug: { eq: $slug }) {
-      id
-      title
-      author {
-        name
-        biography {
-          biography
-        }
-      }
-      published(formatString: "MMM D, YYYY")
-      featuredImage {
-        gatsbyImageData(width: 900, placeholder: BLURRED, formats: [AUTO, WEBP])
-      }
-      content {
-        raw
-      }
-      seoTitle
-      seoDescription
-    }
-  }
-`;
-
-interface BlogPostProps {
-  data: {
-    blog: {
-      id: string;
-      title: string;
-      author: {
-        name: string;
-        biography: {
-          biography: string;
-        };
-      };
-      published: string;
-      content: RenderRichTextData<ContentfulRichTextGatsbyReference>;
-      featuredImage: IGatsbyImageData;
-      seoTitle?: string;
-      seoDescription?: string;
-    };
-  };
+interface BlogProps extends PageProps {
+  readonly data: BlogTemplateQueryQuery;
 }
 
-// TODO: Move "More News " to a component
-function BlogPost({ data: { blog } }: BlogPostProps) {
-  const options = {
-    renderMark: {
-      // TODO: Make a BOLD text component. Maybe an EMPHASIS type component
-      // @ts-expect-error TODO: Figure out how to type this
-      [MARKS.BOLD]: (text) => <strong>{text}</strong>,
-    },
-    renderNode: {
-      // @ts-expect-error TODO: Figure out how to type this
-      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-      [BLOCKS.HR]: () => <Divider />,
-      // @ts-expect-error TODO: Figure out how to type this
-      [BLOCKS.HEADING_2]: (node, children) => <Heading>{children}</Heading>,
-      // @ts-expect-error TODO: Figure out how to type this
-      [BLOCKS.HEADING_3]: (node, children) => (
-        <Heading as="h3">{children}</Heading>
-      ),
-      // @ts-expect-error TODO: Figure out how to type this
-      [BLOCKS.EMBEDDED_ASSET]: ({ data }) => {
-        const image = useContentfulImage(data.target.sys.id);
-        const contentfulImage = getImage(image?.gatsbyImageData);
-        return contentfulImage ? (
-          <GatsbyImage
-            image={contentfulImage}
-            alt={image?.description ?? ""}
-            title={image?.title ?? ""}
-          />
-        ) : (
-          <div>NO IMAGE AVAILABLE</div>
-        );
-      },
-      // @ts-expect-error TODO: Figure out how to type this
-      [BLOCKS.QUOTE]: (node, children) => (
-        <blockquote className={styles.blockQuote}>{children}</blockquote>
-      ),
-      // @ts-expect-error TODO: Figure out how to type this
-      [INLINES.HYPERLINK]: ({ data }, children) => (
-        <a href={data.uri} className={styles.link}>
-          {children}
-        </a>
-      ),
-    },
-  };
-
-  const image = getImage(blog.featuredImage);
+function Blog({ data }: BlogProps) {
+  const page = data.contentfulPage;
+  const posts = [...data.allContentfulBlogPost?.nodes];
+  const featuredPostIndex = posts.findIndex((post) => post.featured);
+  const featuredPost = posts[featuredPostIndex];
 
   return (
     <Layout
-      title={blog.seoTitle || blog.title}
-      description={blog?.seoDescription}
+      title={page?.seoTitle || page?.title}
+      description={page?.seoDescription}
     >
-      <article>
-        <Container size="small">
-          <PageTitle title={blog.title} />
-          <time className={styles.date}>
-            <Caption title={blog.published} />{" "}
-            <div className="s9-widget-wrapper" />
-          </time>
-          {image && (
-            <div className={styles.image}>
-              <GatsbyImage image={image} alt={blog.title} />
-            </div>
-          )}
-          <div className={styles.post}>
-            {blog.content && renderRichText(blog.content, options)}
-            {blog.author && (
-              <>
-                <address>
-                  <Caption title={`By: ${blog.author.name}`} />
-                </address>
-                {blog?.author?.biography?.biography && (
-                  <div>{blog?.author?.biography?.biography}</div>
-                )}
-              </>
-            )}
-          </div>
+      {page?.title && (
+        <Container>
+          <PageTitle title={page?.title} />
         </Container>
-
-        <div className={styles.news}>
-          <Container>
-            <div className={styles.newsTitle}>
-              <Heading as="h3">More News</Heading>
-              <Link to="/news" className={styles.newsLink}>
-                More News
-                <Icon icon="ArrowRight" />
-              </Link>
-            </div>
-            <News />
-          </Container>
-        </div>
-      </article>
+      )}
+      <FeaturedPost
+        data={featuredPost}
+        caption="Featured Article"
+        linkText="Read Article"
+        slugPrefix="news"
+      />
+      <PostList
+        posts={posts.filter((_, index) => index !== featuredPostIndex)}
+      />
+      {page?.blocks && <ContentfulBlocks blocks={page?.blocks} />}
     </Layout>
   );
 }
 
-export default BlogPost;
+// query NewsPage {
+//   contentfulMicroContent(key: { eq: "News Page Title" }) {
+//     value
+//   }
+//   allContentfulBlogPost(
+//     sort: { fields: published, order: DESC }
+//     filter: { category: { eq: "News" } }
+//   ) {
+//     nodes {
+//       id
+//       featured
+//       ...PostFragment
+//       ...FeaturedPostFragment
+//     }
+//   }
+// }
+
+export const query = graphql`
+  query BlogTemplateQuery($slug: String!, $category: String!) {
+    contentfulPage(slug: { eq: $slug }) {
+      ...PageFragment
+      ...ContentfulBlocksFragment
+    }
+    allContentfulBlogPost(
+      sort: { fields: published, order: DESC }
+      filter: { category: { eq: $category } }
+    ) {
+      nodes {
+        id
+        featured
+        ...PostFragment
+        ...FeaturedPostFragment
+      }
+    }
+  }
+`;
+
+export default Blog;
