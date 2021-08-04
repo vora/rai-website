@@ -17,10 +17,11 @@ export function Swatch({ color }) {
     paddingBottom: "var(--space--base)",
   };
   const block = {
-    height: "var(--space--xxxlarge)",
+    height: 0,
+    paddingTop: "100%",
     borderRadius: "2px",
     background: `var(${color.key})`,
-    marginBottom: "var(--space--xsmall)",
+    marginBottom: "var(--space--small)",
     borderBottom: "1px solid var(--color--ghost)",
   };
   return (
@@ -52,6 +53,8 @@ export function Colors() {
 # Colors
 
 The Responsible AI website uses CSS Custom Properties to define all of its colors. This allows for a much better developer experience as we do not need to guess colors, or remember random hex codes.
+
+## Creating Colors
 
 All colors should be created using 2 custom properties. One to define the colors `RGB` value, and one to define the color.
 

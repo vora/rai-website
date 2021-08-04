@@ -57,6 +57,16 @@ import { Icon } from "@/components/Icon";
   </Story>
 </Canvas>
 
+## Sizes
+
+The `Icon` should be sized using the `size` prop and not through CSS. This allows for a more consistent experience throughout the website.
+
+<Canvas>
+  <Story name="Sizes" args={{ icon: "Command", size: "large" }}>
+    {(args) => <Icon {...args} />}
+  </Story>
+</Canvas>
+
 ## All Icons
 
 <Icons />
