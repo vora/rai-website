@@ -8,7 +8,14 @@ export function ListAllResourceListBlocks() {
     query AllResourceListBlocks {
       allContentfulBlockResourceList {
         nodes {
+          title
           ...ResourceListFragment
+          page {
+            title
+          }
+          blog_post {
+            title
+          }
         }
       }
     }
@@ -28,7 +35,7 @@ export function ListAllResourceListBlocks() {
             key={block.id}
             title={block.title}
             data={block}
-            pages={block.page}
+            pages={[...block.page, ...block.blog_post]}
           >
             <ResourceList data={block} />
           </ContentfulDemo>
