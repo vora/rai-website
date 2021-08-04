@@ -11884,6 +11884,14 @@ export type AllResourceListBlocksQuery = (
     { __typename?: 'ContentfulBlockResourceListConnection' }
     & { nodes: Array<(
       { __typename?: 'ContentfulBlockResourceList' }
+      & Pick<ContentfulBlockResourceList, 'title'>
+      & { page?: Maybe<Array<Maybe<(
+        { __typename?: 'ContentfulPage' }
+        & Pick<ContentfulPage, 'title'>
+      )>>>, blog_post?: Maybe<Array<Maybe<(
+        { __typename?: 'ContentfulBlogPost' }
+        & Pick<ContentfulBlogPost, 'title'>
+      )>>> }
       & ResourceListFragmentFragment
     )> }
   ) }
