@@ -32,7 +32,7 @@ function Blog({ data }: BlogProps) {
         data={featuredPost}
         caption="Featured Article"
         linkText="Read Article"
-        slugPrefix="news"
+        slugPrefix="blog"
       />
       <PostList
         posts={posts.filter((_, index) => index !== featuredPostIndex)}
@@ -41,23 +41,6 @@ function Blog({ data }: BlogProps) {
     </Layout>
   );
 }
-
-// query NewsPage {
-//   contentfulMicroContent(key: { eq: "News Page Title" }) {
-//     value
-//   }
-//   allContentfulBlogPost(
-//     sort: { fields: published, order: DESC }
-//     filter: { category: { eq: "News" } }
-//   ) {
-//     nodes {
-//       id
-//       featured
-//       ...PostFragment
-//       ...FeaturedPostFragment
-//     }
-//   }
-// }
 
 export const query = graphql`
   query BlogTemplateQuery($slug: String!, $category: String!) {

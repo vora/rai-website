@@ -9,6 +9,7 @@ import { PostMeta } from "@/components/PostMeta";
 import { Image } from "@/components/Image";
 import { PostAuthor } from "@/components/PostAuthor";
 import { PostContent, PostContentContext } from "@/components/PostContent";
+import { ResourceList } from "@/blocks/ResourceList";
 
 interface PostProps {
   data: PostQueryQuery;
@@ -33,6 +34,8 @@ function Post({ data }: PostProps) {
         )}
         {post?.author && <PostAuthor data={post?.author} />}
       </Container>
+
+      {post?.resources && <ResourceList data={post?.resources} />}
     </Layout>
   );
 }
@@ -50,6 +53,9 @@ export const query = graphql`
       }
       author {
         ...PostAuthorFragment
+      }
+      resources {
+        ...ResourceListFragment
       }
       ...PostContentFragment
     }
