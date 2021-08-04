@@ -6,6 +6,7 @@ import {
   ContentListFragmentFragment,
   ImageBandFragmentFragment,
   JumbotronFragmentFragment,
+  ResourceListFragmentFragment,
 } from "@/graphql/graphql-types";
 import { CallToAction } from "@/blocks/CallToAction";
 import { Content } from "@/blocks/Content";
@@ -13,10 +14,13 @@ import { Container } from "@/components/Container";
 import { ContentList } from "@/blocks/ContentList";
 import { ImageBand } from "@/blocks/ImageBand";
 import { Jumbotron } from "@/blocks/Jumbotron";
+import { ResourceList } from "@/blocks/ResourceList";
 
+import { graphql } from "gatsby";
 import styles from "./ContentfulBlocks.module.css";
 
 type BlockType = Maybe<
+  | ResourceListFragmentFragment
   | CallToActionFragmentFragment
   | ContentFragmentFragment
   | ContentListFragmentFragment
@@ -25,7 +29,7 @@ type BlockType = Maybe<
 >;
 
 interface BlockProps {
-  blocks: Maybe<Array<Maybe<BlockType>>>;
+  readonly blocks: Maybe<Array<Maybe<BlockType>>>;
 }
 
 export function ContentfulBlocks({ blocks }: BlockProps) {
@@ -37,6 +41,12 @@ export function ContentfulBlocks({ blocks }: BlockProps) {
     <div className={styles.blocks}>
       {blocks.map((block) => {
         switch (block?.__typename) {
+          case "ContentfulBlockResourceList":
+            return (
+              <div className={styles.noSpace}>
+                <ResourceList data={block} key={block.id} />
+              </div>
+            );
           case "ContentfulBlockCallToAction":
             return <CallToAction data={block} key={block.id} />;
           case "ContentfulBlockContent":
@@ -80,3 +90,28 @@ function UnknownBlock({ block }: UnknownBlockProps) {
     </Container>
   );
 }
+
+export const ContentfulBlocksFragment = graphql`
+  fragment ContentfulBlocksFragment on ContentfulPage {
+    blocks {
+      ... on ContentfulBlockResourceList {
+        ...ResourceListFragment
+      }
+      ... on ContentfulBlockCallToAction {
+        ...CallToActionFragment
+      }
+      ... on ContentfulBlockContent {
+        ...ContentFragment
+      }
+      ... on ContentfulBlockContentList {
+        ...ContentListFragment
+      }
+      ... on ContentfulBlockImageBand {
+        ...ImageBandFragment
+      }
+      ... on ContentfulBlockJumbotron {
+        ...JumbotronFragment
+      }
+    }
+  }
+`;
