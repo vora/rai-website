@@ -20,6 +20,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: var(--space--xlarge);
   }
 }
 
@@ -56,6 +57,9 @@
 .post {
   padding: var(--space--base) 0;
   border-top: 1px solid var(--color--gravy);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (min-width: 1200px) {
