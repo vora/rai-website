@@ -6,7 +6,7 @@
   margin-top: 0;
 }
 
-.blocks > *:last-of-type {
+.blocks > *:last-of-type:not(.noSpace) {
   margin-bottom: var(--space--xxxlarge);
 }
 

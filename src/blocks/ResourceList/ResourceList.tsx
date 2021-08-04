@@ -24,7 +24,7 @@ export function ResourceList({ data }: ResourceListProps) {
         {data.title && <Heading>{data.title}</Heading>}
         {data.headingLink && (
           <div className={styles.headingLink}>
-            <Link url={data.headingLink.slug ?? ""} icon="ArrowRight">
+            <Link url={`/${data.headingLink.slug}` ?? ""} icon="ArrowRight">
               {data.customHeadingLinkText ?? data.headingLink.title}
             </Link>
           </div>
