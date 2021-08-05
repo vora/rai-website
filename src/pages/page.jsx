@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading } from "@/components/Heading";
 import { StaticImage } from "gatsby-plugin-image";
-import Layout from "../components/Layout";
+import { Layout } from "../components/NewLayout";
 import {
   Headline2,
   MediumBody,

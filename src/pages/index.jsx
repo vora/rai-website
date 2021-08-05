@@ -3,7 +3,7 @@ import { navigate, withPrefix } from "gatsby";
 import { Heading } from "@/components/Heading";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "@/components/Link";
-import Layout from "../components/Layout";
+import { Layout } from "../components/NewLayout";
 import {
   MediumBody,
   Heading1,

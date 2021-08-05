@@ -11,6 +11,7 @@ interface LayoutProps {
   readonly title?: string;
   readonly description?: string;
 }
+
 export function Layout({
   title,
   description,
