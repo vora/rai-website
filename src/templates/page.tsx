@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Layout } from "@/components/NewLayout";
+import { Layout } from "@/components/Layout";
 import { EmptyPage } from "@/components/EmptyPage";
 import { Text } from "@/components/Text";
 import { Icon } from "@/components/Icon";

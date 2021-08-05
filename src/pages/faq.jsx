@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import { withPrefix } from "gatsby";
 import { Heading } from "@/components/Heading";
-import Layout from "../components/Layout";
+import { Layout } from "../components/Layout";
 
 import {
   MediumBody,

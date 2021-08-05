@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 // eslint-disable-next-line import/no-unresolved
-import Layout from "components/Layout";
+import { Layout } from "components/Layout";
 import { Heading } from "@/components/Heading";
 import Modal from "react-modal";
 import { CallToAction } from "@/blocks/CallToAction";
