@@ -11962,6 +11962,17 @@ export type ImageFragmentFragment = (
   & Pick<ContentfulAsset, 'contentful_id' | 'title' | 'description' | 'gatsbyImageData'>
 );
 
+export type LayoutQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type LayoutQueryQuery = (
+  { __typename?: 'Query' }
+  & { contentfulMicroContent?: Maybe<(
+    { __typename?: 'ContentfulMicroContent' }
+    & Pick<ContentfulMicroContent, 'value'>
+  )> }
+);
+
 export type PostFragmentFragment = (
   { __typename?: 'ContentfulBlogPost' }
   & Pick<ContentfulBlogPost, 'id' | 'title' | 'slug' | 'published'>

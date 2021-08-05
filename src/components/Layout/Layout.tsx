@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import { Helmet } from "react-helmet";
-import { withPrefix } from "gatsby";
+import { graphql, withPrefix, useStaticQuery } from "gatsby";
 
 import { WebsiteBanner } from "@/components/WebsiteBanner";
 import { Navigation } from "@/components/Navigation";
@@ -17,6 +17,14 @@ export function Layout({
   description,
   children,
 }: PropsWithChildren<LayoutProps>) {
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      contentfulMicroContent(key: { eq: "Website Description" }) {
+        value
+      }
+    }
+  `);
+
   return (
     <>
       <Helmet>
@@ -24,10 +32,7 @@ export function Layout({
         <title>RAI | {title || "Responsible AI"}</title>
         <meta
           name="description"
-          content={
-            description ||
-            "The Responsbile Artificial Intelligence Institute (RAI) is the premier organization seeking to bring repsonsibility to the exploding field of AI."
-          }
+          content={description ?? data?.contentfulMicroContent?.value}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script
