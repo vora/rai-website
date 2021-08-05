@@ -2,7 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { Heading } from "@/components/Heading";
-import { Layout } from "../components/NewLayout";
+import { Layout } from "../components/Layout";
 import { Row, Jumbotron, JumboText } from "../components/Blocks";
 import StyledLink from "../components/StyledLink";
 import News from "../components/News";

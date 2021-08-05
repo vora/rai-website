@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Heading } from "@/components/Heading";
 import { StaticImage } from "gatsby-plugin-image";
-import { Layout } from "../components/NewLayout";
+import { Layout } from "../components/Layout";
 import {
   Headline2,
   LargeBody,
