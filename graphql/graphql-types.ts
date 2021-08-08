@@ -384,12 +384,12 @@ export type ContentfulAuthor = ContentfulReference & ContentfulEntry & Node & {
   id: Scalars['ID'];
   node_locale: Scalars['String'];
   name?: Maybe<Scalars['String']>;
-  blog_post?: Maybe<Array<Maybe<ContentfulBlogPost>>>;
+  biography?: Maybe<ContentfulAuthorBiographyTextNode>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulAuthorSys>;
-  biography?: Maybe<ContentfulAuthorBiographyTextNode>;
+  blog_post?: Maybe<Array<Maybe<ContentfulBlogPost>>>;
   /** Returns all children nodes filtered by type contentfulAuthorBiographyTextNode */
   childrenContentfulAuthorBiographyTextNode?: Maybe<Array<Maybe<ContentfulAuthorBiographyTextNode>>>;
   /** Returns the first child node of type contentfulAuthorBiographyTextNode or null if there are no children of given type on this node */
@@ -449,6 +449,54 @@ export enum ContentfulAuthorFieldsEnum {
   id = 'id',
   node_locale = 'node_locale',
   name = 'name',
+  biography___id = 'biography___id',
+  biography___parent___id = 'biography___parent___id',
+  biography___parent___parent___id = 'biography___parent___parent___id',
+  biography___parent___parent___children = 'biography___parent___parent___children',
+  biography___parent___children = 'biography___parent___children',
+  biography___parent___children___id = 'biography___parent___children___id',
+  biography___parent___children___children = 'biography___parent___children___children',
+  biography___parent___internal___content = 'biography___parent___internal___content',
+  biography___parent___internal___contentDigest = 'biography___parent___internal___contentDigest',
+  biography___parent___internal___description = 'biography___parent___internal___description',
+  biography___parent___internal___fieldOwners = 'biography___parent___internal___fieldOwners',
+  biography___parent___internal___ignoreType = 'biography___parent___internal___ignoreType',
+  biography___parent___internal___mediaType = 'biography___parent___internal___mediaType',
+  biography___parent___internal___owner = 'biography___parent___internal___owner',
+  biography___parent___internal___type = 'biography___parent___internal___type',
+  biography___children = 'biography___children',
+  biography___children___id = 'biography___children___id',
+  biography___children___parent___id = 'biography___children___parent___id',
+  biography___children___parent___children = 'biography___children___parent___children',
+  biography___children___children = 'biography___children___children',
+  biography___children___children___id = 'biography___children___children___id',
+  biography___children___children___children = 'biography___children___children___children',
+  biography___children___internal___content = 'biography___children___internal___content',
+  biography___children___internal___contentDigest = 'biography___children___internal___contentDigest',
+  biography___children___internal___description = 'biography___children___internal___description',
+  biography___children___internal___fieldOwners = 'biography___children___internal___fieldOwners',
+  biography___children___internal___ignoreType = 'biography___children___internal___ignoreType',
+  biography___children___internal___mediaType = 'biography___children___internal___mediaType',
+  biography___children___internal___owner = 'biography___children___internal___owner',
+  biography___children___internal___type = 'biography___children___internal___type',
+  biography___internal___content = 'biography___internal___content',
+  biography___internal___contentDigest = 'biography___internal___contentDigest',
+  biography___internal___description = 'biography___internal___description',
+  biography___internal___fieldOwners = 'biography___internal___fieldOwners',
+  biography___internal___ignoreType = 'biography___internal___ignoreType',
+  biography___internal___mediaType = 'biography___internal___mediaType',
+  biography___internal___owner = 'biography___internal___owner',
+  biography___internal___type = 'biography___internal___type',
+  biography___biography = 'biography___biography',
+  biography___sys___type = 'biography___sys___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
   blog_post = 'blog_post',
   blog_post___contentful_id = 'blog_post___contentful_id',
   blog_post___id = 'blog_post___id',
@@ -474,6 +522,14 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___author___id = 'blog_post___author___id',
   blog_post___author___node_locale = 'blog_post___author___node_locale',
   blog_post___author___name = 'blog_post___author___name',
+  blog_post___author___biography___id = 'blog_post___author___biography___id',
+  blog_post___author___biography___children = 'blog_post___author___biography___children',
+  blog_post___author___biography___biography = 'blog_post___author___biography___biography',
+  blog_post___author___spaceId = 'blog_post___author___spaceId',
+  blog_post___author___createdAt = 'blog_post___author___createdAt',
+  blog_post___author___updatedAt = 'blog_post___author___updatedAt',
+  blog_post___author___sys___type = 'blog_post___author___sys___type',
+  blog_post___author___sys___revision = 'blog_post___author___sys___revision',
   blog_post___author___blog_post = 'blog_post___author___blog_post',
   blog_post___author___blog_post___contentful_id = 'blog_post___author___blog_post___contentful_id',
   blog_post___author___blog_post___id = 'blog_post___author___blog_post___id',
@@ -491,14 +547,6 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___author___blog_post___block__resource_list = 'blog_post___author___blog_post___block__resource_list',
   blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode',
   blog_post___author___blog_post___children = 'blog_post___author___blog_post___children',
-  blog_post___author___spaceId = 'blog_post___author___spaceId',
-  blog_post___author___createdAt = 'blog_post___author___createdAt',
-  blog_post___author___updatedAt = 'blog_post___author___updatedAt',
-  blog_post___author___sys___type = 'blog_post___author___sys___type',
-  blog_post___author___sys___revision = 'blog_post___author___sys___revision',
-  blog_post___author___biography___id = 'blog_post___author___biography___id',
-  blog_post___author___biography___children = 'blog_post___author___biography___children',
-  blog_post___author___biography___biography = 'blog_post___author___biography___biography',
   blog_post___author___childrenContentfulAuthorBiographyTextNode = 'blog_post___author___childrenContentfulAuthorBiographyTextNode',
   blog_post___author___childrenContentfulAuthorBiographyTextNode___id = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___id',
   blog_post___author___childrenContentfulAuthorBiographyTextNode___children = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___children',
@@ -793,54 +841,6 @@ export enum ContentfulAuthorFieldsEnum {
   blog_post___internal___mediaType = 'blog_post___internal___mediaType',
   blog_post___internal___owner = 'blog_post___internal___owner',
   blog_post___internal___type = 'blog_post___internal___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
-  biography___id = 'biography___id',
-  biography___parent___id = 'biography___parent___id',
-  biography___parent___parent___id = 'biography___parent___parent___id',
-  biography___parent___parent___children = 'biography___parent___parent___children',
-  biography___parent___children = 'biography___parent___children',
-  biography___parent___children___id = 'biography___parent___children___id',
-  biography___parent___children___children = 'biography___parent___children___children',
-  biography___parent___internal___content = 'biography___parent___internal___content',
-  biography___parent___internal___contentDigest = 'biography___parent___internal___contentDigest',
-  biography___parent___internal___description = 'biography___parent___internal___description',
-  biography___parent___internal___fieldOwners = 'biography___parent___internal___fieldOwners',
-  biography___parent___internal___ignoreType = 'biography___parent___internal___ignoreType',
-  biography___parent___internal___mediaType = 'biography___parent___internal___mediaType',
-  biography___parent___internal___owner = 'biography___parent___internal___owner',
-  biography___parent___internal___type = 'biography___parent___internal___type',
-  biography___children = 'biography___children',
-  biography___children___id = 'biography___children___id',
-  biography___children___parent___id = 'biography___children___parent___id',
-  biography___children___parent___children = 'biography___children___parent___children',
-  biography___children___children = 'biography___children___children',
-  biography___children___children___id = 'biography___children___children___id',
-  biography___children___children___children = 'biography___children___children___children',
-  biography___children___internal___content = 'biography___children___internal___content',
-  biography___children___internal___contentDigest = 'biography___children___internal___contentDigest',
-  biography___children___internal___description = 'biography___children___internal___description',
-  biography___children___internal___fieldOwners = 'biography___children___internal___fieldOwners',
-  biography___children___internal___ignoreType = 'biography___children___internal___ignoreType',
-  biography___children___internal___mediaType = 'biography___children___internal___mediaType',
-  biography___children___internal___owner = 'biography___children___internal___owner',
-  biography___children___internal___type = 'biography___children___internal___type',
-  biography___internal___content = 'biography___internal___content',
-  biography___internal___contentDigest = 'biography___internal___contentDigest',
-  biography___internal___description = 'biography___internal___description',
-  biography___internal___fieldOwners = 'biography___internal___fieldOwners',
-  biography___internal___ignoreType = 'biography___internal___ignoreType',
-  biography___internal___mediaType = 'biography___internal___mediaType',
-  biography___internal___owner = 'biography___internal___owner',
-  biography___internal___type = 'biography___internal___type',
-  biography___biography = 'biography___biography',
-  biography___sys___type = 'biography___sys___type',
   childrenContentfulAuthorBiographyTextNode = 'childrenContentfulAuthorBiographyTextNode',
   childrenContentfulAuthorBiographyTextNode___id = 'childrenContentfulAuthorBiographyTextNode___id',
   childrenContentfulAuthorBiographyTextNode___parent___id = 'childrenContentfulAuthorBiographyTextNode___parent___id',
@@ -1014,12 +1014,12 @@ export type ContentfulAuthorFilterInput = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
-  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
+  biography?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulAuthorSysFilterInput>;
-  biography?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
+  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
   childrenContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterListInput>;
   childContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -3999,6 +3999,14 @@ export enum ContentfulBlockResourceListFieldsEnum {
   blog_post___author___id = 'blog_post___author___id',
   blog_post___author___node_locale = 'blog_post___author___node_locale',
   blog_post___author___name = 'blog_post___author___name',
+  blog_post___author___biography___id = 'blog_post___author___biography___id',
+  blog_post___author___biography___children = 'blog_post___author___biography___children',
+  blog_post___author___biography___biography = 'blog_post___author___biography___biography',
+  blog_post___author___spaceId = 'blog_post___author___spaceId',
+  blog_post___author___createdAt = 'blog_post___author___createdAt',
+  blog_post___author___updatedAt = 'blog_post___author___updatedAt',
+  blog_post___author___sys___type = 'blog_post___author___sys___type',
+  blog_post___author___sys___revision = 'blog_post___author___sys___revision',
   blog_post___author___blog_post = 'blog_post___author___blog_post',
   blog_post___author___blog_post___contentful_id = 'blog_post___author___blog_post___contentful_id',
   blog_post___author___blog_post___id = 'blog_post___author___blog_post___id',
@@ -4016,14 +4024,6 @@ export enum ContentfulBlockResourceListFieldsEnum {
   blog_post___author___blog_post___block__resource_list = 'blog_post___author___blog_post___block__resource_list',
   blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode = 'blog_post___author___blog_post___childrenContentfulBlogPostExcerptTextNode',
   blog_post___author___blog_post___children = 'blog_post___author___blog_post___children',
-  blog_post___author___spaceId = 'blog_post___author___spaceId',
-  blog_post___author___createdAt = 'blog_post___author___createdAt',
-  blog_post___author___updatedAt = 'blog_post___author___updatedAt',
-  blog_post___author___sys___type = 'blog_post___author___sys___type',
-  blog_post___author___sys___revision = 'blog_post___author___sys___revision',
-  blog_post___author___biography___id = 'blog_post___author___biography___id',
-  blog_post___author___biography___children = 'blog_post___author___biography___children',
-  blog_post___author___biography___biography = 'blog_post___author___biography___biography',
   blog_post___author___childrenContentfulAuthorBiographyTextNode = 'blog_post___author___childrenContentfulAuthorBiographyTextNode',
   blog_post___author___childrenContentfulAuthorBiographyTextNode___id = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___id',
   blog_post___author___childrenContentfulAuthorBiographyTextNode___children = 'blog_post___author___childrenContentfulAuthorBiographyTextNode___children',
@@ -4763,6 +4763,27 @@ export enum ContentfulBlogPostFieldsEnum {
   author___id = 'author___id',
   author___node_locale = 'author___node_locale',
   author___name = 'author___name',
+  author___biography___id = 'author___biography___id',
+  author___biography___parent___id = 'author___biography___parent___id',
+  author___biography___parent___children = 'author___biography___parent___children',
+  author___biography___children = 'author___biography___children',
+  author___biography___children___id = 'author___biography___children___id',
+  author___biography___children___children = 'author___biography___children___children',
+  author___biography___internal___content = 'author___biography___internal___content',
+  author___biography___internal___contentDigest = 'author___biography___internal___contentDigest',
+  author___biography___internal___description = 'author___biography___internal___description',
+  author___biography___internal___fieldOwners = 'author___biography___internal___fieldOwners',
+  author___biography___internal___ignoreType = 'author___biography___internal___ignoreType',
+  author___biography___internal___mediaType = 'author___biography___internal___mediaType',
+  author___biography___internal___owner = 'author___biography___internal___owner',
+  author___biography___internal___type = 'author___biography___internal___type',
+  author___biography___biography = 'author___biography___biography',
+  author___biography___sys___type = 'author___biography___sys___type',
+  author___spaceId = 'author___spaceId',
+  author___createdAt = 'author___createdAt',
+  author___updatedAt = 'author___updatedAt',
+  author___sys___type = 'author___sys___type',
+  author___sys___revision = 'author___sys___revision',
   author___blog_post = 'author___blog_post',
   author___blog_post___contentful_id = 'author___blog_post___contentful_id',
   author___blog_post___id = 'author___blog_post___id',
@@ -4778,10 +4799,10 @@ export enum ContentfulBlogPostFieldsEnum {
   author___blog_post___author___id = 'author___blog_post___author___id',
   author___blog_post___author___node_locale = 'author___blog_post___author___node_locale',
   author___blog_post___author___name = 'author___blog_post___author___name',
-  author___blog_post___author___blog_post = 'author___blog_post___author___blog_post',
   author___blog_post___author___spaceId = 'author___blog_post___author___spaceId',
   author___blog_post___author___createdAt = 'author___blog_post___author___createdAt',
   author___blog_post___author___updatedAt = 'author___blog_post___author___updatedAt',
+  author___blog_post___author___blog_post = 'author___blog_post___author___blog_post',
   author___blog_post___author___childrenContentfulAuthorBiographyTextNode = 'author___blog_post___author___childrenContentfulAuthorBiographyTextNode',
   author___blog_post___author___children = 'author___blog_post___author___children',
   author___blog_post___resources___contentful_id = 'author___blog_post___resources___contentful_id',
@@ -4847,27 +4868,6 @@ export enum ContentfulBlogPostFieldsEnum {
   author___blog_post___internal___mediaType = 'author___blog_post___internal___mediaType',
   author___blog_post___internal___owner = 'author___blog_post___internal___owner',
   author___blog_post___internal___type = 'author___blog_post___internal___type',
-  author___spaceId = 'author___spaceId',
-  author___createdAt = 'author___createdAt',
-  author___updatedAt = 'author___updatedAt',
-  author___sys___type = 'author___sys___type',
-  author___sys___revision = 'author___sys___revision',
-  author___biography___id = 'author___biography___id',
-  author___biography___parent___id = 'author___biography___parent___id',
-  author___biography___parent___children = 'author___biography___parent___children',
-  author___biography___children = 'author___biography___children',
-  author___biography___children___id = 'author___biography___children___id',
-  author___biography___children___children = 'author___biography___children___children',
-  author___biography___internal___content = 'author___biography___internal___content',
-  author___biography___internal___contentDigest = 'author___biography___internal___contentDigest',
-  author___biography___internal___description = 'author___biography___internal___description',
-  author___biography___internal___fieldOwners = 'author___biography___internal___fieldOwners',
-  author___biography___internal___ignoreType = 'author___biography___internal___ignoreType',
-  author___biography___internal___mediaType = 'author___biography___internal___mediaType',
-  author___biography___internal___owner = 'author___biography___internal___owner',
-  author___biography___internal___type = 'author___biography___internal___type',
-  author___biography___biography = 'author___biography___biography',
-  author___biography___sys___type = 'author___biography___sys___type',
   author___childrenContentfulAuthorBiographyTextNode = 'author___childrenContentfulAuthorBiographyTextNode',
   author___childrenContentfulAuthorBiographyTextNode___id = 'author___childrenContentfulAuthorBiographyTextNode___id',
   author___childrenContentfulAuthorBiographyTextNode___parent___id = 'author___childrenContentfulAuthorBiographyTextNode___parent___id',
@@ -4995,10 +4995,10 @@ export enum ContentfulBlogPostFieldsEnum {
   resources___blog_post___author___id = 'resources___blog_post___author___id',
   resources___blog_post___author___node_locale = 'resources___blog_post___author___node_locale',
   resources___blog_post___author___name = 'resources___blog_post___author___name',
-  resources___blog_post___author___blog_post = 'resources___blog_post___author___blog_post',
   resources___blog_post___author___spaceId = 'resources___blog_post___author___spaceId',
   resources___blog_post___author___createdAt = 'resources___blog_post___author___createdAt',
   resources___blog_post___author___updatedAt = 'resources___blog_post___author___updatedAt',
+  resources___blog_post___author___blog_post = 'resources___blog_post___author___blog_post',
   resources___blog_post___author___childrenContentfulAuthorBiographyTextNode = 'resources___blog_post___author___childrenContentfulAuthorBiographyTextNode',
   resources___blog_post___author___children = 'resources___blog_post___author___children',
   resources___blog_post___resources___contentful_id = 'resources___blog_post___resources___contentful_id',
@@ -5327,10 +5327,10 @@ export enum ContentfulBlogPostFieldsEnum {
   block__resource_list___blog_post___author___id = 'block__resource_list___blog_post___author___id',
   block__resource_list___blog_post___author___node_locale = 'block__resource_list___blog_post___author___node_locale',
   block__resource_list___blog_post___author___name = 'block__resource_list___blog_post___author___name',
-  block__resource_list___blog_post___author___blog_post = 'block__resource_list___blog_post___author___blog_post',
   block__resource_list___blog_post___author___spaceId = 'block__resource_list___blog_post___author___spaceId',
   block__resource_list___blog_post___author___createdAt = 'block__resource_list___blog_post___author___createdAt',
   block__resource_list___blog_post___author___updatedAt = 'block__resource_list___blog_post___author___updatedAt',
+  block__resource_list___blog_post___author___blog_post = 'block__resource_list___blog_post___author___blog_post',
   block__resource_list___blog_post___author___childrenContentfulAuthorBiographyTextNode = 'block__resource_list___blog_post___author___childrenContentfulAuthorBiographyTextNode',
   block__resource_list___blog_post___author___children = 'block__resource_list___blog_post___author___children',
   block__resource_list___blog_post___resources___contentful_id = 'block__resource_list___blog_post___resources___contentful_id',
@@ -6482,10 +6482,10 @@ export enum ContentfulPageFieldsEnum {
   block__resource_list___blog_post___author___id = 'block__resource_list___blog_post___author___id',
   block__resource_list___blog_post___author___node_locale = 'block__resource_list___blog_post___author___node_locale',
   block__resource_list___blog_post___author___name = 'block__resource_list___blog_post___author___name',
-  block__resource_list___blog_post___author___blog_post = 'block__resource_list___blog_post___author___blog_post',
   block__resource_list___blog_post___author___spaceId = 'block__resource_list___blog_post___author___spaceId',
   block__resource_list___blog_post___author___createdAt = 'block__resource_list___blog_post___author___createdAt',
   block__resource_list___blog_post___author___updatedAt = 'block__resource_list___blog_post___author___updatedAt',
+  block__resource_list___blog_post___author___blog_post = 'block__resource_list___blog_post___author___blog_post',
   block__resource_list___blog_post___author___childrenContentfulAuthorBiographyTextNode = 'block__resource_list___blog_post___author___childrenContentfulAuthorBiographyTextNode',
   block__resource_list___blog_post___author___children = 'block__resource_list___blog_post___author___children',
   block__resource_list___blog_post___resources___contentful_id = 'block__resource_list___blog_post___resources___contentful_id',
@@ -6792,6 +6792,230 @@ export type ContentfulPageSysFilterInput = {
   contentType?: Maybe<ContentfulPageSysContentTypeFilterInput>;
 };
 
+export type ContentfulPerson = ContentfulReference & ContentfulEntry & Node & {
+  __typename?: 'ContentfulPerson';
+  contentful_id: Scalars['String'];
+  id: Scalars['ID'];
+  node_locale: Scalars['String'];
+  name?: Maybe<Scalars['String']>;
+  spaceId?: Maybe<Scalars['String']>;
+  createdAt?: Maybe<Scalars['Date']>;
+  updatedAt?: Maybe<Scalars['Date']>;
+  sys?: Maybe<ContentfulPersonSys>;
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
+
+export type ContentfulPersonCreatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+
+export type ContentfulPersonUpdatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulPersonConnection = {
+  __typename?: 'ContentfulPersonConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulPersonEdge>;
+  nodes: Array<ContentfulPerson>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<ContentfulPersonGroupConnection>;
+};
+
+
+export type ContentfulPersonConnectionDistinctArgs = {
+  field: ContentfulPersonFieldsEnum;
+};
+
+
+export type ContentfulPersonConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: ContentfulPersonFieldsEnum;
+};
+
+export type ContentfulPersonEdge = {
+  __typename?: 'ContentfulPersonEdge';
+  next?: Maybe<ContentfulPerson>;
+  node: ContentfulPerson;
+  previous?: Maybe<ContentfulPerson>;
+};
+
+export enum ContentfulPersonFieldsEnum {
+  contentful_id = 'contentful_id',
+  id = 'id',
+  node_locale = 'node_locale',
+  name = 'name',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
+  parent___id = 'parent___id',
+  parent___parent___id = 'parent___parent___id',
+  parent___parent___parent___id = 'parent___parent___parent___id',
+  parent___parent___parent___children = 'parent___parent___parent___children',
+  parent___parent___children = 'parent___parent___children',
+  parent___parent___children___id = 'parent___parent___children___id',
+  parent___parent___children___children = 'parent___parent___children___children',
+  parent___parent___internal___content = 'parent___parent___internal___content',
+  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
+  parent___parent___internal___description = 'parent___parent___internal___description',
+  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
+  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
+  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
+  parent___parent___internal___owner = 'parent___parent___internal___owner',
+  parent___parent___internal___type = 'parent___parent___internal___type',
+  parent___children = 'parent___children',
+  parent___children___id = 'parent___children___id',
+  parent___children___parent___id = 'parent___children___parent___id',
+  parent___children___parent___children = 'parent___children___parent___children',
+  parent___children___children = 'parent___children___children',
+  parent___children___children___id = 'parent___children___children___id',
+  parent___children___children___children = 'parent___children___children___children',
+  parent___children___internal___content = 'parent___children___internal___content',
+  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
+  parent___children___internal___description = 'parent___children___internal___description',
+  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
+  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
+  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
+  parent___children___internal___owner = 'parent___children___internal___owner',
+  parent___children___internal___type = 'parent___children___internal___type',
+  parent___internal___content = 'parent___internal___content',
+  parent___internal___contentDigest = 'parent___internal___contentDigest',
+  parent___internal___description = 'parent___internal___description',
+  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
+  parent___internal___ignoreType = 'parent___internal___ignoreType',
+  parent___internal___mediaType = 'parent___internal___mediaType',
+  parent___internal___owner = 'parent___internal___owner',
+  parent___internal___type = 'parent___internal___type',
+  children = 'children',
+  children___id = 'children___id',
+  children___parent___id = 'children___parent___id',
+  children___parent___parent___id = 'children___parent___parent___id',
+  children___parent___parent___children = 'children___parent___parent___children',
+  children___parent___children = 'children___parent___children',
+  children___parent___children___id = 'children___parent___children___id',
+  children___parent___children___children = 'children___parent___children___children',
+  children___parent___internal___content = 'children___parent___internal___content',
+  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
+  children___parent___internal___description = 'children___parent___internal___description',
+  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
+  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
+  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
+  children___parent___internal___owner = 'children___parent___internal___owner',
+  children___parent___internal___type = 'children___parent___internal___type',
+  children___children = 'children___children',
+  children___children___id = 'children___children___id',
+  children___children___parent___id = 'children___children___parent___id',
+  children___children___parent___children = 'children___children___parent___children',
+  children___children___children = 'children___children___children',
+  children___children___children___id = 'children___children___children___id',
+  children___children___children___children = 'children___children___children___children',
+  children___children___internal___content = 'children___children___internal___content',
+  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
+  children___children___internal___description = 'children___children___internal___description',
+  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
+  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
+  children___children___internal___mediaType = 'children___children___internal___mediaType',
+  children___children___internal___owner = 'children___children___internal___owner',
+  children___children___internal___type = 'children___children___internal___type',
+  children___internal___content = 'children___internal___content',
+  children___internal___contentDigest = 'children___internal___contentDigest',
+  children___internal___description = 'children___internal___description',
+  children___internal___fieldOwners = 'children___internal___fieldOwners',
+  children___internal___ignoreType = 'children___internal___ignoreType',
+  children___internal___mediaType = 'children___internal___mediaType',
+  children___internal___owner = 'children___internal___owner',
+  children___internal___type = 'children___internal___type',
+  internal___content = 'internal___content',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___fieldOwners = 'internal___fieldOwners',
+  internal___ignoreType = 'internal___ignoreType',
+  internal___mediaType = 'internal___mediaType',
+  internal___owner = 'internal___owner',
+  internal___type = 'internal___type'
+}
+
+export type ContentfulPersonFilterInput = {
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  name?: Maybe<StringQueryOperatorInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulPersonSysFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+export type ContentfulPersonGroupConnection = {
+  __typename?: 'ContentfulPersonGroupConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulPersonEdge>;
+  nodes: Array<ContentfulPerson>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulPersonSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulPersonFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulPersonSys = {
+  __typename?: 'ContentfulPersonSys';
+  type?: Maybe<Scalars['String']>;
+  revision?: Maybe<Scalars['Int']>;
+  contentType?: Maybe<ContentfulPersonSysContentType>;
+};
+
+export type ContentfulPersonSysContentType = {
+  __typename?: 'ContentfulPersonSysContentType';
+  sys?: Maybe<ContentfulPersonSysContentTypeSys>;
+};
+
+export type ContentfulPersonSysContentTypeFilterInput = {
+  sys?: Maybe<ContentfulPersonSysContentTypeSysFilterInput>;
+};
+
+export type ContentfulPersonSysContentTypeSys = {
+  __typename?: 'ContentfulPersonSysContentTypeSys';
+  type?: Maybe<Scalars['String']>;
+  linkType?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulPersonSysContentTypeSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  linkType?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type ContentfulPersonSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  revision?: Maybe<IntQueryOperatorInput>;
+  contentType?: Maybe<ContentfulPersonSysContentTypeFilterInput>;
+};
+
 export type ContentfulReference = {
   contentful_id: Scalars['String'];
   id: Scalars['ID'];
@@ -6952,10 +7176,10 @@ export enum ContentfulResourceFieldsEnum {
   block__resource_list___blog_post___author___id = 'block__resource_list___blog_post___author___id',
   block__resource_list___blog_post___author___node_locale = 'block__resource_list___blog_post___author___node_locale',
   block__resource_list___blog_post___author___name = 'block__resource_list___blog_post___author___name',
-  block__resource_list___blog_post___author___blog_post = 'block__resource_list___blog_post___author___blog_post',
   block__resource_list___blog_post___author___spaceId = 'block__resource_list___blog_post___author___spaceId',
   block__resource_list___blog_post___author___createdAt = 'block__resource_list___blog_post___author___createdAt',
   block__resource_list___blog_post___author___updatedAt = 'block__resource_list___blog_post___author___updatedAt',
+  block__resource_list___blog_post___author___blog_post = 'block__resource_list___blog_post___author___blog_post',
   block__resource_list___blog_post___author___childrenContentfulAuthorBiographyTextNode = 'block__resource_list___blog_post___author___childrenContentfulAuthorBiographyTextNode',
   block__resource_list___blog_post___author___children = 'block__resource_list___blog_post___author___children',
   block__resource_list___blog_post___resources___contentful_id = 'block__resource_list___blog_post___resources___contentful_id',
@@ -8644,6 +8868,8 @@ export type Query = {
   allContentfulResource: ContentfulResourceConnection;
   contentfulBlockResourceList?: Maybe<ContentfulBlockResourceList>;
   allContentfulBlockResourceList: ContentfulBlockResourceListConnection;
+  contentfulPerson?: Maybe<ContentfulPerson>;
+  allContentfulPerson: ContentfulPersonConnection;
   contentfulBlockJumbotronButtonJsonNode?: Maybe<ContentfulBlockJumbotronButtonJsonNode>;
   allContentfulBlockJumbotronButtonJsonNode: ContentfulBlockJumbotronButtonJsonNodeConnection;
   contentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNode>;
@@ -8950,12 +9176,12 @@ export type QueryContentfulAuthorArgs = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
-  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
+  biography?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulAuthorSysFilterInput>;
-  biography?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
+  blog_post?: Maybe<ContentfulBlogPostFilterListInput>;
   childrenContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterListInput>;
   childContentfulAuthorBiographyTextNode?: Maybe<ContentfulAuthorBiographyTextNodeFilterInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -9196,6 +9422,29 @@ export type QueryContentfulBlockResourceListArgs = {
 export type QueryAllContentfulBlockResourceListArgs = {
   filter?: Maybe<ContentfulBlockResourceListFilterInput>;
   sort?: Maybe<ContentfulBlockResourceListSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulPersonArgs = {
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  name?: Maybe<StringQueryOperatorInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulPersonSysFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+
+export type QueryAllContentfulPersonArgs = {
+  filter?: Maybe<ContentfulPersonFilterInput>;
+  sort?: Maybe<ContentfulPersonSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -11922,6 +12171,11 @@ export type ResourceListFragmentFragment = (
   )>>> }
 );
 
+export type AvatarFragmentFragment = (
+  { __typename?: 'ContentfulAsset' }
+  & Pick<ContentfulAsset, 'gatsbyImageData'>
+);
+
 export type ContentfulBlocksFragmentFragment = (
   { __typename?: 'ContentfulPage' }
   & { blocks?: Maybe<Array<Maybe<(
@@ -11959,7 +12213,7 @@ export type FeaturedPostFragmentFragment = (
 
 export type ImageFragmentFragment = (
   { __typename?: 'ContentfulAsset' }
-  & Pick<ContentfulAsset, 'contentful_id' | 'title' | 'description' | 'gatsbyImageData'>
+  & Pick<ContentfulAsset, 'title' | 'description' | 'gatsbyImageData'>
 );
 
 export type LayoutQueryQueryVariables = Exact<{ [key: string]: never; }>;
@@ -11998,6 +12252,7 @@ export type PostContentFragmentFragment = (
     & Pick<ContentfulBlogPostContent, 'raw'>
     & { references?: Maybe<Array<Maybe<(
       { __typename?: 'ContentfulAsset' }
+      & Pick<ContentfulAsset, 'contentful_id'>
       & ImageFragmentFragment
     )>>> }
   )> }

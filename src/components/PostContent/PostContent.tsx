@@ -25,6 +25,7 @@ export const PostContentFragment = graphql`
       raw
       references {
         ... on ContentfulAsset {
+          contentful_id
           ...ImageFragment
         }
       }
