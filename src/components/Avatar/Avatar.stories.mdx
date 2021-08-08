@@ -1,0 +1,43 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Avatar } from ".";
+import { mockImage } from "@/components/Image/__mocks__/mockImage";
+
+<Meta
+  title="components/Avatar"
+  component={Avatar}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# Avatar
+
+An `Avatar` is used to display a visual identefier for a person or user.
+
+## Usage
+
+```tsx
+import { Avatar } from "@/components/Avatar";
+```
+
+## Props
+
+<ArgsTable component={Avatar} />
+
+## Example
+
+<Canvas>
+  <Story name="Default" args={{ ...mockImage }}>
+    {(args) => <Avatar {...args} />}
+  </Story>
+</Canvas>
+
+## No Image Available
+
+An `Avatar` can also be displayed without an image. If this is the case, the `Avatar` will show an `Icon`.
+
+<Canvas>
+  <Story name="No Image Available" args={{ name: "Eddy Sims" }}>
+    {(args) => <Avatar {...args} />}
+  </Story>
+</Canvas>

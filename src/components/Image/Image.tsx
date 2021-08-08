@@ -60,7 +60,6 @@ function Animator({ children }: PropsWithChildren<unknown>) {
 
 export const ImageFragment = graphql`
   fragment ImageFragment on ContentfulAsset {
-    contentful_id
     title
     description
     gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])

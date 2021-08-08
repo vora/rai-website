@@ -1,0 +1,16 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space--xxlarge);
+  height: var(--space--xxlarge);
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 3px var(--color--stone) inset;
+}
