@@ -1,0 +1,43 @@
+.modal {
+  --space--modal-width: calc(var(--space--base) * 38);
+
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color--blanco);
+  width: 90%;
+  max-width: var(--space--modal-width);
+  border-radius: 3px;
+  z-index: 20;
+  box-shadow: 0 0 10px rgba(var(--color--gravy--rgb), 0.25);
+}
+
+.inner {
+  --space--modal-height: calc(var(--space--base) * 24);
+
+  padding: var(--space--large);
+  max-height: var(--space--modal-height);
+  overflow-y: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(var(--color--blanco--rgb), 0.85);
+  backdrop-filter: blur(1px);
+}
+
+.closeIcon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-125%);
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
