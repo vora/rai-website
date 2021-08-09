@@ -4,8 +4,10 @@
   --color--ghost--rgb: 246, 246, 246;
   --color--ghost: rgb(var(--color--ghost--rgb));
   --color--stone: #4D5052;
-  --color--gravy: #797b80;
-  --color--blanco: #fff;
+  --color--gravy--rgb: 121, 123, 128;
+  --color--gravy: rgb(var(--color--gravy--rgb));
+  --color--blanco--rgb: 255, 255, 255;
+  --color--blanco: rgb(var(--color--blanco--rgb));
 
   --color--warning--rgb: 245, 238, 158;
   --color--warning: rgb(var( --color--warning--rgb));
