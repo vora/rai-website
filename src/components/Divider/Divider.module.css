@@ -2,5 +2,12 @@
   border: none;
   height: 1px;
   background: var(--color--gravy);
+}
+
+.base {
   margin: var(--space--large) 0;
+}
+
+.small {
+  margin: var(--space--base) 0;
 }

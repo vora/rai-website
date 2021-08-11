@@ -3788,6 +3788,160 @@ export type ContentfulBlockJumbotronSysFilterInput = {
   contentType?: Maybe<ContentfulBlockJumbotronSysContentTypeFilterInput>;
 };
 
+export type ContentfulBlockListOfPeople = ContentfulReference & ContentfulEntry & Node & {
+  __typename?: 'ContentfulBlockListOfPeople';
+  contentful_id: Scalars['String'];
+  id: Scalars['ID'];
+  node_locale: Scalars['String'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
+export type ContentfulBlockListOfPeopleConnection = {
+  __typename?: 'ContentfulBlockListOfPeopleConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulBlockListOfPeopleEdge>;
+  nodes: Array<ContentfulBlockListOfPeople>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<ContentfulBlockListOfPeopleGroupConnection>;
+};
+
+
+export type ContentfulBlockListOfPeopleConnectionDistinctArgs = {
+  field: ContentfulBlockListOfPeopleFieldsEnum;
+};
+
+
+export type ContentfulBlockListOfPeopleConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: ContentfulBlockListOfPeopleFieldsEnum;
+};
+
+export type ContentfulBlockListOfPeopleEdge = {
+  __typename?: 'ContentfulBlockListOfPeopleEdge';
+  next?: Maybe<ContentfulBlockListOfPeople>;
+  node: ContentfulBlockListOfPeople;
+  previous?: Maybe<ContentfulBlockListOfPeople>;
+};
+
+export enum ContentfulBlockListOfPeopleFieldsEnum {
+  contentful_id = 'contentful_id',
+  id = 'id',
+  node_locale = 'node_locale',
+  parent___id = 'parent___id',
+  parent___parent___id = 'parent___parent___id',
+  parent___parent___parent___id = 'parent___parent___parent___id',
+  parent___parent___parent___children = 'parent___parent___parent___children',
+  parent___parent___children = 'parent___parent___children',
+  parent___parent___children___id = 'parent___parent___children___id',
+  parent___parent___children___children = 'parent___parent___children___children',
+  parent___parent___internal___content = 'parent___parent___internal___content',
+  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
+  parent___parent___internal___description = 'parent___parent___internal___description',
+  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
+  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
+  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
+  parent___parent___internal___owner = 'parent___parent___internal___owner',
+  parent___parent___internal___type = 'parent___parent___internal___type',
+  parent___children = 'parent___children',
+  parent___children___id = 'parent___children___id',
+  parent___children___parent___id = 'parent___children___parent___id',
+  parent___children___parent___children = 'parent___children___parent___children',
+  parent___children___children = 'parent___children___children',
+  parent___children___children___id = 'parent___children___children___id',
+  parent___children___children___children = 'parent___children___children___children',
+  parent___children___internal___content = 'parent___children___internal___content',
+  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
+  parent___children___internal___description = 'parent___children___internal___description',
+  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
+  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
+  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
+  parent___children___internal___owner = 'parent___children___internal___owner',
+  parent___children___internal___type = 'parent___children___internal___type',
+  parent___internal___content = 'parent___internal___content',
+  parent___internal___contentDigest = 'parent___internal___contentDigest',
+  parent___internal___description = 'parent___internal___description',
+  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
+  parent___internal___ignoreType = 'parent___internal___ignoreType',
+  parent___internal___mediaType = 'parent___internal___mediaType',
+  parent___internal___owner = 'parent___internal___owner',
+  parent___internal___type = 'parent___internal___type',
+  children = 'children',
+  children___id = 'children___id',
+  children___parent___id = 'children___parent___id',
+  children___parent___parent___id = 'children___parent___parent___id',
+  children___parent___parent___children = 'children___parent___parent___children',
+  children___parent___children = 'children___parent___children',
+  children___parent___children___id = 'children___parent___children___id',
+  children___parent___children___children = 'children___parent___children___children',
+  children___parent___internal___content = 'children___parent___internal___content',
+  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
+  children___parent___internal___description = 'children___parent___internal___description',
+  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
+  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
+  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
+  children___parent___internal___owner = 'children___parent___internal___owner',
+  children___parent___internal___type = 'children___parent___internal___type',
+  children___children = 'children___children',
+  children___children___id = 'children___children___id',
+  children___children___parent___id = 'children___children___parent___id',
+  children___children___parent___children = 'children___children___parent___children',
+  children___children___children = 'children___children___children',
+  children___children___children___id = 'children___children___children___id',
+  children___children___children___children = 'children___children___children___children',
+  children___children___internal___content = 'children___children___internal___content',
+  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
+  children___children___internal___description = 'children___children___internal___description',
+  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
+  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
+  children___children___internal___mediaType = 'children___children___internal___mediaType',
+  children___children___internal___owner = 'children___children___internal___owner',
+  children___children___internal___type = 'children___children___internal___type',
+  children___internal___content = 'children___internal___content',
+  children___internal___contentDigest = 'children___internal___contentDigest',
+  children___internal___description = 'children___internal___description',
+  children___internal___fieldOwners = 'children___internal___fieldOwners',
+  children___internal___ignoreType = 'children___internal___ignoreType',
+  children___internal___mediaType = 'children___internal___mediaType',
+  children___internal___owner = 'children___internal___owner',
+  children___internal___type = 'children___internal___type',
+  internal___content = 'internal___content',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___fieldOwners = 'internal___fieldOwners',
+  internal___ignoreType = 'internal___ignoreType',
+  internal___mediaType = 'internal___mediaType',
+  internal___owner = 'internal___owner',
+  internal___type = 'internal___type'
+}
+
+export type ContentfulBlockListOfPeopleFilterInput = {
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+export type ContentfulBlockListOfPeopleGroupConnection = {
+  __typename?: 'ContentfulBlockListOfPeopleGroupConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulBlockListOfPeopleEdge>;
+  nodes: Array<ContentfulBlockListOfPeople>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockListOfPeopleSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulBlockListOfPeopleFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
 export type ContentfulBlockResourceList = ContentfulReference & ContentfulEntry & Node & {
   __typename?: 'ContentfulBlockResourceList';
   contentful_id: Scalars['String'];
@@ -6792,23 +6946,26 @@ export type ContentfulPageSysFilterInput = {
   contentType?: Maybe<ContentfulPageSysContentTypeFilterInput>;
 };
 
-export type ContentfulPerson = ContentfulReference & ContentfulEntry & Node & {
-  __typename?: 'ContentfulPerson';
+export type ContentfulPeople = ContentfulReference & ContentfulEntry & Node & {
+  __typename?: 'ContentfulPeople';
   contentful_id: Scalars['String'];
   id: Scalars['ID'];
   node_locale: Scalars['String'];
   name?: Maybe<Scalars['String']>;
+  userRole?: Maybe<Scalars['String']>;
+  biography?: Maybe<ContentfulPeopleBiography>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
-  sys?: Maybe<ContentfulPersonSys>;
+  sys?: Maybe<ContentfulPeopleSys>;
+  photo?: Maybe<ContentfulAsset>;
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
 };
 
 
-export type ContentfulPersonCreatedAtArgs = {
+export type ContentfulPeopleCreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
@@ -6816,47 +6973,58 @@ export type ContentfulPersonCreatedAtArgs = {
 };
 
 
-export type ContentfulPersonUpdatedAtArgs = {
+export type ContentfulPeopleUpdatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
 
-export type ContentfulPersonConnection = {
-  __typename?: 'ContentfulPersonConnection';
+export type ContentfulPeopleBiography = {
+  __typename?: 'ContentfulPeopleBiography';
+  raw?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulPeopleBiographyFilterInput = {
+  raw?: Maybe<StringQueryOperatorInput>;
+};
+
+export type ContentfulPeopleConnection = {
+  __typename?: 'ContentfulPeopleConnection';
   totalCount: Scalars['Int'];
-  edges: Array<ContentfulPersonEdge>;
-  nodes: Array<ContentfulPerson>;
+  edges: Array<ContentfulPeopleEdge>;
+  nodes: Array<ContentfulPeople>;
   pageInfo: PageInfo;
   distinct: Array<Scalars['String']>;
-  group: Array<ContentfulPersonGroupConnection>;
+  group: Array<ContentfulPeopleGroupConnection>;
 };
 
 
-export type ContentfulPersonConnectionDistinctArgs = {
-  field: ContentfulPersonFieldsEnum;
+export type ContentfulPeopleConnectionDistinctArgs = {
+  field: ContentfulPeopleFieldsEnum;
 };
 
 
-export type ContentfulPersonConnectionGroupArgs = {
+export type ContentfulPeopleConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
-  field: ContentfulPersonFieldsEnum;
+  field: ContentfulPeopleFieldsEnum;
 };
 
-export type ContentfulPersonEdge = {
-  __typename?: 'ContentfulPersonEdge';
-  next?: Maybe<ContentfulPerson>;
-  node: ContentfulPerson;
-  previous?: Maybe<ContentfulPerson>;
+export type ContentfulPeopleEdge = {
+  __typename?: 'ContentfulPeopleEdge';
+  next?: Maybe<ContentfulPeople>;
+  node: ContentfulPeople;
+  previous?: Maybe<ContentfulPeople>;
 };
 
-export enum ContentfulPersonFieldsEnum {
+export enum ContentfulPeopleFieldsEnum {
   contentful_id = 'contentful_id',
   id = 'id',
   node_locale = 'node_locale',
   name = 'name',
+  userRole = 'userRole',
+  biography___raw = 'biography___raw',
   spaceId = 'spaceId',
   createdAt = 'createdAt',
   updatedAt = 'updatedAt',
@@ -6865,6 +7033,81 @@ export enum ContentfulPersonFieldsEnum {
   sys___contentType___sys___type = 'sys___contentType___sys___type',
   sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
   sys___contentType___sys___id = 'sys___contentType___sys___id',
+  photo___contentful_id = 'photo___contentful_id',
+  photo___id = 'photo___id',
+  photo___spaceId = 'photo___spaceId',
+  photo___createdAt = 'photo___createdAt',
+  photo___updatedAt = 'photo___updatedAt',
+  photo___file___url = 'photo___file___url',
+  photo___file___details___size = 'photo___file___details___size',
+  photo___file___fileName = 'photo___file___fileName',
+  photo___file___contentType = 'photo___file___contentType',
+  photo___title = 'photo___title',
+  photo___description = 'photo___description',
+  photo___node_locale = 'photo___node_locale',
+  photo___sys___type = 'photo___sys___type',
+  photo___sys___revision = 'photo___sys___revision',
+  photo___fixed___base64 = 'photo___fixed___base64',
+  photo___fixed___tracedSVG = 'photo___fixed___tracedSVG',
+  photo___fixed___aspectRatio = 'photo___fixed___aspectRatio',
+  photo___fixed___width = 'photo___fixed___width',
+  photo___fixed___height = 'photo___fixed___height',
+  photo___fixed___src = 'photo___fixed___src',
+  photo___fixed___srcSet = 'photo___fixed___srcSet',
+  photo___fixed___srcWebp = 'photo___fixed___srcWebp',
+  photo___fixed___srcSetWebp = 'photo___fixed___srcSetWebp',
+  photo___fluid___base64 = 'photo___fluid___base64',
+  photo___fluid___tracedSVG = 'photo___fluid___tracedSVG',
+  photo___fluid___aspectRatio = 'photo___fluid___aspectRatio',
+  photo___fluid___src = 'photo___fluid___src',
+  photo___fluid___srcSet = 'photo___fluid___srcSet',
+  photo___fluid___srcWebp = 'photo___fluid___srcWebp',
+  photo___fluid___srcSetWebp = 'photo___fluid___srcSetWebp',
+  photo___fluid___sizes = 'photo___fluid___sizes',
+  photo___gatsbyImageData = 'photo___gatsbyImageData',
+  photo___resize___base64 = 'photo___resize___base64',
+  photo___resize___tracedSVG = 'photo___resize___tracedSVG',
+  photo___resize___src = 'photo___resize___src',
+  photo___resize___width = 'photo___resize___width',
+  photo___resize___height = 'photo___resize___height',
+  photo___resize___aspectRatio = 'photo___resize___aspectRatio',
+  photo___parent___id = 'photo___parent___id',
+  photo___parent___parent___id = 'photo___parent___parent___id',
+  photo___parent___parent___children = 'photo___parent___parent___children',
+  photo___parent___children = 'photo___parent___children',
+  photo___parent___children___id = 'photo___parent___children___id',
+  photo___parent___children___children = 'photo___parent___children___children',
+  photo___parent___internal___content = 'photo___parent___internal___content',
+  photo___parent___internal___contentDigest = 'photo___parent___internal___contentDigest',
+  photo___parent___internal___description = 'photo___parent___internal___description',
+  photo___parent___internal___fieldOwners = 'photo___parent___internal___fieldOwners',
+  photo___parent___internal___ignoreType = 'photo___parent___internal___ignoreType',
+  photo___parent___internal___mediaType = 'photo___parent___internal___mediaType',
+  photo___parent___internal___owner = 'photo___parent___internal___owner',
+  photo___parent___internal___type = 'photo___parent___internal___type',
+  photo___children = 'photo___children',
+  photo___children___id = 'photo___children___id',
+  photo___children___parent___id = 'photo___children___parent___id',
+  photo___children___parent___children = 'photo___children___parent___children',
+  photo___children___children = 'photo___children___children',
+  photo___children___children___id = 'photo___children___children___id',
+  photo___children___children___children = 'photo___children___children___children',
+  photo___children___internal___content = 'photo___children___internal___content',
+  photo___children___internal___contentDigest = 'photo___children___internal___contentDigest',
+  photo___children___internal___description = 'photo___children___internal___description',
+  photo___children___internal___fieldOwners = 'photo___children___internal___fieldOwners',
+  photo___children___internal___ignoreType = 'photo___children___internal___ignoreType',
+  photo___children___internal___mediaType = 'photo___children___internal___mediaType',
+  photo___children___internal___owner = 'photo___children___internal___owner',
+  photo___children___internal___type = 'photo___children___internal___type',
+  photo___internal___content = 'photo___internal___content',
+  photo___internal___contentDigest = 'photo___internal___contentDigest',
+  photo___internal___description = 'photo___internal___description',
+  photo___internal___fieldOwners = 'photo___internal___fieldOwners',
+  photo___internal___ignoreType = 'photo___internal___ignoreType',
+  photo___internal___mediaType = 'photo___internal___mediaType',
+  photo___internal___owner = 'photo___internal___owner',
+  photo___internal___type = 'photo___internal___type',
   parent___id = 'parent___id',
   parent___parent___id = 'parent___parent___id',
   parent___parent___parent___id = 'parent___parent___parent___id',
@@ -6952,68 +7195,71 @@ export enum ContentfulPersonFieldsEnum {
   internal___type = 'internal___type'
 }
 
-export type ContentfulPersonFilterInput = {
+export type ContentfulPeopleFilterInput = {
   contentful_id?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
+  userRole?: Maybe<StringQueryOperatorInput>;
+  biography?: Maybe<ContentfulPeopleBiographyFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
-  sys?: Maybe<ContentfulPersonSysFilterInput>;
+  sys?: Maybe<ContentfulPeopleSysFilterInput>;
+  photo?: Maybe<ContentfulAssetFilterInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
 };
 
-export type ContentfulPersonGroupConnection = {
-  __typename?: 'ContentfulPersonGroupConnection';
+export type ContentfulPeopleGroupConnection = {
+  __typename?: 'ContentfulPeopleGroupConnection';
   totalCount: Scalars['Int'];
-  edges: Array<ContentfulPersonEdge>;
-  nodes: Array<ContentfulPerson>;
+  edges: Array<ContentfulPeopleEdge>;
+  nodes: Array<ContentfulPeople>;
   pageInfo: PageInfo;
   field: Scalars['String'];
   fieldValue?: Maybe<Scalars['String']>;
 };
 
-export type ContentfulPersonSortInput = {
-  fields?: Maybe<Array<Maybe<ContentfulPersonFieldsEnum>>>;
+export type ContentfulPeopleSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulPeopleFieldsEnum>>>;
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type ContentfulPersonSys = {
-  __typename?: 'ContentfulPersonSys';
+export type ContentfulPeopleSys = {
+  __typename?: 'ContentfulPeopleSys';
   type?: Maybe<Scalars['String']>;
   revision?: Maybe<Scalars['Int']>;
-  contentType?: Maybe<ContentfulPersonSysContentType>;
+  contentType?: Maybe<ContentfulPeopleSysContentType>;
 };
 
-export type ContentfulPersonSysContentType = {
-  __typename?: 'ContentfulPersonSysContentType';
-  sys?: Maybe<ContentfulPersonSysContentTypeSys>;
+export type ContentfulPeopleSysContentType = {
+  __typename?: 'ContentfulPeopleSysContentType';
+  sys?: Maybe<ContentfulPeopleSysContentTypeSys>;
 };
 
-export type ContentfulPersonSysContentTypeFilterInput = {
-  sys?: Maybe<ContentfulPersonSysContentTypeSysFilterInput>;
+export type ContentfulPeopleSysContentTypeFilterInput = {
+  sys?: Maybe<ContentfulPeopleSysContentTypeSysFilterInput>;
 };
 
-export type ContentfulPersonSysContentTypeSys = {
-  __typename?: 'ContentfulPersonSysContentTypeSys';
+export type ContentfulPeopleSysContentTypeSys = {
+  __typename?: 'ContentfulPeopleSysContentTypeSys';
   type?: Maybe<Scalars['String']>;
   linkType?: Maybe<Scalars['String']>;
   id?: Maybe<Scalars['String']>;
 };
 
-export type ContentfulPersonSysContentTypeSysFilterInput = {
+export type ContentfulPeopleSysContentTypeSysFilterInput = {
   type?: Maybe<StringQueryOperatorInput>;
   linkType?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
 };
 
-export type ContentfulPersonSysFilterInput = {
+export type ContentfulPeopleSysFilterInput = {
   type?: Maybe<StringQueryOperatorInput>;
   revision?: Maybe<IntQueryOperatorInput>;
-  contentType?: Maybe<ContentfulPersonSysContentTypeFilterInput>;
+  contentType?: Maybe<ContentfulPeopleSysContentTypeFilterInput>;
 };
 
 export type ContentfulReference = {
@@ -8868,8 +9114,10 @@ export type Query = {
   allContentfulResource: ContentfulResourceConnection;
   contentfulBlockResourceList?: Maybe<ContentfulBlockResourceList>;
   allContentfulBlockResourceList: ContentfulBlockResourceListConnection;
-  contentfulPerson?: Maybe<ContentfulPerson>;
-  allContentfulPerson: ContentfulPersonConnection;
+  contentfulPeople?: Maybe<ContentfulPeople>;
+  allContentfulPeople: ContentfulPeopleConnection;
+  contentfulBlockListOfPeople?: Maybe<ContentfulBlockListOfPeople>;
+  allContentfulBlockListOfPeople: ContentfulBlockListOfPeopleConnection;
   contentfulBlockJumbotronButtonJsonNode?: Maybe<ContentfulBlockJumbotronButtonJsonNode>;
   allContentfulBlockJumbotronButtonJsonNode: ContentfulBlockJumbotronButtonJsonNodeConnection;
   contentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNode>;
@@ -9427,24 +9675,45 @@ export type QueryAllContentfulBlockResourceListArgs = {
 };
 
 
-export type QueryContentfulPersonArgs = {
+export type QueryContentfulPeopleArgs = {
   contentful_id?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
+  userRole?: Maybe<StringQueryOperatorInput>;
+  biography?: Maybe<ContentfulPeopleBiographyFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
-  sys?: Maybe<ContentfulPersonSysFilterInput>;
+  sys?: Maybe<ContentfulPeopleSysFilterInput>;
+  photo?: Maybe<ContentfulAssetFilterInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
 };
 
 
-export type QueryAllContentfulPersonArgs = {
-  filter?: Maybe<ContentfulPersonFilterInput>;
-  sort?: Maybe<ContentfulPersonSortInput>;
+export type QueryAllContentfulPeopleArgs = {
+  filter?: Maybe<ContentfulPeopleFilterInput>;
+  sort?: Maybe<ContentfulPeopleSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulBlockListOfPeopleArgs = {
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+
+export type QueryAllContentfulBlockListOfPeopleArgs = {
+  filter?: Maybe<ContentfulBlockListOfPeopleFilterInput>;
+  sort?: Maybe<ContentfulBlockListOfPeopleSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -12224,6 +12493,18 @@ export type LayoutQueryQuery = (
   & { contentfulMicroContent?: Maybe<(
     { __typename?: 'ContentfulMicroContent' }
     & Pick<ContentfulMicroContent, 'value'>
+  )> }
+);
+
+export type PeopleFragmentFragment = (
+  { __typename?: 'ContentfulPeople' }
+  & Pick<ContentfulPeople, 'name' | 'userRole'>
+  & { biography?: Maybe<(
+    { __typename?: 'ContentfulPeopleBiography' }
+    & Pick<ContentfulPeopleBiography, 'raw'>
+  )>, photo?: Maybe<(
+    { __typename?: 'ContentfulAsset' }
+    & AvatarFragmentFragment
   )> }
 );
 

@@ -1,0 +1,35 @@
+.person {
+  appearance: none;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  border-radius: 3px;
+  padding: var(--space--base) var(--space--base);
+}
+
+.hasBio {
+  transition: background 300ms;
+}
+
+.hasBio:hover,
+.hasBio:focus {
+  background: var(--color--ghost);
+  cursor: pointer;
+}
+
+.text {
+  margin-left: var(--space--small);
+}
+
+.name {
+  font-size: var(--font-size--xlarge);
+  font-family: var(--font-family--display);
+  font-weight: 700;
+}
+
+.role {
+  margin-top: var(--space--xxsmall);
+}

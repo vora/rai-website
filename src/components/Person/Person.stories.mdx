@@ -1,0 +1,40 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Person } from ".";
+import { mockParagraph } from "@/components/RichText/__mocks__/mockRichText";
+import { mockImage } from "@/components/Image/__mocks__/mockImage";
+
+<Meta
+  title="components/Person"
+  component={Person}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# Person
+
+## Usage
+
+```tsx
+import { Person } from "@/components/Person";
+```
+
+## Props
+
+<ArgsTable component={Person} />
+
+## Example
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      name: "Eddy Sims",
+      userRole: "Developer",
+      biography: { raw: mockParagraph },
+      photo: mockImage,
+    }}
+  >
+    {(args) => <Person {...args} />}
+  </Story>
+</Canvas>
