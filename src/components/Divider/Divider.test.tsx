@@ -9,7 +9,7 @@ it("renders a divider", () => {
   expect(container).toMatchInlineSnapshot(`
     <div>
       <hr
-        class="divider"
+        class="divider base"
       />
     </div>
   `);

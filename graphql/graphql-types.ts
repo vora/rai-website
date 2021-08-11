@@ -6952,7 +6952,7 @@ export type ContentfulPeople = ContentfulReference & ContentfulEntry & Node & {
   id: Scalars['ID'];
   node_locale: Scalars['String'];
   name?: Maybe<Scalars['String']>;
-  role?: Maybe<Scalars['String']>;
+  userRole?: Maybe<Scalars['String']>;
   biography?: Maybe<ContentfulPeopleBiography>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
@@ -7023,7 +7023,7 @@ export enum ContentfulPeopleFieldsEnum {
   id = 'id',
   node_locale = 'node_locale',
   name = 'name',
-  role = 'role',
+  userRole = 'userRole',
   biography___raw = 'biography___raw',
   spaceId = 'spaceId',
   createdAt = 'createdAt',
@@ -7200,7 +7200,7 @@ export type ContentfulPeopleFilterInput = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
-  role?: Maybe<StringQueryOperatorInput>;
+  userRole?: Maybe<StringQueryOperatorInput>;
   biography?: Maybe<ContentfulPeopleBiographyFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
@@ -9680,7 +9680,7 @@ export type QueryContentfulPeopleArgs = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
-  role?: Maybe<StringQueryOperatorInput>;
+  userRole?: Maybe<StringQueryOperatorInput>;
   biography?: Maybe<ContentfulPeopleBiographyFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
@@ -12493,6 +12493,18 @@ export type LayoutQueryQuery = (
   & { contentfulMicroContent?: Maybe<(
     { __typename?: 'ContentfulMicroContent' }
     & Pick<ContentfulMicroContent, 'value'>
+  )> }
+);
+
+export type PeopleFragmentFragment = (
+  { __typename?: 'ContentfulPeople' }
+  & Pick<ContentfulPeople, 'name' | 'userRole'>
+  & { biography?: Maybe<(
+    { __typename?: 'ContentfulPeopleBiography' }
+    & Pick<ContentfulPeopleBiography, 'raw'>
+  )>, photo?: Maybe<(
+    { __typename?: 'ContentfulAsset' }
+    & AvatarFragmentFragment
   )> }
 );
 
