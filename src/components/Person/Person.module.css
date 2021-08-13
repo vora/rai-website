@@ -11,13 +11,14 @@
 }
 
 .hasBio {
-  transition: background 300ms;
+  transition: background 300ms, transform 300ms;
 }
 
 .hasBio:hover,
 .hasBio:focus {
   background: var(--color--ghost);
   cursor: pointer;
+  transform: scale(1.05);
 }
 
 .text {
@@ -28,6 +29,12 @@
   font-size: var(--font-size--xlarge);
   font-family: var(--font-family--display);
   font-weight: 700;
+  transition: color 300ms;
+}
+
+.hasBio:hover .name,
+.hasBio:focus .name {
+  color: var(--color--gravy);
 }
 
 .role {

@@ -12714,6 +12714,29 @@ export type AllJumbotronBlocksQuery = (
   ) }
 );
 
+export type AllListOfPeopleBlocksQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllListOfPeopleBlocksQuery = (
+  { __typename?: 'Query' }
+  & { allContentfulBlockListOfPeople: (
+    { __typename?: 'ContentfulBlockListOfPeopleConnection' }
+    & { nodes: Array<(
+      { __typename?: 'ContentfulBlockListOfPeople' }
+      & ListOfPeopleFragmentFragment
+    )> }
+  ) }
+);
+
+export type ListOfPeopleFragmentFragment = (
+  { __typename: 'ContentfulBlockListOfPeople' }
+  & Pick<ContentfulBlockListOfPeople, 'id' | 'title' | 'includeInterestedInJoiningButton'>
+  & { people?: Maybe<Array<Maybe<(
+    { __typename?: 'ContentfulPeople' }
+    & PeopleFragmentFragment
+  )>>> }
+);
+
 export type AllResourceListBlocksQueryVariables = Exact<{ [key: string]: never; }>;
 
 
