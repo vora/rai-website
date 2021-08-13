@@ -1,0 +1,89 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { getCustomProperties } from "../../docs/scripts/scripts";
+
+<Meta
+  title="design/Typography"
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+export function FontFamilies() {
+  const fonts = getCustomProperties("--font-family");
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {fonts.map((font) => (
+          <tr>
+            <td>{font.key}</td>
+            <td>
+              <span style={{ fontFamily: `var(${font.key})` }}>
+                Robots are our future
+              </span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+export function FontSizes() {
+  const fonts = getCustomProperties("--font-size");
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {fonts.map((font) => (
+          <tr>
+            <td>{font.key}</td>
+            <td>{font.value}</td>
+            <td>
+              <span style={{ fontSize: `var(${font.key})` }}>
+                Robots are our future
+              </span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+# Typography
+
+The typography used on the Responsible AI website should be limited. This will help keep a consistant look and feel across the website.
+
+## Font Families
+
+There are few font families available on the Responsible AI website.
+
+<FontFamilies />
+
+### Base
+
+The font `--font-family--base` is used for all regular typography. This will include things like paragraphs, lists, links, etc.
+
+### Display
+
+The font `--font-family--display` is used for all types of display text. This will include things like headings, or text that represents the begining of a piece of content.
+
+## Font Sizes
+
+Font sizes should also be limited as to keep consistency throughout the website.
+
+Font sizes are all based off of a calculation of the base font size. This will allow for much eaiser responsiveness with text.
+
+<FontSizes />
