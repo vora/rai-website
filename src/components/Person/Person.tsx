@@ -29,7 +29,9 @@ export function Person({
   return (
     <>
       <button type="button" className={personClasses} onClick={handleClick}>
-        <Avatar name={name} gatsbyImageData={photo?.gatsbyImageData} />
+        <div>
+          <Avatar name={name} gatsbyImageData={photo?.gatsbyImageData} />
+        </div>
         <div className={styles.text}>
           <div className={styles.name}>{name}</div>
           {userRole && <Role role={userRole} />}
