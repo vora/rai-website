@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
+import classnames from "classnames";
 import { Avatar } from "@/components/Avatar";
 import { Modal } from "@/components/Modal";
 import { Heading } from "@/components/Heading";
 import { Divider } from "@/components/Divider";
 import { PeopleFragmentFragment } from "@/graphql/graphql-types";
+import { RichText, RichTextContent } from "@/components/RichText";
 
-import classnames from "classnames";
 import styles from "./Person.module.css";
-import { RichText, RichTextContent } from "../RichText";
 
 export function Person({
   name,

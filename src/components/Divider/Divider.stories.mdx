@@ -28,3 +28,13 @@ import { Divider } from "@/components/Divider";
 <Canvas>
   <Story name="Default">{(args) => <Divider {...args} />}</Story>
 </Canvas>
+
+## Spacing
+
+You can change the how much space a divider creates by using the `spacing` prop.
+
+<Canvas>
+  <Story name="Spacing" args={{ spacing: "small" }}>
+    {(args) => <Divider {...args} />}
+  </Story>
+</Canvas>

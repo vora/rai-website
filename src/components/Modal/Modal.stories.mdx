@@ -12,7 +12,7 @@ import { Modal } from ".";
 
 # Modal
 
-A `Modal` is an overlay that allows users to view, information that doesn't require a page to be built. It also prevent users from interacting with the rest of the page until a specific action is taken.
+A `Modal` is an overlay that allows users to view additional information. It also prevent users from interacting with the rest of the page until it has been closed.
 
 ## Usage
 
@@ -23,6 +23,10 @@ import { Modal } from "@/components/Modal";
 ## Props
 
 <ArgsTable component={Modal} />
+
+## Accessibility Notes
+
+- The content inside of a `Modal` is **not** SEO friendly. Do not rely on a `Modal` to show critical or important information.
 
 ## Example
 

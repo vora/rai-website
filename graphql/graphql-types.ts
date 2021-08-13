@@ -3793,9 +3793,32 @@ export type ContentfulBlockListOfPeople = ContentfulReference & ContentfulEntry 
   contentful_id: Scalars['String'];
   id: Scalars['ID'];
   node_locale: Scalars['String'];
+  title?: Maybe<Scalars['String']>;
+  includeInterestedInJoiningButton?: Maybe<Scalars['Boolean']>;
+  people?: Maybe<Array<Maybe<ContentfulPeople>>>;
+  spaceId?: Maybe<Scalars['String']>;
+  createdAt?: Maybe<Scalars['Date']>;
+  updatedAt?: Maybe<Scalars['Date']>;
+  sys?: Maybe<ContentfulBlockListOfPeopleSys>;
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
+};
+
+
+export type ContentfulBlockListOfPeopleCreatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+
+export type ContentfulBlockListOfPeopleUpdatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
 };
 
 export type ContentfulBlockListOfPeopleConnection = {
@@ -3831,6 +3854,150 @@ export enum ContentfulBlockListOfPeopleFieldsEnum {
   contentful_id = 'contentful_id',
   id = 'id',
   node_locale = 'node_locale',
+  title = 'title',
+  includeInterestedInJoiningButton = 'includeInterestedInJoiningButton',
+  people = 'people',
+  people___contentful_id = 'people___contentful_id',
+  people___id = 'people___id',
+  people___node_locale = 'people___node_locale',
+  people___name = 'people___name',
+  people___userRole = 'people___userRole',
+  people___biography___raw = 'people___biography___raw',
+  people___block__list_of_people = 'people___block__list_of_people',
+  people___block__list_of_people___contentful_id = 'people___block__list_of_people___contentful_id',
+  people___block__list_of_people___id = 'people___block__list_of_people___id',
+  people___block__list_of_people___node_locale = 'people___block__list_of_people___node_locale',
+  people___block__list_of_people___title = 'people___block__list_of_people___title',
+  people___block__list_of_people___includeInterestedInJoiningButton = 'people___block__list_of_people___includeInterestedInJoiningButton',
+  people___block__list_of_people___people = 'people___block__list_of_people___people',
+  people___block__list_of_people___people___contentful_id = 'people___block__list_of_people___people___contentful_id',
+  people___block__list_of_people___people___id = 'people___block__list_of_people___people___id',
+  people___block__list_of_people___people___node_locale = 'people___block__list_of_people___people___node_locale',
+  people___block__list_of_people___people___name = 'people___block__list_of_people___people___name',
+  people___block__list_of_people___people___userRole = 'people___block__list_of_people___people___userRole',
+  people___block__list_of_people___people___block__list_of_people = 'people___block__list_of_people___people___block__list_of_people',
+  people___block__list_of_people___people___spaceId = 'people___block__list_of_people___people___spaceId',
+  people___block__list_of_people___people___createdAt = 'people___block__list_of_people___people___createdAt',
+  people___block__list_of_people___people___updatedAt = 'people___block__list_of_people___people___updatedAt',
+  people___block__list_of_people___people___children = 'people___block__list_of_people___people___children',
+  people___block__list_of_people___spaceId = 'people___block__list_of_people___spaceId',
+  people___block__list_of_people___createdAt = 'people___block__list_of_people___createdAt',
+  people___block__list_of_people___updatedAt = 'people___block__list_of_people___updatedAt',
+  people___block__list_of_people___sys___type = 'people___block__list_of_people___sys___type',
+  people___block__list_of_people___sys___revision = 'people___block__list_of_people___sys___revision',
+  people___block__list_of_people___parent___id = 'people___block__list_of_people___parent___id',
+  people___block__list_of_people___parent___children = 'people___block__list_of_people___parent___children',
+  people___block__list_of_people___children = 'people___block__list_of_people___children',
+  people___block__list_of_people___children___id = 'people___block__list_of_people___children___id',
+  people___block__list_of_people___children___children = 'people___block__list_of_people___children___children',
+  people___block__list_of_people___internal___content = 'people___block__list_of_people___internal___content',
+  people___block__list_of_people___internal___contentDigest = 'people___block__list_of_people___internal___contentDigest',
+  people___block__list_of_people___internal___description = 'people___block__list_of_people___internal___description',
+  people___block__list_of_people___internal___fieldOwners = 'people___block__list_of_people___internal___fieldOwners',
+  people___block__list_of_people___internal___ignoreType = 'people___block__list_of_people___internal___ignoreType',
+  people___block__list_of_people___internal___mediaType = 'people___block__list_of_people___internal___mediaType',
+  people___block__list_of_people___internal___owner = 'people___block__list_of_people___internal___owner',
+  people___block__list_of_people___internal___type = 'people___block__list_of_people___internal___type',
+  people___spaceId = 'people___spaceId',
+  people___createdAt = 'people___createdAt',
+  people___updatedAt = 'people___updatedAt',
+  people___sys___type = 'people___sys___type',
+  people___sys___revision = 'people___sys___revision',
+  people___photo___contentful_id = 'people___photo___contentful_id',
+  people___photo___id = 'people___photo___id',
+  people___photo___spaceId = 'people___photo___spaceId',
+  people___photo___createdAt = 'people___photo___createdAt',
+  people___photo___updatedAt = 'people___photo___updatedAt',
+  people___photo___file___url = 'people___photo___file___url',
+  people___photo___file___fileName = 'people___photo___file___fileName',
+  people___photo___file___contentType = 'people___photo___file___contentType',
+  people___photo___title = 'people___photo___title',
+  people___photo___description = 'people___photo___description',
+  people___photo___node_locale = 'people___photo___node_locale',
+  people___photo___sys___type = 'people___photo___sys___type',
+  people___photo___sys___revision = 'people___photo___sys___revision',
+  people___photo___fixed___base64 = 'people___photo___fixed___base64',
+  people___photo___fixed___tracedSVG = 'people___photo___fixed___tracedSVG',
+  people___photo___fixed___aspectRatio = 'people___photo___fixed___aspectRatio',
+  people___photo___fixed___width = 'people___photo___fixed___width',
+  people___photo___fixed___height = 'people___photo___fixed___height',
+  people___photo___fixed___src = 'people___photo___fixed___src',
+  people___photo___fixed___srcSet = 'people___photo___fixed___srcSet',
+  people___photo___fixed___srcWebp = 'people___photo___fixed___srcWebp',
+  people___photo___fixed___srcSetWebp = 'people___photo___fixed___srcSetWebp',
+  people___photo___fluid___base64 = 'people___photo___fluid___base64',
+  people___photo___fluid___tracedSVG = 'people___photo___fluid___tracedSVG',
+  people___photo___fluid___aspectRatio = 'people___photo___fluid___aspectRatio',
+  people___photo___fluid___src = 'people___photo___fluid___src',
+  people___photo___fluid___srcSet = 'people___photo___fluid___srcSet',
+  people___photo___fluid___srcWebp = 'people___photo___fluid___srcWebp',
+  people___photo___fluid___srcSetWebp = 'people___photo___fluid___srcSetWebp',
+  people___photo___fluid___sizes = 'people___photo___fluid___sizes',
+  people___photo___gatsbyImageData = 'people___photo___gatsbyImageData',
+  people___photo___resize___base64 = 'people___photo___resize___base64',
+  people___photo___resize___tracedSVG = 'people___photo___resize___tracedSVG',
+  people___photo___resize___src = 'people___photo___resize___src',
+  people___photo___resize___width = 'people___photo___resize___width',
+  people___photo___resize___height = 'people___photo___resize___height',
+  people___photo___resize___aspectRatio = 'people___photo___resize___aspectRatio',
+  people___photo___parent___id = 'people___photo___parent___id',
+  people___photo___parent___children = 'people___photo___parent___children',
+  people___photo___children = 'people___photo___children',
+  people___photo___children___id = 'people___photo___children___id',
+  people___photo___children___children = 'people___photo___children___children',
+  people___photo___internal___content = 'people___photo___internal___content',
+  people___photo___internal___contentDigest = 'people___photo___internal___contentDigest',
+  people___photo___internal___description = 'people___photo___internal___description',
+  people___photo___internal___fieldOwners = 'people___photo___internal___fieldOwners',
+  people___photo___internal___ignoreType = 'people___photo___internal___ignoreType',
+  people___photo___internal___mediaType = 'people___photo___internal___mediaType',
+  people___photo___internal___owner = 'people___photo___internal___owner',
+  people___photo___internal___type = 'people___photo___internal___type',
+  people___parent___id = 'people___parent___id',
+  people___parent___parent___id = 'people___parent___parent___id',
+  people___parent___parent___children = 'people___parent___parent___children',
+  people___parent___children = 'people___parent___children',
+  people___parent___children___id = 'people___parent___children___id',
+  people___parent___children___children = 'people___parent___children___children',
+  people___parent___internal___content = 'people___parent___internal___content',
+  people___parent___internal___contentDigest = 'people___parent___internal___contentDigest',
+  people___parent___internal___description = 'people___parent___internal___description',
+  people___parent___internal___fieldOwners = 'people___parent___internal___fieldOwners',
+  people___parent___internal___ignoreType = 'people___parent___internal___ignoreType',
+  people___parent___internal___mediaType = 'people___parent___internal___mediaType',
+  people___parent___internal___owner = 'people___parent___internal___owner',
+  people___parent___internal___type = 'people___parent___internal___type',
+  people___children = 'people___children',
+  people___children___id = 'people___children___id',
+  people___children___parent___id = 'people___children___parent___id',
+  people___children___parent___children = 'people___children___parent___children',
+  people___children___children = 'people___children___children',
+  people___children___children___id = 'people___children___children___id',
+  people___children___children___children = 'people___children___children___children',
+  people___children___internal___content = 'people___children___internal___content',
+  people___children___internal___contentDigest = 'people___children___internal___contentDigest',
+  people___children___internal___description = 'people___children___internal___description',
+  people___children___internal___fieldOwners = 'people___children___internal___fieldOwners',
+  people___children___internal___ignoreType = 'people___children___internal___ignoreType',
+  people___children___internal___mediaType = 'people___children___internal___mediaType',
+  people___children___internal___owner = 'people___children___internal___owner',
+  people___children___internal___type = 'people___children___internal___type',
+  people___internal___content = 'people___internal___content',
+  people___internal___contentDigest = 'people___internal___contentDigest',
+  people___internal___description = 'people___internal___description',
+  people___internal___fieldOwners = 'people___internal___fieldOwners',
+  people___internal___ignoreType = 'people___internal___ignoreType',
+  people___internal___mediaType = 'people___internal___mediaType',
+  people___internal___owner = 'people___internal___owner',
+  people___internal___type = 'people___internal___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
   parent___id = 'parent___id',
   parent___parent___id = 'parent___parent___id',
   parent___parent___parent___id = 'parent___parent___parent___id',
@@ -3922,9 +4089,20 @@ export type ContentfulBlockListOfPeopleFilterInput = {
   contentful_id?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  includeInterestedInJoiningButton?: Maybe<BooleanQueryOperatorInput>;
+  people?: Maybe<ContentfulPeopleFilterListInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulBlockListOfPeopleSysFilterInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
+};
+
+export type ContentfulBlockListOfPeopleFilterListInput = {
+  elemMatch?: Maybe<ContentfulBlockListOfPeopleFilterInput>;
 };
 
 export type ContentfulBlockListOfPeopleGroupConnection = {
@@ -3940,6 +4118,41 @@ export type ContentfulBlockListOfPeopleGroupConnection = {
 export type ContentfulBlockListOfPeopleSortInput = {
   fields?: Maybe<Array<Maybe<ContentfulBlockListOfPeopleFieldsEnum>>>;
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulBlockListOfPeopleSys = {
+  __typename?: 'ContentfulBlockListOfPeopleSys';
+  type?: Maybe<Scalars['String']>;
+  revision?: Maybe<Scalars['Int']>;
+  contentType?: Maybe<ContentfulBlockListOfPeopleSysContentType>;
+};
+
+export type ContentfulBlockListOfPeopleSysContentType = {
+  __typename?: 'ContentfulBlockListOfPeopleSysContentType';
+  sys?: Maybe<ContentfulBlockListOfPeopleSysContentTypeSys>;
+};
+
+export type ContentfulBlockListOfPeopleSysContentTypeFilterInput = {
+  sys?: Maybe<ContentfulBlockListOfPeopleSysContentTypeSysFilterInput>;
+};
+
+export type ContentfulBlockListOfPeopleSysContentTypeSys = {
+  __typename?: 'ContentfulBlockListOfPeopleSysContentTypeSys';
+  type?: Maybe<Scalars['String']>;
+  linkType?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockListOfPeopleSysContentTypeSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  linkType?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type ContentfulBlockListOfPeopleSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  revision?: Maybe<IntQueryOperatorInput>;
+  contentType?: Maybe<ContentfulBlockListOfPeopleSysContentTypeFilterInput>;
 };
 
 export type ContentfulBlockResourceList = ContentfulReference & ContentfulEntry & Node & {
@@ -6954,6 +7167,7 @@ export type ContentfulPeople = ContentfulReference & ContentfulEntry & Node & {
   name?: Maybe<Scalars['String']>;
   userRole?: Maybe<Scalars['String']>;
   biography?: Maybe<ContentfulPeopleBiography>;
+  block__list_of_people?: Maybe<Array<Maybe<ContentfulBlockListOfPeople>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
@@ -7025,6 +7239,100 @@ export enum ContentfulPeopleFieldsEnum {
   name = 'name',
   userRole = 'userRole',
   biography___raw = 'biography___raw',
+  block__list_of_people = 'block__list_of_people',
+  block__list_of_people___contentful_id = 'block__list_of_people___contentful_id',
+  block__list_of_people___id = 'block__list_of_people___id',
+  block__list_of_people___node_locale = 'block__list_of_people___node_locale',
+  block__list_of_people___title = 'block__list_of_people___title',
+  block__list_of_people___includeInterestedInJoiningButton = 'block__list_of_people___includeInterestedInJoiningButton',
+  block__list_of_people___people = 'block__list_of_people___people',
+  block__list_of_people___people___contentful_id = 'block__list_of_people___people___contentful_id',
+  block__list_of_people___people___id = 'block__list_of_people___people___id',
+  block__list_of_people___people___node_locale = 'block__list_of_people___people___node_locale',
+  block__list_of_people___people___name = 'block__list_of_people___people___name',
+  block__list_of_people___people___userRole = 'block__list_of_people___people___userRole',
+  block__list_of_people___people___biography___raw = 'block__list_of_people___people___biography___raw',
+  block__list_of_people___people___block__list_of_people = 'block__list_of_people___people___block__list_of_people',
+  block__list_of_people___people___block__list_of_people___contentful_id = 'block__list_of_people___people___block__list_of_people___contentful_id',
+  block__list_of_people___people___block__list_of_people___id = 'block__list_of_people___people___block__list_of_people___id',
+  block__list_of_people___people___block__list_of_people___node_locale = 'block__list_of_people___people___block__list_of_people___node_locale',
+  block__list_of_people___people___block__list_of_people___title = 'block__list_of_people___people___block__list_of_people___title',
+  block__list_of_people___people___block__list_of_people___includeInterestedInJoiningButton = 'block__list_of_people___people___block__list_of_people___includeInterestedInJoiningButton',
+  block__list_of_people___people___block__list_of_people___people = 'block__list_of_people___people___block__list_of_people___people',
+  block__list_of_people___people___block__list_of_people___spaceId = 'block__list_of_people___people___block__list_of_people___spaceId',
+  block__list_of_people___people___block__list_of_people___createdAt = 'block__list_of_people___people___block__list_of_people___createdAt',
+  block__list_of_people___people___block__list_of_people___updatedAt = 'block__list_of_people___people___block__list_of_people___updatedAt',
+  block__list_of_people___people___block__list_of_people___children = 'block__list_of_people___people___block__list_of_people___children',
+  block__list_of_people___people___spaceId = 'block__list_of_people___people___spaceId',
+  block__list_of_people___people___createdAt = 'block__list_of_people___people___createdAt',
+  block__list_of_people___people___updatedAt = 'block__list_of_people___people___updatedAt',
+  block__list_of_people___people___sys___type = 'block__list_of_people___people___sys___type',
+  block__list_of_people___people___sys___revision = 'block__list_of_people___people___sys___revision',
+  block__list_of_people___people___photo___contentful_id = 'block__list_of_people___people___photo___contentful_id',
+  block__list_of_people___people___photo___id = 'block__list_of_people___people___photo___id',
+  block__list_of_people___people___photo___spaceId = 'block__list_of_people___people___photo___spaceId',
+  block__list_of_people___people___photo___createdAt = 'block__list_of_people___people___photo___createdAt',
+  block__list_of_people___people___photo___updatedAt = 'block__list_of_people___people___photo___updatedAt',
+  block__list_of_people___people___photo___title = 'block__list_of_people___people___photo___title',
+  block__list_of_people___people___photo___description = 'block__list_of_people___people___photo___description',
+  block__list_of_people___people___photo___node_locale = 'block__list_of_people___people___photo___node_locale',
+  block__list_of_people___people___photo___gatsbyImageData = 'block__list_of_people___people___photo___gatsbyImageData',
+  block__list_of_people___people___photo___children = 'block__list_of_people___people___photo___children',
+  block__list_of_people___people___parent___id = 'block__list_of_people___people___parent___id',
+  block__list_of_people___people___parent___children = 'block__list_of_people___people___parent___children',
+  block__list_of_people___people___children = 'block__list_of_people___people___children',
+  block__list_of_people___people___children___id = 'block__list_of_people___people___children___id',
+  block__list_of_people___people___children___children = 'block__list_of_people___people___children___children',
+  block__list_of_people___people___internal___content = 'block__list_of_people___people___internal___content',
+  block__list_of_people___people___internal___contentDigest = 'block__list_of_people___people___internal___contentDigest',
+  block__list_of_people___people___internal___description = 'block__list_of_people___people___internal___description',
+  block__list_of_people___people___internal___fieldOwners = 'block__list_of_people___people___internal___fieldOwners',
+  block__list_of_people___people___internal___ignoreType = 'block__list_of_people___people___internal___ignoreType',
+  block__list_of_people___people___internal___mediaType = 'block__list_of_people___people___internal___mediaType',
+  block__list_of_people___people___internal___owner = 'block__list_of_people___people___internal___owner',
+  block__list_of_people___people___internal___type = 'block__list_of_people___people___internal___type',
+  block__list_of_people___spaceId = 'block__list_of_people___spaceId',
+  block__list_of_people___createdAt = 'block__list_of_people___createdAt',
+  block__list_of_people___updatedAt = 'block__list_of_people___updatedAt',
+  block__list_of_people___sys___type = 'block__list_of_people___sys___type',
+  block__list_of_people___sys___revision = 'block__list_of_people___sys___revision',
+  block__list_of_people___parent___id = 'block__list_of_people___parent___id',
+  block__list_of_people___parent___parent___id = 'block__list_of_people___parent___parent___id',
+  block__list_of_people___parent___parent___children = 'block__list_of_people___parent___parent___children',
+  block__list_of_people___parent___children = 'block__list_of_people___parent___children',
+  block__list_of_people___parent___children___id = 'block__list_of_people___parent___children___id',
+  block__list_of_people___parent___children___children = 'block__list_of_people___parent___children___children',
+  block__list_of_people___parent___internal___content = 'block__list_of_people___parent___internal___content',
+  block__list_of_people___parent___internal___contentDigest = 'block__list_of_people___parent___internal___contentDigest',
+  block__list_of_people___parent___internal___description = 'block__list_of_people___parent___internal___description',
+  block__list_of_people___parent___internal___fieldOwners = 'block__list_of_people___parent___internal___fieldOwners',
+  block__list_of_people___parent___internal___ignoreType = 'block__list_of_people___parent___internal___ignoreType',
+  block__list_of_people___parent___internal___mediaType = 'block__list_of_people___parent___internal___mediaType',
+  block__list_of_people___parent___internal___owner = 'block__list_of_people___parent___internal___owner',
+  block__list_of_people___parent___internal___type = 'block__list_of_people___parent___internal___type',
+  block__list_of_people___children = 'block__list_of_people___children',
+  block__list_of_people___children___id = 'block__list_of_people___children___id',
+  block__list_of_people___children___parent___id = 'block__list_of_people___children___parent___id',
+  block__list_of_people___children___parent___children = 'block__list_of_people___children___parent___children',
+  block__list_of_people___children___children = 'block__list_of_people___children___children',
+  block__list_of_people___children___children___id = 'block__list_of_people___children___children___id',
+  block__list_of_people___children___children___children = 'block__list_of_people___children___children___children',
+  block__list_of_people___children___internal___content = 'block__list_of_people___children___internal___content',
+  block__list_of_people___children___internal___contentDigest = 'block__list_of_people___children___internal___contentDigest',
+  block__list_of_people___children___internal___description = 'block__list_of_people___children___internal___description',
+  block__list_of_people___children___internal___fieldOwners = 'block__list_of_people___children___internal___fieldOwners',
+  block__list_of_people___children___internal___ignoreType = 'block__list_of_people___children___internal___ignoreType',
+  block__list_of_people___children___internal___mediaType = 'block__list_of_people___children___internal___mediaType',
+  block__list_of_people___children___internal___owner = 'block__list_of_people___children___internal___owner',
+  block__list_of_people___children___internal___type = 'block__list_of_people___children___internal___type',
+  block__list_of_people___internal___content = 'block__list_of_people___internal___content',
+  block__list_of_people___internal___contentDigest = 'block__list_of_people___internal___contentDigest',
+  block__list_of_people___internal___description = 'block__list_of_people___internal___description',
+  block__list_of_people___internal___fieldOwners = 'block__list_of_people___internal___fieldOwners',
+  block__list_of_people___internal___ignoreType = 'block__list_of_people___internal___ignoreType',
+  block__list_of_people___internal___mediaType = 'block__list_of_people___internal___mediaType',
+  block__list_of_people___internal___owner = 'block__list_of_people___internal___owner',
+  block__list_of_people___internal___type = 'block__list_of_people___internal___type',
   spaceId = 'spaceId',
   createdAt = 'createdAt',
   updatedAt = 'updatedAt',
@@ -7202,6 +7510,7 @@ export type ContentfulPeopleFilterInput = {
   name?: Maybe<StringQueryOperatorInput>;
   userRole?: Maybe<StringQueryOperatorInput>;
   biography?: Maybe<ContentfulPeopleBiographyFilterInput>;
+  block__list_of_people?: Maybe<ContentfulBlockListOfPeopleFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
@@ -7210,6 +7519,10 @@ export type ContentfulPeopleFilterInput = {
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
+};
+
+export type ContentfulPeopleFilterListInput = {
+  elemMatch?: Maybe<ContentfulPeopleFilterInput>;
 };
 
 export type ContentfulPeopleGroupConnection = {
@@ -9682,6 +9995,7 @@ export type QueryContentfulPeopleArgs = {
   name?: Maybe<StringQueryOperatorInput>;
   userRole?: Maybe<StringQueryOperatorInput>;
   biography?: Maybe<ContentfulPeopleBiographyFilterInput>;
+  block__list_of_people?: Maybe<ContentfulBlockListOfPeopleFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
@@ -9705,6 +10019,13 @@ export type QueryContentfulBlockListOfPeopleArgs = {
   contentful_id?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  includeInterestedInJoiningButton?: Maybe<BooleanQueryOperatorInput>;
+  people?: Maybe<ContentfulPeopleFilterListInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulBlockListOfPeopleSysFilterInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
