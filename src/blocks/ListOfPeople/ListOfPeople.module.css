@@ -1,0 +1,26 @@
+.wrapper {
+  background: var(--color--ghost);
+  padding: var(--space--xxlarge) 0;
+}
+
+.wrapper + .wrapper {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.people {
+  display: grid;
+  gap: var(--space--base);
+}
+
+@media (min-width: 1024px) {
+  .people {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .people {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
