@@ -1,0 +1,36 @@
+.member {
+  margin-bottom: var(--space--xlarge);
+}
+
+.list {
+  --members--list-columns: 3;
+
+  display: grid;
+  grid-template-columns: repeat(var(--members--list-columns), auto);
+  gap: var(--space--large);
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space--large);
+  padding: 0 var(--space--base);
+}
+
+@media (min-width: 1024px) {
+  .list {
+    --members--list-columns: 4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hasThree {
+    --members--list-columns: 3;
+  }
+}
+
+.item {
+  filter: grayscale(1);
+  transition: filter 300ms;
+}
+
+.item:hover {
+  filter: grayscale(0);
+}

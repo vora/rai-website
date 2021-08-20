@@ -69,7 +69,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
        * they are fully converted to Contentful. Hopefully we
        * can remove this soon.
        */
-      const safePages = [...blogPages, "certification"];
+      const safePages = [...blogPages, "certification", "about"];
 
       /**
        * If the slug is not in the safePages array, we
