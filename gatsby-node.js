@@ -100,7 +100,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
        * Set up the component for the calendar page
        */
       if (node.slug === "calendar") {
-        component = path.resolve(`./src/pages/calendar.tsx`);
+        component = path.resolve(`./src/templates/calendar.tsx`);
       }
 
       createPage({
