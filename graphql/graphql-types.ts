@@ -14276,6 +14276,20 @@ export type AllContentfulAssetsQuery = (
   ) }
 );
 
+export type CalendarQueryQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type CalendarQueryQuery = (
+  { __typename?: 'Query' }
+  & { page?: Maybe<(
+    { __typename?: 'ContentfulPage' }
+    & PageFragmentFragment
+    & ContentfulBlocksFragmentFragment
+  )> }
+);
+
 export type BlogTemplateQueryQueryVariables = Exact<{
   slug: Scalars['String'];
   category: Scalars['String'];

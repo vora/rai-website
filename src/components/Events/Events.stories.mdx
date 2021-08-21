@@ -1,0 +1,26 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Events } from ".";
+
+<Meta title="components/Events" component={Events} />
+
+# Events
+
+`Events` is used to display a list of upcoming events.
+
+For the time being, this data is hard-coded in the `eventItems.ts` file.
+
+## Usage
+
+```tsx
+import { Events } from "@/components/Events";
+```
+
+## Props
+
+<ArgsTable component={Events} />
+
+## Example
+
+<Canvas>
+  <Story name="Default">{(args) => <Events />}</Story>
+</Canvas>
