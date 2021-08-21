@@ -69,7 +69,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
        * they are fully converted to Contentful. Hopefully we
        * can remove this soon.
        */
-      const safePages = [...blogPages, "certification", "about"];
+      const safePages = [...blogPages, "certification", "about", "calendar"];
 
       /**
        * If the slug is not in the safePages array, we
@@ -94,6 +94,13 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
         if (node.slug === "blog") {
           context.category = "Blog";
         }
+      }
+
+      /**
+       * Set up the component for the calendar page
+       */
+      if (node.slug === "calendar") {
+        component = path.resolve(`./src/pages/calendar.tsx`);
       }
 
       createPage({
