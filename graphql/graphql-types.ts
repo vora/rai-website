@@ -14313,6 +14313,20 @@ export type CalendarQueryQuery = (
   )> }
 );
 
+export type FaqQueryQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type FaqQueryQuery = (
+  { __typename?: 'Query' }
+  & { page?: Maybe<(
+    { __typename?: 'ContentfulPage' }
+    & PageFragmentFragment
+    & ContentfulBlocksFragmentFragment
+  )> }
+);
+
 export type PageFragmentFragment = (
   { __typename?: 'ContentfulPage' }
   & Pick<ContentfulPage, 'title' | 'seoTitle' | 'seoDescription'>

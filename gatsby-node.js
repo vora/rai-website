@@ -3,8 +3,9 @@
  * There is probably a better way to do this that we should
  * look into at some point.
  */
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
+const fs = require("fs");
 
 exports.createPages = ({ graphql, actions: { createPage } }) => {
   return graphql(`
@@ -69,7 +70,13 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
        * they are fully converted to Contentful. Hopefully we
        * can remove this soon.
        */
-      const safePages = [...blogPages, "certification", "about", "calendar"];
+      const safePages = [
+        ...blogPages,
+        "certification",
+        "about",
+        "calendar",
+        "faq",
+      ];
 
       /**
        * If the slug is not in the safePages array, we
@@ -94,13 +101,12 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
         if (node.slug === "blog") {
           context.category = "Blog";
         }
-      }
-
-      /**
-       * Set up the component for the calendar page
-       */
-      if (node.slug === "calendar") {
-        component = path.resolve(`./src/templates/calendar.tsx`);
+      } else if (fs.existsSync(`./src/templates/${node.slug}.tsx`)) {
+        /**
+         * Set up the component if a file matching
+         * the slug exists in templates
+         */
+        component = path.resolve(`./src/templates/${node.slug}.tsx`);
       }
 
       createPage({
