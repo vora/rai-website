@@ -3,6 +3,9 @@ import { graphql } from "gatsby";
 import { Layout } from "@/components/Layout";
 import { ContentfulBlocks } from "@/components/ContentfulBlocks";
 import { FaqQueryQuery } from "@/graphql/graphql-types";
+import { Faqs } from "@/components/Faqs";
+import { PageTitle } from "@/components/PageTitle";
+import { Container } from "@/components/Container";
 
 interface FaqProps {
   data: FaqQueryQuery;
@@ -16,6 +19,10 @@ function FAQ({ data }: FaqProps) {
       title={page?.seoTitle || page?.title}
       description={page?.seoDescription}
     >
+      <Container size="small">
+        <PageTitle title={page?.title || "FAQs"} />
+      </Container>
+      <Faqs />
       {page?.blocks && <ContentfulBlocks blocks={page.blocks} />}
     </Layout>
   );
