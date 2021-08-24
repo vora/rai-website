@@ -1,0 +1,33 @@
+.faqs {
+  margin-bottom: var(--space--xlarge);
+}
+
+@media (min-width: 1024px) {
+  .faqs {
+    margin-bottom: var(--space--xxlarge);
+  }
+}
+
+.question {
+  margin: var(--space--large) 0;
+}
+
+@media (min-width: 1024px) {
+  .question {
+    margin: var(--space--xlarge) 0;
+  }
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space--small);
+  font-size: var(--font-size--xlarge);
+  cursor: pointer;
+  list-style: none;
+  padding-bottom: var(--space--small);
+}
+
+.question[open] .summary {
+  border-bottom: 1px solid var(--color--ghost);
+}
