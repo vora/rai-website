@@ -820,6 +820,7 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   page___id = 'page___id',
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
+  page___subtitle = 'page___subtitle',
   page___slug = 'page___slug',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
@@ -836,6 +837,7 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   page___block__resource_list___headingLink___id = 'page___block__resource_list___headingLink___id',
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
+  page___block__resource_list___headingLink___subtitle = 'page___block__resource_list___headingLink___subtitle',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
@@ -866,6 +868,7 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   page___block__resource_list___page___id = 'page___block__resource_list___page___id',
   page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
   page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___subtitle = 'page___block__resource_list___page___subtitle',
   page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
   page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
   page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
@@ -1317,6 +1320,7 @@ export enum ContentfulBlockContentFieldsEnum {
   page___id = 'page___id',
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
+  page___subtitle = 'page___subtitle',
   page___slug = 'page___slug',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
@@ -1333,6 +1337,7 @@ export enum ContentfulBlockContentFieldsEnum {
   page___block__resource_list___headingLink___id = 'page___block__resource_list___headingLink___id',
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
+  page___block__resource_list___headingLink___subtitle = 'page___block__resource_list___headingLink___subtitle',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
@@ -1363,6 +1368,7 @@ export enum ContentfulBlockContentFieldsEnum {
   page___block__resource_list___page___id = 'page___block__resource_list___page___id',
   page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
   page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___subtitle = 'page___block__resource_list___page___subtitle',
   page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
   page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
   page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
@@ -1784,6 +1790,7 @@ export enum ContentfulBlockContentListFieldsEnum {
   page___id = 'page___id',
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
+  page___subtitle = 'page___subtitle',
   page___slug = 'page___slug',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
@@ -1800,6 +1807,7 @@ export enum ContentfulBlockContentListFieldsEnum {
   page___block__resource_list___headingLink___id = 'page___block__resource_list___headingLink___id',
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
+  page___block__resource_list___headingLink___subtitle = 'page___block__resource_list___headingLink___subtitle',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
@@ -1830,6 +1838,7 @@ export enum ContentfulBlockContentListFieldsEnum {
   page___block__resource_list___page___id = 'page___block__resource_list___page___id',
   page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
   page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___subtitle = 'page___block__resource_list___page___subtitle',
   page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
   page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
   page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
@@ -2520,6 +2529,7 @@ export enum ContentfulBlockImageBandFieldsEnum {
   page___id = 'page___id',
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
+  page___subtitle = 'page___subtitle',
   page___slug = 'page___slug',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
@@ -2536,6 +2546,7 @@ export enum ContentfulBlockImageBandFieldsEnum {
   page___block__resource_list___headingLink___id = 'page___block__resource_list___headingLink___id',
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
+  page___block__resource_list___headingLink___subtitle = 'page___block__resource_list___headingLink___subtitle',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
@@ -2566,6 +2577,7 @@ export enum ContentfulBlockImageBandFieldsEnum {
   page___block__resource_list___page___id = 'page___block__resource_list___page___id',
   page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
   page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___subtitle = 'page___block__resource_list___page___subtitle',
   page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
   page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
   page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
@@ -3081,6 +3093,7 @@ export enum ContentfulBlockJumbotronFieldsEnum {
   page___id = 'page___id',
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
+  page___subtitle = 'page___subtitle',
   page___slug = 'page___slug',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
@@ -3097,6 +3110,7 @@ export enum ContentfulBlockJumbotronFieldsEnum {
   page___block__resource_list___headingLink___id = 'page___block__resource_list___headingLink___id',
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
+  page___block__resource_list___headingLink___subtitle = 'page___block__resource_list___headingLink___subtitle',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
@@ -3127,6 +3141,7 @@ export enum ContentfulBlockJumbotronFieldsEnum {
   page___block__resource_list___page___id = 'page___block__resource_list___page___id',
   page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
   page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___subtitle = 'page___block__resource_list___page___subtitle',
   page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
   page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
   page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
@@ -3681,6 +3696,7 @@ export enum ContentfulBlockListOfPeopleFieldsEnum {
   people___block__list_of_people___page___id = 'people___block__list_of_people___page___id',
   people___block__list_of_people___page___node_locale = 'people___block__list_of_people___page___node_locale',
   people___block__list_of_people___page___title = 'people___block__list_of_people___page___title',
+  people___block__list_of_people___page___subtitle = 'people___block__list_of_people___page___subtitle',
   people___block__list_of_people___page___slug = 'people___block__list_of_people___page___slug',
   people___block__list_of_people___page___spaceId = 'people___block__list_of_people___page___spaceId',
   people___block__list_of_people___page___createdAt = 'people___block__list_of_people___page___createdAt',
@@ -3749,6 +3765,7 @@ export enum ContentfulBlockListOfPeopleFieldsEnum {
   page___id = 'page___id',
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
+  page___subtitle = 'page___subtitle',
   page___slug = 'page___slug',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
@@ -3765,6 +3782,7 @@ export enum ContentfulBlockListOfPeopleFieldsEnum {
   page___block__resource_list___headingLink___id = 'page___block__resource_list___headingLink___id',
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
+  page___block__resource_list___headingLink___subtitle = 'page___block__resource_list___headingLink___subtitle',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
@@ -3795,6 +3813,7 @@ export enum ContentfulBlockListOfPeopleFieldsEnum {
   page___block__resource_list___page___id = 'page___block__resource_list___page___id',
   page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
   page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___subtitle = 'page___block__resource_list___page___subtitle',
   page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
   page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
   page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
@@ -4170,6 +4189,7 @@ export enum ContentfulBlockMembersFieldsEnum {
   members___block__members___page___id = 'members___block__members___page___id',
   members___block__members___page___node_locale = 'members___block__members___page___node_locale',
   members___block__members___page___title = 'members___block__members___page___title',
+  members___block__members___page___subtitle = 'members___block__members___page___subtitle',
   members___block__members___page___slug = 'members___block__members___page___slug',
   members___block__members___page___spaceId = 'members___block__members___page___spaceId',
   members___block__members___page___createdAt = 'members___block__members___page___createdAt',
@@ -4243,6 +4263,7 @@ export enum ContentfulBlockMembersFieldsEnum {
   page___id = 'page___id',
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
+  page___subtitle = 'page___subtitle',
   page___slug = 'page___slug',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
@@ -4259,6 +4280,7 @@ export enum ContentfulBlockMembersFieldsEnum {
   page___block__resource_list___headingLink___id = 'page___block__resource_list___headingLink___id',
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
+  page___block__resource_list___headingLink___subtitle = 'page___block__resource_list___headingLink___subtitle',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
@@ -4289,6 +4311,7 @@ export enum ContentfulBlockMembersFieldsEnum {
   page___block__resource_list___page___id = 'page___block__resource_list___page___id',
   page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
   page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___subtitle = 'page___block__resource_list___page___subtitle',
   page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
   page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
   page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
@@ -4594,6 +4617,7 @@ export enum ContentfulBlockResourceListFieldsEnum {
   headingLink___id = 'headingLink___id',
   headingLink___node_locale = 'headingLink___node_locale',
   headingLink___title = 'headingLink___title',
+  headingLink___subtitle = 'headingLink___subtitle',
   headingLink___slug = 'headingLink___slug',
   headingLink___spaceId = 'headingLink___spaceId',
   headingLink___createdAt = 'headingLink___createdAt',
@@ -4610,6 +4634,7 @@ export enum ContentfulBlockResourceListFieldsEnum {
   headingLink___block__resource_list___headingLink___id = 'headingLink___block__resource_list___headingLink___id',
   headingLink___block__resource_list___headingLink___node_locale = 'headingLink___block__resource_list___headingLink___node_locale',
   headingLink___block__resource_list___headingLink___title = 'headingLink___block__resource_list___headingLink___title',
+  headingLink___block__resource_list___headingLink___subtitle = 'headingLink___block__resource_list___headingLink___subtitle',
   headingLink___block__resource_list___headingLink___slug = 'headingLink___block__resource_list___headingLink___slug',
   headingLink___block__resource_list___headingLink___spaceId = 'headingLink___block__resource_list___headingLink___spaceId',
   headingLink___block__resource_list___headingLink___createdAt = 'headingLink___block__resource_list___headingLink___createdAt',
@@ -4640,6 +4665,7 @@ export enum ContentfulBlockResourceListFieldsEnum {
   headingLink___block__resource_list___page___id = 'headingLink___block__resource_list___page___id',
   headingLink___block__resource_list___page___node_locale = 'headingLink___block__resource_list___page___node_locale',
   headingLink___block__resource_list___page___title = 'headingLink___block__resource_list___page___title',
+  headingLink___block__resource_list___page___subtitle = 'headingLink___block__resource_list___page___subtitle',
   headingLink___block__resource_list___page___slug = 'headingLink___block__resource_list___page___slug',
   headingLink___block__resource_list___page___spaceId = 'headingLink___block__resource_list___page___spaceId',
   headingLink___block__resource_list___page___createdAt = 'headingLink___block__resource_list___page___createdAt',
@@ -4870,6 +4896,7 @@ export enum ContentfulBlockResourceListFieldsEnum {
   blog_post___resources___headingLink___id = 'blog_post___resources___headingLink___id',
   blog_post___resources___headingLink___node_locale = 'blog_post___resources___headingLink___node_locale',
   blog_post___resources___headingLink___title = 'blog_post___resources___headingLink___title',
+  blog_post___resources___headingLink___subtitle = 'blog_post___resources___headingLink___subtitle',
   blog_post___resources___headingLink___slug = 'blog_post___resources___headingLink___slug',
   blog_post___resources___headingLink___spaceId = 'blog_post___resources___headingLink___spaceId',
   blog_post___resources___headingLink___createdAt = 'blog_post___resources___headingLink___createdAt',
@@ -4900,6 +4927,7 @@ export enum ContentfulBlockResourceListFieldsEnum {
   blog_post___resources___page___id = 'blog_post___resources___page___id',
   blog_post___resources___page___node_locale = 'blog_post___resources___page___node_locale',
   blog_post___resources___page___title = 'blog_post___resources___page___title',
+  blog_post___resources___page___subtitle = 'blog_post___resources___page___subtitle',
   blog_post___resources___page___slug = 'blog_post___resources___page___slug',
   blog_post___resources___page___spaceId = 'blog_post___resources___page___spaceId',
   blog_post___resources___page___createdAt = 'blog_post___resources___page___createdAt',
@@ -4937,6 +4965,7 @@ export enum ContentfulBlockResourceListFieldsEnum {
   blog_post___block__resource_list___headingLink___id = 'blog_post___block__resource_list___headingLink___id',
   blog_post___block__resource_list___headingLink___node_locale = 'blog_post___block__resource_list___headingLink___node_locale',
   blog_post___block__resource_list___headingLink___title = 'blog_post___block__resource_list___headingLink___title',
+  blog_post___block__resource_list___headingLink___subtitle = 'blog_post___block__resource_list___headingLink___subtitle',
   blog_post___block__resource_list___headingLink___slug = 'blog_post___block__resource_list___headingLink___slug',
   blog_post___block__resource_list___headingLink___spaceId = 'blog_post___block__resource_list___headingLink___spaceId',
   blog_post___block__resource_list___headingLink___createdAt = 'blog_post___block__resource_list___headingLink___createdAt',
@@ -4967,6 +4996,7 @@ export enum ContentfulBlockResourceListFieldsEnum {
   blog_post___block__resource_list___page___id = 'blog_post___block__resource_list___page___id',
   blog_post___block__resource_list___page___node_locale = 'blog_post___block__resource_list___page___node_locale',
   blog_post___block__resource_list___page___title = 'blog_post___block__resource_list___page___title',
+  blog_post___block__resource_list___page___subtitle = 'blog_post___block__resource_list___page___subtitle',
   blog_post___block__resource_list___page___slug = 'blog_post___block__resource_list___page___slug',
   blog_post___block__resource_list___page___spaceId = 'blog_post___block__resource_list___page___spaceId',
   blog_post___block__resource_list___page___createdAt = 'blog_post___block__resource_list___page___createdAt',
@@ -5068,6 +5098,7 @@ export enum ContentfulBlockResourceListFieldsEnum {
   page___id = 'page___id',
   page___node_locale = 'page___node_locale',
   page___title = 'page___title',
+  page___subtitle = 'page___subtitle',
   page___slug = 'page___slug',
   page___spaceId = 'page___spaceId',
   page___createdAt = 'page___createdAt',
@@ -5084,6 +5115,7 @@ export enum ContentfulBlockResourceListFieldsEnum {
   page___block__resource_list___headingLink___id = 'page___block__resource_list___headingLink___id',
   page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
   page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
+  page___block__resource_list___headingLink___subtitle = 'page___block__resource_list___headingLink___subtitle',
   page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
   page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
   page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
@@ -5114,6 +5146,7 @@ export enum ContentfulBlockResourceListFieldsEnum {
   page___block__resource_list___page___id = 'page___block__resource_list___page___id',
   page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
   page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___subtitle = 'page___block__resource_list___page___subtitle',
   page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
   page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
   page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
@@ -5674,6 +5707,7 @@ export enum ContentfulBlogPostFieldsEnum {
   author___block__list_of_people___page___id = 'author___block__list_of_people___page___id',
   author___block__list_of_people___page___node_locale = 'author___block__list_of_people___page___node_locale',
   author___block__list_of_people___page___title = 'author___block__list_of_people___page___title',
+  author___block__list_of_people___page___subtitle = 'author___block__list_of_people___page___subtitle',
   author___block__list_of_people___page___slug = 'author___block__list_of_people___page___slug',
   author___block__list_of_people___page___spaceId = 'author___block__list_of_people___page___spaceId',
   author___block__list_of_people___page___createdAt = 'author___block__list_of_people___page___createdAt',
@@ -5869,6 +5903,7 @@ export enum ContentfulBlogPostFieldsEnum {
   resources___headingLink___id = 'resources___headingLink___id',
   resources___headingLink___node_locale = 'resources___headingLink___node_locale',
   resources___headingLink___title = 'resources___headingLink___title',
+  resources___headingLink___subtitle = 'resources___headingLink___subtitle',
   resources___headingLink___slug = 'resources___headingLink___slug',
   resources___headingLink___spaceId = 'resources___headingLink___spaceId',
   resources___headingLink___createdAt = 'resources___headingLink___createdAt',
@@ -5992,6 +6027,7 @@ export enum ContentfulBlogPostFieldsEnum {
   resources___page___id = 'resources___page___id',
   resources___page___node_locale = 'resources___page___node_locale',
   resources___page___title = 'resources___page___title',
+  resources___page___subtitle = 'resources___page___subtitle',
   resources___page___slug = 'resources___page___slug',
   resources___page___spaceId = 'resources___page___spaceId',
   resources___page___createdAt = 'resources___page___createdAt',
@@ -6078,6 +6114,7 @@ export enum ContentfulBlogPostFieldsEnum {
   block__resource_list___headingLink___id = 'block__resource_list___headingLink___id',
   block__resource_list___headingLink___node_locale = 'block__resource_list___headingLink___node_locale',
   block__resource_list___headingLink___title = 'block__resource_list___headingLink___title',
+  block__resource_list___headingLink___subtitle = 'block__resource_list___headingLink___subtitle',
   block__resource_list___headingLink___slug = 'block__resource_list___headingLink___slug',
   block__resource_list___headingLink___spaceId = 'block__resource_list___headingLink___spaceId',
   block__resource_list___headingLink___createdAt = 'block__resource_list___headingLink___createdAt',
@@ -6201,6 +6238,7 @@ export enum ContentfulBlogPostFieldsEnum {
   block__resource_list___page___id = 'block__resource_list___page___id',
   block__resource_list___page___node_locale = 'block__resource_list___page___node_locale',
   block__resource_list___page___title = 'block__resource_list___page___title',
+  block__resource_list___page___subtitle = 'block__resource_list___page___subtitle',
   block__resource_list___page___slug = 'block__resource_list___page___slug',
   block__resource_list___page___spaceId = 'block__resource_list___page___spaceId',
   block__resource_list___page___createdAt = 'block__resource_list___page___createdAt',
@@ -7352,6 +7390,7 @@ export enum ContentfulMembersGroupFieldsEnum {
   block__members___page___id = 'block__members___page___id',
   block__members___page___node_locale = 'block__members___page___node_locale',
   block__members___page___title = 'block__members___page___title',
+  block__members___page___subtitle = 'block__members___page___subtitle',
   block__members___page___slug = 'block__members___page___slug',
   block__members___page___spaceId = 'block__members___page___spaceId',
   block__members___page___createdAt = 'block__members___page___createdAt',
@@ -7825,6 +7864,7 @@ export type ContentfulPage = ContentfulReference & ContentfulEntry & Node & {
   id: Scalars['ID'];
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
+  subtitle?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
   blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListContentfulBlockImageBandContentfulBlockJumbotronContentfulBlockListOfPeopleContentfulBlockMembersContentfulBlockResourceListUnion>>>;
   spaceId?: Maybe<Scalars['String']>;
@@ -7889,6 +7929,7 @@ export enum ContentfulPageFieldsEnum {
   id = 'id',
   node_locale = 'node_locale',
   title = 'title',
+  subtitle = 'subtitle',
   slug = 'slug',
   spaceId = 'spaceId',
   createdAt = 'createdAt',
@@ -7908,6 +7949,7 @@ export enum ContentfulPageFieldsEnum {
   block__resource_list___headingLink___id = 'block__resource_list___headingLink___id',
   block__resource_list___headingLink___node_locale = 'block__resource_list___headingLink___node_locale',
   block__resource_list___headingLink___title = 'block__resource_list___headingLink___title',
+  block__resource_list___headingLink___subtitle = 'block__resource_list___headingLink___subtitle',
   block__resource_list___headingLink___slug = 'block__resource_list___headingLink___slug',
   block__resource_list___headingLink___spaceId = 'block__resource_list___headingLink___spaceId',
   block__resource_list___headingLink___createdAt = 'block__resource_list___headingLink___createdAt',
@@ -8031,6 +8073,7 @@ export enum ContentfulPageFieldsEnum {
   block__resource_list___page___id = 'block__resource_list___page___id',
   block__resource_list___page___node_locale = 'block__resource_list___page___node_locale',
   block__resource_list___page___title = 'block__resource_list___page___title',
+  block__resource_list___page___subtitle = 'block__resource_list___page___subtitle',
   block__resource_list___page___slug = 'block__resource_list___page___slug',
   block__resource_list___page___spaceId = 'block__resource_list___page___spaceId',
   block__resource_list___page___createdAt = 'block__resource_list___page___createdAt',
@@ -8200,6 +8243,7 @@ export type ContentfulPageFilterInput = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
+  subtitle?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
@@ -8588,6 +8632,7 @@ export enum ContentfulPeopleFieldsEnum {
   blog_post___resources___headingLink___id = 'blog_post___resources___headingLink___id',
   blog_post___resources___headingLink___node_locale = 'blog_post___resources___headingLink___node_locale',
   blog_post___resources___headingLink___title = 'blog_post___resources___headingLink___title',
+  blog_post___resources___headingLink___subtitle = 'blog_post___resources___headingLink___subtitle',
   blog_post___resources___headingLink___slug = 'blog_post___resources___headingLink___slug',
   blog_post___resources___headingLink___spaceId = 'blog_post___resources___headingLink___spaceId',
   blog_post___resources___headingLink___createdAt = 'blog_post___resources___headingLink___createdAt',
@@ -8618,6 +8663,7 @@ export enum ContentfulPeopleFieldsEnum {
   blog_post___resources___page___id = 'blog_post___resources___page___id',
   blog_post___resources___page___node_locale = 'blog_post___resources___page___node_locale',
   blog_post___resources___page___title = 'blog_post___resources___page___title',
+  blog_post___resources___page___subtitle = 'blog_post___resources___page___subtitle',
   blog_post___resources___page___slug = 'blog_post___resources___page___slug',
   blog_post___resources___page___spaceId = 'blog_post___resources___page___spaceId',
   blog_post___resources___page___createdAt = 'blog_post___resources___page___createdAt',
@@ -8655,6 +8701,7 @@ export enum ContentfulPeopleFieldsEnum {
   blog_post___block__resource_list___headingLink___id = 'blog_post___block__resource_list___headingLink___id',
   blog_post___block__resource_list___headingLink___node_locale = 'blog_post___block__resource_list___headingLink___node_locale',
   blog_post___block__resource_list___headingLink___title = 'blog_post___block__resource_list___headingLink___title',
+  blog_post___block__resource_list___headingLink___subtitle = 'blog_post___block__resource_list___headingLink___subtitle',
   blog_post___block__resource_list___headingLink___slug = 'blog_post___block__resource_list___headingLink___slug',
   blog_post___block__resource_list___headingLink___spaceId = 'blog_post___block__resource_list___headingLink___spaceId',
   blog_post___block__resource_list___headingLink___createdAt = 'blog_post___block__resource_list___headingLink___createdAt',
@@ -8685,6 +8732,7 @@ export enum ContentfulPeopleFieldsEnum {
   blog_post___block__resource_list___page___id = 'blog_post___block__resource_list___page___id',
   blog_post___block__resource_list___page___node_locale = 'blog_post___block__resource_list___page___node_locale',
   blog_post___block__resource_list___page___title = 'blog_post___block__resource_list___page___title',
+  blog_post___block__resource_list___page___subtitle = 'blog_post___block__resource_list___page___subtitle',
   blog_post___block__resource_list___page___slug = 'blog_post___block__resource_list___page___slug',
   blog_post___block__resource_list___page___spaceId = 'blog_post___block__resource_list___page___spaceId',
   blog_post___block__resource_list___page___createdAt = 'blog_post___block__resource_list___page___createdAt',
@@ -8864,6 +8912,7 @@ export enum ContentfulPeopleFieldsEnum {
   block__list_of_people___page___id = 'block__list_of_people___page___id',
   block__list_of_people___page___node_locale = 'block__list_of_people___page___node_locale',
   block__list_of_people___page___title = 'block__list_of_people___page___title',
+  block__list_of_people___page___subtitle = 'block__list_of_people___page___subtitle',
   block__list_of_people___page___slug = 'block__list_of_people___page___slug',
   block__list_of_people___page___spaceId = 'block__list_of_people___page___spaceId',
   block__list_of_people___page___createdAt = 'block__list_of_people___page___createdAt',
@@ -9211,6 +9260,7 @@ export enum ContentfulResourceFieldsEnum {
   block__resource_list___headingLink___id = 'block__resource_list___headingLink___id',
   block__resource_list___headingLink___node_locale = 'block__resource_list___headingLink___node_locale',
   block__resource_list___headingLink___title = 'block__resource_list___headingLink___title',
+  block__resource_list___headingLink___subtitle = 'block__resource_list___headingLink___subtitle',
   block__resource_list___headingLink___slug = 'block__resource_list___headingLink___slug',
   block__resource_list___headingLink___spaceId = 'block__resource_list___headingLink___spaceId',
   block__resource_list___headingLink___createdAt = 'block__resource_list___headingLink___createdAt',
@@ -9334,6 +9384,7 @@ export enum ContentfulResourceFieldsEnum {
   block__resource_list___page___id = 'block__resource_list___page___id',
   block__resource_list___page___node_locale = 'block__resource_list___page___node_locale',
   block__resource_list___page___title = 'block__resource_list___page___title',
+  block__resource_list___page___subtitle = 'block__resource_list___page___subtitle',
   block__resource_list___page___slug = 'block__resource_list___page___slug',
   block__resource_list___page___spaceId = 'block__resource_list___page___spaceId',
   block__resource_list___page___createdAt = 'block__resource_list___page___createdAt',
@@ -11294,6 +11345,7 @@ export type QueryContentfulPageArgs = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
+  subtitle?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
@@ -14607,8 +14659,15 @@ export type FaqQueryQuery = (
   { __typename?: 'Query' }
   & { page?: Maybe<(
     { __typename?: 'ContentfulPage' }
+    & Pick<ContentfulPage, 'subtitle'>
     & PageFragmentFragment
     & ContentfulBlocksFragmentFragment
+  )>, whitepaper?: Maybe<(
+    { __typename?: 'ContentfulAsset' }
+    & { file?: Maybe<(
+      { __typename?: 'ContentfulAssetFile' }
+      & Pick<ContentfulAssetFile, 'url'>
+    )> }
   )> }
 );
 

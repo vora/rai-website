@@ -26,7 +26,14 @@ import { PageTitle } from "@/components/PageTitle";
 ## Example
 
 <Canvas>
-  <Story name="Default" args={{ title: "The robots are taking over" }}>
+  <Story
+    name="Default"
+    args={{
+      title: "The robots are taking over",
+      subtitle:
+        "A robot must obey the orders given it by human beings except where such orders would conflict with the First Law",
+    }}
+  >
     {(args) => <PageTitle {...args} />}
   </Story>
 </Canvas>

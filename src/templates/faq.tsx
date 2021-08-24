@@ -12,7 +12,7 @@ interface FaqProps {
 }
 
 function FAQ({ data }: FaqProps) {
-  const { page } = data;
+  const { page, whitepaper } = data;
 
   return (
     <Layout
@@ -20,7 +20,17 @@ function FAQ({ data }: FaqProps) {
       description={page?.seoDescription}
     >
       <Container size="small">
-        <PageTitle title={page?.title || "FAQs"} />
+        <PageTitle
+          title={page?.title || "FAQs"}
+          subtitle={page?.subtitle}
+          action={
+            whitepaper?.file && {
+              title: "Read our RAI Whitepaper",
+              url: `https://${whitepaper.file?.url}`,
+              external: true,
+            }
+          }
+        />
       </Container>
       <Faqs />
       {page?.blocks && <ContentfulBlocks blocks={page.blocks} />}
@@ -31,8 +41,14 @@ function FAQ({ data }: FaqProps) {
 export const query = graphql`
   query FaqQuery($slug: String!) {
     page: contentfulPage(slug: { eq: $slug }) {
+      subtitle
       ...PageFragment
       ...ContentfulBlocksFragment
+    }
+    whitepaper: contentfulAsset(title: { eq: "Rai Whitepaper" }) {
+      file {
+        url
+      }
     }
   }
 `;
