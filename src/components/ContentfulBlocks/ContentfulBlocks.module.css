@@ -10,7 +10,12 @@
   margin-bottom: var(--space--xxxlarge);
 }
 
-.blocks > .noSpace + * {
+.blocks > .noSpaceAtAll {
+  margin: 0;
+}
+
+.blocks > .noSpace + *,
+.blocks > .noSpaceAtAll + * {
   margin-top: 0;
 }
 

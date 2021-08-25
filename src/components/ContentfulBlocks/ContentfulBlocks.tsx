@@ -56,7 +56,17 @@ export function ContentfulBlocks({ blocks }: BlockProps) {
           case "ContentfulBlockCallToAction":
             return <CallToAction data={block} key={block.id} />;
           case "ContentfulBlockContent":
-            return <Content data={block} key={block.id} />;
+            return (
+              <div
+                className={
+                  block?.variation === "Full Width Dark"
+                    ? styles.noSpaceAtAll
+                    : ""
+                }
+              >
+                <Content data={block} key={block.id} />
+              </div>
+            );
           case "ContentfulBlockContentList":
             return <ContentList data={block} key={block.id} />;
           case "ContentfulBlockImageBand":
