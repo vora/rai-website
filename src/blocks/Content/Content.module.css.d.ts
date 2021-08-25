@@ -1,7 +1,7 @@
 declare const styles: {
-  readonly "wrapper": string;
-  readonly "fullWidth": string;
-  readonly "content": string;
+  readonly "fullwidth": string;
+  readonly "encapsulated": string;
+  readonly "container": string;
   readonly "button": string;
 };
 export = styles;
