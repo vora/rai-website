@@ -3,6 +3,19 @@
   background: var(--color--ghost);
 }
 
+.fullwidthdark {
+  padding: var(--space--xlarge) 0;
+  background: var(--color--carbon);
+  color: var(--color--blanco);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .encapsulated .container {
   border: 1px solid var(--color--carbon);
   border-radius: 3px;
@@ -15,4 +28,17 @@
 
 .encapsulated .button {
   text-align: center;
+}
+
+.image {
+  text-align: center;
+  margin-top: var(--space--xlarge);
+}
+
+@media (min-width: 1024px) {
+  .image {
+    flex: 0 0 auto;
+    order: -1;
+    margin: 0 var(--space--large) 0 0;
+  }
 }
