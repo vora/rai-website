@@ -1,6 +1,7 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
 import { Icon } from ".";
-import * as icons from "react-feather";
+import * as featherIcons from "react-feather";
+import { customIcons } from "./customIcons";
 
 <Meta
   title="components/Icon"
@@ -10,7 +11,7 @@ import * as icons from "react-feather";
   }}
 />
 
-export function Icons() {
+export function Icons({ icons, size = "base" }) {
   return (
     <table>
       <thead>
@@ -23,7 +24,7 @@ export function Icons() {
         {Object.keys(icons).map((icon) => (
           <tr key={icon}>
             <td>
-              <Icon icon={icon} />
+              <Icon icon={icon} size={size} />
             </td>
             <td>{icon}</td>
           </tr>
@@ -69,4 +70,8 @@ The `Icon` should be sized using the `size` prop and not through CSS. This allow
 
 ## All Icons
 
-<Icons />
+<Icons icons={featherIcons} />
+
+## Custom Icons
+
+<Icons icons={customIcons} size="largest" />
