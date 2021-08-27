@@ -1,20 +1,24 @@
 const { TsconfigPathsPlugin } = require("tsconfig-paths-webpack-plugin");
-const path = require('path')
+const path = require("path");
 
 module.exports = {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: [
+    "../src/content-types/introduction.stories.mdx",
+    "../src/content-types/*.stories.mdx",
+    "../src/**/*.stories.mdx",
+    "../src/**/*.stories.@(js|jsx|ts|tsx)",
+  ],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
     "storybook-css-modules-preset",
-    path.resolve('./.storybook/addon-gatsby.js')
+    path.resolve("./.storybook/addon-gatsby.js"),
   ],
   core: {
     builder: "webpack5",
   },
   webpackFinal: async (config) => {
-
     config.module.rules.push({
       enforce: "pre",
       test: /\.module\.css$/,
