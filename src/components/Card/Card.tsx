@@ -2,12 +2,14 @@ import React from "react";
 import { graphql } from "gatsby";
 import classNames from "classnames";
 import { Heading } from "@/components/Heading";
+import { Text } from "@/components/Text";
 import { RichText, RichTextContent } from "@/components/RichText";
 import { Link } from "@/components/Link";
 import { Icon, IconType } from "@/components/Icon";
 import { CardFragmentFragment } from "@/graphql/graphql-types";
 
 import styles from "./Card.module.css";
+import { Emphasis } from "../Emphasis";
 
 export interface CardProps extends CardFragmentFragment {
   size?: "base" | "large";
@@ -24,6 +26,7 @@ export function Card({
   const cardClasses = classNames(styles.card, {
     [styles.large]: size === "large",
   });
+
   return (
     <>
       <div className={cardClasses}>
@@ -36,7 +39,13 @@ export function Card({
           </div>
         )}
         <div className={styles.content}>
-          <Heading as={size === "large" ? "h3" : "h4"}>{title}</Heading>
+          {size === "large" ? (
+            <Heading as="h3">{title}</Heading>
+          ) : (
+            <Text size="large">
+              <Emphasis variation="bold">{title}</Emphasis>
+            </Text>
+          )}
           {content && <RichText content={content as RichTextContent} />}
           {link && (
             <div className={styles.link}>
@@ -60,7 +69,7 @@ export function Card({
     if (!link) return "";
 
     if (link?.__typename === "ContentfulPage") {
-      url = link.slug;
+      url = `/${link.slug}`;
     }
 
     if (link?.__typename === "ContentfulResource") {
@@ -80,6 +89,7 @@ export const CardFragment = graphql`
     }
     customLinkTitle
     link {
+      __typename
       ... on ContentfulPage {
         slug
         title

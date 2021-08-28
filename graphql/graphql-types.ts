@@ -800,7 +800,7 @@ export type ContentfulBlockCallToActionContentFilterInput = {
   raw?: Maybe<StringQueryOperatorInput>;
 };
 
-export type ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListContentfulBlockImageBandContentfulBlockJumbotronContentfulBlockListOfPeopleContentfulBlockMembersContentfulBlockResourceListUnion = ContentfulBlockCallToAction | ContentfulBlockContent | ContentfulBlockContentList | ContentfulBlockImageBand | ContentfulBlockJumbotron | ContentfulBlockListOfPeople | ContentfulBlockMembers | ContentfulBlockResourceList;
+export type ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListContentfulBlockImageBandContentfulBlockJumbotronContentfulBlockListOfCardsContentfulBlockListOfPeopleContentfulBlockMembersContentfulBlockResourceListUnion = ContentfulBlockCallToAction | ContentfulBlockContent | ContentfulBlockContentList | ContentfulBlockImageBand | ContentfulBlockJumbotron | ContentfulBlockListOfCards | ContentfulBlockListOfPeople | ContentfulBlockMembers | ContentfulBlockResourceList;
 
 export type ContentfulBlockCallToActionEdge = {
   __typename?: 'ContentfulBlockCallToActionEdge';
@@ -886,6 +886,18 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   page___card___content___raw = 'page___card___content___raw',
   page___card___customLinkTitle = 'page___card___customLinkTitle',
   page___card___icon = 'page___card___icon',
+  page___card___block__list_of_cards = 'page___card___block__list_of_cards',
+  page___card___block__list_of_cards___contentful_id = 'page___card___block__list_of_cards___contentful_id',
+  page___card___block__list_of_cards___id = 'page___card___block__list_of_cards___id',
+  page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
+  page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
+  page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
+  page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
+  page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
+  page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
   page___card___updatedAt = 'page___card___updatedAt',
@@ -1541,6 +1553,18 @@ export enum ContentfulBlockContentFieldsEnum {
   page___card___content___raw = 'page___card___content___raw',
   page___card___customLinkTitle = 'page___card___customLinkTitle',
   page___card___icon = 'page___card___icon',
+  page___card___block__list_of_cards = 'page___card___block__list_of_cards',
+  page___card___block__list_of_cards___contentful_id = 'page___card___block__list_of_cards___contentful_id',
+  page___card___block__list_of_cards___id = 'page___card___block__list_of_cards___id',
+  page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
+  page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
+  page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
+  page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
+  page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
+  page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
   page___card___updatedAt = 'page___card___updatedAt',
@@ -2055,6 +2079,18 @@ export enum ContentfulBlockContentListFieldsEnum {
   page___card___content___raw = 'page___card___content___raw',
   page___card___customLinkTitle = 'page___card___customLinkTitle',
   page___card___icon = 'page___card___icon',
+  page___card___block__list_of_cards = 'page___card___block__list_of_cards',
+  page___card___block__list_of_cards___contentful_id = 'page___card___block__list_of_cards___contentful_id',
+  page___card___block__list_of_cards___id = 'page___card___block__list_of_cards___id',
+  page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
+  page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
+  page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
+  page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
+  page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
+  page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
   page___card___updatedAt = 'page___card___updatedAt',
@@ -2777,6 +2813,18 @@ export enum ContentfulBlockImageBandFieldsEnum {
   page___card___content___raw = 'page___card___content___raw',
   page___card___customLinkTitle = 'page___card___customLinkTitle',
   page___card___icon = 'page___card___icon',
+  page___card___block__list_of_cards = 'page___card___block__list_of_cards',
+  page___card___block__list_of_cards___contentful_id = 'page___card___block__list_of_cards___contentful_id',
+  page___card___block__list_of_cards___id = 'page___card___block__list_of_cards___id',
+  page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
+  page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
+  page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
+  page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
+  page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
+  page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
   page___card___updatedAt = 'page___card___updatedAt',
@@ -3431,6 +3479,18 @@ export enum ContentfulBlockJumbotronFieldsEnum {
   page___card___content___raw = 'page___card___content___raw',
   page___card___customLinkTitle = 'page___card___customLinkTitle',
   page___card___icon = 'page___card___icon',
+  page___card___block__list_of_cards = 'page___card___block__list_of_cards',
+  page___card___block__list_of_cards___contentful_id = 'page___card___block__list_of_cards___contentful_id',
+  page___card___block__list_of_cards___id = 'page___card___block__list_of_cards___id',
+  page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
+  page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
+  page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
+  page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
+  page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
+  page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
   page___card___updatedAt = 'page___card___updatedAt',
@@ -3811,6 +3871,556 @@ export type ContentfulBlockJumbotronSysFilterInput = {
   contentType?: Maybe<ContentfulBlockJumbotronSysContentTypeFilterInput>;
 };
 
+export type ContentfulBlockListOfCards = ContentfulReference & ContentfulEntry & Node & {
+  __typename?: 'ContentfulBlockListOfCards';
+  contentful_id: Scalars['String'];
+  id: Scalars['ID'];
+  node_locale: Scalars['String'];
+  title?: Maybe<Scalars['String']>;
+  variation?: Maybe<Scalars['String']>;
+  cards?: Maybe<Array<Maybe<ContentfulCard>>>;
+  page?: Maybe<Array<Maybe<ContentfulPage>>>;
+  spaceId?: Maybe<Scalars['String']>;
+  createdAt?: Maybe<Scalars['Date']>;
+  updatedAt?: Maybe<Scalars['Date']>;
+  sys?: Maybe<ContentfulBlockListOfCardsSys>;
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
+
+export type ContentfulBlockListOfCardsCreatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+
+export type ContentfulBlockListOfCardsUpdatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockListOfCardsConnection = {
+  __typename?: 'ContentfulBlockListOfCardsConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulBlockListOfCardsEdge>;
+  nodes: Array<ContentfulBlockListOfCards>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<ContentfulBlockListOfCardsGroupConnection>;
+};
+
+
+export type ContentfulBlockListOfCardsConnectionDistinctArgs = {
+  field: ContentfulBlockListOfCardsFieldsEnum;
+};
+
+
+export type ContentfulBlockListOfCardsConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: ContentfulBlockListOfCardsFieldsEnum;
+};
+
+export type ContentfulBlockListOfCardsEdge = {
+  __typename?: 'ContentfulBlockListOfCardsEdge';
+  next?: Maybe<ContentfulBlockListOfCards>;
+  node: ContentfulBlockListOfCards;
+  previous?: Maybe<ContentfulBlockListOfCards>;
+};
+
+export enum ContentfulBlockListOfCardsFieldsEnum {
+  contentful_id = 'contentful_id',
+  id = 'id',
+  node_locale = 'node_locale',
+  title = 'title',
+  variation = 'variation',
+  cards = 'cards',
+  cards___contentful_id = 'cards___contentful_id',
+  cards___id = 'cards___id',
+  cards___node_locale = 'cards___node_locale',
+  cards___title = 'cards___title',
+  cards___content___raw = 'cards___content___raw',
+  cards___customLinkTitle = 'cards___customLinkTitle',
+  cards___icon = 'cards___icon',
+  cards___block__list_of_cards = 'cards___block__list_of_cards',
+  cards___block__list_of_cards___contentful_id = 'cards___block__list_of_cards___contentful_id',
+  cards___block__list_of_cards___id = 'cards___block__list_of_cards___id',
+  cards___block__list_of_cards___node_locale = 'cards___block__list_of_cards___node_locale',
+  cards___block__list_of_cards___title = 'cards___block__list_of_cards___title',
+  cards___block__list_of_cards___variation = 'cards___block__list_of_cards___variation',
+  cards___block__list_of_cards___cards = 'cards___block__list_of_cards___cards',
+  cards___block__list_of_cards___cards___contentful_id = 'cards___block__list_of_cards___cards___contentful_id',
+  cards___block__list_of_cards___cards___id = 'cards___block__list_of_cards___cards___id',
+  cards___block__list_of_cards___cards___node_locale = 'cards___block__list_of_cards___cards___node_locale',
+  cards___block__list_of_cards___cards___title = 'cards___block__list_of_cards___cards___title',
+  cards___block__list_of_cards___cards___customLinkTitle = 'cards___block__list_of_cards___cards___customLinkTitle',
+  cards___block__list_of_cards___cards___icon = 'cards___block__list_of_cards___cards___icon',
+  cards___block__list_of_cards___cards___block__list_of_cards = 'cards___block__list_of_cards___cards___block__list_of_cards',
+  cards___block__list_of_cards___cards___spaceId = 'cards___block__list_of_cards___cards___spaceId',
+  cards___block__list_of_cards___cards___createdAt = 'cards___block__list_of_cards___cards___createdAt',
+  cards___block__list_of_cards___cards___updatedAt = 'cards___block__list_of_cards___cards___updatedAt',
+  cards___block__list_of_cards___cards___children = 'cards___block__list_of_cards___cards___children',
+  cards___block__list_of_cards___page = 'cards___block__list_of_cards___page',
+  cards___block__list_of_cards___page___contentful_id = 'cards___block__list_of_cards___page___contentful_id',
+  cards___block__list_of_cards___page___id = 'cards___block__list_of_cards___page___id',
+  cards___block__list_of_cards___page___node_locale = 'cards___block__list_of_cards___page___node_locale',
+  cards___block__list_of_cards___page___title = 'cards___block__list_of_cards___page___title',
+  cards___block__list_of_cards___page___slug = 'cards___block__list_of_cards___page___slug',
+  cards___block__list_of_cards___page___spaceId = 'cards___block__list_of_cards___page___spaceId',
+  cards___block__list_of_cards___page___createdAt = 'cards___block__list_of_cards___page___createdAt',
+  cards___block__list_of_cards___page___updatedAt = 'cards___block__list_of_cards___page___updatedAt',
+  cards___block__list_of_cards___page___block__content = 'cards___block__list_of_cards___page___block__content',
+  cards___block__list_of_cards___page___card = 'cards___block__list_of_cards___page___card',
+  cards___block__list_of_cards___page___subtitle = 'cards___block__list_of_cards___page___subtitle',
+  cards___block__list_of_cards___page___block__resource_list = 'cards___block__list_of_cards___page___block__resource_list',
+  cards___block__list_of_cards___page___seoTitle = 'cards___block__list_of_cards___page___seoTitle',
+  cards___block__list_of_cards___page___seoDescription = 'cards___block__list_of_cards___page___seoDescription',
+  cards___block__list_of_cards___page___children = 'cards___block__list_of_cards___page___children',
+  cards___block__list_of_cards___spaceId = 'cards___block__list_of_cards___spaceId',
+  cards___block__list_of_cards___createdAt = 'cards___block__list_of_cards___createdAt',
+  cards___block__list_of_cards___updatedAt = 'cards___block__list_of_cards___updatedAt',
+  cards___block__list_of_cards___sys___type = 'cards___block__list_of_cards___sys___type',
+  cards___block__list_of_cards___sys___revision = 'cards___block__list_of_cards___sys___revision',
+  cards___block__list_of_cards___parent___id = 'cards___block__list_of_cards___parent___id',
+  cards___block__list_of_cards___parent___children = 'cards___block__list_of_cards___parent___children',
+  cards___block__list_of_cards___children = 'cards___block__list_of_cards___children',
+  cards___block__list_of_cards___children___id = 'cards___block__list_of_cards___children___id',
+  cards___block__list_of_cards___children___children = 'cards___block__list_of_cards___children___children',
+  cards___block__list_of_cards___internal___content = 'cards___block__list_of_cards___internal___content',
+  cards___block__list_of_cards___internal___contentDigest = 'cards___block__list_of_cards___internal___contentDigest',
+  cards___block__list_of_cards___internal___description = 'cards___block__list_of_cards___internal___description',
+  cards___block__list_of_cards___internal___fieldOwners = 'cards___block__list_of_cards___internal___fieldOwners',
+  cards___block__list_of_cards___internal___ignoreType = 'cards___block__list_of_cards___internal___ignoreType',
+  cards___block__list_of_cards___internal___mediaType = 'cards___block__list_of_cards___internal___mediaType',
+  cards___block__list_of_cards___internal___owner = 'cards___block__list_of_cards___internal___owner',
+  cards___block__list_of_cards___internal___type = 'cards___block__list_of_cards___internal___type',
+  cards___spaceId = 'cards___spaceId',
+  cards___createdAt = 'cards___createdAt',
+  cards___updatedAt = 'cards___updatedAt',
+  cards___sys___type = 'cards___sys___type',
+  cards___sys___revision = 'cards___sys___revision',
+  cards___parent___id = 'cards___parent___id',
+  cards___parent___parent___id = 'cards___parent___parent___id',
+  cards___parent___parent___children = 'cards___parent___parent___children',
+  cards___parent___children = 'cards___parent___children',
+  cards___parent___children___id = 'cards___parent___children___id',
+  cards___parent___children___children = 'cards___parent___children___children',
+  cards___parent___internal___content = 'cards___parent___internal___content',
+  cards___parent___internal___contentDigest = 'cards___parent___internal___contentDigest',
+  cards___parent___internal___description = 'cards___parent___internal___description',
+  cards___parent___internal___fieldOwners = 'cards___parent___internal___fieldOwners',
+  cards___parent___internal___ignoreType = 'cards___parent___internal___ignoreType',
+  cards___parent___internal___mediaType = 'cards___parent___internal___mediaType',
+  cards___parent___internal___owner = 'cards___parent___internal___owner',
+  cards___parent___internal___type = 'cards___parent___internal___type',
+  cards___children = 'cards___children',
+  cards___children___id = 'cards___children___id',
+  cards___children___parent___id = 'cards___children___parent___id',
+  cards___children___parent___children = 'cards___children___parent___children',
+  cards___children___children = 'cards___children___children',
+  cards___children___children___id = 'cards___children___children___id',
+  cards___children___children___children = 'cards___children___children___children',
+  cards___children___internal___content = 'cards___children___internal___content',
+  cards___children___internal___contentDigest = 'cards___children___internal___contentDigest',
+  cards___children___internal___description = 'cards___children___internal___description',
+  cards___children___internal___fieldOwners = 'cards___children___internal___fieldOwners',
+  cards___children___internal___ignoreType = 'cards___children___internal___ignoreType',
+  cards___children___internal___mediaType = 'cards___children___internal___mediaType',
+  cards___children___internal___owner = 'cards___children___internal___owner',
+  cards___children___internal___type = 'cards___children___internal___type',
+  cards___internal___content = 'cards___internal___content',
+  cards___internal___contentDigest = 'cards___internal___contentDigest',
+  cards___internal___description = 'cards___internal___description',
+  cards___internal___fieldOwners = 'cards___internal___fieldOwners',
+  cards___internal___ignoreType = 'cards___internal___ignoreType',
+  cards___internal___mediaType = 'cards___internal___mediaType',
+  cards___internal___owner = 'cards___internal___owner',
+  cards___internal___type = 'cards___internal___type',
+  page = 'page',
+  page___contentful_id = 'page___contentful_id',
+  page___id = 'page___id',
+  page___node_locale = 'page___node_locale',
+  page___title = 'page___title',
+  page___slug = 'page___slug',
+  page___spaceId = 'page___spaceId',
+  page___createdAt = 'page___createdAt',
+  page___updatedAt = 'page___updatedAt',
+  page___sys___type = 'page___sys___type',
+  page___sys___revision = 'page___sys___revision',
+  page___block__content = 'page___block__content',
+  page___block__content___contentful_id = 'page___block__content___contentful_id',
+  page___block__content___id = 'page___block__content___id',
+  page___block__content___node_locale = 'page___block__content___node_locale',
+  page___block__content___blockTitle = 'page___block__content___blockTitle',
+  page___block__content___variation = 'page___block__content___variation',
+  page___block__content___content___raw = 'page___block__content___content___raw',
+  page___block__content___image___contentful_id = 'page___block__content___image___contentful_id',
+  page___block__content___image___id = 'page___block__content___image___id',
+  page___block__content___image___spaceId = 'page___block__content___image___spaceId',
+  page___block__content___image___createdAt = 'page___block__content___image___createdAt',
+  page___block__content___image___updatedAt = 'page___block__content___image___updatedAt',
+  page___block__content___image___title = 'page___block__content___image___title',
+  page___block__content___image___description = 'page___block__content___image___description',
+  page___block__content___image___node_locale = 'page___block__content___image___node_locale',
+  page___block__content___image___gatsbyImageData = 'page___block__content___image___gatsbyImageData',
+  page___block__content___image___children = 'page___block__content___image___children',
+  page___block__content___page = 'page___block__content___page',
+  page___block__content___page___contentful_id = 'page___block__content___page___contentful_id',
+  page___block__content___page___id = 'page___block__content___page___id',
+  page___block__content___page___node_locale = 'page___block__content___page___node_locale',
+  page___block__content___page___title = 'page___block__content___page___title',
+  page___block__content___page___slug = 'page___block__content___page___slug',
+  page___block__content___page___spaceId = 'page___block__content___page___spaceId',
+  page___block__content___page___createdAt = 'page___block__content___page___createdAt',
+  page___block__content___page___updatedAt = 'page___block__content___page___updatedAt',
+  page___block__content___page___block__content = 'page___block__content___page___block__content',
+  page___block__content___page___card = 'page___block__content___page___card',
+  page___block__content___page___subtitle = 'page___block__content___page___subtitle',
+  page___block__content___page___block__resource_list = 'page___block__content___page___block__resource_list',
+  page___block__content___page___seoTitle = 'page___block__content___page___seoTitle',
+  page___block__content___page___seoDescription = 'page___block__content___page___seoDescription',
+  page___block__content___page___children = 'page___block__content___page___children',
+  page___block__content___spaceId = 'page___block__content___spaceId',
+  page___block__content___createdAt = 'page___block__content___createdAt',
+  page___block__content___updatedAt = 'page___block__content___updatedAt',
+  page___block__content___sys___type = 'page___block__content___sys___type',
+  page___block__content___sys___revision = 'page___block__content___sys___revision',
+  page___block__content___customButtonText = 'page___block__content___customButtonText',
+  page___block__content___parent___id = 'page___block__content___parent___id',
+  page___block__content___parent___children = 'page___block__content___parent___children',
+  page___block__content___children = 'page___block__content___children',
+  page___block__content___children___id = 'page___block__content___children___id',
+  page___block__content___children___children = 'page___block__content___children___children',
+  page___block__content___internal___content = 'page___block__content___internal___content',
+  page___block__content___internal___contentDigest = 'page___block__content___internal___contentDigest',
+  page___block__content___internal___description = 'page___block__content___internal___description',
+  page___block__content___internal___fieldOwners = 'page___block__content___internal___fieldOwners',
+  page___block__content___internal___ignoreType = 'page___block__content___internal___ignoreType',
+  page___block__content___internal___mediaType = 'page___block__content___internal___mediaType',
+  page___block__content___internal___owner = 'page___block__content___internal___owner',
+  page___block__content___internal___type = 'page___block__content___internal___type',
+  page___card = 'page___card',
+  page___card___contentful_id = 'page___card___contentful_id',
+  page___card___id = 'page___card___id',
+  page___card___node_locale = 'page___card___node_locale',
+  page___card___title = 'page___card___title',
+  page___card___content___raw = 'page___card___content___raw',
+  page___card___customLinkTitle = 'page___card___customLinkTitle',
+  page___card___icon = 'page___card___icon',
+  page___card___block__list_of_cards = 'page___card___block__list_of_cards',
+  page___card___block__list_of_cards___contentful_id = 'page___card___block__list_of_cards___contentful_id',
+  page___card___block__list_of_cards___id = 'page___card___block__list_of_cards___id',
+  page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
+  page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
+  page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
+  page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
+  page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
+  page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
+  page___card___spaceId = 'page___card___spaceId',
+  page___card___createdAt = 'page___card___createdAt',
+  page___card___updatedAt = 'page___card___updatedAt',
+  page___card___sys___type = 'page___card___sys___type',
+  page___card___sys___revision = 'page___card___sys___revision',
+  page___card___parent___id = 'page___card___parent___id',
+  page___card___parent___children = 'page___card___parent___children',
+  page___card___children = 'page___card___children',
+  page___card___children___id = 'page___card___children___id',
+  page___card___children___children = 'page___card___children___children',
+  page___card___internal___content = 'page___card___internal___content',
+  page___card___internal___contentDigest = 'page___card___internal___contentDigest',
+  page___card___internal___description = 'page___card___internal___description',
+  page___card___internal___fieldOwners = 'page___card___internal___fieldOwners',
+  page___card___internal___ignoreType = 'page___card___internal___ignoreType',
+  page___card___internal___mediaType = 'page___card___internal___mediaType',
+  page___card___internal___owner = 'page___card___internal___owner',
+  page___card___internal___type = 'page___card___internal___type',
+  page___subtitle = 'page___subtitle',
+  page___block__resource_list = 'page___block__resource_list',
+  page___block__resource_list___contentful_id = 'page___block__resource_list___contentful_id',
+  page___block__resource_list___id = 'page___block__resource_list___id',
+  page___block__resource_list___node_locale = 'page___block__resource_list___node_locale',
+  page___block__resource_list___title = 'page___block__resource_list___title',
+  page___block__resource_list___customHeadingLinkText = 'page___block__resource_list___customHeadingLinkText',
+  page___block__resource_list___headingLink___contentful_id = 'page___block__resource_list___headingLink___contentful_id',
+  page___block__resource_list___headingLink___id = 'page___block__resource_list___headingLink___id',
+  page___block__resource_list___headingLink___node_locale = 'page___block__resource_list___headingLink___node_locale',
+  page___block__resource_list___headingLink___title = 'page___block__resource_list___headingLink___title',
+  page___block__resource_list___headingLink___slug = 'page___block__resource_list___headingLink___slug',
+  page___block__resource_list___headingLink___spaceId = 'page___block__resource_list___headingLink___spaceId',
+  page___block__resource_list___headingLink___createdAt = 'page___block__resource_list___headingLink___createdAt',
+  page___block__resource_list___headingLink___updatedAt = 'page___block__resource_list___headingLink___updatedAt',
+  page___block__resource_list___headingLink___block__content = 'page___block__resource_list___headingLink___block__content',
+  page___block__resource_list___headingLink___card = 'page___block__resource_list___headingLink___card',
+  page___block__resource_list___headingLink___subtitle = 'page___block__resource_list___headingLink___subtitle',
+  page___block__resource_list___headingLink___block__resource_list = 'page___block__resource_list___headingLink___block__resource_list',
+  page___block__resource_list___headingLink___seoTitle = 'page___block__resource_list___headingLink___seoTitle',
+  page___block__resource_list___headingLink___seoDescription = 'page___block__resource_list___headingLink___seoDescription',
+  page___block__resource_list___headingLink___children = 'page___block__resource_list___headingLink___children',
+  page___block__resource_list___blog_post = 'page___block__resource_list___blog_post',
+  page___block__resource_list___blog_post___contentful_id = 'page___block__resource_list___blog_post___contentful_id',
+  page___block__resource_list___blog_post___id = 'page___block__resource_list___blog_post___id',
+  page___block__resource_list___blog_post___node_locale = 'page___block__resource_list___blog_post___node_locale',
+  page___block__resource_list___blog_post___title = 'page___block__resource_list___blog_post___title',
+  page___block__resource_list___blog_post___slug = 'page___block__resource_list___blog_post___slug',
+  page___block__resource_list___blog_post___category = 'page___block__resource_list___blog_post___category',
+  page___block__resource_list___blog_post___published = 'page___block__resource_list___blog_post___published',
+  page___block__resource_list___blog_post___seoTitle = 'page___block__resource_list___blog_post___seoTitle',
+  page___block__resource_list___blog_post___seoDescription = 'page___block__resource_list___blog_post___seoDescription',
+  page___block__resource_list___blog_post___spaceId = 'page___block__resource_list___blog_post___spaceId',
+  page___block__resource_list___blog_post___createdAt = 'page___block__resource_list___blog_post___createdAt',
+  page___block__resource_list___blog_post___updatedAt = 'page___block__resource_list___blog_post___updatedAt',
+  page___block__resource_list___blog_post___featured = 'page___block__resource_list___blog_post___featured',
+  page___block__resource_list___blog_post___block__resource_list = 'page___block__resource_list___blog_post___block__resource_list',
+  page___block__resource_list___blog_post___childrenContentfulBlogPostExcerptTextNode = 'page___block__resource_list___blog_post___childrenContentfulBlogPostExcerptTextNode',
+  page___block__resource_list___blog_post___children = 'page___block__resource_list___blog_post___children',
+  page___block__resource_list___page = 'page___block__resource_list___page',
+  page___block__resource_list___page___contentful_id = 'page___block__resource_list___page___contentful_id',
+  page___block__resource_list___page___id = 'page___block__resource_list___page___id',
+  page___block__resource_list___page___node_locale = 'page___block__resource_list___page___node_locale',
+  page___block__resource_list___page___title = 'page___block__resource_list___page___title',
+  page___block__resource_list___page___slug = 'page___block__resource_list___page___slug',
+  page___block__resource_list___page___spaceId = 'page___block__resource_list___page___spaceId',
+  page___block__resource_list___page___createdAt = 'page___block__resource_list___page___createdAt',
+  page___block__resource_list___page___updatedAt = 'page___block__resource_list___page___updatedAt',
+  page___block__resource_list___page___block__content = 'page___block__resource_list___page___block__content',
+  page___block__resource_list___page___card = 'page___block__resource_list___page___card',
+  page___block__resource_list___page___subtitle = 'page___block__resource_list___page___subtitle',
+  page___block__resource_list___page___block__resource_list = 'page___block__resource_list___page___block__resource_list',
+  page___block__resource_list___page___seoTitle = 'page___block__resource_list___page___seoTitle',
+  page___block__resource_list___page___seoDescription = 'page___block__resource_list___page___seoDescription',
+  page___block__resource_list___page___children = 'page___block__resource_list___page___children',
+  page___block__resource_list___spaceId = 'page___block__resource_list___spaceId',
+  page___block__resource_list___createdAt = 'page___block__resource_list___createdAt',
+  page___block__resource_list___updatedAt = 'page___block__resource_list___updatedAt',
+  page___block__resource_list___sys___type = 'page___block__resource_list___sys___type',
+  page___block__resource_list___sys___revision = 'page___block__resource_list___sys___revision',
+  page___block__resource_list___parent___id = 'page___block__resource_list___parent___id',
+  page___block__resource_list___parent___children = 'page___block__resource_list___parent___children',
+  page___block__resource_list___children = 'page___block__resource_list___children',
+  page___block__resource_list___children___id = 'page___block__resource_list___children___id',
+  page___block__resource_list___children___children = 'page___block__resource_list___children___children',
+  page___block__resource_list___internal___content = 'page___block__resource_list___internal___content',
+  page___block__resource_list___internal___contentDigest = 'page___block__resource_list___internal___contentDigest',
+  page___block__resource_list___internal___description = 'page___block__resource_list___internal___description',
+  page___block__resource_list___internal___fieldOwners = 'page___block__resource_list___internal___fieldOwners',
+  page___block__resource_list___internal___ignoreType = 'page___block__resource_list___internal___ignoreType',
+  page___block__resource_list___internal___mediaType = 'page___block__resource_list___internal___mediaType',
+  page___block__resource_list___internal___owner = 'page___block__resource_list___internal___owner',
+  page___block__resource_list___internal___type = 'page___block__resource_list___internal___type',
+  page___seoTitle = 'page___seoTitle',
+  page___seoDescription = 'page___seoDescription',
+  page___parent___id = 'page___parent___id',
+  page___parent___parent___id = 'page___parent___parent___id',
+  page___parent___parent___children = 'page___parent___parent___children',
+  page___parent___children = 'page___parent___children',
+  page___parent___children___id = 'page___parent___children___id',
+  page___parent___children___children = 'page___parent___children___children',
+  page___parent___internal___content = 'page___parent___internal___content',
+  page___parent___internal___contentDigest = 'page___parent___internal___contentDigest',
+  page___parent___internal___description = 'page___parent___internal___description',
+  page___parent___internal___fieldOwners = 'page___parent___internal___fieldOwners',
+  page___parent___internal___ignoreType = 'page___parent___internal___ignoreType',
+  page___parent___internal___mediaType = 'page___parent___internal___mediaType',
+  page___parent___internal___owner = 'page___parent___internal___owner',
+  page___parent___internal___type = 'page___parent___internal___type',
+  page___children = 'page___children',
+  page___children___id = 'page___children___id',
+  page___children___parent___id = 'page___children___parent___id',
+  page___children___parent___children = 'page___children___parent___children',
+  page___children___children = 'page___children___children',
+  page___children___children___id = 'page___children___children___id',
+  page___children___children___children = 'page___children___children___children',
+  page___children___internal___content = 'page___children___internal___content',
+  page___children___internal___contentDigest = 'page___children___internal___contentDigest',
+  page___children___internal___description = 'page___children___internal___description',
+  page___children___internal___fieldOwners = 'page___children___internal___fieldOwners',
+  page___children___internal___ignoreType = 'page___children___internal___ignoreType',
+  page___children___internal___mediaType = 'page___children___internal___mediaType',
+  page___children___internal___owner = 'page___children___internal___owner',
+  page___children___internal___type = 'page___children___internal___type',
+  page___internal___content = 'page___internal___content',
+  page___internal___contentDigest = 'page___internal___contentDigest',
+  page___internal___description = 'page___internal___description',
+  page___internal___fieldOwners = 'page___internal___fieldOwners',
+  page___internal___ignoreType = 'page___internal___ignoreType',
+  page___internal___mediaType = 'page___internal___mediaType',
+  page___internal___owner = 'page___internal___owner',
+  page___internal___type = 'page___internal___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
+  parent___id = 'parent___id',
+  parent___parent___id = 'parent___parent___id',
+  parent___parent___parent___id = 'parent___parent___parent___id',
+  parent___parent___parent___children = 'parent___parent___parent___children',
+  parent___parent___children = 'parent___parent___children',
+  parent___parent___children___id = 'parent___parent___children___id',
+  parent___parent___children___children = 'parent___parent___children___children',
+  parent___parent___internal___content = 'parent___parent___internal___content',
+  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
+  parent___parent___internal___description = 'parent___parent___internal___description',
+  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
+  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
+  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
+  parent___parent___internal___owner = 'parent___parent___internal___owner',
+  parent___parent___internal___type = 'parent___parent___internal___type',
+  parent___children = 'parent___children',
+  parent___children___id = 'parent___children___id',
+  parent___children___parent___id = 'parent___children___parent___id',
+  parent___children___parent___children = 'parent___children___parent___children',
+  parent___children___children = 'parent___children___children',
+  parent___children___children___id = 'parent___children___children___id',
+  parent___children___children___children = 'parent___children___children___children',
+  parent___children___internal___content = 'parent___children___internal___content',
+  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
+  parent___children___internal___description = 'parent___children___internal___description',
+  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
+  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
+  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
+  parent___children___internal___owner = 'parent___children___internal___owner',
+  parent___children___internal___type = 'parent___children___internal___type',
+  parent___internal___content = 'parent___internal___content',
+  parent___internal___contentDigest = 'parent___internal___contentDigest',
+  parent___internal___description = 'parent___internal___description',
+  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
+  parent___internal___ignoreType = 'parent___internal___ignoreType',
+  parent___internal___mediaType = 'parent___internal___mediaType',
+  parent___internal___owner = 'parent___internal___owner',
+  parent___internal___type = 'parent___internal___type',
+  children = 'children',
+  children___id = 'children___id',
+  children___parent___id = 'children___parent___id',
+  children___parent___parent___id = 'children___parent___parent___id',
+  children___parent___parent___children = 'children___parent___parent___children',
+  children___parent___children = 'children___parent___children',
+  children___parent___children___id = 'children___parent___children___id',
+  children___parent___children___children = 'children___parent___children___children',
+  children___parent___internal___content = 'children___parent___internal___content',
+  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
+  children___parent___internal___description = 'children___parent___internal___description',
+  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
+  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
+  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
+  children___parent___internal___owner = 'children___parent___internal___owner',
+  children___parent___internal___type = 'children___parent___internal___type',
+  children___children = 'children___children',
+  children___children___id = 'children___children___id',
+  children___children___parent___id = 'children___children___parent___id',
+  children___children___parent___children = 'children___children___parent___children',
+  children___children___children = 'children___children___children',
+  children___children___children___id = 'children___children___children___id',
+  children___children___children___children = 'children___children___children___children',
+  children___children___internal___content = 'children___children___internal___content',
+  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
+  children___children___internal___description = 'children___children___internal___description',
+  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
+  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
+  children___children___internal___mediaType = 'children___children___internal___mediaType',
+  children___children___internal___owner = 'children___children___internal___owner',
+  children___children___internal___type = 'children___children___internal___type',
+  children___internal___content = 'children___internal___content',
+  children___internal___contentDigest = 'children___internal___contentDigest',
+  children___internal___description = 'children___internal___description',
+  children___internal___fieldOwners = 'children___internal___fieldOwners',
+  children___internal___ignoreType = 'children___internal___ignoreType',
+  children___internal___mediaType = 'children___internal___mediaType',
+  children___internal___owner = 'children___internal___owner',
+  children___internal___type = 'children___internal___type',
+  internal___content = 'internal___content',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___fieldOwners = 'internal___fieldOwners',
+  internal___ignoreType = 'internal___ignoreType',
+  internal___mediaType = 'internal___mediaType',
+  internal___owner = 'internal___owner',
+  internal___type = 'internal___type'
+}
+
+export type ContentfulBlockListOfCardsFilterInput = {
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  variation?: Maybe<StringQueryOperatorInput>;
+  cards?: Maybe<ContentfulCardFilterListInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulBlockListOfCardsSysFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+export type ContentfulBlockListOfCardsFilterListInput = {
+  elemMatch?: Maybe<ContentfulBlockListOfCardsFilterInput>;
+};
+
+export type ContentfulBlockListOfCardsGroupConnection = {
+  __typename?: 'ContentfulBlockListOfCardsGroupConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulBlockListOfCardsEdge>;
+  nodes: Array<ContentfulBlockListOfCards>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockListOfCardsSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulBlockListOfCardsFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulBlockListOfCardsSys = {
+  __typename?: 'ContentfulBlockListOfCardsSys';
+  type?: Maybe<Scalars['String']>;
+  revision?: Maybe<Scalars['Int']>;
+  contentType?: Maybe<ContentfulBlockListOfCardsSysContentType>;
+};
+
+export type ContentfulBlockListOfCardsSysContentType = {
+  __typename?: 'ContentfulBlockListOfCardsSysContentType';
+  sys?: Maybe<ContentfulBlockListOfCardsSysContentTypeSys>;
+};
+
+export type ContentfulBlockListOfCardsSysContentTypeFilterInput = {
+  sys?: Maybe<ContentfulBlockListOfCardsSysContentTypeSysFilterInput>;
+};
+
+export type ContentfulBlockListOfCardsSysContentTypeSys = {
+  __typename?: 'ContentfulBlockListOfCardsSysContentTypeSys';
+  type?: Maybe<Scalars['String']>;
+  linkType?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockListOfCardsSysContentTypeSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  linkType?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type ContentfulBlockListOfCardsSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  revision?: Maybe<IntQueryOperatorInput>;
+  contentType?: Maybe<ContentfulBlockListOfCardsSysContentTypeFilterInput>;
+};
+
 export type ContentfulBlockListOfPeople = ContentfulReference & ContentfulEntry & Node & {
   __typename?: 'ContentfulBlockListOfPeople';
   contentful_id: Scalars['String'];
@@ -4187,6 +4797,18 @@ export enum ContentfulBlockListOfPeopleFieldsEnum {
   page___card___content___raw = 'page___card___content___raw',
   page___card___customLinkTitle = 'page___card___customLinkTitle',
   page___card___icon = 'page___card___icon',
+  page___card___block__list_of_cards = 'page___card___block__list_of_cards',
+  page___card___block__list_of_cards___contentful_id = 'page___card___block__list_of_cards___contentful_id',
+  page___card___block__list_of_cards___id = 'page___card___block__list_of_cards___id',
+  page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
+  page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
+  page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
+  page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
+  page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
+  page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
   page___card___updatedAt = 'page___card___updatedAt',
@@ -4769,6 +5391,18 @@ export enum ContentfulBlockMembersFieldsEnum {
   page___card___content___raw = 'page___card___content___raw',
   page___card___customLinkTitle = 'page___card___customLinkTitle',
   page___card___icon = 'page___card___icon',
+  page___card___block__list_of_cards = 'page___card___block__list_of_cards',
+  page___card___block__list_of_cards___contentful_id = 'page___card___block__list_of_cards___contentful_id',
+  page___card___block__list_of_cards___id = 'page___card___block__list_of_cards___id',
+  page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
+  page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
+  page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
+  page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
+  page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
+  page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
   page___card___updatedAt = 'page___card___updatedAt',
@@ -5205,6 +5839,18 @@ export enum ContentfulBlockResourceListFieldsEnum {
   headingLink___card___content___raw = 'headingLink___card___content___raw',
   headingLink___card___customLinkTitle = 'headingLink___card___customLinkTitle',
   headingLink___card___icon = 'headingLink___card___icon',
+  headingLink___card___block__list_of_cards = 'headingLink___card___block__list_of_cards',
+  headingLink___card___block__list_of_cards___contentful_id = 'headingLink___card___block__list_of_cards___contentful_id',
+  headingLink___card___block__list_of_cards___id = 'headingLink___card___block__list_of_cards___id',
+  headingLink___card___block__list_of_cards___node_locale = 'headingLink___card___block__list_of_cards___node_locale',
+  headingLink___card___block__list_of_cards___title = 'headingLink___card___block__list_of_cards___title',
+  headingLink___card___block__list_of_cards___variation = 'headingLink___card___block__list_of_cards___variation',
+  headingLink___card___block__list_of_cards___cards = 'headingLink___card___block__list_of_cards___cards',
+  headingLink___card___block__list_of_cards___page = 'headingLink___card___block__list_of_cards___page',
+  headingLink___card___block__list_of_cards___spaceId = 'headingLink___card___block__list_of_cards___spaceId',
+  headingLink___card___block__list_of_cards___createdAt = 'headingLink___card___block__list_of_cards___createdAt',
+  headingLink___card___block__list_of_cards___updatedAt = 'headingLink___card___block__list_of_cards___updatedAt',
+  headingLink___card___block__list_of_cards___children = 'headingLink___card___block__list_of_cards___children',
   headingLink___card___spaceId = 'headingLink___card___spaceId',
   headingLink___card___createdAt = 'headingLink___card___createdAt',
   headingLink___card___updatedAt = 'headingLink___card___updatedAt',
@@ -5776,6 +6422,18 @@ export enum ContentfulBlockResourceListFieldsEnum {
   page___card___content___raw = 'page___card___content___raw',
   page___card___customLinkTitle = 'page___card___customLinkTitle',
   page___card___icon = 'page___card___icon',
+  page___card___block__list_of_cards = 'page___card___block__list_of_cards',
+  page___card___block__list_of_cards___contentful_id = 'page___card___block__list_of_cards___contentful_id',
+  page___card___block__list_of_cards___id = 'page___card___block__list_of_cards___id',
+  page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
+  page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
+  page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
+  page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
+  page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
+  page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
   page___card___updatedAt = 'page___card___updatedAt',
@@ -6624,6 +7282,7 @@ export enum ContentfulBlogPostFieldsEnum {
   resources___headingLink___card___title = 'resources___headingLink___card___title',
   resources___headingLink___card___customLinkTitle = 'resources___headingLink___card___customLinkTitle',
   resources___headingLink___card___icon = 'resources___headingLink___card___icon',
+  resources___headingLink___card___block__list_of_cards = 'resources___headingLink___card___block__list_of_cards',
   resources___headingLink___card___spaceId = 'resources___headingLink___card___spaceId',
   resources___headingLink___card___createdAt = 'resources___headingLink___card___createdAt',
   resources___headingLink___card___updatedAt = 'resources___headingLink___card___updatedAt',
@@ -6771,6 +7430,7 @@ export enum ContentfulBlogPostFieldsEnum {
   resources___page___card___title = 'resources___page___card___title',
   resources___page___card___customLinkTitle = 'resources___page___card___customLinkTitle',
   resources___page___card___icon = 'resources___page___card___icon',
+  resources___page___card___block__list_of_cards = 'resources___page___card___block__list_of_cards',
   resources___page___card___spaceId = 'resources___page___card___spaceId',
   resources___page___card___createdAt = 'resources___page___card___createdAt',
   resources___page___card___updatedAt = 'resources___page___card___updatedAt',
@@ -6881,6 +7541,7 @@ export enum ContentfulBlogPostFieldsEnum {
   block__resource_list___headingLink___card___title = 'block__resource_list___headingLink___card___title',
   block__resource_list___headingLink___card___customLinkTitle = 'block__resource_list___headingLink___card___customLinkTitle',
   block__resource_list___headingLink___card___icon = 'block__resource_list___headingLink___card___icon',
+  block__resource_list___headingLink___card___block__list_of_cards = 'block__resource_list___headingLink___card___block__list_of_cards',
   block__resource_list___headingLink___card___spaceId = 'block__resource_list___headingLink___card___spaceId',
   block__resource_list___headingLink___card___createdAt = 'block__resource_list___headingLink___card___createdAt',
   block__resource_list___headingLink___card___updatedAt = 'block__resource_list___headingLink___card___updatedAt',
@@ -7028,6 +7689,7 @@ export enum ContentfulBlogPostFieldsEnum {
   block__resource_list___page___card___title = 'block__resource_list___page___card___title',
   block__resource_list___page___card___customLinkTitle = 'block__resource_list___page___card___customLinkTitle',
   block__resource_list___page___card___icon = 'block__resource_list___page___card___icon',
+  block__resource_list___page___card___block__list_of_cards = 'block__resource_list___page___card___block__list_of_cards',
   block__resource_list___page___card___spaceId = 'block__resource_list___page___card___spaceId',
   block__resource_list___page___card___createdAt = 'block__resource_list___page___card___createdAt',
   block__resource_list___page___card___updatedAt = 'block__resource_list___page___card___updatedAt',
@@ -7362,6 +8024,7 @@ export type ContentfulCard = ContentfulReference & ContentfulEntry & Node & {
   customLinkTitle?: Maybe<Scalars['String']>;
   icon?: Maybe<Scalars['String']>;
   link?: Maybe<ContentfulPageContentfulResourceUnion>;
+  block__list_of_cards?: Maybe<Array<Maybe<ContentfulBlockListOfCards>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
@@ -7433,6 +8096,155 @@ export enum ContentfulCardFieldsEnum {
   content___raw = 'content___raw',
   customLinkTitle = 'customLinkTitle',
   icon = 'icon',
+  block__list_of_cards = 'block__list_of_cards',
+  block__list_of_cards___contentful_id = 'block__list_of_cards___contentful_id',
+  block__list_of_cards___id = 'block__list_of_cards___id',
+  block__list_of_cards___node_locale = 'block__list_of_cards___node_locale',
+  block__list_of_cards___title = 'block__list_of_cards___title',
+  block__list_of_cards___variation = 'block__list_of_cards___variation',
+  block__list_of_cards___cards = 'block__list_of_cards___cards',
+  block__list_of_cards___cards___contentful_id = 'block__list_of_cards___cards___contentful_id',
+  block__list_of_cards___cards___id = 'block__list_of_cards___cards___id',
+  block__list_of_cards___cards___node_locale = 'block__list_of_cards___cards___node_locale',
+  block__list_of_cards___cards___title = 'block__list_of_cards___cards___title',
+  block__list_of_cards___cards___content___raw = 'block__list_of_cards___cards___content___raw',
+  block__list_of_cards___cards___customLinkTitle = 'block__list_of_cards___cards___customLinkTitle',
+  block__list_of_cards___cards___icon = 'block__list_of_cards___cards___icon',
+  block__list_of_cards___cards___block__list_of_cards = 'block__list_of_cards___cards___block__list_of_cards',
+  block__list_of_cards___cards___block__list_of_cards___contentful_id = 'block__list_of_cards___cards___block__list_of_cards___contentful_id',
+  block__list_of_cards___cards___block__list_of_cards___id = 'block__list_of_cards___cards___block__list_of_cards___id',
+  block__list_of_cards___cards___block__list_of_cards___node_locale = 'block__list_of_cards___cards___block__list_of_cards___node_locale',
+  block__list_of_cards___cards___block__list_of_cards___title = 'block__list_of_cards___cards___block__list_of_cards___title',
+  block__list_of_cards___cards___block__list_of_cards___variation = 'block__list_of_cards___cards___block__list_of_cards___variation',
+  block__list_of_cards___cards___block__list_of_cards___cards = 'block__list_of_cards___cards___block__list_of_cards___cards',
+  block__list_of_cards___cards___block__list_of_cards___page = 'block__list_of_cards___cards___block__list_of_cards___page',
+  block__list_of_cards___cards___block__list_of_cards___spaceId = 'block__list_of_cards___cards___block__list_of_cards___spaceId',
+  block__list_of_cards___cards___block__list_of_cards___createdAt = 'block__list_of_cards___cards___block__list_of_cards___createdAt',
+  block__list_of_cards___cards___block__list_of_cards___updatedAt = 'block__list_of_cards___cards___block__list_of_cards___updatedAt',
+  block__list_of_cards___cards___block__list_of_cards___children = 'block__list_of_cards___cards___block__list_of_cards___children',
+  block__list_of_cards___cards___spaceId = 'block__list_of_cards___cards___spaceId',
+  block__list_of_cards___cards___createdAt = 'block__list_of_cards___cards___createdAt',
+  block__list_of_cards___cards___updatedAt = 'block__list_of_cards___cards___updatedAt',
+  block__list_of_cards___cards___sys___type = 'block__list_of_cards___cards___sys___type',
+  block__list_of_cards___cards___sys___revision = 'block__list_of_cards___cards___sys___revision',
+  block__list_of_cards___cards___parent___id = 'block__list_of_cards___cards___parent___id',
+  block__list_of_cards___cards___parent___children = 'block__list_of_cards___cards___parent___children',
+  block__list_of_cards___cards___children = 'block__list_of_cards___cards___children',
+  block__list_of_cards___cards___children___id = 'block__list_of_cards___cards___children___id',
+  block__list_of_cards___cards___children___children = 'block__list_of_cards___cards___children___children',
+  block__list_of_cards___cards___internal___content = 'block__list_of_cards___cards___internal___content',
+  block__list_of_cards___cards___internal___contentDigest = 'block__list_of_cards___cards___internal___contentDigest',
+  block__list_of_cards___cards___internal___description = 'block__list_of_cards___cards___internal___description',
+  block__list_of_cards___cards___internal___fieldOwners = 'block__list_of_cards___cards___internal___fieldOwners',
+  block__list_of_cards___cards___internal___ignoreType = 'block__list_of_cards___cards___internal___ignoreType',
+  block__list_of_cards___cards___internal___mediaType = 'block__list_of_cards___cards___internal___mediaType',
+  block__list_of_cards___cards___internal___owner = 'block__list_of_cards___cards___internal___owner',
+  block__list_of_cards___cards___internal___type = 'block__list_of_cards___cards___internal___type',
+  block__list_of_cards___page = 'block__list_of_cards___page',
+  block__list_of_cards___page___contentful_id = 'block__list_of_cards___page___contentful_id',
+  block__list_of_cards___page___id = 'block__list_of_cards___page___id',
+  block__list_of_cards___page___node_locale = 'block__list_of_cards___page___node_locale',
+  block__list_of_cards___page___title = 'block__list_of_cards___page___title',
+  block__list_of_cards___page___slug = 'block__list_of_cards___page___slug',
+  block__list_of_cards___page___spaceId = 'block__list_of_cards___page___spaceId',
+  block__list_of_cards___page___createdAt = 'block__list_of_cards___page___createdAt',
+  block__list_of_cards___page___updatedAt = 'block__list_of_cards___page___updatedAt',
+  block__list_of_cards___page___sys___type = 'block__list_of_cards___page___sys___type',
+  block__list_of_cards___page___sys___revision = 'block__list_of_cards___page___sys___revision',
+  block__list_of_cards___page___block__content = 'block__list_of_cards___page___block__content',
+  block__list_of_cards___page___block__content___contentful_id = 'block__list_of_cards___page___block__content___contentful_id',
+  block__list_of_cards___page___block__content___id = 'block__list_of_cards___page___block__content___id',
+  block__list_of_cards___page___block__content___node_locale = 'block__list_of_cards___page___block__content___node_locale',
+  block__list_of_cards___page___block__content___blockTitle = 'block__list_of_cards___page___block__content___blockTitle',
+  block__list_of_cards___page___block__content___variation = 'block__list_of_cards___page___block__content___variation',
+  block__list_of_cards___page___block__content___page = 'block__list_of_cards___page___block__content___page',
+  block__list_of_cards___page___block__content___spaceId = 'block__list_of_cards___page___block__content___spaceId',
+  block__list_of_cards___page___block__content___createdAt = 'block__list_of_cards___page___block__content___createdAt',
+  block__list_of_cards___page___block__content___updatedAt = 'block__list_of_cards___page___block__content___updatedAt',
+  block__list_of_cards___page___block__content___customButtonText = 'block__list_of_cards___page___block__content___customButtonText',
+  block__list_of_cards___page___block__content___children = 'block__list_of_cards___page___block__content___children',
+  block__list_of_cards___page___card = 'block__list_of_cards___page___card',
+  block__list_of_cards___page___card___contentful_id = 'block__list_of_cards___page___card___contentful_id',
+  block__list_of_cards___page___card___id = 'block__list_of_cards___page___card___id',
+  block__list_of_cards___page___card___node_locale = 'block__list_of_cards___page___card___node_locale',
+  block__list_of_cards___page___card___title = 'block__list_of_cards___page___card___title',
+  block__list_of_cards___page___card___customLinkTitle = 'block__list_of_cards___page___card___customLinkTitle',
+  block__list_of_cards___page___card___icon = 'block__list_of_cards___page___card___icon',
+  block__list_of_cards___page___card___block__list_of_cards = 'block__list_of_cards___page___card___block__list_of_cards',
+  block__list_of_cards___page___card___spaceId = 'block__list_of_cards___page___card___spaceId',
+  block__list_of_cards___page___card___createdAt = 'block__list_of_cards___page___card___createdAt',
+  block__list_of_cards___page___card___updatedAt = 'block__list_of_cards___page___card___updatedAt',
+  block__list_of_cards___page___card___children = 'block__list_of_cards___page___card___children',
+  block__list_of_cards___page___subtitle = 'block__list_of_cards___page___subtitle',
+  block__list_of_cards___page___block__resource_list = 'block__list_of_cards___page___block__resource_list',
+  block__list_of_cards___page___block__resource_list___contentful_id = 'block__list_of_cards___page___block__resource_list___contentful_id',
+  block__list_of_cards___page___block__resource_list___id = 'block__list_of_cards___page___block__resource_list___id',
+  block__list_of_cards___page___block__resource_list___node_locale = 'block__list_of_cards___page___block__resource_list___node_locale',
+  block__list_of_cards___page___block__resource_list___title = 'block__list_of_cards___page___block__resource_list___title',
+  block__list_of_cards___page___block__resource_list___customHeadingLinkText = 'block__list_of_cards___page___block__resource_list___customHeadingLinkText',
+  block__list_of_cards___page___block__resource_list___blog_post = 'block__list_of_cards___page___block__resource_list___blog_post',
+  block__list_of_cards___page___block__resource_list___page = 'block__list_of_cards___page___block__resource_list___page',
+  block__list_of_cards___page___block__resource_list___spaceId = 'block__list_of_cards___page___block__resource_list___spaceId',
+  block__list_of_cards___page___block__resource_list___createdAt = 'block__list_of_cards___page___block__resource_list___createdAt',
+  block__list_of_cards___page___block__resource_list___updatedAt = 'block__list_of_cards___page___block__resource_list___updatedAt',
+  block__list_of_cards___page___block__resource_list___children = 'block__list_of_cards___page___block__resource_list___children',
+  block__list_of_cards___page___seoTitle = 'block__list_of_cards___page___seoTitle',
+  block__list_of_cards___page___seoDescription = 'block__list_of_cards___page___seoDescription',
+  block__list_of_cards___page___parent___id = 'block__list_of_cards___page___parent___id',
+  block__list_of_cards___page___parent___children = 'block__list_of_cards___page___parent___children',
+  block__list_of_cards___page___children = 'block__list_of_cards___page___children',
+  block__list_of_cards___page___children___id = 'block__list_of_cards___page___children___id',
+  block__list_of_cards___page___children___children = 'block__list_of_cards___page___children___children',
+  block__list_of_cards___page___internal___content = 'block__list_of_cards___page___internal___content',
+  block__list_of_cards___page___internal___contentDigest = 'block__list_of_cards___page___internal___contentDigest',
+  block__list_of_cards___page___internal___description = 'block__list_of_cards___page___internal___description',
+  block__list_of_cards___page___internal___fieldOwners = 'block__list_of_cards___page___internal___fieldOwners',
+  block__list_of_cards___page___internal___ignoreType = 'block__list_of_cards___page___internal___ignoreType',
+  block__list_of_cards___page___internal___mediaType = 'block__list_of_cards___page___internal___mediaType',
+  block__list_of_cards___page___internal___owner = 'block__list_of_cards___page___internal___owner',
+  block__list_of_cards___page___internal___type = 'block__list_of_cards___page___internal___type',
+  block__list_of_cards___spaceId = 'block__list_of_cards___spaceId',
+  block__list_of_cards___createdAt = 'block__list_of_cards___createdAt',
+  block__list_of_cards___updatedAt = 'block__list_of_cards___updatedAt',
+  block__list_of_cards___sys___type = 'block__list_of_cards___sys___type',
+  block__list_of_cards___sys___revision = 'block__list_of_cards___sys___revision',
+  block__list_of_cards___parent___id = 'block__list_of_cards___parent___id',
+  block__list_of_cards___parent___parent___id = 'block__list_of_cards___parent___parent___id',
+  block__list_of_cards___parent___parent___children = 'block__list_of_cards___parent___parent___children',
+  block__list_of_cards___parent___children = 'block__list_of_cards___parent___children',
+  block__list_of_cards___parent___children___id = 'block__list_of_cards___parent___children___id',
+  block__list_of_cards___parent___children___children = 'block__list_of_cards___parent___children___children',
+  block__list_of_cards___parent___internal___content = 'block__list_of_cards___parent___internal___content',
+  block__list_of_cards___parent___internal___contentDigest = 'block__list_of_cards___parent___internal___contentDigest',
+  block__list_of_cards___parent___internal___description = 'block__list_of_cards___parent___internal___description',
+  block__list_of_cards___parent___internal___fieldOwners = 'block__list_of_cards___parent___internal___fieldOwners',
+  block__list_of_cards___parent___internal___ignoreType = 'block__list_of_cards___parent___internal___ignoreType',
+  block__list_of_cards___parent___internal___mediaType = 'block__list_of_cards___parent___internal___mediaType',
+  block__list_of_cards___parent___internal___owner = 'block__list_of_cards___parent___internal___owner',
+  block__list_of_cards___parent___internal___type = 'block__list_of_cards___parent___internal___type',
+  block__list_of_cards___children = 'block__list_of_cards___children',
+  block__list_of_cards___children___id = 'block__list_of_cards___children___id',
+  block__list_of_cards___children___parent___id = 'block__list_of_cards___children___parent___id',
+  block__list_of_cards___children___parent___children = 'block__list_of_cards___children___parent___children',
+  block__list_of_cards___children___children = 'block__list_of_cards___children___children',
+  block__list_of_cards___children___children___id = 'block__list_of_cards___children___children___id',
+  block__list_of_cards___children___children___children = 'block__list_of_cards___children___children___children',
+  block__list_of_cards___children___internal___content = 'block__list_of_cards___children___internal___content',
+  block__list_of_cards___children___internal___contentDigest = 'block__list_of_cards___children___internal___contentDigest',
+  block__list_of_cards___children___internal___description = 'block__list_of_cards___children___internal___description',
+  block__list_of_cards___children___internal___fieldOwners = 'block__list_of_cards___children___internal___fieldOwners',
+  block__list_of_cards___children___internal___ignoreType = 'block__list_of_cards___children___internal___ignoreType',
+  block__list_of_cards___children___internal___mediaType = 'block__list_of_cards___children___internal___mediaType',
+  block__list_of_cards___children___internal___owner = 'block__list_of_cards___children___internal___owner',
+  block__list_of_cards___children___internal___type = 'block__list_of_cards___children___internal___type',
+  block__list_of_cards___internal___content = 'block__list_of_cards___internal___content',
+  block__list_of_cards___internal___contentDigest = 'block__list_of_cards___internal___contentDigest',
+  block__list_of_cards___internal___description = 'block__list_of_cards___internal___description',
+  block__list_of_cards___internal___fieldOwners = 'block__list_of_cards___internal___fieldOwners',
+  block__list_of_cards___internal___ignoreType = 'block__list_of_cards___internal___ignoreType',
+  block__list_of_cards___internal___mediaType = 'block__list_of_cards___internal___mediaType',
+  block__list_of_cards___internal___owner = 'block__list_of_cards___internal___owner',
+  block__list_of_cards___internal___type = 'block__list_of_cards___internal___type',
   spaceId = 'spaceId',
   createdAt = 'createdAt',
   updatedAt = 'updatedAt',
@@ -7536,6 +8348,7 @@ export type ContentfulCardFilterInput = {
   content?: Maybe<ContentfulCardContentFilterInput>;
   customLinkTitle?: Maybe<StringQueryOperatorInput>;
   icon?: Maybe<StringQueryOperatorInput>;
+  block__list_of_cards?: Maybe<ContentfulBlockListOfCardsFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
@@ -8450,6 +9263,7 @@ export enum ContentfulMembersGroupFieldsEnum {
   block__members___page___card___title = 'block__members___page___card___title',
   block__members___page___card___customLinkTitle = 'block__members___page___card___customLinkTitle',
   block__members___page___card___icon = 'block__members___page___card___icon',
+  block__members___page___card___block__list_of_cards = 'block__members___page___card___block__list_of_cards',
   block__members___page___card___spaceId = 'block__members___page___card___spaceId',
   block__members___page___card___createdAt = 'block__members___page___card___createdAt',
   block__members___page___card___updatedAt = 'block__members___page___card___updatedAt',
@@ -8923,7 +9737,7 @@ export type ContentfulPage = ContentfulReference & ContentfulEntry & Node & {
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
-  blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListContentfulBlockImageBandContentfulBlockJumbotronContentfulBlockListOfPeopleContentfulBlockMembersContentfulBlockResourceListUnion>>>;
+  blocks?: Maybe<Array<Maybe<ContentfulBlockCallToActionContentfulBlockContentContentfulBlockContentListContentfulBlockImageBandContentfulBlockJumbotronContentfulBlockListOfCardsContentfulBlockListOfPeopleContentfulBlockMembersContentfulBlockResourceListUnion>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
@@ -9087,6 +9901,7 @@ export enum ContentfulPageFieldsEnum {
   block__content___page___card___title = 'block__content___page___card___title',
   block__content___page___card___customLinkTitle = 'block__content___page___card___customLinkTitle',
   block__content___page___card___icon = 'block__content___page___card___icon',
+  block__content___page___card___block__list_of_cards = 'block__content___page___card___block__list_of_cards',
   block__content___page___card___spaceId = 'block__content___page___card___spaceId',
   block__content___page___card___createdAt = 'block__content___page___card___createdAt',
   block__content___page___card___updatedAt = 'block__content___page___card___updatedAt',
@@ -9170,6 +9985,58 @@ export enum ContentfulPageFieldsEnum {
   card___content___raw = 'card___content___raw',
   card___customLinkTitle = 'card___customLinkTitle',
   card___icon = 'card___icon',
+  card___block__list_of_cards = 'card___block__list_of_cards',
+  card___block__list_of_cards___contentful_id = 'card___block__list_of_cards___contentful_id',
+  card___block__list_of_cards___id = 'card___block__list_of_cards___id',
+  card___block__list_of_cards___node_locale = 'card___block__list_of_cards___node_locale',
+  card___block__list_of_cards___title = 'card___block__list_of_cards___title',
+  card___block__list_of_cards___variation = 'card___block__list_of_cards___variation',
+  card___block__list_of_cards___cards = 'card___block__list_of_cards___cards',
+  card___block__list_of_cards___cards___contentful_id = 'card___block__list_of_cards___cards___contentful_id',
+  card___block__list_of_cards___cards___id = 'card___block__list_of_cards___cards___id',
+  card___block__list_of_cards___cards___node_locale = 'card___block__list_of_cards___cards___node_locale',
+  card___block__list_of_cards___cards___title = 'card___block__list_of_cards___cards___title',
+  card___block__list_of_cards___cards___customLinkTitle = 'card___block__list_of_cards___cards___customLinkTitle',
+  card___block__list_of_cards___cards___icon = 'card___block__list_of_cards___cards___icon',
+  card___block__list_of_cards___cards___block__list_of_cards = 'card___block__list_of_cards___cards___block__list_of_cards',
+  card___block__list_of_cards___cards___spaceId = 'card___block__list_of_cards___cards___spaceId',
+  card___block__list_of_cards___cards___createdAt = 'card___block__list_of_cards___cards___createdAt',
+  card___block__list_of_cards___cards___updatedAt = 'card___block__list_of_cards___cards___updatedAt',
+  card___block__list_of_cards___cards___children = 'card___block__list_of_cards___cards___children',
+  card___block__list_of_cards___page = 'card___block__list_of_cards___page',
+  card___block__list_of_cards___page___contentful_id = 'card___block__list_of_cards___page___contentful_id',
+  card___block__list_of_cards___page___id = 'card___block__list_of_cards___page___id',
+  card___block__list_of_cards___page___node_locale = 'card___block__list_of_cards___page___node_locale',
+  card___block__list_of_cards___page___title = 'card___block__list_of_cards___page___title',
+  card___block__list_of_cards___page___slug = 'card___block__list_of_cards___page___slug',
+  card___block__list_of_cards___page___spaceId = 'card___block__list_of_cards___page___spaceId',
+  card___block__list_of_cards___page___createdAt = 'card___block__list_of_cards___page___createdAt',
+  card___block__list_of_cards___page___updatedAt = 'card___block__list_of_cards___page___updatedAt',
+  card___block__list_of_cards___page___block__content = 'card___block__list_of_cards___page___block__content',
+  card___block__list_of_cards___page___card = 'card___block__list_of_cards___page___card',
+  card___block__list_of_cards___page___subtitle = 'card___block__list_of_cards___page___subtitle',
+  card___block__list_of_cards___page___block__resource_list = 'card___block__list_of_cards___page___block__resource_list',
+  card___block__list_of_cards___page___seoTitle = 'card___block__list_of_cards___page___seoTitle',
+  card___block__list_of_cards___page___seoDescription = 'card___block__list_of_cards___page___seoDescription',
+  card___block__list_of_cards___page___children = 'card___block__list_of_cards___page___children',
+  card___block__list_of_cards___spaceId = 'card___block__list_of_cards___spaceId',
+  card___block__list_of_cards___createdAt = 'card___block__list_of_cards___createdAt',
+  card___block__list_of_cards___updatedAt = 'card___block__list_of_cards___updatedAt',
+  card___block__list_of_cards___sys___type = 'card___block__list_of_cards___sys___type',
+  card___block__list_of_cards___sys___revision = 'card___block__list_of_cards___sys___revision',
+  card___block__list_of_cards___parent___id = 'card___block__list_of_cards___parent___id',
+  card___block__list_of_cards___parent___children = 'card___block__list_of_cards___parent___children',
+  card___block__list_of_cards___children = 'card___block__list_of_cards___children',
+  card___block__list_of_cards___children___id = 'card___block__list_of_cards___children___id',
+  card___block__list_of_cards___children___children = 'card___block__list_of_cards___children___children',
+  card___block__list_of_cards___internal___content = 'card___block__list_of_cards___internal___content',
+  card___block__list_of_cards___internal___contentDigest = 'card___block__list_of_cards___internal___contentDigest',
+  card___block__list_of_cards___internal___description = 'card___block__list_of_cards___internal___description',
+  card___block__list_of_cards___internal___fieldOwners = 'card___block__list_of_cards___internal___fieldOwners',
+  card___block__list_of_cards___internal___ignoreType = 'card___block__list_of_cards___internal___ignoreType',
+  card___block__list_of_cards___internal___mediaType = 'card___block__list_of_cards___internal___mediaType',
+  card___block__list_of_cards___internal___owner = 'card___block__list_of_cards___internal___owner',
+  card___block__list_of_cards___internal___type = 'card___block__list_of_cards___internal___type',
   card___spaceId = 'card___spaceId',
   card___createdAt = 'card___createdAt',
   card___updatedAt = 'card___updatedAt',
@@ -9248,6 +10115,7 @@ export enum ContentfulPageFieldsEnum {
   block__resource_list___headingLink___card___title = 'block__resource_list___headingLink___card___title',
   block__resource_list___headingLink___card___customLinkTitle = 'block__resource_list___headingLink___card___customLinkTitle',
   block__resource_list___headingLink___card___icon = 'block__resource_list___headingLink___card___icon',
+  block__resource_list___headingLink___card___block__list_of_cards = 'block__resource_list___headingLink___card___block__list_of_cards',
   block__resource_list___headingLink___card___spaceId = 'block__resource_list___headingLink___card___spaceId',
   block__resource_list___headingLink___card___createdAt = 'block__resource_list___headingLink___card___createdAt',
   block__resource_list___headingLink___card___updatedAt = 'block__resource_list___headingLink___card___updatedAt',
@@ -9395,6 +10263,7 @@ export enum ContentfulPageFieldsEnum {
   block__resource_list___page___card___title = 'block__resource_list___page___card___title',
   block__resource_list___page___card___customLinkTitle = 'block__resource_list___page___card___customLinkTitle',
   block__resource_list___page___card___icon = 'block__resource_list___page___card___icon',
+  block__resource_list___page___card___block__list_of_cards = 'block__resource_list___page___card___block__list_of_cards',
   block__resource_list___page___card___spaceId = 'block__resource_list___page___card___spaceId',
   block__resource_list___page___card___createdAt = 'block__resource_list___page___card___createdAt',
   block__resource_list___page___card___updatedAt = 'block__resource_list___page___card___updatedAt',
@@ -10267,6 +11136,7 @@ export enum ContentfulPeopleFieldsEnum {
   block__list_of_people___page___card___title = 'block__list_of_people___page___card___title',
   block__list_of_people___page___card___customLinkTitle = 'block__list_of_people___page___card___customLinkTitle',
   block__list_of_people___page___card___icon = 'block__list_of_people___page___card___icon',
+  block__list_of_people___page___card___block__list_of_cards = 'block__list_of_people___page___card___block__list_of_cards',
   block__list_of_people___page___card___spaceId = 'block__list_of_people___page___card___spaceId',
   block__list_of_people___page___card___createdAt = 'block__list_of_people___page___card___createdAt',
   block__list_of_people___page___card___updatedAt = 'block__list_of_people___page___card___updatedAt',
@@ -10612,6 +11482,58 @@ export enum ContentfulResourceFieldsEnum {
   card___content___raw = 'card___content___raw',
   card___customLinkTitle = 'card___customLinkTitle',
   card___icon = 'card___icon',
+  card___block__list_of_cards = 'card___block__list_of_cards',
+  card___block__list_of_cards___contentful_id = 'card___block__list_of_cards___contentful_id',
+  card___block__list_of_cards___id = 'card___block__list_of_cards___id',
+  card___block__list_of_cards___node_locale = 'card___block__list_of_cards___node_locale',
+  card___block__list_of_cards___title = 'card___block__list_of_cards___title',
+  card___block__list_of_cards___variation = 'card___block__list_of_cards___variation',
+  card___block__list_of_cards___cards = 'card___block__list_of_cards___cards',
+  card___block__list_of_cards___cards___contentful_id = 'card___block__list_of_cards___cards___contentful_id',
+  card___block__list_of_cards___cards___id = 'card___block__list_of_cards___cards___id',
+  card___block__list_of_cards___cards___node_locale = 'card___block__list_of_cards___cards___node_locale',
+  card___block__list_of_cards___cards___title = 'card___block__list_of_cards___cards___title',
+  card___block__list_of_cards___cards___customLinkTitle = 'card___block__list_of_cards___cards___customLinkTitle',
+  card___block__list_of_cards___cards___icon = 'card___block__list_of_cards___cards___icon',
+  card___block__list_of_cards___cards___block__list_of_cards = 'card___block__list_of_cards___cards___block__list_of_cards',
+  card___block__list_of_cards___cards___spaceId = 'card___block__list_of_cards___cards___spaceId',
+  card___block__list_of_cards___cards___createdAt = 'card___block__list_of_cards___cards___createdAt',
+  card___block__list_of_cards___cards___updatedAt = 'card___block__list_of_cards___cards___updatedAt',
+  card___block__list_of_cards___cards___children = 'card___block__list_of_cards___cards___children',
+  card___block__list_of_cards___page = 'card___block__list_of_cards___page',
+  card___block__list_of_cards___page___contentful_id = 'card___block__list_of_cards___page___contentful_id',
+  card___block__list_of_cards___page___id = 'card___block__list_of_cards___page___id',
+  card___block__list_of_cards___page___node_locale = 'card___block__list_of_cards___page___node_locale',
+  card___block__list_of_cards___page___title = 'card___block__list_of_cards___page___title',
+  card___block__list_of_cards___page___slug = 'card___block__list_of_cards___page___slug',
+  card___block__list_of_cards___page___spaceId = 'card___block__list_of_cards___page___spaceId',
+  card___block__list_of_cards___page___createdAt = 'card___block__list_of_cards___page___createdAt',
+  card___block__list_of_cards___page___updatedAt = 'card___block__list_of_cards___page___updatedAt',
+  card___block__list_of_cards___page___block__content = 'card___block__list_of_cards___page___block__content',
+  card___block__list_of_cards___page___card = 'card___block__list_of_cards___page___card',
+  card___block__list_of_cards___page___subtitle = 'card___block__list_of_cards___page___subtitle',
+  card___block__list_of_cards___page___block__resource_list = 'card___block__list_of_cards___page___block__resource_list',
+  card___block__list_of_cards___page___seoTitle = 'card___block__list_of_cards___page___seoTitle',
+  card___block__list_of_cards___page___seoDescription = 'card___block__list_of_cards___page___seoDescription',
+  card___block__list_of_cards___page___children = 'card___block__list_of_cards___page___children',
+  card___block__list_of_cards___spaceId = 'card___block__list_of_cards___spaceId',
+  card___block__list_of_cards___createdAt = 'card___block__list_of_cards___createdAt',
+  card___block__list_of_cards___updatedAt = 'card___block__list_of_cards___updatedAt',
+  card___block__list_of_cards___sys___type = 'card___block__list_of_cards___sys___type',
+  card___block__list_of_cards___sys___revision = 'card___block__list_of_cards___sys___revision',
+  card___block__list_of_cards___parent___id = 'card___block__list_of_cards___parent___id',
+  card___block__list_of_cards___parent___children = 'card___block__list_of_cards___parent___children',
+  card___block__list_of_cards___children = 'card___block__list_of_cards___children',
+  card___block__list_of_cards___children___id = 'card___block__list_of_cards___children___id',
+  card___block__list_of_cards___children___children = 'card___block__list_of_cards___children___children',
+  card___block__list_of_cards___internal___content = 'card___block__list_of_cards___internal___content',
+  card___block__list_of_cards___internal___contentDigest = 'card___block__list_of_cards___internal___contentDigest',
+  card___block__list_of_cards___internal___description = 'card___block__list_of_cards___internal___description',
+  card___block__list_of_cards___internal___fieldOwners = 'card___block__list_of_cards___internal___fieldOwners',
+  card___block__list_of_cards___internal___ignoreType = 'card___block__list_of_cards___internal___ignoreType',
+  card___block__list_of_cards___internal___mediaType = 'card___block__list_of_cards___internal___mediaType',
+  card___block__list_of_cards___internal___owner = 'card___block__list_of_cards___internal___owner',
+  card___block__list_of_cards___internal___type = 'card___block__list_of_cards___internal___type',
   card___spaceId = 'card___spaceId',
   card___createdAt = 'card___createdAt',
   card___updatedAt = 'card___updatedAt',
@@ -10749,6 +11671,7 @@ export enum ContentfulResourceFieldsEnum {
   block__content___page___card___title = 'block__content___page___card___title',
   block__content___page___card___customLinkTitle = 'block__content___page___card___customLinkTitle',
   block__content___page___card___icon = 'block__content___page___card___icon',
+  block__content___page___card___block__list_of_cards = 'block__content___page___card___block__list_of_cards',
   block__content___page___card___spaceId = 'block__content___page___card___spaceId',
   block__content___page___card___createdAt = 'block__content___page___card___createdAt',
   block__content___page___card___updatedAt = 'block__content___page___card___updatedAt',
@@ -10860,6 +11783,7 @@ export enum ContentfulResourceFieldsEnum {
   block__resource_list___headingLink___card___title = 'block__resource_list___headingLink___card___title',
   block__resource_list___headingLink___card___customLinkTitle = 'block__resource_list___headingLink___card___customLinkTitle',
   block__resource_list___headingLink___card___icon = 'block__resource_list___headingLink___card___icon',
+  block__resource_list___headingLink___card___block__list_of_cards = 'block__resource_list___headingLink___card___block__list_of_cards',
   block__resource_list___headingLink___card___spaceId = 'block__resource_list___headingLink___card___spaceId',
   block__resource_list___headingLink___card___createdAt = 'block__resource_list___headingLink___card___createdAt',
   block__resource_list___headingLink___card___updatedAt = 'block__resource_list___headingLink___card___updatedAt',
@@ -11007,6 +11931,7 @@ export enum ContentfulResourceFieldsEnum {
   block__resource_list___page___card___title = 'block__resource_list___page___card___title',
   block__resource_list___page___card___customLinkTitle = 'block__resource_list___page___card___customLinkTitle',
   block__resource_list___page___card___icon = 'block__resource_list___page___card___icon',
+  block__resource_list___page___card___block__list_of_cards = 'block__resource_list___page___card___block__list_of_cards',
   block__resource_list___page___card___spaceId = 'block__resource_list___page___card___spaceId',
   block__resource_list___page___card___createdAt = 'block__resource_list___page___card___createdAt',
   block__resource_list___page___card___updatedAt = 'block__resource_list___page___card___updatedAt',
@@ -12630,6 +13555,8 @@ export type Query = {
   allContentfulFrequentlyAskedQuestion: ContentfulFrequentlyAskedQuestionConnection;
   contentfulCard?: Maybe<ContentfulCard>;
   allContentfulCard: ContentfulCardConnection;
+  contentfulBlockListOfCards?: Maybe<ContentfulBlockListOfCards>;
+  allContentfulBlockListOfCards: ContentfulBlockListOfCardsConnection;
   contentfulBlockJumbotronButtonJsonNode?: Maybe<ContentfulBlockJumbotronButtonJsonNode>;
   allContentfulBlockJumbotronButtonJsonNode: ContentfulBlockJumbotronButtonJsonNodeConnection;
   contentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNode>;
@@ -13324,6 +14251,7 @@ export type QueryContentfulCardArgs = {
   content?: Maybe<ContentfulCardContentFilterInput>;
   customLinkTitle?: Maybe<StringQueryOperatorInput>;
   icon?: Maybe<StringQueryOperatorInput>;
+  block__list_of_cards?: Maybe<ContentfulBlockListOfCardsFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
@@ -13337,6 +14265,32 @@ export type QueryContentfulCardArgs = {
 export type QueryAllContentfulCardArgs = {
   filter?: Maybe<ContentfulCardFilterInput>;
   sort?: Maybe<ContentfulCardSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulBlockListOfCardsArgs = {
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  variation?: Maybe<StringQueryOperatorInput>;
+  cards?: Maybe<ContentfulCardFilterListInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulBlockListOfCardsSysFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+
+export type QueryAllContentfulBlockListOfCardsArgs = {
+  filter?: Maybe<ContentfulBlockListOfCardsFilterInput>;
+  sort?: Maybe<ContentfulBlockListOfCardsSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -15813,6 +16767,15 @@ export type AllJumbotronBlocksQuery = (
   ) }
 );
 
+export type ListOfCardsFragmentFragment = (
+  { __typename: 'ContentfulBlockListOfCards' }
+  & Pick<ContentfulBlockListOfCards, 'id' | 'title' | 'variation'>
+  & { cards?: Maybe<Array<Maybe<(
+    { __typename?: 'ContentfulCard' }
+    & CardFragmentFragment
+  )>>> }
+);
+
 export type AllListOfPeopleBlocksQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -15913,10 +16876,10 @@ export type CardFragmentFragment = (
     { __typename?: 'ContentfulCardContent' }
     & Pick<ContentfulCardContent, 'raw'>
   )>, link?: Maybe<(
-    { __typename?: 'ContentfulPage' }
+    { __typename: 'ContentfulPage' }
     & Pick<ContentfulPage, 'slug' | 'title'>
   ) | (
-    { __typename?: 'ContentfulResource' }
+    { __typename: 'ContentfulResource' }
     & Pick<ContentfulResource, 'url' | 'title'>
   )> }
 );
@@ -15938,6 +16901,9 @@ export type ContentfulBlocksFragmentFragment = (
   ) | (
     { __typename?: 'ContentfulBlockJumbotron' }
     & JumbotronFragmentFragment
+  ) | (
+    { __typename?: 'ContentfulBlockListOfCards' }
+    & ListOfCardsFragmentFragment
   ) | (
     { __typename?: 'ContentfulBlockListOfPeople' }
     & ListOfPeopleFragmentFragment
