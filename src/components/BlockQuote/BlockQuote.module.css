@@ -2,7 +2,7 @@
   border-left: 2px solid var(--color--gravy);
   padding: var(--space--xsmall) var(--space--large);
   background: var(--color--ghost);
-  border-radius: 2px;
+  border-radius: 3px;
   margin: var(--space--large) 0;
 }
 

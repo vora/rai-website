@@ -27,13 +27,19 @@ export function ListOfCards({
           </>
         )}
         <div className={styles.cards}>
-          {cards?.map((card) => (
-            <Card
-              {...card}
-              key={card.title}
-              size={variation === "List" ? "large" : "base"}
-            />
-          ))}
+          {cards?.map((card) => {
+            if (card.__typename !== "ContentfulCard") {
+              return <div>Unknown Card</div>;
+            }
+
+            return (
+              <Card
+                {...card}
+                key={card.title}
+                size={variation === "List" ? "large" : "base"}
+              />
+            );
+          })}
         </div>
       </Container>
     </div>
@@ -47,6 +53,7 @@ export const ListOfCardsFragment = graphql`
     title
     variation
     cards {
+      __typename
       ...CardFragment
     }
   }

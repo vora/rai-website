@@ -1,7 +1,18 @@
-.code {
+.details {
   margin-top: var(--space--base);
   border: 1px solid var(--color--ghost);
   border-radius: 3px;
+}
+
+.summary {
+  font-size: var(--font-size--small);
+  text-transform: uppercase;
+  padding: var(--space--small) var(--space--base);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.code {
   overflow-x: scroll;
   padding: var(--space--base); 
   font-family: monospace;
@@ -38,4 +49,21 @@
 .checkbox {
   position: absolute;
   left: -999em;
+}
+
+.title {
+  font-size: var(--font-size--large);
+  font-family: var(--font-family--display);
+}
+
+.pageUsage {
+  margin-bottom: var(--space--base);
+}
+
+.meta {
+  margin-bottom: var(--space--base);
+}
+
+.meta:empty {
+  margin-bottom: 0;
 }

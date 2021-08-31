@@ -17802,9 +17802,9 @@ export type ListOfCardsFragmentFragment = (
   { __typename: 'ContentfulBlockListOfCards' }
   & Pick<ContentfulBlockListOfCards, 'id' | 'title' | 'variation'>
   & { cards?: Maybe<Array<Maybe<(
-    { __typename?: 'ContentfulCard' }
+    { __typename: 'ContentfulCard' }
     & CardFragmentFragment
-  ) | { __typename?: 'ContentfulMembershipLevels' }>>> }
+  ) | { __typename: 'ContentfulMembershipLevels' }>>> }
 );
 
 export type AllListOfPeopleBlocksQueryVariables = Exact<{ [key: string]: never; }>;
@@ -17925,6 +17925,24 @@ export type AllContentfulCardsTestQuery = (
     & { nodes: Array<(
       { __typename?: 'ContentfulCard' }
       & CardFragmentFragment
+    )> }
+  ) }
+);
+
+export type AllContentfulBlockListOfCardsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllContentfulBlockListOfCardsQuery = (
+  { __typename?: 'Query' }
+  & { result: (
+    { __typename?: 'ContentfulBlockListOfCardsConnection' }
+    & { nodes: Array<(
+      { __typename?: 'ContentfulBlockListOfCards' }
+      & { pageUsage?: Maybe<Array<Maybe<(
+        { __typename?: 'ContentfulPage' }
+        & Pick<ContentfulPage, 'title'>
+      )>>> }
+      & ListOfCardsFragmentFragment
     )> }
   ) }
 );
@@ -18064,20 +18082,6 @@ export type BannerQueryQuery = (
     { __typename?: 'ContentfulMicroContent' }
     & Pick<ContentfulMicroContent, 'value'>
   )> }
-);
-
-export type AllContentfulCardsQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type AllContentfulCardsQuery = (
-  { __typename?: 'Query' }
-  & { cards: (
-    { __typename?: 'ContentfulCardConnection' }
-    & { nodes: Array<(
-      { __typename?: 'ContentfulCard' }
-      & CardFragmentFragment
-    )> }
-  ) }
 );
 
 export type AllContentfulAssetsQueryVariables = Exact<{ [key: string]: never; }>;

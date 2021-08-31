@@ -1,4 +1,6 @@
 import { action } from "@storybook/addon-actions";
+import { Container } from "@/components/Container";
+import { Text } from "@/components/Text";
 
 import "../src/styles/styles.css";
 
@@ -11,6 +13,12 @@ export const parameters = {
     },
   },
   backgrounds: { disable: true, grid: { disable: true } },
+  docs: {
+    components: {
+      p: Text,
+      wrapper: Container
+    },
+  },
 };
 
 // Gatsby's Link overrides:

@@ -4,8 +4,9 @@
  */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { ChangeEvent, ReactNode, useState } from "react";
-import { Text } from "@/components/Text";
+import { BlockQuote } from "@/components/BlockQuote";
 import { Emphasis } from "@/components/Emphasis";
+import { Divider } from "@/components/Divider";
 
 import styles from "./ContentType.module.css";
 
@@ -20,20 +21,34 @@ export function ContentType({ query, component }: ContentTypeProps) {
 
   return (
     <div>
-      {nodes?.map((node: any) => {
+      {nodes?.map((node: any, index: number) => {
         return (
           <div>
-            {node?.title && (
-              <Text size="large">
-                <Emphasis variation="bold">Title: </Emphasis>
-                {node.title}
-              </Text>
-            )}
+            <div className={styles.meta}>
+              <BlockQuote>
+                {node?.title && (
+                  <div className={styles.title}>
+                    <Emphasis variation="bold">Title: </Emphasis>
+                    {node.title}
+                  </div>
+                )}
+                {node?.pageUsage && (
+                  <div>
+                    <Emphasis variation="bold">Used on pages: </Emphasis>{" "}
+                    {node?.pageUsage.map((page: any) => page.title).join(",")}
+                  </div>
+                )}
+              </BlockQuote>
+            </div>
             {/* @ts-expect-error Typescript doesn't like this because Component doesn't have props. */}
             <Component {...node} />
-            <pre className={styles.code}>
-              {JSON.stringify(node, undefined, 2)}
-            </pre>
+            <details className={styles.details}>
+              <summary className={styles.summary}>Content Details</summary>
+              <pre className={styles.code}>
+                {JSON.stringify(node, undefined, 2)}
+              </pre>
+            </details>
+            {nodes.length !== index + 1 && <Divider spacing="largest" />}
           </div>
         );
       })}

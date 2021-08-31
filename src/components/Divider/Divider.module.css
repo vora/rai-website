@@ -11,3 +11,7 @@
 .small {
   margin: var(--space--base) 0;
 }
+
+.largest {
+  margin: var(--space--xxlarge) 0;
+}

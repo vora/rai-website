@@ -1,17 +1,24 @@
 .container {
+  --container--inset: var(--space--base);
+  --container--margin-x: auto;
   box-sizing: border-box;
   width: 100%;
   max-width: calc(var(--space--base) * 75);
-  padding: 0 var(--space--base);
-  margin-left: auto !important;
-  margin-right: auto !important;
+  padding: 0 var(--container--inset);
+  margin-left: var(--container--margin-x) !important;
+  margin-right: var(--container--margin-x) !important;
 }
 
 @media (min-width: 640px) {
   .container {
-    padding: 0 var(--space--large);
+    --container--inset: var(--space--large);
   }
-} 
+}
+
+.container .container {
+  --container--margin-x: calc(var(--container--inset) * -1);
+  width: calc(100% + var(--container--inset) + var(--container--inset));
+}
 
 .small {
   max-width: calc(var(--space--base) * 45);
