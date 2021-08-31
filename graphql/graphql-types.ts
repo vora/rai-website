@@ -892,11 +892,10 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
-  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -1559,11 +1558,10 @@ export enum ContentfulBlockContentFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
-  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -2085,11 +2083,10 @@ export enum ContentfulBlockContentListFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
-  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -2819,11 +2816,10 @@ export enum ContentfulBlockImageBandFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
-  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -3485,11 +3481,10 @@ export enum ContentfulBlockJumbotronFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
-  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -3878,12 +3873,13 @@ export type ContentfulBlockListOfCards = ContentfulReference & ContentfulEntry &
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
   variation?: Maybe<Scalars['String']>;
-  cards?: Maybe<Array<Maybe<ContentfulCard>>>;
-  page?: Maybe<Array<Maybe<ContentfulPage>>>;
+  description?: Maybe<ContentfulBlockListOfCardsDescription>;
+  cards?: Maybe<Array<Maybe<ContentfulCardContentfulMembershipLevelsUnion>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulBlockListOfCardsSys>;
+  page?: Maybe<Array<Maybe<ContentfulPage>>>;
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
@@ -3927,6 +3923,15 @@ export type ContentfulBlockListOfCardsConnectionGroupArgs = {
   field: ContentfulBlockListOfCardsFieldsEnum;
 };
 
+export type ContentfulBlockListOfCardsDescription = {
+  __typename?: 'ContentfulBlockListOfCardsDescription';
+  raw?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulBlockListOfCardsDescriptionFilterInput = {
+  raw?: Maybe<StringQueryOperatorInput>;
+};
+
 export type ContentfulBlockListOfCardsEdge = {
   __typename?: 'ContentfulBlockListOfCardsEdge';
   next?: Maybe<ContentfulBlockListOfCards>;
@@ -3940,108 +3945,15 @@ export enum ContentfulBlockListOfCardsFieldsEnum {
   node_locale = 'node_locale',
   title = 'title',
   variation = 'variation',
-  cards = 'cards',
-  cards___contentful_id = 'cards___contentful_id',
-  cards___id = 'cards___id',
-  cards___node_locale = 'cards___node_locale',
-  cards___title = 'cards___title',
-  cards___content___raw = 'cards___content___raw',
-  cards___customLinkTitle = 'cards___customLinkTitle',
-  cards___icon = 'cards___icon',
-  cards___block__list_of_cards = 'cards___block__list_of_cards',
-  cards___block__list_of_cards___contentful_id = 'cards___block__list_of_cards___contentful_id',
-  cards___block__list_of_cards___id = 'cards___block__list_of_cards___id',
-  cards___block__list_of_cards___node_locale = 'cards___block__list_of_cards___node_locale',
-  cards___block__list_of_cards___title = 'cards___block__list_of_cards___title',
-  cards___block__list_of_cards___variation = 'cards___block__list_of_cards___variation',
-  cards___block__list_of_cards___cards = 'cards___block__list_of_cards___cards',
-  cards___block__list_of_cards___cards___contentful_id = 'cards___block__list_of_cards___cards___contentful_id',
-  cards___block__list_of_cards___cards___id = 'cards___block__list_of_cards___cards___id',
-  cards___block__list_of_cards___cards___node_locale = 'cards___block__list_of_cards___cards___node_locale',
-  cards___block__list_of_cards___cards___title = 'cards___block__list_of_cards___cards___title',
-  cards___block__list_of_cards___cards___customLinkTitle = 'cards___block__list_of_cards___cards___customLinkTitle',
-  cards___block__list_of_cards___cards___icon = 'cards___block__list_of_cards___cards___icon',
-  cards___block__list_of_cards___cards___block__list_of_cards = 'cards___block__list_of_cards___cards___block__list_of_cards',
-  cards___block__list_of_cards___cards___spaceId = 'cards___block__list_of_cards___cards___spaceId',
-  cards___block__list_of_cards___cards___createdAt = 'cards___block__list_of_cards___cards___createdAt',
-  cards___block__list_of_cards___cards___updatedAt = 'cards___block__list_of_cards___cards___updatedAt',
-  cards___block__list_of_cards___cards___children = 'cards___block__list_of_cards___cards___children',
-  cards___block__list_of_cards___page = 'cards___block__list_of_cards___page',
-  cards___block__list_of_cards___page___contentful_id = 'cards___block__list_of_cards___page___contentful_id',
-  cards___block__list_of_cards___page___id = 'cards___block__list_of_cards___page___id',
-  cards___block__list_of_cards___page___node_locale = 'cards___block__list_of_cards___page___node_locale',
-  cards___block__list_of_cards___page___title = 'cards___block__list_of_cards___page___title',
-  cards___block__list_of_cards___page___slug = 'cards___block__list_of_cards___page___slug',
-  cards___block__list_of_cards___page___spaceId = 'cards___block__list_of_cards___page___spaceId',
-  cards___block__list_of_cards___page___createdAt = 'cards___block__list_of_cards___page___createdAt',
-  cards___block__list_of_cards___page___updatedAt = 'cards___block__list_of_cards___page___updatedAt',
-  cards___block__list_of_cards___page___block__content = 'cards___block__list_of_cards___page___block__content',
-  cards___block__list_of_cards___page___card = 'cards___block__list_of_cards___page___card',
-  cards___block__list_of_cards___page___subtitle = 'cards___block__list_of_cards___page___subtitle',
-  cards___block__list_of_cards___page___block__resource_list = 'cards___block__list_of_cards___page___block__resource_list',
-  cards___block__list_of_cards___page___seoTitle = 'cards___block__list_of_cards___page___seoTitle',
-  cards___block__list_of_cards___page___seoDescription = 'cards___block__list_of_cards___page___seoDescription',
-  cards___block__list_of_cards___page___children = 'cards___block__list_of_cards___page___children',
-  cards___block__list_of_cards___spaceId = 'cards___block__list_of_cards___spaceId',
-  cards___block__list_of_cards___createdAt = 'cards___block__list_of_cards___createdAt',
-  cards___block__list_of_cards___updatedAt = 'cards___block__list_of_cards___updatedAt',
-  cards___block__list_of_cards___sys___type = 'cards___block__list_of_cards___sys___type',
-  cards___block__list_of_cards___sys___revision = 'cards___block__list_of_cards___sys___revision',
-  cards___block__list_of_cards___parent___id = 'cards___block__list_of_cards___parent___id',
-  cards___block__list_of_cards___parent___children = 'cards___block__list_of_cards___parent___children',
-  cards___block__list_of_cards___children = 'cards___block__list_of_cards___children',
-  cards___block__list_of_cards___children___id = 'cards___block__list_of_cards___children___id',
-  cards___block__list_of_cards___children___children = 'cards___block__list_of_cards___children___children',
-  cards___block__list_of_cards___internal___content = 'cards___block__list_of_cards___internal___content',
-  cards___block__list_of_cards___internal___contentDigest = 'cards___block__list_of_cards___internal___contentDigest',
-  cards___block__list_of_cards___internal___description = 'cards___block__list_of_cards___internal___description',
-  cards___block__list_of_cards___internal___fieldOwners = 'cards___block__list_of_cards___internal___fieldOwners',
-  cards___block__list_of_cards___internal___ignoreType = 'cards___block__list_of_cards___internal___ignoreType',
-  cards___block__list_of_cards___internal___mediaType = 'cards___block__list_of_cards___internal___mediaType',
-  cards___block__list_of_cards___internal___owner = 'cards___block__list_of_cards___internal___owner',
-  cards___block__list_of_cards___internal___type = 'cards___block__list_of_cards___internal___type',
-  cards___spaceId = 'cards___spaceId',
-  cards___createdAt = 'cards___createdAt',
-  cards___updatedAt = 'cards___updatedAt',
-  cards___sys___type = 'cards___sys___type',
-  cards___sys___revision = 'cards___sys___revision',
-  cards___parent___id = 'cards___parent___id',
-  cards___parent___parent___id = 'cards___parent___parent___id',
-  cards___parent___parent___children = 'cards___parent___parent___children',
-  cards___parent___children = 'cards___parent___children',
-  cards___parent___children___id = 'cards___parent___children___id',
-  cards___parent___children___children = 'cards___parent___children___children',
-  cards___parent___internal___content = 'cards___parent___internal___content',
-  cards___parent___internal___contentDigest = 'cards___parent___internal___contentDigest',
-  cards___parent___internal___description = 'cards___parent___internal___description',
-  cards___parent___internal___fieldOwners = 'cards___parent___internal___fieldOwners',
-  cards___parent___internal___ignoreType = 'cards___parent___internal___ignoreType',
-  cards___parent___internal___mediaType = 'cards___parent___internal___mediaType',
-  cards___parent___internal___owner = 'cards___parent___internal___owner',
-  cards___parent___internal___type = 'cards___parent___internal___type',
-  cards___children = 'cards___children',
-  cards___children___id = 'cards___children___id',
-  cards___children___parent___id = 'cards___children___parent___id',
-  cards___children___parent___children = 'cards___children___parent___children',
-  cards___children___children = 'cards___children___children',
-  cards___children___children___id = 'cards___children___children___id',
-  cards___children___children___children = 'cards___children___children___children',
-  cards___children___internal___content = 'cards___children___internal___content',
-  cards___children___internal___contentDigest = 'cards___children___internal___contentDigest',
-  cards___children___internal___description = 'cards___children___internal___description',
-  cards___children___internal___fieldOwners = 'cards___children___internal___fieldOwners',
-  cards___children___internal___ignoreType = 'cards___children___internal___ignoreType',
-  cards___children___internal___mediaType = 'cards___children___internal___mediaType',
-  cards___children___internal___owner = 'cards___children___internal___owner',
-  cards___children___internal___type = 'cards___children___internal___type',
-  cards___internal___content = 'cards___internal___content',
-  cards___internal___contentDigest = 'cards___internal___contentDigest',
-  cards___internal___description = 'cards___internal___description',
-  cards___internal___fieldOwners = 'cards___internal___fieldOwners',
-  cards___internal___ignoreType = 'cards___internal___ignoreType',
-  cards___internal___mediaType = 'cards___internal___mediaType',
-  cards___internal___owner = 'cards___internal___owner',
-  cards___internal___type = 'cards___internal___type',
+  description___raw = 'description___raw',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
   page = 'page',
   page___contentful_id = 'page___contentful_id',
   page___id = 'page___id',
@@ -4119,11 +4031,10 @@ export enum ContentfulBlockListOfCardsFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
-  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -4255,14 +4166,6 @@ export enum ContentfulBlockListOfCardsFieldsEnum {
   page___internal___mediaType = 'page___internal___mediaType',
   page___internal___owner = 'page___internal___owner',
   page___internal___type = 'page___internal___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
   parent___id = 'parent___id',
   parent___parent___id = 'parent___parent___id',
   parent___parent___parent___id = 'parent___parent___parent___id',
@@ -4356,12 +4259,12 @@ export type ContentfulBlockListOfCardsFilterInput = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   variation?: Maybe<StringQueryOperatorInput>;
-  cards?: Maybe<ContentfulCardFilterListInput>;
-  page?: Maybe<ContentfulPageFilterListInput>;
+  description?: Maybe<ContentfulBlockListOfCardsDescriptionFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockListOfCardsSysFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
@@ -4803,11 +4706,10 @@ export enum ContentfulBlockListOfPeopleFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
-  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -5397,11 +5299,10 @@ export enum ContentfulBlockMembersFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
-  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -5845,11 +5746,10 @@ export enum ContentfulBlockResourceListFieldsEnum {
   headingLink___card___block__list_of_cards___node_locale = 'headingLink___card___block__list_of_cards___node_locale',
   headingLink___card___block__list_of_cards___title = 'headingLink___card___block__list_of_cards___title',
   headingLink___card___block__list_of_cards___variation = 'headingLink___card___block__list_of_cards___variation',
-  headingLink___card___block__list_of_cards___cards = 'headingLink___card___block__list_of_cards___cards',
-  headingLink___card___block__list_of_cards___page = 'headingLink___card___block__list_of_cards___page',
   headingLink___card___block__list_of_cards___spaceId = 'headingLink___card___block__list_of_cards___spaceId',
   headingLink___card___block__list_of_cards___createdAt = 'headingLink___card___block__list_of_cards___createdAt',
   headingLink___card___block__list_of_cards___updatedAt = 'headingLink___card___block__list_of_cards___updatedAt',
+  headingLink___card___block__list_of_cards___page = 'headingLink___card___block__list_of_cards___page',
   headingLink___card___block__list_of_cards___children = 'headingLink___card___block__list_of_cards___children',
   headingLink___card___spaceId = 'headingLink___card___spaceId',
   headingLink___card___createdAt = 'headingLink___card___createdAt',
@@ -6428,11 +6328,10 @@ export enum ContentfulBlockResourceListFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
-  page___card___block__list_of_cards___cards = 'page___card___block__list_of_cards___cards',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -8081,6 +7980,8 @@ export type ContentfulCardContentFilterInput = {
   raw?: Maybe<StringQueryOperatorInput>;
 };
 
+export type ContentfulCardContentfulMembershipLevelsUnion = ContentfulCard | ContentfulMembershipLevels;
+
 export type ContentfulCardEdge = {
   __typename?: 'ContentfulCardEdge';
   next?: Maybe<ContentfulCard>;
@@ -8102,44 +8003,12 @@ export enum ContentfulCardFieldsEnum {
   block__list_of_cards___node_locale = 'block__list_of_cards___node_locale',
   block__list_of_cards___title = 'block__list_of_cards___title',
   block__list_of_cards___variation = 'block__list_of_cards___variation',
-  block__list_of_cards___cards = 'block__list_of_cards___cards',
-  block__list_of_cards___cards___contentful_id = 'block__list_of_cards___cards___contentful_id',
-  block__list_of_cards___cards___id = 'block__list_of_cards___cards___id',
-  block__list_of_cards___cards___node_locale = 'block__list_of_cards___cards___node_locale',
-  block__list_of_cards___cards___title = 'block__list_of_cards___cards___title',
-  block__list_of_cards___cards___content___raw = 'block__list_of_cards___cards___content___raw',
-  block__list_of_cards___cards___customLinkTitle = 'block__list_of_cards___cards___customLinkTitle',
-  block__list_of_cards___cards___icon = 'block__list_of_cards___cards___icon',
-  block__list_of_cards___cards___block__list_of_cards = 'block__list_of_cards___cards___block__list_of_cards',
-  block__list_of_cards___cards___block__list_of_cards___contentful_id = 'block__list_of_cards___cards___block__list_of_cards___contentful_id',
-  block__list_of_cards___cards___block__list_of_cards___id = 'block__list_of_cards___cards___block__list_of_cards___id',
-  block__list_of_cards___cards___block__list_of_cards___node_locale = 'block__list_of_cards___cards___block__list_of_cards___node_locale',
-  block__list_of_cards___cards___block__list_of_cards___title = 'block__list_of_cards___cards___block__list_of_cards___title',
-  block__list_of_cards___cards___block__list_of_cards___variation = 'block__list_of_cards___cards___block__list_of_cards___variation',
-  block__list_of_cards___cards___block__list_of_cards___cards = 'block__list_of_cards___cards___block__list_of_cards___cards',
-  block__list_of_cards___cards___block__list_of_cards___page = 'block__list_of_cards___cards___block__list_of_cards___page',
-  block__list_of_cards___cards___block__list_of_cards___spaceId = 'block__list_of_cards___cards___block__list_of_cards___spaceId',
-  block__list_of_cards___cards___block__list_of_cards___createdAt = 'block__list_of_cards___cards___block__list_of_cards___createdAt',
-  block__list_of_cards___cards___block__list_of_cards___updatedAt = 'block__list_of_cards___cards___block__list_of_cards___updatedAt',
-  block__list_of_cards___cards___block__list_of_cards___children = 'block__list_of_cards___cards___block__list_of_cards___children',
-  block__list_of_cards___cards___spaceId = 'block__list_of_cards___cards___spaceId',
-  block__list_of_cards___cards___createdAt = 'block__list_of_cards___cards___createdAt',
-  block__list_of_cards___cards___updatedAt = 'block__list_of_cards___cards___updatedAt',
-  block__list_of_cards___cards___sys___type = 'block__list_of_cards___cards___sys___type',
-  block__list_of_cards___cards___sys___revision = 'block__list_of_cards___cards___sys___revision',
-  block__list_of_cards___cards___parent___id = 'block__list_of_cards___cards___parent___id',
-  block__list_of_cards___cards___parent___children = 'block__list_of_cards___cards___parent___children',
-  block__list_of_cards___cards___children = 'block__list_of_cards___cards___children',
-  block__list_of_cards___cards___children___id = 'block__list_of_cards___cards___children___id',
-  block__list_of_cards___cards___children___children = 'block__list_of_cards___cards___children___children',
-  block__list_of_cards___cards___internal___content = 'block__list_of_cards___cards___internal___content',
-  block__list_of_cards___cards___internal___contentDigest = 'block__list_of_cards___cards___internal___contentDigest',
-  block__list_of_cards___cards___internal___description = 'block__list_of_cards___cards___internal___description',
-  block__list_of_cards___cards___internal___fieldOwners = 'block__list_of_cards___cards___internal___fieldOwners',
-  block__list_of_cards___cards___internal___ignoreType = 'block__list_of_cards___cards___internal___ignoreType',
-  block__list_of_cards___cards___internal___mediaType = 'block__list_of_cards___cards___internal___mediaType',
-  block__list_of_cards___cards___internal___owner = 'block__list_of_cards___cards___internal___owner',
-  block__list_of_cards___cards___internal___type = 'block__list_of_cards___cards___internal___type',
+  block__list_of_cards___description___raw = 'block__list_of_cards___description___raw',
+  block__list_of_cards___spaceId = 'block__list_of_cards___spaceId',
+  block__list_of_cards___createdAt = 'block__list_of_cards___createdAt',
+  block__list_of_cards___updatedAt = 'block__list_of_cards___updatedAt',
+  block__list_of_cards___sys___type = 'block__list_of_cards___sys___type',
+  block__list_of_cards___sys___revision = 'block__list_of_cards___sys___revision',
   block__list_of_cards___page = 'block__list_of_cards___page',
   block__list_of_cards___page___contentful_id = 'block__list_of_cards___page___contentful_id',
   block__list_of_cards___page___id = 'block__list_of_cards___page___id',
@@ -8203,11 +8072,6 @@ export enum ContentfulCardFieldsEnum {
   block__list_of_cards___page___internal___mediaType = 'block__list_of_cards___page___internal___mediaType',
   block__list_of_cards___page___internal___owner = 'block__list_of_cards___page___internal___owner',
   block__list_of_cards___page___internal___type = 'block__list_of_cards___page___internal___type',
-  block__list_of_cards___spaceId = 'block__list_of_cards___spaceId',
-  block__list_of_cards___createdAt = 'block__list_of_cards___createdAt',
-  block__list_of_cards___updatedAt = 'block__list_of_cards___updatedAt',
-  block__list_of_cards___sys___type = 'block__list_of_cards___sys___type',
-  block__list_of_cards___sys___revision = 'block__list_of_cards___sys___revision',
   block__list_of_cards___parent___id = 'block__list_of_cards___parent___id',
   block__list_of_cards___parent___parent___id = 'block__list_of_cards___parent___parent___id',
   block__list_of_cards___parent___parent___children = 'block__list_of_cards___parent___parent___children',
@@ -9503,6 +9367,758 @@ export type ContentfulMembersGroupSysFilterInput = {
   contentType?: Maybe<ContentfulMembersGroupSysContentTypeFilterInput>;
 };
 
+export type ContentfulMembershipLevels = ContentfulReference & ContentfulEntry & Node & {
+  __typename?: 'ContentfulMembershipLevels';
+  contentful_id: Scalars['String'];
+  id: Scalars['ID'];
+  node_locale: Scalars['String'];
+  title?: Maybe<Scalars['String']>;
+  subtitle?: Maybe<Scalars['String']>;
+  icon?: Maybe<Scalars['String']>;
+  customLinkTitle?: Maybe<Scalars['String']>;
+  link?: Maybe<ContentfulResource>;
+  block__list_of_cards?: Maybe<Array<Maybe<ContentfulBlockListOfCards>>>;
+  items?: Maybe<ContentfulMembershipLevelsItemsJsonNode>;
+  spaceId?: Maybe<Scalars['String']>;
+  createdAt?: Maybe<Scalars['Date']>;
+  updatedAt?: Maybe<Scalars['Date']>;
+  sys?: Maybe<ContentfulMembershipLevelsSys>;
+  /** Returns all children nodes filtered by type contentfulMembershipLevelsItemsJsonNode */
+  childrenContentfulMembershipLevelsItemsJsonNode?: Maybe<Array<Maybe<ContentfulMembershipLevelsItemsJsonNode>>>;
+  /** Returns the first child node of type contentfulMembershipLevelsItemsJsonNode or null if there are no children of given type on this node */
+  childContentfulMembershipLevelsItemsJsonNode?: Maybe<ContentfulMembershipLevelsItemsJsonNode>;
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
+
+export type ContentfulMembershipLevelsCreatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+
+export type ContentfulMembershipLevelsUpdatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulMembershipLevelsConnection = {
+  __typename?: 'ContentfulMembershipLevelsConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulMembershipLevelsEdge>;
+  nodes: Array<ContentfulMembershipLevels>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<ContentfulMembershipLevelsGroupConnection>;
+};
+
+
+export type ContentfulMembershipLevelsConnectionDistinctArgs = {
+  field: ContentfulMembershipLevelsFieldsEnum;
+};
+
+
+export type ContentfulMembershipLevelsConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: ContentfulMembershipLevelsFieldsEnum;
+};
+
+export type ContentfulMembershipLevelsEdge = {
+  __typename?: 'ContentfulMembershipLevelsEdge';
+  next?: Maybe<ContentfulMembershipLevels>;
+  node: ContentfulMembershipLevels;
+  previous?: Maybe<ContentfulMembershipLevels>;
+};
+
+export enum ContentfulMembershipLevelsFieldsEnum {
+  contentful_id = 'contentful_id',
+  id = 'id',
+  node_locale = 'node_locale',
+  title = 'title',
+  subtitle = 'subtitle',
+  icon = 'icon',
+  customLinkTitle = 'customLinkTitle',
+  link___contentful_id = 'link___contentful_id',
+  link___id = 'link___id',
+  link___node_locale = 'link___node_locale',
+  link___title = 'link___title',
+  link___url = 'link___url',
+  link___membership_levels = 'link___membership_levels',
+  link___membership_levels___contentful_id = 'link___membership_levels___contentful_id',
+  link___membership_levels___id = 'link___membership_levels___id',
+  link___membership_levels___node_locale = 'link___membership_levels___node_locale',
+  link___membership_levels___title = 'link___membership_levels___title',
+  link___membership_levels___subtitle = 'link___membership_levels___subtitle',
+  link___membership_levels___icon = 'link___membership_levels___icon',
+  link___membership_levels___customLinkTitle = 'link___membership_levels___customLinkTitle',
+  link___membership_levels___link___contentful_id = 'link___membership_levels___link___contentful_id',
+  link___membership_levels___link___id = 'link___membership_levels___link___id',
+  link___membership_levels___link___node_locale = 'link___membership_levels___link___node_locale',
+  link___membership_levels___link___title = 'link___membership_levels___link___title',
+  link___membership_levels___link___url = 'link___membership_levels___link___url',
+  link___membership_levels___link___membership_levels = 'link___membership_levels___link___membership_levels',
+  link___membership_levels___link___spaceId = 'link___membership_levels___link___spaceId',
+  link___membership_levels___link___createdAt = 'link___membership_levels___link___createdAt',
+  link___membership_levels___link___updatedAt = 'link___membership_levels___link___updatedAt',
+  link___membership_levels___link___card = 'link___membership_levels___link___card',
+  link___membership_levels___link___block__content = 'link___membership_levels___link___block__content',
+  link___membership_levels___link___publicationDate = 'link___membership_levels___link___publicationDate',
+  link___membership_levels___link___block__resource_list = 'link___membership_levels___link___block__resource_list',
+  link___membership_levels___link___children = 'link___membership_levels___link___children',
+  link___membership_levels___block__list_of_cards = 'link___membership_levels___block__list_of_cards',
+  link___membership_levels___block__list_of_cards___contentful_id = 'link___membership_levels___block__list_of_cards___contentful_id',
+  link___membership_levels___block__list_of_cards___id = 'link___membership_levels___block__list_of_cards___id',
+  link___membership_levels___block__list_of_cards___node_locale = 'link___membership_levels___block__list_of_cards___node_locale',
+  link___membership_levels___block__list_of_cards___title = 'link___membership_levels___block__list_of_cards___title',
+  link___membership_levels___block__list_of_cards___variation = 'link___membership_levels___block__list_of_cards___variation',
+  link___membership_levels___block__list_of_cards___spaceId = 'link___membership_levels___block__list_of_cards___spaceId',
+  link___membership_levels___block__list_of_cards___createdAt = 'link___membership_levels___block__list_of_cards___createdAt',
+  link___membership_levels___block__list_of_cards___updatedAt = 'link___membership_levels___block__list_of_cards___updatedAt',
+  link___membership_levels___block__list_of_cards___page = 'link___membership_levels___block__list_of_cards___page',
+  link___membership_levels___block__list_of_cards___children = 'link___membership_levels___block__list_of_cards___children',
+  link___membership_levels___items___id = 'link___membership_levels___items___id',
+  link___membership_levels___items___children = 'link___membership_levels___items___children',
+  link___membership_levels___items___items = 'link___membership_levels___items___items',
+  link___membership_levels___spaceId = 'link___membership_levels___spaceId',
+  link___membership_levels___createdAt = 'link___membership_levels___createdAt',
+  link___membership_levels___updatedAt = 'link___membership_levels___updatedAt',
+  link___membership_levels___sys___type = 'link___membership_levels___sys___type',
+  link___membership_levels___sys___revision = 'link___membership_levels___sys___revision',
+  link___membership_levels___childrenContentfulMembershipLevelsItemsJsonNode = 'link___membership_levels___childrenContentfulMembershipLevelsItemsJsonNode',
+  link___membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___id = 'link___membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___id',
+  link___membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___children = 'link___membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___children',
+  link___membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___items = 'link___membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___items',
+  link___membership_levels___childContentfulMembershipLevelsItemsJsonNode___id = 'link___membership_levels___childContentfulMembershipLevelsItemsJsonNode___id',
+  link___membership_levels___childContentfulMembershipLevelsItemsJsonNode___children = 'link___membership_levels___childContentfulMembershipLevelsItemsJsonNode___children',
+  link___membership_levels___childContentfulMembershipLevelsItemsJsonNode___items = 'link___membership_levels___childContentfulMembershipLevelsItemsJsonNode___items',
+  link___membership_levels___parent___id = 'link___membership_levels___parent___id',
+  link___membership_levels___parent___children = 'link___membership_levels___parent___children',
+  link___membership_levels___children = 'link___membership_levels___children',
+  link___membership_levels___children___id = 'link___membership_levels___children___id',
+  link___membership_levels___children___children = 'link___membership_levels___children___children',
+  link___membership_levels___internal___content = 'link___membership_levels___internal___content',
+  link___membership_levels___internal___contentDigest = 'link___membership_levels___internal___contentDigest',
+  link___membership_levels___internal___description = 'link___membership_levels___internal___description',
+  link___membership_levels___internal___fieldOwners = 'link___membership_levels___internal___fieldOwners',
+  link___membership_levels___internal___ignoreType = 'link___membership_levels___internal___ignoreType',
+  link___membership_levels___internal___mediaType = 'link___membership_levels___internal___mediaType',
+  link___membership_levels___internal___owner = 'link___membership_levels___internal___owner',
+  link___membership_levels___internal___type = 'link___membership_levels___internal___type',
+  link___spaceId = 'link___spaceId',
+  link___createdAt = 'link___createdAt',
+  link___updatedAt = 'link___updatedAt',
+  link___sys___type = 'link___sys___type',
+  link___sys___revision = 'link___sys___revision',
+  link___card = 'link___card',
+  link___card___contentful_id = 'link___card___contentful_id',
+  link___card___id = 'link___card___id',
+  link___card___node_locale = 'link___card___node_locale',
+  link___card___title = 'link___card___title',
+  link___card___content___raw = 'link___card___content___raw',
+  link___card___customLinkTitle = 'link___card___customLinkTitle',
+  link___card___icon = 'link___card___icon',
+  link___card___block__list_of_cards = 'link___card___block__list_of_cards',
+  link___card___block__list_of_cards___contentful_id = 'link___card___block__list_of_cards___contentful_id',
+  link___card___block__list_of_cards___id = 'link___card___block__list_of_cards___id',
+  link___card___block__list_of_cards___node_locale = 'link___card___block__list_of_cards___node_locale',
+  link___card___block__list_of_cards___title = 'link___card___block__list_of_cards___title',
+  link___card___block__list_of_cards___variation = 'link___card___block__list_of_cards___variation',
+  link___card___block__list_of_cards___spaceId = 'link___card___block__list_of_cards___spaceId',
+  link___card___block__list_of_cards___createdAt = 'link___card___block__list_of_cards___createdAt',
+  link___card___block__list_of_cards___updatedAt = 'link___card___block__list_of_cards___updatedAt',
+  link___card___block__list_of_cards___page = 'link___card___block__list_of_cards___page',
+  link___card___block__list_of_cards___children = 'link___card___block__list_of_cards___children',
+  link___card___spaceId = 'link___card___spaceId',
+  link___card___createdAt = 'link___card___createdAt',
+  link___card___updatedAt = 'link___card___updatedAt',
+  link___card___sys___type = 'link___card___sys___type',
+  link___card___sys___revision = 'link___card___sys___revision',
+  link___card___parent___id = 'link___card___parent___id',
+  link___card___parent___children = 'link___card___parent___children',
+  link___card___children = 'link___card___children',
+  link___card___children___id = 'link___card___children___id',
+  link___card___children___children = 'link___card___children___children',
+  link___card___internal___content = 'link___card___internal___content',
+  link___card___internal___contentDigest = 'link___card___internal___contentDigest',
+  link___card___internal___description = 'link___card___internal___description',
+  link___card___internal___fieldOwners = 'link___card___internal___fieldOwners',
+  link___card___internal___ignoreType = 'link___card___internal___ignoreType',
+  link___card___internal___mediaType = 'link___card___internal___mediaType',
+  link___card___internal___owner = 'link___card___internal___owner',
+  link___card___internal___type = 'link___card___internal___type',
+  link___block__content = 'link___block__content',
+  link___block__content___contentful_id = 'link___block__content___contentful_id',
+  link___block__content___id = 'link___block__content___id',
+  link___block__content___node_locale = 'link___block__content___node_locale',
+  link___block__content___blockTitle = 'link___block__content___blockTitle',
+  link___block__content___variation = 'link___block__content___variation',
+  link___block__content___content___raw = 'link___block__content___content___raw',
+  link___block__content___image___contentful_id = 'link___block__content___image___contentful_id',
+  link___block__content___image___id = 'link___block__content___image___id',
+  link___block__content___image___spaceId = 'link___block__content___image___spaceId',
+  link___block__content___image___createdAt = 'link___block__content___image___createdAt',
+  link___block__content___image___updatedAt = 'link___block__content___image___updatedAt',
+  link___block__content___image___title = 'link___block__content___image___title',
+  link___block__content___image___description = 'link___block__content___image___description',
+  link___block__content___image___node_locale = 'link___block__content___image___node_locale',
+  link___block__content___image___gatsbyImageData = 'link___block__content___image___gatsbyImageData',
+  link___block__content___image___children = 'link___block__content___image___children',
+  link___block__content___page = 'link___block__content___page',
+  link___block__content___page___contentful_id = 'link___block__content___page___contentful_id',
+  link___block__content___page___id = 'link___block__content___page___id',
+  link___block__content___page___node_locale = 'link___block__content___page___node_locale',
+  link___block__content___page___title = 'link___block__content___page___title',
+  link___block__content___page___slug = 'link___block__content___page___slug',
+  link___block__content___page___spaceId = 'link___block__content___page___spaceId',
+  link___block__content___page___createdAt = 'link___block__content___page___createdAt',
+  link___block__content___page___updatedAt = 'link___block__content___page___updatedAt',
+  link___block__content___page___block__content = 'link___block__content___page___block__content',
+  link___block__content___page___card = 'link___block__content___page___card',
+  link___block__content___page___subtitle = 'link___block__content___page___subtitle',
+  link___block__content___page___block__resource_list = 'link___block__content___page___block__resource_list',
+  link___block__content___page___seoTitle = 'link___block__content___page___seoTitle',
+  link___block__content___page___seoDescription = 'link___block__content___page___seoDescription',
+  link___block__content___page___children = 'link___block__content___page___children',
+  link___block__content___spaceId = 'link___block__content___spaceId',
+  link___block__content___createdAt = 'link___block__content___createdAt',
+  link___block__content___updatedAt = 'link___block__content___updatedAt',
+  link___block__content___sys___type = 'link___block__content___sys___type',
+  link___block__content___sys___revision = 'link___block__content___sys___revision',
+  link___block__content___customButtonText = 'link___block__content___customButtonText',
+  link___block__content___parent___id = 'link___block__content___parent___id',
+  link___block__content___parent___children = 'link___block__content___parent___children',
+  link___block__content___children = 'link___block__content___children',
+  link___block__content___children___id = 'link___block__content___children___id',
+  link___block__content___children___children = 'link___block__content___children___children',
+  link___block__content___internal___content = 'link___block__content___internal___content',
+  link___block__content___internal___contentDigest = 'link___block__content___internal___contentDigest',
+  link___block__content___internal___description = 'link___block__content___internal___description',
+  link___block__content___internal___fieldOwners = 'link___block__content___internal___fieldOwners',
+  link___block__content___internal___ignoreType = 'link___block__content___internal___ignoreType',
+  link___block__content___internal___mediaType = 'link___block__content___internal___mediaType',
+  link___block__content___internal___owner = 'link___block__content___internal___owner',
+  link___block__content___internal___type = 'link___block__content___internal___type',
+  link___publicationDate = 'link___publicationDate',
+  link___block__resource_list = 'link___block__resource_list',
+  link___block__resource_list___contentful_id = 'link___block__resource_list___contentful_id',
+  link___block__resource_list___id = 'link___block__resource_list___id',
+  link___block__resource_list___node_locale = 'link___block__resource_list___node_locale',
+  link___block__resource_list___title = 'link___block__resource_list___title',
+  link___block__resource_list___customHeadingLinkText = 'link___block__resource_list___customHeadingLinkText',
+  link___block__resource_list___headingLink___contentful_id = 'link___block__resource_list___headingLink___contentful_id',
+  link___block__resource_list___headingLink___id = 'link___block__resource_list___headingLink___id',
+  link___block__resource_list___headingLink___node_locale = 'link___block__resource_list___headingLink___node_locale',
+  link___block__resource_list___headingLink___title = 'link___block__resource_list___headingLink___title',
+  link___block__resource_list___headingLink___slug = 'link___block__resource_list___headingLink___slug',
+  link___block__resource_list___headingLink___spaceId = 'link___block__resource_list___headingLink___spaceId',
+  link___block__resource_list___headingLink___createdAt = 'link___block__resource_list___headingLink___createdAt',
+  link___block__resource_list___headingLink___updatedAt = 'link___block__resource_list___headingLink___updatedAt',
+  link___block__resource_list___headingLink___block__content = 'link___block__resource_list___headingLink___block__content',
+  link___block__resource_list___headingLink___card = 'link___block__resource_list___headingLink___card',
+  link___block__resource_list___headingLink___subtitle = 'link___block__resource_list___headingLink___subtitle',
+  link___block__resource_list___headingLink___block__resource_list = 'link___block__resource_list___headingLink___block__resource_list',
+  link___block__resource_list___headingLink___seoTitle = 'link___block__resource_list___headingLink___seoTitle',
+  link___block__resource_list___headingLink___seoDescription = 'link___block__resource_list___headingLink___seoDescription',
+  link___block__resource_list___headingLink___children = 'link___block__resource_list___headingLink___children',
+  link___block__resource_list___blog_post = 'link___block__resource_list___blog_post',
+  link___block__resource_list___blog_post___contentful_id = 'link___block__resource_list___blog_post___contentful_id',
+  link___block__resource_list___blog_post___id = 'link___block__resource_list___blog_post___id',
+  link___block__resource_list___blog_post___node_locale = 'link___block__resource_list___blog_post___node_locale',
+  link___block__resource_list___blog_post___title = 'link___block__resource_list___blog_post___title',
+  link___block__resource_list___blog_post___slug = 'link___block__resource_list___blog_post___slug',
+  link___block__resource_list___blog_post___category = 'link___block__resource_list___blog_post___category',
+  link___block__resource_list___blog_post___published = 'link___block__resource_list___blog_post___published',
+  link___block__resource_list___blog_post___seoTitle = 'link___block__resource_list___blog_post___seoTitle',
+  link___block__resource_list___blog_post___seoDescription = 'link___block__resource_list___blog_post___seoDescription',
+  link___block__resource_list___blog_post___spaceId = 'link___block__resource_list___blog_post___spaceId',
+  link___block__resource_list___blog_post___createdAt = 'link___block__resource_list___blog_post___createdAt',
+  link___block__resource_list___blog_post___updatedAt = 'link___block__resource_list___blog_post___updatedAt',
+  link___block__resource_list___blog_post___featured = 'link___block__resource_list___blog_post___featured',
+  link___block__resource_list___blog_post___block__resource_list = 'link___block__resource_list___blog_post___block__resource_list',
+  link___block__resource_list___blog_post___childrenContentfulBlogPostExcerptTextNode = 'link___block__resource_list___blog_post___childrenContentfulBlogPostExcerptTextNode',
+  link___block__resource_list___blog_post___children = 'link___block__resource_list___blog_post___children',
+  link___block__resource_list___page = 'link___block__resource_list___page',
+  link___block__resource_list___page___contentful_id = 'link___block__resource_list___page___contentful_id',
+  link___block__resource_list___page___id = 'link___block__resource_list___page___id',
+  link___block__resource_list___page___node_locale = 'link___block__resource_list___page___node_locale',
+  link___block__resource_list___page___title = 'link___block__resource_list___page___title',
+  link___block__resource_list___page___slug = 'link___block__resource_list___page___slug',
+  link___block__resource_list___page___spaceId = 'link___block__resource_list___page___spaceId',
+  link___block__resource_list___page___createdAt = 'link___block__resource_list___page___createdAt',
+  link___block__resource_list___page___updatedAt = 'link___block__resource_list___page___updatedAt',
+  link___block__resource_list___page___block__content = 'link___block__resource_list___page___block__content',
+  link___block__resource_list___page___card = 'link___block__resource_list___page___card',
+  link___block__resource_list___page___subtitle = 'link___block__resource_list___page___subtitle',
+  link___block__resource_list___page___block__resource_list = 'link___block__resource_list___page___block__resource_list',
+  link___block__resource_list___page___seoTitle = 'link___block__resource_list___page___seoTitle',
+  link___block__resource_list___page___seoDescription = 'link___block__resource_list___page___seoDescription',
+  link___block__resource_list___page___children = 'link___block__resource_list___page___children',
+  link___block__resource_list___spaceId = 'link___block__resource_list___spaceId',
+  link___block__resource_list___createdAt = 'link___block__resource_list___createdAt',
+  link___block__resource_list___updatedAt = 'link___block__resource_list___updatedAt',
+  link___block__resource_list___sys___type = 'link___block__resource_list___sys___type',
+  link___block__resource_list___sys___revision = 'link___block__resource_list___sys___revision',
+  link___block__resource_list___parent___id = 'link___block__resource_list___parent___id',
+  link___block__resource_list___parent___children = 'link___block__resource_list___parent___children',
+  link___block__resource_list___children = 'link___block__resource_list___children',
+  link___block__resource_list___children___id = 'link___block__resource_list___children___id',
+  link___block__resource_list___children___children = 'link___block__resource_list___children___children',
+  link___block__resource_list___internal___content = 'link___block__resource_list___internal___content',
+  link___block__resource_list___internal___contentDigest = 'link___block__resource_list___internal___contentDigest',
+  link___block__resource_list___internal___description = 'link___block__resource_list___internal___description',
+  link___block__resource_list___internal___fieldOwners = 'link___block__resource_list___internal___fieldOwners',
+  link___block__resource_list___internal___ignoreType = 'link___block__resource_list___internal___ignoreType',
+  link___block__resource_list___internal___mediaType = 'link___block__resource_list___internal___mediaType',
+  link___block__resource_list___internal___owner = 'link___block__resource_list___internal___owner',
+  link___block__resource_list___internal___type = 'link___block__resource_list___internal___type',
+  link___parent___id = 'link___parent___id',
+  link___parent___parent___id = 'link___parent___parent___id',
+  link___parent___parent___children = 'link___parent___parent___children',
+  link___parent___children = 'link___parent___children',
+  link___parent___children___id = 'link___parent___children___id',
+  link___parent___children___children = 'link___parent___children___children',
+  link___parent___internal___content = 'link___parent___internal___content',
+  link___parent___internal___contentDigest = 'link___parent___internal___contentDigest',
+  link___parent___internal___description = 'link___parent___internal___description',
+  link___parent___internal___fieldOwners = 'link___parent___internal___fieldOwners',
+  link___parent___internal___ignoreType = 'link___parent___internal___ignoreType',
+  link___parent___internal___mediaType = 'link___parent___internal___mediaType',
+  link___parent___internal___owner = 'link___parent___internal___owner',
+  link___parent___internal___type = 'link___parent___internal___type',
+  link___children = 'link___children',
+  link___children___id = 'link___children___id',
+  link___children___parent___id = 'link___children___parent___id',
+  link___children___parent___children = 'link___children___parent___children',
+  link___children___children = 'link___children___children',
+  link___children___children___id = 'link___children___children___id',
+  link___children___children___children = 'link___children___children___children',
+  link___children___internal___content = 'link___children___internal___content',
+  link___children___internal___contentDigest = 'link___children___internal___contentDigest',
+  link___children___internal___description = 'link___children___internal___description',
+  link___children___internal___fieldOwners = 'link___children___internal___fieldOwners',
+  link___children___internal___ignoreType = 'link___children___internal___ignoreType',
+  link___children___internal___mediaType = 'link___children___internal___mediaType',
+  link___children___internal___owner = 'link___children___internal___owner',
+  link___children___internal___type = 'link___children___internal___type',
+  link___internal___content = 'link___internal___content',
+  link___internal___contentDigest = 'link___internal___contentDigest',
+  link___internal___description = 'link___internal___description',
+  link___internal___fieldOwners = 'link___internal___fieldOwners',
+  link___internal___ignoreType = 'link___internal___ignoreType',
+  link___internal___mediaType = 'link___internal___mediaType',
+  link___internal___owner = 'link___internal___owner',
+  link___internal___type = 'link___internal___type',
+  block__list_of_cards = 'block__list_of_cards',
+  block__list_of_cards___contentful_id = 'block__list_of_cards___contentful_id',
+  block__list_of_cards___id = 'block__list_of_cards___id',
+  block__list_of_cards___node_locale = 'block__list_of_cards___node_locale',
+  block__list_of_cards___title = 'block__list_of_cards___title',
+  block__list_of_cards___variation = 'block__list_of_cards___variation',
+  block__list_of_cards___description___raw = 'block__list_of_cards___description___raw',
+  block__list_of_cards___spaceId = 'block__list_of_cards___spaceId',
+  block__list_of_cards___createdAt = 'block__list_of_cards___createdAt',
+  block__list_of_cards___updatedAt = 'block__list_of_cards___updatedAt',
+  block__list_of_cards___sys___type = 'block__list_of_cards___sys___type',
+  block__list_of_cards___sys___revision = 'block__list_of_cards___sys___revision',
+  block__list_of_cards___page = 'block__list_of_cards___page',
+  block__list_of_cards___page___contentful_id = 'block__list_of_cards___page___contentful_id',
+  block__list_of_cards___page___id = 'block__list_of_cards___page___id',
+  block__list_of_cards___page___node_locale = 'block__list_of_cards___page___node_locale',
+  block__list_of_cards___page___title = 'block__list_of_cards___page___title',
+  block__list_of_cards___page___slug = 'block__list_of_cards___page___slug',
+  block__list_of_cards___page___spaceId = 'block__list_of_cards___page___spaceId',
+  block__list_of_cards___page___createdAt = 'block__list_of_cards___page___createdAt',
+  block__list_of_cards___page___updatedAt = 'block__list_of_cards___page___updatedAt',
+  block__list_of_cards___page___sys___type = 'block__list_of_cards___page___sys___type',
+  block__list_of_cards___page___sys___revision = 'block__list_of_cards___page___sys___revision',
+  block__list_of_cards___page___block__content = 'block__list_of_cards___page___block__content',
+  block__list_of_cards___page___block__content___contentful_id = 'block__list_of_cards___page___block__content___contentful_id',
+  block__list_of_cards___page___block__content___id = 'block__list_of_cards___page___block__content___id',
+  block__list_of_cards___page___block__content___node_locale = 'block__list_of_cards___page___block__content___node_locale',
+  block__list_of_cards___page___block__content___blockTitle = 'block__list_of_cards___page___block__content___blockTitle',
+  block__list_of_cards___page___block__content___variation = 'block__list_of_cards___page___block__content___variation',
+  block__list_of_cards___page___block__content___page = 'block__list_of_cards___page___block__content___page',
+  block__list_of_cards___page___block__content___spaceId = 'block__list_of_cards___page___block__content___spaceId',
+  block__list_of_cards___page___block__content___createdAt = 'block__list_of_cards___page___block__content___createdAt',
+  block__list_of_cards___page___block__content___updatedAt = 'block__list_of_cards___page___block__content___updatedAt',
+  block__list_of_cards___page___block__content___customButtonText = 'block__list_of_cards___page___block__content___customButtonText',
+  block__list_of_cards___page___block__content___children = 'block__list_of_cards___page___block__content___children',
+  block__list_of_cards___page___card = 'block__list_of_cards___page___card',
+  block__list_of_cards___page___card___contentful_id = 'block__list_of_cards___page___card___contentful_id',
+  block__list_of_cards___page___card___id = 'block__list_of_cards___page___card___id',
+  block__list_of_cards___page___card___node_locale = 'block__list_of_cards___page___card___node_locale',
+  block__list_of_cards___page___card___title = 'block__list_of_cards___page___card___title',
+  block__list_of_cards___page___card___customLinkTitle = 'block__list_of_cards___page___card___customLinkTitle',
+  block__list_of_cards___page___card___icon = 'block__list_of_cards___page___card___icon',
+  block__list_of_cards___page___card___block__list_of_cards = 'block__list_of_cards___page___card___block__list_of_cards',
+  block__list_of_cards___page___card___spaceId = 'block__list_of_cards___page___card___spaceId',
+  block__list_of_cards___page___card___createdAt = 'block__list_of_cards___page___card___createdAt',
+  block__list_of_cards___page___card___updatedAt = 'block__list_of_cards___page___card___updatedAt',
+  block__list_of_cards___page___card___children = 'block__list_of_cards___page___card___children',
+  block__list_of_cards___page___subtitle = 'block__list_of_cards___page___subtitle',
+  block__list_of_cards___page___block__resource_list = 'block__list_of_cards___page___block__resource_list',
+  block__list_of_cards___page___block__resource_list___contentful_id = 'block__list_of_cards___page___block__resource_list___contentful_id',
+  block__list_of_cards___page___block__resource_list___id = 'block__list_of_cards___page___block__resource_list___id',
+  block__list_of_cards___page___block__resource_list___node_locale = 'block__list_of_cards___page___block__resource_list___node_locale',
+  block__list_of_cards___page___block__resource_list___title = 'block__list_of_cards___page___block__resource_list___title',
+  block__list_of_cards___page___block__resource_list___customHeadingLinkText = 'block__list_of_cards___page___block__resource_list___customHeadingLinkText',
+  block__list_of_cards___page___block__resource_list___blog_post = 'block__list_of_cards___page___block__resource_list___blog_post',
+  block__list_of_cards___page___block__resource_list___page = 'block__list_of_cards___page___block__resource_list___page',
+  block__list_of_cards___page___block__resource_list___spaceId = 'block__list_of_cards___page___block__resource_list___spaceId',
+  block__list_of_cards___page___block__resource_list___createdAt = 'block__list_of_cards___page___block__resource_list___createdAt',
+  block__list_of_cards___page___block__resource_list___updatedAt = 'block__list_of_cards___page___block__resource_list___updatedAt',
+  block__list_of_cards___page___block__resource_list___children = 'block__list_of_cards___page___block__resource_list___children',
+  block__list_of_cards___page___seoTitle = 'block__list_of_cards___page___seoTitle',
+  block__list_of_cards___page___seoDescription = 'block__list_of_cards___page___seoDescription',
+  block__list_of_cards___page___parent___id = 'block__list_of_cards___page___parent___id',
+  block__list_of_cards___page___parent___children = 'block__list_of_cards___page___parent___children',
+  block__list_of_cards___page___children = 'block__list_of_cards___page___children',
+  block__list_of_cards___page___children___id = 'block__list_of_cards___page___children___id',
+  block__list_of_cards___page___children___children = 'block__list_of_cards___page___children___children',
+  block__list_of_cards___page___internal___content = 'block__list_of_cards___page___internal___content',
+  block__list_of_cards___page___internal___contentDigest = 'block__list_of_cards___page___internal___contentDigest',
+  block__list_of_cards___page___internal___description = 'block__list_of_cards___page___internal___description',
+  block__list_of_cards___page___internal___fieldOwners = 'block__list_of_cards___page___internal___fieldOwners',
+  block__list_of_cards___page___internal___ignoreType = 'block__list_of_cards___page___internal___ignoreType',
+  block__list_of_cards___page___internal___mediaType = 'block__list_of_cards___page___internal___mediaType',
+  block__list_of_cards___page___internal___owner = 'block__list_of_cards___page___internal___owner',
+  block__list_of_cards___page___internal___type = 'block__list_of_cards___page___internal___type',
+  block__list_of_cards___parent___id = 'block__list_of_cards___parent___id',
+  block__list_of_cards___parent___parent___id = 'block__list_of_cards___parent___parent___id',
+  block__list_of_cards___parent___parent___children = 'block__list_of_cards___parent___parent___children',
+  block__list_of_cards___parent___children = 'block__list_of_cards___parent___children',
+  block__list_of_cards___parent___children___id = 'block__list_of_cards___parent___children___id',
+  block__list_of_cards___parent___children___children = 'block__list_of_cards___parent___children___children',
+  block__list_of_cards___parent___internal___content = 'block__list_of_cards___parent___internal___content',
+  block__list_of_cards___parent___internal___contentDigest = 'block__list_of_cards___parent___internal___contentDigest',
+  block__list_of_cards___parent___internal___description = 'block__list_of_cards___parent___internal___description',
+  block__list_of_cards___parent___internal___fieldOwners = 'block__list_of_cards___parent___internal___fieldOwners',
+  block__list_of_cards___parent___internal___ignoreType = 'block__list_of_cards___parent___internal___ignoreType',
+  block__list_of_cards___parent___internal___mediaType = 'block__list_of_cards___parent___internal___mediaType',
+  block__list_of_cards___parent___internal___owner = 'block__list_of_cards___parent___internal___owner',
+  block__list_of_cards___parent___internal___type = 'block__list_of_cards___parent___internal___type',
+  block__list_of_cards___children = 'block__list_of_cards___children',
+  block__list_of_cards___children___id = 'block__list_of_cards___children___id',
+  block__list_of_cards___children___parent___id = 'block__list_of_cards___children___parent___id',
+  block__list_of_cards___children___parent___children = 'block__list_of_cards___children___parent___children',
+  block__list_of_cards___children___children = 'block__list_of_cards___children___children',
+  block__list_of_cards___children___children___id = 'block__list_of_cards___children___children___id',
+  block__list_of_cards___children___children___children = 'block__list_of_cards___children___children___children',
+  block__list_of_cards___children___internal___content = 'block__list_of_cards___children___internal___content',
+  block__list_of_cards___children___internal___contentDigest = 'block__list_of_cards___children___internal___contentDigest',
+  block__list_of_cards___children___internal___description = 'block__list_of_cards___children___internal___description',
+  block__list_of_cards___children___internal___fieldOwners = 'block__list_of_cards___children___internal___fieldOwners',
+  block__list_of_cards___children___internal___ignoreType = 'block__list_of_cards___children___internal___ignoreType',
+  block__list_of_cards___children___internal___mediaType = 'block__list_of_cards___children___internal___mediaType',
+  block__list_of_cards___children___internal___owner = 'block__list_of_cards___children___internal___owner',
+  block__list_of_cards___children___internal___type = 'block__list_of_cards___children___internal___type',
+  block__list_of_cards___internal___content = 'block__list_of_cards___internal___content',
+  block__list_of_cards___internal___contentDigest = 'block__list_of_cards___internal___contentDigest',
+  block__list_of_cards___internal___description = 'block__list_of_cards___internal___description',
+  block__list_of_cards___internal___fieldOwners = 'block__list_of_cards___internal___fieldOwners',
+  block__list_of_cards___internal___ignoreType = 'block__list_of_cards___internal___ignoreType',
+  block__list_of_cards___internal___mediaType = 'block__list_of_cards___internal___mediaType',
+  block__list_of_cards___internal___owner = 'block__list_of_cards___internal___owner',
+  block__list_of_cards___internal___type = 'block__list_of_cards___internal___type',
+  items___id = 'items___id',
+  items___parent___id = 'items___parent___id',
+  items___parent___parent___id = 'items___parent___parent___id',
+  items___parent___parent___children = 'items___parent___parent___children',
+  items___parent___children = 'items___parent___children',
+  items___parent___children___id = 'items___parent___children___id',
+  items___parent___children___children = 'items___parent___children___children',
+  items___parent___internal___content = 'items___parent___internal___content',
+  items___parent___internal___contentDigest = 'items___parent___internal___contentDigest',
+  items___parent___internal___description = 'items___parent___internal___description',
+  items___parent___internal___fieldOwners = 'items___parent___internal___fieldOwners',
+  items___parent___internal___ignoreType = 'items___parent___internal___ignoreType',
+  items___parent___internal___mediaType = 'items___parent___internal___mediaType',
+  items___parent___internal___owner = 'items___parent___internal___owner',
+  items___parent___internal___type = 'items___parent___internal___type',
+  items___children = 'items___children',
+  items___children___id = 'items___children___id',
+  items___children___parent___id = 'items___children___parent___id',
+  items___children___parent___children = 'items___children___parent___children',
+  items___children___children = 'items___children___children',
+  items___children___children___id = 'items___children___children___id',
+  items___children___children___children = 'items___children___children___children',
+  items___children___internal___content = 'items___children___internal___content',
+  items___children___internal___contentDigest = 'items___children___internal___contentDigest',
+  items___children___internal___description = 'items___children___internal___description',
+  items___children___internal___fieldOwners = 'items___children___internal___fieldOwners',
+  items___children___internal___ignoreType = 'items___children___internal___ignoreType',
+  items___children___internal___mediaType = 'items___children___internal___mediaType',
+  items___children___internal___owner = 'items___children___internal___owner',
+  items___children___internal___type = 'items___children___internal___type',
+  items___internal___content = 'items___internal___content',
+  items___internal___contentDigest = 'items___internal___contentDigest',
+  items___internal___description = 'items___internal___description',
+  items___internal___fieldOwners = 'items___internal___fieldOwners',
+  items___internal___ignoreType = 'items___internal___ignoreType',
+  items___internal___mediaType = 'items___internal___mediaType',
+  items___internal___owner = 'items___internal___owner',
+  items___internal___type = 'items___internal___type',
+  items___items = 'items___items',
+  items___sys___type = 'items___sys___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
+  childrenContentfulMembershipLevelsItemsJsonNode = 'childrenContentfulMembershipLevelsItemsJsonNode',
+  childrenContentfulMembershipLevelsItemsJsonNode___id = 'childrenContentfulMembershipLevelsItemsJsonNode___id',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___id = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___id',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___parent___id = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___parent___id',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___parent___children = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___parent___children',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___children = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___children',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___children___id = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___children___id',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___children___children = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___children___children',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___content = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___content',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___contentDigest = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___contentDigest',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___description = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___description',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___fieldOwners = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___fieldOwners',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___ignoreType = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___ignoreType',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___mediaType = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___mediaType',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___owner = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___owner',
+  childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___type = 'childrenContentfulMembershipLevelsItemsJsonNode___parent___internal___type',
+  childrenContentfulMembershipLevelsItemsJsonNode___children = 'childrenContentfulMembershipLevelsItemsJsonNode___children',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___id = 'childrenContentfulMembershipLevelsItemsJsonNode___children___id',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___parent___id = 'childrenContentfulMembershipLevelsItemsJsonNode___children___parent___id',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___parent___children = 'childrenContentfulMembershipLevelsItemsJsonNode___children___parent___children',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___children = 'childrenContentfulMembershipLevelsItemsJsonNode___children___children',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___children___id = 'childrenContentfulMembershipLevelsItemsJsonNode___children___children___id',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___children___children = 'childrenContentfulMembershipLevelsItemsJsonNode___children___children___children',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___internal___content = 'childrenContentfulMembershipLevelsItemsJsonNode___children___internal___content',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___internal___contentDigest = 'childrenContentfulMembershipLevelsItemsJsonNode___children___internal___contentDigest',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___internal___description = 'childrenContentfulMembershipLevelsItemsJsonNode___children___internal___description',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___internal___fieldOwners = 'childrenContentfulMembershipLevelsItemsJsonNode___children___internal___fieldOwners',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___internal___ignoreType = 'childrenContentfulMembershipLevelsItemsJsonNode___children___internal___ignoreType',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___internal___mediaType = 'childrenContentfulMembershipLevelsItemsJsonNode___children___internal___mediaType',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___internal___owner = 'childrenContentfulMembershipLevelsItemsJsonNode___children___internal___owner',
+  childrenContentfulMembershipLevelsItemsJsonNode___children___internal___type = 'childrenContentfulMembershipLevelsItemsJsonNode___children___internal___type',
+  childrenContentfulMembershipLevelsItemsJsonNode___internal___content = 'childrenContentfulMembershipLevelsItemsJsonNode___internal___content',
+  childrenContentfulMembershipLevelsItemsJsonNode___internal___contentDigest = 'childrenContentfulMembershipLevelsItemsJsonNode___internal___contentDigest',
+  childrenContentfulMembershipLevelsItemsJsonNode___internal___description = 'childrenContentfulMembershipLevelsItemsJsonNode___internal___description',
+  childrenContentfulMembershipLevelsItemsJsonNode___internal___fieldOwners = 'childrenContentfulMembershipLevelsItemsJsonNode___internal___fieldOwners',
+  childrenContentfulMembershipLevelsItemsJsonNode___internal___ignoreType = 'childrenContentfulMembershipLevelsItemsJsonNode___internal___ignoreType',
+  childrenContentfulMembershipLevelsItemsJsonNode___internal___mediaType = 'childrenContentfulMembershipLevelsItemsJsonNode___internal___mediaType',
+  childrenContentfulMembershipLevelsItemsJsonNode___internal___owner = 'childrenContentfulMembershipLevelsItemsJsonNode___internal___owner',
+  childrenContentfulMembershipLevelsItemsJsonNode___internal___type = 'childrenContentfulMembershipLevelsItemsJsonNode___internal___type',
+  childrenContentfulMembershipLevelsItemsJsonNode___items = 'childrenContentfulMembershipLevelsItemsJsonNode___items',
+  childrenContentfulMembershipLevelsItemsJsonNode___sys___type = 'childrenContentfulMembershipLevelsItemsJsonNode___sys___type',
+  childContentfulMembershipLevelsItemsJsonNode___id = 'childContentfulMembershipLevelsItemsJsonNode___id',
+  childContentfulMembershipLevelsItemsJsonNode___parent___id = 'childContentfulMembershipLevelsItemsJsonNode___parent___id',
+  childContentfulMembershipLevelsItemsJsonNode___parent___parent___id = 'childContentfulMembershipLevelsItemsJsonNode___parent___parent___id',
+  childContentfulMembershipLevelsItemsJsonNode___parent___parent___children = 'childContentfulMembershipLevelsItemsJsonNode___parent___parent___children',
+  childContentfulMembershipLevelsItemsJsonNode___parent___children = 'childContentfulMembershipLevelsItemsJsonNode___parent___children',
+  childContentfulMembershipLevelsItemsJsonNode___parent___children___id = 'childContentfulMembershipLevelsItemsJsonNode___parent___children___id',
+  childContentfulMembershipLevelsItemsJsonNode___parent___children___children = 'childContentfulMembershipLevelsItemsJsonNode___parent___children___children',
+  childContentfulMembershipLevelsItemsJsonNode___parent___internal___content = 'childContentfulMembershipLevelsItemsJsonNode___parent___internal___content',
+  childContentfulMembershipLevelsItemsJsonNode___parent___internal___contentDigest = 'childContentfulMembershipLevelsItemsJsonNode___parent___internal___contentDigest',
+  childContentfulMembershipLevelsItemsJsonNode___parent___internal___description = 'childContentfulMembershipLevelsItemsJsonNode___parent___internal___description',
+  childContentfulMembershipLevelsItemsJsonNode___parent___internal___fieldOwners = 'childContentfulMembershipLevelsItemsJsonNode___parent___internal___fieldOwners',
+  childContentfulMembershipLevelsItemsJsonNode___parent___internal___ignoreType = 'childContentfulMembershipLevelsItemsJsonNode___parent___internal___ignoreType',
+  childContentfulMembershipLevelsItemsJsonNode___parent___internal___mediaType = 'childContentfulMembershipLevelsItemsJsonNode___parent___internal___mediaType',
+  childContentfulMembershipLevelsItemsJsonNode___parent___internal___owner = 'childContentfulMembershipLevelsItemsJsonNode___parent___internal___owner',
+  childContentfulMembershipLevelsItemsJsonNode___parent___internal___type = 'childContentfulMembershipLevelsItemsJsonNode___parent___internal___type',
+  childContentfulMembershipLevelsItemsJsonNode___children = 'childContentfulMembershipLevelsItemsJsonNode___children',
+  childContentfulMembershipLevelsItemsJsonNode___children___id = 'childContentfulMembershipLevelsItemsJsonNode___children___id',
+  childContentfulMembershipLevelsItemsJsonNode___children___parent___id = 'childContentfulMembershipLevelsItemsJsonNode___children___parent___id',
+  childContentfulMembershipLevelsItemsJsonNode___children___parent___children = 'childContentfulMembershipLevelsItemsJsonNode___children___parent___children',
+  childContentfulMembershipLevelsItemsJsonNode___children___children = 'childContentfulMembershipLevelsItemsJsonNode___children___children',
+  childContentfulMembershipLevelsItemsJsonNode___children___children___id = 'childContentfulMembershipLevelsItemsJsonNode___children___children___id',
+  childContentfulMembershipLevelsItemsJsonNode___children___children___children = 'childContentfulMembershipLevelsItemsJsonNode___children___children___children',
+  childContentfulMembershipLevelsItemsJsonNode___children___internal___content = 'childContentfulMembershipLevelsItemsJsonNode___children___internal___content',
+  childContentfulMembershipLevelsItemsJsonNode___children___internal___contentDigest = 'childContentfulMembershipLevelsItemsJsonNode___children___internal___contentDigest',
+  childContentfulMembershipLevelsItemsJsonNode___children___internal___description = 'childContentfulMembershipLevelsItemsJsonNode___children___internal___description',
+  childContentfulMembershipLevelsItemsJsonNode___children___internal___fieldOwners = 'childContentfulMembershipLevelsItemsJsonNode___children___internal___fieldOwners',
+  childContentfulMembershipLevelsItemsJsonNode___children___internal___ignoreType = 'childContentfulMembershipLevelsItemsJsonNode___children___internal___ignoreType',
+  childContentfulMembershipLevelsItemsJsonNode___children___internal___mediaType = 'childContentfulMembershipLevelsItemsJsonNode___children___internal___mediaType',
+  childContentfulMembershipLevelsItemsJsonNode___children___internal___owner = 'childContentfulMembershipLevelsItemsJsonNode___children___internal___owner',
+  childContentfulMembershipLevelsItemsJsonNode___children___internal___type = 'childContentfulMembershipLevelsItemsJsonNode___children___internal___type',
+  childContentfulMembershipLevelsItemsJsonNode___internal___content = 'childContentfulMembershipLevelsItemsJsonNode___internal___content',
+  childContentfulMembershipLevelsItemsJsonNode___internal___contentDigest = 'childContentfulMembershipLevelsItemsJsonNode___internal___contentDigest',
+  childContentfulMembershipLevelsItemsJsonNode___internal___description = 'childContentfulMembershipLevelsItemsJsonNode___internal___description',
+  childContentfulMembershipLevelsItemsJsonNode___internal___fieldOwners = 'childContentfulMembershipLevelsItemsJsonNode___internal___fieldOwners',
+  childContentfulMembershipLevelsItemsJsonNode___internal___ignoreType = 'childContentfulMembershipLevelsItemsJsonNode___internal___ignoreType',
+  childContentfulMembershipLevelsItemsJsonNode___internal___mediaType = 'childContentfulMembershipLevelsItemsJsonNode___internal___mediaType',
+  childContentfulMembershipLevelsItemsJsonNode___internal___owner = 'childContentfulMembershipLevelsItemsJsonNode___internal___owner',
+  childContentfulMembershipLevelsItemsJsonNode___internal___type = 'childContentfulMembershipLevelsItemsJsonNode___internal___type',
+  childContentfulMembershipLevelsItemsJsonNode___items = 'childContentfulMembershipLevelsItemsJsonNode___items',
+  childContentfulMembershipLevelsItemsJsonNode___sys___type = 'childContentfulMembershipLevelsItemsJsonNode___sys___type',
+  parent___id = 'parent___id',
+  parent___parent___id = 'parent___parent___id',
+  parent___parent___parent___id = 'parent___parent___parent___id',
+  parent___parent___parent___children = 'parent___parent___parent___children',
+  parent___parent___children = 'parent___parent___children',
+  parent___parent___children___id = 'parent___parent___children___id',
+  parent___parent___children___children = 'parent___parent___children___children',
+  parent___parent___internal___content = 'parent___parent___internal___content',
+  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
+  parent___parent___internal___description = 'parent___parent___internal___description',
+  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
+  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
+  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
+  parent___parent___internal___owner = 'parent___parent___internal___owner',
+  parent___parent___internal___type = 'parent___parent___internal___type',
+  parent___children = 'parent___children',
+  parent___children___id = 'parent___children___id',
+  parent___children___parent___id = 'parent___children___parent___id',
+  parent___children___parent___children = 'parent___children___parent___children',
+  parent___children___children = 'parent___children___children',
+  parent___children___children___id = 'parent___children___children___id',
+  parent___children___children___children = 'parent___children___children___children',
+  parent___children___internal___content = 'parent___children___internal___content',
+  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
+  parent___children___internal___description = 'parent___children___internal___description',
+  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
+  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
+  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
+  parent___children___internal___owner = 'parent___children___internal___owner',
+  parent___children___internal___type = 'parent___children___internal___type',
+  parent___internal___content = 'parent___internal___content',
+  parent___internal___contentDigest = 'parent___internal___contentDigest',
+  parent___internal___description = 'parent___internal___description',
+  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
+  parent___internal___ignoreType = 'parent___internal___ignoreType',
+  parent___internal___mediaType = 'parent___internal___mediaType',
+  parent___internal___owner = 'parent___internal___owner',
+  parent___internal___type = 'parent___internal___type',
+  children = 'children',
+  children___id = 'children___id',
+  children___parent___id = 'children___parent___id',
+  children___parent___parent___id = 'children___parent___parent___id',
+  children___parent___parent___children = 'children___parent___parent___children',
+  children___parent___children = 'children___parent___children',
+  children___parent___children___id = 'children___parent___children___id',
+  children___parent___children___children = 'children___parent___children___children',
+  children___parent___internal___content = 'children___parent___internal___content',
+  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
+  children___parent___internal___description = 'children___parent___internal___description',
+  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
+  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
+  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
+  children___parent___internal___owner = 'children___parent___internal___owner',
+  children___parent___internal___type = 'children___parent___internal___type',
+  children___children = 'children___children',
+  children___children___id = 'children___children___id',
+  children___children___parent___id = 'children___children___parent___id',
+  children___children___parent___children = 'children___children___parent___children',
+  children___children___children = 'children___children___children',
+  children___children___children___id = 'children___children___children___id',
+  children___children___children___children = 'children___children___children___children',
+  children___children___internal___content = 'children___children___internal___content',
+  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
+  children___children___internal___description = 'children___children___internal___description',
+  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
+  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
+  children___children___internal___mediaType = 'children___children___internal___mediaType',
+  children___children___internal___owner = 'children___children___internal___owner',
+  children___children___internal___type = 'children___children___internal___type',
+  children___internal___content = 'children___internal___content',
+  children___internal___contentDigest = 'children___internal___contentDigest',
+  children___internal___description = 'children___internal___description',
+  children___internal___fieldOwners = 'children___internal___fieldOwners',
+  children___internal___ignoreType = 'children___internal___ignoreType',
+  children___internal___mediaType = 'children___internal___mediaType',
+  children___internal___owner = 'children___internal___owner',
+  children___internal___type = 'children___internal___type',
+  internal___content = 'internal___content',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___fieldOwners = 'internal___fieldOwners',
+  internal___ignoreType = 'internal___ignoreType',
+  internal___mediaType = 'internal___mediaType',
+  internal___owner = 'internal___owner',
+  internal___type = 'internal___type'
+}
+
+export type ContentfulMembershipLevelsFilterInput = {
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  subtitle?: Maybe<StringQueryOperatorInput>;
+  icon?: Maybe<StringQueryOperatorInput>;
+  customLinkTitle?: Maybe<StringQueryOperatorInput>;
+  link?: Maybe<ContentfulResourceFilterInput>;
+  block__list_of_cards?: Maybe<ContentfulBlockListOfCardsFilterListInput>;
+  items?: Maybe<ContentfulMembershipLevelsItemsJsonNodeFilterInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulMembershipLevelsSysFilterInput>;
+  childrenContentfulMembershipLevelsItemsJsonNode?: Maybe<ContentfulMembershipLevelsItemsJsonNodeFilterListInput>;
+  childContentfulMembershipLevelsItemsJsonNode?: Maybe<ContentfulMembershipLevelsItemsJsonNodeFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+export type ContentfulMembershipLevelsFilterListInput = {
+  elemMatch?: Maybe<ContentfulMembershipLevelsFilterInput>;
+};
+
+export type ContentfulMembershipLevelsGroupConnection = {
+  __typename?: 'ContentfulMembershipLevelsGroupConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulMembershipLevelsEdge>;
+  nodes: Array<ContentfulMembershipLevels>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulMembershipLevelsSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulMembershipLevelsFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulMembershipLevelsSys = {
+  __typename?: 'ContentfulMembershipLevelsSys';
+  type?: Maybe<Scalars['String']>;
+  revision?: Maybe<Scalars['Int']>;
+  contentType?: Maybe<ContentfulMembershipLevelsSysContentType>;
+};
+
+export type ContentfulMembershipLevelsSysContentType = {
+  __typename?: 'ContentfulMembershipLevelsSysContentType';
+  sys?: Maybe<ContentfulMembershipLevelsSysContentTypeSys>;
+};
+
+export type ContentfulMembershipLevelsSysContentTypeFilterInput = {
+  sys?: Maybe<ContentfulMembershipLevelsSysContentTypeSysFilterInput>;
+};
+
+export type ContentfulMembershipLevelsSysContentTypeSys = {
+  __typename?: 'ContentfulMembershipLevelsSysContentTypeSys';
+  type?: Maybe<Scalars['String']>;
+  linkType?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulMembershipLevelsSysContentTypeSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  linkType?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type ContentfulMembershipLevelsSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  revision?: Maybe<IntQueryOperatorInput>;
+  contentType?: Maybe<ContentfulMembershipLevelsSysContentTypeFilterInput>;
+};
+
 export type ContentfulMicroContent = ContentfulReference & ContentfulEntry & Node & {
   __typename?: 'ContentfulMicroContent';
   contentful_id: Scalars['String'];
@@ -9991,18 +10607,12 @@ export enum ContentfulPageFieldsEnum {
   card___block__list_of_cards___node_locale = 'card___block__list_of_cards___node_locale',
   card___block__list_of_cards___title = 'card___block__list_of_cards___title',
   card___block__list_of_cards___variation = 'card___block__list_of_cards___variation',
-  card___block__list_of_cards___cards = 'card___block__list_of_cards___cards',
-  card___block__list_of_cards___cards___contentful_id = 'card___block__list_of_cards___cards___contentful_id',
-  card___block__list_of_cards___cards___id = 'card___block__list_of_cards___cards___id',
-  card___block__list_of_cards___cards___node_locale = 'card___block__list_of_cards___cards___node_locale',
-  card___block__list_of_cards___cards___title = 'card___block__list_of_cards___cards___title',
-  card___block__list_of_cards___cards___customLinkTitle = 'card___block__list_of_cards___cards___customLinkTitle',
-  card___block__list_of_cards___cards___icon = 'card___block__list_of_cards___cards___icon',
-  card___block__list_of_cards___cards___block__list_of_cards = 'card___block__list_of_cards___cards___block__list_of_cards',
-  card___block__list_of_cards___cards___spaceId = 'card___block__list_of_cards___cards___spaceId',
-  card___block__list_of_cards___cards___createdAt = 'card___block__list_of_cards___cards___createdAt',
-  card___block__list_of_cards___cards___updatedAt = 'card___block__list_of_cards___cards___updatedAt',
-  card___block__list_of_cards___cards___children = 'card___block__list_of_cards___cards___children',
+  card___block__list_of_cards___description___raw = 'card___block__list_of_cards___description___raw',
+  card___block__list_of_cards___spaceId = 'card___block__list_of_cards___spaceId',
+  card___block__list_of_cards___createdAt = 'card___block__list_of_cards___createdAt',
+  card___block__list_of_cards___updatedAt = 'card___block__list_of_cards___updatedAt',
+  card___block__list_of_cards___sys___type = 'card___block__list_of_cards___sys___type',
+  card___block__list_of_cards___sys___revision = 'card___block__list_of_cards___sys___revision',
   card___block__list_of_cards___page = 'card___block__list_of_cards___page',
   card___block__list_of_cards___page___contentful_id = 'card___block__list_of_cards___page___contentful_id',
   card___block__list_of_cards___page___id = 'card___block__list_of_cards___page___id',
@@ -10019,11 +10629,6 @@ export enum ContentfulPageFieldsEnum {
   card___block__list_of_cards___page___seoTitle = 'card___block__list_of_cards___page___seoTitle',
   card___block__list_of_cards___page___seoDescription = 'card___block__list_of_cards___page___seoDescription',
   card___block__list_of_cards___page___children = 'card___block__list_of_cards___page___children',
-  card___block__list_of_cards___spaceId = 'card___block__list_of_cards___spaceId',
-  card___block__list_of_cards___createdAt = 'card___block__list_of_cards___createdAt',
-  card___block__list_of_cards___updatedAt = 'card___block__list_of_cards___updatedAt',
-  card___block__list_of_cards___sys___type = 'card___block__list_of_cards___sys___type',
-  card___block__list_of_cards___sys___revision = 'card___block__list_of_cards___sys___revision',
   card___block__list_of_cards___parent___id = 'card___block__list_of_cards___parent___id',
   card___block__list_of_cards___parent___children = 'card___block__list_of_cards___parent___children',
   card___block__list_of_cards___children = 'card___block__list_of_cards___children',
@@ -11402,11 +12007,12 @@ export type ContentfulResource = ContentfulReference & ContentfulEntry & Node & 
   node_locale: Scalars['String'];
   title?: Maybe<Scalars['String']>;
   url?: Maybe<Scalars['String']>;
-  card?: Maybe<Array<Maybe<ContentfulCard>>>;
+  membership_levels?: Maybe<Array<Maybe<ContentfulMembershipLevels>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulResourceSys>;
+  card?: Maybe<Array<Maybe<ContentfulCard>>>;
   block__content?: Maybe<Array<Maybe<ContentfulBlockContent>>>;
   publicationDate?: Maybe<Scalars['Date']>;
   block__resource_list?: Maybe<Array<Maybe<ContentfulBlockResourceList>>>;
@@ -11474,6 +12080,228 @@ export enum ContentfulResourceFieldsEnum {
   node_locale = 'node_locale',
   title = 'title',
   url = 'url',
+  membership_levels = 'membership_levels',
+  membership_levels___contentful_id = 'membership_levels___contentful_id',
+  membership_levels___id = 'membership_levels___id',
+  membership_levels___node_locale = 'membership_levels___node_locale',
+  membership_levels___title = 'membership_levels___title',
+  membership_levels___subtitle = 'membership_levels___subtitle',
+  membership_levels___icon = 'membership_levels___icon',
+  membership_levels___customLinkTitle = 'membership_levels___customLinkTitle',
+  membership_levels___link___contentful_id = 'membership_levels___link___contentful_id',
+  membership_levels___link___id = 'membership_levels___link___id',
+  membership_levels___link___node_locale = 'membership_levels___link___node_locale',
+  membership_levels___link___title = 'membership_levels___link___title',
+  membership_levels___link___url = 'membership_levels___link___url',
+  membership_levels___link___membership_levels = 'membership_levels___link___membership_levels',
+  membership_levels___link___membership_levels___contentful_id = 'membership_levels___link___membership_levels___contentful_id',
+  membership_levels___link___membership_levels___id = 'membership_levels___link___membership_levels___id',
+  membership_levels___link___membership_levels___node_locale = 'membership_levels___link___membership_levels___node_locale',
+  membership_levels___link___membership_levels___title = 'membership_levels___link___membership_levels___title',
+  membership_levels___link___membership_levels___subtitle = 'membership_levels___link___membership_levels___subtitle',
+  membership_levels___link___membership_levels___icon = 'membership_levels___link___membership_levels___icon',
+  membership_levels___link___membership_levels___customLinkTitle = 'membership_levels___link___membership_levels___customLinkTitle',
+  membership_levels___link___membership_levels___block__list_of_cards = 'membership_levels___link___membership_levels___block__list_of_cards',
+  membership_levels___link___membership_levels___spaceId = 'membership_levels___link___membership_levels___spaceId',
+  membership_levels___link___membership_levels___createdAt = 'membership_levels___link___membership_levels___createdAt',
+  membership_levels___link___membership_levels___updatedAt = 'membership_levels___link___membership_levels___updatedAt',
+  membership_levels___link___membership_levels___childrenContentfulMembershipLevelsItemsJsonNode = 'membership_levels___link___membership_levels___childrenContentfulMembershipLevelsItemsJsonNode',
+  membership_levels___link___membership_levels___children = 'membership_levels___link___membership_levels___children',
+  membership_levels___link___spaceId = 'membership_levels___link___spaceId',
+  membership_levels___link___createdAt = 'membership_levels___link___createdAt',
+  membership_levels___link___updatedAt = 'membership_levels___link___updatedAt',
+  membership_levels___link___sys___type = 'membership_levels___link___sys___type',
+  membership_levels___link___sys___revision = 'membership_levels___link___sys___revision',
+  membership_levels___link___card = 'membership_levels___link___card',
+  membership_levels___link___card___contentful_id = 'membership_levels___link___card___contentful_id',
+  membership_levels___link___card___id = 'membership_levels___link___card___id',
+  membership_levels___link___card___node_locale = 'membership_levels___link___card___node_locale',
+  membership_levels___link___card___title = 'membership_levels___link___card___title',
+  membership_levels___link___card___customLinkTitle = 'membership_levels___link___card___customLinkTitle',
+  membership_levels___link___card___icon = 'membership_levels___link___card___icon',
+  membership_levels___link___card___block__list_of_cards = 'membership_levels___link___card___block__list_of_cards',
+  membership_levels___link___card___spaceId = 'membership_levels___link___card___spaceId',
+  membership_levels___link___card___createdAt = 'membership_levels___link___card___createdAt',
+  membership_levels___link___card___updatedAt = 'membership_levels___link___card___updatedAt',
+  membership_levels___link___card___children = 'membership_levels___link___card___children',
+  membership_levels___link___block__content = 'membership_levels___link___block__content',
+  membership_levels___link___block__content___contentful_id = 'membership_levels___link___block__content___contentful_id',
+  membership_levels___link___block__content___id = 'membership_levels___link___block__content___id',
+  membership_levels___link___block__content___node_locale = 'membership_levels___link___block__content___node_locale',
+  membership_levels___link___block__content___blockTitle = 'membership_levels___link___block__content___blockTitle',
+  membership_levels___link___block__content___variation = 'membership_levels___link___block__content___variation',
+  membership_levels___link___block__content___page = 'membership_levels___link___block__content___page',
+  membership_levels___link___block__content___spaceId = 'membership_levels___link___block__content___spaceId',
+  membership_levels___link___block__content___createdAt = 'membership_levels___link___block__content___createdAt',
+  membership_levels___link___block__content___updatedAt = 'membership_levels___link___block__content___updatedAt',
+  membership_levels___link___block__content___customButtonText = 'membership_levels___link___block__content___customButtonText',
+  membership_levels___link___block__content___children = 'membership_levels___link___block__content___children',
+  membership_levels___link___publicationDate = 'membership_levels___link___publicationDate',
+  membership_levels___link___block__resource_list = 'membership_levels___link___block__resource_list',
+  membership_levels___link___block__resource_list___contentful_id = 'membership_levels___link___block__resource_list___contentful_id',
+  membership_levels___link___block__resource_list___id = 'membership_levels___link___block__resource_list___id',
+  membership_levels___link___block__resource_list___node_locale = 'membership_levels___link___block__resource_list___node_locale',
+  membership_levels___link___block__resource_list___title = 'membership_levels___link___block__resource_list___title',
+  membership_levels___link___block__resource_list___customHeadingLinkText = 'membership_levels___link___block__resource_list___customHeadingLinkText',
+  membership_levels___link___block__resource_list___blog_post = 'membership_levels___link___block__resource_list___blog_post',
+  membership_levels___link___block__resource_list___page = 'membership_levels___link___block__resource_list___page',
+  membership_levels___link___block__resource_list___spaceId = 'membership_levels___link___block__resource_list___spaceId',
+  membership_levels___link___block__resource_list___createdAt = 'membership_levels___link___block__resource_list___createdAt',
+  membership_levels___link___block__resource_list___updatedAt = 'membership_levels___link___block__resource_list___updatedAt',
+  membership_levels___link___block__resource_list___children = 'membership_levels___link___block__resource_list___children',
+  membership_levels___link___parent___id = 'membership_levels___link___parent___id',
+  membership_levels___link___parent___children = 'membership_levels___link___parent___children',
+  membership_levels___link___children = 'membership_levels___link___children',
+  membership_levels___link___children___id = 'membership_levels___link___children___id',
+  membership_levels___link___children___children = 'membership_levels___link___children___children',
+  membership_levels___link___internal___content = 'membership_levels___link___internal___content',
+  membership_levels___link___internal___contentDigest = 'membership_levels___link___internal___contentDigest',
+  membership_levels___link___internal___description = 'membership_levels___link___internal___description',
+  membership_levels___link___internal___fieldOwners = 'membership_levels___link___internal___fieldOwners',
+  membership_levels___link___internal___ignoreType = 'membership_levels___link___internal___ignoreType',
+  membership_levels___link___internal___mediaType = 'membership_levels___link___internal___mediaType',
+  membership_levels___link___internal___owner = 'membership_levels___link___internal___owner',
+  membership_levels___link___internal___type = 'membership_levels___link___internal___type',
+  membership_levels___block__list_of_cards = 'membership_levels___block__list_of_cards',
+  membership_levels___block__list_of_cards___contentful_id = 'membership_levels___block__list_of_cards___contentful_id',
+  membership_levels___block__list_of_cards___id = 'membership_levels___block__list_of_cards___id',
+  membership_levels___block__list_of_cards___node_locale = 'membership_levels___block__list_of_cards___node_locale',
+  membership_levels___block__list_of_cards___title = 'membership_levels___block__list_of_cards___title',
+  membership_levels___block__list_of_cards___variation = 'membership_levels___block__list_of_cards___variation',
+  membership_levels___block__list_of_cards___description___raw = 'membership_levels___block__list_of_cards___description___raw',
+  membership_levels___block__list_of_cards___spaceId = 'membership_levels___block__list_of_cards___spaceId',
+  membership_levels___block__list_of_cards___createdAt = 'membership_levels___block__list_of_cards___createdAt',
+  membership_levels___block__list_of_cards___updatedAt = 'membership_levels___block__list_of_cards___updatedAt',
+  membership_levels___block__list_of_cards___sys___type = 'membership_levels___block__list_of_cards___sys___type',
+  membership_levels___block__list_of_cards___sys___revision = 'membership_levels___block__list_of_cards___sys___revision',
+  membership_levels___block__list_of_cards___page = 'membership_levels___block__list_of_cards___page',
+  membership_levels___block__list_of_cards___page___contentful_id = 'membership_levels___block__list_of_cards___page___contentful_id',
+  membership_levels___block__list_of_cards___page___id = 'membership_levels___block__list_of_cards___page___id',
+  membership_levels___block__list_of_cards___page___node_locale = 'membership_levels___block__list_of_cards___page___node_locale',
+  membership_levels___block__list_of_cards___page___title = 'membership_levels___block__list_of_cards___page___title',
+  membership_levels___block__list_of_cards___page___slug = 'membership_levels___block__list_of_cards___page___slug',
+  membership_levels___block__list_of_cards___page___spaceId = 'membership_levels___block__list_of_cards___page___spaceId',
+  membership_levels___block__list_of_cards___page___createdAt = 'membership_levels___block__list_of_cards___page___createdAt',
+  membership_levels___block__list_of_cards___page___updatedAt = 'membership_levels___block__list_of_cards___page___updatedAt',
+  membership_levels___block__list_of_cards___page___block__content = 'membership_levels___block__list_of_cards___page___block__content',
+  membership_levels___block__list_of_cards___page___card = 'membership_levels___block__list_of_cards___page___card',
+  membership_levels___block__list_of_cards___page___subtitle = 'membership_levels___block__list_of_cards___page___subtitle',
+  membership_levels___block__list_of_cards___page___block__resource_list = 'membership_levels___block__list_of_cards___page___block__resource_list',
+  membership_levels___block__list_of_cards___page___seoTitle = 'membership_levels___block__list_of_cards___page___seoTitle',
+  membership_levels___block__list_of_cards___page___seoDescription = 'membership_levels___block__list_of_cards___page___seoDescription',
+  membership_levels___block__list_of_cards___page___children = 'membership_levels___block__list_of_cards___page___children',
+  membership_levels___block__list_of_cards___parent___id = 'membership_levels___block__list_of_cards___parent___id',
+  membership_levels___block__list_of_cards___parent___children = 'membership_levels___block__list_of_cards___parent___children',
+  membership_levels___block__list_of_cards___children = 'membership_levels___block__list_of_cards___children',
+  membership_levels___block__list_of_cards___children___id = 'membership_levels___block__list_of_cards___children___id',
+  membership_levels___block__list_of_cards___children___children = 'membership_levels___block__list_of_cards___children___children',
+  membership_levels___block__list_of_cards___internal___content = 'membership_levels___block__list_of_cards___internal___content',
+  membership_levels___block__list_of_cards___internal___contentDigest = 'membership_levels___block__list_of_cards___internal___contentDigest',
+  membership_levels___block__list_of_cards___internal___description = 'membership_levels___block__list_of_cards___internal___description',
+  membership_levels___block__list_of_cards___internal___fieldOwners = 'membership_levels___block__list_of_cards___internal___fieldOwners',
+  membership_levels___block__list_of_cards___internal___ignoreType = 'membership_levels___block__list_of_cards___internal___ignoreType',
+  membership_levels___block__list_of_cards___internal___mediaType = 'membership_levels___block__list_of_cards___internal___mediaType',
+  membership_levels___block__list_of_cards___internal___owner = 'membership_levels___block__list_of_cards___internal___owner',
+  membership_levels___block__list_of_cards___internal___type = 'membership_levels___block__list_of_cards___internal___type',
+  membership_levels___items___id = 'membership_levels___items___id',
+  membership_levels___items___parent___id = 'membership_levels___items___parent___id',
+  membership_levels___items___parent___children = 'membership_levels___items___parent___children',
+  membership_levels___items___children = 'membership_levels___items___children',
+  membership_levels___items___children___id = 'membership_levels___items___children___id',
+  membership_levels___items___children___children = 'membership_levels___items___children___children',
+  membership_levels___items___internal___content = 'membership_levels___items___internal___content',
+  membership_levels___items___internal___contentDigest = 'membership_levels___items___internal___contentDigest',
+  membership_levels___items___internal___description = 'membership_levels___items___internal___description',
+  membership_levels___items___internal___fieldOwners = 'membership_levels___items___internal___fieldOwners',
+  membership_levels___items___internal___ignoreType = 'membership_levels___items___internal___ignoreType',
+  membership_levels___items___internal___mediaType = 'membership_levels___items___internal___mediaType',
+  membership_levels___items___internal___owner = 'membership_levels___items___internal___owner',
+  membership_levels___items___internal___type = 'membership_levels___items___internal___type',
+  membership_levels___items___items = 'membership_levels___items___items',
+  membership_levels___items___sys___type = 'membership_levels___items___sys___type',
+  membership_levels___spaceId = 'membership_levels___spaceId',
+  membership_levels___createdAt = 'membership_levels___createdAt',
+  membership_levels___updatedAt = 'membership_levels___updatedAt',
+  membership_levels___sys___type = 'membership_levels___sys___type',
+  membership_levels___sys___revision = 'membership_levels___sys___revision',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___id = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___id',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___parent___id = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___parent___id',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___parent___children = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___parent___children',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___children = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___children',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___children___id = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___children___id',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___children___children = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___children___children',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___content = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___content',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___contentDigest = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___contentDigest',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___description = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___description',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___fieldOwners = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___fieldOwners',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___ignoreType = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___ignoreType',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___mediaType = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___mediaType',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___owner = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___owner',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___type = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___internal___type',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___items = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___items',
+  membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___sys___type = 'membership_levels___childrenContentfulMembershipLevelsItemsJsonNode___sys___type',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___id = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___id',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___parent___id = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___parent___id',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___parent___children = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___parent___children',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___children = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___children',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___children___id = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___children___id',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___children___children = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___children___children',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___content = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___content',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___contentDigest = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___contentDigest',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___description = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___description',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___fieldOwners = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___fieldOwners',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___ignoreType = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___ignoreType',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___mediaType = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___mediaType',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___owner = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___owner',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___type = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___internal___type',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___items = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___items',
+  membership_levels___childContentfulMembershipLevelsItemsJsonNode___sys___type = 'membership_levels___childContentfulMembershipLevelsItemsJsonNode___sys___type',
+  membership_levels___parent___id = 'membership_levels___parent___id',
+  membership_levels___parent___parent___id = 'membership_levels___parent___parent___id',
+  membership_levels___parent___parent___children = 'membership_levels___parent___parent___children',
+  membership_levels___parent___children = 'membership_levels___parent___children',
+  membership_levels___parent___children___id = 'membership_levels___parent___children___id',
+  membership_levels___parent___children___children = 'membership_levels___parent___children___children',
+  membership_levels___parent___internal___content = 'membership_levels___parent___internal___content',
+  membership_levels___parent___internal___contentDigest = 'membership_levels___parent___internal___contentDigest',
+  membership_levels___parent___internal___description = 'membership_levels___parent___internal___description',
+  membership_levels___parent___internal___fieldOwners = 'membership_levels___parent___internal___fieldOwners',
+  membership_levels___parent___internal___ignoreType = 'membership_levels___parent___internal___ignoreType',
+  membership_levels___parent___internal___mediaType = 'membership_levels___parent___internal___mediaType',
+  membership_levels___parent___internal___owner = 'membership_levels___parent___internal___owner',
+  membership_levels___parent___internal___type = 'membership_levels___parent___internal___type',
+  membership_levels___children = 'membership_levels___children',
+  membership_levels___children___id = 'membership_levels___children___id',
+  membership_levels___children___parent___id = 'membership_levels___children___parent___id',
+  membership_levels___children___parent___children = 'membership_levels___children___parent___children',
+  membership_levels___children___children = 'membership_levels___children___children',
+  membership_levels___children___children___id = 'membership_levels___children___children___id',
+  membership_levels___children___children___children = 'membership_levels___children___children___children',
+  membership_levels___children___internal___content = 'membership_levels___children___internal___content',
+  membership_levels___children___internal___contentDigest = 'membership_levels___children___internal___contentDigest',
+  membership_levels___children___internal___description = 'membership_levels___children___internal___description',
+  membership_levels___children___internal___fieldOwners = 'membership_levels___children___internal___fieldOwners',
+  membership_levels___children___internal___ignoreType = 'membership_levels___children___internal___ignoreType',
+  membership_levels___children___internal___mediaType = 'membership_levels___children___internal___mediaType',
+  membership_levels___children___internal___owner = 'membership_levels___children___internal___owner',
+  membership_levels___children___internal___type = 'membership_levels___children___internal___type',
+  membership_levels___internal___content = 'membership_levels___internal___content',
+  membership_levels___internal___contentDigest = 'membership_levels___internal___contentDigest',
+  membership_levels___internal___description = 'membership_levels___internal___description',
+  membership_levels___internal___fieldOwners = 'membership_levels___internal___fieldOwners',
+  membership_levels___internal___ignoreType = 'membership_levels___internal___ignoreType',
+  membership_levels___internal___mediaType = 'membership_levels___internal___mediaType',
+  membership_levels___internal___owner = 'membership_levels___internal___owner',
+  membership_levels___internal___type = 'membership_levels___internal___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
   card = 'card',
   card___contentful_id = 'card___contentful_id',
   card___id = 'card___id',
@@ -11488,18 +12316,12 @@ export enum ContentfulResourceFieldsEnum {
   card___block__list_of_cards___node_locale = 'card___block__list_of_cards___node_locale',
   card___block__list_of_cards___title = 'card___block__list_of_cards___title',
   card___block__list_of_cards___variation = 'card___block__list_of_cards___variation',
-  card___block__list_of_cards___cards = 'card___block__list_of_cards___cards',
-  card___block__list_of_cards___cards___contentful_id = 'card___block__list_of_cards___cards___contentful_id',
-  card___block__list_of_cards___cards___id = 'card___block__list_of_cards___cards___id',
-  card___block__list_of_cards___cards___node_locale = 'card___block__list_of_cards___cards___node_locale',
-  card___block__list_of_cards___cards___title = 'card___block__list_of_cards___cards___title',
-  card___block__list_of_cards___cards___customLinkTitle = 'card___block__list_of_cards___cards___customLinkTitle',
-  card___block__list_of_cards___cards___icon = 'card___block__list_of_cards___cards___icon',
-  card___block__list_of_cards___cards___block__list_of_cards = 'card___block__list_of_cards___cards___block__list_of_cards',
-  card___block__list_of_cards___cards___spaceId = 'card___block__list_of_cards___cards___spaceId',
-  card___block__list_of_cards___cards___createdAt = 'card___block__list_of_cards___cards___createdAt',
-  card___block__list_of_cards___cards___updatedAt = 'card___block__list_of_cards___cards___updatedAt',
-  card___block__list_of_cards___cards___children = 'card___block__list_of_cards___cards___children',
+  card___block__list_of_cards___description___raw = 'card___block__list_of_cards___description___raw',
+  card___block__list_of_cards___spaceId = 'card___block__list_of_cards___spaceId',
+  card___block__list_of_cards___createdAt = 'card___block__list_of_cards___createdAt',
+  card___block__list_of_cards___updatedAt = 'card___block__list_of_cards___updatedAt',
+  card___block__list_of_cards___sys___type = 'card___block__list_of_cards___sys___type',
+  card___block__list_of_cards___sys___revision = 'card___block__list_of_cards___sys___revision',
   card___block__list_of_cards___page = 'card___block__list_of_cards___page',
   card___block__list_of_cards___page___contentful_id = 'card___block__list_of_cards___page___contentful_id',
   card___block__list_of_cards___page___id = 'card___block__list_of_cards___page___id',
@@ -11516,11 +12338,6 @@ export enum ContentfulResourceFieldsEnum {
   card___block__list_of_cards___page___seoTitle = 'card___block__list_of_cards___page___seoTitle',
   card___block__list_of_cards___page___seoDescription = 'card___block__list_of_cards___page___seoDescription',
   card___block__list_of_cards___page___children = 'card___block__list_of_cards___page___children',
-  card___block__list_of_cards___spaceId = 'card___block__list_of_cards___spaceId',
-  card___block__list_of_cards___createdAt = 'card___block__list_of_cards___createdAt',
-  card___block__list_of_cards___updatedAt = 'card___block__list_of_cards___updatedAt',
-  card___block__list_of_cards___sys___type = 'card___block__list_of_cards___sys___type',
-  card___block__list_of_cards___sys___revision = 'card___block__list_of_cards___sys___revision',
   card___block__list_of_cards___parent___id = 'card___block__list_of_cards___parent___id',
   card___block__list_of_cards___parent___children = 'card___block__list_of_cards___parent___children',
   card___block__list_of_cards___children = 'card___block__list_of_cards___children',
@@ -11576,14 +12393,6 @@ export enum ContentfulResourceFieldsEnum {
   card___internal___mediaType = 'card___internal___mediaType',
   card___internal___owner = 'card___internal___owner',
   card___internal___type = 'card___internal___type',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
   block__content = 'block__content',
   block__content___contentful_id = 'block__content___contentful_id',
   block__content___id = 'block__content___id',
@@ -12099,11 +12908,12 @@ export type ContentfulResourceFilterInput = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   url?: Maybe<StringQueryOperatorInput>;
-  card?: Maybe<ContentfulCardFilterListInput>;
+  membership_levels?: Maybe<ContentfulMembershipLevelsFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulResourceSysFilterInput>;
+  card?: Maybe<ContentfulCardFilterListInput>;
   block__content?: Maybe<ContentfulBlockContentFilterListInput>;
   publicationDate?: Maybe<DateQueryOperatorInput>;
   block__resource_list?: Maybe<ContentfulBlockResourceListFilterListInput>;
@@ -13557,6 +14367,10 @@ export type Query = {
   allContentfulCard: ContentfulCardConnection;
   contentfulBlockListOfCards?: Maybe<ContentfulBlockListOfCards>;
   allContentfulBlockListOfCards: ContentfulBlockListOfCardsConnection;
+  contentfulMembershipLevels?: Maybe<ContentfulMembershipLevels>;
+  allContentfulMembershipLevels: ContentfulMembershipLevelsConnection;
+  contentfulMembershipLevelsItemsJsonNode?: Maybe<ContentfulMembershipLevelsItemsJsonNode>;
+  allContentfulMembershipLevelsItemsJsonNode: ContentfulMembershipLevelsItemsJsonNodeConnection;
   contentfulBlockJumbotronButtonJsonNode?: Maybe<ContentfulBlockJumbotronButtonJsonNode>;
   allContentfulBlockJumbotronButtonJsonNode: ContentfulBlockJumbotronButtonJsonNodeConnection;
   contentfulBlockContentListListJsonNode?: Maybe<ContentfulBlockContentListListJsonNode>;
@@ -14066,11 +14880,12 @@ export type QueryContentfulResourceArgs = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   url?: Maybe<StringQueryOperatorInput>;
-  card?: Maybe<ContentfulCardFilterListInput>;
+  membership_levels?: Maybe<ContentfulMembershipLevelsFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulResourceSysFilterInput>;
+  card?: Maybe<ContentfulCardFilterListInput>;
   block__content?: Maybe<ContentfulBlockContentFilterListInput>;
   publicationDate?: Maybe<DateQueryOperatorInput>;
   block__resource_list?: Maybe<ContentfulBlockResourceListFilterListInput>;
@@ -14276,12 +15091,12 @@ export type QueryContentfulBlockListOfCardsArgs = {
   node_locale?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   variation?: Maybe<StringQueryOperatorInput>;
-  cards?: Maybe<ContentfulCardFilterListInput>;
-  page?: Maybe<ContentfulPageFilterListInput>;
+  description?: Maybe<ContentfulBlockListOfCardsDescriptionFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockListOfCardsSysFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
@@ -14291,6 +15106,55 @@ export type QueryContentfulBlockListOfCardsArgs = {
 export type QueryAllContentfulBlockListOfCardsArgs = {
   filter?: Maybe<ContentfulBlockListOfCardsFilterInput>;
   sort?: Maybe<ContentfulBlockListOfCardsSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulMembershipLevelsArgs = {
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  subtitle?: Maybe<StringQueryOperatorInput>;
+  icon?: Maybe<StringQueryOperatorInput>;
+  customLinkTitle?: Maybe<StringQueryOperatorInput>;
+  link?: Maybe<ContentfulResourceFilterInput>;
+  block__list_of_cards?: Maybe<ContentfulBlockListOfCardsFilterListInput>;
+  items?: Maybe<ContentfulMembershipLevelsItemsJsonNodeFilterInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulMembershipLevelsSysFilterInput>;
+  childrenContentfulMembershipLevelsItemsJsonNode?: Maybe<ContentfulMembershipLevelsItemsJsonNodeFilterListInput>;
+  childContentfulMembershipLevelsItemsJsonNode?: Maybe<ContentfulMembershipLevelsItemsJsonNodeFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+
+export type QueryAllContentfulMembershipLevelsArgs = {
+  filter?: Maybe<ContentfulMembershipLevelsFilterInput>;
+  sort?: Maybe<ContentfulMembershipLevelsSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulMembershipLevelsItemsJsonNodeArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  items?: Maybe<StringQueryOperatorInput>;
+  sys?: Maybe<ContentfulMembershipLevelsItemsJsonNodeSysFilterInput>;
+};
+
+
+export type QueryAllContentfulMembershipLevelsItemsJsonNodeArgs = {
+  filter?: Maybe<ContentfulMembershipLevelsItemsJsonNodeFilterInput>;
+  sort?: Maybe<ContentfulMembershipLevelsItemsJsonNodeSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -16617,6 +17481,173 @@ export type ContentfulBlogPostExcerptTextNodeSysFilterInput = {
   type?: Maybe<StringQueryOperatorInput>;
 };
 
+export type ContentfulMembershipLevelsItemsJsonNode = Node & {
+  __typename?: 'contentfulMembershipLevelsItemsJsonNode';
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+  items?: Maybe<Array<Maybe<Scalars['String']>>>;
+  sys?: Maybe<ContentfulMembershipLevelsItemsJsonNodeSys>;
+};
+
+export type ContentfulMembershipLevelsItemsJsonNodeConnection = {
+  __typename?: 'contentfulMembershipLevelsItemsJsonNodeConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulMembershipLevelsItemsJsonNodeEdge>;
+  nodes: Array<ContentfulMembershipLevelsItemsJsonNode>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<ContentfulMembershipLevelsItemsJsonNodeGroupConnection>;
+};
+
+
+export type ContentfulMembershipLevelsItemsJsonNodeConnectionDistinctArgs = {
+  field: ContentfulMembershipLevelsItemsJsonNodeFieldsEnum;
+};
+
+
+export type ContentfulMembershipLevelsItemsJsonNodeConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: ContentfulMembershipLevelsItemsJsonNodeFieldsEnum;
+};
+
+export type ContentfulMembershipLevelsItemsJsonNodeEdge = {
+  __typename?: 'contentfulMembershipLevelsItemsJsonNodeEdge';
+  next?: Maybe<ContentfulMembershipLevelsItemsJsonNode>;
+  node: ContentfulMembershipLevelsItemsJsonNode;
+  previous?: Maybe<ContentfulMembershipLevelsItemsJsonNode>;
+};
+
+export enum ContentfulMembershipLevelsItemsJsonNodeFieldsEnum {
+  id = 'id',
+  parent___id = 'parent___id',
+  parent___parent___id = 'parent___parent___id',
+  parent___parent___parent___id = 'parent___parent___parent___id',
+  parent___parent___parent___children = 'parent___parent___parent___children',
+  parent___parent___children = 'parent___parent___children',
+  parent___parent___children___id = 'parent___parent___children___id',
+  parent___parent___children___children = 'parent___parent___children___children',
+  parent___parent___internal___content = 'parent___parent___internal___content',
+  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
+  parent___parent___internal___description = 'parent___parent___internal___description',
+  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
+  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
+  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
+  parent___parent___internal___owner = 'parent___parent___internal___owner',
+  parent___parent___internal___type = 'parent___parent___internal___type',
+  parent___children = 'parent___children',
+  parent___children___id = 'parent___children___id',
+  parent___children___parent___id = 'parent___children___parent___id',
+  parent___children___parent___children = 'parent___children___parent___children',
+  parent___children___children = 'parent___children___children',
+  parent___children___children___id = 'parent___children___children___id',
+  parent___children___children___children = 'parent___children___children___children',
+  parent___children___internal___content = 'parent___children___internal___content',
+  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
+  parent___children___internal___description = 'parent___children___internal___description',
+  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
+  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
+  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
+  parent___children___internal___owner = 'parent___children___internal___owner',
+  parent___children___internal___type = 'parent___children___internal___type',
+  parent___internal___content = 'parent___internal___content',
+  parent___internal___contentDigest = 'parent___internal___contentDigest',
+  parent___internal___description = 'parent___internal___description',
+  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
+  parent___internal___ignoreType = 'parent___internal___ignoreType',
+  parent___internal___mediaType = 'parent___internal___mediaType',
+  parent___internal___owner = 'parent___internal___owner',
+  parent___internal___type = 'parent___internal___type',
+  children = 'children',
+  children___id = 'children___id',
+  children___parent___id = 'children___parent___id',
+  children___parent___parent___id = 'children___parent___parent___id',
+  children___parent___parent___children = 'children___parent___parent___children',
+  children___parent___children = 'children___parent___children',
+  children___parent___children___id = 'children___parent___children___id',
+  children___parent___children___children = 'children___parent___children___children',
+  children___parent___internal___content = 'children___parent___internal___content',
+  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
+  children___parent___internal___description = 'children___parent___internal___description',
+  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
+  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
+  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
+  children___parent___internal___owner = 'children___parent___internal___owner',
+  children___parent___internal___type = 'children___parent___internal___type',
+  children___children = 'children___children',
+  children___children___id = 'children___children___id',
+  children___children___parent___id = 'children___children___parent___id',
+  children___children___parent___children = 'children___children___parent___children',
+  children___children___children = 'children___children___children',
+  children___children___children___id = 'children___children___children___id',
+  children___children___children___children = 'children___children___children___children',
+  children___children___internal___content = 'children___children___internal___content',
+  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
+  children___children___internal___description = 'children___children___internal___description',
+  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
+  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
+  children___children___internal___mediaType = 'children___children___internal___mediaType',
+  children___children___internal___owner = 'children___children___internal___owner',
+  children___children___internal___type = 'children___children___internal___type',
+  children___internal___content = 'children___internal___content',
+  children___internal___contentDigest = 'children___internal___contentDigest',
+  children___internal___description = 'children___internal___description',
+  children___internal___fieldOwners = 'children___internal___fieldOwners',
+  children___internal___ignoreType = 'children___internal___ignoreType',
+  children___internal___mediaType = 'children___internal___mediaType',
+  children___internal___owner = 'children___internal___owner',
+  children___internal___type = 'children___internal___type',
+  internal___content = 'internal___content',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___fieldOwners = 'internal___fieldOwners',
+  internal___ignoreType = 'internal___ignoreType',
+  internal___mediaType = 'internal___mediaType',
+  internal___owner = 'internal___owner',
+  internal___type = 'internal___type',
+  items = 'items',
+  sys___type = 'sys___type'
+}
+
+export type ContentfulMembershipLevelsItemsJsonNodeFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  items?: Maybe<StringQueryOperatorInput>;
+  sys?: Maybe<ContentfulMembershipLevelsItemsJsonNodeSysFilterInput>;
+};
+
+export type ContentfulMembershipLevelsItemsJsonNodeFilterListInput = {
+  elemMatch?: Maybe<ContentfulMembershipLevelsItemsJsonNodeFilterInput>;
+};
+
+export type ContentfulMembershipLevelsItemsJsonNodeGroupConnection = {
+  __typename?: 'contentfulMembershipLevelsItemsJsonNodeGroupConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulMembershipLevelsItemsJsonNodeEdge>;
+  nodes: Array<ContentfulMembershipLevelsItemsJsonNode>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulMembershipLevelsItemsJsonNodeSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulMembershipLevelsItemsJsonNodeFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulMembershipLevelsItemsJsonNodeSys = {
+  __typename?: 'contentfulMembershipLevelsItemsJsonNodeSys';
+  type?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulMembershipLevelsItemsJsonNodeSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+};
+
 export type CallToActionFragmentFragment = (
   { __typename: 'ContentfulBlockCallToAction' }
   & Pick<ContentfulBlockCallToAction, 'id' | 'title'>
@@ -16773,7 +17804,7 @@ export type ListOfCardsFragmentFragment = (
   & { cards?: Maybe<Array<Maybe<(
     { __typename?: 'ContentfulCard' }
     & CardFragmentFragment
-  )>>> }
+  ) | { __typename?: 'ContentfulMembershipLevels' }>>> }
 );
 
 export type AllListOfPeopleBlocksQueryVariables = Exact<{ [key: string]: never; }>;
@@ -16882,6 +17913,20 @@ export type CardFragmentFragment = (
     { __typename: 'ContentfulResource' }
     & Pick<ContentfulResource, 'url' | 'title'>
   )> }
+);
+
+export type AllContentfulCardsTestQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllContentfulCardsTestQuery = (
+  { __typename?: 'Query' }
+  & { result: (
+    { __typename?: 'ContentfulCardConnection' }
+    & { nodes: Array<(
+      { __typename?: 'ContentfulCard' }
+      & CardFragmentFragment
+    )> }
+  ) }
 );
 
 export type ContentfulBlocksFragmentFragment = (

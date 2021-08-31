@@ -1,0 +1,41 @@
+.code {
+  margin-top: var(--space--base);
+  border: 1px solid var(--color--ghost);
+  border-radius: 3px;
+  overflow-x: scroll;
+  padding: var(--space--base); 
+  font-family: monospace;
+  font-size: var(--font-size--small);
+}
+
+.prop {
+  margin: var(--space--base) 0;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: var(--space--xxsmall);
+  cursor: pointer;
+}
+
+.label::before {
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space--base);
+  height: var(--space--base);
+  border: 1px solid var(--color--carbon);
+  border-radius: 3px;
+  font-size: var(--font-size--small);
+}
+
+.checkbox:checked + .label::before {
+  content: "✔️";
+}
+
+.checkbox {
+  position: absolute;
+  left: -999em;
+}
