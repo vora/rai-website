@@ -892,10 +892,10 @@ export enum ContentfulBlockCallToActionFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -1558,10 +1558,10 @@ export enum ContentfulBlockContentFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -2083,10 +2083,10 @@ export enum ContentfulBlockContentListFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -2816,10 +2816,10 @@ export enum ContentfulBlockImageBandFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -3481,10 +3481,10 @@ export enum ContentfulBlockJumbotronFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -3875,11 +3875,11 @@ export type ContentfulBlockListOfCards = ContentfulReference & ContentfulEntry &
   variation?: Maybe<Scalars['String']>;
   description?: Maybe<ContentfulBlockListOfCardsDescription>;
   cards?: Maybe<Array<Maybe<ContentfulCardContentfulMembershipLevelsUnion>>>;
+  page?: Maybe<Array<Maybe<ContentfulPage>>>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
   sys?: Maybe<ContentfulBlockListOfCardsSys>;
-  page?: Maybe<Array<Maybe<ContentfulPage>>>;
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
@@ -3946,14 +3946,6 @@ export enum ContentfulBlockListOfCardsFieldsEnum {
   title = 'title',
   variation = 'variation',
   description___raw = 'description___raw',
-  spaceId = 'spaceId',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
-  sys___type = 'sys___type',
-  sys___revision = 'sys___revision',
-  sys___contentType___sys___type = 'sys___contentType___sys___type',
-  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
-  sys___contentType___sys___id = 'sys___contentType___sys___id',
   page = 'page',
   page___contentful_id = 'page___contentful_id',
   page___id = 'page___id',
@@ -4031,10 +4023,10 @@ export enum ContentfulBlockListOfCardsFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -4166,6 +4158,14 @@ export enum ContentfulBlockListOfCardsFieldsEnum {
   page___internal___mediaType = 'page___internal___mediaType',
   page___internal___owner = 'page___internal___owner',
   page___internal___type = 'page___internal___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
   parent___id = 'parent___id',
   parent___parent___id = 'parent___parent___id',
   parent___parent___parent___id = 'parent___parent___parent___id',
@@ -4260,11 +4260,11 @@ export type ContentfulBlockListOfCardsFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   variation?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<ContentfulBlockListOfCardsDescriptionFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockListOfCardsSysFilterInput>;
-  page?: Maybe<ContentfulPageFilterListInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
@@ -4706,10 +4706,10 @@ export enum ContentfulBlockListOfPeopleFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -5299,10 +5299,10 @@ export enum ContentfulBlockMembersFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -5746,10 +5746,10 @@ export enum ContentfulBlockResourceListFieldsEnum {
   headingLink___card___block__list_of_cards___node_locale = 'headingLink___card___block__list_of_cards___node_locale',
   headingLink___card___block__list_of_cards___title = 'headingLink___card___block__list_of_cards___title',
   headingLink___card___block__list_of_cards___variation = 'headingLink___card___block__list_of_cards___variation',
+  headingLink___card___block__list_of_cards___page = 'headingLink___card___block__list_of_cards___page',
   headingLink___card___block__list_of_cards___spaceId = 'headingLink___card___block__list_of_cards___spaceId',
   headingLink___card___block__list_of_cards___createdAt = 'headingLink___card___block__list_of_cards___createdAt',
   headingLink___card___block__list_of_cards___updatedAt = 'headingLink___card___block__list_of_cards___updatedAt',
-  headingLink___card___block__list_of_cards___page = 'headingLink___card___block__list_of_cards___page',
   headingLink___card___block__list_of_cards___children = 'headingLink___card___block__list_of_cards___children',
   headingLink___card___spaceId = 'headingLink___card___spaceId',
   headingLink___card___createdAt = 'headingLink___card___createdAt',
@@ -6328,10 +6328,10 @@ export enum ContentfulBlockResourceListFieldsEnum {
   page___card___block__list_of_cards___node_locale = 'page___card___block__list_of_cards___node_locale',
   page___card___block__list_of_cards___title = 'page___card___block__list_of_cards___title',
   page___card___block__list_of_cards___variation = 'page___card___block__list_of_cards___variation',
+  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___spaceId = 'page___card___block__list_of_cards___spaceId',
   page___card___block__list_of_cards___createdAt = 'page___card___block__list_of_cards___createdAt',
   page___card___block__list_of_cards___updatedAt = 'page___card___block__list_of_cards___updatedAt',
-  page___card___block__list_of_cards___page = 'page___card___block__list_of_cards___page',
   page___card___block__list_of_cards___children = 'page___card___block__list_of_cards___children',
   page___card___spaceId = 'page___card___spaceId',
   page___card___createdAt = 'page___card___createdAt',
@@ -8004,11 +8004,6 @@ export enum ContentfulCardFieldsEnum {
   block__list_of_cards___title = 'block__list_of_cards___title',
   block__list_of_cards___variation = 'block__list_of_cards___variation',
   block__list_of_cards___description___raw = 'block__list_of_cards___description___raw',
-  block__list_of_cards___spaceId = 'block__list_of_cards___spaceId',
-  block__list_of_cards___createdAt = 'block__list_of_cards___createdAt',
-  block__list_of_cards___updatedAt = 'block__list_of_cards___updatedAt',
-  block__list_of_cards___sys___type = 'block__list_of_cards___sys___type',
-  block__list_of_cards___sys___revision = 'block__list_of_cards___sys___revision',
   block__list_of_cards___page = 'block__list_of_cards___page',
   block__list_of_cards___page___contentful_id = 'block__list_of_cards___page___contentful_id',
   block__list_of_cards___page___id = 'block__list_of_cards___page___id',
@@ -8072,6 +8067,11 @@ export enum ContentfulCardFieldsEnum {
   block__list_of_cards___page___internal___mediaType = 'block__list_of_cards___page___internal___mediaType',
   block__list_of_cards___page___internal___owner = 'block__list_of_cards___page___internal___owner',
   block__list_of_cards___page___internal___type = 'block__list_of_cards___page___internal___type',
+  block__list_of_cards___spaceId = 'block__list_of_cards___spaceId',
+  block__list_of_cards___createdAt = 'block__list_of_cards___createdAt',
+  block__list_of_cards___updatedAt = 'block__list_of_cards___updatedAt',
+  block__list_of_cards___sys___type = 'block__list_of_cards___sys___type',
+  block__list_of_cards___sys___revision = 'block__list_of_cards___sys___revision',
   block__list_of_cards___parent___id = 'block__list_of_cards___parent___id',
   block__list_of_cards___parent___parent___id = 'block__list_of_cards___parent___parent___id',
   block__list_of_cards___parent___parent___children = 'block__list_of_cards___parent___parent___children',
@@ -9478,10 +9478,10 @@ export enum ContentfulMembershipLevelsFieldsEnum {
   link___membership_levels___block__list_of_cards___node_locale = 'link___membership_levels___block__list_of_cards___node_locale',
   link___membership_levels___block__list_of_cards___title = 'link___membership_levels___block__list_of_cards___title',
   link___membership_levels___block__list_of_cards___variation = 'link___membership_levels___block__list_of_cards___variation',
+  link___membership_levels___block__list_of_cards___page = 'link___membership_levels___block__list_of_cards___page',
   link___membership_levels___block__list_of_cards___spaceId = 'link___membership_levels___block__list_of_cards___spaceId',
   link___membership_levels___block__list_of_cards___createdAt = 'link___membership_levels___block__list_of_cards___createdAt',
   link___membership_levels___block__list_of_cards___updatedAt = 'link___membership_levels___block__list_of_cards___updatedAt',
-  link___membership_levels___block__list_of_cards___page = 'link___membership_levels___block__list_of_cards___page',
   link___membership_levels___block__list_of_cards___children = 'link___membership_levels___block__list_of_cards___children',
   link___membership_levels___items___id = 'link___membership_levels___items___id',
   link___membership_levels___items___children = 'link___membership_levels___items___children',
@@ -9530,10 +9530,10 @@ export enum ContentfulMembershipLevelsFieldsEnum {
   link___card___block__list_of_cards___node_locale = 'link___card___block__list_of_cards___node_locale',
   link___card___block__list_of_cards___title = 'link___card___block__list_of_cards___title',
   link___card___block__list_of_cards___variation = 'link___card___block__list_of_cards___variation',
+  link___card___block__list_of_cards___page = 'link___card___block__list_of_cards___page',
   link___card___block__list_of_cards___spaceId = 'link___card___block__list_of_cards___spaceId',
   link___card___block__list_of_cards___createdAt = 'link___card___block__list_of_cards___createdAt',
   link___card___block__list_of_cards___updatedAt = 'link___card___block__list_of_cards___updatedAt',
-  link___card___block__list_of_cards___page = 'link___card___block__list_of_cards___page',
   link___card___block__list_of_cards___children = 'link___card___block__list_of_cards___children',
   link___card___spaceId = 'link___card___spaceId',
   link___card___createdAt = 'link___card___createdAt',
@@ -9722,11 +9722,6 @@ export enum ContentfulMembershipLevelsFieldsEnum {
   block__list_of_cards___title = 'block__list_of_cards___title',
   block__list_of_cards___variation = 'block__list_of_cards___variation',
   block__list_of_cards___description___raw = 'block__list_of_cards___description___raw',
-  block__list_of_cards___spaceId = 'block__list_of_cards___spaceId',
-  block__list_of_cards___createdAt = 'block__list_of_cards___createdAt',
-  block__list_of_cards___updatedAt = 'block__list_of_cards___updatedAt',
-  block__list_of_cards___sys___type = 'block__list_of_cards___sys___type',
-  block__list_of_cards___sys___revision = 'block__list_of_cards___sys___revision',
   block__list_of_cards___page = 'block__list_of_cards___page',
   block__list_of_cards___page___contentful_id = 'block__list_of_cards___page___contentful_id',
   block__list_of_cards___page___id = 'block__list_of_cards___page___id',
@@ -9790,6 +9785,11 @@ export enum ContentfulMembershipLevelsFieldsEnum {
   block__list_of_cards___page___internal___mediaType = 'block__list_of_cards___page___internal___mediaType',
   block__list_of_cards___page___internal___owner = 'block__list_of_cards___page___internal___owner',
   block__list_of_cards___page___internal___type = 'block__list_of_cards___page___internal___type',
+  block__list_of_cards___spaceId = 'block__list_of_cards___spaceId',
+  block__list_of_cards___createdAt = 'block__list_of_cards___createdAt',
+  block__list_of_cards___updatedAt = 'block__list_of_cards___updatedAt',
+  block__list_of_cards___sys___type = 'block__list_of_cards___sys___type',
+  block__list_of_cards___sys___revision = 'block__list_of_cards___sys___revision',
   block__list_of_cards___parent___id = 'block__list_of_cards___parent___id',
   block__list_of_cards___parent___parent___id = 'block__list_of_cards___parent___parent___id',
   block__list_of_cards___parent___parent___children = 'block__list_of_cards___parent___parent___children',
@@ -10608,11 +10608,6 @@ export enum ContentfulPageFieldsEnum {
   card___block__list_of_cards___title = 'card___block__list_of_cards___title',
   card___block__list_of_cards___variation = 'card___block__list_of_cards___variation',
   card___block__list_of_cards___description___raw = 'card___block__list_of_cards___description___raw',
-  card___block__list_of_cards___spaceId = 'card___block__list_of_cards___spaceId',
-  card___block__list_of_cards___createdAt = 'card___block__list_of_cards___createdAt',
-  card___block__list_of_cards___updatedAt = 'card___block__list_of_cards___updatedAt',
-  card___block__list_of_cards___sys___type = 'card___block__list_of_cards___sys___type',
-  card___block__list_of_cards___sys___revision = 'card___block__list_of_cards___sys___revision',
   card___block__list_of_cards___page = 'card___block__list_of_cards___page',
   card___block__list_of_cards___page___contentful_id = 'card___block__list_of_cards___page___contentful_id',
   card___block__list_of_cards___page___id = 'card___block__list_of_cards___page___id',
@@ -10629,6 +10624,11 @@ export enum ContentfulPageFieldsEnum {
   card___block__list_of_cards___page___seoTitle = 'card___block__list_of_cards___page___seoTitle',
   card___block__list_of_cards___page___seoDescription = 'card___block__list_of_cards___page___seoDescription',
   card___block__list_of_cards___page___children = 'card___block__list_of_cards___page___children',
+  card___block__list_of_cards___spaceId = 'card___block__list_of_cards___spaceId',
+  card___block__list_of_cards___createdAt = 'card___block__list_of_cards___createdAt',
+  card___block__list_of_cards___updatedAt = 'card___block__list_of_cards___updatedAt',
+  card___block__list_of_cards___sys___type = 'card___block__list_of_cards___sys___type',
+  card___block__list_of_cards___sys___revision = 'card___block__list_of_cards___sys___revision',
   card___block__list_of_cards___parent___id = 'card___block__list_of_cards___parent___id',
   card___block__list_of_cards___parent___children = 'card___block__list_of_cards___parent___children',
   card___block__list_of_cards___children = 'card___block__list_of_cards___children',
@@ -12169,11 +12169,6 @@ export enum ContentfulResourceFieldsEnum {
   membership_levels___block__list_of_cards___title = 'membership_levels___block__list_of_cards___title',
   membership_levels___block__list_of_cards___variation = 'membership_levels___block__list_of_cards___variation',
   membership_levels___block__list_of_cards___description___raw = 'membership_levels___block__list_of_cards___description___raw',
-  membership_levels___block__list_of_cards___spaceId = 'membership_levels___block__list_of_cards___spaceId',
-  membership_levels___block__list_of_cards___createdAt = 'membership_levels___block__list_of_cards___createdAt',
-  membership_levels___block__list_of_cards___updatedAt = 'membership_levels___block__list_of_cards___updatedAt',
-  membership_levels___block__list_of_cards___sys___type = 'membership_levels___block__list_of_cards___sys___type',
-  membership_levels___block__list_of_cards___sys___revision = 'membership_levels___block__list_of_cards___sys___revision',
   membership_levels___block__list_of_cards___page = 'membership_levels___block__list_of_cards___page',
   membership_levels___block__list_of_cards___page___contentful_id = 'membership_levels___block__list_of_cards___page___contentful_id',
   membership_levels___block__list_of_cards___page___id = 'membership_levels___block__list_of_cards___page___id',
@@ -12190,6 +12185,11 @@ export enum ContentfulResourceFieldsEnum {
   membership_levels___block__list_of_cards___page___seoTitle = 'membership_levels___block__list_of_cards___page___seoTitle',
   membership_levels___block__list_of_cards___page___seoDescription = 'membership_levels___block__list_of_cards___page___seoDescription',
   membership_levels___block__list_of_cards___page___children = 'membership_levels___block__list_of_cards___page___children',
+  membership_levels___block__list_of_cards___spaceId = 'membership_levels___block__list_of_cards___spaceId',
+  membership_levels___block__list_of_cards___createdAt = 'membership_levels___block__list_of_cards___createdAt',
+  membership_levels___block__list_of_cards___updatedAt = 'membership_levels___block__list_of_cards___updatedAt',
+  membership_levels___block__list_of_cards___sys___type = 'membership_levels___block__list_of_cards___sys___type',
+  membership_levels___block__list_of_cards___sys___revision = 'membership_levels___block__list_of_cards___sys___revision',
   membership_levels___block__list_of_cards___parent___id = 'membership_levels___block__list_of_cards___parent___id',
   membership_levels___block__list_of_cards___parent___children = 'membership_levels___block__list_of_cards___parent___children',
   membership_levels___block__list_of_cards___children = 'membership_levels___block__list_of_cards___children',
@@ -12317,11 +12317,6 @@ export enum ContentfulResourceFieldsEnum {
   card___block__list_of_cards___title = 'card___block__list_of_cards___title',
   card___block__list_of_cards___variation = 'card___block__list_of_cards___variation',
   card___block__list_of_cards___description___raw = 'card___block__list_of_cards___description___raw',
-  card___block__list_of_cards___spaceId = 'card___block__list_of_cards___spaceId',
-  card___block__list_of_cards___createdAt = 'card___block__list_of_cards___createdAt',
-  card___block__list_of_cards___updatedAt = 'card___block__list_of_cards___updatedAt',
-  card___block__list_of_cards___sys___type = 'card___block__list_of_cards___sys___type',
-  card___block__list_of_cards___sys___revision = 'card___block__list_of_cards___sys___revision',
   card___block__list_of_cards___page = 'card___block__list_of_cards___page',
   card___block__list_of_cards___page___contentful_id = 'card___block__list_of_cards___page___contentful_id',
   card___block__list_of_cards___page___id = 'card___block__list_of_cards___page___id',
@@ -12338,6 +12333,11 @@ export enum ContentfulResourceFieldsEnum {
   card___block__list_of_cards___page___seoTitle = 'card___block__list_of_cards___page___seoTitle',
   card___block__list_of_cards___page___seoDescription = 'card___block__list_of_cards___page___seoDescription',
   card___block__list_of_cards___page___children = 'card___block__list_of_cards___page___children',
+  card___block__list_of_cards___spaceId = 'card___block__list_of_cards___spaceId',
+  card___block__list_of_cards___createdAt = 'card___block__list_of_cards___createdAt',
+  card___block__list_of_cards___updatedAt = 'card___block__list_of_cards___updatedAt',
+  card___block__list_of_cards___sys___type = 'card___block__list_of_cards___sys___type',
+  card___block__list_of_cards___sys___revision = 'card___block__list_of_cards___sys___revision',
   card___block__list_of_cards___parent___id = 'card___block__list_of_cards___parent___id',
   card___block__list_of_cards___parent___children = 'card___block__list_of_cards___parent___children',
   card___block__list_of_cards___children = 'card___block__list_of_cards___children',
@@ -15092,11 +15092,11 @@ export type QueryContentfulBlockListOfCardsArgs = {
   title?: Maybe<StringQueryOperatorInput>;
   variation?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<ContentfulBlockListOfCardsDescriptionFilterInput>;
+  page?: Maybe<ContentfulPageFilterListInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
   sys?: Maybe<ContentfulBlockListOfCardsSysFilterInput>;
-  page?: Maybe<ContentfulPageFilterListInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
@@ -17804,7 +17804,10 @@ export type ListOfCardsFragmentFragment = (
   & { cards?: Maybe<Array<Maybe<(
     { __typename: 'ContentfulCard' }
     & CardFragmentFragment
-  ) | { __typename: 'ContentfulMembershipLevels' }>>> }
+  ) | (
+    { __typename: 'ContentfulMembershipLevels' }
+    & MembershipLevelFragmentFragment
+  )>>> }
 );
 
 export type AllListOfPeopleBlocksQueryVariables = Exact<{ [key: string]: never; }>;
@@ -17947,6 +17950,20 @@ export type AllContentfulBlockListOfCardsQuery = (
   ) }
 );
 
+export type AllContentfulMembershipLevelsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllContentfulMembershipLevelsQuery = (
+  { __typename?: 'Query' }
+  & { result: (
+    { __typename?: 'ContentfulMembershipLevelsConnection' }
+    & { nodes: Array<(
+      { __typename?: 'ContentfulMembershipLevels' }
+      & MembershipLevelFragmentFragment
+    )> }
+  ) }
+);
+
 export type ContentfulBlocksFragmentFragment = (
   { __typename?: 'ContentfulPage' }
   & { blocks?: Maybe<Array<Maybe<(
@@ -18027,6 +18044,18 @@ export type LayoutQueryQuery = (
   & { contentfulMicroContent?: Maybe<(
     { __typename?: 'ContentfulMicroContent' }
     & Pick<ContentfulMicroContent, 'value'>
+  )> }
+);
+
+export type MembershipLevelFragmentFragment = (
+  { __typename?: 'ContentfulMembershipLevels' }
+  & Pick<ContentfulMembershipLevels, 'title' | 'subtitle' | 'icon' | 'customLinkTitle'>
+  & { items?: Maybe<(
+    { __typename?: 'contentfulMembershipLevelsItemsJsonNode' }
+    & Pick<ContentfulMembershipLevelsItemsJsonNode, 'items'>
+  )>, link?: Maybe<(
+    { __typename?: 'ContentfulResource' }
+    & Pick<ContentfulResource, 'url' | 'title'>
   )> }
 );
 

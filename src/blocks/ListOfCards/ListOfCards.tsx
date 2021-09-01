@@ -6,6 +6,7 @@ import { Heading } from "@/components/Heading";
 import { Divider } from "@/components/Divider";
 import classNames from "classnames";
 import { Container } from "@/components/Container";
+import { MembershipLevel } from "@/components/MembershipLevel";
 import styles from "./ListOfCards.module.css";
 
 export function ListOfCards({
@@ -28,17 +29,21 @@ export function ListOfCards({
         )}
         <div className={styles.cards}>
           {cards?.map((card) => {
-            if (card.__typename !== "ContentfulCard") {
-              return <div>Unknown Card</div>;
+            if (card.__typename === "ContentfulCard") {
+              return (
+                <Card
+                  {...card}
+                  key={card.title}
+                  size={variation === "List" ? "large" : "base"}
+                />
+              );
             }
 
-            return (
-              <Card
-                {...card}
-                key={card.title}
-                size={variation === "List" ? "large" : "base"}
-              />
-            );
+            if (card.__typename === "ContentfulMembershipLevels") {
+              return <MembershipLevel key={card.title} {...card} />;
+            }
+
+            return <></>;
           })}
         </div>
       </Container>
@@ -54,7 +59,12 @@ export const ListOfCardsFragment = graphql`
     variation
     cards {
       __typename
-      ...CardFragment
+      ... on ContentfulMembershipLevels {
+        ...MembershipLevelFragment
+      }
+      ... on ContentfulCard {
+        ...CardFragment
+      }
     }
   }
 `;

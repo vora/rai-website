@@ -1,0 +1,16 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { MembershipLevel } from "@/components/MembershipLevel";
+import {
+  ContentType,
+  ContentProp,
+  useAllContentfulMembershipLevels,
+} from "@/components/ContentType";
+
+<Meta title="Content Types/Membership Levels" />
+
+# Membership Levels
+
+<ContentType
+  query={useAllContentfulMembershipLevels}
+  component={MembershipLevel}
+/>
