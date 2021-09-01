@@ -1,0 +1,27 @@
+.list {
+  background: var(--color--ghost);
+  padding: var(--space--xxlarge) 0;
+}
+
+.cards {
+  margin-top: var(--space--large);
+  display: grid;
+  gap: var(--space--large);
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+.list .cards {
+  grid-template-columns: 1fr;
+}

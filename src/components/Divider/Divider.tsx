@@ -4,7 +4,7 @@ import classnames from "classnames";
 import styles from "./Divider.module.css";
 
 interface DividerProps {
-  readonly spacing?: "base" | "small";
+  readonly spacing?: "small" | "base" | "largest";
 }
 
 export function Divider({ spacing = "base" }: DividerProps) {

@@ -6,7 +6,13 @@ export type IconType = keyof typeof Icons | keyof typeof customIcons;
 
 interface IconProps {
   readonly icon: IconType;
-  readonly size?: "small" | "base" | "large" | "largest" | "humongous";
+  readonly size?:
+    | "small"
+    | "base"
+    | "large"
+    | "larger"
+    | "largest"
+    | "humongous";
 }
 
 export function Icon({ icon, size = "base" }: IconProps) {
@@ -16,6 +22,7 @@ export function Icon({ icon, size = "base" }: IconProps) {
     small: 16,
     base: 24,
     large: 32,
+    larger: 72,
     largest: 125,
     humongous: 200,
   };

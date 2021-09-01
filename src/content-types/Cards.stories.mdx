@@ -1,8 +1,33 @@
+import { useState } from "react";
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
-import { Cards } from "./Cards";
+import { Card } from "@/components/Card";
+import {
+  ContentType,
+  ContentProp,
+  useAllContentfulCards,
+} from "@/components/ContentType";
 
-<Meta title="Content Types/Cards" component={Cards} />
+export function ListAllCards() {
+  return (
+    <ContentType query={useAllContentfulCards} component={StorybookCard} />
+  );
+}
+
+export function StorybookCard(props) {
+  const [size, setSize] = useState("base");
+  return (
+    <>
+      <ContentProp
+        label={"Display as large"}
+        onChange={(val) => setSize(val ? "large" : "base")}
+      />
+      <Card {...props} size={size} />
+    </>
+  );
+}
+
+<Meta title="Content Types/Cards" />
 
 # Cards
 
-<Cards />
+<ListAllCards />
