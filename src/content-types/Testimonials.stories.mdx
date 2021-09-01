@@ -1,0 +1,9 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Testimonial } from "@/components/Testimonial";
+import { ContentType, useAllTestimonials } from "@/components/ContentType";
+
+<Meta title="Content Types/Testimonials" />
+
+# Testimonials
+
+<ContentType query={useAllTestimonials} component={Testimonial} />

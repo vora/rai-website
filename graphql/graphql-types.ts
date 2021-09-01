@@ -12972,6 +12972,322 @@ export type ContentfulResourceSysFilterInput = {
   contentType?: Maybe<ContentfulResourceSysContentTypeFilterInput>;
 };
 
+export type ContentfulTestimonial = ContentfulReference & ContentfulEntry & Node & {
+  __typename?: 'ContentfulTestimonial';
+  contentful_id: Scalars['String'];
+  id: Scalars['ID'];
+  node_locale: Scalars['String'];
+  title?: Maybe<Scalars['String']>;
+  position?: Maybe<Scalars['String']>;
+  content?: Maybe<ContentfulTestimonialContent>;
+  image?: Maybe<ContentfulAsset>;
+  spaceId?: Maybe<Scalars['String']>;
+  createdAt?: Maybe<Scalars['Date']>;
+  updatedAt?: Maybe<Scalars['Date']>;
+  sys?: Maybe<ContentfulTestimonialSys>;
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
+
+export type ContentfulTestimonialCreatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+
+export type ContentfulTestimonialUpdatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulTestimonialConnection = {
+  __typename?: 'ContentfulTestimonialConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulTestimonialEdge>;
+  nodes: Array<ContentfulTestimonial>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<ContentfulTestimonialGroupConnection>;
+};
+
+
+export type ContentfulTestimonialConnectionDistinctArgs = {
+  field: ContentfulTestimonialFieldsEnum;
+};
+
+
+export type ContentfulTestimonialConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: ContentfulTestimonialFieldsEnum;
+};
+
+export type ContentfulTestimonialContent = {
+  __typename?: 'ContentfulTestimonialContent';
+  raw?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulTestimonialContentFilterInput = {
+  raw?: Maybe<StringQueryOperatorInput>;
+};
+
+export type ContentfulTestimonialEdge = {
+  __typename?: 'ContentfulTestimonialEdge';
+  next?: Maybe<ContentfulTestimonial>;
+  node: ContentfulTestimonial;
+  previous?: Maybe<ContentfulTestimonial>;
+};
+
+export enum ContentfulTestimonialFieldsEnum {
+  contentful_id = 'contentful_id',
+  id = 'id',
+  node_locale = 'node_locale',
+  title = 'title',
+  position = 'position',
+  content___raw = 'content___raw',
+  image___contentful_id = 'image___contentful_id',
+  image___id = 'image___id',
+  image___spaceId = 'image___spaceId',
+  image___createdAt = 'image___createdAt',
+  image___updatedAt = 'image___updatedAt',
+  image___file___url = 'image___file___url',
+  image___file___details___size = 'image___file___details___size',
+  image___file___fileName = 'image___file___fileName',
+  image___file___contentType = 'image___file___contentType',
+  image___title = 'image___title',
+  image___description = 'image___description',
+  image___node_locale = 'image___node_locale',
+  image___sys___type = 'image___sys___type',
+  image___sys___revision = 'image___sys___revision',
+  image___fixed___base64 = 'image___fixed___base64',
+  image___fixed___tracedSVG = 'image___fixed___tracedSVG',
+  image___fixed___aspectRatio = 'image___fixed___aspectRatio',
+  image___fixed___width = 'image___fixed___width',
+  image___fixed___height = 'image___fixed___height',
+  image___fixed___src = 'image___fixed___src',
+  image___fixed___srcSet = 'image___fixed___srcSet',
+  image___fixed___srcWebp = 'image___fixed___srcWebp',
+  image___fixed___srcSetWebp = 'image___fixed___srcSetWebp',
+  image___fluid___base64 = 'image___fluid___base64',
+  image___fluid___tracedSVG = 'image___fluid___tracedSVG',
+  image___fluid___aspectRatio = 'image___fluid___aspectRatio',
+  image___fluid___src = 'image___fluid___src',
+  image___fluid___srcSet = 'image___fluid___srcSet',
+  image___fluid___srcWebp = 'image___fluid___srcWebp',
+  image___fluid___srcSetWebp = 'image___fluid___srcSetWebp',
+  image___fluid___sizes = 'image___fluid___sizes',
+  image___gatsbyImageData = 'image___gatsbyImageData',
+  image___resize___base64 = 'image___resize___base64',
+  image___resize___tracedSVG = 'image___resize___tracedSVG',
+  image___resize___src = 'image___resize___src',
+  image___resize___width = 'image___resize___width',
+  image___resize___height = 'image___resize___height',
+  image___resize___aspectRatio = 'image___resize___aspectRatio',
+  image___parent___id = 'image___parent___id',
+  image___parent___parent___id = 'image___parent___parent___id',
+  image___parent___parent___children = 'image___parent___parent___children',
+  image___parent___children = 'image___parent___children',
+  image___parent___children___id = 'image___parent___children___id',
+  image___parent___children___children = 'image___parent___children___children',
+  image___parent___internal___content = 'image___parent___internal___content',
+  image___parent___internal___contentDigest = 'image___parent___internal___contentDigest',
+  image___parent___internal___description = 'image___parent___internal___description',
+  image___parent___internal___fieldOwners = 'image___parent___internal___fieldOwners',
+  image___parent___internal___ignoreType = 'image___parent___internal___ignoreType',
+  image___parent___internal___mediaType = 'image___parent___internal___mediaType',
+  image___parent___internal___owner = 'image___parent___internal___owner',
+  image___parent___internal___type = 'image___parent___internal___type',
+  image___children = 'image___children',
+  image___children___id = 'image___children___id',
+  image___children___parent___id = 'image___children___parent___id',
+  image___children___parent___children = 'image___children___parent___children',
+  image___children___children = 'image___children___children',
+  image___children___children___id = 'image___children___children___id',
+  image___children___children___children = 'image___children___children___children',
+  image___children___internal___content = 'image___children___internal___content',
+  image___children___internal___contentDigest = 'image___children___internal___contentDigest',
+  image___children___internal___description = 'image___children___internal___description',
+  image___children___internal___fieldOwners = 'image___children___internal___fieldOwners',
+  image___children___internal___ignoreType = 'image___children___internal___ignoreType',
+  image___children___internal___mediaType = 'image___children___internal___mediaType',
+  image___children___internal___owner = 'image___children___internal___owner',
+  image___children___internal___type = 'image___children___internal___type',
+  image___internal___content = 'image___internal___content',
+  image___internal___contentDigest = 'image___internal___contentDigest',
+  image___internal___description = 'image___internal___description',
+  image___internal___fieldOwners = 'image___internal___fieldOwners',
+  image___internal___ignoreType = 'image___internal___ignoreType',
+  image___internal___mediaType = 'image___internal___mediaType',
+  image___internal___owner = 'image___internal___owner',
+  image___internal___type = 'image___internal___type',
+  spaceId = 'spaceId',
+  createdAt = 'createdAt',
+  updatedAt = 'updatedAt',
+  sys___type = 'sys___type',
+  sys___revision = 'sys___revision',
+  sys___contentType___sys___type = 'sys___contentType___sys___type',
+  sys___contentType___sys___linkType = 'sys___contentType___sys___linkType',
+  sys___contentType___sys___id = 'sys___contentType___sys___id',
+  parent___id = 'parent___id',
+  parent___parent___id = 'parent___parent___id',
+  parent___parent___parent___id = 'parent___parent___parent___id',
+  parent___parent___parent___children = 'parent___parent___parent___children',
+  parent___parent___children = 'parent___parent___children',
+  parent___parent___children___id = 'parent___parent___children___id',
+  parent___parent___children___children = 'parent___parent___children___children',
+  parent___parent___internal___content = 'parent___parent___internal___content',
+  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
+  parent___parent___internal___description = 'parent___parent___internal___description',
+  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
+  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
+  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
+  parent___parent___internal___owner = 'parent___parent___internal___owner',
+  parent___parent___internal___type = 'parent___parent___internal___type',
+  parent___children = 'parent___children',
+  parent___children___id = 'parent___children___id',
+  parent___children___parent___id = 'parent___children___parent___id',
+  parent___children___parent___children = 'parent___children___parent___children',
+  parent___children___children = 'parent___children___children',
+  parent___children___children___id = 'parent___children___children___id',
+  parent___children___children___children = 'parent___children___children___children',
+  parent___children___internal___content = 'parent___children___internal___content',
+  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
+  parent___children___internal___description = 'parent___children___internal___description',
+  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
+  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
+  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
+  parent___children___internal___owner = 'parent___children___internal___owner',
+  parent___children___internal___type = 'parent___children___internal___type',
+  parent___internal___content = 'parent___internal___content',
+  parent___internal___contentDigest = 'parent___internal___contentDigest',
+  parent___internal___description = 'parent___internal___description',
+  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
+  parent___internal___ignoreType = 'parent___internal___ignoreType',
+  parent___internal___mediaType = 'parent___internal___mediaType',
+  parent___internal___owner = 'parent___internal___owner',
+  parent___internal___type = 'parent___internal___type',
+  children = 'children',
+  children___id = 'children___id',
+  children___parent___id = 'children___parent___id',
+  children___parent___parent___id = 'children___parent___parent___id',
+  children___parent___parent___children = 'children___parent___parent___children',
+  children___parent___children = 'children___parent___children',
+  children___parent___children___id = 'children___parent___children___id',
+  children___parent___children___children = 'children___parent___children___children',
+  children___parent___internal___content = 'children___parent___internal___content',
+  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
+  children___parent___internal___description = 'children___parent___internal___description',
+  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
+  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
+  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
+  children___parent___internal___owner = 'children___parent___internal___owner',
+  children___parent___internal___type = 'children___parent___internal___type',
+  children___children = 'children___children',
+  children___children___id = 'children___children___id',
+  children___children___parent___id = 'children___children___parent___id',
+  children___children___parent___children = 'children___children___parent___children',
+  children___children___children = 'children___children___children',
+  children___children___children___id = 'children___children___children___id',
+  children___children___children___children = 'children___children___children___children',
+  children___children___internal___content = 'children___children___internal___content',
+  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
+  children___children___internal___description = 'children___children___internal___description',
+  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
+  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
+  children___children___internal___mediaType = 'children___children___internal___mediaType',
+  children___children___internal___owner = 'children___children___internal___owner',
+  children___children___internal___type = 'children___children___internal___type',
+  children___internal___content = 'children___internal___content',
+  children___internal___contentDigest = 'children___internal___contentDigest',
+  children___internal___description = 'children___internal___description',
+  children___internal___fieldOwners = 'children___internal___fieldOwners',
+  children___internal___ignoreType = 'children___internal___ignoreType',
+  children___internal___mediaType = 'children___internal___mediaType',
+  children___internal___owner = 'children___internal___owner',
+  children___internal___type = 'children___internal___type',
+  internal___content = 'internal___content',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___fieldOwners = 'internal___fieldOwners',
+  internal___ignoreType = 'internal___ignoreType',
+  internal___mediaType = 'internal___mediaType',
+  internal___owner = 'internal___owner',
+  internal___type = 'internal___type'
+}
+
+export type ContentfulTestimonialFilterInput = {
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  position?: Maybe<StringQueryOperatorInput>;
+  content?: Maybe<ContentfulTestimonialContentFilterInput>;
+  image?: Maybe<ContentfulAssetFilterInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulTestimonialSysFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+export type ContentfulTestimonialGroupConnection = {
+  __typename?: 'ContentfulTestimonialGroupConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulTestimonialEdge>;
+  nodes: Array<ContentfulTestimonial>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulTestimonialSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulTestimonialFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulTestimonialSys = {
+  __typename?: 'ContentfulTestimonialSys';
+  type?: Maybe<Scalars['String']>;
+  revision?: Maybe<Scalars['Int']>;
+  contentType?: Maybe<ContentfulTestimonialSysContentType>;
+};
+
+export type ContentfulTestimonialSysContentType = {
+  __typename?: 'ContentfulTestimonialSysContentType';
+  sys?: Maybe<ContentfulTestimonialSysContentTypeSys>;
+};
+
+export type ContentfulTestimonialSysContentTypeFilterInput = {
+  sys?: Maybe<ContentfulTestimonialSysContentTypeSysFilterInput>;
+};
+
+export type ContentfulTestimonialSysContentTypeSys = {
+  __typename?: 'ContentfulTestimonialSysContentTypeSys';
+  type?: Maybe<Scalars['String']>;
+  linkType?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulTestimonialSysContentTypeSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  linkType?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type ContentfulTestimonialSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  revision?: Maybe<IntQueryOperatorInput>;
+  contentType?: Maybe<ContentfulTestimonialSysContentTypeFilterInput>;
+};
+
 
 export type DateQueryOperatorInput = {
   eq?: Maybe<Scalars['Date']>;
@@ -14369,6 +14685,8 @@ export type Query = {
   allContentfulBlockListOfCards: ContentfulBlockListOfCardsConnection;
   contentfulMembershipLevels?: Maybe<ContentfulMembershipLevels>;
   allContentfulMembershipLevels: ContentfulMembershipLevelsConnection;
+  contentfulTestimonial?: Maybe<ContentfulTestimonial>;
+  allContentfulTestimonial: ContentfulTestimonialConnection;
   contentfulMembershipLevelsItemsJsonNode?: Maybe<ContentfulMembershipLevelsItemsJsonNode>;
   allContentfulMembershipLevelsItemsJsonNode: ContentfulMembershipLevelsItemsJsonNodeConnection;
   contentfulBlockJumbotronButtonJsonNode?: Maybe<ContentfulBlockJumbotronButtonJsonNode>;
@@ -15137,6 +15455,32 @@ export type QueryContentfulMembershipLevelsArgs = {
 export type QueryAllContentfulMembershipLevelsArgs = {
   filter?: Maybe<ContentfulMembershipLevelsFilterInput>;
   sort?: Maybe<ContentfulMembershipLevelsSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulTestimonialArgs = {
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  position?: Maybe<StringQueryOperatorInput>;
+  content?: Maybe<ContentfulTestimonialContentFilterInput>;
+  image?: Maybe<ContentfulAssetFilterInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulTestimonialSysFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+
+export type QueryAllContentfulTestimonialArgs = {
+  filter?: Maybe<ContentfulTestimonialFilterInput>;
+  sort?: Maybe<ContentfulTestimonialSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -17964,6 +18308,20 @@ export type AllContentfulMembershipLevelsQuery = (
   ) }
 );
 
+export type AllContentfulTestimonialsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllContentfulTestimonialsQuery = (
+  { __typename?: 'Query' }
+  & { result: (
+    { __typename?: 'ContentfulTestimonialConnection' }
+    & { nodes: Array<(
+      { __typename?: 'ContentfulTestimonial' }
+      & TestimonialFragmentFragment
+    )> }
+  ) }
+);
+
 export type ContentfulBlocksFragmentFragment = (
   { __typename?: 'ContentfulPage' }
   & { blocks?: Maybe<Array<Maybe<(
@@ -18099,6 +18457,18 @@ export type PostContentFragmentFragment = (
       & Pick<ContentfulAsset, 'contentful_id'>
       & ImageFragmentFragment
     )>>> }
+  )> }
+);
+
+export type TestimonialFragmentFragment = (
+  { __typename?: 'ContentfulTestimonial' }
+  & Pick<ContentfulTestimonial, 'title' | 'position'>
+  & { content?: Maybe<(
+    { __typename?: 'ContentfulTestimonialContent' }
+    & Pick<ContentfulTestimonialContent, 'raw'>
+  )>, image?: Maybe<(
+    { __typename?: 'ContentfulAsset' }
+    & Pick<ContentfulAsset, 'title' | 'description' | 'gatsbyImageData'>
   )> }
 );
 
