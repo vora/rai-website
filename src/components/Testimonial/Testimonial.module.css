@@ -1,0 +1,41 @@
+.testimonial {
+  border: 1px solid var(--color--carbon);
+  padding: var(--space--large) var(--space--base);
+  border-radius: 3px;
+}
+
+.content {
+  margin: 0 0 var(--space--xxlarge);
+}
+
+.content > p {
+  quotes: '\201c' '\201d';
+}
+
+.content > p::before,
+.content > p::after {
+  font-size: var(--font-size--large);
+  display: inline;
+}
+
+.content > p:first-of-type:before {
+  content: open-quote;
+}
+
+.content > p:last-of-type::after {
+  content: close-quote
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space--base);
+}
+
+.image {
+  flex: 0 0 auto;
+}
+
+.title {
+  font-size: var(--font-size--large);
+}
