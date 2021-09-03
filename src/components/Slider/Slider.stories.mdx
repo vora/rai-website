@@ -1,0 +1,33 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Slider } from ".";
+
+<Meta
+  title="components/Slider"
+  component={Slider}
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# Slider
+
+## Usage
+
+```tsx
+import { Slider } from "@/components/Slider";
+```
+
+## Props
+
+<ArgsTable component={Slider} />
+
+## Example
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{ slides: [<div>Foo</div>, <div>Bar</div>, <div>Baz</div>] }}
+  >
+    {(args) => <Slider {...args} />}
+  </Story>
+</Canvas>
