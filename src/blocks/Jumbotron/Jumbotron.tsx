@@ -1,32 +1,27 @@
 import React from "react";
-import classnames from "classnames";
 import { graphql } from "gatsby";
+import { AnimatePresence, motion } from "framer-motion";
+import classnames from "classnames";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { JumbotronFragmentFragment } from "@/graphql/graphql-types";
 import { Container } from "@/components/Container";
 import { Heading } from "@/components/Heading";
 import { RichText, RichTextContent } from "@/components/RichText";
-import { ContentfulButton } from "@/components/ContentfulButton";
+import { Button } from "@/components/Button";
+import { JumbotronFragmentFragment } from "@/graphql/graphql-types";
 
-import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Jumbotron.module.css";
 
-interface JumbotronProps {
-  readonly data: JumbotronFragmentFragment;
-}
-
 export function Jumbotron({
-  data: {
-    title,
-    content,
-    button,
-    image,
-    imageAlignment,
-    imageOnLeft,
-    backgroundImage,
-    backgroundColor,
-  },
-}: JumbotronProps) {
+  title,
+  content,
+  button,
+  customButtonText,
+  image,
+  backgroundImage,
+  backgroundColor,
+  imageAlignment,
+  imageOnLeft,
+}: JumbotronFragmentFragment) {
   const mainImage = getImage(image?.gatsbyImageData);
   const bgImage = getImage(backgroundImage?.gatsbyImageData);
 
@@ -50,9 +45,9 @@ export function Jumbotron({
         <div className={styles.container}>
           <div className={contentClass}>
             <Heading>{title}</Heading>
-            <RichText content={content as RichTextContent} />
-            {button?.action?.enabled && (
-              <ContentfulButton action={button?.action} />
+            {content && <RichText content={content as RichTextContent} />}
+            {button && (
+              <Button {...button} title={customButtonText ?? button.title} />
             )}
           </div>
 
@@ -91,14 +86,9 @@ export const JumbotronFragment = graphql`
       raw
     }
     button {
-      action {
-        enabled
-        entrySlug
-        external
-        externalUrl
-        title
-      }
+      ...ButtonPageFragment
     }
+    customButtonText
     image {
       gatsbyImageData(placeholder: BLURRED)
       title
