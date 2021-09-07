@@ -5,17 +5,20 @@ import { ContentListFragmentFragment } from "@/graphql/graphql-types";
 import { Container } from "@/components/Container";
 import { Heading } from "@/components/Heading";
 import { RichText, RichTextContent } from "@/components/RichText";
-import { ContentfulButton } from "@/components/ContentfulButton";
 
+import { Button } from "@/components/Button";
 import styles from "./ContentList.module.css";
 
-interface ContentListProps {
-  readonly data: ContentListFragmentFragment;
-}
-
 export function ContentList({
-  data: { title, content, button, listTitle, list, listDescription, highlight },
-}: ContentListProps) {
+  title,
+  content,
+  listTitle,
+  list,
+  listDescription,
+  highlight,
+  button,
+  customButtonText,
+}: ContentListFragmentFragment) {
   const wrapperClass = classnames(styles.wrapper, {
     [styles.full]: highlight === "Full",
     [styles.none]: highlight === "None",
@@ -29,10 +32,8 @@ export function ContentList({
           <div className={styles.content}>
             <Heading as="h3">{title}</Heading>
             <RichText content={content as RichTextContent} />
-            {button?.action?.enabled && (
-              <div className={styles.button}>
-                <ContentfulButton action={button?.action} />
-              </div>
+            {button && (
+              <Button {...button} title={customButtonText ?? button?.title} />
             )}
           </div>
 
@@ -68,23 +69,30 @@ export function ContentList({
 export const ContentListFragment = graphql`
   fragment ContentListFragment on ContentfulBlockContentList {
     __typename
+    title
     id
     highlight
-    title
     content {
       raw
     }
     button {
-      action {
-        enabled
-        entrySlug
-        externalUrl
-        title
+      ... on ContentfulPage {
+        ...ButtonPageFragment
+      }
+      ... on ContentfulResource {
+        ...ButtonResourceFragment
       }
     }
+    customButtonText
     listTitle
     listDescription {
       raw
+      references {
+        contentful_id
+        file {
+          url
+        }
+      }
     }
     list {
       items
