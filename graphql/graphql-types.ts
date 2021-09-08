@@ -15305,7 +15305,7 @@ export type ContentfulMicroContent = ContentfulReference & ContentfulEntry & Nod
   id: Scalars['ID'];
   node_locale: Scalars['String'];
   key?: Maybe<Scalars['String']>;
-  value?: Maybe<Scalars['String']>;
+  value?: Maybe<ContentfulMicroContentValue>;
   spaceId?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['Date']>;
   updatedAt?: Maybe<Scalars['Date']>;
@@ -15365,7 +15365,58 @@ export enum ContentfulMicroContentFieldsEnum {
   id = 'id',
   node_locale = 'node_locale',
   key = 'key',
-  value = 'value',
+  value___raw = 'value___raw',
+  value___references = 'value___references',
+  value___references___contentful_id = 'value___references___contentful_id',
+  value___references___id = 'value___references___id',
+  value___references___spaceId = 'value___references___spaceId',
+  value___references___createdAt = 'value___references___createdAt',
+  value___references___updatedAt = 'value___references___updatedAt',
+  value___references___file___url = 'value___references___file___url',
+  value___references___file___fileName = 'value___references___file___fileName',
+  value___references___file___contentType = 'value___references___file___contentType',
+  value___references___title = 'value___references___title',
+  value___references___description = 'value___references___description',
+  value___references___node_locale = 'value___references___node_locale',
+  value___references___sys___type = 'value___references___sys___type',
+  value___references___sys___revision = 'value___references___sys___revision',
+  value___references___fixed___base64 = 'value___references___fixed___base64',
+  value___references___fixed___tracedSVG = 'value___references___fixed___tracedSVG',
+  value___references___fixed___aspectRatio = 'value___references___fixed___aspectRatio',
+  value___references___fixed___width = 'value___references___fixed___width',
+  value___references___fixed___height = 'value___references___fixed___height',
+  value___references___fixed___src = 'value___references___fixed___src',
+  value___references___fixed___srcSet = 'value___references___fixed___srcSet',
+  value___references___fixed___srcWebp = 'value___references___fixed___srcWebp',
+  value___references___fixed___srcSetWebp = 'value___references___fixed___srcSetWebp',
+  value___references___fluid___base64 = 'value___references___fluid___base64',
+  value___references___fluid___tracedSVG = 'value___references___fluid___tracedSVG',
+  value___references___fluid___aspectRatio = 'value___references___fluid___aspectRatio',
+  value___references___fluid___src = 'value___references___fluid___src',
+  value___references___fluid___srcSet = 'value___references___fluid___srcSet',
+  value___references___fluid___srcWebp = 'value___references___fluid___srcWebp',
+  value___references___fluid___srcSetWebp = 'value___references___fluid___srcSetWebp',
+  value___references___fluid___sizes = 'value___references___fluid___sizes',
+  value___references___gatsbyImageData = 'value___references___gatsbyImageData',
+  value___references___resize___base64 = 'value___references___resize___base64',
+  value___references___resize___tracedSVG = 'value___references___resize___tracedSVG',
+  value___references___resize___src = 'value___references___resize___src',
+  value___references___resize___width = 'value___references___resize___width',
+  value___references___resize___height = 'value___references___resize___height',
+  value___references___resize___aspectRatio = 'value___references___resize___aspectRatio',
+  value___references___parent___id = 'value___references___parent___id',
+  value___references___parent___children = 'value___references___parent___children',
+  value___references___children = 'value___references___children',
+  value___references___children___id = 'value___references___children___id',
+  value___references___children___children = 'value___references___children___children',
+  value___references___internal___content = 'value___references___internal___content',
+  value___references___internal___contentDigest = 'value___references___internal___contentDigest',
+  value___references___internal___description = 'value___references___internal___description',
+  value___references___internal___fieldOwners = 'value___references___internal___fieldOwners',
+  value___references___internal___ignoreType = 'value___references___internal___ignoreType',
+  value___references___internal___mediaType = 'value___references___internal___mediaType',
+  value___references___internal___owner = 'value___references___internal___owner',
+  value___references___internal___type = 'value___references___internal___type',
   spaceId = 'spaceId',
   createdAt = 'createdAt',
   updatedAt = 'updatedAt',
@@ -15466,7 +15517,7 @@ export type ContentfulMicroContentFilterInput = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   key?: Maybe<StringQueryOperatorInput>;
-  value?: Maybe<StringQueryOperatorInput>;
+  value?: Maybe<ContentfulMicroContentValueFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
@@ -15524,6 +15575,17 @@ export type ContentfulMicroContentSysFilterInput = {
   type?: Maybe<StringQueryOperatorInput>;
   revision?: Maybe<IntQueryOperatorInput>;
   contentType?: Maybe<ContentfulMicroContentSysContentTypeFilterInput>;
+};
+
+export type ContentfulMicroContentValue = {
+  __typename?: 'ContentfulMicroContentValue';
+  raw?: Maybe<Scalars['String']>;
+  references?: Maybe<Array<Maybe<ContentfulAsset>>>;
+};
+
+export type ContentfulMicroContentValueFilterInput = {
+  raw?: Maybe<StringQueryOperatorInput>;
+  references?: Maybe<ContentfulAssetFilterListInput>;
 };
 
 export type ContentfulPage = ContentfulReference & ContentfulEntry & Node & {
@@ -21948,7 +22010,7 @@ export type QueryContentfulMicroContentArgs = {
   id?: Maybe<StringQueryOperatorInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   key?: Maybe<StringQueryOperatorInput>;
-  value?: Maybe<StringQueryOperatorInput>;
+  value?: Maybe<ContentfulMicroContentValueFilterInput>;
   spaceId?: Maybe<StringQueryOperatorInput>;
   createdAt?: Maybe<DateQueryOperatorInput>;
   updatedAt?: Maybe<DateQueryOperatorInput>;
@@ -25092,9 +25154,12 @@ export type LayoutQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type LayoutQueryQuery = (
   { __typename?: 'Query' }
-  & { contentfulMicroContent?: Maybe<(
+  & { content?: Maybe<(
     { __typename?: 'ContentfulMicroContent' }
-    & Pick<ContentfulMicroContent, 'value'>
+    & { value?: Maybe<(
+      { __typename?: 'ContentfulMicroContentValue' }
+      & Pick<ContentfulMicroContentValue, 'raw'>
+    )> }
   )> }
 );
 
@@ -25165,14 +25230,25 @@ export type TestimonialFragmentFragment = (
   )> }
 );
 
-export type BannerQueryQueryVariables = Exact<{ [key: string]: never; }>;
+export type WebsiteBannerQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type BannerQueryQuery = (
+export type WebsiteBannerQueryQuery = (
   { __typename?: 'Query' }
-  & { contentfulMicroContent?: Maybe<(
+  & { content?: Maybe<(
     { __typename?: 'ContentfulMicroContent' }
-    & Pick<ContentfulMicroContent, 'value'>
+    & { value?: Maybe<(
+      { __typename?: 'ContentfulMicroContentValue' }
+      & Pick<ContentfulMicroContentValue, 'raw'>
+      & { references?: Maybe<Array<Maybe<(
+        { __typename?: 'ContentfulAsset' }
+        & Pick<ContentfulAsset, 'contentful_id'>
+        & { file?: Maybe<(
+          { __typename?: 'ContentfulAssetFile' }
+          & Pick<ContentfulAssetFile, 'url'>
+        )> }
+      )>>> }
+    )> }
   )> }
 );
 
