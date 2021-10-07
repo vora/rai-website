@@ -3,18 +3,22 @@ import { Helmet } from "react-helmet";
 import { graphql, withPrefix, useStaticQuery } from "gatsby";
 
 import { WebsiteBanner } from "@/components/WebsiteBanner";
-import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import styles from "./Layout.module.css";
+import { Header } from "../Header";
 
 interface LayoutProps {
   readonly title?: string;
   readonly description?: string;
+  readonly headerTitle?: string;
+  readonly headerDescription?: string;
 }
 
 export function Layout({
   title,
   description,
+  headerTitle,
+  headerDescription,
   children,
 }: PropsWithChildren<LayoutProps>) {
   const { content } = useStaticQuery(graphql`
@@ -53,7 +57,7 @@ export function Layout({
         <a href="#main" className={styles.skip}>
           Skip to content
         </a>
-        <Navigation />
+        <Header title={headerTitle} description={headerDescription} />
         <main className={styles.main} id="main">
           {children}
         </main>

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import classnames from "classnames";
 import { graphql, Link, useStaticQuery } from "gatsby";
+import { AnimatePresence, motion } from "framer-motion";
 import { Container } from "@/components/Container";
 import { Logo } from "@/components/Logo";
 import { Icon } from "@/components/Icon";
 import { Breakpoints, useResizeObserver } from "@/hooks/useResizeObserver";
-import { AnimatePresence, motion } from "framer-motion";
 
 import { NavigationItemFragment } from "@/graphql/graphql-types";
+import { AnthemLogo } from "../AnthemLogo/AnthemLogo";
 import styles from "./Navigation.module.css";
 
 export function Navigation() {
@@ -27,9 +28,14 @@ export function Navigation() {
   return (
     <header ref={ref} className={styles.navigation}>
       <Container className={styles.container}>
-        <Link to="/" aria-label="Responsible AI - Home Page">
+        <Link
+          className={styles.raiLogo}
+          to="/"
+          aria-label="Responsible AI - Home Page"
+        >
           <Logo size={isLarge ? "base" : "small"} />
         </Link>
+        <AnthemLogo />
 
         <nav className={isLarge ? styles.large : undefined}>
           {isLarge ? (

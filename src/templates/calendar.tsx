@@ -5,9 +5,14 @@ import { PageTemplateQueryQuery } from "@/graphql/graphql-types";
 
 import { Layout } from "@/components/Layout";
 import { Container } from "@/components/Container";
-import { PageTitle } from "@/components/PageTitle";
 import { Events } from "@/components/Events";
 import { ContentfulBlocks } from "@/components/ContentfulBlocks";
+import { TabContainer } from "@/components/TabContainer/TabContainer";
+import { Tab } from "../types/tab";
+
+const CalendarTitle = "Events and News";
+const CalendarDescription =
+  "You're one stop shop to see all current and scheduled events in one spot.";
 
 interface PageProps {
   data: PageTemplateQueryQuery;
@@ -16,16 +21,31 @@ interface PageProps {
 function Calendar({ data }: PageProps) {
   const { page } = data;
 
+  const contentTabs: Tab[] = [
+    {
+      tabName: "Events",
+      tabContent: <Events />,
+    },
+    {
+      tabName: "News",
+      tabContent: page?.blocks ? (
+        <ContentfulBlocks blocks={page.blocks} />
+      ) : (
+        <div />
+      ),
+    },
+  ];
+
   return (
     <Layout
       title={page?.seoTitle || page?.title}
       description={page?.seoDescription}
+      headerTitle={CalendarTitle}
+      headerDescription={CalendarDescription}
     >
       <Container>
-        <PageTitle title={data.page?.title ?? "Events Calendar"} />
-        <Events />
+        <TabContainer tabs={contentTabs} />
       </Container>
-      {page?.blocks && <ContentfulBlocks blocks={page.blocks} />}
     </Layout>
   );
 }

@@ -1,0 +1,74 @@
+.tabButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 30px;
+
+  width: 88px;
+  height: 42px;
+  left: 18.5px;
+  top: 0px;
+
+  background: #fafafb;
+  border: none;
+}
+
+.tabButton::after {
+  background: #000000;
+  position: absolute;
+  content: "";
+  top: 80px;
+  height: 3px;
+  width: 0px;
+  background: #386eda;
+  transition: width 300ms;
+}
+
+.tabButton:hover::after {
+  width: 80%;
+}
+
+.tabButtonActive {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 30px;
+
+  width: 88px;
+  height: 42px;
+  left: 18.5px;
+  top: 0px;
+
+  background: #dee6f0;
+  border: none;
+  border-radius: 5px;
+}
+
+.tabButtonActive::after {
+  background: #000000;
+  position: absolute;
+  content: "";
+  top: 80px;
+  height: 3px;
+  width: 80%;
+  background: #386eda;
+  transition: width 300ms;
+}
+
+.tabContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}

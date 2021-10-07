@@ -95,9 +95,8 @@
   padding: var(--space--xsmall) 0;
 }
 
-.large .link::after,
 .large .link::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   left: 50%;
@@ -108,7 +107,6 @@
   transition: width 300ms;
 }
 
-.large .link:hover::after,
 .large .link:hover::after {
   width: 100%;
 }
@@ -159,4 +157,8 @@
 
 .large .subLink:hover {
   background: var(--color--ghost);
+}
+
+.raiLogo {
+  margin-right: 30px;
 }

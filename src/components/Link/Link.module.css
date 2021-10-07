@@ -4,12 +4,12 @@
   gap: var(--space--xxsmall);
   position: relative;
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
   transition: opacity 300ms, gap 300ms;
 }
 
 .link:hover {
-  opacity: .8;
+  opacity: 0.8;
   text-decoration: none;
   gap: var(--space--xsmall);
 }

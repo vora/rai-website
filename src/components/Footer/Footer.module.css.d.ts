@@ -7,6 +7,10 @@ declare const styles: {
   readonly "link": string;
   readonly "highlight": string;
   readonly "social": string;
+  readonly "copyright": string;
+  readonly "footerButton": string;
+  readonly "footerButtonText": string;
+  readonly "buttonLink": string;
 };
 export = styles;
 
