@@ -12,7 +12,7 @@ import { Tab } from "../types/tab";
 
 const CalendarTitle = "Events and News";
 const CalendarDescription =
-  "You're one stop shop to see all current and scheduled events in one spot.";
+  "Your one stop shop to see all current and scheduled events in one spot.";
 
 interface PageProps {
   data: PageTemplateQueryQuery;

@@ -34,7 +34,8 @@
 
 .eventName {
   padding-top: 20%;
-  padding-bottom: 5%;
+  padding-bottom: 20px;
+  height: 150px;
 }
 
 .moreInfo {

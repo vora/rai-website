@@ -29078,10 +29078,10 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___pageLimit = 'pluginCreator___pluginOptions___pageLimit',
   pluginCreator___pluginOptions___assetDownloadWorkers = 'pluginCreator___pluginOptions___assetDownloadWorkers',
   pluginCreator___pluginOptions___useNameForId = 'pluginCreator___pluginOptions___useNameForId',
-  pluginCreator___pluginOptions___pathCheck = 'pluginCreator___pluginOptions___pathCheck',
   pluginCreator___pluginOptions___allExtensions = 'pluginCreator___pluginOptions___allExtensions',
   pluginCreator___pluginOptions___isTSX = 'pluginCreator___pluginOptions___isTSX',
   pluginCreator___pluginOptions___jsxPragma = 'pluginCreator___pluginOptions___jsxPragma',
+  pluginCreator___pluginOptions___pathCheck = 'pluginCreator___pluginOptions___pathCheck',
   pluginCreator___nodeAPIs = 'pluginCreator___nodeAPIs',
   pluginCreator___browserAPIs = 'pluginCreator___browserAPIs',
   pluginCreator___ssrAPIs = 'pluginCreator___ssrAPIs',
@@ -29305,10 +29305,10 @@ export enum SitePluginFieldsEnum {
   pluginOptions___pageLimit = 'pluginOptions___pageLimit',
   pluginOptions___assetDownloadWorkers = 'pluginOptions___assetDownloadWorkers',
   pluginOptions___useNameForId = 'pluginOptions___useNameForId',
-  pluginOptions___pathCheck = 'pluginOptions___pathCheck',
   pluginOptions___allExtensions = 'pluginOptions___allExtensions',
   pluginOptions___isTSX = 'pluginOptions___isTSX',
   pluginOptions___jsxPragma = 'pluginOptions___jsxPragma',
+  pluginOptions___pathCheck = 'pluginOptions___pathCheck',
   nodeAPIs = 'nodeAPIs',
   browserAPIs = 'browserAPIs',
   ssrAPIs = 'ssrAPIs',
@@ -29459,10 +29459,10 @@ export type SitePluginPluginOptions = {
   pageLimit?: Maybe<Scalars['Int']>;
   assetDownloadWorkers?: Maybe<Scalars['Int']>;
   useNameForId?: Maybe<Scalars['Boolean']>;
-  pathCheck?: Maybe<Scalars['Boolean']>;
   allExtensions?: Maybe<Scalars['Boolean']>;
   isTSX?: Maybe<Scalars['Boolean']>;
   jsxPragma?: Maybe<Scalars['String']>;
+  pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
 export type SitePluginPluginOptionsCssLoaderOptions = {
@@ -29517,10 +29517,10 @@ export type SitePluginPluginOptionsFilterInput = {
   pageLimit?: Maybe<IntQueryOperatorInput>;
   assetDownloadWorkers?: Maybe<IntQueryOperatorInput>;
   useNameForId?: Maybe<BooleanQueryOperatorInput>;
-  pathCheck?: Maybe<BooleanQueryOperatorInput>;
   allExtensions?: Maybe<BooleanQueryOperatorInput>;
   isTSX?: Maybe<BooleanQueryOperatorInput>;
   jsxPragma?: Maybe<StringQueryOperatorInput>;
+  pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsPluginConfig = {
@@ -30726,20 +30726,6 @@ export type FeaturedPostFragmentFragment = (
   )>, featuredImage?: Maybe<(
     { __typename?: 'ContentfulAsset' }
     & ImageFragmentFragment
-  )> }
-);
-
-export type FooterNavigationQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type FooterNavigationQueryQuery = (
-  { __typename?: 'Query' }
-  & { menu?: Maybe<(
-    { __typename?: 'ContentfulNavigation' }
-    & { items?: Maybe<Array<Maybe<(
-      { __typename?: 'ContentfulNavigationItem' }
-      & FooterNavigationItemFragment
-    )>>> }
   )> }
 );
 

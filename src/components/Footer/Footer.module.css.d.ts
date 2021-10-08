@@ -11,6 +11,7 @@ declare const styles: {
   readonly "footerButton": string;
   readonly "footerButtonText": string;
   readonly "buttonLink": string;
+  readonly "linkText": string;
 };
 export = styles;
 
