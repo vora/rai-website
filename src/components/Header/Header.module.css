@@ -24,5 +24,7 @@
 
 .headerContainer {
   background-image: url(./header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 401px;
 }
