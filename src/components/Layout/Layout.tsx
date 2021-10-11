@@ -4,8 +4,8 @@ import { graphql, withPrefix, useStaticQuery } from "gatsby";
 
 import { WebsiteBanner } from "@/components/WebsiteBanner";
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import styles from "./Layout.module.css";
-import { Header } from "../Header";
 
 interface LayoutProps {
   readonly title?: string;

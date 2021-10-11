@@ -21,3 +21,8 @@
   display: flex;
   color: #000000;
 }
+
+.headerContainer {
+  background-image: url(./header.png);
+  height: 401px;
+}

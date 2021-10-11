@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Divider } from "@/components/Divider";
 import { Tab } from "../../types/tab";
-import { Divider } from "../Divider/Divider";
 import styles from "./TabContainer.module.css";
 
 interface TabContainerProps {

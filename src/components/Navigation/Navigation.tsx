@@ -8,7 +8,7 @@ import { Icon } from "@/components/Icon";
 import { Breakpoints, useResizeObserver } from "@/hooks/useResizeObserver";
 
 import { NavigationItemFragment } from "@/graphql/graphql-types";
-import { AnthemLogo } from "../AnthemLogo/AnthemLogo";
+import { AnthemLogo } from "@/components/AnthemLogo";
 import styles from "./Navigation.module.css";
 
 export function Navigation() {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigation } from "../Navigation";
+import { Navigation } from "@/components/Navigation";
 
 import styles from "./Header.module.css";
 
@@ -10,12 +10,7 @@ interface HeaderProps {
 
 export const Header = ({ title, description }: HeaderProps) => {
   return (
-    <div
-      style={{
-        backgroundImage: `url(/image/header.png)`,
-        height: "401px",
-      }}
-    >
+    <div className={styles.headerContainer}>
       <Navigation />
       {title && <div className={styles.headerTitle}>{title}</div>}
       {description && (
