@@ -16,6 +16,5 @@
 
     "**/.cache/**": true,
     "**/coverage/**": true,
-    "**/node_modules/**": true,
   }
 }

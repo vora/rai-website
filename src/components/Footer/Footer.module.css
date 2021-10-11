@@ -1,8 +1,10 @@
 .footer {
-  background: var(--color--carbon);
-  padding: var(--space--xxlarge) 0;
+  background: #386eda;
+  height: 120px;
+  padding: 30px;
   text-align: center;
   fill: var(--color--blanco);
+  font-size: 13px;
 }
 
 @media (min-width: 1024px) {
@@ -17,33 +19,6 @@
     align-items: center;
     justify-content: space-between;
   }
-}
-
-.nav {
-  margin-top: var(--space--large);
-}
-
-@media (min-width: 1200px) {
-  .nav {
-    margin-top: 0;
-    text-align: right;
-  }
-}
-
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-@media (min-width: 1024px) {
-  .list {
-    display: flex;
-  }
-}
-
-.item {
-  margin: 0;
 }
 
 .link {
@@ -64,66 +39,47 @@
 @media (min-width: 1024px) {
   .link:hover {
     color: var(--color--ghost);
-    box-shadow: 0 1px 0 0 var(--color--ghost);
   }
 }
 
-.highlight {
-  font-weight: 900;
+.link {
+  margin: 0 var(--space--small);
 }
 
 @media (min-width: 1024px) {
-  .highlight {
-    border-bottom: 1px solid var(--color--blanco);
+  .link {
+    margin: 0 var(--space--base) 0 0;
   }
 }
 
-.social {
-  margin-top: var(--space--large);
+.copyright {
+  color: #f3f5f7;
 }
 
-@media (min-width: 1024px) {
-  .social {
-    margin-top: var(--space--large);
-  }
-}
-
-@media (min-width: 1200px) {
-  .social {
-    margin-top: var(--space--small);
-  }
-}
-
-.social .list {
+.footerButton {
+  background: #386eda;
+  border-radius: 10px;
+  border: 1px solid #f3f5f7;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
-@media (min-width: 1024px) {
-  .social .list {
-    justify-content: flex-start;
-  }
+.footerButtonText {
+  color: #f3f5f7;
+  padding: 10px;
+  text-decoration: none;
+  margin: 0px;
 }
 
-@media (min-width: 1200px) {
-  .social .list {
-    justify-content: flex-end;
-  }
+.buttonLink {
+  text-decoration: none;
 }
 
-.social .link {
-  margin: 0 var(--space--small)
+.linkText {
+  color: #f3f5f7;
 }
-
-@media (min-width: 1024px) {
-  .social .link {
-    margin: 0 var(--space--base) 0 0; 
-  }
-}
-
-.social .link:hover {
-  box-shadow: none;
-}
-
-
-
