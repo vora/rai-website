@@ -39,7 +39,6 @@
 @media (min-width: 1024px) {
   .link:hover {
     color: var(--color--ghost);
-    box-shadow: 0 1px 0 0 var(--color--ghost);
   }
 }
 
