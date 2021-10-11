@@ -6,7 +6,7 @@ import { Event } from "./Event";
 import styles from "./Events.module.css";
 import { eventsWithLocation } from "./eventItemsWithLocation";
 
-const firstMonths = eventsWithLocation.slice(0, 2);
+const firstMonths = eventsWithLocation.slice(0, 3);
 
 export function Events() {
   const [eventMonths, setEventsMonth] = useState(firstMonths);
