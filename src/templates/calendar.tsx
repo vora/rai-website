@@ -6,8 +6,9 @@ import { PageTemplateQueryQuery } from "@/graphql/graphql-types";
 import { Layout } from "@/components/Layout";
 import { Container } from "@/components/Container";
 import { Events } from "@/components/Events";
-import { ContentfulBlocks } from "@/components/ContentfulBlocks";
 import { TabContainer } from "@/components/TabContainer/TabContainer";
+import { News } from "@/components/News";
+import { Article } from "../types/article";
 import { Tab } from "../types/tab";
 
 const CalendarTitle = "Events and News";
@@ -16,6 +17,14 @@ const CalendarDescription =
 
 interface PageProps {
   data: PageTemplateQueryQuery;
+}
+
+interface ContentfulBlocks {
+  resources: Array<Article>;
+}
+
+interface ContentfulPage {
+  blocks: Array<ContentfulBlocks>;
 }
 
 function Calendar({ data }: PageProps) {
@@ -28,10 +37,12 @@ function Calendar({ data }: PageProps) {
     },
     {
       tabName: "News",
-      tabContent: page?.blocks ? (
-        <ContentfulBlocks blocks={page.blocks} />
-      ) : (
-        <div />
+      tabContent: (
+        <News
+          articles={
+            (page as ContentfulPage)?.blocks[0].resources as Array<Article>
+          }
+        />
       ),
     },
   ];

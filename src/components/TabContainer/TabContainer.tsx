@@ -21,7 +21,7 @@ export const TabContainer = ({ tabs }: TabContainerProps) => {
       <div className={styles.tabContainer}>
         {tabs.map((tab) => {
           return (
-            <div className={styles.buttonContainer}>
+            <div className={styles.buttonContainer} key={tab.tabName}>
               <button
                 className={
                   tab.tabName === currentTab
