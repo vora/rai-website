@@ -10,3 +10,19 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.viewButton {
+  width: 290px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid #c9d7e9;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.viewButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}

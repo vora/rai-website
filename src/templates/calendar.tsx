@@ -34,6 +34,7 @@ function Calendar({ data }: PageProps) {
     {
       tabName: "Events",
       tabContent: <Events />,
+      tabElements: "EVENT",
     },
     {
       tabName: "News",
@@ -44,6 +45,7 @@ function Calendar({ data }: PageProps) {
           }
         />
       ),
+      tabElements: "ARTICLE",
     },
   ];
 

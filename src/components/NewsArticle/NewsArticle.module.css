@@ -1,13 +1,10 @@
 .articleBox {
   width: 1138px;
-  height: 224px;
   justify-content: center;
   align-items: center;
   padding: 30px 0px 20px 60px;
   margin: 30px;
-
   background: #ffffff;
-
   box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
@@ -24,22 +21,17 @@
   flex-direction: row;
   align-items: center;
   padding: 7px 10px;
-
   position: static;
-  width: 104px;
+  width: fit-content;
   height: 35px;
   left: 0px;
   top: 158px;
-
   background: rgba(236, 178, 46, 0.38);
   border-radius: 12px;
-
-  /* Inside Auto Layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin: 50px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 .publicationDateText {
