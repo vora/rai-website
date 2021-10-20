@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@/components/Link";
 import { Tool } from "../../types/tool";
 import styles from "./Tools.module.css";
 
@@ -18,7 +19,9 @@ export const ToolCard = ({ tool }: ToolCardProps) => {
           <p className={styles.toolDescription}>{tool.description}</p>
         </div>
         <div className={styles.toolButton}>
-          <p className={styles.toolButtonText}>{toolButtonText}</p>
+          <Link url={tool.link}>
+            <p className={styles.toolButtonText}>{toolButtonText}</p>
+          </Link>
         </div>
       </div>
     </div>
