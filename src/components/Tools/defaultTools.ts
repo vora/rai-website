@@ -39,14 +39,14 @@ export const defaultTools: Array<Tool> = [
     header: "RAI Events Calendar connects  ",
     description:
       "RAI Events Calendar connects members to the latest events in responsible AI.",
-    link: "https://www.responsible.ai/calendar",
+    link: "/calendar",
     icon: Calendar,
   },
   {
     header: "RAI Certification Beta ",
     description:
       "RAI Certification Beta is the world’s first independent, accredited certification program of its kind.",
-    link: "https://www.responsible.ai/certification",
+    link: "/certification",
     icon: Certification,
   },
 ];
