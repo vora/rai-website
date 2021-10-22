@@ -15,7 +15,9 @@ export const NewsArticle = ({ article, key }: ArticleProps) => {
           {article.title}
         </a>
       </div>
-      <div style={{ height: "60px" }} />
+      <div style={{ height: "60px" }}>
+        {article.description && <p>{article.description}</p>}
+      </div>
       {article.publicationDate && (
         <div className={styles.publicationDateBox}>
           <p className={styles.publicationDateText}>
