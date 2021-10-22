@@ -1,0 +1,41 @@
+.articleBox {
+  width: 1138px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px 20px 60px;
+  margin: 30px;
+  background: #ffffff;
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.articleTitle {
+  font-size: 33px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.publicationDateBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 7px 10px;
+  position: static;
+  width: fit-content;
+  height: 35px;
+  left: 0px;
+  top: 158px;
+  background: rgba(236, 178, 46, 0.38);
+  border-radius: 12px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 20px 0px 20px 0px;
+}
+
+.publicationDateText {
+  font-size: 14px;
+  line-height: 17px;
+  color: #303e50;
+}

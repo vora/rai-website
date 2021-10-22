@@ -2,7 +2,6 @@ import React, { PropsWithChildren } from "react";
 import { Helmet } from "react-helmet";
 import { graphql, withPrefix, useStaticQuery } from "gatsby";
 
-import { WebsiteBanner } from "@/components/WebsiteBanner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import styles from "./Layout.module.css";
@@ -53,7 +52,6 @@ export function Layout({
       </Helmet>
 
       <div className={styles.layout}>
-        <WebsiteBanner />
         <a href="#main" className={styles.skip}>
           Skip to content
         </a>
