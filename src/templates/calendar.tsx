@@ -11,10 +11,6 @@ import { News } from "@/components/News";
 import { Article } from "../types/article";
 import { Tab } from "../types/tab";
 
-const CalendarTitle = "Events and News";
-const CalendarDescription =
-  "Your one stop shop to see all current and scheduled events in one spot.";
-
 interface PageProps {
   data: PageTemplateQueryQuery;
 }
@@ -29,6 +25,9 @@ interface ContentfulPage {
 
 function Calendar({ data }: PageProps) {
   const { page } = data;
+  const CalendarTitle = "Events and News";
+  const CalendarDescription =
+    "Your one stop shop to see all current and scheduled events in one spot.";
 
   const contentTabs: Tab[] = [
     {
@@ -57,7 +56,7 @@ function Calendar({ data }: PageProps) {
       headerDescription={CalendarDescription}
     >
       <Container>
-        <TabContainer tabs={contentTabs} />
+        <TabContainer tabs={contentTabs} addDivider />
       </Container>
     </Layout>
   );

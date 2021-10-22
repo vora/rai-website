@@ -6,9 +6,10 @@ import styles from "./TabContainer.module.css";
 
 interface TabContainerProps {
   tabs: Tab[];
+  addDivider?: boolean;
 }
 
-export const TabContainer = ({ tabs }: TabContainerProps) => {
+export const TabContainer = ({ tabs, addDivider }: TabContainerProps) => {
   const [currentTab, setCurrentTab] = useState(
     (tabs[0] && tabs[0].tabName) || ""
   );
@@ -55,7 +56,7 @@ export const TabContainer = ({ tabs }: TabContainerProps) => {
           </div>
         </div>
       </div>
-      <Divider spacing="small" />
+      {addDivider && <Divider spacing="small" />}
       {renderTabContent(currentTab)}
     </>
   );

@@ -1,0 +1,65 @@
+.toolImage {
+  display: flex;
+  margin: auto;
+}
+
+.itemImage {
+  height: 50px;
+  width: 50px;
+  margin-top: 26px;
+  margin-right: 26px;
+}
+
+.toolsContent {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.toolContainer {
+  width: 45%;
+  margin: 20px;
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+}
+
+.toolDetails {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolTitle {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.toolDescripton {
+  font-size: 14px;
+  line-height: 17px;
+  height: 90px;
+}
+
+.toolButton {
+  width: 150px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #303e50;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.toolButtonText {
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+  margin-left: 20px;
+  margin-top: 3px;
+}
