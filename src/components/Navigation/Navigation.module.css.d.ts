@@ -12,6 +12,7 @@ declare const styles: {
   readonly "subList": string;
   readonly "subItem": string;
   readonly "subLink": string;
+  readonly "raiLogo": string;
 };
 export = styles;
 

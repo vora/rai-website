@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Roboto:wght@400;900&display=swap');
-@import './colors.css';
-@import './spacing.css';
-@import './fonts.css';
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+@import "./colors.css";
+@import "./spacing.css";
+@import "./fonts.css";
 
 html {
   box-sizing: border-box;
