@@ -8,7 +8,7 @@ import { Icon } from "@/components/Icon";
 import { Breakpoints, useResizeObserver } from "@/hooks/useResizeObserver";
 
 import { NavigationItemFragment } from "@/graphql/graphql-types";
-import { AnthemLogo } from "@/components/AnthemLogo";
+// import { AnthemLogo } from "@/components/AnthemLogo";
 import styles from "./Navigation.module.css";
 
 export function Navigation() {
@@ -35,7 +35,7 @@ export function Navigation() {
         >
           <Logo size={isLarge ? "base" : "small"} />
         </Link>
-        <AnthemLogo />
+        {/* <AnthemLogo /> */}
 
         <nav className={isLarge ? styles.large : undefined}>
           {isLarge ? (
